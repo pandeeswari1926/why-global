@@ -62,3 +62,16 @@
         transform: translateX(-400px)
     }
 }
+
+.summa{
+    animation: imgall 1s ease-in-out;
+}
+
+@keyframes imgall {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

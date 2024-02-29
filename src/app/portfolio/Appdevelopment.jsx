@@ -36,7 +36,7 @@ const Appdevelopment = () => {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1 }}
                 >
-                    <section className='bg-appbg1 bg-cover flex sm:flex-row flex-col sm:justify-evenly gap-5 sm:gap-0 items-center'>
+                    <section className='bg-appbg1 bg-cover flex sm:flex-row flex-col sm:justify-evenly gap-5 sm:gap-0 items-center summa'>
                         <div>
                             <section className='relative w-36 lg:-ml-28 key1'>
                                 <Image src={ionic}/>
@@ -52,8 +52,8 @@ const Appdevelopment = () => {
 
         case 2:
             return (
-                <article 
-                    className='relative sm:pt-20'
+                <motion.article 
+                    className='relative sm:pt-20 summa'
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1 }}
@@ -69,17 +69,18 @@ const Appdevelopment = () => {
                             <Image src={appdevbig2} className='w-72 rounded-xl drop-shadow-xl'/>
                             <Image src={appdev3} className='w-40 rounded-xl drop-shadow-xl sm:mt-16'/>
                     </section>
-                </article>
+                </motion.article>
             )
         case 3:
 
             return (
-                <article 
+                <motion.article 
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1 }}
-                    className='relative sm:pt-20'
+                    className='relative sm:pt-20 '
                 >
+                    <div className='summa'>
                     <div className='absolute -translate-x-1/2 -translate-y-1/2 top-[11%] right-[2%] key3'>
                         <section className='relative w-36 lg:-ml-28'>
                             <Image src={flutter}/>
@@ -92,7 +93,8 @@ const Appdevelopment = () => {
                         <Image src={appdev1} className='w-40 rounded-xl drop-shadow-xl sm:mt-16'/>       
                         <Image src={appdevbig3} className='w-72 rounded-xl drop-shadow-xl'/>
                     </section>
-                </article>
+                    </div>
+                </motion.article>
 
             )
         default:
