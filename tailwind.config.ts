@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import life from './public/life.png';
 
 const config: Config = {
   content: [
@@ -9,10 +10,18 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        // "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        // "gradient-conic":
+        //   "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        bg: 'url("/life.png")',
+        background: 'url("/Rectangle 56.png")',
+        why: 'url("/why.png")',
+        test: 'url("/testimonial.png")',
+        portfolio:'url("/Group 110.png")',
       },
+      fontFamily: {
+        font: ["inter", "italic"]
+      }
     },
   },
   plugins: [],

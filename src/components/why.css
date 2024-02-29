@@ -1,0 +1,18 @@
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid red;
+    background-color: chocolate;
+}
+
+.polygon {
+    clip-path: polygon(82.5% 86.25%, 100% 50%, 100% 100%, 22% 100%);
+    background-color: #FF9315;
+    position: relative;
+}
+
+.tri {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 65% 100%);
+}

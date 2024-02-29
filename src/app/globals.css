@@ -2,32 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.image {
+    width: 50%;
+    height: 50%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.polygon {
+    clip-path: polygon(72.75% 90.5%, 100% 72%, 100% 100%, 22% 100%);
+    background-color: #ff9315;
+    height: 500px;
+    position: absolute;
+    top: 0%;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.solution {
+    clip-path: polygon(52% 60%, 100% 38%, 100% 100%, 18% 100%, 52% 76%);
+    right: 0;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.tri {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
+}
+
+.message {
+    clip-path: polygon(0% 0%, 79% 0, 79% 76%, 79% 62%, 100% 75%, 50% 75%, 0% 75%);
+    border-width: 1px;
+    border-bottom: 1px;
+    border-color: #ff9315;
 }
