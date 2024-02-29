@@ -17,6 +17,9 @@ const config: Config = {
         why: 'url("/why.png")',
         test: 'url("/testimonial.png")',
         portfolio:'url("/Group 110.png")',
+        appbg1:'url("/appbg1.png")',
+        appbg2:'url("/appbg2.png")',
+        appbg3:'url("/appbg3.png")',
       },
       fontFamily: {
         font: ["inter", "italic"]

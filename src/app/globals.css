@@ -30,3 +30,35 @@
     border-bottom: 1px;
     border-color: #ff9315;
 }
+
+/* appdevelopment */
+
+.key1{
+    animation: key1 1s  ease-in-out;
+}
+
+.key2{
+    animation: key2 1s  ease-in-out;
+}
+
+.key3{
+    animation: key3 1s  ease-in-out;
+}
+
+@keyframes key1 {
+    0%{
+        transform: translateX(900px);
+    }
+}
+
+@keyframes key2 {
+    0%{
+        transform: translateX(-800px)
+    }
+}
+
+@keyframes key3 {
+    0%{
+        transform: translateX(-400px)
+    }
+}
