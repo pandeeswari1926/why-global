@@ -46,6 +46,7 @@ function Services() {
                      style={
                         {
                             backgroundImage:`url(${bgimage[index]})`,
+                            backgroundPosition: 'center',
                             transition: 'background-image 2s ease',
                         }
                      }
@@ -190,7 +191,7 @@ function Services() {
 
 
             {/* fourth section */}
-            <div className='flex lg:flex-row flex-col gap-20 lg:px-20 mx-auto pt-20'>
+            <div className='flex lg:flex-row flex-col sm:gap-20 gap-5 lg:px-20 mx-auto sm:pt-20'>
                 <div className='p-10 flex flex-col gap-3 justify-center '>
                     <h1 className='lg:text-lg text-3xl text-[#FF9315] font-semibold'>OUR</h1>
                     <h1 className='lg:text-2xl text-4xl text-gray-500 font-semibold'>SERVICES</h1>
