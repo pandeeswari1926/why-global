@@ -10,7 +10,6 @@ import appdevbig3 from '../../../public/appDevbig3.png'
 import ionic from '../../../public/ionic.png'
 import  react from '../../../public/react.png'
 import flutter from '../../../public/flutter.png'
-import { motion } from 'framer-motion';
 
 
 
@@ -31,10 +30,7 @@ const Appdevelopment = () => {
     switch (currentArticle) {
         case 1:
             return (
-                <motion.article
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 1 }}
+                <article
                 >
                     <section className='bg-appbg1 bg-cover flex sm:flex-row flex-col sm:justify-evenly gap-5 sm:gap-0 items-center summa'>
                         <div>
@@ -47,16 +43,13 @@ const Appdevelopment = () => {
                         <Image src={appdev3} className='w-40 rounded-xl drop-shadow-xl sm:mt-16' />
                         <Image src={appdev2} className='w-40 rounded-xl drop-shadow-xl sm:mt-16'/>
                     </section>
-                </motion.article>
+                </article>
             )
 
         case 2:
             return (
-                <motion.article 
+                <article 
                     className='relative sm:pt-20 summa'
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 1 }}
                 >
                     <div className='absolute  -translate-x-1/2 -translate-y-1/2 top-[11%] left-[67%] mt-4 key2'>
                         <section className='relative w-36'>
@@ -69,15 +62,12 @@ const Appdevelopment = () => {
                             <Image src={appdevbig2} className='w-72 rounded-xl drop-shadow-xl'/>
                             <Image src={appdev3} className='w-40 rounded-xl drop-shadow-xl sm:mt-16'/>
                     </section>
-                </motion.article>
+                </article>
             )
         case 3:
 
             return (
-                <motion.article 
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 1 }}
+                <article 
                     className='relative sm:pt-20 '
                 >
                     <div className='summa'>
@@ -94,7 +84,7 @@ const Appdevelopment = () => {
                         <Image src={appdevbig3} className='w-72 rounded-xl drop-shadow-xl'/>
                     </section>
                     </div>
-                </motion.article>
+                </article>
 
             )
         default:
