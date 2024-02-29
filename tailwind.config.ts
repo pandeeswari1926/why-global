@@ -14,7 +14,6 @@ const config: Config = {
         // "gradient-conic":
         //   "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         bg: 'url("/life.png")',
-        background: 'url("/Rectangle 56.png")',
         why: 'url("/why.png")',
         test: 'url("/testimonial.png")',
         portfolio:'url("/Group 110.png")',

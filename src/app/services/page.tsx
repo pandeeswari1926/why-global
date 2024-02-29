@@ -20,10 +20,37 @@ import ourService from '../../../public/cat-image.png';
 import serve from '../../../public/wgs slider services (3) 1.png';
 
 function Services() {
+
+    const bgimages = [
+        '/bgimage1.png',
+        '/bgimage2.png',
+        '/bgimage3.png',
+       ]
+
+   const [bgimage,Setbgimage] = React.useState(bgimages)
+   const [index,SetIndex] = React.useState(0)
+
+   const changeBgimages = () => {
+    SetIndex((prev)=>(prev + 1) % bgimage.length)
+   }
+
+   React.useEffect(()=>{
+    const interval = setInterval(changeBgimages,3000)
+    return () => clearInterval(interval)
+   },[])
+
     return (
         <>
             <div className='lg:px-40 px-10 py-20 bg-gradient-to-b from-[#f9d5ad] to-transparent'>
-                <div className='bg-background bg-cover xl:h-[500px] lg:h-[400px]  w-full h-full lg:relative'>
+                <div className='bg-cover xl:h-[500px] lg:h-[400px]  w-full h-full lg:relative'
+                     style={
+                        {
+                            backgroundImage:`url(${bgimage[index]})`,
+                            backgroundPosition: 'center',
+                            transition: 'background-image 2s ease',
+                        }
+                     }
+                >
                     <div className='bg-gradient-to-b from-gray-900 w-full h-[500px] lg:absolute '>
                         <h1 className='text-2xl text-white flex justify-start items-end h-[400px] ml-20 -mb-20 '>We provide you<br />
                             what you love.</h1>
@@ -164,7 +191,7 @@ function Services() {
 
 
             {/* fourth section */}
-            <div className='flex lg:flex-row flex-col gap-20 lg:px-20 mx-auto pt-20'>
+            <div className='flex lg:flex-row flex-col sm:gap-20 gap-5 lg:px-20 mx-auto sm:pt-20'>
                 <div className='p-10 flex flex-col gap-3 justify-center '>
                     <h1 className='lg:text-lg text-3xl text-[#FF9315] font-semibold'>OUR</h1>
                     <h1 className='lg:text-2xl text-4xl text-gray-500 font-semibold'>SERVICES</h1>
