@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image';
 import Web from './web';
+import WebDesign from './webDesign';
 import portfolio1 from '../../../public/wgs gifs (12).gif';
 import portfolio2 from '../../../public/wgs gifs (13).gif';
 import portfolio3 from '../../../public/wgs gifs (14).gif';
@@ -55,9 +56,14 @@ const Page = () => {
                 </div>
             </div>
             {/* second section */}
-            {/* <div>
+            <div className='overflow-hidden'>
                 <Web />
-            </div> */}
+            </div>
+
+            {/* fourth section */}
+            <div>
+                <WebDesign/>
+            </div>
         </>
     )
 }
