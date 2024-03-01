@@ -1,0 +1,36 @@
+import React from 'react'
+import msgicon from '../asset/msgicon.png'
+import locationicon from '../asset/locationicon.png'
+import Image from 'next/image'
+import facebookicon from '../asset/facebookicon.png'
+import twittericon from '../asset/twittericon.png'
+import instagramicon from '../asset/instagramicon.png'
+import linkedinicon from '../asset/linkedinicon.png'
+import youtubeicon from '../asset/youtubeicon.png'
+
+const TopBar = () => {
+  return (
+    <>
+      <section className='bg-primarycolor text-white w-full h-8 px-[8%] md:flex justify-between pt-1 hidden fixed z-20'>
+
+        <section className='flex space-x-3'>
+          <Image src={msgicon} alt='asda' className='h-4 mt-1' />
+          <p className='text-sm'>contact@whyglobalservices.com | </p>
+          <Image src={locationicon} alt='asda' className='h-4 mt-1' />
+          <p className='text-sm'>Egmore, Chennai.</p>
+        </section>
+
+        <section className='flex space-x-5 pt-1'>
+          <Image src={facebookicon} alt='social media icon' className='h-4' />
+          <Image src={twittericon} alt='social media icon' className='h-4' />
+          <Image src={instagramicon} alt='social media icon' className='h-4' />
+          <Image src={linkedinicon} alt='social media icon' className='h-4' />
+          <Image src={youtubeicon} alt='social media icon' className='h-4' />
+        </section>
+
+      </section>
+    </>
+  )
+}
+
+export default TopBar
