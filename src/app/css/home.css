@@ -1,0 +1,20 @@
+.els{
+    background-color: #FF9315;
+
+    clip-path: polygon(0% 100%, 78% 93%, 0% 57.8%);
+}
+.wh{
+    background-color: white;
+    outline: none;
+    clip-path: polygon(0% 87.27%, 0% 100%, 100% 89.03%, 0% 100%, 0% 100%, 69.28% 89.03%, 100% 70.07%, 100% 100%, 90.02% 100%, 0% 100%);
+                                                      
+    
+
+}
+.bac{
+    clip-path: polygon(16.96% 42.38%, 0% 100%, 100% 89.03%, 0% 100%, 0% 100%, 0% 68.33%, 29.15% 49.23%, 80.62% 34.41%, 100% 9.73%, 100% 100%, 90.02% 100%, 0% 100%);
+    background:linear-gradient(to bottom,rgb(241, 236, 236),white);
+    opacity: 0.5;
+   
+
+}
