@@ -76,6 +76,7 @@
     }
 }
 
+<<<<<<< HEAD
 .logo1{
     animation: logo1 1s ease;
 }
@@ -85,4 +86,190 @@
         padding-left: 50px;
         padding-right: 50px;
     }
+=======
+.gl {
+    animation: rotate 10s infinite linear, opacity 3s linear;
+    /* animation: opacity 3s ease-in-out; */
+}
+
+.topdown {
+    animation: down 0.4s linear;
+
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+
+    }
+
+}
+
+.todown {
+    animation: down1 0.6s linear;
+
+}
+
+@keyframes down1 {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+
+    }
+
+}
+
+.oran {
+    clip-path: polygon(0% 37.66%, 86.28% 37.66%, 49.88% 87.53%, 0% 87.53%);
+    position: absolute;
+
+}
+
+.rt {
+    animation: yaxis 3s linear infinite;
+}
+
+@keyframes yaxis {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        ;
+    }
+
+}
+
+@keyframes down {
+    0% {
+        transform: translateY(-10%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+
+}
+
+@media screen and (min-width:1200px) {
+
+
+    @keyframes rotate {
+        0% {
+            width: 300px;
+            transform: translateX();
+        }
+
+        10% {
+            width: 400px;
+            transform: translateX(50px);
+        }
+
+        20% {
+            width: 500px;
+            transform: translateX(100px);
+        }
+
+        30% {
+            width: 600px;
+
+            transform: translateX(150px);
+        }
+
+        40% {
+            width: 700px;
+            transform: translateX(200px);
+        }
+
+        50% {
+            width: 770px;
+            transform: translateX(250px);
+        }
+
+        60% {
+            width: 700px;
+            transform: translateX(470px);
+        }
+
+        70% {
+            width: 600px;
+            transform: translateX(650px);
+        }
+
+        80% {
+            width: 500px;
+            transform: translateX(750px);
+        }
+
+        90% {
+            width: 400px;
+            transform: translateX(850px);
+        }
+
+        100% {
+            width: 300px;
+            transform: translateX(950px);
+        }
+
+    }
+}
+
+@media (width: 768px) {
+    .td {
+        position: relative;
+
+    }
+}
+
+.tri {
+    clip-path: polygon(51.49% 92.68%, 67.92% 88.57%, 100% 80.55%, 100% 100%, 96.51% 100%, 22.19% 100%);
+    background-color: #FF9315;
+}
+
+.whitetri {
+    clip-path: polygon(0% 81.5%, 22.64% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 99.75%);
+
+
+
+    background: white;
+
+}
+
+.cover {
+    background: linear-gradient(to bottom, white, rgb(250, 250, 250));
+}
+
+.certi {
+    clip-path: polygon(0% 40.4%, 20.46% 87.96%, 100% 87.96%, 100% 97.01%, 100% 100%, 0% 100%);
+    background: linear-gradient(to bottom, white, rgb(244, 244, 244));
+}
+
+.key {
+    animation: jump 1s linear infinite;
+}
+
+@keyframes jump {
+    0% {
+        transform: scale(90%)
+    }
+
+    ;
+
+    100% {
+        transform: scale(100%);
+    }
+
+}
+
+.rad {
+    border-radius: 100%;
+>>>>>>> 64d29e83d5b9700eda8519398094470b9abe3ab6
 }
