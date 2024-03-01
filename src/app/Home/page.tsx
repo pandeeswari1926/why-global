@@ -7,12 +7,12 @@ import "../css/home.css"
 // import video1 from "../asset/WGS VIDEO (1).gif"
 import person from '../asset/ceosir.png'
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
-import Globe from '../home/Globe';
+import Globe from './Globe';
 // import Helicopter from './Helicopter';
 // import Wgs from './wgs'
 // import TopBar from './TopBar';
 // import NavBar from './NavBar';
-// import Footer from './Footer';
+import Footer from './Footer';
 // import World from './World';
 // import Home from './page1';
 function Page() {
@@ -111,8 +111,8 @@ function Page() {
             {/* <Wgs /> */}
             {/* <Testimonial /> */}
             <Globe />
-            {/* <World />
-            <Footer /> */}
+            {/* <World /> */}
+            <Footer />
         </>
     );
 }
