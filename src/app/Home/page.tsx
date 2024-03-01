@@ -14,7 +14,7 @@ import Helicopter from './Helicopter';
 import NavBar from './NavBar';
 import Footer from './Footer';
 // import World from './World';
-// import Home from './page1';
+import Home from './page1';
 function Page() {
 
 
@@ -104,7 +104,7 @@ function Page() {
 
 
             </div>
-            {/* <Home /> */}
+            <Home />
             <Helicopter />
             {/* <Testimonial /> */}
 
