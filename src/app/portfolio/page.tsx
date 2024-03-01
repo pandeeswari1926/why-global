@@ -2,11 +2,8 @@ import React from 'react'
 import Image from 'next/image';
 import Web from './web';
 import WebDesign from './webDesign';
-<<<<<<< HEAD
 import DigitalMarketing from './DigitalMarketing'
-=======
 import Iot from './iot';
->>>>>>> 64d29e83d5b9700eda8519398094470b9abe3ab6
 import Appdevelopment from './Appdevelopment'
 import portfolio1 from '../../../public/wgs gifs (12).gif';
 import portfolio2 from '../../../public/wgs gifs (13).gif';
@@ -24,11 +21,8 @@ const Page = () => {
     return (
         <>
             {/* first section */}
-<<<<<<< HEAD
             {/* <div className='bg-portfolio bg-cover  overflow-hidden'>
-=======
             <div className='bg-portfolio bg-center overflow-hidden'>
->>>>>>> 64d29e83d5b9700eda8519398094470b9abe3ab6
                 <div className='pt-28 px-10'>
                     <div className='text-center '>
                         <h1 className='text-white md:text-8xl text-xl font-semibold leading-snug'>TAKE YOUR IDEAS TO THE <br className='md:block hidden' />NEXT LEVEL</h1><br />
@@ -76,7 +70,6 @@ const Page = () => {
             </div> */}
 
             {/* fourth section */}
-<<<<<<< HEAD
             {/* <div className='py-5'>
                 <WebDesign/>
             </div> */}
@@ -84,7 +77,8 @@ const Page = () => {
             {/* fifth section */}
             <div>
                 <DigitalMarketing />
-=======
+            </div>
+            
             <div>
                 <WebDesign />
             </div>
@@ -93,7 +87,6 @@ const Page = () => {
 
             <div>
                 <Iot />
->>>>>>> 64d29e83d5b9700eda8519398094470b9abe3ab6
             </div>
         </>
     )

@@ -76,7 +76,6 @@
     }
 }
 
-<<<<<<< HEAD
 .logo1{
     animation: logo1 1s ease;
 }
@@ -86,7 +85,8 @@
         padding-left: 50px;
         padding-right: 50px;
     }
-=======
+}
+
 .gl {
     animation: rotate 10s infinite linear, opacity 3s linear;
     /* animation: opacity 3s ease-in-out; */
@@ -271,5 +271,4 @@
 
 .rad {
     border-radius: 100%;
->>>>>>> 64d29e83d5b9700eda8519398094470b9abe3ab6
 }
