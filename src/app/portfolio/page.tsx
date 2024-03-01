@@ -19,7 +19,7 @@ const Page = () => {
     return (
         <>
             {/* first section */}
-            {/* <div className='bg-portfolio bg-cover  overflow-hidden'>
+            <div className='bg-portfolio bg-cover  overflow-hidden'>
                 <div className='pt-28 px-10'>
                     <div className='text-center '>
                         <h1 className='text-white md:text-8xl text-xl font-semibold leading-snug'>TAKE YOUR IDEAS TO THE <br className='md:block hidden' />NEXT LEVEL</h1><br />
@@ -55,11 +55,11 @@ const Page = () => {
                         </div>
                     </div>
                 </div>
-            </div> */}
+            </div>
             {/* second section */}
-            {/* <div className='overflow-hidden'>
+            <div className='overflow-hidden'>
                 <Web />
-            </div> */}
+            </div>
 
             {/* third section */}
             <div>
@@ -67,9 +67,9 @@ const Page = () => {
             </div>
 
             {/* fourth section */}
-            {/* <div>
+            <div>
                 <WebDesign/>
-            </div> */}
+            </div>
         </>
     )
 }
