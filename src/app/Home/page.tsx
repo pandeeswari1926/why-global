@@ -8,10 +8,10 @@ import "../css/home.css"
 import person from '../asset/ceosir.png'
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import Globe from './Globe';
-// import Helicopter from './Helicopter';
+import Helicopter from './Helicopter';
 // import Wgs from './wgs'
 // import TopBar from './TopBar';
-// import NavBar from './NavBar';
+import NavBar from './NavBar';
 import Footer from './Footer';
 // import World from './World';
 // import Home from './page1';
@@ -21,8 +21,8 @@ function Page() {
     return (
         <>
             <div className=''>
-                {/* <TopBar />
-                <NavBar /> */}
+                {/* <TopBar /> */}
+                <NavBar />
 
                 <link
                     rel="stylesheet"
@@ -104,8 +104,8 @@ function Page() {
 
 
             </div>
-            {/* <Home />
-            <Helicopter /> */}
+            {/* <Home /> */}
+            <Helicopter />
             {/* <Testimonial /> */}
 
             {/* <Wgs /> */}
