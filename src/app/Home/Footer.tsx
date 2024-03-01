@@ -13,40 +13,40 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight, faCalendar, faLocation, faMailBulk, faMobile } from '@fortawesome/free-solid-svg-icons'
 
 const Footer = () => {
-  return (
-    <>
-        <section className='p-5 sm:p-10 bg-black flex justify-center'>
+    return (
+        <>
+            <section className='p-5 sm:p-10 bg-black flex justify-center'>
 
-            <section className='p-5 sm:p-10 bg-white grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 w-[100%] xs:w-[60%] sm:w-[100%] md:w-[100%] justify-center rounded-2xl place-items-center gap-5 sm:gap-10'>
+                <section className='p-5 sm:p-10 -mt-10 bg-white grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 w-[100%] xs:w-[60%] sm:w-[100%] md:w-[100%] justify-center rounded-2xl place-items-center gap-5 sm:gap-10'>
 
-                <section className='flex flex-col items-center sm:flex-row space-x-2 '>
-                    <Image src={msgicon} alt='mailicon' className='w-5 h-5'/>
-                    <p className='text-sm sm:text-base'>contact@whyglobalservices.com</p>
-                </section>
+                    <section className='flex flex-col items-center sm:flex-row space-x-2 '>
+                        <Image src={msgicon} alt='mailicon' className='w-5 h-5' />
+                        <p className='text-sm sm:text-base'>contact@whyglobalservices.com</p>
+                    </section>
 
-                <section className='flex-col items-center flex sm:flex-row space-x-2'>
-                    <Image src={locationicon} alt='locationicon' />
-                    <p className='text-sm sm:text-base'>Egmore, Chennai.</p>
-                </section>
+                    <section className='flex-col items-center flex sm:flex-row space-x-2'>
+                        <Image src={locationicon} alt='locationicon' />
+                        <p className='text-sm sm:text-base'>Egmore, Chennai.</p>
+                    </section>
 
-                <section className='flex flex-col sm:flex-row items-center space-x-2'>
-                    <Image src={callicon} alt='callicon' />
-                    <p className='text-sm sm:text-base'>+91-7299119900</p>
-                </section>
+                    <section className='flex flex-col sm:flex-row items-center space-x-2'>
+                        <Image src={callicon} alt='callicon' />
+                        <p className='text-sm sm:text-base'>+91-7299119900</p>
+                    </section>
 
-                <section className='flex gap-4 xl:col-span-1 lg:col-span-3'>
-                    <Image src={facebookicon} alt='facebookicon' className='h-5 w-5 xs:h-7 xs:w-7'/>
-                    <Image src={twittericon} alt='twittericon' className='h-5 w-5 xs:h-7 xs:w-7'/>
-                    <Image src={instagramicon} alt='instagramicon' className='h-5 w-5 xs:h-7 xs:w-7'/>
-                    <Image src={linkedinicon} alt='linkedinicon' className='h-5 w-5 xs:h-7 xs:w-7'/>
-                    <Image src={youtubeicon} alt='youtubeicon' className='h-5 w-5 xs:h-7 xs:w-7'/>
+                    <section className='flex gap-4 xl:col-span-1 lg:col-span-3'>
+                        <Image src={facebookicon} alt='facebookicon' className='h-5 w-5 xs:h-7 xs:w-7' />
+                        <Image src={twittericon} alt='twittericon' className='h-5 w-5 xs:h-7 xs:w-7' />
+                        <Image src={instagramicon} alt='instagramicon' className='h-5 w-5 xs:h-7 xs:w-7' />
+                        <Image src={linkedinicon} alt='linkedinicon' className='h-5 w-5 xs:h-7 xs:w-7' />
+                        <Image src={youtubeicon} alt='youtubeicon' className='h-5 w-5 xs:h-7 xs:w-7' />
+                    </section>
+
                 </section>
 
             </section>
-        
-        </section>
 
-        <section className='px-[5%] grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 justify-between gap-5 bg-black text-white'>
+            <section className='px-[5%] grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 justify-between gap-5 bg-black text-white'>
 
                 <section className='flex flex-col gap-4'>
                     <h1 className='font-bold text-sm sm:text-lg'>About Us</h1>
@@ -99,10 +99,10 @@ const Footer = () => {
 
                 </section>
 
-            
-        </section>
-    </>
-  )
+
+            </section>
+        </>
+    )
 }
 
 export default Footer

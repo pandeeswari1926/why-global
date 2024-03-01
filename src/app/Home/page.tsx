@@ -16,6 +16,7 @@ import Footer from './Footer';
 import Testimonial from './Testimonial';
 import World from './World';
 import Home from './page1';
+import Client from './client';
 function Page() {
 
 
@@ -105,13 +106,15 @@ function Page() {
 
       </div>
       <Home />
+      <Globe />
+      <World />
+      <Client/>
       <Helicopter />
       {/* <Testimonial /> */}
 
       <Wgs />
       {/* <Testimonial /> */}
-      <Globe />
-      <World />
+
       <Footer />
     </>
   );
