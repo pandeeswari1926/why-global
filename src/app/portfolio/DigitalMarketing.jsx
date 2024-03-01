@@ -16,7 +16,7 @@ const Digitalmarketing = () => {
   return (
     <article className='relative h-screen '>
         <Image src={dmbg} className='h-full'/>
-        <div className='absolute -translate-x-1/2 -translate-y-1/2 top-[45%] left-[65%]'>
+        <div className='absolute -translate-x-1/2 -translate-y-1/2 top-[42.5%] left-[65%]'>
             <article>
                 <article className='flex flex-col justify-center items-center h-screen'>
                     <article className='relative w-[600px] h-[450px] bg-gray-200 border-t-[40px] border-whytap rounded-xl flex flex-col justify-center items-center'>
