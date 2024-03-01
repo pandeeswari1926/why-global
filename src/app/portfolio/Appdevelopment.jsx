@@ -30,7 +30,7 @@ const Appdevelopment = () => {
     switch (currentArticle) {
         case 1:
             return (
-                <article
+                <article className='pb-1'
                 >
                     <section className='bg-appbg1 bg-cover flex sm:flex-row flex-col sm:justify-evenly gap-5 sm:gap-0 items-center summa'>
                         <div>
@@ -40,8 +40,8 @@ const Appdevelopment = () => {
                             </section>
                             <Image src={appdevbig1} className='w-72 rounded-xl drop-shadow-xl'/>
                         </div>
-                        <Image src={appdev3} className='w-40 rounded-xl drop-shadow-xl sm:mt-16' />
-                        <Image src={appdev2} className='w-40 rounded-xl drop-shadow-xl sm:mt-16'/>
+                        <Image src={appdev3} className='w-40 rounded-xl drop-shadow-xl sm:mt-16 hidden sm:block' />
+                        <Image src={appdev2} className='w-40 rounded-xl drop-shadow-xl sm:mt-16 hidden sm:block'/>
                     </section>
                 </article>
             )
@@ -49,18 +49,18 @@ const Appdevelopment = () => {
         case 2:
             return (
                 <article 
-                    className='relative sm:pt-20 summa'
+                    className='relative pt-20  summa pb-6'
                 >
-                    <div className='absolute  -translate-x-1/2 -translate-y-1/2 top-[11%] left-[67%] mt-4 key2'>
+                    <div className='absolute  -translate-x-1/2 -translate-y-1/2 sm:top-[11%] top-[5%] left-[67%] mt-4 key2'>
                         <section className='relative w-36'>
                             <Image src={react} className='w-72 rounded-xl drop-shadow-xl'/>
                             <p className='absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#686868] text-lg font-semibold'>React</p>
                         </section>
                     </div>     
                     <section className='bg-appbg2 bg-cover flex sm:flex-row flex-col sm:justify-evenly gap-5 sm:gap-0 items-center'>
-                            <Image src={appdev1} className='w-40 rounded-xl drop-shadow-xl sm:mt-16'/>
+                            <Image src={appdev1} className='w-40 rounded-xl drop-shadow-xl sm:mt-16 hidden sm:block'/>
                             <Image src={appdevbig2} className='w-72 rounded-xl drop-shadow-xl'/>
-                            <Image src={appdev3} className='w-40 rounded-xl drop-shadow-xl sm:mt-16'/>
+                            <Image src={appdev3} className='w-40 rounded-xl drop-shadow-xl sm:mt-16 hidden sm:block'/>
                     </section>
                 </article>
             )
@@ -68,10 +68,10 @@ const Appdevelopment = () => {
 
             return (
                 <article 
-                    className='relative sm:pt-20 '
+                    className='relative pt-20 '
                 >
                     <div className='summa'>
-                    <div className='absolute -translate-x-1/2 -translate-y-1/2 top-[11%] right-[2%] key3'>
+                    <div className='absolute -translate-x-1/2 -translate-y-1/2 sm:top-[11%] top-[8%] right-[2%] key3'>
                         <section className='relative w-36 lg:-ml-28'>
                             <Image src={flutter}/>
                             <p className='absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#686868] text-lg font-semibold'>Flutter</p>
@@ -79,8 +79,8 @@ const Appdevelopment = () => {
                     </div>
 
                     <section className='bg-appbg3 bg-cover flex sm:flex-row flex-col sm:justify-evenly gap-5 sm:gap-0 items-center'>
-                        <Image src={appdev2} className='w-36 rounded-xl drop-shadow-xl sm:mt-16'/>
-                        <Image src={appdev1} className='w-40 rounded-xl drop-shadow-xl sm:mt-16'/>       
+                        <Image src={appdev2} className='w-36 rounded-xl drop-shadow-xl sm:mt-16 hidden sm:block'/>
+                        <Image src={appdev1} className='w-40 rounded-xl drop-shadow-xl sm:mt-16 hidden sm:block'/>       
                         <Image src={appdevbig3} className='w-72 rounded-xl drop-shadow-xl'/>
                     </section>
                     </div>
@@ -93,8 +93,8 @@ const Appdevelopment = () => {
   }
 
   return ( 
-    <article className=''>
-        <h1 className='text-5xl text-center bg-gradient-to-b from-[#4d4d4d] bg-clip-text text-transparent to-gray-300 font-semibold py-5'>APP DEVELOPMENT</h1>
+    <article className='bg-gray-100'>
+        <h1 className='text-3xl sm:text-5xl text-center bg-gradient-to-b from-[#4d4d4d] bg-clip-text text-transparent to-gray-300 font-semibold py-5'>APP DEVELOPMENT</h1>
         {renderContent(currentArticle)}
     </article>
     

@@ -23,6 +23,11 @@ const config: Config = {
       },
       fontFamily: {
         font: ["inter", "italic"]
+      },
+      colors: {
+        whytap : "#851B46",
+        abhis : "#0D5D50",
+        kush : "#EECF64"
       }
     },
   },

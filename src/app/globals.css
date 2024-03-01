@@ -75,3 +75,14 @@
         opacity: 1;
     }
 }
+
+.logo1{
+    animation: logo1 1s ease;
+}
+
+@keyframes logo1 {
+    0%{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
