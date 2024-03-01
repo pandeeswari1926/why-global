@@ -21,7 +21,7 @@ const config: Config = {
         appbg2:'url("/appbg2.png")',
         appbg3: 'url("/appbg3.png")',
         'world': "url('./asset/worldblack.gif')",
-        'custom': "url('asset/b1.png')",
+        'custom': "url('/asset/b1.png')",
         'bgslide': "url('asset/Vector.png')",
         'summa': "url('asset/background.png')",
         'about': "url('asset/Vector3.png')",

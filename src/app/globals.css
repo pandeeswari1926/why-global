@@ -75,6 +75,7 @@
         opacity: 1;
     }
 }
+
 .gl {
     animation: rotate 10s infinite linear, opacity 3s linear;
     /* animation: opacity 3s ease-in-out; */
