@@ -13,6 +13,7 @@ import message1 from '../../../public/message2.png';
 import message2 from '../../../public/Rectangle 129.png';
 import message3 from '../../../public/message5.png'
 import message4 from '../../../public/message4.png';
+import Iot from './iot';
 
 
 const Page = () => {
@@ -68,7 +69,13 @@ const Page = () => {
 
             {/* fourth section */}
             <div>
-                <WebDesign/>
+                <WebDesign />
+            </div>
+
+
+            {/* sixth section */}
+            <div className='pt-10'>
+                <Iot />
             </div>
         </>
     )
