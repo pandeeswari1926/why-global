@@ -14,19 +14,19 @@ import { Switch } from "antd";
 const Digitalmarketing = () => {
 
   return (
-    <article className='relative h-screen'>
+    <article className='relative h-screen '>
         <Image src={dmbg} className='h-full'/>
-        <div className='absolute top-0 right-10'>
+        <div className='absolute -translate-x-1/2 -translate-y-1/2 top-[45%] left-[65%]'>
             <article>
                 <article className='flex flex-col justify-center items-center h-screen'>
-                    <article className='relative h-[80vh] bg-gray-200 border-t-[40px] border-whytap rounded-xl flex flex-col justify-center items-center'>
+                    <article className='relative w-[600px] h-[450px] bg-gray-200 border-t-[40px] border-whytap rounded-xl flex flex-col justify-center items-center'>
                         <div className='flex flex-col gap-4'>
 
-                            <h1 className='font-semibold text-xl text-[#3E3E3E] pl-16'>Overview</h1>
+                            <h1 className='font-semibold text-xl text-[#3E3E3E] pl-12'>Overview</h1>
 
                             <div className='flex justify-center gap-3'>
 
-                                <div className='flex justify-center items-center gap-3 bg-white w-fit px-2 py-4 rounded-lg'>
+                                <div className='flex justify-center items-center gap-4  bg-white w-fit px-1 py-4 rounded-lg'>
                                     <div className='bg-whytap w-6 h-6 rounded-full' />
                                     <div>
                                         <h1 className='text-xs font-medium'>No.1 Institute</h1>
@@ -34,7 +34,7 @@ const Digitalmarketing = () => {
                                     </div>
                                 </div>
 
-                                <div className='flex justify-center items-center gap-3 bg-white w-fit px-2 py-4 rounded-lg'>
+                                <div className='flex justify-center items-center gap-4 bg-white w-fit px-1 py-4 rounded-lg'>
                                     <div className='bg-whytap w-6 h-6 rounded-full' />
                                     <div>
                                         <h1 className='text-xs font-medium'>No.1 Institute</h1>
@@ -42,7 +42,7 @@ const Digitalmarketing = () => {
                                     </div>
                                 </div>
 
-                                <div className='flex justify-center items-center gap-3 bg-white w-fit px-2 py-4 rounded-lg'>
+                                <div className='flex justify-center items-center gap-4 bg-white w-fit px-1 py-4 rounded-lg'>
                                     <div className='bg-whytap w-6 h-6 rounded-full' />
                                     <div>
                                         <h1 className='text-xs font-medium'>No.1 Institute</h1>
@@ -57,10 +57,10 @@ const Digitalmarketing = () => {
                             </div>
 
                             <div className='flex gap-3 justify-center items-center'>
-                                <div className='w-[63%] h-52 bg-white rounded-lg flex flex-col justify-center'>
+                                <div className='w-[66%] h-52 bg-white rounded-lg flex flex-col justify-center'>
                                     <Image src={dm1}/>
                                 </div>
-                                <div className='w-[15%] h-52 bg-white rounded-lg flex flex-col justify-center'>
+                                <div className='w-[16%] h-52 bg-white rounded-lg flex flex-col justify-center'>
                                     <Image src={dmcircle1} className='p-3'/>
                                 </div> 
                             </div>
@@ -68,7 +68,7 @@ const Digitalmarketing = () => {
                         </div>
 
                         {/* absolute contents */}
-                        <article className='absolute -translate-x-1/2 -translate-y-1/2 left-1/2 bottom-0 -mb-28'>
+                        <article className='absolute -translate-x-1/2 -translate-y-1/2 left-1/2 bottom-0 -mb-36'>
                             <div className='flex gap-3'>
                                 <div className='w-64 bg-white drop-shadow-lg rounded-lg flex flex-col justify-end '>
                                         <Image src={dmpoint1} className='rounded-lg'/>
@@ -98,8 +98,8 @@ const Digitalmarketing = () => {
                             </div>
                         </article>
 
-                        <article className='absolute -translate-x-1/2 -translate-y-1/2 right-0 -mr-[62px] top-[23.5%]'>
-                            <div className='flex justify-center items-center bg-white drop-shadow-lg w-36 h-20 rounded-lg gap-2'>
+                        <article className='absolute -translate-x-1/2 -translate-y-1/2 right-0 -mr-[101px] top-[20.5%]'>
+                            <div className='flex justify-center items-center bg-white drop-shadow-lg w-40 h-20 rounded-lg gap-2'>
                                 <Image src={dmlike1} className='w-10 h-10 rounded-full'/>
                                 <div>
                                     <h2 className='text-sm font-semibold'>398K</h2>
@@ -114,12 +114,12 @@ const Digitalmarketing = () => {
                         </div>
                         </article>
 
-                        <article className='absolute -translate-x-1/2 -translate-y-1/2 top-56 left-0'>
-                            <div className='bg-white rounded-lg p-3 drop-shadow-lg'>
-                                <div className='py-5'>
-                                    <h1>20 Days</h1>
+                        <article className='absolute -translate-x-1/2 -translate-y-1/2 top-48 -ml-4 left-0'>
+                            <div className='bg-white rounded-lg h-40 m-1  drop-shadow-lg flex flex-col justify-between py-2'>
+                                <div className='px-2'>
+                                    <h1 className='py-1'>20 Days</h1>
                                     <p className='text-xs text-[#5A7184]'>Average Likes gained</p>
-                                    <div className='flex text-xs bg-whytap w-fit text-white p-1 rounded-lg'>
+                                    <div className='flex text-xs bg-whytap w-fit mt-1 text-white p-1 rounded-lg'>
                                         <MdArrowOutward />
                                         <p>10.5%</p>
                                     </div>
@@ -130,39 +130,45 @@ const Digitalmarketing = () => {
                             </div>
                         </article>
 
-                        <article className='absolute top-0 -mt-3 ml-10'>
-                            <div className='bg-white p-2 rounded-lg drop-shadow-lg'>
-                                <h2 className='py-2 font-semibold'>Ads Statuses</h2>
+                        <article className='absolute top-0 -mt-3 ml-20'>
+                            <div className='bg-white w-64 p-2 rounded-lg drop-shadow-lg'>
+                                <h2 className=' font-semibold py-2 text-xs pl-1'>Ads Statuses</h2>
                                 <div className='grid grid-cols-3 gap-2 place-items-center'>
                                     <Switch
-                                        checkedChildren={`Inactive`}
-                                        unCheckedChildren={`Active`}
+                                        checkedChildren={<span className='text-[10px] flex justify-center items-center'>Inactive</span>}
+                                        unCheckedChildren={<span className='text-[10px] flex justify-center items-center'>Active</span>}
                                         className='bg-whytap'
+                                        size='small'
                                     />
                                     <Switch
-                                        checkedChildren={`Inactive`}
-                                        unCheckedChildren={`Need action`}
+                                        checkedChildren={<span className='text-[10px] flex justify-center items-center'>Inactive</span>}
+                                        unCheckedChildren={<span className='text-[10px] flex justify-center items-center'>NeedAction</span>}
                                         className='bg-whytap'
+                                        size='small'
                                     />
                                     <Switch
-                                        checkedChildren={`Active`}
-                                        unCheckedChildren={`Allocated`}
+                                        checkedChildren={<span className='text-[10px] flex justify-center items-center'>Inactive</span>}
+                                        unCheckedChildren={<span className='text-[10px] flex justify-center items-center'>Allocated</span>}
                                         className='bg-whytap'
+                                        size='small'
                                     />
                                     <Switch
-                                        checkedChildren={`Active`}
-                                        unCheckedChildren={`Inactive`}
+                                        checkedChildren={<span className='text-[10px] flex justify-center items-center'>Active</span>}
+                                        unCheckedChildren={<span className='text-[10px] flex justify-center items-center'>Inactive</span>}
                                         className='bg-whytap'
+                                        size='small'
                                     />
                                     <Switch
-                                        checkedChildren={`Inactive`}
-                                        unCheckedChildren={`Suspended`}
+                                        checkedChildren={<span className='text-[10px] flex justify-center items-center'>Inactive</span>}
+                                        unCheckedChildren={<span className='text-[10px] flex justify-center items-center'>Suspended</span>}
                                         className='bg-whytap'
+                                        size='small'
                                     />
                                     <Switch
-                                        checkedChildren={`Inactive`}
-                                        unCheckedChildren={`Allocated`}
+                                        checkedChildren={<span className='text-[10px] flex justify-center items-center'>Inactive</span>}
+                                        unCheckedChildren={<span className='text-[10px] flex justify-center items-center'>Allocated</span>}
                                         className='bg-whytap'   
+                                        size='small'
                                     />
                                 </div>
                             </div>
@@ -175,8 +181,8 @@ const Digitalmarketing = () => {
             </article>
         </div>
         <div className='absolute top-[20%] left-0'>
-            <div className='bg-[#FF9315] rounded-r-xl text-white py-8 px-14'>
-                <h2 className='text-3xl font-semibold pl-5'>DIGITAL MARKETING</h2>
+            <div className='bg-[#FF9315] rounded-r-xl text-white h-20 w-96 flex  justify-end items-center'>
+                <h2 className='text-3xl font-semibold pr-3'>DIGITAL MARKETING</h2>
             </div>
         </div>
     </article>
