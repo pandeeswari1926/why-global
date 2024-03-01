@@ -22,10 +22,10 @@ const config: Config = {
         appbg3: 'url("/appbg3.png")',
         'world': "url('./asset/worldblack.gif')",
         'custom': "url('/asset/b1.png')",
-        'bgslide': "url('asset/Vector.png')",
-        'summa': "url('asset/background.png')",
-        'about': "url('asset/Vector3.png')",
-        'second': "url('asset/second.png')"
+        'bgslide': "url('/asset/Vector.png')",
+        'summa': "url('/asset/background.png')",
+        'about': "url('/asset/Vector3.png')",
+        'second': "url('/asset/second.png')"
       },
       screens: {
         "xs": '431px',
