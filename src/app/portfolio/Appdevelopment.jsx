@@ -79,7 +79,7 @@ const Appdevelopment = () => {
                     </div>
 
                     <section className='bg-appbg3 bg-cover flex sm:flex-row flex-col sm:justify-evenly gap-5 sm:gap-0 items-center'>
-                        <Image src={appdev2} className='w-40 rounded-xl drop-shadow-xl sm:mt-16'/>
+                        <Image src={appdev2} className='w-36 rounded-xl drop-shadow-xl sm:mt-16'/>
                         <Image src={appdev1} className='w-40 rounded-xl drop-shadow-xl sm:mt-16'/>       
                         <Image src={appdevbig3} className='w-72 rounded-xl drop-shadow-xl'/>
                     </section>
