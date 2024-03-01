@@ -14,7 +14,7 @@ import TopBar from './TopBar';
 import NavBar from './NavBar';
 import Footer from './Footer';
 import Testimonial from './Testimonial';
-// import World from './World';
+import World from './World';
 import Home from './page1';
 function Page() {
 
@@ -112,7 +112,7 @@ function Page() {
             <Wgs />
             {/* <Testimonial /> */}
             <Globe />
-            {/* <World /> */}
+            <World />
             <Footer />
         </>
     );
