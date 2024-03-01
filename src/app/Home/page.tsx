@@ -7,7 +7,7 @@ import "../css/home.css"
 // import video1 from "../asset/WGS VIDEO (1).gif"
 import person from '../asset/ceosir.png'
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
-// import Globe from '../home/Globe';
+import Globe from '../home/Globe';
 // import Helicopter from './Helicopter';
 // import Wgs from './wgs'
 // import TopBar from './TopBar';
@@ -110,8 +110,8 @@ function Page() {
 
             {/* <Wgs /> */}
             {/* <Testimonial /> */}
-            {/* <Globe />
-            <World />
+            <Globe />
+            {/* <World />
             <Footer /> */}
         </>
     );
