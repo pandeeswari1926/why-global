@@ -16,15 +16,15 @@ const Digitalmarketing = () => {
   return (
     <article className='relative h-screen '>
         <Image src={dmbg} className='h-full'/>
-        <div className='absolute -translate-x-1/2 -translate-y-1/2 top-[42.5%] left-[65%]'>
-            <article>
+        <div className='absolute -translate-x-1/2 -translate-y-1/2 lg:top-[42.5%] lg:left-[65%] top-1/2 left-1/2'>
+            <article className=''>
                 <article className='flex flex-col justify-center items-center h-screen'>
-                    <article className='relative w-[600px] h-[450px] bg-gray-200 border-t-[40px] border-whytap rounded-xl flex flex-col justify-center items-center'>
+                    <article className='relative xs:w-[400px] sm:w-[600px] h-[450px] bg-gray-200 border-t-[40px] border-whytap rounded-xl flex flex-col justify-center items-center'>
                         <div className='flex flex-col gap-4'>
 
-                            <h1 className='font-semibold text-xl text-[#3E3E3E] pl-12'>Overview</h1>
+                            <h1 className='font-semibold text-xl text-[#3E3E3E] md:pl-12 text-center sm:text-start'>Overviews</h1>
 
-                            <div className='flex justify-center gap-3'>
+                            <div className='grid grid-cols-2 place-items-center sm:flex flex-row justify-center items-center gap-3'>
 
                                 <div className='flex justify-center items-center gap-4  bg-white w-fit px-1 py-4 rounded-lg'>
                                     <div className='bg-whytap w-6 h-6 rounded-full' />
@@ -57,10 +57,10 @@ const Digitalmarketing = () => {
                             </div>
 
                             <div className='flex gap-3 justify-center items-center'>
-                                <div className='w-[66%] h-52 bg-white rounded-lg flex flex-col justify-center'>
+                                <div className='sm:w-[66%] w-1/2 sm:h-52 bg-white rounded-lg flex flex-col justify-center'>
                                     <Image src={dm1}/>
                                 </div>
-                                <div className='w-[16%] h-52 bg-white rounded-lg flex flex-col justify-center'>
+                                <div className='sm:w-[16%] w-1/2 sm:h-52 bg-white rounded-lg flex flex-col justify-center'>
                                     <Image src={dmcircle1} className='p-3'/>
                                 </div> 
                             </div>
@@ -68,7 +68,7 @@ const Digitalmarketing = () => {
                         </div>
 
                         {/* absolute contents */}
-                        <article className='absolute -translate-x-1/2 -translate-y-1/2 left-1/2 bottom-0 -mb-36'>
+                        {/* <article className='absolute -translate-x-1/2 -translate-y-1/2 left-1/2 bottom-0 -mb-36'>
                             <div className='flex gap-3'>
                                 <div className='w-64 bg-white drop-shadow-lg rounded-lg flex flex-col justify-end '>
                                         <Image src={dmpoint1} className='rounded-lg'/>
@@ -79,14 +79,12 @@ const Digitalmarketing = () => {
                                     <div className='bg-whytap w-6 h-6 rounded-full' />
                                     <div>
                                         <h1 className='text-xs font-medium'>No.1 Institute</h1>
-                                        {/* <p className='text-xs'>Student's Empowerment</p> */}
                                     </div>
                                 </div>
                                 <div className='flex justify-center items-center gap-3  px-2 py-4 '>
                                     <div className='bg-whytap w-6 h-6 rounded-full' />
                                     <div>
                                         <h1 className='text-xs font-medium'>No.1 Institute</h1>
-                                        {/* <p className='text-xs'>Student's Empowerment</p> */}
                                     </div>
                                 </div>
                                 </div>
@@ -96,9 +94,9 @@ const Digitalmarketing = () => {
                                 </div>
 
                             </div>
-                        </article>
+                        </article> */}
 
-                        <article className='absolute -translate-x-1/2 -translate-y-1/2 right-0 -mr-[101px] top-[20.5%]'>
+                        {/* <article className='absolute -translate-x-1/2 -translate-y-1/2 right-0 -mr-[101px] top-[20.5%]'>
                             <div className='flex justify-center items-center bg-white drop-shadow-lg w-40 h-20 rounded-lg gap-2'>
                                 <Image src={dmlike1} className='w-10 h-10 rounded-full'/>
                                 <div>
@@ -106,15 +104,15 @@ const Digitalmarketing = () => {
                                     <p className='text-xs text-[#5A7184]'>Total Likes</p>
                                 </div>
                             </div>
-                        </article>
+                        </article> */}
 
-                        <article className='absolute -translate-x-1/2 -translate-y-1/2 top-2 left-0'>
+                        {/* <article className='absolute -translate-x-1/2 -translate-y-1/2 top-2 left-0'>
                         <div className='bg-white drop-shadow-lg border border-whytap px-4 py-2 rounded-lg logo1'>
                             <Image src={whytaplogo} className='w-28'/>
                         </div>
-                        </article>
+                        </article> */}
 
-                        <article className='absolute -translate-x-1/2 -translate-y-1/2 top-48 -ml-4 left-0'>
+                        {/* <article className='absolute -translate-x-1/2 -translate-y-1/2 top-48 -ml-4 left-0'>
                             <div className='bg-white rounded-lg h-40 m-1  drop-shadow-lg flex flex-col justify-between py-2'>
                                 <div className='px-2'>
                                     <h1 className='py-1'>20 Days</h1>
@@ -128,9 +126,9 @@ const Digitalmarketing = () => {
                                     <Image src={dmbar1}/>
                                 </div>
                             </div>
-                        </article>
+                        </article> */}
 
-                        <article className='absolute top-0 -mt-3 ml-20'>
+                        {/* <article className='absolute top-0 -mt-3 ml-20'>
                             <div className='bg-white w-64 p-2 rounded-lg drop-shadow-lg'>
                                 <h2 className=' font-semibold py-2 text-xs pl-1'>Ads Statuses</h2>
                                 <div className='grid grid-cols-3 gap-2 place-items-center'>
@@ -172,7 +170,7 @@ const Digitalmarketing = () => {
                                     />
                                 </div>
                             </div>
-                        </article>
+                        </article> */}
 
                     </article>
 
@@ -180,11 +178,11 @@ const Digitalmarketing = () => {
                 </article>
             </article>
         </div>
-        <div className='absolute top-[20%] left-0'>
+        {/* <div className='absolute lg:top-[20%] top-[10%] left-0'>
             <div className='bg-[#FF9315] rounded-r-xl text-white h-20 w-96 flex  justify-end items-center'>
                 <h2 className='text-3xl font-semibold pr-3'>DIGITAL MARKETING</h2>
             </div>
-        </div>
+        </div> */}
     </article>
   )
 }
