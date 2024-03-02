@@ -34,15 +34,15 @@
 /* appdevelopment */
 
 .key1{
-    animation: key1 1s  ease-in-out;
+    animation: key1 1s  linear;
 }
 
 .key2{
-    animation: key2 1s  ease-in-out;
+    animation: key2 1s  linear;
 }
 
 .key3{
-    animation: key3 1s  ease-in-out;
+    animation: key3 1s  linear;
 }
 
 @keyframes key1 {

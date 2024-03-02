@@ -21,7 +21,7 @@ const Page = () => {
     return (
         <>
             {/* first section */}
-            {/* <div className='bg-portfolio bg-cover  overflow-hidden'>
+            <div className='bg-portfolio bg-cover  overflow-hidden'>
             <div className='bg-portfolio bg-center overflow-hidden'>
                 <div className='pt-28 px-10'>
                     <div className='text-center '>
@@ -59,21 +59,21 @@ const Page = () => {
                     </div>
                 </div>
             </div>
-            </div> */}
+            </div>
             {/* second section */}
-            {/* <div className='overflow-hidden py-5'>
+            <div className='overflow-hidden py-5'>
                 <Web />
-            </div> */}
+            </div>
 
             {/* third section */}
-            {/* <div className='pb-10'>
+            <div className='pb-10'>
                 <Appdevelopment />
-            </div> */}
+            </div>
 
             {/* fourth section */}
-            {/* <div className='py-5'>
+            <div className='py-5'>
                 <WebDesign/>
-            </div> */}
+            </div>
 
             {/* fifth section */}
             <div>
@@ -83,9 +83,9 @@ const Page = () => {
 
             {/* sixth section */}
 
-            {/* <div>
+            <div>
                 <Iot />
-            </div> */}
+            </div>
         </>
     )
 }
