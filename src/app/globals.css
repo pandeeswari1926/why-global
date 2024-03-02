@@ -77,7 +77,7 @@
 }
 
 .logo1{
-    animation: logo1 1s ease;
+    animation: logo1 1s linear;
 }
 
 @keyframes logo1 {
