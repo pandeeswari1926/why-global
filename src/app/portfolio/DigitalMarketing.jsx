@@ -38,10 +38,10 @@ const Digitalmarketing = () => {
     switch (currentArticle) {
         case 1 :
             return (
-                <div className='absolute -translate-x-1/2 -translate-y-1/2 lg:top-[42.5%] lg:left-[65%] top-1/2 left-1/2'>
+                <div className='absolute -translate-x-1/2 -translate-y-1/2 lg:top-[42.5%] lg:left-[65%] top-1/2 left-1/2 '>
                     <article className=''>
                         <article className='flex flex-col justify-center items-center h-screen'>
-                            <article className='relative w-[270px] xs:w-[400px] sm:w-[600px] h-[450px] bg-gray-200 border-t-[40px] border-whytap rounded-xl flex flex-col justify-center items-center'>
+                            <article className='relative w-[270px] xs:w-[400px] sm:w-[600px] h-[450px] bg-gray-200 border-t-[40px] border-whytap transition-colors duration-500 ease-in-out   rounded-xl flex flex-col justify-center items-center'>
                                 <div className='flex flex-col gap-4'>
         
                                     <h1 className='font-semibold xs:text-xl text-[#3E3E3E] pl-5 sm:pl-12 xs:pl-9 text-start'>Overview</h1>
@@ -49,7 +49,7 @@ const Digitalmarketing = () => {
                                     <div className='grid grid-cols-2 place-items-center sm:flex flex-row justify-center items-center gap-3 px-5 sm:px-0'>
         
                                         <div className='flex justify-center items-center gap-4   bg-white w-28 xs:w-44 sm:w-fit px-1 py-4 rounded-lg'>
-                                            <div className='bg-whytap w-6 h-6 rounded-full' />
+                                            <div className='bg-whytap transition-colors duration-500 ease-in-out  w-6 h-6 rounded-full' />
                                             <div>
                                                 <h1 className='text-[10px] xs:text-xs font-medium'>No.1 Institute</h1>
                                                 {/* <p className='text-xs'>Student's Empowerment</p> */}
@@ -57,7 +57,7 @@ const Digitalmarketing = () => {
                                         </div>
         
                                         <div className='flex justify-center items-center gap-4 bg-white w-28 xs:w-44 sm:w-fit px-1 py-4 rounded-lg'>
-                                            <div className='bg-whytap w-6 h-6 rounded-full' />
+                                            <div className='bg-whytap transition-colors duration-500 ease-in-out  w-6 h-6 rounded-full' />
                                             <div>
                                                 <h1 className='text-[10px] xs:text-xs font-medium'>No.1 Institute</h1>
                                                 {/* <p className='text-xs'>Student's Empowerment</p> */}
@@ -65,7 +65,7 @@ const Digitalmarketing = () => {
                                         </div>
         
                                         <div className='flex justify-center items-center gap-4 bg-white w-28 xs:w-44 sm:w-fit px-1 py-4 rounded-lg'>
-                                            <div className='bg-whytap w-6 h-6 rounded-full' />
+                                            <div className='bg-whytap transition-colors duration-500 ease-in-out  w-6 h-6 rounded-full' />
                                             <div>
                                                 <h1 className='text-[10px] xs:text-xs font-medium'>No.1 Institute</h1>
                                                 {/* <p className='text-xs'>Student's Empowerment</p> */}
@@ -98,13 +98,13 @@ const Digitalmarketing = () => {
         
                                         <div className='bg-white drop-shadow-lg rounded-lg w-[130px]'>
                                         <div className='flex justify-center items-center gap-3  xs:px-2 py-4 '>
-                                            <div className='bg-whytap w-6 h-6 rounded-full' />
+                                            <div className='bg-whytap transition-colors duration-500 ease-in-out  w-6 h-6 rounded-full' />
                                             <div>
                                                 <h1 className='text-[10px] xs:text-xs font-medium'>No.1 Institute</h1>
                                             </div>
                                         </div>
                                         <div className='flex justify-center items-center gap-3  xs:px-2 py-4 '>
-                                            <div className='bg-whytap w-6 h-6 rounded-full' />
+                                            <div className='bg-whytap transition-colors duration-500 ease-in-out  w-6 h-6 rounded-full' />
                                             <div>
                                                 <h1 className='text-[10px] xs:text-xs font-medium'>No.1 Institute</h1>
                                             </div>
@@ -129,7 +129,7 @@ const Digitalmarketing = () => {
                                 </article>
         
                                 <article className='absolute -translate-x-1/2 -translate-y-1/2 top-0 sm:top-2 md:left-0 sm:left-14 left-[50%]'>
-                                <div className='bg-white drop-shadow-lg border border-whytap px-4 py-2 rounded-lg logo1'>
+                                <div className='bg-white drop-shadow-lg border border-whytap transition-colors duration-500 ease-in-out  px-4 py-2 rounded-lg logo1'>
                                     <Image src={whytaplogo} className='sm:w-28 xs:w-24 w-20'/>
                                 </div>
                                 </article>
@@ -139,7 +139,7 @@ const Digitalmarketing = () => {
                                         <div className='px-2'>
                                             <h1 className='py-1 text-[10px] xs:text-xs sm:text-base'>20 Days</h1>
                                             <p className='text-[8px] sm:text-xs text-[#5A7184]'>Average Likes gained</p>
-                                            <div className='flex text-[8px] sm:text-xs bg-whytap w-fit mt-1 text-white p-1 rounded-lg'>
+                                            <div className='flex text-[8px] sm:text-xs bg-whytap transition-colors duration-500 ease-in-out  w-fit mt-1 text-white p-1 rounded-lg'>
                                                 <MdArrowOutward />
                                                 <p>10.5%</p>
                                             </div>
@@ -157,37 +157,37 @@ const Digitalmarketing = () => {
                                             <Switch
                                                 checkedChildren={<span className='text-[10px] flex justify-center items-center'>Inactive</span>}
                                                 unCheckedChildren={<span className='text-[10px] flex justify-center items-center'>Active</span>}
-                                                className='bg-whytap'
+                                                className='bg-whytap transition-colors duration-500 ease-in-out '
                                                 size='small'
                                             />
                                             <Switch
                                                 checkedChildren={<span className='text-[10px] flex justify-center items-center'>Inactive</span>}
                                                 unCheckedChildren={<span className='text-[10px] flex justify-center items-center'>NeedAction</span>}
-                                                className='bg-whytap'
+                                                className='bg-whytap transition-colors duration-500 ease-in-out '
                                                 size='small'
                                             />
                                             <Switch
                                                 checkedChildren={<span className='text-[10px] flex justify-center items-center'>Inactive</span>}
                                                 unCheckedChildren={<span className='text-[10px] flex justify-center items-center'>Allocated</span>}
-                                                className='bg-whytap'
+                                                className='bg-whytap transition-colors duration-500 ease-in-out '
                                                 size='small'
                                             />
                                             <Switch
                                                 checkedChildren={<span className='text-[10px] flex justify-center items-center'>Active</span>}
                                                 unCheckedChildren={<span className='text-[10px] flex justify-center items-center'>Inactive</span>}
-                                                className='bg-whytap'
+                                                className='bg-whytap transition-colors duration-500 ease-in-out '
                                                 size='small'
                                             />
                                             <Switch
                                                 checkedChildren={<span className='text-[10px] flex justify-center items-center'>Inactive</span>}
                                                 unCheckedChildren={<span className='text-[10px] flex justify-center items-center'>Suspended</span>}
-                                                className='bg-whytap'
+                                                className='bg-whytap transition-colors duration-500 ease-in-out'
                                                 size='small'
                                             />
                                             <Switch
                                                 checkedChildren={<span className='text-[10px] flex justify-center items-center'>Inactive</span>}
                                                 unCheckedChildren={<span className='text-[10px] flex justify-center items-center'>Allocated</span>}
-                                                className='bg-whytap'   
+                                                className='bg-whytap transition-colors duration-500 ease-in-out'   
                                                 size='small'
                                             />
                                         </div>
@@ -207,7 +207,7 @@ const Digitalmarketing = () => {
                 <div className='absolute -translate-x-1/2 -translate-y-1/2 lg:top-[42.5%] lg:left-[65%] top-1/2 left-1/2'>
                     <article className=''>
                         <article className='flex flex-col justify-center items-center h-screen'>
-                            <article className='relative w-[270px] xs:w-[400px] sm:w-[600px] h-[450px] bg-gray-200 border-t-[40px] border-kush rounded-xl flex flex-col justify-center items-center'>
+                            <article className='relative w-[270px] xs:w-[400px] sm:w-[600px] h-[450px] bg-gray-200 border-t-[40px] border-kush transition-colors duration-500 ease-in-out rounded-xl flex flex-col justify-center items-center'>
                                 <div className='flex flex-col gap-4'>
         
                                     <h1 className='font-semibold xs:text-xl text-[#3E3E3E] pl-5 sm:pl-12 xs:pl-9 text-start'>Overview</h1>
@@ -215,7 +215,7 @@ const Digitalmarketing = () => {
                                     <div className='grid grid-cols-2 place-items-center sm:flex flex-row justify-center items-center gap-3 px-5 sm:px-0'>
         
                                         <div className='flex justify-center items-center gap-4   bg-white w-28 xs:w-44 sm:w-fit px-1 py-4 rounded-lg'>
-                                            <div className='bg-kush w-6 h-6 rounded-full' />
+                                            <div className='bg-kush transition-colors duration-500 ease-in-out w-6 h-6 rounded-full' />
                                             <div>
                                                 <h1 className='text-[10px] xs:text-xs font-medium'>No.1 Institute</h1>
                                                 {/* <p className='text-xs'>Student's Empowerment</p> */}
@@ -223,7 +223,7 @@ const Digitalmarketing = () => {
                                         </div>
         
                                         <div className='flex justify-center items-center gap-4 bg-white w-28 xs:w-44 sm:w-fit px-1 py-4 rounded-lg'>
-                                            <div className='bg-kush w-6 h-6 rounded-full' />
+                                            <div className='bg-kush transition-colors duration-500 ease-in-out w-6 h-6 rounded-full' />
                                             <div>
                                                 <h1 className='text-[10px] xs:text-xs font-medium'>No.1 Institute</h1>
                                                 {/* <p className='text-xs'>Student's Empowerment</p> */}
@@ -231,7 +231,7 @@ const Digitalmarketing = () => {
                                         </div>
         
                                         <div className='flex justify-center items-center gap-4 bg-white w-28 xs:w-44 sm:w-fit px-1 py-4 rounded-lg'>
-                                            <div className='bg-kush w-6 h-6 rounded-full' />
+                                            <div className='bg-kush transition-colors duration-500 ease-in-out w-6 h-6 rounded-full' />
                                             <div>
                                                 <h1 className='text-[10px] xs:text-xs font-medium'>No.1 Institute</h1>
                                                 {/* <p className='text-xs'>Student's Empowerment</p> */}
@@ -264,13 +264,13 @@ const Digitalmarketing = () => {
         
                                         <div className='bg-white drop-shadow-lg rounded-lg w-[130px]'>
                                         <div className='flex justify-center items-center gap-3  xs:px-2 py-4 '>
-                                            <div className='bg-kush w-6 h-6 rounded-full' />
+                                            <div className='bg-kush transition-colors duration-500 ease-in-out w-6 h-6 rounded-full' />
                                             <div>
                                                 <h1 className='text-[10px] xs:text-xs font-medium'>No.1 Institute</h1>
                                             </div>
                                         </div>
                                         <div className='flex justify-center items-center gap-3  xs:px-2 py-4 '>
-                                            <div className='bg-kush w-6 h-6 rounded-full' />
+                                            <div className='bg-kush transition-colors duration-500 ease-in-out w-6 h-6 rounded-full' />
                                             <div>
                                                 <h1 className='text-[10px] xs:text-xs font-medium'>No.1 Institute</h1>
                                             </div>
@@ -295,7 +295,7 @@ const Digitalmarketing = () => {
                                 </article>
         
                                 <article className='absolute -translate-x-1/2 -translate-y-1/2 top-0 sm:top-2 md:left-0 sm:left-14 left-[50%]'>
-                                <div className='bg-white drop-shadow-lg border border-kush px-4 py-2 rounded-lg logo1'>
+                                <div className='bg-white drop-shadow-lg border border-kush transition-colors duration-500 ease-in-out px-4 py-2 rounded-lg logo1'>
                                     <Image src={kushlogo} className='sm:w-28 xs:w-24 w-20'/>
                                 </div>
                                 </article>
@@ -305,7 +305,7 @@ const Digitalmarketing = () => {
                                         <div className='px-2'>
                                             <h1 className='py-1 text-[10px] xs:text-xs sm:text-base'>20 Days</h1>
                                             <p className='text-[8px] sm:text-xs text-[#5A7184]'>Average Likes gained</p>
-                                            <div className='flex text-[8px] sm:text-xs bg-kush w-fit mt-1 text-white p-1 rounded-lg'>
+                                            <div className='flex text-[8px] sm:text-xs bg-kush transition-colors duration-500 ease-in-out w-fit mt-1 text-white p-1 rounded-lg'>
                                                 <MdArrowOutward />
                                                 <p>10.5%</p>
                                             </div>
@@ -323,37 +323,37 @@ const Digitalmarketing = () => {
                                             <Switch
                                                 checkedChildren={<span className='text-[10px] flex justify-center items-center'>Inactive</span>}
                                                 unCheckedChildren={<span className='text-[10px] flex justify-center items-center'>Active</span>}
-                                                className='bg-kush'
+                                                className='bg-kush transition-colors duration-500 ease-in-out'
                                                 size='small'
                                             />
                                             <Switch
                                                 checkedChildren={<span className='text-[10px] flex justify-center items-center'>Inactive</span>}
                                                 unCheckedChildren={<span className='text-[10px] flex justify-center items-center'>NeedAction</span>}
-                                                className='bg-kush'
+                                                className='bg-kush transition-colors duration-500 ease-in-out'
                                                 size='small'
                                             />
                                             <Switch
                                                 checkedChildren={<span className='text-[10px] flex justify-center items-center'>Inactive</span>}
                                                 unCheckedChildren={<span className='text-[10px] flex justify-center items-center'>Allocated</span>}
-                                                className='bg-kush'
+                                                className='bg-kush transition-colors duration-500 ease-in-out'
                                                 size='small'
                                             />
                                             <Switch
                                                 checkedChildren={<span className='text-[10px] flex justify-center items-center'>Active</span>}
                                                 unCheckedChildren={<span className='text-[10px] flex justify-center items-center'>Inactive</span>}
-                                                className='bg-kush'
+                                                className='bg-kush transition-colors duration-500 ease-in-out'
                                                 size='small'
                                             />
                                             <Switch
                                                 checkedChildren={<span className='text-[10px] flex justify-center items-center'>Inactive</span>}
                                                 unCheckedChildren={<span className='text-[10px] flex justify-center items-center'>Suspended</span>}
-                                                className='bg-kush'
+                                                className='bg-kush transition-colors duration-500 ease-in-out'
                                                 size='small'
                                             />
                                             <Switch
                                                 checkedChildren={<span className='text-[10px] flex justify-center items-center'>Inactive</span>}
                                                 unCheckedChildren={<span className='text-[10px] flex justify-center items-center'>Allocated</span>}
-                                                className='bg-kush'   
+                                                className='bg-kush transition-colors duration-500 ease-in-out'   
                                                 size='small'
                                             />
                                         </div>
@@ -373,7 +373,7 @@ const Digitalmarketing = () => {
                 <div className='absolute -translate-x-1/2 -translate-y-1/2 lg:top-[42.5%] lg:left-[65%] top-1/2 left-1/2'>
                     <article className=''>
                         <article className='flex flex-col justify-center items-center h-screen'>
-                            <article className='relative w-[270px] xs:w-[400px] sm:w-[600px] h-[450px] bg-gray-200 border-t-[40px] border-abhis rounded-xl flex flex-col justify-center items-center'>
+                            <article className='relative w-[270px] xs:w-[400px] sm:w-[600px] h-[450px] bg-gray-200 border-t-[40px] border-abhis transition-colors duration-500 ease-in-out rounded-xl flex flex-col justify-center items-center'>
                                 <div className='flex flex-col gap-4'>
         
                                     <h1 className='font-semibold xs:text-xl text-[#3E3E3E] pl-5 sm:pl-12 xs:pl-9 text-start'>Overview</h1>
@@ -381,7 +381,7 @@ const Digitalmarketing = () => {
                                     <div className='grid grid-cols-2 place-items-center sm:flex flex-row justify-center items-center gap-3 px-5 sm:px-0'>
         
                                         <div className='flex justify-center items-center gap-4   bg-white w-28 xs:w-44 sm:w-fit px-1 py-4 rounded-lg'>
-                                            <div className='bg-abhis w-6 h-6 rounded-full' />
+                                            <div className='bg-abhis transition-colors duration-500 ease-in-out w-6 h-6 rounded-full' />
                                             <div>
                                                 <h1 className='text-[10px] xs:text-xs font-medium'>No.1 Institute</h1>
                                                 {/* <p className='text-xs'>Student's Empowerment</p> */}
@@ -389,7 +389,7 @@ const Digitalmarketing = () => {
                                         </div>
         
                                         <div className='flex justify-center items-center gap-4 bg-white w-28 xs:w-44 sm:w-fit px-1 py-4 rounded-lg'>
-                                            <div className='bg-abhis w-6 h-6 rounded-full' />
+                                            <div className='bg-abhis transition-colors duration-500 ease-in-out w-6 h-6 rounded-full' />
                                             <div>
                                                 <h1 className='text-[10px] xs:text-xs font-medium'>No.1 Institute</h1>
                                                 {/* <p className='text-xs'>Student's Empowerment</p> */}
@@ -397,7 +397,7 @@ const Digitalmarketing = () => {
                                         </div>
         
                                         <div className='flex justify-center items-center gap-4 bg-white w-28 xs:w-44 sm:w-fit px-1 py-4 rounded-lg'>
-                                            <div className='bg-abhis w-6 h-6 rounded-full' />
+                                            <div className='bg-abhis transition-colors duration-500 ease-in-out w-6 h-6 rounded-full' />
                                             <div>
                                                 <h1 className='text-[10px] xs:text-xs font-medium'>No.1 Institute</h1>
                                                 {/* <p className='text-xs'>Student's Empowerment</p> */}
@@ -430,13 +430,13 @@ const Digitalmarketing = () => {
         
                                         <div className='bg-white drop-shadow-lg rounded-lg w-[130px]'>
                                         <div className='flex justify-center items-center gap-3  xs:px-2 py-4 '>
-                                            <div className='bg-abhis w-6 h-6 rounded-full' />
+                                            <div className='bg-abhis transition-colors duration-500 ease-in-out w-6 h-6 rounded-full' />
                                             <div>
                                                 <h1 className='text-[10px] xs:text-xs font-medium'>No.1 Institute</h1>
                                             </div>
                                         </div>
                                         <div className='flex justify-center items-center gap-3  xs:px-2 py-4 '>
-                                            <div className='bg-abhis w-6 h-6 rounded-full' />
+                                            <div className='bg-abhis transition-colors duration-500 ease-in-out w-6 h-6 rounded-full' />
                                             <div>
                                                 <h1 className='text-[10px] xs:text-xs font-medium'>No.1 Institute</h1>
                                             </div>
@@ -461,7 +461,7 @@ const Digitalmarketing = () => {
                                 </article>
         
                                 <article className='absolute -translate-x-1/2 -translate-y-1/2 top-0 sm:top-2 md:left-0 sm:left-14 left-[50%]'>
-                                <div className='bg-white drop-shadow-lg border border-abhis px-4 py-2 rounded-lg logo1 sm:w-32 xs:w-24 h-16 flex flex-col justify-center items-center'>
+                                <div className='bg-white drop-shadow-lg border border-abhis transition-colors duration-500 ease-in-out px-4 py-2 rounded-lg logo1 sm:w-32 xs:w-24 h-16 flex flex-col justify-center items-center'>
                                     <Image src={abhislogo} className='w-10 h-10'/>
                                 </div>
                                 </article>
@@ -471,7 +471,7 @@ const Digitalmarketing = () => {
                                         <div className='px-2'>
                                             <h1 className='py-1 text-[10px] xs:text-xs sm:text-base'>20 Days</h1>
                                             <p className='text-[8px] sm:text-xs text-[#5A7184]'>Average Likes gained</p>
-                                            <div className='flex text-[8px] sm:text-xs bg-abhis w-fit mt-1 text-white p-1 rounded-lg'>
+                                            <div className='flex text-[8px] sm:text-xs bg-abhis transition-colors duration-500 ease-in-out w-fit mt-1 text-white p-1 rounded-lg'>
                                                 <MdArrowOutward />
                                                 <p>10.5%</p>
                                             </div>
@@ -489,37 +489,37 @@ const Digitalmarketing = () => {
                                             <Switch
                                                 checkedChildren={<span className='text-[10px] flex justify-center items-center'>Inactive</span>}
                                                 unCheckedChildren={<span className='text-[10px] flex justify-center items-center'>Active</span>}
-                                                className='bg-abhis'
+                                                className='bg-abhis transition-colors duration-500 ease-in-out'
                                                 size='small'
                                             />
                                             <Switch
                                                 checkedChildren={<span className='text-[10px] flex justify-center items-center'>Inactive</span>}
                                                 unCheckedChildren={<span className='text-[10px] flex justify-center items-center'>NeedAction</span>}
-                                                className='bg-abhis'
+                                                className='bg-abhis transition-colors duration-500 ease-in-out'
                                                 size='small'
                                             />
                                             <Switch
                                                 checkedChildren={<span className='text-[10px] flex justify-center items-center'>Inactive</span>}
                                                 unCheckedChildren={<span className='text-[10px] flex justify-center items-center'>Allocated</span>}
-                                                className='bg-abhis'
+                                                className='bg-abhis transition-colors duration-500 ease-in-out'
                                                 size='small'
                                             />
                                             <Switch
                                                 checkedChildren={<span className='text-[10px] flex justify-center items-center'>Active</span>}
                                                 unCheckedChildren={<span className='text-[10px] flex justify-center items-center'>Inactive</span>}
-                                                className='bg-abhis'
+                                                className='bg-abhis transition-colors duration-500 ease-in-out'
                                                 size='small'
                                             />
                                             <Switch
                                                 checkedChildren={<span className='text-[10px] flex justify-center items-center'>Inactive</span>}
                                                 unCheckedChildren={<span className='text-[10px] flex justify-center items-center'>Suspended</span>}
-                                                className='bg-abhis'
+                                                className='bg-abhis transition-colors duration-500 ease-in-out'
                                                 size='small'
                                             />
                                             <Switch
                                                 checkedChildren={<span className='text-[10px] flex justify-center items-center'>Inactive</span>}
                                                 unCheckedChildren={<span className='text-[10px] flex justify-center items-center'>Allocated</span>}
-                                                className='bg-abhis'   
+                                                className='bg-abhis transition-colors duration-500 ease-in-out'   
                                                 size='small'
                                             />
                                         </div>

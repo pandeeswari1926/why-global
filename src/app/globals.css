@@ -64,7 +64,7 @@
 }
 
 .summa{
-    animation: imgall 1s ease-in-out;
+    animation: imgall 1s linear;
 }
 
 @keyframes imgall {
@@ -75,6 +75,26 @@
         opacity: 1;
     }
 }
+
+.summa1{
+    animation: imgal 1s linear;
+}
+
+@keyframes imgal {
+    0%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+.transition-opacity {
+    transition-property: opacity;
+}
+
+
 
 .logo1{
     animation: logo1 1s linear;
