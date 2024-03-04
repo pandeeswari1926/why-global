@@ -25,6 +25,7 @@ import { Switch } from "antd";
 const Digitalmarketing = () => {
 
   const [currentArticle, setCurrentArticle] = React.useState(1);
+  
 
   React.useEffect(() => {
     const timer = setInterval(() => {
