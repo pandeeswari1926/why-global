@@ -34,11 +34,14 @@ const config: Config = {
         "2xs": '0.7rem',
         "3xs": '0.6rem',
       },
-      colors: {
-        primarycolor: '#FF9315',
-      },
       fontFamily: {
         font: ["inter", "italic"]
+      },
+      colors: {
+        whytap : "#851B46",
+        abhis : "#0D5D50",
+        kush : "#EECF64",
+        primarycolor: '#FF9315',
       }
     },
   },

@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image';
 import Web from './web';
 import WebDesign from './webDesign';
+import DigitalMarketing from './DigitalMarketing'
 import Iot from './iot';
 import Appdevelopment from './Appdevelopment'
 import portfolio1 from '../../../public/wgs gifs (12).gif';
@@ -20,6 +21,7 @@ const Page = () => {
     return (
         <>
             {/* first section */}
+            <div className='bg-portfolio bg-cover  overflow-hidden'>
             <div className='bg-portfolio bg-center overflow-hidden'>
                 <div className='pt-28 px-10'>
                     <div className='text-center '>
@@ -57,20 +59,27 @@ const Page = () => {
                     </div>
                 </div>
             </div>
+            </div>
             {/* second section */}
-            <div className='overflow-hidden'>
+            <div className='overflow-hidden py-5'>
                 <Web />
             </div>
 
             {/* third section */}
-            <div>
+            <div className='pb-10'>
                 <Appdevelopment />
             </div>
 
             {/* fourth section */}
-            <div>
-                <WebDesign />
+            <div className='py-5'>
+                <WebDesign/>
             </div>
+
+            {/* fifth section */}
+            <div>
+                <DigitalMarketing />
+            </div>
+
 
             {/* sixth section */}
 
