@@ -13,7 +13,7 @@ export default function Home() {
       <main className="">
         {/* <button type="button" onClick={() => router.push('/why')}>Why</button> */}
         {/* <Why /> */}
-        <Services />
+        {/* <Services /> */}
       </main>
     </>
   );

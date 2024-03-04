@@ -23,8 +23,8 @@ function Page() {
   return (
     <>
       <div className=''>
-        <TopBar />
-        <NavBar />
+        {/* <TopBar />
+        <NavBar /> */}
 
         <link
           rel="stylesheet"
@@ -115,7 +115,7 @@ function Page() {
       <Wgs />
       {/* <Testimonial /> */}
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

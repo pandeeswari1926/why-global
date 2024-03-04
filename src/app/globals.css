@@ -20,7 +20,7 @@
     right: 0;
 }
 
-.tri {
+.trian {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
 }
 
@@ -33,46 +33,67 @@
 
 /* appdevelopment */
 
-.key1{
-    animation: key1 1s  ease-in-out;
+.key1 {
+    animation: key1 1s ease-in-out;
 }
 
-.key2{
-    animation: key2 1s  ease-in-out;
+.key2 {
+    animation: key2 1s ease-in-out;
 }
 
-.key3{
-    animation: key3 1s  ease-in-out;
+.key3 {
+    animation: key3 1s ease-in-out;
 }
 
 @keyframes key1 {
-    0%{
+    0% {
         transform: translateX(900px);
     }
 }
 
 @keyframes key2 {
-    0%{
+    0% {
         transform: translateX(-800px)
     }
 }
 
 @keyframes key3 {
-    0%{
+    0% {
         transform: translateX(-400px)
     }
 }
 
-.summa{
+.summa {
     animation: imgall 1s ease-in-out;
 }
 
 @keyframes imgall {
-    0%{
+    0% {
         opacity: 0;
     }
-    100%{
+
+    100% {
         opacity: 1;
+    }
+}
+
+.animate1 {
+    animation: animate1 1s ease-in-out;
+}
+
+.animate3 {
+    animation: animate3 1s ease-in-out;
+}
+
+@keyframes animate1 {
+    0% {
+        transform: translateX(900px);
+    }
+}
+
+@keyframes animate3 {
+    0% {
+        transform: translateX(-500px)
     }
 }
 

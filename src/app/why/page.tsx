@@ -49,9 +49,10 @@ import sqaud33 from '../../../public/Rectangle 91.png';
 import sqaud34 from '../../../public/Rectangle 92.png';
 import sqaud35 from '../../../public/Rectangle 93.png';
 import sqaud36 from '../../../public/Rectangle 94.png';
+import SliderImage from './slider';
 
 function Why() {
-    
+
 
     return (
         <div>
@@ -82,35 +83,17 @@ function Why() {
 
 
                     </div>
-                    <div className='polygon'>
+                    <div className='polygon absolute'>
 
                     </div>
                 </div>
 
+                {/* second section */}
+                <div>
+                    <SliderImage/>
+                </div>
 
-                {/* <div className=' grid grid-cols-3 p-20 gap-10'>
-                    <Swiper
-                        spaceBetween={10}
-                        slidesPerView={3}
-                    >
-                        <SwiperSlide>
-                            <div className='w-[75%] ml-20'>
-                                <Image src={festival} alt='slider' className='' />
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div className=''>
-                                <Image src={trip} alt='slider' className='rounded-md' />
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div className=''>
-                                <Image src={celebration} alt='slider' className='rounded-md ' />
-                            </div>
-                        </SwiperSlide>
-                    </Swiper>
-
-                </div> */}
+                {/* Third section */}
                 <div>
                     <div className='grid lg:grid-cols-9 md:grid-cols-6 grid-cols-3 mt-5 p-10'>
                         <Image src={sqaud} alt='' />
