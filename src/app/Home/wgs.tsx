@@ -28,7 +28,7 @@ const Wgs = () => {
                         </div>
                         <div className="bg-white drop-shadow-xl p-4">
                             <h2 className="text-xl">How to become a successfull businessman</h2>
-                            <p className="pt-2">We’ve designed a culture that allows our stewards to assimilate with our clients and bring the best.</p>
+                            <p className="pt-2">We&apos;ve designed a culture that allows our stewards to assimilate with our clients and bring the best.</p>
                         </div>
                     </div>
                 </div>
@@ -40,7 +40,7 @@ const Wgs = () => {
                         </div>
                         <div className="bg-white drop-shadow-xl p-4">
                             <h2 className="text-xl">How to become a successfull businessman</h2>
-                            <p className="pt-2">We’ve designed a culture that allows our stewards to assimilate with our clients and bring the best.</p>
+                            <p className="pt-2">We&apos;ve designed a culture that allows our stewards to assimilate with our clients and bring the best.</p>
                         </div>
                     </div>
                 </div>
@@ -52,7 +52,7 @@ const Wgs = () => {
                         </div>
                         <div className="bg-white drop-shadow-xl p-4">
                             <h2 className="text-xl">How to become a successfull businessman</h2>
-                            <p className="pt-2">We’ve designed a culture that allows our stewards to assimilate with our clients and bring the best.</p>
+                            <p className="pt-2">We&apos;ve designed a culture that allows our stewards to assimilate with our clients and bring the best.</p>
                         </div>
                     </div>
                 </div>

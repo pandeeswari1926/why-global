@@ -7,8 +7,7 @@ import html from '../../../public/38.png';
 
 const Web = () => {
     const [showActiveContent, setShowActiveContent] = useState("E-Commerce");
-    const toggleContent = (content) => {
-        // Toggle between "Active Projects" and "Completed Projects"
+    const toggleContent = (content: React.SetStateAction<string>) => {
         setShowActiveContent(content);
     };
     return (
