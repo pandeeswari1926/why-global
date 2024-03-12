@@ -1,6 +1,5 @@
 import React from 'react'
 import Image from 'next/image';
-import test from '../../../public/testimonial.png';
 import { BiSolidQuoteAltLeft } from "react-icons/bi";
 import wgs from '../../../public/WGS LIVE PICS (8) 1.png';
 
@@ -21,8 +20,7 @@ const Test = () => {
                                 <h1 className='text-xl text-gray-700 font-semibold'>Ramya Annamalai</h1>
                                 <p className=''>Web developer</p>
                             </div>
-                            <Image src={wgs} alt='' />
-                            
+                            <Image src={wgs} alt='' />   
                         </div>
                     </div>
                 </div>

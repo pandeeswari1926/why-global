@@ -12,7 +12,6 @@ import feature3 from '../../../public/29.png';
 import feature4 from '../../../public/26.png';
 import feature5 from '../../../public/24.png';
 import benifits from '../../../public/sevice.png';
-import why from '../../../public/why.png';
 import signin from '../../../public/Rectangle 113.png';
 import DashBoard from '../../../public/Rectangle 113 (1).png';
 import Faculty from '../../../public/Rectangle 113 (2).png';
@@ -24,8 +23,6 @@ function Solutions() {
         // Toggle between "Active Projects" and "Completed Projects"
         setShowActiveContent(content);
     };
-
-
     return (
         <>
             {/* first section */}
@@ -54,7 +51,6 @@ function Solutions() {
                     <h1 className='lg:text-xl text-lg text-[#FF9315] font-semibold leading-8'>LEARNING MANAGEMENT SYSTEM</h1>
                     <h1 className='lg:text-3xl text-xl text-gray-500 font-semibold lg:leading-loose leading-10'>ELEVATE YOUR LEARNING JOURNEY WITH OUR CUTTING-EDGE LMS SOLUTION!</h1>
                     <p className='text-gray-500 font-light lg:w-[85%] lg:text-start text-justify'>An LMS, or Learning Management System, is a comprehensive software platform designed to facilitate online learning and training programs. LMSs offer a wide range of features that support the management, delivery, and tracking of educational content.<br /><br />
-
                         One of the key features of an LMS is course management, which allows administrators to create and organize courses, modules, and lessons. Users can easily access these courses, track their progress, and engage with interactive learning materials.
                     </p>
                 </div>
@@ -62,8 +58,6 @@ function Solutions() {
                     <Image src={gif} alt='' className='mx-auto' />
                 </div>
             </div>
-
-
             {/* third section */}
             <div>
                 <div className='flex flex-col justify-center block lg:hidden p-5'>
@@ -111,7 +105,6 @@ function Solutions() {
                             <Image src={feature2} alt='' />
                         </div>
                     </div>
-
                     {/* card4 */}
                     <div className='lg:w-[80%] h-full relative lg:ml-48'>
                         <div className=' mt-10 bg-white p-5 '>
@@ -135,7 +128,6 @@ function Solutions() {
                             <Image src={feature4} alt='' className='' />
                         </div>
                     </div>
-
                     {/* card6 */}
                     <div className='lg:w-[88%] h-full relative lg:mx-0 lg:pl-32'>
                         <div className=' mt-10 bg-white p-5 8mx-auto'>
@@ -148,11 +140,9 @@ function Solutions() {
                     </div>
                 </div>
                 <Image src={benifits} alt='' className='-mt-32' />
-
             </div>
             {/* fourth section */}
             <div className='bg-why text-center bg-cover w-full xl:h-[100vh] lg:h-[600px] md:h-[400px] sm:h-72 h-56 lg:mt-14  mt-28'>
-                {/* <Image src={why} alt='' className='w-full h-full mt-20 bg-gradient-to-b from-black to-transparent' /> */}
                 <h1 className='lg:text-6xl text-xl text-white font-bold drop-shadow-2xl xl:pt-52 lg:pt-32 md:pt-20 sm:pt-10 pt-10'>“WE PROVIDE SOLUTIONS”</h1>
             </div>
 
@@ -166,11 +156,9 @@ function Solutions() {
                         <button onClick={() => toggleContent('SignIn')} className={`focus:outline-none font-medium sm:text-base text-xs ${showActiveContent === 'SignIn' ? 'text-white border-2 bg-[#FF9315] p-1 md:px-5 px-2 rounded-md' : 'bg-gray-400 text-white p-1 px-5 rounded-md'}`}>
                             SigIn
                         </button >
-
                         <button onClick={() => toggleContent('DashBoard')} className={`focus: outline-none font-medium sm:text-base text-xs ${showActiveContent === 'DashBoard' ? 'text-white border-2 bg-[#FF9315] p-1 md:px-5 px-2 rounded-md' : 'bg-gray-400 text-white p-1 px-5 rounded-md'}`}>
                             DashBoard
                         </button >
-
                         <button onClick={() => toggleContent('Faculty')} className={`focus: outline-none font-medium sm:text-base text-xs ${showActiveContent === 'Faculty' ? 'text-white border-2 bg-[#FF9315] p-1 md:px-5 px-2 rounded-md' : 'bg-gray-400 text-white p-1 px-5 rounded-md'}`}>
                             Faculty
                         </button >
@@ -190,10 +178,7 @@ function Solutions() {
                             <Image src={Faculty} alt='' className='' />
                         </div>
                     )}
-
-
                 </div >
-
             </div>
             {/* sixth section */}
             <div className='p-10 md:px-28 md:mt-0 sm:mt-96 mt-80'>
@@ -202,9 +187,7 @@ function Solutions() {
                     <button className='text-[#FF9315] bg-white rounded-full md:px-16 px-7 p-2 text-lg mt-10 drop-shadow-2xl'>Get started</button>
                 </div>
             </div>
-
         </>
-
     )
 }
 

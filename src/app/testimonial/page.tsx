@@ -48,16 +48,10 @@ const Page = () => {
                         </div>
                     </div>
                 </div >
-
                 {/* second section */}
-
                 <div className='mt-96'>
-
                     <SliderPage />
-
                 </div>
-
-
                 {/* third section */}
                 <div>
                     <Test />

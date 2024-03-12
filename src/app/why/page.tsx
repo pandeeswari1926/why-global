@@ -7,11 +7,9 @@ import festival from '../../public/project1.png';
 import trip from '../../public/project2.png';
 import celebration from '../../public/pro.png';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
 import 'swiper/css';
-import 'swiper/css/bundle'; // Import the Swiper bundle CSS
+import 'swiper/css/bundle'; 
 import 'swiper/css/pagination';
-
 import sqaud from '../../../public/Rectangle 59.png';
 import sqaud1 from '../../../public/Rectangle 60.png';
 import sqaud2 from '../../../public/Rectangle 61.png';
@@ -57,11 +55,7 @@ function Why() {
     return (
         <div>
             <main className="">
-
                 <div className='bg-bg w-full h-96'></div>
-                {/* <div className='w-[100%] h-[50%] relative'>
-                    <Image src={life} alt="life at why" className='' />
-                </div> */}
                 <div className='grid lg:grid-cols-2 grid-cols-1 h-[700px] bg-gray-200 px-10 pt-10 relative '>
                     <div className='w-full xl:pl-20 mx-auto flex flex-col gap-7'>
                         <h3 className='text-lg text-[#FF9315] font-bold md:text-left text-center'>
@@ -80,19 +74,14 @@ function Why() {
                     </div>
                     <div className='w-full h-full relative'>
                         <Image src={process} alt='our work process' className='' />
-
-
                     </div>
                     <div className='polygon absolute'>
-
                     </div>
                 </div>
-
                 {/* second section */}
                 <div>
                     <SliderImage/>
                 </div>
-
                 {/* Third section */}
                 <div>
                     <div className='grid lg:grid-cols-9 md:grid-cols-6 grid-cols-3 mt-5 p-10'>
@@ -140,13 +129,8 @@ function Why() {
                     <div className='flex justify-center items-center pt-10'>
                         <button className='text-[#FF9315] bg-white rounded-full p-3 px-16 drop-shadow-xl'>Get Started</button>
                     </div>
-
                 </div>
-
-
-
             </main >
-
         </div >
     )
 }

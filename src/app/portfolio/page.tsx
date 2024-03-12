@@ -64,25 +64,19 @@ const Page = () => {
             <div className='overflow-hidden py-5'>
                 <Web />
             </div>
-
             {/* third section */}
             <div className='pb-10'>
                 <Appdevelopment />
             </div>
-
             {/* fourth section */}
             <div className='py-5'>
                 <WebDesign/>
             </div>
-
             {/* fifth section */}
             <div>
                 <DigitalMarketing />
             </div>
-
-
             {/* sixth section */}
-
             <div>
                 <Iot />
             </div>

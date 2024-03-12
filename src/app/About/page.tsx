@@ -2,33 +2,23 @@
 import React from 'react'
 import Image from 'next/image'
 import hr from "../asset/hr.png"
-// import NavBar from '../home/NavBar'
 import wgsperson from '../asset/wgsperson.gif'
 import line from "../asset/line.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faComputer } from '@fortawesome/free-solid-svg-icons'
-import { Icon } from '@fortawesome/fontawesome-svg-core'
 import Certificate from '../asset/certificate.png'
 import 'react-html5video/dist/styles.css'
 import arrow from '../asset/arrow.gif'
 import timer from "../asset/timer.gif"
 import rocket from '../asset/rocket.gif'
-import video1 from '../asset/floor.gif'
-// import Helicopter from '../home/Helicopter'
 import style2 from '../asset/style2.png';
 import profile1 from '../asset/profile1.png';
 import style3 from '../asset/style3.png';
 import star from '../asset/stars.png';
 import Slider from "react-slick"
-import { CldVideoPlayer } from 'next-cloudinary';
 import 'next-cloudinary/dist/cld-video-player.css';
-// import Video from 'next-video';
-import myVideo from '../asset/floor.gif';
-import poster from '../asset/poster.png'
-import { Play } from 'next/font/google'
-
 import bgorange1 from "../asset/bgorange1.png"
-import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
+
 function About() {
 
   var settings = {
@@ -63,15 +53,6 @@ function About() {
         type="text/css"
         charSet='UTF-8'
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"></link>
-      {/* <link rel="stylesheet"
-type="text/css"
-charSet='UTF-8'
-href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"></link> */}
-      {/* <link
-rel="stylesheet"
-type="text/css"
-href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-/> */}
       <link rel="stylesheet"
         type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"></link>
@@ -92,14 +73,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.mi
                 <div className='md:w-[30%] w-[20%]  h-[50%]'><Image alt='' src={wgsperson} ></Image><p className='text-center md:text-3xl text-xl font-semibold pt-4'>500%</p><p className='text-xs text-center'>Experience in the IT field</p></div>
                 <div className='md:w-[30%] w-[20%]  h-[50%]'><Image alt='' src={wgsperson} ></Image><p className='text-center md:text-3xl text-xl font-semibold pt-4'>500%</p><p className='text-xs text-center '>Projects Delivered</p></div>
                 <div className='md:w-[30%] w-[20%] h-[50%]'><Image alt='' src={wgsperson} ></Image><p className='text-center md:text-3xl text-xl font-semibold pt-4'>500%</p><p className='text-xs text-center'>Happy Clients</p></div>
-
-
-
-
               </div>
             </div>
           </div>
-
         </div>
         <div className='w-full h-full bottom-0 tri absolute'></div>
         <div className='w-full h-full bottom-0 left-0 shadow-lg whitetri absolute'></div>
@@ -182,9 +158,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.mi
 
       <div className='relative w-full pt-10'>
         <div className='h-[50%]'>
-          {/* <Video src={myVideo} /> */}
-
-
         </div>
       </div>
       <Slider {...settings} className='overflow-hidden'>
@@ -258,11 +231,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.mi
           </div>
         </div>
       </Slider>
-
-
-      {/* <Culture /> */}
-
-
       <div className="flex flex-col justify-center items-center overflow-hidden  py-5">
         <div className="relative w-[1248px] h-[236px] px-10">
           <Image src={bgorange1} alt="" className="w-full" />

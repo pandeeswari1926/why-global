@@ -33,7 +33,6 @@ function Services() {
    const changeBgimages = () => {
     SetIndex((prev)=>(prev + 1) % bgimage.length)
    }
-
    React.useEffect(()=>{
     const interval = setInterval(changeBgimages,3000)
     return () => clearInterval(interval)
@@ -242,16 +241,11 @@ function Services() {
                         <h1 className='text-gray-500 lg:absolute right-5 lg:w-[45%] bottom-0 mx-auto p-5'>Our comprehensive web designing services are tailored to meet your specific needs, ensuring a visually stunning and high-performing website. We combine innovative design and strategic thinking to help businesses thrive in the digital landscape.</h1>
                     </div>
                 </div>
-
             </div>
-
-
             {/* sixth section */}
             <div className='p-5 lg:px-32 mx-auto'>
                 <Image src={serve} alt='' />
             </div>
-
-
             {/* seventh section */}
             <div className='px-10 lg:p-0'>
                 <div className='bg-gradient-to-t from-[#FF9315] to-[#dcb145] p-10 m-5 lg:mx-32 mx-auto '>
@@ -261,7 +255,6 @@ function Services() {
                     </div>
                 </div>
             </div>
-
         </>
     )
 }

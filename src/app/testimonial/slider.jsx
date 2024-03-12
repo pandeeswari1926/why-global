@@ -69,7 +69,6 @@ const SliderPage = () => {
                             </div>
                         </div>
                     </div>
-
                 </Slider>
             </div>
             

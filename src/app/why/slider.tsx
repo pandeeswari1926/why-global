@@ -8,13 +8,9 @@ import lifewhy1small from '../../../public/lifewhy1small.png';
 import lifewhy2small from '../../../public/lifewhy2small.png';
 import lifewhy3small from '../../../public/lifewhy3small.png';
 
-
-
-
 const SliderImage = () => {
 
     const [currentArticle, setCurrentArticle] = React.useState(1);
-
     React.useEffect(() => {
         const timer = setInterval(() => {
             setCurrentArticle((prevArticle) => (prevArticle % 3) + 1);
@@ -22,21 +18,17 @@ const SliderImage = () => {
 
         return () => clearInterval(timer);
     }, []);
-
-
     const renderContent = () => {
         switch (currentArticle) {
             case 1:
                 return (
-                    <article
-                    >
+                    <article>
                         <section className=' flex sm:flex-row flex-col sm:justify-evenly  items-center '>
                             <div className='relative z-10 key1'>
                                 <section className='relative  animate1 '>
                                     <Image src={lifewhy1big} alt='' className='w-[400px] h-full rounded-xl drop-shadow-xl ' />
                                     <h1 className='absolute bottom-20 left-36 text-white text-xl '>Festivels</h1>
                                 </section>
-
                             </div>
                             <Image src={lifewhy2small} alt='' className='w-[30%] rounded-xl drop-shadow-xl sm:mt-16' />
                             <Image src={lifewhy3small} alt='' className='w-[30%] rounded-xl drop-shadow-xl sm:mt-16' />
@@ -47,8 +39,7 @@ const SliderImage = () => {
             case 2:
                 return (
                     <article
-                        className='relative sm:pt-20 '
-                    >
+                        className='relative sm:pt-20 '>
                         <div className='absolute -translate-x-1/2 left-[50%] key2 z-10 '>
                             <Image src={lifewhy2big} alt='' className='w-[400px] h-full rounded-xl drop-shadow-xl' />
                             <h1 className='absolute bottom-20 left-44 text-white text-xl '>Trips</h1>
@@ -63,14 +54,12 @@ const SliderImage = () => {
 
                 return (
                     <article
-                        className='relative sm:pt-20 '
-                    >
+                        className='relative sm:pt-20 '>
                         <div className=''>
                             <div className='absolute -translate-x-1/2 -right-20 animate3 z-10 key3'>
                                 <Image src={lifewhy3big} alt='' className='w-[400px] h-fullrounded-xl drop-shadow-xl' />
                                 <h1 className='absolute bottom-20 left-36 text-white text-xl '>Celebrations</h1>
                             </div>
-
                             <section className='flex sm:flex-row flex-col sm:justify-start sm:gap-0 ml-20 items-center'>
                                 <Image src={lifewhy1small} alt='' className='w-[30%] rounded-xl drop-shadow-xl sm:mt-16' />
                                 <Image src={lifewhy2small} alt='' className='w-[30%] rounded-xl drop-shadow-xl sm:mt-16' />
@@ -78,7 +67,6 @@ const SliderImage = () => {
                             </section>
                         </div>
                     </article>
-
                 )
             default:
                 return null
