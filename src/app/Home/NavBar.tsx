@@ -20,7 +20,7 @@ const NavBar = () => {
   return (
     <>
 
-      <div className='z-20 fixed w-full top-7 '>
+      <div className='z-20 fixed w-full md:top-7 top-0 '>
         <section className='py-[1%] bg-white flex justify-between px-[8%] pt-4 drop-shadow-xl z-10  w-full top-0'>
 
           <Image src={logoicon} alt='logo' className='xl:flex lg:hidden object-contain' />
@@ -28,6 +28,7 @@ const NavBar = () => {
           <FontAwesomeIcon icon={faBars} className='size-5 my-auto lg:hidden' onClick={handleClick} />
 
           <ul className='space-x-6 pt-3 lg:flex flex-row hidden cursor-pointer'>
+            <Link href='/home'><li className=''></li></Link>
             <Link href='/about'><li className='hover:text-primarycolor'>Company</li></Link>
             <Link href='/services'><li className='hover:text-primarycolor'>Services</li></Link>
             <Link href='solutions'><li className='hover:text-primarycolor'>Solutions</li></Link>

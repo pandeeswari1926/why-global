@@ -20,7 +20,7 @@ import Faculty from '../../../public/Rectangle 113 (2).png';
 function Solutions() {
 
     const [showActiveContent, setShowActiveContent] = useState("SignIn");
-    const toggleContent = (content) => {
+    const toggleContent = (content: React.SetStateAction<string>) => {
         // Toggle between "Active Projects" and "Completed Projects"
         setShowActiveContent(content);
     };
@@ -29,7 +29,7 @@ function Solutions() {
     return (
         <>
             {/* first section */}
-            <div className='flex md:flex-row flex-col w-full relative p-10'>
+            <div className='flex md:flex-row flex-col w-full relative p-10 pt-20'>
                 <div className='space-y-10'>
                     <h1 className='xl:text-xl md:text-base text-xl text-[#FF9315] font-semibold pt-20 lg:pl-10'>LEARNING MANAGEMENT SYSTEM</h1>
                     <h1 className='xl:text-4xl md:text-xl text-4xl font-bold text-gray-600 lg:pl-10'>UNLOCKING KNOWLEDGE,<br className='md:block hidden' /><br className='md:block hidden' /> EMPOWERING LEARNING</h1>

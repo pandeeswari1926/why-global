@@ -16,9 +16,9 @@ const config: Config = {
         bg: 'url("/life.png")',
         why: 'url("/why.png")',
         test: 'url("/testimonial.png")',
-        portfolio:'url("/Group 110.png")',
-        appbg1:'url("/appbg1.png")',
-        appbg2:'url("/appbg2.png")',
+        portfolio: 'url("/Group 110.png")',
+        appbg1: 'url("/appbg1.png")',
+        appbg2: 'url("/appbg2.png")',
         appbg3: 'url("/appbg3.png")',
         'world': "url('./asset/worldblack.gif')",
         'custom': "url('/asset/b1.png')",
@@ -38,9 +38,9 @@ const config: Config = {
         font: ["inter", "italic"]
       },
       colors: {
-        whytap : "#851B46",
-        abhis : "#0D5D50",
-        kush : "#EECF64",
+        whytap: "#851B46",
+        abhis: "#0D5D50",
+        kush: "#EECF64",
         primarycolor: '#FF9315',
       }
     },
