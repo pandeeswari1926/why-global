@@ -12,6 +12,7 @@
 # next.js
 /.next/
 /out/
+/src/app/asset/WGS VIDEO (1).gif
 
 # production
 /build
