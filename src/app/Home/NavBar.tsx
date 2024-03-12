@@ -6,7 +6,7 @@ import logoicon from '../asset/logo.png'
 import logoicon2 from '../asset/logo2.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faHSquare } from '@fortawesome/free-solid-svg-icons'
-import About from '../about/page';
+import Home from './page1';
 
 const NavBar = () => {
 
@@ -28,17 +28,17 @@ const NavBar = () => {
           <FontAwesomeIcon icon={faBars} className='size-5 my-auto lg:hidden' onClick={handleClick} />
 
           <ul className='space-x-6 pt-3 lg:flex flex-row hidden cursor-pointer'>
-            <Link href='/home'><li className=''></li></Link>
-            <Link href='/about'><li className='hover:text-primarycolor'>Company</li></Link>
+            <Link href='/Home'><li className=''>Home</li></Link>
+            <Link href='/About'><li className='hover:text-primarycolor'>Company</li></Link>
             <Link href='/services'><li className='hover:text-primarycolor'>Services</li></Link>
             <Link href='solutions'><li className='hover:text-primarycolor'>Solutions</li></Link>
             <Link href='/portfolio'><li className='hover:text-primarycolor'>Portfolio</li></Link>
             <Link href='/testimonial'><li className='hover:text-primarycolor'>Testimonials</li></Link>
             <Link href='Events'><li className='hover:text-primarycolor'>Events</li></Link>
             <Link href='contactus'><li className='hover:text-primarycolor'>ContactUs</li></Link>
-            <p className='p-2 flex items-end mx-10 cursor-pointer bg-white text-primarycolor w-[20%] shadow-2xl rounded-md hover:bg-primarycolor hover:text-white border border-b-4'>
+            <button className='p-2 -mt-3 flex items-end mx-10 cursor-pointer bg-white text-primarycolor w-[20%] shadow-2xl rounded-md hover:bg-primarycolor hover:text-white border border-b-4'>
               Get a Quote
-            </p>
+            </button>
           </ul>
 
 

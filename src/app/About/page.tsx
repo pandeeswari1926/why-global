@@ -26,8 +26,9 @@ import 'next-cloudinary/dist/cld-video-player.css';
 import myVideo from '../asset/floor.gif';
 import poster from '../asset/poster.png'
 import { Play } from 'next/font/google'
-import Culture from './Culture'
+
 import bgorange1 from "../asset/bgorange1.png"
+import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 function About() {
 
   var settings = {
@@ -257,7 +258,11 @@ href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.mi
           </div>
         </div>
       </Slider>
+
+
       {/* <Culture /> */}
+
+
       <div className="flex flex-col justify-center items-center overflow-hidden  py-5">
         <div className="relative w-[1248px] h-[236px] px-10">
           <Image src={bgorange1} alt="" className="w-full" />
