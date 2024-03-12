@@ -36,6 +36,7 @@ function Services() {
    React.useEffect(()=>{
     const interval = setInterval(changeBgimages,3000)
     return () => clearInterval(interval)
+   // eslint-disable-next-line react-hooks/exhaustive-deps
    },[])
 
     return (
@@ -105,7 +106,7 @@ function Services() {
 
             {/* third section */}
             <div>
-                <div className='flex flex-col justify-center block lg:hidden p-5'>
+                <div className='flex flex-col justify-center xs:block lg:hidden p-5'>
                     <h1 className='text-xl text-[#FF9315] font-semibold'>WHY YOU NEED</h1><br />
                     <h1 className='text-2xl text-gray-500 font-semibold'>WEB DESIGNING?</h1>
                 </div>
@@ -157,7 +158,7 @@ function Services() {
                             <Image src={person} alt='' />
                         </div>
                     </div>
-                    <div className='flex flex-col justify-center lg:block hidden lg:mt-20'>
+                    <div className='flex flex-col justify-center lg:block xs:hidden lg:mt-20'>
                         <h1 className='text-xl text-[#FF9315] font-semibold'>WHY YOU NEED</h1><br />
                         <h1 className='text-2xl text-gray-500 font-semibold'>WEB DESIGNING?</h1>
                     </div>

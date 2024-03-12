@@ -60,7 +60,7 @@ function Solutions() {
             </div>
             {/* third section */}
             <div>
-                <div className='flex flex-col justify-center block lg:hidden p-5'>
+                <div className='flex flex-col justify-center xs:block lg:hidden p-5'>
                     <h1 className='text-xl text-[#FF9315] font-semibold'>YOU MUST KNOW THE</h1><br />
                     <h1 className='text-2xl text-gray-500 font-semibold'>KEY FEATURES & BENEFITS</h1>
                 </div>
@@ -88,7 +88,7 @@ function Solutions() {
                             <Image src={feature1} alt='' />
                         </div>
                     </div>
-                    <div className='flex flex-col justify-center lg:block hidden lg:mt-28'>
+                    <div className='flex flex-col justify-center lg:block xs:hidden lg:mt-28'>
                         <h1 className='text-xl text-[#FF9315] font-semibold'>YOU MUST KNOW THE</h1><br />
                         <h1 className='text-2xl text-gray-500 font-semibold'>KEY FEATURES & BENEFITS</h1>
                     </div>
