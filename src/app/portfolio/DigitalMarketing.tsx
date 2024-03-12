@@ -483,7 +483,7 @@ const Digitalmarketing = () => {
     return (
         <article className='relative h-screen '>
             <Image src={dmbg} className='h-full' alt=''/>
-            {renderContent(currentArticle)}
+            {renderContent()}
             <div className='absolute xl:top-[20%] top-[4.5%] left-0'>
                 <div className='bg-[#FF9315] rounded-r-xl text-white md:h-20 h-12 w-64 md:w-96 flex  justify-end items-center'>
                     <h2 className='text-xl sm:text-2xl md:text-3xl font-semibold pr-3'>DIGITAL MARKETING</h2>
