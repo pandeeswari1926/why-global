@@ -37,7 +37,7 @@ const NavBar = () => {
         {open && (
           <div className='w-[65%] float-right todown'>
             <ul className='flex  flex-col justify-center pl-10 text-left  pr-4 bg-primarycolor pb-5 pt-5'>
-              <Link href='/About'><li className='bg-primarycolor p-2 text-white hover:bg-white hover:text-primarycolor'>Company</li></Link>
+              <Link href='/about'><li className='bg-primarycolor p-2 text-white hover:bg-white hover:text-primarycolor'>Company</li></Link>
               <Link href='/services'><li className='bg-primarycolor p-2 text-white hover:bg-white hover:text-primarycolor'>Services</li></Link>
               <Link href='solutions'><li className='bg-primarycolor p-2 text-white hover:bg-white hover:text-primarycolor'>Solutions</li></Link>
               <Link href='/portfolio'><li className='bg-primarycolor p-2 text-white hover:bg-white hover:text-primarycolor'>Portfolio</li></Link>
