@@ -83,7 +83,6 @@ function Services() {
 
                 </div>
                 <div className='flex justify-end items-end'>
-
                     <div className='w-[80%] bg-[#FF9315] p-4'>
                         <h1 className='text-black '>400+ happy clients</h1>
                     </div>
