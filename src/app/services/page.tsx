@@ -25,31 +25,31 @@ function Services() {
         '/bgimage1.png',
         '/bgimage2.png',
         '/bgimage3.png',
-       ]
+    ]
 
-   const [bgimage,Setbgimage] = React.useState(bgimages)
-   const [index,SetIndex] = React.useState(0)
+    const [bgimage, Setbgimage] = React.useState(bgimages)
+    const [index, SetIndex] = React.useState(0)
 
-   const changeBgimages = () => {
-    SetIndex((prev)=>(prev + 1) % bgimage.length)
-   }
-   React.useEffect(()=>{
-    const interval = setInterval(changeBgimages,3000)
-    return () => clearInterval(interval)
-   // eslint-disable-next-line react-hooks/exhaustive-deps
-   },[])
+    const changeBgimages = () => {
+        SetIndex((prev) => (prev + 1) % bgimage.length)
+    }
+    React.useEffect(() => {
+        const interval = setInterval(changeBgimages, 3000)
+        return () => clearInterval(interval)
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     return (
         <>
             <div className='lg:px-40 px-10 py-20 bg-gradient-to-b from-[#f9d5ad] to-transparent'>
                 <div className='bg-cover xl:h-[500px] lg:h-[400px]  w-full h-full lg:relative'
-                     style={
+                    style={
                         {
-                            backgroundImage:`url(${bgimage[index]})`,
+                            backgroundImage: `url(${bgimage[index]})`,
                             backgroundPosition: 'center',
                             transition: 'background-image 2s ease',
                         }
-                     }
+                    }
                 >
                     <div className='bg-gradient-to-b from-gray-900 w-full h-[500px] lg:absolute '>
                         <h1 className='text-2xl text-white flex justify-start items-end h-[400px] ml-20 -mb-20 '>We provide you<br />
