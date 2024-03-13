@@ -14,14 +14,14 @@ import flutter from '../../../public/flutter.png'
 
 
 const Appdevelopment = () => {
-    const [currentArticle, setCurrentArticle] = React.useState(1);
+    const [currentArticle, setCurrentArticle] = React.useState<number>(1);
     React.useEffect(() => {
         const timer = setInterval(() => {
             setCurrentArticle((prevArticle) => (prevArticle % 3) + 1);
         }, 2000);
         return () => clearInterval(timer);
     }, []);
-    const renderContent = () => {
+    const renderContent = (currentArticle: number) => {
         switch (currentArticle) {
             case 1:
                 return (
@@ -85,7 +85,7 @@ const Appdevelopment = () => {
     return (
         <article className='bg-gray-100 h-screen'>
             <h1 className='text-3xl sm:text-5xl text-center bg-gradient-to-b from-[#4d4d4d] bg-clip-text text-transparent to-gray-300 font-semibold py-5'>APP DEVELOPMENT</h1>
-            {renderContent()}
+            {renderContent(currentArticle)}
         </article>
     )
 }

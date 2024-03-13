@@ -24,7 +24,7 @@ import { Switch } from "antd";
 
 const Digitalmarketing = () => {
 
-    const [currentArticle, setCurrentArticle] = React.useState(1);
+    const [currentArticle, setCurrentArticle] = React.useState<number>(1);
     React.useEffect(() => {
         const timer = setInterval(() => {
             setCurrentArticle((prevArticle) => (prevArticle % 3) + 1);
@@ -33,7 +33,7 @@ const Digitalmarketing = () => {
         return () => clearInterval(timer);
     }, []);
 
-    const renderContent = () => {
+    const renderContent = (currentArticle: number) => {
         switch (currentArticle) {
             case 1:
                 return (
@@ -483,7 +483,7 @@ const Digitalmarketing = () => {
     return (
         <article className='relative h-screen '>
             <Image src={dmbg} className='h-full' alt=''/>
-            {renderContent()}
+            {renderContent(currentArticle)}
             <div className='absolute xl:top-[20%] top-[4.5%] left-0'>
                 <div className='bg-[#FF9315] rounded-r-xl text-white md:h-20 h-12 w-64 md:w-96 flex  justify-end items-center'>
                     <h2 className='text-xl sm:text-2xl md:text-3xl font-semibold pr-3'>DIGITAL MARKETING</h2>

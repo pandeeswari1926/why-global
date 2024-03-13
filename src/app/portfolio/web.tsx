@@ -6,8 +6,8 @@ import wordpress from '../../../public/37.png';
 import html from '../../../public/38.png';
 
 const Web = () => {
-    const [showActiveContent, setShowActiveContent] = useState("E-Commerce");
-    const toggleContent = (content: React.SetStateAction<string>) => {
+    const [showActiveContent, setShowActiveContent] = useState<string>("E-Commerce");
+    const toggleContent = (content: string) => {
         setShowActiveContent(content);
     };
     return (

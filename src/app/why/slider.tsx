@@ -10,7 +10,7 @@ import lifewhy3small from '../../../public/lifewhy3small.png';
 
 const SliderImage = () => {
 
-    const [currentArticle, setCurrentArticle] = React.useState(1);
+    const [currentArticle, setCurrentArticle] = React.useState<number>(1);
     React.useEffect(() => {
         const timer = setInterval(() => {
             setCurrentArticle((prevArticle) => (prevArticle % 3) + 1);
@@ -18,7 +18,7 @@ const SliderImage = () => {
 
         return () => clearInterval(timer);
     }, []);
-    const renderContent = () => {
+    const renderContent = (currentArticle:number) => {
         switch (currentArticle) {
             case 1:
                 return (
@@ -76,7 +76,7 @@ const SliderImage = () => {
     return (
         <article className=''>
             <h1 className='text-5xl text-center bg-gradient-to-b from-[#4d4d4d] bg-clip-text text-transparent to-gray-300 font-semibold py-5'></h1>
-            {renderContent()}
+            {renderContent(currentArticle)}
         </article>
 
     )
