@@ -22,11 +22,9 @@ const Web = () => {
                             <button onClick={() => toggleContent('E-Commerce')} className={` focus: outline-none font-bold sm:text-lg text-xs rounded-md drop-shadow-xl w-fit ${showActiveContent === 'E-Commerce' ? 'text-white bg-[#FF9315] p-1 px-5' : 'bg-white p-1 px-5 hover:text-white hover:bg-[#FF9315]'}`}>
                                 E-Commerce
                             </button >
-
                             <button onClick={() => toggleContent('WordPress')} className={`focus: outline-none font-bold sm:text-lg text-xs rounded-md drop-shadow-xl w-fit px-7 ${showActiveContent === 'WordPress' ? 'text-white bg-[#FF9315] p-1 px-5' : 'bg-white p-1 px-5 hover:text-white hover:bg-[#FF9315]'}`}>
                                 WordPress
                             </button >
-
                             <button onClick={() => toggleContent('HTML')} className={`focus: outline-none  font-bold sm:text-lg text-xs rounded-md drop-shadow-xl w-fit px-12 ${showActiveContent === 'HTML' ? 'text-white bg-[#FF9315] p-1 px-5' : 'bg-white p-1  hover:text-white hover:bg-[#FF9315]'}`}>
                                 HTML
                             </button >
