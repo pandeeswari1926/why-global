@@ -18,7 +18,7 @@ const SliderImage = () => {
 
         return () => clearInterval(timer);
     }, []);
-    const renderContent = (currentArticle:number) => {
+    const renderContent = (currentArticle: number) => {
         switch (currentArticle) {
             case 1:
                 return (
