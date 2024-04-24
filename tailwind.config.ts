@@ -25,7 +25,8 @@ const config: Config = {
         'bgslide': "url('/asset/Vector.png')",
         'summa': "url('/asset/background.png')",
         'about': "url('/asset/Vector3.png')",
-        'second': "url('/asset/second.png')"
+        'second': "url('/asset/second.png')",
+        'customer': 'url("/asset/White Waves Pattern.png")'
       },
       screens: {
         "xs": '431px',
