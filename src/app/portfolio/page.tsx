@@ -23,11 +23,14 @@ const Page = () => {
             {/* first section */}
             <div className='bg-portfolio bg-cover  overflow-hidden'>
             <div className='bg-portfolio bg-center overflow-hidden'>
-                <div className='pt-28 px-10'>
-                    <div className='text-center '>
-                        <h1 className='text-white md:text-8xl text-xl font-semibold leading-snug'>TAKE YOUR IDEAS TO THE <br className='md:block hidden' />NEXT LEVEL</h1><br />
-                        <p className='text-white'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pharetra <br /> arcu at mi maximus, id placerat turpis fringilla. scelerisque auctor interdum. </p><br /><br />
-                        <button className='bg-[#FF9315] text-white border-2 border-white font-medium p-4 px-14 rounded-full hover:text-[#FF9315] hover:bg-white drop-shadow-2xl'>Get started</button>
+                <div className=''>
+                    <div className='flex flex-col justify-center items-center text-center h-[86vh] gap-10'>
+                        <div className='space-y-2'>
+                        <h1 className='text-white md:text-7xl text-xl font-semibold'>TAKE YOUR IDEAS TO THE</h1>
+                        <h1 className='text-white md:text-7xl text-xl font-semibold'>NEXT LEVEL</h1>
+                        </div>
+                        <p className='text-white'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pharetra <br /> arcu at mi maximus, id placerat turpis fringilla. scelerisque auctor interdum. </p>
+                        <button className='bg-[#FF9315] text-white border-2 border-white font-semibold p-4 px-16 rounded-full hover:text-[#FF9315] hover:bg-white drop-shadow-2xl text-xl '>Get started</button>
                     </div>
                     <div className=''>
                         <div>
@@ -62,23 +65,23 @@ const Page = () => {
             </div>
             {/* second section */}
             <div className='overflow-hidden py-5'>
-                <Web />
+                {/* <Web /> */}
             </div>
             {/* third section */}
             <div className='pb-10'>
-                <Appdevelopment />
+                {/* <Appdevelopment /> */}
             </div>
             {/* fourth section */}
             <div className='py-5'>
-                <WebDesign/>
+                {/* <WebDesign/> */}
             </div>
             {/* fifth section */}
             <div>
-                <DigitalMarketing />
+                {/* <DigitalMarketing /> */}
             </div>
             {/* sixth section */}
             <div>
-                <Iot />
+                {/* <Iot /> */}
             </div>
         </>
     )
