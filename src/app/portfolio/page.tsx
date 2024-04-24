@@ -21,7 +21,7 @@ const Page = () => {
     <>
       {/* first section */}
 
-      {/* <div className="bg-portfolio bg-cover bg-no-repeat bg-center pb-32">
+      <div className="bg-portfolio bg-cover bg-no-repeat bg-center pb-32">
         <div className="flex flex-col justify-center items-center text-center py-5 lg:py-0 lg:h-[86vh] gap-10">
           <div className="space-y-2">
             <h1 className="text-white text-xl sm:text-4xl lg:text-7xl font-semibold">
@@ -123,18 +123,18 @@ const Page = () => {
             
           </div>
         </div>
-      </div> */}
+      </div>
 
       {/* second section */}
       <div className=""><Web /></div>
       {/* third section */}
-      <div className="pb-10">{/* <Appdevelopment /> */}</div>
+      <div className="pb-10"><Appdevelopment /></div>
       {/* fourth section */}
-      <div className="py-5">{/* <WebDesign/> */}</div>
+      <div className="py-5"><WebDesign/></div>
       {/* fifth section */}
-      <div>{/* <DigitalMarketing /> */}</div>
+      <div><DigitalMarketing /></div>
       {/* sixth section */}
-      <div>{/* <Iot /> */}</div>
+      <div><Iot /></div>
     </>
   );
 };
