@@ -36,7 +36,7 @@ function Services() {
 
   return (
     <>
-      <div className="lg:px-40 px-10 py-20 bg-gradient-to-b from-[#f9d5ad] to-transparent">
+      <div className="lg:px-32 px-10 py-10 bg-gradient-to-b from-[#f9d5ad] to-transparent">
         <div
           className="bg-cover xl:h-[500px] lg:h-[400px]  w-full h-full lg:relative"
           style={{
@@ -95,7 +95,7 @@ function Services() {
       </div>
 
       {/* second section */}
-      <div className="grid lg:grid-cols-2 grid-cols-1 gap-20 p-8 lg:px-32 lg:pt-0 pt-[450px] ">
+      <div className="grid lg:grid-cols-2 grid-cols-1 gap-20 p-8 lg:px-28 lg:pt-0 pt-[450px] ">
         <div className="flex flex-col gap-5">
           <h1 className="text-xl font-medium text-[#FF9315]">About</h1>
           <h1 className="text-3xl font-semibold text-gray-500">
@@ -118,7 +118,7 @@ function Services() {
             resources that encourage a balanced lifestyle.
           </p>
         </div>
-        <Image src={gif} alt="" className=" lg:ml-32 lg:-mt-10 mx-auto" />
+        <Image src={gif} alt="" className=" lg:-mt-10" />
       </div>
 
       {/* third section */}
