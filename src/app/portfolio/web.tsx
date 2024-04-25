@@ -13,19 +13,23 @@ const Web = () => {
   };
   return (
     <>
-      <div className="relative  w-full lg:grid lg:grid-cols-2 lg:pr-[20%] ">
-        <div className=" lg:w-[80%] flex flex-col justify-center items-center">
+      <div className="relative  w-full lg:grid lg:grid-cols-2 lg:pr-[20%] py-5">
+        <div className=" lg:w-[80%] flex flex-col justify-center items-center ml-3">
+        <h1 className="text-[#FF9315]  font-bold">
+              WEB DEVELOPMENT
+            </h1>
           <div className="flex flex-row relative  w-fit">
+            
             <div className="p-5 shadow-lg shadow-gray-300 rounded-full">
-              <div className="border-2 border-[#FF9315] w-48 h-48 drop-shadow-xl rounded-full flex justify-center items-center">
+              <div className="border-2 sm:border-[#FF9315] w-48 h-48 drop-shadow-xl rounded-full flex justify-center items-center">
                 <div className="flex justify-center items-center">
-                  <h1 className="text-[#FF9315]  font-semibold">
+                  <h1 className="text-[#FF9315]  font-semibold sm:block hidden">
                     WEB DEVELOPMENT
                   </h1>
                 </div>
               </div>
             </div>
-            <div className="flex flex-col absolute -translate-x-1/2 -translate-y-1/2 right-0 top-1/2 -mr-60 gap-5">
+            <div className="flex flex-col absolute -translate-x-1/2 -translate-y-1/2 sm:right-0 left-1/2 sm:left-auto top-1/2 sm:-mr-60 gap-5">
               <button
                 onClick={() => toggleContent("E-Commerce")}
                 className={`w-40 rounded-lg py-2 drop-shadow-lg ${
@@ -38,7 +42,7 @@ const Web = () => {
               </button>
               <button
                 onClick={() => toggleContent("WordPress")}
-                className={`ml-10 w-40 rounded-lg py-2 drop-shadow-lg ${
+                className={`sm:ml-10 w-40 rounded-lg py-2 drop-shadow-lg ${
                   showActiveContent === "WordPress"
                     ? "text-white bg-[#FF9315] "
                     : "bg-white  hover:text-white hover:bg-[#FF9315]"
@@ -61,7 +65,7 @@ const Web = () => {
         </div>
         <div className="lg:w-[140%] flex flex-col justify-center items-center">
           {showActiveContent === "E-Commerce" && (
-            <div className="xs:w-[80%]  w-full flex pt-6 ml-[10%] xs:ml-0">
+            <div className="xs:w-[80%]  w-full flex pt-6 p-3 xs:ml-0">
               <div className="flex flex-col w-full">
                 <h1 className="text-xl sm:text-5xl text-gray-500 font-semibold">
                   E-COMMERCE

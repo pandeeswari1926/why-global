@@ -83,7 +83,7 @@ const Digitalmarketing = () => {
                     </div>
                   </div>
                   {/* absolute contents */}
-                  <article className="absolute -translate-x-1/2 -translate-y-1/2 left-1/2 bottom-0 sm:-mb-36 -mb-[157px]">
+                  <article className="absolute -translate-x-1/2 -translate-y-1/2 left-1/2 bottom-0 sm:-mb-36 -mb-[157px] xs2:block hidden">
                     <div className="flex xs:gap-1 sm:gap-3">
                       <div className="sm:w-64 xs:w-40 w-24 bg-white drop-shadow-lg rounded-lg flex flex-col justify-end ">
                         <Image src={dmpoint1} className="rounded-lg " alt="" />
@@ -156,8 +156,8 @@ const Digitalmarketing = () => {
                       </div>
                     </div>
                   </article>
-                  <article className="absolute top-0 -mt-16 xs:-mt-10 sm:-mt-3 ml-[250px] xs:ml-[400px] sm:ml-20">
-                    <div className="bg-white sm:w-64 w-24 p-2 rounded-lg drop-shadow-lg">
+                  <article className="absolute top-0 -mt-16 xs:-mt-10 sm:-mt-3 ml-[250px] xs:ml-[400px] sm:ml-20 xs2:block hidden">
+                    <div className="bg-white sm:w-64 w-24 p-2 rounded-lg drop-shadow-lg ">
                       <h2 className=" font-semibold py-2 text-[10px] sm:text-xs pl-1">
                         Ads Statuses
                       </h2>
@@ -304,7 +304,7 @@ const Digitalmarketing = () => {
                   </div>
 
                   {/* absolute contents */}
-                  <article className="absolute -translate-x-1/2 -translate-y-1/2 left-1/2 bottom-0 sm:-mb-36 -mb-[157px]">
+                  <article className="absolute -translate-x-1/2 -translate-y-1/2 left-1/2 bottom-0 sm:-mb-36 -mb-[157px] xs2:block hidden">
                     <div className="flex xs:gap-1 sm:gap-3">
                       <div className="sm:w-64 xs:w-40 w-24 bg-white drop-shadow-lg rounded-lg flex flex-col justify-end ">
                         <Image src={dmpoint1} className="rounded-lg" alt="" />
@@ -378,7 +378,7 @@ const Digitalmarketing = () => {
                       </div>
                     </div>
                   </article>
-                  <article className="absolute top-0 -mt-16 xs:-mt-10 sm:-mt-3 ml-[250px] xs:ml-[400px] sm:ml-20">
+                  <article className="absolute top-0 -mt-16 xs:-mt-10 sm:-mt-3 ml-[250px] xs:ml-[400px] sm:ml-20 xs2:block hidden">
                     <div className="bg-white sm:w-64 w-24 p-2 rounded-lg drop-shadow-lg">
                       <h2 className=" font-semibold py-2 text-[10px] sm:text-xs pl-1">
                         Ads Statuses
@@ -526,7 +526,7 @@ const Digitalmarketing = () => {
                   </div>
 
                   {/* absolute contents */}
-                  <article className="absolute -translate-x-1/2 -translate-y-1/2 left-1/2 bottom-0 sm:-mb-36 -mb-[157px]">
+                  <article className="absolute -translate-x-1/2 -translate-y-1/2 left-1/2 bottom-0 sm:-mb-36 -mb-[157px] xs2:block hidden">
                     <div className="flex xs:gap-1 sm:gap-3">
                       <div className="sm:w-64 xs:w-40 w-24 bg-white drop-shadow-lg rounded-lg flex flex-col justify-end ">
                         <Image src={dmpoint1} className="rounded-lg" alt="" />
@@ -598,7 +598,7 @@ const Digitalmarketing = () => {
                     </div>
                   </article>
 
-                  <article className="absolute top-0 -mt-16 xs:-mt-10 sm:-mt-3 ml-[250px] xs:ml-[400px] sm:ml-20">
+                  <article className="absolute top-0 -mt-16 xs:-mt-10 sm:-mt-3 ml-[250px] xs:ml-[400px] sm:ml-20 xs2:block hidden">
                     <div className="bg-white sm:w-64 w-24 p-2 rounded-lg drop-shadow-lg">
                       <h2 className=" font-semibold py-2 text-[10px] sm:text-xs pl-1">
                         Ads Statuses
@@ -705,11 +705,11 @@ const Digitalmarketing = () => {
   return (
     <article>
       <section className="xl:hidden block">
-        <h2 className="text-2xl sm:text-5xl font-bold text-center bg-gradient-to-b from-[#4d4d4d] bg-clip-text text-transparent to-gray-300  py-5 ">
+        <h2 className="text-2xl sm:text-5xl font-bold text-center bg-gradient-to-b from-[#4d4d4d] bg-clip-text text-transparent to-gray-300">
           DIGITAL MARKETING
         </h2>
       </section>
-      <article className="relative h-screen">
+      <article className="relative h-screen -mt-5">
         <Image src={dmbg} className="h-full xl:block hidden" alt="" />
         {renderContent(currentArticle)}
         <div className="absolute xl:top-[15%] top-[4.5%] left-0 xl:block hidden">
