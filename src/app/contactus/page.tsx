@@ -1,12 +1,16 @@
 import React from 'react'
-import Image from 'next/image'
+import Map from "../contactus/Map"
+import Contactform from './Contactform'
 
 const page = () => {
-  return (
-    <div className='bg-getin h-96 w-96'>
-       <div className=''> </div>
-    </div>
-  )
+    return (
+        <div>
+          <div className='flex flex-col md:gap-24 gap-96'>
+            <Contactform />
+            <Map />
+          </div>
+        </div>
+    )
 }
 
 export default page

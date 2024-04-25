@@ -1,32 +1,41 @@
-import React from 'react'
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 import { BiSolidQuoteAltLeft } from "react-icons/bi";
-import wgs from '../../../public/WGS LIVE PICS (8) 1.png';
-
+import wgs from "../../../public/WGS LIVE PICS (8) 1.png";
 
 const Test = () => {
-    return (
-        <>
-            <div className='pt-10 md:pl-20 pl-5'>
-                <div className='bg-test text-center bg-cover w-full xl:h-[100vh] lg:h-[600px] md:h-[400px] sm:h-72 h-56 lg:mt-14  mt-28'>
-                    <div className='flex md:flex-row flex-col gap-10'>
-                        <div className='md:p-20 p-5 lg:ml-20 ml-5 md:pt-32 pt-10'>
-                            <BiSolidQuoteAltLeft className='size-10 text-[#FF9315] flex justify-end items-end text-end w-full' /><br /><br />
-                            <p className='text-start lg:w-[60%] w-full text-xl'>Our commitment to client satisfaction sets us apart, delivering results that speak volumes. With a relentless focus on your happiness, we strive to make every interaction remarkable.</p><br /><br />
-                            <BiSolidQuoteAltLeft className='size-10 text-[#FF9315]' />
-                        </div>
-                        <div className='w-full h-full pt-12 lg:pr-20'>
-                            <div className='text-start sm:pl-64 pl-32'>
-                                <h1 className='text-xl text-gray-700 font-semibold'>Ramya Annamalai</h1>
-                                <p className=''>Web developer</p>
-                            </div>
-                            <Image src={wgs} alt='' />   
-                        </div>
-                    </div>
-                </div>
+  return (
+    <>
+      <div className="pt-10 md:pl-20 pl-5">
+        <div className="bg-test text-center bg-cover w-full h-full  lg:mt-14  mt-28">
+          <div className="w-full h-full flex md:flex-row flex-col md:p-0 p-10">
+            <div className="md:w-[50%] w-full space-y-10 flex flex-col justify-center items-center">
+              <div className="flex flex-col justify-end md:w-[50%] w-full items-end ">
+                <BiSolidQuoteAltLeft className="text-primarycolor size-10 " />
+              </div>
+              <p className="md:w-[50%] w-full text-start">
+                Our commitment to client satisfaction sets us apart, delivering
+                results that speak volumes. With a relentless focus on your
+                happiness, we strive to make every interaction remarkable.
+              </p>
+              <div className="flex flex-col justify-items-start md:w-[50%] w-full">
+                <BiSolidQuoteAltLeft className="text-primarycolor size-10" />
+              </div>
             </div>
-        </>
-    )
-}
+            <div className="md:w-[50%] w-full flex md:flex-col flex-col-reverse justify-center md:items-start items-center">
+              <div className="flex flex-col justify-end w-full">
+                <h1 className="font-semibold text-xl md:mt-0 mt-5">Ramya Annamalai</h1>
+                <p>Web Developer</p>
+              </div>
+              <div>
+                <Image src={wgs} alt="Our Employee" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
 
-export default Test
+export default Test;
