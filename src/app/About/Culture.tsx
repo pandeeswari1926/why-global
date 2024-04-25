@@ -5,7 +5,7 @@ import ruban from '../asset/ruban.png'
 function Culture() {
   return (
     <div>
-      <div className='pt-10 flex w-full md:flex-row flex-col'>
+      <div className='pt-10 flex w-full md:flex-row flex-col '>
        <div className='w-[25%] h-[300px] rad  bg-black'></div>
        <div>
         <div className='relative w-full flex flex-col'>

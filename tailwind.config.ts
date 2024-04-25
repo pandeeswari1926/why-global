@@ -27,10 +27,12 @@ const config: Config = {
         'about': "url('/asset/Vector3.png')",
         'second': "url('/asset/second.png')",
         'customer': 'url("/asset/White Waves Pattern.png")',
+        'testimonial':'url("/asset/testmonial bg.png")',
         'getin':'url("/asset/getinbg.png")'
       },
       screens: {
         "xs": '431px',
+        "leawidth":"320px"
       },
       fontSize: {
         "2xs": '0.7rem',
