@@ -28,7 +28,7 @@ const NavBar = () => {
             <Link href='/portfolio'><li className='hover:text-primarycolor'>Portfolio</li></Link>
             <Link href='/testimonial'><li className='hover:text-primarycolor'>Testimonials</li></Link>
             <Link href='#'><li className='hover:text-primarycolor'>Events</li></Link>
-            <Link href='#'><li className='hover:text-primarycolor'>ContactUs</li></Link>
+            <Link href='/contactus'><li className='hover:text-primarycolor'>ContactUs</li></Link>
             <button className='p-2 -mt-3 flex items-end mx-10 cursor-pointer bg-white text-primarycolor w-[20%] shadow-2xl rounded-md hover:bg-primarycolor hover:text-white border border-b-4'>
               Get a Quote
             </button>
