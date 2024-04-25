@@ -7,9 +7,7 @@ const page = () => {
     <div>
       <div className="">
         <Contactform />
-        <div className="mt-96 md:mt-36">
-          <Map />
-        </div>
+        <Map />
       </div>
     </div>
   );
