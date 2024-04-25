@@ -27,6 +27,14 @@ import ourculture2 from "../asset/Vector 49.png";
 import ourculture3 from "../asset/Vector 50.png";
 import ourculture4 from "../asset/Vector 51.png";
 import ourculture5 from "../asset/Vector 52.png";
+import Culture from "./Culture";
+import slidegray from "../asset/slidergray.png";
+import ruban from "../asset/ruban (2).png";
+import dha from "../asset/dhanush.png";
+import ram from "../asset/ramya.png";
+import ajin from "../asset/ajin.png"
+import niv from "../asset/nivetha.png";
+
 
 function About() {
   var settings = {
@@ -135,58 +143,61 @@ function About() {
           <Image alt="" src={line}></Image>
         </div>
       </div>
-      <div className="w-full  pt-20 p-5 key">
-        <div className="relative">
-          <div className="flex md:flex-row flex-col md:gap-16 gap-6 justify-center  items-center">
-            <div className="bg-white outline outline-[#FF9315] relative w-[60%] h-52 lg:w-[12%] lg:h-44 md:w-[40%]  rounded-3xl drop-shadow-2xl flex justify-center items-center">
+      <div className="w-full flex flex-col justify-center items-center mt-7 ">
+        <div className="relative w-full">
+          <div className="flex lg:flex-row flex-col w-full  justify-center items-center gap-6 ">
+            <div className="bg-white  outline outline-[#FF9315] relative w-[60%] h-52 lg:w-40  lg:h-44 md:w-[40%]  rounded-3xl drop-shadow-lg flex flex-col justify-center gap-3 items-center">
               <FontAwesomeIcon
                 icon={faComputer}
-                className="lg:size-16 size-28 absolute top-5 text-[#FF9315]"
+                className="sm:size-16 size-24  text-[#FF9315]"
               />
-              <p className="absolute text-xl md:text-lg text-center bottom-9 lg:bottom-5">
-                Product Engineering
+              <p className=" text-xl md:text-lg text-center ">
+                Product <br /> Engineering
               </p>
             </div>
-            <div className="bg-white outline outline-[#FF9315] relative w-[60%] h-52 lg:w-[12%] lg:h-44 md:w-[40%]  rounded-3xl drop-shadow-2xl flex justify-center items-center">
+            <div className="bg-white  outline outline-[#FF9315] relative w-[60%] h-52 lg:w-40  lg:h-44 md:w-[40%]  rounded-3xl drop-shadow-lg flex flex-col justify-center gap-3 items-center">
               <FontAwesomeIcon
                 icon={faComputer}
-                className="lg:size-16 size-28 absolute top-5 text-[#FF9315]"
+                className="sm:size-16 size-24  text-[#FF9315]"
               />
-              <p className="absolute text-xl md:text-lg text-center bottom-9 lg:bottom-5">
-                Product Engineering
+              <p className=" text-xl md:text-lg text-center ">
+                Product <br /> Engineering
               </p>
             </div>
-            <div className="bg-white outline outline-[#FF9315] relative w-[60%] h-52 lg:w-[12%] lg:h-44 md:w-[40%]  rounded-3xl drop-shadow-2xl flex justify-center items-center">
+            <div className="bg-white  outline outline-[#FF9315] relative w-[60%] h-52 lg:w-40  lg:h-44 md:w-[40%]  rounded-3xl drop-shadow-lg flex flex-col justify-center gap-3 items-center">
               <FontAwesomeIcon
                 icon={faComputer}
-                className="lg:size-16 size-28 absolute top-5 text-[#FF9315]"
+                className="sm:size-16 size-24  text-[#FF9315]"
               />
-              <p className="absolute text-xl md:text-lg text-center bottom-9 lg:bottom-5">
-                Product Engineering
+              <p className=" text-xl md:text-lg text-center ">
+                Product <br /> Engineering
               </p>
             </div>
-            <div className="bg-white outline outline-[#FF9315] relative w-[60%] h-52 lg:w-[12%] lg:h-44 md:w-[40%]  rounded-3xl drop-shadow-2xl flex justify-center items-center">
+            <div className="bg-white  outline outline-[#FF9315] relative w-[60%] h-52 lg:w-40  lg:h-44 md:w-[40%]  rounded-3xl drop-shadow-lg flex flex-col justify-center gap-3 items-center">
               <FontAwesomeIcon
                 icon={faComputer}
-                className="lg:size-16 size-28 absolute top-5 text-[#FF9315]"
+                className="sm:size-16 size-24  text-[#FF9315]"
               />
-              <p className="absolute text-xl md:text-lg text-center bottom-9 lg:bottom-5">
-                Product Engineering
+              <p className=" text-xl md:text-lg text-center ">
+                Product <br /> Engineering
               </p>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="w-full h-[50%] bg-second bg-no-repeat -mt-[3%]">
-        <div className="flex md:flex-row flex-col pt-32 justify-around">
+      <div className="w-full h-fit relative bg-no-repeat ">
+        <div className="w-full h-full absolute lg:-top-16 -top-7 left-0 -z-10">
+          <Image src={slidegray} alt=""></Image>
+        </div>
+        <div className="flex md:flex-row flex-col items-center justify-around">
           <div
             className=" md:w-[50%] w-full
        md:p-10"
           >
             <Image src={Certificate} alt=""></Image>
           </div>
-          <div className="md:w-[50%] w-full md:text-left text-justify p-5   pt-20">
+          <div className="md:w-[50%] w-full md:text-left text-justify p-5 ">
             <p className="md:text-xl text-2xl font-semibold text-primarycolor text-center md:text-left">
               INTRODUCING WHY GLOBAL SERVICES
             </p>
@@ -277,14 +288,36 @@ function About() {
         </div>
       </main>
 
-      <div className="w-fit pt-10 px-20">
-        <div className="border-[30px] border-white drop-shadow-xl rounded-full">
-          <h1 className="text-[#FF9315] bg-white border-2 border-[#FF9315] font-semibold md:p-10 p-10 h-48 rounded-full w-fit ">
-            OUR CULTURE
-          </h1>
-        </div>
-        <div>
-
+      <div className="mt-28">
+        <div className="flex lg:flex-row flex-col justify-center items-center">
+          <div className="lg:w-[20%] w-[90%] sm:w-52 lg:h-64 sm:h-52  bg-gray-400 flex drop-shadow-lg justify-center items-center rounded-full">
+            <div className="w-[70%] h-[70%] drop-shadow-lg text-center border-2 border-orange-400 font-semibold content-center text-lg text-orange-500 bg-white rounded-full">
+              OUR CULTURE
+            </div>
+          </div>
+          <div className="lg:w-[80%] w-full flex justify-center items-center">
+            <div className="w-[70%] flex flex-col gap-2">
+              <div className="w-full flex justify-center items-center">
+                <div>
+                  <Image src={ruban} alt="" />
+                </div>
+                <div>
+                 <Image src={dha} alt="" />
+                </div>
+              </div>
+              <div className="w-full flex justify-center items-center">
+                <div>
+                  <Image src={ram} alt="" />
+                </div>
+                <div>
+                  <Image src={ajin} alt="" />
+                </div>
+              </div>
+            </div>
+            <div className="w-[30%]">
+             <Image src={niv} alt="" />
+            </div>
+          </div>
         </div>
       </div>
       {/* <Slider {...settings} className='overflow-hidden'>
