@@ -27,7 +27,8 @@ const config: Config = {
         'about': "url('/asset/Vector3.png')",
         'second': "url('/asset/second.png')",
         'customer': 'url("/asset/White Waves Pattern.png")',
-        'testimonial':'url("/asset/testmonial bg.png")'
+        'testimonial':'url("/asset/testmonial bg.png")',
+        'getin':'url("/asset/getinbg.png")'
       },
       screens: {
         "xs": '431px',
