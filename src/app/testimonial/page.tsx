@@ -1,29 +1,24 @@
-import React from 'react'
-import Image from 'next/image';
-import line from '../../../public/Line 1.png';
-import ceo from '../../../public/WGS LIVE PICS (6) 1.png';
-import gif from '../../../public/wgs gifs (11) 1.png';
-import message from '../../../public/Vector 86.png';
-import SliderPage from './slider';
-import Test from './test';
-
+"use client";
+import React from "react";
+import Image from "next/image";
+import line from "../../../public/Line 1.png";
+import ceo from "../../../public/WGS LIVE PICS (6) 1.png";
+import gif from "../asset/wgs gifs (22).gif";
+import message from "../../../public/Vector 86.png";
+import SliderPage from "./slider";
+import Test from "./test";
+import bg from "../asset/testmonialbg.png";
 
 const Page = () => {
-    return (
-        <>
-            {/* first section */}
-            <div className='pt-20'>
-                <div className='flex md:flex-row flex-col w-full relative pt-10'>
-                    <div className='space-y-10 flex flex-row'>
-                        <div className='w-full h-full absolute top-96 md:hidden block left-0 ml-auto'>
-                            <Image src={message} alt='' className='' />
-                            <div className='absolute top-3 p-3 left-5'>
-                                <h1 className='lg:text-xl text-base text-[#FF9315] font-semibold'>At the heart of everything we do,</h1>
-                                <h1 className='lg:text-4xl text-xl text-gray-400 font-semibold leading-relaxed'>See how we&apos;ve made a difference..</h1>
-                            </div>
-                        </div>
-                        <div>
-                            <Image src={gif} alt='' className='absolute md:top-64 top-96 md:mt-0 mt-52 left-0 lg:block hidden' />
+  return (
+    <>
+      {/* first section */}
+      <div className="">
+        {/* <div className='flex md:flex-row flex-col w-full h-screen relative pt-10'>
+                    <div className='space-y-10 flex flex-row '>
+                        
+                        <div className='w-60 h-60 z-10 absolute top-1/2 left-0'>
+                            <Image src={gif} alt='' className='w-full h-full' />
                         </div>
                     </div>
                     <div className=''>
@@ -47,18 +42,40 @@ const Page = () => {
                             </div>
                         </div>
                     </div>
-                </div >
-                {/* second section */}
-                <div className='mt-96'>
-                    <SliderPage />
-                </div>
-                {/* third section */}
-                <div>
-                    <Test />
-                </div>
+                </div > */}
+        <div className="relative xs:h-screen leawidth:h-[600px] h-[500px]">
+          <div className="absolute md:-top-7 right-0 lg:w-[80%] w-full xs:h-screen leawidth:h-[650px] h-[500px]">
+            <Image src={bg} alt="" className="w-full h-full object-fill" />
+          </div>
+          <div className="absolute md:right-5 right-0 xs:bottom-0 bottom-10 ">
+            <Image src={ceo} alt="ceo" />
+            <div className="text-white bg-white bg-opacity-25 absolute bottom-0 md:right-28 w-[80%] p-3 pl-8 rounded-t-xl">
+              <h1 className="text-2xl font-semibold">Sathishkumar Kannan</h1>
+              <p className="text-sm font-semibold">CEO</p>
             </div>
-        </>
-    )
-}
+          </div>
+          <div className="lg:w-[550px] xs:w-[450px] absolute lg:top-10 top-5 md:left-28 sm:left-10">
+            <Image src={message} alt="" />
+            <div className="absolute lg:top-12 lg:left-16 top-5 left-5 space-y-5">
+              <p className="sm:text-lg xs:text-base text-xs text-primarycolor font-semibold">At the heart of everything we do,</p>
+              <h1 className="sm:text-3xl xs:text-lg text-xs text-gray-500 font-semibold">See how we've made a difference..</h1>
+            </div>
+          </div>
+          <div className="absolute w-80 bottom-0 md:left-14 lg:block hidden">
+            <Image src={gif} alt="gif" className=""/>
+          </div>
+        </div>
+        {/* second section */}
+      </div>
+      <div className="">
+        <SliderPage />
+      </div>
+      {/* third section */}
+      <div>
+        <Test />
+      </div>
+    </>
+  );
+};
 
-export default Page
+export default Page;
