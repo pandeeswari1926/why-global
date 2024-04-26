@@ -15,6 +15,7 @@ import benifits from "../../../public/sevice.png";
 import signin from "../../../public/Rectangle 113.png";
 import DashBoard from "../../../public/Rectangle 113 (1).png";
 import Faculty from "../../../public/Rectangle 113 (2).png";
+import rubenvro from "../../../public/rubanbro.jpg";
 
 function Solutions() {
   const [showActiveContent, setShowActiveContent] = useState("SignIn");
@@ -25,7 +26,7 @@ function Solutions() {
   return (
     <>
       {/* first section */}
-      <div className="flex md:flex-row flex-col w-full relative p-10 pt-20">
+      {/* <div className="flex md:flex-row flex-col w-full relative p-10 pt-20">
         <div className="space-y-10">
           <h1 className="xl:text-xl md:text-base text-xl text-[#FF9315] font-semibold pt-20 lg:pl-10">
             LEARNING MANAGEMENT SYSTEM
@@ -61,9 +62,9 @@ function Solutions() {
             />
           </div>
         </div>
-      </div>
+      </div> */}
       {/* second section */}
-      <div className="flex lg:flex-row flex-col p-10 lg:px-20 mx-auto w-full md:pt-0 pt-[650px] ">
+      {/* <div className="flex lg:flex-row flex-col p-10 lg:px-20 mx-auto w-full md:pt-0 pt-[650px] ">
         <div className="w-full h-full flex flex-col gap-8">
           <h1 className="lg:text-xl text-lg text-[#FF9315] font-semibold leading-8">
             LEARNING MANAGEMENT SYSTEM
@@ -87,7 +88,40 @@ function Solutions() {
         <div className="w-full h-full mx-auto ">
           <Image src={gif} alt="" className="mx-auto" />
         </div>
-      </div>
+      </div> */}
+
+
+<div className='grid grid-cols-1 md:grid-cols-2 '>
+                <div className='flex flex-col gap-5 p-5 md:p-20'>
+                    <p className='uppercase text-sm sm:text-base text-orange-500 font-semibold md:text-left text-center'>Learning management system</p>
+                    
+                    <div className='uppercase lg:text-3xl sm:text-xl xs:text-lg text-base md:text-left text-center font-semibold space-y-3 text-gray-500'>
+                        <p className="space-y-2">Unlocking KNOWLEDGE,
+                        Empowering learning</p>
+                    </div>
+
+                    <p className='font-light md:text-sm text-sm md:text-left text-center leading-loose text-gray-500'>Welcome to our Learning Management System (LMS) page, where we offer a comprehensive solution designed to transform the way you deliver and manage online learning.</p>
+                </div>
+
+                <div className='h-full w-full flex flex-col justify-center items-center'>
+                    <Image src={rubenvro} alt='ruben vro' className='md:w-full md:h-full xs:w-96 xs:h-80 w-64 h-52 ' />
+                </div>
+            </div >
+            {/* second section */}
+            <div className='grid grid-cols-1 md:grid-cols-2'>
+                <div className='flex flex-col justify-center gap-5 p-5 md:p-10'>
+
+                    <h1 className='uppercase text-sm sm:text-base text-orange-500 font-semibold md:text-left text-center'>LEARNING MANAGEMENT SYSTEM</h1>
+
+                    <h1 className='uppercase lg:text-3xl text-gray-500 sm:text-xl xs:text-lg text-base md:text-left text-center font-bold'>ELEVATE YOUR LEARNING JOURNEY WITH OUR CUTTING-EDGE LMS SOLUTION!</h1>
+
+                    <p className='font-light text-sm  md:text-left text-center text-gray-500'>An LMS, or Learning Management System, is a comprehensive software platform designed to facilitate online learning and training programs. LMSs offer a wide range of features that support the management, delivery, and tracking of educational content.</p>
+                    <p className='font-light  text-sm md:text-left text-center text-gray-500'>One of the key features of an LMS is course management, which allows administrators to create and organize courses, modules, and lessons. Users can easily access these courses, track their progress, and engage with interactive learning materials.</p>
+                </div>
+                <div className='w-full h-full mx-auto flex justify-center items-center'>
+                    <Image src={gif} alt='' className='mx-auto' />
+                </div>
+            </div>
       {/* third section */}
       <div className="bg-gray-100  lg:py-20 ">
         <div className="mt-10">
@@ -288,7 +322,7 @@ function Solutions() {
         </div>
       </div>
       {/* sixth section */}
-      <div className="p-10 md:px-28 md:mt-0 sm:mt-96 mt-80">
+      <div className="p-10 md:px-28 ">
         <div className="text-white bg-gradient-to-t from-[#FF9315] to-[#dcb145] p-10 text-center rounded-md">
           <h1 className="md:text-4xl text-lg font-medium drop-shadow-2xl">
             Contact us today to explore the possibilities!

@@ -27,14 +27,13 @@ import ourculture2 from "../asset/Vector 49.png";
 import ourculture3 from "../asset/Vector 50.png";
 import ourculture4 from "../asset/Vector 51.png";
 import ourculture5 from "../asset/Vector 52.png";
-import Culture from "./Culture";
+// import Culture from "./Culture";
 import slidegray from "../asset/slidergray.png";
 import ruban from "../asset/ruban (2).png";
 import dha from "../asset/dhanush.png";
 import ram from "../asset/ramya.png";
-import ajin from "../asset/ajin.png"
+import ajin from "../asset/ajin.png";
 import niv from "../asset/nivetha.png";
-
 
 function About() {
   var settings = {
@@ -302,7 +301,7 @@ function About() {
                   <Image src={ruban} alt="" />
                 </div>
                 <div>
-                 <Image src={dha} alt="" />
+                  <Image src={dha} alt="" />
                 </div>
               </div>
               <div className="w-full flex justify-center items-center">
@@ -315,91 +314,147 @@ function About() {
               </div>
             </div>
             <div className="w-[30%]">
-             <Image src={niv} alt="" />
+              <Image src={niv} alt="" />
             </div>
           </div>
         </div>
       </div>
-      {/* <Slider {...settings} className='overflow-hidden'>
-        <div>
-          <div className='flex justify-center lg:flex-row flex-col w-[90%] relative mx-auto  pt-8'>
-            <div className='lg:w-[80%] w-full relative'>
-              <Image src={style2} alt="style2" className="lg:w-[80%] w-full" />
-              <Image src={profile1} alt="Profile1" className="lg:w-[70%] w-full top-2 absolute" />
-              <Image src={style3} alt="style2" className="absolute sm:w-[20%] w-[30%] top-0 right-[80%]" />
-            </div>
-            <div className='w-full lg:pt-2'>
-              <p className="lg:text-left lg:text-md font-normal text-[#5D5D5D] text-justify">Virtual reality environments offer a way to ingrain knowledge more deeply and quickly compared to traditional methods. By prioritizing spatial information, VR helps learners map their understanding effectively.</p>
-              <hr className=' h-0.5 bg-[#FF8900] mt-4 ' />
-              <div className='flex md:flex-row flex-col justify-between'>
-                <div>
-                  <p className='text-center'>MARK</p>
-                  <p className=' text-center text-[#FF8900]'>CEO</p>
-                </div>
-                <div className='justify-center items-center pl-[10%] md:pl-0 md:w-[30%] mx-auto'>
-                  <Image src={star} alt='' className=' md:mt-5' />
+      <div className="p-10">
+        <p className="text-primarycolor font-semibold text-lg">OUR TEAM MEMBERS</p>
+        <h1 className="text-xl font-semibold text-gray-500">United We Achieve, Together We Succeed!</h1>
+        <Slider {...settings} className="overflow-hidden">
+          <div>
+            <div className="flex justify-center lg:flex-row flex-col w-[90%] relative mx-auto  pt-8">
+              <div className="lg:w-[80%] w-full relative">
+                <Image
+                  src={style2}
+                  alt="style2"
+                  className="lg:w-[80%] w-full"
+                />
+                <Image
+                  src={profile1}
+                  alt="Profile1"
+                  className="lg:w-[70%] w-full top-2 absolute"
+                />
+                <Image
+                  src={style3}
+                  alt="style2"
+                  className="absolute sm:w-[20%] w-[30%] top-0 right-[80%]"
+                />
+              </div>
+              <div className="w-full lg:pt-2">
+                <p className="lg:text-left lg:text-md font-normal text-[#5D5D5D] text-justify">
+                  Virtual reality environments offer a way to ingrain knowledge
+                  more deeply and quickly compared to traditional methods. By
+                  prioritizing spatial information, VR helps learners map their
+                  understanding effectively.
+                </p>
+                <hr className=" h-0.5 bg-[#FF8900] mt-4 " />
+                <div className="flex md:flex-row flex-col justify-between">
+                  <div>
+                    <p className="text-center">MARK</p>
+                    <p className=" text-center text-[#FF8900]">CEO</p>
+                  </div>
+                  <div className="justify-center items-center pl-[10%] md:pl-0 md:w-[30%] mx-auto">
+                    <Image src={star} alt="" className=" md:mt-5" />
+                  </div>
                 </div>
               </div>
             </div>
-
           </div>
-        </div>
-        <div>
-          <div className='flex justify-center lg:flex-row flex-col w-[90%] relative mx-auto  pt-8'>
-            <div className='lg:w-[80%] w-full relative'>
-              <Image src={style2} alt="style2" className="lg:w-[80%] w-full" />
-              <Image src={profile1} alt="Profile1" className="lg:w-[70%] w-full top-2 absolute" />
-              <Image src={style3} alt="style2" className="absolute sm:w-[20%] w-[30%] top-0 right-[80%]" />
-            </div>
-            <div className='w-full lg:pt-2'>
-              <p className="lg:text-left lg:text-md font-normal text-[#5D5D5D] text-justify">Virtual reality environments offer a way to ingrain knowledge more deeply and quickly compared to traditional methods. By prioritizing spatial information, VR helps learners map their understanding effectively.</p>
-              <hr className=' h-0.5 bg-[#FF8900]  mt-4 ' />
-              <div className='flex md:flex-row flex-col justify-between'>
-                <div>
-                  <p className='text-center'>MARK</p>
-                  <p className=' text-center text-[#FF8900]'>CEO</p>
-                </div>
-                <div className='justify-center items-center pl-[10%] md:pl-0 md:w-[30%] mx-auto'>
-                  <Image src={star} alt='' className=' md:mt-5' />
+          <div>
+            <div className="flex justify-center lg:flex-row flex-col w-[90%] relative mx-auto  pt-8">
+              <div className="lg:w-[80%] w-full relative">
+                <Image
+                  src={style2}
+                  alt="style2"
+                  className="lg:w-[80%] w-full"
+                />
+                <Image
+                  src={profile1}
+                  alt="Profile1"
+                  className="lg:w-[70%] w-full top-2 absolute"
+                />
+                <Image
+                  src={style3}
+                  alt="style2"
+                  className="absolute sm:w-[20%] w-[30%] top-0 right-[80%]"
+                />
+              </div>
+              <div className="w-full lg:pt-2">
+                <p className="lg:text-left lg:text-md font-normal text-[#5D5D5D] text-justify">
+                  Virtual reality environments offer a way to ingrain knowledge
+                  more deeply and quickly compared to traditional methods. By
+                  prioritizing spatial information, VR helps learners map their
+                  understanding effectively.
+                </p>
+                <hr className=" h-0.5 bg-[#FF8900]  mt-4 " />
+                <div className="flex md:flex-row flex-col justify-between">
+                  <div>
+                    <p className="text-center">MARK</p>
+                    <p className=" text-center text-[#FF8900]">CEO</p>
+                  </div>
+                  <div className="justify-center items-center pl-[10%] md:pl-0 md:w-[30%] mx-auto">
+                    <Image src={star} alt="" className=" md:mt-5" />
+                  </div>
                 </div>
               </div>
             </div>
-
           </div>
-        </div>
-        <div>
-          <div className='flex justify-center lg:flex-row flex-col w-[90%] relative mx-auto  pt-8'>
-            <div className='lg:w-[80%] w-full relative'>
-              <Image src={style2} alt="style2" className="lg:w-[80%] w-full" />
-              <Image src={profile1} alt="Profile1" className="lg:w-[70%] w-full top-2 absolute" />
-              <Image src={style3} alt="style2" className="absolute sm:w-[20%] w-[30%] top-0 right-[80%]" />
-            </div>
-            <div className='w-full lg:pt-2'>
-              <p className="lg:text-left lg:text-md font-normal text-[#5D5D5D] text-justify">Virtual reality environments offer a way to ingrain knowledge more deeply and quickly compared to traditional methods. By prioritizing spatial information, VR helps learners map their understanding effectively.</p>
-              <hr className=' h-0.5 bg-[#FF8900]  mt-4 ' />
-              <div className='flex md:flex-row flex-col justify-between'>
-                <div>
-                  <p className='text-center'>MARK</p>
-                  <p className=' text-center text-[#FF8900]'>CEO</p>
-                </div>
-                <div className='justify-center items-center pl-[10%] md:pl-0 md:w-[30%] mx-auto'>
-                  <Image src={star} alt='' className=' md:mt-5' />
+          <div>
+            <div className="flex justify-center lg:flex-row flex-col w-[90%] relative mx-auto  pt-8">
+              <div className="lg:w-[80%] w-full relative">
+                <Image
+                  src={style2}
+                  alt="style2"
+                  className="lg:w-[80%] w-full"
+                />
+                <Image
+                  src={profile1}
+                  alt="Profile1"
+                  className="lg:w-[70%] w-full top-2 absolute"
+                />
+                <Image
+                  src={style3}
+                  alt="style2"
+                  className="absolute sm:w-[20%] w-[30%] top-0 right-[80%]"
+                />
+              </div>
+              <div className="w-full lg:pt-2">
+                <p className="lg:text-left lg:text-md font-normal text-[#5D5D5D] text-justify">
+                  Virtual reality environments offer a way to ingrain knowledge
+                  more deeply and quickly compared to traditional methods. By
+                  prioritizing spatial information, VR helps learners map their
+                  understanding effectively.
+                </p>
+                <hr className=" h-0.5 bg-[#FF8900]  mt-4 " />
+                <div className="flex md:flex-row flex-col justify-between">
+                  <div>
+                    <p className="text-center">MARK</p>
+                    <p className=" text-center text-[#FF8900]">CEO</p>
+                  </div>
+                  <div className="justify-center items-center pl-[10%] md:pl-0 md:w-[30%] mx-auto">
+                    <Image src={star} alt="" className=" md:mt-5" />
+                  </div>
                 </div>
               </div>
             </div>
-
           </div>
-        </div>
-      </Slider>
+        </Slider>
+      </div>
       <div className="flex flex-col justify-center items-center overflow-hidden  py-5">
         <div className="relative w-[1248px] h-[236px] px-10">
           <Image src={bgorange1} alt="" className="w-full" />
           <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2  text-center space-y-10">
-            <h2 className="font-semibold sm:text-5xl text-3xl text-white">Connect with Us!</h2>
-            <button className="bg-white drop-shadow-xl text-[#FF8900] rounded-full sm:px-32 px-20 py-4 font-semibold sm:text-xl text-lg">Get Started</button>
+            <h2 className="font-semibold sm:text-5xl text-3xl text-white">
+              Connect with Us!
+            </h2>
+            <button className="bg-white drop-shadow-xl text-[#FF8900] rounded-full sm:px-32 px-20 py-4 font-semibold sm:text-xl text-lg">
+              Get Started
+            </button>
           </div>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 }
