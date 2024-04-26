@@ -8,13 +8,12 @@ import lifewhy1small from "../../../public/lifewhy1small.png";
 import lifewhy2small from "../../../public/lifewhy2small.png";
 import lifewhy3small from "../../../public/lifewhy3small.png";
 
-const SliderImage = () => {
-
-    const [currentArticle, setCurrentArticle] = React.useState<number>(1);
-    React.useEffect(() => {
-        const timer = setInterval(() => {
-            setCurrentArticle((prevArticle) => (prevArticle % 3) + 1);
-        }, 2000);
+const Slides = () => {
+  const [currentArticle, setCurrentArticle] = React.useState<number>(1);
+  React.useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentArticle((prevArticle) => (prevArticle % 3) + 1);
+    }, 2000);
 
     return () => clearInterval(timer);
   }, []);
@@ -117,6 +116,7 @@ const SliderImage = () => {
       default:
         return null;
     }
+  };
 
   return (
     <article className="">
@@ -129,5 +129,4 @@ const SliderImage = () => {
   );
 };
 
-}
-export default SliderImage;
+export default Slides;

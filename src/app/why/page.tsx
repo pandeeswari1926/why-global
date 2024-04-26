@@ -43,14 +43,14 @@ import sqaud33 from "../../../public/Rectangle 91.png";
 import sqaud34 from "../../../public/Rectangle 92.png";
 import sqaud35 from "../../../public/Rectangle 93.png";
 import sqaud36 from "../../../public/Rectangle 94.png";
-import SliderImage from "./slider";
 // import banner from "../asset/lifeAtWhy.gif";
 import life1 from "../asset/life.png";
+import Slides from "./Slides";
 
 function Why() {
   return (
     <>
-      {/* <div className="w-full md:h-screen h-[500px]">
+      <div className="w-full md:h-screen h-[500px]">
         <div className=" relative w-full h-full ">
           <div
             style={{
@@ -70,10 +70,10 @@ function Why() {
             </p>
           </div>
         </div>
-      </div> */}
+      </div>
 
       {/* second section */}
-      {/* <div className="grid lg:grid-cols-2 grid-cols-1 lg:h-[500px] h-full bg-gray-200 px-10 p-10 relative">
+      <div className="grid lg:grid-cols-2 grid-cols-1 lg:h-[500px] h-full bg-gray-200 px-10 p-10 relative">
         <div
           style={{
             clipPath: "polygon(76% 84%, 100% 50%, 100% 100%, 0% 100%)",
@@ -114,13 +114,13 @@ function Why() {
           <Image src={process} alt="our work process" className="" />
         </div>
         <div className="polygon"></div>
-      </div> */}
+      </div>
       {/* Third section */}
-      <div>
-        <SliderImage />
+      <div className="h-[80vh]">
+        <Slides/>
       </div>
       {/* Fourth section */}
-      {/* <div className="bg-white shadow-xl">
+      <div className="bg-white shadow-xl">
         <div className="grid lg:grid-cols-9 md:grid-cols-6 sm:grid-cols-5 xs:grid-cols-4 grid-cols-3 mt-5">
           <Image src={sqaud} alt="" />
           <Image src={sqaud1} alt="" />
@@ -162,10 +162,10 @@ function Why() {
         <h1 className="text-center text-[#FF9315] text-2xl font-font p-5">
           #WHYsquad
         </h1>
-      </div> */}
+      </div>
 
       {/* last section */}
-      {/* <div className="bg-gradient-to-t from-[#FF9315] to-[#dcb145] md:p-10 p-5 md:mx-32 mx-5 my-20">
+      <div className="bg-gradient-to-t from-[#FF9315] to-[#dcb145] md:p-10 p-5 md:mx-32 mx-5 my-20">
         <h1 className="text-center text-4xl text-white font-bold">
           Do you have any project to working with?
         </h1>
@@ -174,7 +174,7 @@ function Why() {
             Get Started
           </button>
         </div>
-      </div> */}
+      </div>
     </>
   );
 }
