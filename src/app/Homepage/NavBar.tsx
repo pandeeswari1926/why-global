@@ -18,11 +18,11 @@ const NavBar = () => {
     <>
       <div className='z-20 fixed w-full md:top-7 top-0 '>
         <section className='py-[1%] bg-white flex justify-between px-[8%] pt-4 drop-shadow-xl z-10  w-full top-0'>
-          <Link href='/home'><Image src={logoicon} alt='logo' className='xl:flex lg:hidden object-contain cursor-pointer' /></Link>
-          <Link href='/home'><Image src={logoicon2} alt='logo' className='object-contain w-[5%] hidden  lg:block xl:hidden ' /></Link>
+          <Link href='/Homepage'><Image src={logoicon} alt='logo' className='xl:flex lg:hidden object-contain cursor-pointer' /></Link>
+          <Link href='/Homepage'><Image src={logoicon2} alt='logo' className='object-contain w-[5%] hidden  lg:block xl:hidden ' /></Link>
           <FontAwesomeIcon icon={faBars} className='size-5 my-auto lg:hidden' onClick={handleClick} />
           <ul className='space-x-6 pt-3 lg:flex flex-row hidden cursor-pointer'>
-            <Link href='/about'><li className='hover:text-primarycolor'>Company</li></Link>
+            <Link href='/About'><li className='hover:text-primarycolor'>Company</li></Link>
             <Link href='/services'><li className='hover:text-primarycolor'>Services</li></Link>
             <Link href='solutions'><li className='hover:text-primarycolor'>Solutions</li></Link>
             <Link href='/portfolio'><li className='hover:text-primarycolor'>Portfolio</li></Link>
