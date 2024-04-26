@@ -7,8 +7,8 @@ import plus from '../asset/+.png';
 const World = () => {
     return (
         <>
-            <section className='bg-world bg-cover h-[10%] w-full p-10 md:p-20 flex flex-col text-center text-white grayscale-'>
-                <h1 className='text-lg sm:text-xl md:text-2xl font-bold pb-[10%]'>LET’S TALK ABOUT OUR BUSINESS GROWTH IN<br /> CONSULTING SOLUTION</h1>
+            <section className='bg-world bg-cover h-[10%] w-full p-5 md:p-20 flex flex-col text-center text-white grayscale-'>
+                <h1 className='text-base sm:text-xl md:text-2xl font-bold pb-[8%]'>LET’S TALK ABOUT OUR BUSINESS GROWTH IN<br /> CONSULTING SOLUTION</h1>
                 <section className='grid grid-cols-1 lg:grid-cols-2'>
                     <section className='flex flex-col pt-8 pb-[10%]'>
                         <div className='flex text-center justify-center'>

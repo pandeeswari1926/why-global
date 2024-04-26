@@ -3,6 +3,7 @@ import React from 'react'
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faComputer } from '@fortawesome/free-solid-svg-icons'
+import tick from "../asset/tick.png"
 import "../css/home.css"
 // import video1 from "../asset/WGS VIDEO (1).gif"
 import person from '../asset/ceosir.png'
@@ -13,6 +14,7 @@ import Wgs from './wgs'
 import World from './World';
 import Home from './page1';
 import Client from './client';
+import ce from '../asset/ce.png'
 function Page() {
 
 
@@ -40,51 +42,60 @@ function Page() {
           <h1 className=' md:text-5xl text-3xl absolute md:top-48 top-48 text-white md:right-20 right-3 text-right font-bold'>Powerful Digital Solutions</h1>
           <p className='md:text-5xl text-3xl md:top-36 top-32 md:right-20 right-3 absolute text-white text-right font-bold'>For <span className='text-[#FF9315]' >Millions</span> of Users</p>
         </div>
-        <div className='lg:absolute  relative lg:top-[550px] h-fit'>
-          <div className="flex md:flex-row flex-col items-center gap-6 ">
-            <div className="bg-white outline outline-[#FF9315] relative w-[60%] h-52 lg:w-44 lg:h-36 md:w-[40%]  rounded-3xl drop-shadow-2xl flex justify-center items-center">
-              <FontAwesomeIcon icon={faComputer} className="sm:size-12 size-28 absolute top-5 text-[#FF9315]" />
-              <p className="absolute text-xl md:text-lg text-center bottom-9 lg:bottom-5">Product Engineering</p>
+        <div className='lg:-mt-20 w-full flex lg:flex-row lg:mb-20 mb-5 flex-col justify-center items-center h-fit'>
+          <div className="flex lg:flex-row flex-col w-full lg:w-[50%] justify-center items-center gap-6 ">
+            <div className="bg-white  outline outline-[#FF9315] relative w-[60%] h-52 lg:w-40  lg:h-44 md:w-[40%]  rounded-3xl drop-shadow-lg flex flex-col justify-center gap-3 items-center">
+              <FontAwesomeIcon icon={faComputer} className="sm:size-16 size-24  text-[#FF9315]" />
+              <p className=" text-xl md:text-lg text-center ">Product <br /> Engineering</p>
             </div>
-            <div className="bg-white outline outline-[#FF9315] relative w-[60%] h-52 lg:w-44 lg:h-36 md:w-[40%] rounded-3xl drop-shadow-2xl flex justify-center items-center">
-              <FontAwesomeIcon icon={faComputer} className="sm:size-12 size-28 absolute top-5 text-[#FF9315]" />
-              <p className="absolute text-xl md:text-lg  text-center bottom-9 lg:bottom-5">Business Security</p>
+            <div className="bg-white  outline outline-[#FF9315] relative w-[60%] h-52 lg:w-40  lg:h-44 md:w-[40%]  rounded-3xl drop-shadow-lg flex flex-col justify-center gap-3 items-center">
+              <FontAwesomeIcon icon={faComputer} className="sm:size-16 size-24  text-[#FF9315]" />
+              <p className=" text-xl md:text-lg text-center ">Product <br /> Engineering</p>
             </div>
-            <div className="bg-white outline outline-[#FF9315] relative w-[60%] h-52 lg:w-44 lg:h-36 md:w-[40%]  rounded-3xl drop-shadow-2xl flex justify-center items-center">
-              <FontAwesomeIcon icon={faComputer} className="sm:size-12 size-28 absolute top-5 text-[#FF9315]" />
-              <p className="absolute text-xl md:text-lg  text-center bottom-9 lg:bottom-5">Managed IT
-                Services</p>
+            <div className="bg-white  outline outline-[#FF9315] relative w-[60%] h-52 lg:w-40  lg:h-44 md:w-[40%]  rounded-3xl drop-shadow-lg flex flex-col justify-center gap-3 items-center">
+              <FontAwesomeIcon icon={faComputer} className="sm:size-16 size-24  text-[#FF9315]" />
+              <p className=" text-xl md:text-lg text-center ">Product <br /> Engineering</p>
             </div>
-            <div className='mt-10 md:w-[70%] w-full lg:text-right md:text-left text-center p-3'>
-              <p className='text-justify'>
+           
+            
+          </div>
+          <div className='mt-10 lg:w-[50%] w-full text-center p-3'>
+              <p className=''>
                 Join our team We are looking for talented & driven people to come work with us Available Positions
               </p>
             </div>
-          </div>
         </div>
       </div>
-      <div className='relative w-full h-full bg-cover lg:bg-bgslide md:bg-bgslide bg-no-repeat  md:pt-36'>
+      <div className='relative w-full h-full bg-cover lg:bg-bgslide md:bg-bgslide bg-no-repeat  '>
+        <div className='absolute w-full h-full -z-10'><Image src={ce} alt='' ></Image></div>
         <div className='lg:grid grid grid-cols-1 lg:grid-cols-2 '>
-          <div className='md:w-[400px] w-[95%] md:h-[500px] mx-auto'>
-            <Image src={person} alt="Background Image" className='w-full h-[95%] md:object-cover object-cover' />
+          <div className='md:w-[400px] relative w-[95%] md:h-[500px] mx-auto'>
+            <div className=' absolute lg:top-1/2 lg:-right-20 bottom-0 left-1/2 lg:left-3/4 lg:-translate-x-0  -translate-x-1/2'> <div className='flex flex-col gap-2 bg-white rounded-2xl  drop-shadow-2xl justify-center items-center p-5'>
+              <p className='text-primarycolor font-bold text-2xl sm:text-4xl'>3.5K</p>
+              <p className='sm:text-base text-xs'>Satisfied Client</p>
+            </div>
+            </div>
+           
+            <Image src={person} alt="Background Image" className='sm:w-full w-[90%] h-[90%] mx-auto sm:h-full md:object-cover object-cover' />
           </div>
-          <div className='flex flex-col gap-8 w-[100%] p-10 text-center md:h-[60%]'>
-            <p className='md:text-lg text-3xl text-[#FF9315] font-semibold'>30 Years of experience</p>
-            <h1 className='md:text-2xl text-xl text-pretty text-gray-600 font-semibold w-full'>WE EXECUTE OUR IDEAS FROM THE START TO FINISH</h1>
-            <p className='text-md text-gray-500 w-full text-center'>On the other hand we denounce with righteous indignation hill and dislike men who are so beguiled and demoralized.</p>
-            <div className='grid lg:grid-cols-2 text-sm md:text-lg lg:gap-8 text-gray-500 mx-auto'>
+          <div className='flex flex-col gap-8 w-[100%] lg:p-10 p-5 text-center md:h-[60%]'>
+            <p className='md:text-lg text-xl text-[#FF9315] font-semibold'>30 Years of experience</p>
+            <h1 className='md:text-2xl text-xl text-center lg:text-start text-gray-600 font-semibold w-full'>WE EXECUTE OUR IDEAS FROM THE START TO FINISH</h1>
+            <p className='text-md text-gray-500 w-full text-center lg:text-start'>On the other hand we denounce with righteous indignation hill and dislike men who are so beguiled and demoralized.</p>
+            <div className='flex lg:flex-row flex-col justify-around items-center px-5 text-gray-500 '>
               <div>
-                <div className='flex leading-loose'><FontAwesomeIcon icon={faCheck} className='size-5 text-[#FF9315]' /> <p className='text-xs'> Cost of supplies and equipment</p></div>
-                <div className='flex leading-loose'><FontAwesomeIcon icon={faCheck} className='size-5 text-[#FF9315]' /> <p className='text-xs'> Cost of supplies and equipment</p></div>
-                <div className='flex leading-loose'><FontAwesomeIcon icon={faCheck} className='size-5 text-[#FF9315]' /> <p className='text-xs'> Cost of supplies and equipment</p></div>
+                <div className='flex justify-center items-center leading-loose'><div className=''><Image alt='' src={tick}></Image></div> <p className='text-xs'> Cost of supplies and equipment</p></div>
+                <div className='flex justify-center items-center leading-loose'><div className=''><Image alt='' src={tick}></Image></div> <p className='text-xs'> Cost of supplies and equipment</p></div>
+                <div className='flex justify-center items-center leading-loose'><div className=''><Image alt='' src={tick}></Image></div> <p className='text-xs'> Cost of supplies and equipment</p></div>
+               
               </div>
               <div>
-                <div className='flex leading-loose'><FontAwesomeIcon icon={faCheck} className='size-5 text-[#FF9315]' /> <p className='text-xs'> Cost of supplies and equipment</p></div>
-                <div className='flex leading-loose'><FontAwesomeIcon icon={faCheck} className='size-5 text-[#FF9315]' /> <p className='text-xs'> Cost of supplies and equipment</p></div>
-                <div className='flex leading-loose'><FontAwesomeIcon icon={faCheck} className='size-5 text-[#FF9315]' /> <p className='text-xs'> Cost of supplies and equipment</p></div>
+              <div className='flex justify-center items-center leading-loose'><div className=''><Image alt='' src={tick}></Image></div> <p className='text-xs'> Cost of supplies and equipment</p></div>
+                <div className='flex justify-center items-center leading-loose'><div className=''><Image alt='' src={tick}></Image></div> <p className='text-xs'> Cost of supplies and equipment</p></div>
+                <div className='flex justify-center items-center leading-loose'><div className=''><Image alt='' src={tick}></Image></div> <p className='text-xs'> Cost of supplies and equipment</p></div>
               </div>
             </div>
-            <p className='md:text-md text-sm text-justify lg:text-center'>Proin gravida nibh vel velit auctor aliquet aenean sollicitudin lorem quis bibend um auctor nisi elit consequat ipsum.On the other hand we denounce with righteous indignation hill and dislike men who are so beguiled</p>
+            <p className='md:text-md text-sm text-justify lg:text-start'>Proin gravida nibh vel velit auctor aliquet aenean sollicitudin lorem quis bibend um auctor nisi elit consequat ipsum.On the other hand we denounce with righteous indignation hill and dislike men who are so beguiled</p>
           </div>
         </div>
       </div>

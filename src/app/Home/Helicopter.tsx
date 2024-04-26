@@ -19,7 +19,7 @@ function Helicopter() {
         autoplaySpeed: 1500,
         responsive: [
             {
-                breakpoint: 820,
+                breakpoint: 720,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
@@ -54,14 +54,14 @@ function Helicopter() {
             <div className='bg-custom w-full h-full bg-no-repeat relative lg:p-10'>
                 <div className='relative z-10'>
                     <div className='w-full h-full lg:h-[400px] relative mx-auto bg-white right-0 z-10'>
-                        <div className='pt-6 pl-10'>
-                            <h1 className='text-2xl text-primarycolor font-semibold text-center'>Our Clients Review</h1>
-                            <h1 className='text-2xl text-gray-600 font-semibold text-center'>Our Clients Testimonials About</h1>
+                        <div className='pt-6 lg:text-start text-center lg:pl-10'>
+                            <h1 className='lg:text-2xl text-xl text-primarycolor font-semibold text-center'>Our Clients Review</h1>
+                            <h1 className='lg:text-2xl text-lg text-gray-600 font-semibold text-center'>Our Clients Testimonials About</h1>
                         </div>
                         <div className='flex lg:flex-row flex-col gap-10 p-5'>
                             <Slider {...settings} className='overflow-hidden'>
                                 <div>
-                                    <div className='flex justify-center lg:flex-row flex-col w-[90%] relative mx-auto  pt-8'>
+                                    <div className='flex gap-2 justify-center lg:flex-row flex-col w-[90%] relative mx-auto  pt-8'>
                                         <div className='lg:w-[80%] w-full relative'>
                                             <Image src={style2} alt="style2" className="lg:w-[80%] w-full" />
                                             <Image src={profile1} alt="Profile1" className="lg:w-[70%] w-full top-2 absolute" />
@@ -75,7 +75,7 @@ function Helicopter() {
                                                     <p className='text-center'>MARK</p>
                                                     <p className=' text-center text-[#FF8900]'>CEO</p>
                                                 </div>
-                                                <div className='justify-center items-center pl-[10%] md:pl-0 md:w-[30%] mx-auto'>
+                                                <div className='justify-center items-center  md:pl-0 md:w-[30%] mx-auto'>
                                                     <Image src={star} alt='' className=' md:mt-5' />
                                                 </div>
                                             </div>
@@ -83,7 +83,7 @@ function Helicopter() {
                                     </div>
                                 </div>
                                 <div>
-                                    <div className='flex justify-center lg:flex-row flex-col w-[90%] relative mx-auto  pt-8'>
+                                    <div className='flex gap-2 justify-center lg:flex-row flex-col w-[90%] relative mx-auto  pt-8'>
                                         <div className='lg:w-[80%] w-full relative'>
                                             <Image src={style2} alt="style2" className="lg:w-[80%] w-full" />
                                             <Image src={profile1} alt="Profile1" className="lg:w-[70%] w-full top-2 absolute" />
@@ -97,7 +97,7 @@ function Helicopter() {
                                                     <p className='text-center'>MARK</p>
                                                     <p className=' text-center text-[#FF8900]'>CEO</p>
                                                 </div>
-                                                <div className='justify-center items-center pl-[10%] md:pl-0 md:w-[30%] mx-auto'>
+                                                <div className='justify-center items-center  md:pl-0 md:w-[30%] mx-auto'>
                                                     <Image src={star} alt='' className=' md:mt-5' />
                                                 </div>
                                             </div>
@@ -106,7 +106,7 @@ function Helicopter() {
                                     </div>
                                 </div>
                                 <div>
-                                    <div className='flex justify-center lg:flex-row flex-col w-[90%] relative mx-auto  pt-8'>
+                                    <div className='flex gap-2 justify-center lg:flex-row flex-col w-[90%] relative mx-auto  pt-8'>
                                         <div className='lg:w-[80%] w-full relative'>
                                             <Image src={style2} alt="style2" className="lg:w-[80%] w-full" />
                                             <Image src={profile1} alt="Profile1" className="lg:w-[70%] w-full top-2 absolute" />
@@ -120,7 +120,7 @@ function Helicopter() {
                                                     <p className='text-center'>MARK</p>
                                                     <p className=' text-center text-[#FF8900]'>CEO</p>
                                                 </div>
-                                                <div className='justify-center items-center pl-[10%] md:pl-0 md:w-[30%] mx-auto'>
+                                                <div className='justify-center items-center  md:pl-0 md:w-[30%] mx-auto'>
                                                     <Image src={star} alt='' className=' md:mt-5' />
                                                 </div>
                                             </div>
@@ -145,24 +145,24 @@ function Helicopter() {
                         <p className='lg:text-2xl md:text-2xl text-2xl pt-5 text-primarycolor text-center'>Technology</p>
                         <p className='lg:text-3xl md:text-4xl text-3xl  font-semibold text-center'>We Work With</p>
                     </div>
-                    <div className='w-full h-full md:flex lg:flex-row flex-col'>
+                    <div className='w-full h-full flex lg:flex-row flex-col'>
                         <div className='w-full md:h-full h-[50%]'>
                             <Image src={heli} alt='Helicopter' className='h-full' ></Image>
                         </div>
                         <div className='w-full relative flex flex-col md:gap-7 lg:pt-20'>
-                            <ul className='w-full  flex flex-row justify-around   md:justify-evenly md:text-lg text-sm'>
+                            <ul className='w-full  flex flex-row justify-around  px-2 md:px-0  md:justify-evenly md:text-lg text-sm'>
                                 {listItems.map((item, index) => <li key={index} className='cursor-pointer font-semibold text-xs md:text-lg' style={clickindex === index ? { color: "#FF9315" } : { color: "black" }} onClick={(e) => handleclick(index, e)}>{item}</li>)}
                             </ul>
                             <div className='lg:p-5'>
-                                {Content === "Frontend" && (<p className='md:text-lg  text-justify text-xs p-5 md:text-left mx-auto w-full'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesettingthe 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>)
+                                {Content === "Frontend" && (<p className='md:text-lg  text-justify text-xs p-5  mx-auto w-full'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesettingthe 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>)
                                 }
-                                {Content === "Backend" && (<p className='md:text-lg  text-justify text-xs p-5 md:text-left mx-auto w-full'>1Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesettingthe 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>)
+                                {Content === "Backend" && (<p className='md:text-lg  text-justify text-xs p-5  mx-auto w-full'>1Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesettingthe 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>)
                                 }
-                                {Content === "Mobile" && (<p className='md:text-lg  text-justify text-xs p-5 md:text-left mx-auto w-full'>2Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesettingthe 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>)
+                                {Content === "Mobile" && (<p className='md:text-lg  text-justify text-xs p-5  mx-auto w-full'>2Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesettingthe 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>)
                                 }
-                                {Content === "Database" && (<p className='md:text-lg  text-justify text-xs p-5 md:text-left mx-auto w-full'>3Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesettingthe 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>)
+                                {Content === "Database" && (<p className='md:text-lg  text-justify text-xs p-5  mx-auto w-full'>3Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesettingthe 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>)
                                 }
-                                {Content === "CMS" && (<p className='md:text-lg  text-justify text-xs p-5 md:text-left mx-auto w-full'>4Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesettingthe 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>)
+                                {Content === "CMS" && (<p className='md:text-lg  text-justify text-xs p-5  mx-auto w-full'>4Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesettingthe 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>)
                                 }
                             </div>
                         </div>

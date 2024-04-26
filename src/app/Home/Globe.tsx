@@ -5,10 +5,10 @@ import Image from 'next/image'
 function Globe() {
   return (
     <>
-      <div>
-        <div className='p-10 flex flex-col  gap-7'>
+      <div className='w-full'>
+        <div className='lg:p-10 p-5 lg:text-start text-center flex flex-col  gap-4 lg:gap-7'>
           <p className='text-2xl text-primarycolor font-semibold'>OUR SERVICES</p>
-          <h1 className="font-bold text-2xl lg:text-4xl text-left lg:w-[50%] w-full">WE PROVIDE BEST SOLUTIONS FOR PREPARING YOUR SUCCESS</h1>
+          <h1 className="font-semibold text-sm sm:text-xl lg:text-2xl lg:text-left text-center lg:w-[60%] w-full">WE PROVIDE BEST SOLUTIONS FOR PREPARING YOUR SUCCESS</h1>
         </div>
       </div>
       <div className='w-[50%] h-[550px] flex-col items-center justify-center lg:block hidden gl'>

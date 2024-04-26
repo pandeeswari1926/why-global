@@ -15,29 +15,29 @@ import map from '../../../public/map.png';
 
 function Client() {
     return (
-        <>
-            <h1 className='font-bold text-2xl text-[#FF8900] p-10'>OUR CLIENTS</h1>
-            <main className='grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 lg:gap-10 gap-5 sm:px-10 px-10'>
-                <div className='md:p-10 p-2 mx-auto'>
+        <div className='flex flex-col lg:items-start items-center justify-center gap-5 pt-10'>
+            <h1 className='font-bold text-xl lg:text-2xl text-[#FF8900] lg:px-10 '>OUR CLIENTS</h1>
+            <main className='grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 grid-cols-1  lg:gap-10 gap-5 px-10'>
+                <div className='flex flex-col gap-2'>
                     <div className='p-2 grid sm:grid-cols-2 grid-cols-2 gap-10' >
-                        <Image src={logo} alt='' className='md:pt-3 bg-white' />
+                        <Image src={logo} alt='' className=' bg-white' />
                         <Image src={riofin} alt='' className='  bg-white md:hidden block' />
                     </div>
-                    <div className='grid grid-cols-2  md:gap-0 gap-10 p-2 lg:mr-44 '>
+                    <div className='grid grid-cols-2  md:gap-0 gap-10 p-2 lg:mr-44 lg:justify-items-start  justify-items-center  items-center '>
                         <Image src={riofin} alt='' className='  bg-white md:block hidden' />
                         <Image src={whytap} alt='' className=' bg-white' />
                         <Image src={hrc} alt='' className=' bg-white md:hidden block' />
                     </div>
-                    <div className='grid md:grid-cols-3 grid-cols-2 gap-10 p-2 '>
+                    <div className='grid md:grid-cols-3 grid-cols-2 lg:justify-items-start justify-items-center  items-center gap-10 p-2 '>
                         <Image src={hrc} alt='' className=' bg-white md:block hidden' />
                         <Image src={sennata} alt='' className=' bg-white' />
                         <Image src={ehs} alt='' className=' bg-white' />
                     </div>
-                    <div className='grid md:grid-cols-4 grid-cols-2 gap-10 p-2'>
+                    <div className='grid md:grid-cols-4 grid-cols-2 lg:justify-items-start justify-items-center  items-center gap-10 p-2'>
                         <Image src={five} alt='' className=' bg-white' />
-                        <Image src={w8loss} alt='' className=' bg-white md:pt-5 pt-7' />
-                        <Image src={antimalaries} alt='' className=' bg-white md:pt-7' />
-                        <Image src={abhis} alt='' className=' bg-white md:-mt-0 -mt-4 md:pt-7 ' />
+                        <Image src={w8loss} alt='' className=' bg-white' />
+                        <Image src={antimalaries} alt='' className=' bg-white ' />
+                        <Image src={abhis} alt='' className=' bg-white' />
                     </div>
                 </div>
                 <div className=''>
@@ -45,7 +45,7 @@ function Client() {
                     <hr className='w-[50%] h-1 bg-[#FF8900] mb-10 ml-[50%] md:block hidden' />
                 </div>
             </main >
-        </>
+        </div>
     )
 }
 

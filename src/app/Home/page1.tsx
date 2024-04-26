@@ -6,12 +6,12 @@ import project4 from "../../../public/project4.png";
 
 export default function Home() {
   return (
-    <>
+    <div className="p-5">
       <main className="md:bg-summa md:min-h-96 md:object-cover md:bg-cover md:flex md:flex-col">
-        <h3 className="text-[#FF8900] pt-10 pl-10 font-bold">OUR WORK PROCESS</h3>
-        <h2 className="pl-10 font-medium pt-3 lg:text-2xl">HOW ITINC HELP OF YOUR BUSINESS GROW AND SUCCESSFUL</h2>
-        <div className="grid lg:grid-cols-4 md:grid-cols-4 sm:grid-cols-2 grid-cols-1 lg:gap-0 gap-5 lg:pl-48 sm:px-10  px-10 md:pt-28">
-          <div className="lg:w-[80%] h-full relative drop-shadow-2xl">
+        <h3 className="text-[#FF8900] lg:pt-10 pt-5 lg:pl-10 text-center font-bold">OUR WORK PROCESS</h3>
+        <h2 className="lg:pl-10 text-center font-medium pt-3 text-lg lg:text-2xl">HOW ITINC HELP OF YOUR BUSINESS GROW AND SUCCESSFUL</h2>
+        <div className="grid lg:grid-cols-4 md:grid-cols-4 sm:grid-cols-2 grid-cols-1 lg:gap-0 gap-5 lg:pl-48 sm:px-10   md:pt-28">
+          <div className="lg:w-[80%] w-full h-full relative drop-shadow-2xl">
             <div className="border-2 mt-10 bg-white rounded-ss-3xl">
               <Image src={project} alt="project" />
               <h1 className="xl:font-semibold font-medium xl:p-3 lg:p-1 p-3 ">IT DESIGN PROJECT</h1>
@@ -47,6 +47,6 @@ export default function Home() {
       </main >
       <div>
       </div>
-    </>
+    </div>
   );
 }
