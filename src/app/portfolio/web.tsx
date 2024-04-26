@@ -15,7 +15,7 @@ const Web = () => {
     <>
       <div className="relative  w-full lg:grid lg:grid-cols-2 lg:pr-[20%] py-5">
         <div className=" lg:w-[80%] flex flex-col justify-center items-center ml-3">
-        <h1 className="text-[#FF9315]  font-bold">
+        <h1 className="text-[#FF9315]  font-bold sm:hidden">
               WEB DEVELOPMENT
             </h1>
           <div className="flex flex-row relative  w-fit">
