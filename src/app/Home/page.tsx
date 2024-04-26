@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faComputer } from '@fortawesome/free-solid-svg-icons'
@@ -15,25 +15,36 @@ import World from './World';
 import Home from './page1';
 import Client from './client';
 import ce from '../asset/ce.png'
-// import SanityClient from "../SanityClient"
+import SanityClient from "../SanityClient"
 import comp from "../asset/computer.png"
 
 function Page() {
-
+const [data,setdata]=useState([])
 useEffect(()=>{
   console.log("test");
-// const getdata= async()=>{
+const getdata= async()=>{
  
   
-// await SanityClient.fetch(`*[_type=="Home"]`).then((res)=>{
-//   console.log(res ,"jj")
+await SanityClient.fetch(`*[_type=="Home"]{
+  Banner[]{
+    Gif,
+    title1,
+    title2,
+    card[]{
+      siteIcon,
+      cardTitle
+    }
+  }
+}`).then((res:any)=>{
+  console.log(res[0] ,"jj")
+  setdata(res[0])
   
-// }).catch((err)=>{
-//   console.log(err);
+}).catch((err:any)=>{
+  console.log(err);
   
-// })
-// }
-// getdata()
+})
+}
+getdata()
 },[])
 console.log("ss");
 
@@ -66,7 +77,7 @@ console.log("ss");
           <div className="flex lg:flex-row flex-col w-full lg:w-[50%] justify-center items-center gap-6 ">
             <div className="bg-white  outline outline-[#FF9315] relative w-[60%] h-52 lg:w-40  lg:h-44 md:w-[40%]  rounded-3xl drop-shadow-lg flex flex-col justify-center gap-3 items-center">
               <div className='lg:w-16 w-20 h-20 lg:h-16'><Image src={comp} alt='' className=" w-full h-full object-cover text-[#FF9315]" /></div>
-              <p className=" text-xl md:text-lg text-center ">Product <br /> Engineering</p>
+              <p className=" text-xl md:text-lg text-center ">{}</p>
             </div>
             {/* <div className="bg-white  outline outline-[#FF9315] relative w-[60%] h-52 lg:w-40  lg:h-44 md:w-[40%]  rounded-3xl drop-shadow-lg flex flex-col justify-center gap-3 items-center">
               <FontAwesomeIcon icon={faComputer} className="sm:size-16 size-24  text-[#FF9315]" />
