@@ -26,18 +26,29 @@ const getdata= async()=>{
  
   
 await SanityClient.fetch(`*[_type=="Home"]{
+  SecondSection[]{
+    Photo{
+      asset->{
+        url
+      }
+    }
+  },
   Banner[]{
     Gif,
     title1,
     title2,
     card[]{
-      siteIcon,
+      siteIcon{
+        asset->{
+          url
+        }
+      },
       cardTitle
     }
   }
 }`).then((res:any)=>{
-  console.log(res[0] ,"jj")
-  setdata(res[0])
+  console.log(res ,"jj")
+  setdata(res[0].Banner[0])
   
 }).catch((err:any)=>{
   console.log(err);
@@ -70,15 +81,19 @@ console.log("ss");
           <div className='absolute bottom-0 left-0 els w-full h-full'>
           </div>
           <div className='absolute right-0 bottom-0 w-full h-full wh'></div>
-          <h1 className=' md:text-5xl text-3xl absolute md:top-48 top-48 text-black md:right-20 right-3 text-right font-bold'>Powerful Digital Solutions</h1>
-          <p className='md:text-5xl text-3xl md:top-36 top-32 md:right-20 right-3 absolute text-black text-right font-bold'>For <span className='text-[#FF9315]' >Millions</span> of Users</p>
+          <h1 className=' md:text-5xl text-3xl absolute md:top-48 top-48 text-black md:right-20 right-3 text-right font-bold'>{data && data.title2}</h1>
+          <p className='md:text-5xl text-3xl md:top-36 top-32 md:right-20 right-3 absolute text-black text-right font-bold'><span className='text-[#FF9315]' >{data && data.title1}</span></p>
         </div>
         <div className='lg:-mt-20 w-full flex lg:flex-row lg:mb-20 mb-5 flex-col justify-center items-center h-fit'>
+
           <div className="flex lg:flex-row flex-col w-full lg:w-[50%] justify-center items-center gap-6 ">
-            <div className="bg-white  outline outline-[#FF9315] relative w-[60%] h-52 lg:w-40  lg:h-44 md:w-[40%]  rounded-3xl drop-shadow-lg flex flex-col justify-center gap-3 items-center">
-              <div className='lg:w-16 w-20 h-20 lg:h-16'><Image src={comp} alt='' className=" w-full h-full object-cover text-[#FF9315]" /></div>
-              <p className=" text-xl md:text-lg text-center ">{}</p>
-            </div>
+            {data && data?.card && data?.card?.map((items:any,index:any)=>(
+ <div className="bg-white  outline outline-[#FF9315] relative w-[60%] h-52 lg:w-40  lg:h-44 md:w-[40%]  rounded-3xl drop-shadow-lg flex flex-col justify-center gap-3 items-center">
+ <div className='lg:w-16 w-20 h-20 lg:h-16'><Image  alt='' className=" w-24 h-full object-cover text-[#FF9315]" /></div>
+ <p className=" text-xl md:text-lg text-center ">{items && items.cardTitle}</p>
+</div>
+            ))}
+           
             {/* <div className="bg-white  outline outline-[#FF9315] relative w-[60%] h-52 lg:w-40  lg:h-44 md:w-[40%]  rounded-3xl drop-shadow-lg flex flex-col justify-center gap-3 items-center">
               <FontAwesomeIcon icon={faComputer} className="sm:size-16 size-24  text-[#FF9315]" />
               <p className=" text-xl md:text-lg text-center ">Product <br /> Engineering</p>
