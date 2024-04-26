@@ -264,3 +264,38 @@
 }
 
 
+
+.festival{
+    animation: festival 1s  ease-in-out;
+}
+
+.trips{
+    animation: trips 1s  ease-in-out;
+}
+
+.celebrations{
+    animation: celebrations 1s  ease-in-out;
+}
+
+@keyframes festival {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes trips {
+    0% {
+        transform: translateX(-120%)
+    }
+}
+
+@keyframes celebrations {
+    0% {
+        transform: translateX(-120%)
+    }
+}
+
+
