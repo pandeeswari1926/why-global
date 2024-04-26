@@ -32,7 +32,7 @@ const Appdevelopment = () => {
                                     <Image src={ionic} alt='' />
                                     <p className='absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#686868] text-lg font-semibold'>IONIC</p>
                                 </section>
-                                <Image src={appdevbig1} alt='' className='w-72 rounded-xl drop-shadow-xl' />
+                                <Image src={appdevbig1} alt='' className='w-72 rounded-xl drop-shadow-xl p-5 sm:p-0' />
                             </div>
                             <Image src={appdev3} alt='' className='w-40 rounded-xl drop-shadow-xl sm:mt-16 hidden sm:block' />
                             <Image src={appdev2} alt='' className='w-40 rounded-xl drop-shadow-xl sm:mt-16 hidden sm:block' />
@@ -52,7 +52,7 @@ const Appdevelopment = () => {
                         </div>
                         <section className='bg-appbg2 bg-cover flex sm:flex-row flex-col sm:justify-evenly gap-5 sm:gap-0 items-center'>
                             <Image src={appdev1} alt='' className='w-40 rounded-xl drop-shadow-xl sm:mt-16 hidden sm:block' />
-                            <Image src={appdevbig2} alt='' className='w-72 rounded-xl drop-shadow-xl' />
+                            <Image src={appdevbig2} alt='' className='w-72 rounded-xl drop-shadow-xl p-5 sm:p-0' />
                             <Image src={appdev3} alt='' className='w-40 rounded-xl drop-shadow-xl sm:mt-16 hidden sm:block' />
                         </section>
                     </article>
@@ -72,7 +72,7 @@ const Appdevelopment = () => {
                             <section className='bg-appbg3 bg-cover flex sm:flex-row flex-col sm:justify-evenly gap-5 sm:gap-0 items-center'>
                                 <Image src={appdev2} alt='' className='w-36 rounded-xl drop-shadow-xl sm:mt-16 hidden sm:block' />
                                 <Image src={appdev1} alt='' className='w-40 rounded-xl drop-shadow-xl sm:mt-16 hidden sm:block' />
-                                <Image src={appdevbig3} alt='' className='w-72 rounded-xl drop-shadow-xl' />
+                                <Image src={appdevbig3} alt='' className='w-72 rounded-xl drop-shadow-xl p-5 sm:p-0' />
                             </section>
                         </div>
                     </article>
@@ -83,8 +83,8 @@ const Appdevelopment = () => {
     }
 
     return (
-        <article className='bg-gray-100 h-screen'>
-            <h1 className='text-3xl sm:text-5xl text-center bg-gradient-to-b from-[#4d4d4d] bg-clip-text text-transparent to-gray-300 font-semibold py-5'>APP DEVELOPMENT</h1>
+        <article className='bg-gray-100'>
+            <h1 className='text-3xl sm:text-5xl font-bold text-center bg-gradient-to-b from-[#4d4d4d] bg-clip-text text-transparent to-gray-300  py-5'>APP DEVELOPMENT</h1>
             {renderContent(currentArticle)}
         </article>
     )

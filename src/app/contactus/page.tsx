@@ -1,12 +1,16 @@
-import React from 'react'
-import Image from 'next/image'
+import React from "react";
+import Map from "../contactus/Map";
+import Contactform from "./Contactform";
 
 const page = () => {
   return (
-    <div className='bg-getin h-96 w-96'>
-       <div className=''> </div>
+    <div>
+      <div className="">
+        <Contactform />
+        <Map />
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default page;

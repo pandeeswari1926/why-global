@@ -36,7 +36,7 @@ const Page = () => {
             Pellentesque pharetra <br /> arcu at mi maximus, id placerat turpis
             fringilla. scelerisque auctor interdum.{" "}
           </p>
-          <button className="bg-[#FF9315] text-white border-2 border-white font-semibold p-4 px-10 lg:px-16 rounded-full hover:text-[#FF9315] hover:bg-white drop-shadow-2xl text-xl lg:text-2xl ">
+          <button className="bg-[#FF9315] text-white border-2 border-white font-semibold xs2:p-4 p-2 px-5 xs2:px-10 lg:px-16 rounded-full hover:text-[#FF9315] hover:bg-white drop-shadow-2xl text-xl lg:text-2xl ">
             Get started
           </button>
         </div>
@@ -126,15 +126,15 @@ const Page = () => {
       </div>
 
       {/* second section */}
-      <div className=""><Web /></div>
+      <div className="overflow-hidden"><Web /></div>
       {/* third section */}
-      <div className="pb-10"><Appdevelopment /></div>
+      <div className="pb-10 overflow-hidden"><Appdevelopment /></div>
       {/* fourth section */}
-      <div className="py-5"><WebDesign/></div>
+      <div className="py-5 -mt-14 overflow-hidden"><WebDesign/></div>
       {/* fifth section */}
-      <div><DigitalMarketing /></div>
+      <div className=""><DigitalMarketing /></div>
       {/* sixth section */}
-      <div><Iot /></div>
+      <div className="overflow-hidden"><Iot /></div>
     </>
   );
 };
