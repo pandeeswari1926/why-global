@@ -14,10 +14,11 @@ const GridContent = () => {
             className="w-full h-full rounded-xl"
             layout="fill"
             objectFit="cover"
+            alt="image"
           />
           <div className="w-[80%] absolute bottom-8 left-0">
             <div className="relative w-full h-full">
-              <Image src={eventabsolutepic} className="w-full h-full" />
+              <Image src={eventabsolutepic} className="w-full h-full" alt="image"/>
               <h2 className="text-white xs2:text-base text-xs font-bold absolute -translate-x-1/2 -translate-y-1/2 top-1/2 xl:left-[25%]  md:left-[30%] xs2:left-[25%] left-[35%]">
                 VR WORKSHOP
               </h2>
@@ -30,10 +31,11 @@ const GridContent = () => {
             className="w-full h-full rounded-xl"
             layout="fill"
             objectFit="cover"
+            alt="image"
           />
           <div className="w-[80%] absolute bottom-8 left-0">
             <div className="relative w-full h-full">
-              <Image src={eventabsolutepic} className="w-full h-full" />
+              <Image src={eventabsolutepic} className="w-full h-full" alt="image"/>
               <h2 className="text-white xs2:text-base text-xs font-bold absolute -translate-x-1/2 -translate-y-1/2 top-1/2 xl:left-[25%]  md:left-[30%] xs2:left-[25%] left-[35%]">
                 VR WORKSHOP
               </h2>
@@ -46,10 +48,11 @@ const GridContent = () => {
             className="w-full h-full rounded-xl"
             layout="fill"
             objectFit="cover"
+            alt="image"
           />
           <div className="w-[80%] absolute bottom-8 left-0">
             <div className="relative w-full h-full">
-              <Image src={eventabsolutepic} className="w-full h-full" />
+              <Image src={eventabsolutepic} className="w-full h-full" alt="image"/>
               <h2 className="text-white xs2:text-base text-xs font-bold absolute -translate-x-1/2 -translate-y-1/2 top-1/2 xl:left-[25%]  md:left-[30%] xs2:left-[25%] left-[35%]">
                 VR WORKSHOP
               </h2>
@@ -62,10 +65,11 @@ const GridContent = () => {
             className="w-full h-full rounded-xl"
             layout="fill"
             objectFit="cover"
+            alt="image"
           />
           <div className="w-[80%] absolute bottom-8 left-0">
             <div className="relative w-full h-full">
-              <Image src={eventabsolutepic} className="w-full h-full" />
+              <Image src={eventabsolutepic} className="w-full h-full" alt="image"/>
               <h2 className="text-white xs2:text-base text-xs font-bold absolute -translate-x-1/2 -translate-y-1/2 top-1/2 xl:left-[25%]  md:left-[30%] xs2:left-[25%] left-[35%]">
                 VR WORKSHOP
               </h2>
@@ -74,7 +78,7 @@ const GridContent = () => {
         </div>
       </section>
       <section className="w-10% lg:block hidden">
-        <Image src={eventsidebg} className="w-full" />
+        <Image src={eventsidebg} className="w-full" alt="image"/>
       </section>
     </article>
   );

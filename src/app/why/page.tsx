@@ -43,9 +43,9 @@ import sqaud33 from "../../../public/Rectangle 91.png";
 import sqaud34 from "../../../public/Rectangle 92.png";
 import sqaud35 from "../../../public/Rectangle 93.png";
 import sqaud36 from "../../../public/Rectangle 94.png";
-import SliderImage from "./slider";
 // import banner from "../asset/lifeAtWhy.gif";
 import life1 from "../asset/life.png";
+import Slides from "./Slides";
 
 function Why() {
   return (
@@ -61,11 +61,6 @@ function Why() {
           ></div>
           <div className="absolute h-full bg-black bg-opacity-50 w-full"></div>
           <div className="w-full h-full ">
-            {/* <Image
-              src={banner}
-              alt="life at why banner image"
-              className="w-full h-full object-cover"
-            /> */}
           </div>
           <div className="absolute top-5 left-20">
             <Image src={life1} alt="" />
@@ -121,8 +116,8 @@ function Why() {
         <div className="polygon"></div>
       </div>
       {/* Third section */}
-      <div>
-        <SliderImage />
+      <div className="h-[80vh]">
+        <Slides/>
       </div>
       {/* Fourth section */}
       <div className="bg-white shadow-xl">

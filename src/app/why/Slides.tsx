@@ -8,7 +8,7 @@ import lifewhy1small from "../../../public/lifewhy1small.png";
 import lifewhy2small from "../../../public/lifewhy2small.png";
 import lifewhy3small from "../../../public/lifewhy3small.png";
 
-const SliderImage = () => {
+const Slides = () => {
   const [currentArticle, setCurrentArticle] = React.useState<number>(1);
   React.useEffect(() => {
     const timer = setInterval(() => {
@@ -22,15 +22,15 @@ const SliderImage = () => {
       case 1:
         return (
           <article>
-            <section className=" flex sm:flex-row flex-col sm:justify-evenly  items-center ">
-              <div className="relative z-10 key1">
-                <section className="relative  animate1 ">
+            <section className=" flex sm:flex-row flex-col sm:justify-center  items-center overflow-hidden">
+              <div className="relative z-10">
+                <section className="relative festival ">
                   <Image
                     src={lifewhy1big}
                     alt=""
                     className="w-[400px] h-full rounded-xl drop-shadow-xl "
                   />
-                  <h1 className="absolute bottom-20 left-36 text-white text-xl ">
+                  <h1 className="absolute -translate-x-1/2 -translate-y-1/2 left-1/2 bottom-[20%] text-white text-4xl font-bold">
                     Festivels
                   </h1>
                 </section>
@@ -38,12 +38,12 @@ const SliderImage = () => {
               <Image
                 src={lifewhy2small}
                 alt=""
-                className="w-[30%] rounded-xl drop-shadow-xl sm:mt-16"
+                className="w-[30%] rounded-xl drop-shadow-xl sm:mt-16 sm:block hidden"
               />
               <Image
                 src={lifewhy3small}
                 alt=""
-                className="w-[30%] rounded-xl drop-shadow-xl sm:mt-16"
+                className="w-[30%] rounded-xl drop-shadow-xl sm:mt-16 sm:block hidden"
               />
             </section>
           </article>
@@ -51,18 +51,28 @@ const SliderImage = () => {
 
       case 2:
         return (
-          <article className="relative pb-10">
-            <div className="absolute -translate-x-1/2 left-[50%] key2 z-10 ">
+          <article className="relative">
+            <div className="z-10 trips sm:hidden  flex justify-center">
               <Image
                 src={lifewhy2big}
                 alt=""
                 className="w-[400px] h-full rounded-xl drop-shadow-xl"
               />
-              <h1 className="absolute bottom-20 left-44 text-white text-xl ">
+              <h1 className="absolute -translate-x-1/2 -translate-y-1/2 left-1/2 bottom-[20%] text-white text-4xl font-bold">
                 Trips
               </h1>
             </div>
-            <section className="flex sm:flex-row flex-col sm:justify-evenly sm:gap-0 items-center">
+            <div className="absolute -translate-x-1/2 left-[50%]  z-10 trips sm:block hidden">
+              <Image
+                src={lifewhy2big}
+                alt=""
+                className="w-[400px] h-full rounded-xl drop-shadow-xl"
+              />
+              <h1 className="absolute -translate-x-1/2 -translate-y-1/2 left-1/2 bottom-[20%] text-white text-4xl font-bold">
+                Trips
+              </h1>
+            </div>
+            <section className=" sm:flex-row flex-col sm:justify-evenly sm:gap-0 items-center sm:flex hidden">
               <Image
                 src={lifewhy1small}
                 alt=""
@@ -78,30 +88,28 @@ const SliderImage = () => {
         );
       case 3:
         return (
-          <article className="relative pb-20 ">
-            <div className="">
-              <div className="absolute -translate-x-1/2 -right-20 animate3 z-10 key3">
+          <article className="relative">
+            <div className="flex justify-center">
+              <Image
+                src={lifewhy1small}
+                alt=""
+                className="w-[30%] rounded-xl drop-shadow-xl sm:mt-16 sm:block hidden"
+              />
+              <Image
+                src={lifewhy2small}
+                alt=""
+                className="w-[30%] rounded-xl drop-shadow-xl sm:mt-16 sm:block hidden"
+              />
+              <div className="relative z-10 celebrations">
                 <Image
                   src={lifewhy3big}
                   alt=""
                   className="w-[400px] h-fullrounded-xl drop-shadow-xl"
                 />
-                <h1 className="absolute bottom-20 left-36 text-white text-xl ">
+                <h1 className="absolute -translate-x-1/2 -translate-y-1/2 left-1/2 bottom-[20%] text-white text-4xl font-bold">
                   Celebrations
                 </h1>
               </div>
-              <section className="flex sm:flex-row flex-col sm:justify-start sm:gap-0 ml-20 items-center">
-                <Image
-                  src={lifewhy1small}
-                  alt=""
-                  className="w-[30%] rounded-xl drop-shadow-xl sm:mt-16"
-                />
-                <Image
-                  src={lifewhy2small}
-                  alt=""
-                  className="w-[30%] rounded-xl drop-shadow-xl sm:mt-16"
-                />
-              </section>
             </div>
           </article>
         );
@@ -113,9 +121,12 @@ const SliderImage = () => {
   return (
     <article className="">
       <h1 className="text-5xl text-center bg-gradient-to-b from-[#4d4d4d] bg-clip-text text-transparent to-gray-300 font-semibold py-5"></h1>
+      
+      <div className="">
       {renderContent(currentArticle)}
+      </div>
     </article>
   );
 };
 
-export default SliderImage;
+export default Slides;
