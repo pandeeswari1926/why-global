@@ -129,5 +129,5 @@ const SliderImage = () => {
   );
 };
 
-    )
 }
+export default SliderImage;
