@@ -27,7 +27,7 @@ const NavBar = () => {
             <Link href='solutions'><li className='hover:text-primarycolor'>Solutions</li></Link>
             <Link href='/portfolio'><li className='hover:text-primarycolor'>Portfolio</li></Link>
             <Link href='/testimonial'><li className='hover:text-primarycolor'>Testimonials</li></Link>
-            <Link href='/events'><li className='hover:text-primarycolor'>Events</li></Link>
+            <Link href='/Events'><li className='hover:text-primarycolor'>Events</li></Link>
             <Link href='/contactus'><li className='hover:text-primarycolor'>ContactUs</li></Link>
             <button className='p-2 -mt-3 flex items-end mx-10 cursor-pointer bg-white text-primarycolor w-[20%] shadow-2xl rounded-md hover:bg-primarycolor hover:text-white border border-b-4'>
               Get a Quote
@@ -41,7 +41,7 @@ const NavBar = () => {
               <Link href='/services'><li className='bg-primarycolor p-2 text-white hover:bg-white hover:text-primarycolor'>Services</li></Link>
               <Link href='solutions'><li className='bg-primarycolor p-2 text-white hover:bg-white hover:text-primarycolor'>Solutions</li></Link>
               <Link href='/portfolio'><li className='bg-primarycolor p-2 text-white hover:bg-white hover:text-primarycolor'>Portfolio</li></Link>
-              <Link href='/events'><li className='bg-primarycolor p-2 text-white hover:bg-white hover:text-primarycolor'>Events</li></Link>
+              <Link href='/Events'><li className='bg-primarycolor p-2 text-white hover:bg-white hover:text-primarycolor'>Events</li></Link>
               <Link href='#'><li className='bg-primarycolor p-2 text-white hover:bg-white hover:text-primarycolor'>Contact Us</li></Link>
               <Link href='/testimonial'><li className='bg-primarycolor p-2 text-white hover:bg-white hover:text-primarycolor'>Testimonials</li></Link>
               <li className='p-2 mx-auto w-full flex items-end justify-center   cursor-pointer bg-white text-center text-primarycolor  shadow-2xl rounded-md hover:bg-primarycolor hover:text-white border border-b-4'>
