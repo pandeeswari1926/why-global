@@ -135,7 +135,7 @@ function About() {
         </div>
         <div className="w-full h-full bottom-0 tri absolute"></div>
         <div className="w-full h-full bottom-0 left-0 shadow-lg whitetri absolute"></div>
-        <div className="absolute bottom-0 right-0  w-[45%] md:w-[40%] lg:w-[42%] z-10 md:block hidden">
+        <div className="absolute bottom-0 right-0  w-[45%] md:w-[40%] lg:w-[42%] z-10 lg:block hidden">
           <Image alt="" src={hr}></Image>
         </div>
         <div className="absolute md:block hidden lg:top-[30%] md:top-[50%] bottom-[25%] right-0  w-[50%] md:w-[40%] lg:w-[40%]">
