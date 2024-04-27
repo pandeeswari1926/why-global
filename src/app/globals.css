@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+
+*{
+    font-family: "Inter var", sans-serif;
+}
 .image {
     width: 50%;
     height: 50%;

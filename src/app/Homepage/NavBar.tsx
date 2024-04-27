@@ -3,7 +3,7 @@ import Link from 'next/link';
 import React, { useState } from 'react'
 import Image from 'next/image'
 import logoicon from '../asset/logo.png'
-import logoicon2 from '../asset/logo2.png'
+import logoicon2 from '../asset/newlogo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars} from '@fortawesome/free-solid-svg-icons'
 
