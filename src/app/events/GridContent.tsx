@@ -7,7 +7,7 @@ import eventabsolutepic from "../asset/eventabsolutepic.png";
 import eventsidebg from "../asset/Eventsidebg.png";
 import { MdOutlineKeyboardArrowLeft, MdOutlineKeyboardArrowRight } from "react-icons/md";
 
-const itemRender = (_, type, originalElement) => {
+const itemRender = (_:any,type:any, originalElement:any) => {
   if (type === "prev") {
     return <a className="flex items-center gap-1 hover:text-primarycolor"><MdOutlineKeyboardArrowLeft /> Previous </a>;
   }
@@ -76,7 +76,7 @@ const GridContent = () => {
   const indexOfFirstItem = indexOfLastItem - pageSize;
   const currentItems = CurrentItems.slice(indexOfFirstItem, indexOfLastItem);
 
-  const handlePageChange = (page) => {
+  const handlePageChange = (page:any) => {
     setCurrentPage(page);
   };
 

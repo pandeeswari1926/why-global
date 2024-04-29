@@ -21,7 +21,7 @@ const NavBar = () => {
           {/* <Link href='/Homepage'><Image src={logoicon} alt='logo' className=' object-contain cursor-pointer' /></Link> */}
           <Link href='/Homepage'><Image src={logoicon2} alt='logo' className='pt-2 w-48' /></Link>
           <FontAwesomeIcon icon={faBars} className='size-5 my-auto lg:hidden' onClick={handleClick} />
-          <ul className='space-x-6  lg:flex flex-row hidden justify-center items-center cursor-pointer'>
+          <ul className='space-x-4  lg:flex flex-row hidden justify-center items-center cursor-pointer'>
             <Link href='/about'><li className='hover:text-primarycolor'>Company</li></Link>
             <Link href='/services'><li className='hover:text-primarycolor'>Services</li></Link>
             <Link href='solutions'><li className='hover:text-primarycolor'>Solutions</li></Link>

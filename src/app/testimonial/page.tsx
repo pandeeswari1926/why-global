@@ -56,7 +56,7 @@ const Page = () => {
             <Image src={small} alt="" className="w-full" />
             <div className="absolute lg:top-12 lg:left-16 top-5 left-5 space-y-5">
               <p className="sm:text-lg xs:text-base text-xs text-primarycolor font-semibold">At the heart of everything we do,</p>
-              <h1 className=" xs:text-2xl text-xs text-gray-500 font-semibold">See how we've made a difference..</h1>
+              <h1 className=" xs:text-2xl text-xs text-gray-500 font-semibold">See how we&apos;ve made a difference..</h1>
             </div>
           </div>
             <Image src={warn} alt="ceo" className=" -left-32 md:flex hidden bottom-5 absolute" /> 
@@ -72,7 +72,7 @@ const Page = () => {
             <Image src={message} alt="" className="" />
             <div className="absolute lg:top-12 lg:left-16 top-5 left-5 space-y-5">
               <p className="sm:text-lg xs:text-base text-xs text-primarycolor font-semibold">At the heart of everything we do,</p>
-              <h1 className="sm:text-3xl xs:text-lg text-xs text-gray-500 font-semibold">See how we've made a difference..</h1>
+              <h1 className="sm:text-3xl xs:text-lg text-xs text-gray-500 font-semibold">See how we&apos;ve made a difference..</h1>
             </div>
           </div>
         

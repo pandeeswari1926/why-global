@@ -7,15 +7,15 @@ import image3 from "../asset/e-commerce.jpg";
 import image4 from "../asset/crm.jpg";
 import image5 from "../asset/collaborator.jpg";
 import { BsDot } from "react-icons/bs";
-const page = () => {
-  const [showActiveContent, setShowActiveContent] = useState<string>("Popular");
+function Page(){
+  const [showActiveContent, setShowActiveContent] = React.useState("Popular");
   const toggleContent = (content: string) => {
     setShowActiveContent(content);
   };
   const data = [
     {
       image: image1,
-      heading: "Chennai’s Social Media Companies Redefining Strategies",
+      heading: "Chennai's Social Media Companies Redefining Strategies",
       date: "By Admin April 20th 2024",
       content:
         "In the bustling city of Chennai, where innovation meets tradition, the digital landscape is thriving…",
@@ -26,12 +26,12 @@ const page = () => {
       heading: "Digital Marketing Comparison: SEO vs PPC",
       date: "By Admin April 20th 2024",
       content:
-        "Introduction: Understanding the Dynamics of SEO vs PPC In today’s competitive digital landscape, businesses in…",
+        "Introduction: Understanding the Dynamics of SEO vs PPC In today's competitive digital landscape, businesses in…",
       status: "Popular",
     },
     {
       image: image3,
-      heading: "Exploring Career Foundry’s Dynamic UX Design Curriculum",
+      heading: "Exploring Career Foundry's Dynamic UX Design Curriculum",
       date: "By Admin April 20th 2024",
       content:
         "Introduction of UX Design Curriculum Are you ready to delve into the exciting world of…",
@@ -57,7 +57,7 @@ const page = () => {
   const data2 = [
     {
       image: image1,
-      heading: "Chennai’s Social Media Companies Redefining Strategies",
+      heading: "Chennai's Social Media Companies Redefining Strategies",
       date: "By Admin April 20th 2024",
       content:
         "In the bustling city of Chennai, where innovation meets tradition, the digital landscape is thriving…",
@@ -69,13 +69,13 @@ const page = () => {
       heading: "Digital Marketing Comparison: SEO vs PPC",
       date: "By Admin April 20th 2024",
       content:
-        "Introduction: Understanding the Dynamics of SEO vs PPC In today’s competitive digital landscape, businesses in…",
+        "Introduction: Understanding the Dynamics of SEO vs PPC In today's competitive digital landscape, businesses in…",
       status: "Popular",
       category: "Company Achievements",
     },
     {
       image: image3,
-      heading: "Exploring Career Foundry’s Dynamic UX Design Curriculum",
+      heading: "Exploring Career Foundry's Dynamic UX Design Curriculum",
       date: "By Admin April 20th 2024",
       content:
         "Introduction of UX Design Curriculum Are you ready to delve into the exciting world of…",
@@ -101,7 +101,7 @@ const page = () => {
       category: "Tech Updates",
     },
   ];
-  const [filterData, setFilterData] = useState<any>(data2);
+  const [filterData, setFilterData] = useState(data2);
   useEffect(() => {
     const filterDatas = data2.filter(
       (item) => item.status.toLowerCase() === showActiveContent.toLowerCase()
@@ -115,7 +115,7 @@ const page = () => {
         <div className="flex lg:flex-row flex-col-reverse gap-10 w-full ">
           <div className="flex flex-col gap-5 lg:w-[70%] w-full h-full">
             {data.map((item, index) => (
-              <div className="flex flex-col gap-5">
+              <div key={index} className="flex flex-col gap-5">
                 <div className=" flex lg:flex-row flex-col gap-5 justify-between items-center">
                   <div className="sm:w-[50%] sm:h-[250px] w-full h-full">
                     <Image
@@ -165,7 +165,7 @@ const page = () => {
               </div>
               <div className="space-y-3">
                 {filterData.map((item: any, index: any) => (
-                  <div className="flex flex-row gap-3">
+                  <div key={index} className="flex flex-row gap-3">
                     <div className="w-[20%] h-12">
                       <Image src={item.image} alt="" className="w-full h-full" />
                     </div>
@@ -181,7 +181,7 @@ const page = () => {
               <h1 className="font-bold text-lg">Categories</h1>
               <div>
                 {data2.map((item: any, index: any) => (
-                  <div>
+                  <div key={index}>
                     <div className="flex flex-row items-center text-sm">
                       <BsDot className="text-primarycolor size-8" />
                       <p>{item.category}</p>
@@ -200,4 +200,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

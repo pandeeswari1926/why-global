@@ -43,7 +43,7 @@ function Services() {
 <div className=" absolute bottom-0 w-16 lg:flex hidden  z-10"><Image className="w-full h-full" src={side} alt=""></Image></div>
 <div className=" absolute top-10 right-0 rotate-180 w-16 lg:flex hidden  z-10"><Image className="w-full h-full" src={side} alt=""></Image></div>
 
-      <div className="lg:px-32 px-10 z-10 relative py-10 bg-gradient-to-b from-[#f9d5ad] to-transparent">
+      <div className="lg:px-32 px-5 z-10 relative py-10 bg-gradient-to-b from-[#f9d5ad] to-transparent">
         <div
           className="bg-cover xl:h-[500px] lg:h-[400px]  w-full h-full lg:relative"
           style={{
@@ -88,7 +88,7 @@ function Services() {
                 placeholder="Message*"
                 className="p-2 border-2 border-[#FF9315] placeholder:text-black"
               ></textarea>
-              <button className="bg-white text-[#FF9315]  p-2 mx-14 rounded-lg font-semibold hover:bg-[#FF9315] hover:text-white">
+              <button className="bg-white text-[#FF9315] w-fit  px-5 mx-auto py-3 rounded-lg font-semibold hover:bg-[#FF9315] hover:text-white">
                 Send
               </button>
             </div>
