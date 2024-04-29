@@ -23,9 +23,9 @@ const Page = () => {
     <>
       {/* first section */}
 
-      <div className="bg-portfolio bg-cover bg-no-repeat bg-center pb-32">
-        <div className="flex flex-col justify-center items-center text-center py-5 lg:py-0 lg:h-[86vh] gap-10">
-          <div className="space-y-2">
+      <div className="bg-portfolio bg-cover bg-no-repeat bg-center lg:pb-32 pb-14">
+        <div className="flex flex-col justify-center items-center text-center py-5 lg:py-0 lg:h-[86vh] gap-5 sm:gap-10">
+          <div className="space-y-2 pt-5 lg:pt-0">
             <h1 className="text-white text-xl sm:text-4xl lg:text-7xl font-semibold">
               TAKE YOUR IDEAS TO THE
             </h1>
