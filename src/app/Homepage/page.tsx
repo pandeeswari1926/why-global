@@ -43,6 +43,7 @@ function Page() {
     },
     title1,
     title2,
+    content
     card[]{
       siteIcon{
         asset->{
@@ -99,11 +100,10 @@ function Page() {
                   <Image
                     src={i?.Gif?.asset?.url}
                     width={1920} 
-                    height={800}
+                    height={500}
                     alt="Background Image"
-                    // className="w-full h-[95%] items-center md:object-cover object-cover"
+                    className="w-full h-[95%] items-center md:object-cover object-cover "
                   />
-                  {console.log(item, "pans")}
                 </div>
               ))}
             </div>
