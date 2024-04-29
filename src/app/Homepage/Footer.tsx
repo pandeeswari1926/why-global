@@ -15,7 +15,7 @@ const Footer = () => {
     return (
         <>
             <section className='p-5 sm:p-10 mt-14 bg-black flex justify-center'>
-                <section className='p-5 sm:p-10 -mt-20 bg-white grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 w-[100%] xs:w-[60%] sm:w-[100%] md:w-[100%] justify-center rounded-2xl place-items-center gap-5 sm:gap-10'>
+                <section className='p-5 sm:p-10 -mt-20 bg-white drop-shadow-2xl grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 w-[100%] xs:w-[60%] sm:w-[100%] md:w-[100%] justify-center rounded-2xl place-items-center gap-5 sm:gap-10'>
                     <section className='flex flex-col items-center sm:flex-row space-x-2 '>
                         <Image src={msgicon} alt='mailicon' className='w-5 h-5' />
                         <p className='text-sm sm:text-base'>contact@whyglobalservices.com</p>

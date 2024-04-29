@@ -3,6 +3,7 @@ import project from "../asset/icon.png";
 import project2 from "../asset/icon2.png";
 import project3 from "../../../public/project3.png";
 import project4 from "../../../public/project4.png";
+import { FcEngineering } from "react-icons/fc";
 
 export default function Home() {
   return (

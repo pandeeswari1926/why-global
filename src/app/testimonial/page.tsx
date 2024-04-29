@@ -8,7 +8,7 @@ import message from "../../../public/Vector 86.png";
 import SliderPage from "./slider";
 import Test from "./test";
 import bg from "../asset/testmonialbg.png";
-
+import warn from '../asset/warn.png'
 const Page = () => {
   return (
     <>
@@ -43,12 +43,16 @@ const Page = () => {
                         </div>
                     </div>
                 </div > */}
-        <div className="relative xs:h-screen leawidth:h-[600px] h-[500px]">
+        <div className="relative h-screen">
           <div className="absolute md:-top-7 right-0 lg:w-[80%] w-full xs:h-screen leawidth:h-[650px] h-[500px]">
             <Image src={bg} alt="" className="w-full h-full object-fill" />
           </div>
-          <div className="absolute md:right-5 right-0 xs:bottom-0 bottom-10 ">
-            <Image src={ceo} alt="ceo" />
+          <div className="absolute lg:w-[50%] md:w-[70%] w-full md:right-5 right-0 xs:bottom-0 bottom-10 ">
+            <div className="lg:w-[80%] w-full relative">
+            <Image src={warn} alt="ceo" className=" -left-32 md:flex hidden bottom-5 absolute" /> 
+              <Image src={ceo} alt="ceo" className="w-full" />
+              
+              </div>
             <div className="text-white bg-white bg-opacity-25 absolute bottom-0 md:right-28 w-[80%] p-3 pl-8 rounded-t-xl">
               <h1 className="text-2xl font-semibold">Sathishkumar Kannan</h1>
               <p className="text-sm font-semibold">CEO</p>

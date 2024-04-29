@@ -27,6 +27,7 @@ import ourculture2 from "../asset/Vector 49.png";
 import ourculture3 from "../asset/Vector 50.png";
 import ourculture4 from "../asset/Vector 51.png";
 import ourculture5 from "../asset/Vector 52.png";
+import bg from "../asset/background.png"
 // import Culture from "./Culture";
 import slidegray from "../asset/slidergray.png";
 import ruban from "../asset/ruban (2).png";
@@ -34,6 +35,12 @@ import dha from "../asset/dhanush.png";
 import ram from "../asset/ramya.png";
 import ajin from "../asset/ajin.png";
 import niv from "../asset/nivetha.png";
+import { BsFillBriefcaseFill } from "react-icons/bs";
+import { BsPeopleFill } from "react-icons/bs";
+import { GiPieChart } from "react-icons/gi"
+import { FaLocationDot } from "react-icons/fa6";
+
+import Video from "./Video";
 
 function About() {
   var settings = {
@@ -146,39 +153,43 @@ function About() {
         <div className="relative w-full">
           <div className="flex lg:flex-row flex-col w-full  justify-center items-center gap-6 ">
             <div className="bg-white  outline outline-[#FF9315] relative w-[60%] h-52 lg:w-40  lg:h-44 md:w-[40%]  rounded-3xl drop-shadow-lg flex flex-col justify-center gap-3 items-center">
-              <FontAwesomeIcon
-                icon={faComputer}
-                className="sm:size-16 size-24  text-[#FF9315]"
+              <BsFillBriefcaseFill
+              
+                className="lg:size-12 size-20  text-[#FF9315]"
               />
-              <p className=" text-xl md:text-lg text-center ">
-                Product <br /> Engineering
+              <p className=" text-xl md:text-lg flex flex-col justify-center items-center text-center ">
+                <span className="text-3xl text-gray-400 font-semibold">12+</span>
+                <span className="text-sm lg:w-[80%] text-gray-400">Years of Experience</span>
               </p>
             </div>
             <div className="bg-white  outline outline-[#FF9315] relative w-[60%] h-52 lg:w-40  lg:h-44 md:w-[40%]  rounded-3xl drop-shadow-lg flex flex-col justify-center gap-3 items-center">
-              <FontAwesomeIcon
-                icon={faComputer}
-                className="sm:size-16 size-24  text-[#FF9315]"
+              <FaLocationDot
+              
+                className="lg:size-12 size-20  text-[#FF9315]"
               />
-              <p className=" text-xl md:text-lg text-center ">
-                Product <br /> Engineering
+              <p className=" text-xl md:text-lg flex flex-col justify-center items-center text-center ">
+                <span className="text-3xl text-gray-400 font-semibold">15+</span>
+                <span className="text-sm lg:w-[80%] text-gray-400">Countries</span>
               </p>
             </div>
             <div className="bg-white  outline outline-[#FF9315] relative w-[60%] h-52 lg:w-40  lg:h-44 md:w-[40%]  rounded-3xl drop-shadow-lg flex flex-col justify-center gap-3 items-center">
-              <FontAwesomeIcon
-                icon={faComputer}
-                className="sm:size-16 size-24  text-[#FF9315]"
+              <GiPieChart
+              
+                className="lg:size-12 size-20  text-[#FF9315]"
               />
-              <p className=" text-xl md:text-lg text-center ">
-                Product <br /> Engineering
+              <p className=" text-xl md:text-lg flex flex-col justify-center items-center text-center ">
+                <span className="text-3xl text-gray-400 font-semibold">30+</span>
+                <span className="text-sm lg:w-[80%] text-gray-400">Sectors</span>
               </p>
             </div>
             <div className="bg-white  outline outline-[#FF9315] relative w-[60%] h-52 lg:w-40  lg:h-44 md:w-[40%]  rounded-3xl drop-shadow-lg flex flex-col justify-center gap-3 items-center">
-              <FontAwesomeIcon
-                icon={faComputer}
-                className="sm:size-16 size-24  text-[#FF9315]"
+              <BsPeopleFill
+              
+                className="lg:size-12 size-20  text-[#FF9315]"
               />
-              <p className=" text-xl md:text-lg text-center ">
-                Product <br /> Engineering
+              <p className=" text-xl md:text-lg flex flex-col justify-center items-center text-center ">
+                <span className="text-3xl text-gray-400 font-semibold">150+</span>
+                <span className="text-sm lg:w-[80%] text-gray-400">Employees</span>
               </p>
             </div>
           </div>
@@ -187,16 +198,16 @@ function About() {
 
       <div className="w-full h-fit relative bg-no-repeat ">
         <div className="w-full h-full absolute lg:-top-16 -top-7 left-0 -z-10">
-          <Image src={slidegray} alt=""></Image>
+          <Image src={slidegray} className="w-full h-full" alt=""></Image>
         </div>
-        <div className="flex md:flex-row flex-col items-center justify-around">
+        <div className="flex lg:flex-row flex-col items-center justify-around">
           <div
-            className=" md:w-[50%] w-full
+            className=" lg:w-[50%] w-full
        md:p-10"
           >
-            <Image src={Certificate} alt=""></Image>
+            <Image src={Certificate} className="w-full h-full" alt=""></Image>
           </div>
-          <div className="md:w-[50%] w-full md:text-left text-justify p-5 ">
+          <div className="lg:w-[50%] w-full lg:text-left text-justify p-5 ">
             <p className="md:text-xl text-2xl font-semibold text-primarycolor text-center md:text-left">
               INTRODUCING WHY GLOBAL SERVICES
             </p>
@@ -231,14 +242,19 @@ function About() {
           </div>
         </div>
       </div>
-      <main className="md:bg-summa md:min-h-96 md:object-cover md:bg-cover md:flex md:flex-col">
-        <h3 className="text-[#FF8900] pt-10 pl-10 font-bold">
+      <main className="md:bg-summa  relative md:object-cover p-5 md:p-10 md:bg-cover md:flex md:flex-col">
+        <div className="absolute lg:flex hidden top-0 left-0 w-full h-full"><Image src={bg} alt="" /></div>
+        <div>
+
+        <h3 className="text-[#FF8900]   font-bold">
           OUR WORK PROCESS
         </h3>
-        <h2 className="pl-10 font-medium pt-3 lg:text-2xl">
+        <h2 className=" font-medium pt-3 lg:text-2xl">
           HOW ITINC HELP OF YOUR BUSINESS GROW AND SUCCESSFUL
         </h2>
-        <div className="grid lg:grid-cols-3 md:grid-cols-4 sm:grid-cols-2 grid-cols-1 lg:gap-16 gap-5 lg:pl-48 sm:px-10  px-10 md:pt-28">
+        </div>
+     
+        <div className="grid md:grid-cols-3 md:p-10 p-5  grid-cols-1 lg:gap-16 gap-5 h-full w-full items-center  justify-items-center lg:px-20 ">
           <div className="lg:w-[90%] h-full relative drop-shadow-2xl">
             <div className="border-2 mt-10 text-center bg-white rounded-tr-3xl">
               <Image src={arrow} alt="project" className="w-[80%]" />
@@ -286,8 +302,8 @@ function About() {
           </div>
         </div>
       </main>
-
-      <div className="mt-28">
+<Video />
+      <div className="mt-5">
         <div className="flex lg:flex-row flex-col justify-center items-center">
           <div className="lg:w-[20%] w-[90%] sm:w-52 lg:h-64 sm:h-52  bg-gray-400 flex drop-shadow-lg justify-center items-center rounded-full">
             <div className="w-[70%] h-[70%] drop-shadow-lg text-center border-2 border-orange-400 font-semibold content-center text-lg text-orange-500 bg-white rounded-full">
