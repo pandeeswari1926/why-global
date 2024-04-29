@@ -32,7 +32,8 @@ const config: Config = {
       screens: {
         "xs": '431px',
         "xs2": '530px',
-        "leawidth":"320px"
+        "leawidth":"320px",
+        "lastwidth":'350px'
       },
       fontSize: {
         "2xs": '0.7rem',

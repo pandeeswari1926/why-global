@@ -1,5 +1,5 @@
 import React from "react";
-import theatre from '../asset/theatre.gif'
+// import theatre from '../asset/theatre.gif'
 import Image from "next/image";
 import yicon from "../asset/yicon.png"
 function Video(){
@@ -18,7 +18,7 @@ function Video(){
               
             </div>
            <div className="w-full h-full -z-10  absolute top-0">
-               <Image alt="" src={theatre} className="w-full object-cover h-full" ></Image>
+               {/* <Image alt="" src={theatre} className="w-full object-cover h-full" ></Image> */}
             </div>
             <div className="bg-black -z-10   opacity-65 absolute top-0 w-full h-full"></div>
 
