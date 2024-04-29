@@ -46,6 +46,8 @@ import sqaud36 from "../../../public/Rectangle 94.png";
 // import banner from "../asset/lifeAtWhy.gif";
 import life1 from "../asset/life.png";
 import Slides from "./Slides";
+import bgorange1 from "../asset/bgorange1.png";
+
 
 function Why() {
   return (
@@ -165,14 +167,17 @@ function Why() {
       </div>
 
       {/* last section */}
-      <div className="bg-gradient-to-t from-[#FF9315] to-[#dcb145] md:p-10 p-5 md:mx-32 mx-5 my-20">
-        <h1 className="text-center text-4xl text-white font-bold">
-          Do you have any project to working with?
-        </h1>
-        <div className="flex justify-center items-center pt-10">
-          <button className="text-[#FF9315] bg-white rounded-full p-3 px-16 drop-shadow-xl">
-            Get Started
-          </button>
+      <div className="flex flex-col justify-center items-center overflow-hidden py-5">
+        <div className="relative w-full lg:h-[236px] h-[250px]  px-10">
+          <Image src={bgorange1} alt="" className="w-full h-full object-cover" />
+          <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2  text-center space-y-10">
+            <h2 className="font-semibold sm:text-5xl text-3xl text-white">
+            Do you have any project to working with?
+            </h2>
+            <button className="bg-white drop-shadow-xl text-[#FF8900] rounded-full sm:px-32 px-20 py-4 font-semibold sm:text-xl text-lg">
+              Get Started
+            </button>
+          </div>
         </div>
       </div>
     </>

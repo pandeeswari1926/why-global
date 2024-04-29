@@ -4,7 +4,7 @@ import Image from "next/image";
 import solution from "../../../public/solution page.png";
 import sol from "../../../public/istockphoto-180723571-612x612-removebg-preview 1.png";
 import img from "../../../public/unsplash_dBaz0xhCkPY-removebg 1.png";
-import gif from "../../../public/wgs gifs (10) 1.png";
+import gif from "../asset/wgs gifs (10).gif";
 import feature from "../../../public/25.png";
 import feature1 from "../../../public/28.png";
 import feature2 from "../../../public/27.png";
@@ -15,8 +15,8 @@ import benifits from "../../../public/sevice.png";
 import signin from "../../../public/Rectangle 113.png";
 import DashBoard from "../../../public/Rectangle 113 (1).png";
 import Faculty from "../../../public/Rectangle 113 (2).png";
-import rubenvro from "../../../public/rubanbro.jpg";
-import why from '../../../public/why.png'
+import rubenvro from "../asset/rubanbro1.png";
+import why from "../../../public/why.png";
 import bgorange1 from "../asset/bgorange1.png";
 
 function Solutions() {
@@ -92,38 +92,61 @@ function Solutions() {
         </div>
       </div> */}
 
+      <div className="grid w-full h-screen overflow-hidden grid-cols-1 md:grid-cols-2 ">
+        <div className="flex flex-col gap-5 p-5 md:p-20">
+          <p className="uppercase text-sm sm:text-base text-orange-500 font-semibold md:text-left text-center">
+            Learning management system
+          </p>
 
-<div className='grid w-full h-screen overflow-hidden grid-cols-1 md:grid-cols-2 '>
-                <div className='flex flex-col gap-5 p-5 md:p-20'>
-                    <p className='uppercase text-sm sm:text-base text-orange-500 font-semibold md:text-left text-center'>Learning management system</p>
-                    
-                    <div className='uppercase lg:text-3xl sm:text-xl xs:text-lg text-base md:text-left text-center font-semibold space-y-3 text-gray-500'>
-                        <p className="space-y-2">Unlocking KNOWLEDGE,
-                        Empowering learning</p>
-                    </div>
+          <div className="uppercase lg:text-3xl sm:text-xl xs:text-lg text-base md:text-left text-center font-semibold space-y-3 text-gray-500">
+            <p className="space-y-2">
+              Unlocking KNOWLEDGE, Empowering learning
+            </p>
+          </div>
 
-                    <p className='font-light md:text-sm text-sm md:text-left text-center leading-loose text-gray-500'>Welcome to our Learning Management System (LMS) page, where we offer a comprehensive solution designed to transform the way you deliver and manage online learning.</p>
-                </div>
+          <p className="font-light md:text-sm text-sm md:text-left text-center leading-loose text-gray-500">
+            Welcome to our Learning Management System (LMS) page, where we offer
+            a comprehensive solution designed to transform the way you deliver
+            and manage online learning.
+          </p>
+        </div>
 
-                <div className='h-full w-full flex  flex-col justify-center items-center'>
-                    <Image src={rubenvro} alt='ruben vro' className='md:w-full md:h-full rubanbro xs:w-96 object-cover xs:h-80 w-64 h-52 ' />
-                </div>
-            </div >
-            {/* second section */}
-            <div className='grid grid-cols-1 md:grid-cols-2'>
-                <div className='flex flex-col justify-center gap-5 p-5 md:p-10'>
+        <div className="h-full w-full flex flex-col justify-center items-center">
+          <Image
+            src={rubenvro}
+            alt="ruben vro"
+            className="md:w-full md:h-full rubanbro xs:w-96 object-cover xs:h-80 w-64 h-52 "
+          />
+        </div>
+      </div>
+      {/* second section */}
+      <div className="grid grid-cols-1 md:grid-cols-2">
+        <div className="flex flex-col justify-center gap-5 p-5 md:p-10">
+          <h1 className="uppercase text-sm sm:text-base text-orange-500 font-semibold md:text-left text-center">
+            LEARNING MANAGEMENT SYSTEM
+          </h1>
 
-                    <h1 className='uppercase text-sm sm:text-base text-orange-500 font-semibold md:text-left text-center'>LEARNING MANAGEMENT SYSTEM</h1>
+          <h1 className="uppercase lg:text-3xl text-gray-500 sm:text-xl xs:text-lg text-base md:text-left text-center font-bold">
+            ELEVATE YOUR LEARNING JOURNEY WITH OUR CUTTING-EDGE LMS SOLUTION!
+          </h1>
 
-                    <h1 className='uppercase lg:text-3xl text-gray-500 sm:text-xl xs:text-lg text-base md:text-left text-center font-bold'>ELEVATE YOUR LEARNING JOURNEY WITH OUR CUTTING-EDGE LMS SOLUTION!</h1>
-
-                    <p className='font-light text-sm  md:text-left text-center text-gray-500'>An LMS, or Learning Management System, is a comprehensive software platform designed to facilitate online learning and training programs. LMSs offer a wide range of features that support the management, delivery, and tracking of educational content.</p>
-                    <p className='font-light  text-sm md:text-left text-center text-gray-500'>One of the key features of an LMS is course management, which allows administrators to create and organize courses, modules, and lessons. Users can easily access these courses, track their progress, and engage with interactive learning materials.</p>
-                </div>
-                <div className='w-full h-full mx-auto flex justify-center items-center'>
-                    <Image src={gif} alt='' className='mx-auto' />
-                </div>
-            </div>
+          <p className="font-light text-sm  md:text-left text-center text-gray-500">
+            An LMS, or Learning Management System, is a comprehensive software
+            platform designed to facilitate online learning and training
+            programs. LMSs offer a wide range of features that support the
+            management, delivery, and tracking of educational content.
+          </p>
+          <p className="font-light  text-sm md:text-left text-center text-gray-500">
+            One of the key features of an LMS is course management, which allows
+            administrators to create and organize courses, modules, and lessons.
+            Users can easily access these courses, track their progress, and
+            engage with interactive learning materials.
+          </p>
+        </div>
+        <div className="w-full h-full mx-auto flex justify-center items-center">
+          <Image src={gif} alt="" className="mx-auto" />
+        </div>
+      </div>
       {/* third section */}
       <div className="bg-gray-100  lg:py-20 ">
         <div className="mt-10">
@@ -262,7 +285,9 @@ function Solutions() {
       </div>
       {/* fourth section */}
       <div className="text-center relative  w-full overflow-hidden  lg:h-[500px] md:h-[400px] sm:h-72 h-56 ">
-        <div className="w-full h-full absolute top-0 "><Image src={why} className="w-full object-fill h-full" alt="" /></div>
+        <div className="w-full h-full absolute top-0 ">
+          <Image src={why} className="w-full object-fill h-full" alt="" />
+        </div>
         <div className="bg-black opacity-30 absolute w-full h-full top-0"></div>
         <h1 className="lg:text-6xl text-xl text-white font-bold drop-shadow-2xl  xl:pt-32 lg:pt-32 md:pt-20 sm:pt-10 pt-10">
           “WE PROVIDE SOLUTIONS”
@@ -327,9 +352,13 @@ function Solutions() {
         </div>
       </div>
       {/* sixth section */}
-      <div className="flex flex-col justify-center items-center overflow-hidden  py-5">
-        <div className="relative w-[1248px] h-[236px] px-10">
-          <Image src={bgorange1} alt="" className="w-full" />
+      <div className="flex flex-col justify-center items-center overflow-hidden py-5">
+        <div className="relative w-full lg:h-[236px] h-[250px]  px-10">
+          <Image
+            src={bgorange1}
+            alt=""
+            className="w-full h-full object-cover"
+          />
           <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2  text-center space-y-10">
             <h2 className="font-semibold sm:text-5xl text-3xl text-white">
               Connect with Us!
