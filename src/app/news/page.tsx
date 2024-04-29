@@ -110,8 +110,8 @@ const page = () => {
   }, [showActiveContent]);
   return (
     <>
-      <div className="p-10">
-        <h1 className="py-7 font-bold text-xl">NEWS</h1>
+      <div className="xs:p-10 p-7">
+        <h1 className="py-5 font-bold text-4xl xs:mx-0 mx-auto relative flex flex-col w-fit"><span>NEWS</span><span className="w-full bg-primarycolor  h-[2px]"></span></h1>
         <div className="flex lg:flex-row flex-col-reverse gap-10 w-full ">
           <div className="flex flex-col gap-5 lg:w-[70%] w-full h-full">
             {data.map((item, index) => (
