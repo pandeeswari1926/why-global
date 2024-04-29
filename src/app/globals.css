@@ -320,7 +320,7 @@
 }
 
 .ant-pagination .ant-pagination-item-active a {
-    color: black;
+    color: #FF9315;
 }
 .ant-pagination .ant-pagination-item-active a:hover {
     color: #FF9315;
