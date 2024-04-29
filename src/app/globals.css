@@ -325,6 +325,8 @@
 .ant-pagination .ant-pagination-item-active a:hover {
     color: #FF9315;
 }
+
+
 .rubanbro{
     animation: rubanvro 1s ease-in-out;
     transition: all 2s;
