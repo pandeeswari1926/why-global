@@ -3,7 +3,7 @@ import Link from 'next/link';
 import React, { useState } from 'react'
 import Image from 'next/image'
 import logoicon from '../asset/logo.png'
-import logoicon2 from '../asset/newlogo.png'
+import logoicon2 from '../asset/logo-300x70.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars} from '@fortawesome/free-solid-svg-icons'
 
@@ -16,10 +16,10 @@ const NavBar = () => {
   }
   return (
     <>
-      <div className='z-20 fixed w-full  md:top-7 top-0 '>
+      <div className='z-20 fixed w-full md:top-7 top-0 '>
         <section className=' bg-white flex justify-between px-5 items-center p-2   drop-shadow-xl z-10  w-full top-0'>
           {/* <Link href='/Homepage'><Image src={logoicon} alt='logo' className=' object-contain cursor-pointer' /></Link> */}
-          <Link href='/Homepage'><Image src={logoicon2} alt='logo' className='pt-2 ' /></Link>
+          <Link href='/Homepage'><Image src={logoicon2} alt='logo' className='pt-2 w-48' /></Link>
           <FontAwesomeIcon icon={faBars} className='size-5 my-auto lg:hidden' onClick={handleClick} />
           <ul className='space-x-6  lg:flex flex-row hidden justify-center items-center cursor-pointer'>
             <Link href='/about'><li className='hover:text-primarycolor'>Company</li></Link>
