@@ -38,7 +38,7 @@ const Digitalmarketing = () => {
         return (
           <div className="absolute -translate-x-1/2 -translate-y-1/2 xl:top-[42.5%] xl:left-[65%] top-1/2 left-1/2 ">
             <article className="">
-              <article className="flex flex-col justify-center items-center h-screen">
+              <article className="flex flex-col justify-center items-center h-screen ">
                 <article className="relative w-[270px] xs:w-[400px] sm:w-[600px] h-[450px] bg-gray-200 border-t-[40px] border-whytap transition-colors duration-500 ease-in-out   rounded-xl flex flex-col justify-center items-center">
                   <div className="flex flex-col gap-4">
                     <h1 className="font-semibold xs:text-xl text-[#3E3E3E] pl-5 sm:pl-12 xs:pl-9 text-start">

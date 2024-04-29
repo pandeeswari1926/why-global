@@ -18,6 +18,9 @@ import landing from "../../../public/19.png";
 import redesign from "../../../public/20.png";
 import ourService from "../../../public/cat-image.png";
 import serve from "../../../public/wgs slider services (3) 1.png";
+import robo from '../asset/robo.gif'
+import side from '../asset/sides.png'
+import bgorange1 from "../asset/bgorange1.png";
 
 function Services() {
   const bgimages = ["/bgimage1.png", "/bgimage2.png", "/bgimage3.png"];
@@ -35,8 +38,12 @@ function Services() {
   }, []);
 
   return (
-    <>
-      <div className="lg:px-32 px-10 py-10 bg-gradient-to-b from-[#f9d5ad] to-transparent">
+    <div className="">
+<div className="relative h-fit w-full">
+<div className=" absolute bottom-0 w-16 lg:flex hidden  z-10"><Image className="w-full h-full" src={side} alt=""></Image></div>
+<div className=" absolute top-10 right-0 rotate-180 w-16 lg:flex hidden  z-10"><Image className="w-full h-full" src={side} alt=""></Image></div>
+
+      <div className="lg:px-32 px-10 z-10 relative py-10 bg-gradient-to-b from-[#f9d5ad] to-transparent">
         <div
           className="bg-cover xl:h-[500px] lg:h-[400px]  w-full h-full lg:relative"
           style={{
@@ -46,7 +53,7 @@ function Services() {
           }}
         >
           <div className="bg-gradient-to-b from-gray-900 w-full h-[500px] lg:absolute ">
-            <h1 className="text-2xl text-white flex justify-start items-end h-[400px] ml-20 -mb-20 ">
+            <h1 className="text-3xl text-white font-semibold flex justify-start items-end h-[400px] ml-20 -mb-20 ">
               We provide you
               <br />
               what you love.
@@ -89,13 +96,13 @@ function Services() {
         </div>
         <div className="flex justify-end items-end">
           <div className="w-[80%] bg-[#FF9315] p-4">
-            <h1 className="text-black ">400+ happy clients</h1>
+            <h1 className="text-white "><span className="text-2xl font-semibold">400+</span> happy clients</h1>
           </div>
         </div>
       </div>
-
+      </div>
       {/* second section */}
-      <div className="grid lg:grid-cols-2 grid-cols-1 gap-20 p-8 lg:px-28 lg:pt-0 pt-[450px] ">
+      <div className="grid lg:grid-cols-2 grid-cols-1 items-center justify-items-center gap-20 p-8 lg:px-28 lg:pt-0 pt-[500px] ">
         <div className="flex flex-col gap-5">
           <h1 className="text-xl font-medium text-[#FF9315]">About</h1>
           <h1 className="text-3xl font-semibold text-gray-500">
@@ -118,7 +125,7 @@ function Services() {
             resources that encourage a balanced lifestyle.
           </p>
         </div>
-        <Image src={gif} alt="" className=" lg:-mt-10" />
+       <div className="lg:w-full lg:h-full w-[90%] h-[90%]"><Image src={robo} alt="" className="w-full h-full" /></div> 
       </div>
 
       {/* third section */}
@@ -309,19 +316,20 @@ function Services() {
         <Image src={serve} alt="" />
       </div>
       {/* seventh section */}
-      <div className="px-10 lg:p-0">
-        <div className="bg-gradient-to-t from-[#FF9315] to-[#dcb145] p-10 m-5 lg:mx-32 mx-auto ">
-          <h1 className="text-center sm:text-4xl text-2xl text-white font-bold">
-            Ready to Wow Your Audience?
-          </h1>
-          <div className="flex justify-center items-center pt-10">
-            <button className="text-[#ffbd15] bg-white rounded-full p-3 px-16 drop-shadow-xl ">
+      <div className="flex flex-col justify-center items-center overflow-hidden  py-5">
+        <div className="relative w-[1248px] h-[236px] px-10">
+          <Image src={bgorange1} alt="" className="w-full" />
+          <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2  text-center space-y-10">
+            <h2 className="font-semibold sm:text-5xl text-3xl text-white">
+              Connect with Us!
+            </h2>
+            <button className="bg-white drop-shadow-xl text-[#FF8900] rounded-full sm:px-32 px-20 py-4 font-semibold sm:text-xl text-lg">
               Get Started
             </button>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

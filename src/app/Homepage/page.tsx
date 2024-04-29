@@ -17,6 +17,10 @@ import Client from './client';
 import ce from '../asset/ce.png'
 import SanityClient from "../SanityClient"
 import comp from "../asset/computer.png"
+import { FcEngineering } from "react-icons/fc";
+import { RiCustomerService2Fill } from "react-icons/ri";
+import { FaLaptop } from "react-icons/fa";
+
 
 function Page() {
 const [data,setdata]=useState([])
@@ -88,16 +92,18 @@ console.log("ss");
 
           <div className="flex lg:flex-row flex-col w-full lg:w-[50%] justify-center items-center gap-6 ">
           <div className="bg-white  outline outline-[#FF9315] relative w-[60%] h-52 lg:w-40  lg:h-44 md:w-[40%]  rounded-3xl drop-shadow-lg flex flex-col justify-center gap-3 items-center">
-              <FontAwesomeIcon icon={faComputer} className="sm:size-16 size-24  text-[#FF9315]" />
-              <p className=" text-xl md:text-lg text-center ">Product <br /> Engineering</p>
+              <FcEngineering className="sm:size-16 size-24  text-[#FF9315]" />
+              <p className=" text-xl md:text-lg text-center w-[80%] ">Product Engineering</p>
             </div>
             <div className="bg-white  outline outline-[#FF9315] relative w-[60%] h-52 lg:w-40  lg:h-44 md:w-[40%]  rounded-3xl drop-shadow-lg flex flex-col justify-center gap-3 items-center">
-              <FontAwesomeIcon icon={faComputer} className="sm:size-16 size-24  text-[#FF9315]" />
-              <p className=" text-xl md:text-lg text-center ">Product <br /> Engineering</p>
+              <RiCustomerService2Fill className="sm:size-16 size-24  text-[#FF9315]" />
+              <p className=" text-xl md:text-lg text-wrap w-[80%] text-center ">Business
+Security</p>
             </div>
             <div className="bg-white  outline outline-[#FF9315] relative w-[60%] h-52 lg:w-40  lg:h-44 md:w-[40%]  rounded-3xl drop-shadow-lg flex flex-col justify-center gap-3 items-center">
-              <FontAwesomeIcon icon={faComputer} className="sm:size-16 size-24  text-[#FF9315]" />
-              <p className=" text-xl md:text-lg text-center ">Product <br /> Engineering</p>
+              <FaLaptop className="sm:size-16 size-24  text-[#FF9315]" />
+              <p className=" text-xl md:text-lg w-[80%] text-center ">Managed IT
+Services</p>
             </div>
 
            

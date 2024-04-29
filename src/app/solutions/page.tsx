@@ -16,6 +16,8 @@ import signin from "../../../public/Rectangle 113.png";
 import DashBoard from "../../../public/Rectangle 113 (1).png";
 import Faculty from "../../../public/Rectangle 113 (2).png";
 import rubenvro from "../../../public/rubanbro.jpg";
+import why from '../../../public/why.png'
+import bgorange1 from "../asset/bgorange1.png";
 
 function Solutions() {
   const [showActiveContent, setShowActiveContent] = useState("SignIn");
@@ -91,7 +93,7 @@ function Solutions() {
       </div> */}
 
 
-<div className='grid grid-cols-1 md:grid-cols-2 '>
+<div className='grid w-full h-screen overflow-hidden grid-cols-1 md:grid-cols-2 '>
                 <div className='flex flex-col gap-5 p-5 md:p-20'>
                     <p className='uppercase text-sm sm:text-base text-orange-500 font-semibold md:text-left text-center'>Learning management system</p>
                     
@@ -103,8 +105,8 @@ function Solutions() {
                     <p className='font-light md:text-sm text-sm md:text-left text-center leading-loose text-gray-500'>Welcome to our Learning Management System (LMS) page, where we offer a comprehensive solution designed to transform the way you deliver and manage online learning.</p>
                 </div>
 
-                <div className='h-full w-full flex flex-col justify-center items-center'>
-                    <Image src={rubenvro} alt='ruben vro' className='md:w-full md:h-full xs:w-96 xs:h-80 w-64 h-52 ' />
+                <div className='h-full w-full flex  flex-col justify-center items-center'>
+                    <Image src={rubenvro} alt='ruben vro' className='md:w-full md:h-full rubanbro xs:w-96 object-cover xs:h-80 w-64 h-52 ' />
                 </div>
             </div >
             {/* second section */}
@@ -259,15 +261,18 @@ function Solutions() {
         </div>
       </div>
       {/* fourth section */}
-      <div className="bg-why text-center bg-contain bg-no-repeat w-full xl:h-[100vh] lg:h-[600px] md:h-[400px] sm:h-72 h-56 ">
+      <div className="text-center relative  w-full overflow-hidden  lg:h-[500px] md:h-[400px] sm:h-72 h-56 ">
+        <div className="w-full h-full absolute top-0 "><Image src={why} className="w-full object-fill h-full" alt="" /></div>
+        <div className="bg-black opacity-30 absolute w-full h-full top-0"></div>
         <h1 className="lg:text-6xl text-xl text-white font-bold drop-shadow-2xl  xl:pt-32 lg:pt-32 md:pt-20 sm:pt-10 pt-10">
           “WE PROVIDE SOLUTIONS”
         </h1>
       </div>
 
       {/* fifth section */}
-      <div className="relative bg-customer h-[600px] w-full">
-        <div className="lg:w-[600px] md:w-[350px] sm:w-[300px] w-[300px] h-[200px] bg-[#FF9315] top-0 absolute right-0 text-center text-white lg:pt-8 pt-4 lg:text-3xl md:text-base text-xs font-bold sm:p-4 p-1">
+      <div className="relative bg-customer  h-fit  w-full">
+        <div className="bg-gray-100 absolute top-0 w-full h-[70%]"></div>
+        <div className="lg:w-[600px] md:w-[350px]  w-[200px] h-[200px] bg-[#FF9315] top-0 absolute right-0 text-center text-white  lg:text-3xl md:text-base text-xs font-bold sm:p-4 p-3">
           Customer Services
         </div>
 
@@ -305,31 +310,34 @@ function Solutions() {
             </button>
           </div>
           {showActiveContent === "SignIn" && (
-            <div className="bg-white absolute p-10 xl:px-32 rounded-md">
+            <div className="bg-white md:w-[80%] w-full  p-10 xl:px-32 rounded-md">
               <Image src={signin} alt="" className="" />
             </div>
           )}
           {showActiveContent === "DashBoard" && (
-            <div className="bg-white absolute  p-10 xl:px-32 rounded-md ">
+            <div className="bg-white md:w-[80%] w-full  p-10 xl:px-32 rounded-md ">
               <Image src={DashBoard} alt="" className="" />
             </div>
           )}
           {showActiveContent === "Faculty" && (
-            <div className="bg-white absolute  p-10 xl:px-32 rounded-md ">
+            <div className="bg-white md:w-[80%] w-full  p-10 xl:px-32 rounded-md ">
               <Image src={Faculty} alt="" className="" />
             </div>
           )}
         </div>
       </div>
       {/* sixth section */}
-      <div className="p-10 md:px-28 ">
-        <div className="text-white bg-gradient-to-t from-[#FF9315] to-[#dcb145] p-10 text-center rounded-md">
-          <h1 className="md:text-4xl text-lg font-medium drop-shadow-2xl">
-            Contact us today to explore the possibilities!
-          </h1>
-          <button className="text-[#FF9315] bg-white rounded-full md:px-16 px-7 p-2 text-lg mt-10 drop-shadow-2xl">
-            Get started
-          </button>
+      <div className="flex flex-col justify-center items-center overflow-hidden  py-5">
+        <div className="relative w-[1248px] h-[236px] px-10">
+          <Image src={bgorange1} alt="" className="w-full" />
+          <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2  text-center space-y-10">
+            <h2 className="font-semibold sm:text-5xl text-3xl text-white">
+              Connect with Us!
+            </h2>
+            <button className="bg-white drop-shadow-xl text-[#FF8900] rounded-full sm:px-32 px-20 py-4 font-semibold sm:text-xl text-lg">
+              Get Started
+            </button>
+          </div>
         </div>
       </div>
     </>
