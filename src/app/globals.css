@@ -303,3 +303,25 @@
 }
 
 
+
+/* antd */
+
+.ant-pagination .ant-pagination-item-active {
+    font-weight: 600;
+    background-color: #ffffff;
+    border-color: #FF9315;
+}
+
+.ant-pagination .ant-pagination-item-active:hover {
+    font-weight: 600;
+    background-color: #ffffff;
+    border-color: #FF9315;
+   
+}
+
+.ant-pagination .ant-pagination-item-active a {
+    color: black;
+}
+.ant-pagination .ant-pagination-item-active a:hover {
+    color: #FF9315;
+}
