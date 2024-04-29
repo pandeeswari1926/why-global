@@ -308,7 +308,7 @@
     transition: all 2s;
 
 }
-@keyframes rubanvro {
+/* @keyframes rubanvro {
     0% {
         position: absolute;
         width: 100%;
@@ -322,8 +322,24 @@
         width: 50%;
         height: 100%;
         left: 50%;
-   
-     
-       
     }
+} */
+@media screen and (min-width:1200px) {
+    @keyframes rubanvro {
+        0% {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0%;
+            
+           
+        }
+        100% {
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            left: 50%;
+        }
+    }
+
 }
