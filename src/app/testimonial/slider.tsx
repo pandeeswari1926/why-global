@@ -58,10 +58,10 @@ function TestimonalsClient() {
             <Image
               src={arr[loops].image}
               alt=""
-              className="lg:w-[450px] rounded-xl lg:h-[450px] z-40 w-[200px] h-[200px] sm:w-[300px] sm:h-[300px]  bg-no-repeat bg-cover bg-center"
+              className="lg:w-[500px] rounded-xl lg:h-[450px] z-40 w-[250px]  sm:w-[300px]   bg-no-repeat bg-cover bg-center"
             />
-            <div className="absolute top-1/2 bg-white p-3 -right-8 border border-primarycolor rounded-lg">
-                <FaFaceSmileBeam className="size-10 text-primarycolor"/>
+            <div className="absolute top-1/2 bg-white p-3 sm:-right-8 -right-0 border border-primarycolor rounded-lg">
+                <FaFaceSmileBeam className="sm:size-10 size-5 text-primarycolor"/>
             </div>
           </div>
           <div className="lg:bg-primarycolor lg:-mt-0 -mt-4 relative lg:pl-28 pl-0 w-full h-fit lg:h-[300px]">
@@ -73,7 +73,7 @@ function TestimonalsClient() {
               <div className="lg:w-[550px] w-full relative lg:mx-0 mx-auto flex -mt-5 flex-col justify-around gap-3 rounded-lg bg-white drop-shadow-2xl lg:p-10 p-6">
                 <BiSolidQuoteAltLeft
                   size={30}
-                  className=" text-primarycolor lg:hidden hidden leawidth:flex -top-4 left-0 absolute"
+                  className=" text-primarycolor lg:hidden hidden xs:flex -top-4 left-0 absolute"
                 />
                 <div className="w-[2px] absolute bottom-0 lg:hidden flex right-0 h-10 bg-primarycolor"></div>
                 <div className="h-[2px] absolute bottom-0 lg:hidden flex right-0 w-10 bg-primarycolor"></div>
