@@ -28,7 +28,7 @@ const Slides = () => {
                   <Image
                     src={lifewhy1big}
                     alt=""
-                    className="w-[400px] h-full rounded-xl drop-shadow-xl "
+                    className="w-[400px] lg:mt-0 md:-mt-14 sm:mt-0 -mt-14 h-full rounded-xl drop-shadow-xl "
                   />
                   <h1 className="absolute -translate-x-1/2 -translate-y-1/2 left-1/2 bottom-[20%] text-white text-4xl font-bold">
                     Festivels
@@ -52,11 +52,11 @@ const Slides = () => {
       case 2:
         return (
           <article className="relative">
-            <div className="z-10 trips sm:hidden  flex justify-center">
+            <div className="z-10 trips sm:hidden flex justify-center">
               <Image
                 src={lifewhy2big}
                 alt=""
-                className="w-[400px] h-full rounded-xl drop-shadow-xl"
+                className="w-[400px] h-full sm:mt-0 -mt-14 rounded-xl drop-shadow-xl"
               />
               <h1 className="absolute -translate-x-1/2 -translate-y-1/2 left-1/2 bottom-[20%] text-white text-4xl font-bold">
                 Trips
@@ -66,7 +66,7 @@ const Slides = () => {
               <Image
                 src={lifewhy2big}
                 alt=""
-                className="w-[400px] h-full rounded-xl drop-shadow-xl"
+                className="w-[400px] h-full lg:mt-0 md:-mt-14 sm:mt-0 -mt-14 rounded-xl drop-shadow-xl"
               />
               <h1 className="absolute -translate-x-1/2 -translate-y-1/2 left-1/2 bottom-[20%] text-white text-4xl font-bold">
                 Trips
@@ -81,7 +81,8 @@ const Slides = () => {
               <Image
                 src={lifewhy3small}
                 alt=""
-                className="w-[30%] rounded-xl drop-shadow-xl sm:mt-16"
+                className="w-[30%] rounded-
+                xl drop-shadow-xl sm:mt-16"
               />
             </section>
           </article>
@@ -89,7 +90,7 @@ const Slides = () => {
       case 3:
         return (
           <article className="relative">
-            <div className="flex justify-center">
+            <div className="flex justify-center items-center ">
               <Image
                 src={lifewhy1small}
                 alt=""
@@ -104,7 +105,7 @@ const Slides = () => {
                 <Image
                   src={lifewhy3big}
                   alt=""
-                  className="w-[400px] h-fullrounded-xl drop-shadow-xl"
+                  className="w-[400px] h-full lg:mt-0 md:-mt-14 sm:mt-0 -mt-14 rounded-xl drop-shadow-xl"
                 />
                 <h1 className="absolute -translate-x-1/2 -translate-y-1/2 left-1/2 bottom-[20%] text-white text-4xl font-bold">
                   Celebrations

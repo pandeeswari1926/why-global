@@ -127,13 +127,13 @@ function Solutions() {
             ELEVATE YOUR LEARNING JOURNEY WITH OUR CUTTING-EDGE LMS SOLUTION!
           </h1>
 
-          <p className="font-light text-sm  md:text-left text-center text-gray-500">
+          <p className="font-light text-sm  md:text-left text-justify md:px-0 px-5 text-gray-500">
             An LMS, or Learning Management System, is a comprehensive software
             platform designed to facilitate online learning and training
             programs. LMSs offer a wide range of features that support the
             management, delivery, and tracking of educational content.
           </p>
-          <p className="font-light  text-sm md:text-left text-center text-gray-500">
+          <p className="font-light  text-sm md:text-left text-justify md:px-0 px-5 text-gray-500">
             One of the key features of an LMS is course management, which allows
             administrators to create and organize courses, modules, and lessons.
             Users can easily access these courses, track their progress, and
@@ -357,10 +357,10 @@ function Solutions() {
             className="w-full h-full object-cover"
           />
           <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2  text-center space-y-10">
-            <h2 className="font-semibold sm:text-5xl text-3xl text-white">
+            <h2 className="font-semibold sm:text-5xl text-xl text-white">
               Connect with Us!
             </h2>
-            <button className="bg-white drop-shadow-xl text-[#FF8900] rounded-full sm:px-32 px-20 py-4 font-semibold sm:text-xl text-lg">
+            <button className="bg-white drop-shadow-xl text-[#FF8900] rounded-full sm:px-32 xs:px-20 px-5 py-4 font-semibold sm:text-xl text-base">
               Get Started
             </button>
           </div>
