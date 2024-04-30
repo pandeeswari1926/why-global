@@ -240,7 +240,7 @@ function About() {
         </div>
       </div>
       <main className="md:bg-summa  relative md:object-cover p-5 md:p-10 md:bg-cover md:flex md:flex-col">
-        <div className="absolute lg:flex hidden top-0 left-0 w-full h-full"><Image src={bg} alt="" /></div>
+        {/* <div className="absolute lg:flex hidden top-0 left-0 w-full h-full"><Image src={bg} alt="" /></div> */}
         <div>
 
         <h3 className="text-[#FF8900]   font-bold">

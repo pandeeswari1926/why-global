@@ -1,8 +1,7 @@
 "use client";
 import React, { useState } from "react";
-import bgs from "../asset/bgs.png";
+import bgs from "../../../public/bgs.png";
 import Image from "next/image";
-import vrclass from "../asset/vrclass.png";
 import SanityClient from "../SanityClient";
 
 const Heading = () => {
