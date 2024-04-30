@@ -21,7 +21,7 @@ import bgorange1 from "../../../public/bgorange1.png";
 import icon1 from "../../../public/wgs gifs (19).gif";
 import icon2 from "../../../public/wgs gifs (17).gif";
 import icon3 from "../../../public/wgs gifs (20).gif";
-import icon4 from "../../../public/wgs gifs (18).gif";
+import icon4 from "../../../public/wgs-gifs-18--unscreen.gif";
 import bg from "../../../public/background.png"
 // import Culture from "./Culture";
 import slidegray from "../../../public/slidergray.png";
@@ -80,14 +80,14 @@ function About() {
       <div className="w-full h-[900px] md:h-[1200px] lg:h-[550px] xl:h-[650px] lg:bg-contain cover  relative bg-no-repeat">
         <div>
           <div className="lg:absolute top-10 md:pl-16 left-4">
-            <div className="flex flex-col gap-5 w-full md:w-[60%] md:p-0 p-4 pt-20 md:pt-[15%] lg:pt-0 lg:w-[80%] justify-center md:justify-start md:items-start items-center text-justify md:text-start">
-              <p className="text-primarycolor font-semibold md:text-xl text-3xl lg:pt-6">
+            <div className="flex flex-col gap-5 w-full md:w-[60%] md:p-0 p-4 pt-20 md:pt-[15%] lg:pt-0 lg:w-[80%] justify-center md:justify-start md:items-start items-center text-justify md:text-start md:px-0 px-7">
+              <p className="text-primarycolor font-semibold md:text-xl text-3xl lg:pt-6 ">
                 Who We Are
               </p>
               <p className="font-semibold md:text-3xl text-gray-500">
                 Empowering Your Digital Success - WHY Global Services
               </p>
-              <p className="font-semibold text-xs w-[75%]">
+              <p className="font-semibold text-xs md:w-[75%] ">
                 We are an innovative IT company dedicated to transforming
                 businesses through cutting-edge technology solutions. With a
                 team of skilled professionals and a passion for excellence.
@@ -205,11 +205,11 @@ function About() {
             <Image src={Certificate} className="w-full h-full" alt=""></Image>
           </div>
           <div className="lg:w-[50%] w-full lg:text-left text-justify p-5 ">
-            <p className="md:text-xl text-2xl font-semibold text-primarycolor text-center md:text-left">
+            <p className="text-xl  font-semibold text-primarycolor text-center md:text-left">
               INTRODUCING WHY GLOBAL SERVICES
             </p>
             <br></br>
-            <p className="text-3xl font-semibold text-gray-500 text-center md:text-left">
+            <p className="md:text-3xl text-xl font-semibold text-gray-500 text-center md:text-left">
               Unlocking Excellence with ISO Certification!
             </p>
             <br></br>
@@ -478,10 +478,10 @@ function About() {
         <div className="relative w-full lg:h-[236px] h-[250px]  px-10">
           <Image src={bgorange1} alt="" className="w-full h-full object-cover" />
           <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2  text-center space-y-10">
-            <h2 className="font-semibold sm:text-5xl text-3xl text-white">
+            <h2 className="font-semibold sm:text-5xl text-xl text-white">
               Connect with Us!
             </h2>
-            <button className="bg-white drop-shadow-xl text-[#FF8900] rounded-full sm:px-32 px-20 py-4 font-semibold sm:text-xl text-lg">
+            <button className="bg-white drop-shadow-xl text-[#FF8900] rounded-full sm:px-32 xs:px-20 px-10 py-4 font-semibold sm:text-xl text-base">
               Get Started
             </button>
           </div>

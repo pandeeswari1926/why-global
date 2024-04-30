@@ -108,7 +108,7 @@ function Services() {
           <h1 className="text-3xl font-semibold text-gray-500">
             WEB DESIGNING
           </h1>
-          <p className="text-sm text-gray-500">
+          <p className="text-sm lg:text-start text-justify text-gray-500">
             Web designing is the process of creating visually appealing and
             functional websites. It involves a combination of artistic design
             principles and technical skills to create a website that effectively
@@ -261,41 +261,41 @@ function Services() {
           <hr className="h-[3px] bg-[#FF9315]" />
           <p>Here are some of the key services we offer:</p>
           <div className="flex flex-col mx-auto lg:mx-0 gap-3">
-            <div className="flex items-center gap-2">
-              <div className="bg-white p-2 border-2 rounded-full">
+            <div className="flex items-center gap-2 bg-gradient-to-r from-gray-200 to-transparent rounded-l-full">
+              <div className="bg-white p-2 shadow-lg rounded-full">
                 <Image src={custom} alt="" className=" " />
               </div>
-              <h1>Custom Web Design</h1>
-            </div>
-            <div className="flex  items-center gap-2">
-              <div className="bg-white p-2 border-2 rounded-full ">
+              <h1 className="xs:text-base text-sm">Custom Web Design</h1>
+            </div> 
+            <div className="flex  items-center gap-2 bg-gradient-to-r from-gray-200 to-transparent rounded-l-full">
+              <div className="bg-white p-2 shadow-lg rounded-full ">
                 <Image src={ux} alt="" className=" " />
               </div>
-              <h1>UI & UX</h1>
+              <h1 className="xs:text-base text-sm">UI & UX</h1>
             </div>
-            <div className="flex  items-center gap-2">
-              <div className="bg-white p-2 border-2 rounded-full ">
+            <div className="flex  items-center gap-2 bg-gradient-to-r from-gray-200 to-transparent rounded-l-full">
+              <div className="bg-white p-2 shadow-lg rounded-full ">
                 <Image src={cms} alt="" className=" " />
               </div>
-              <h1>CMS Website Design</h1>
+              <h1 className="xs:text-base text-sm">CMS Website Design</h1>
             </div>
-            <div className="flex  items-center gap-2">
-              <div className="bg-white p-2 border-2 rounded-full ">
+            <div className="flex  items-center gap-2 bg-gradient-to-r from-gray-200 to-transparent rounded-l-full">
+              <div className="bg-white p-2 shadow-lg rounded-full ">
                 <Image src={ecommerce} alt="" className=" " />
               </div>
-              <h1>E-commerce Web Design</h1>
+              <h1 className="xs:text-base text-sm">E-commerce Web Design</h1>
             </div>
-            <div className="flex items-center gap-2">
-              <div className="bg-white p-2 border-2 rounded-full ">
+            <div className="flex items-center gap-2 bg-gradient-to-r from-gray-200 to-transparent rounded-l-full">
+              <div className="bg-white p-2 shadow-lg rounded-full ">
                 <Image src={landing} alt="" className=" " />
               </div>
-              <h1>Landing Page Design</h1>
+              <h1 className="xs:text-base text-sm">Landing Page Design</h1>
             </div>
-            <div className="flex items-center gap-2">
-              <div className="bg-white p-2 border-2 rounded-full ">
+            <div className="flex items-center gap-2 bg-gradient-to-r from-gray-200 to-transparent rounded-l-full">
+              <div className="bg-white p-2 shadow-lg rounded-full ">
                 <Image src={redesign} alt="" className=" " />
               </div>
-              <h1>Website Redesign</h1>
+              <h1 className="xs:text-base text-sm">Website Redesign</h1>
             </div>
           </div>
         </div>
