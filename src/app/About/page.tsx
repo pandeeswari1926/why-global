@@ -30,15 +30,17 @@ import ourculture5 from "../asset/Vector 52.png";
 import bg from "../asset/background.png"
 // import Culture from "./Culture";
 import slidegray from "../asset/slidergray.png";
-import ruban from "../asset/ruban (2).png";
-import dha from "../asset/dhanush.png";
-import ram from "../asset/ramya.png";
-import ajin from "../asset/ajin.png";
-import niv from "../asset/nivetha.png";
+import ruban from "../asset/rubanbox.jpg";
+import dha from "../asset/dhanushbox.jpg";
+import ram from "../asset/ramyabox.jpg";
+import ajin from "../asset/sudalaibox.jpg";
+import niv from "../asset/veenabox.jpg";
 import { BsFillBriefcaseFill } from "react-icons/bs";
 import { BsPeopleFill } from "react-icons/bs";
 import { GiPieChart } from "react-icons/gi"
 import { FaLocationDot } from "react-icons/fa6";
+import sides from "../asset/round.png"
+import sides2 from "../asset/round2.png"
 
 import Video from "./Video";
 
@@ -303,36 +305,55 @@ function About() {
         </div>
       </main>
 <Video />
-      <div className="mt-5">
+      <div className="mt-5 relative ">
+<Image src={sides} className="absolute top-0 left-0" alt=""></Image>
+<Image src={sides2} className="absolute -z-10 -top-10  lg:left-1/2 left-3/4 xs:block hidden" alt=""></Image>
         <div className="flex lg:flex-row flex-col justify-center items-center">
-          <div className="lg:w-[20%] w-[90%] sm:w-52 lg:h-64 sm:h-52  bg-gray-400 flex drop-shadow-lg justify-center items-center rounded-full">
+          <div className="lg:w-56 w-52 lg:h-56 h-52  bg-white flex drop-shadow-2xl justify-center items-center rounded-full">
             <div className="w-[70%] h-[70%] drop-shadow-lg text-center border-2 border-orange-400 font-semibold content-center text-lg text-orange-500 bg-white rounded-full">
               OUR CULTURE
             </div>
           </div>
-          <div className="lg:w-[80%] w-full flex justify-center items-center">
-            <div className="w-[70%] flex flex-col gap-2">
-              <div className="w-full flex justify-center items-center">
-                <div>
-                  <Image src={ruban} alt="" />
-                </div>
-                <div>
-                  <Image src={dha} alt="" />
-                </div>
-              </div>
-              <div className="w-full flex justify-center items-center">
-                <div>
-                  <Image src={ram} alt="" />
-                </div>
-                <div>
-                  <Image src={ajin} alt="" />
-                </div>
-              </div>
-            </div>
-            <div className="w-[30%]">
-              <Image src={niv} alt="" />
-            </div>
-          </div>
+        <div className="lg:w-[75%] p-5 lg:p-0 w-full -z-10 -mt-10 lg:mt-0 -ml-0 lg:-ml-8">
+<div className="w-full flex lg:flex-row flex-col gap-2">
+  <div className="lg:w-[70%] w-full flex flex-col gap-2">
+    <div className="w-full gap-2 flex sm:flex-row flex-col">
+      <div className="sm:w-1/2 w-full relative">
+      
+        <Image alt="" src={ruban} className="w-full h-full"></Image>
+        <div className="bg-black absolute top-0 left-0 w-full h-full opacity-50"></div> 
+        <p className="flex flex-col absolute w-full bottom-2 left-1/2 -translate-x-1/2 text-white px-2"><span className="text-center text-primarycolor md:text-lg sm:text-xl text-lg font-semibold">Ethical Responsibility</span><span className="text-center text-sm lg:w-[80%] w-full mx-auto">Ethical responsibility and social impact define our culture.</span></p>
+        </div>
+      <div className="sm:w-1/2 w-full relative"><Image alt="" src={ram} className="w-full h-full">        
+      </Image>
+      <div className="bg-black absolute top-0 left-0 w-full h-full opacity-50"></div>
+      <p className="flex flex-col absolute w-full bottom-2 left-1/2 -translate-x-1/2 text-white px-2"><span className="text-center text-primarycolor md:text-lg sm:text-xl text-lg font-semibold">Employee Empowerment</span><span className="text-center text-sm lg:w-[80%] w-full mx-auto">Ethical responsibility and social impact define our culture.</span></p>
+ 
+           </div>
+    </div>
+    <div className="w-full gap-2 flex sm:flex-row flex-col">
+      <div className="sm:w-1/2 w-full relative"><Image alt="" src={dha} className="w-full h-full"></Image>
+      <div className="bg-black absolute top-0 left-0 w-full h-full opacity-50"></div> 
+      <p className="flex flex-col absolute w-full bottom-2 left-1/2 -translate-x-1/2 text-white px-2"><span className="text-center text-primarycolor md:text-lg sm:text-xl text-lg font-semibold">Ethical Responsibility</span><span className="text-center text-sm lg:w-[80%] w-full mx-auto">Ethical responsibility and social impact define our culture.</span></p>
+
+
+      </div>
+      <div className="sm:w-1/2 w-full relative"><Image alt="" src={ajin} className="w-full h-full"></Image>        <div className="bg-black absolute top-0 left-0 w-full h-full opacity-50"></div> 
+      <p className="flex flex-col absolute w-full bottom-2 left-1/2 -translate-x-1/2 text-white px-2"><span className="text-center text-primarycolor md:text-lg sm:text-xl text-lg font-semibold">Ethical Responsibility</span><span className="text-center text-sm lg:w-[80%] w-full mx-auto">Ethical responsibility and social impact define our culture.</span></p>
+
+</div>
+    </div>
+
+  </div>
+<div className="lg:w-[30%] w-full relative">
+<div className="bg-black absolute top-0 left-0 w-full h-full opacity-50"></div> 
+  <Image src={niv} className="w-full h-full" alt=""></Image>
+  <p className="flex flex-col absolute w-full bottom-2 left-1/2 -translate-x-1/2 text-white px-2"><span className="text-center text-primarycolor md:text-lg sm:text-xl text-lg font-semibold">Ethical Responsibility</span><span className="text-center text-sm lg:w-[90%] w-full mx-auto">WHY Global Services thrives on fearless innovation. Our culture embraces creativity,encourages out-of-the-box thinking.</span></p>
+
+</div>
+</div>
+
+        </div>
         </div>
       </div>
       <div className="p-10">

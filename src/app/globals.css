@@ -328,8 +328,8 @@
 
 
 .rubanbro{
-    animation: rubanvro 1s ease-in-out;
-    transition: all 2s;
+    animation: rubanvro 1.5s ease-in-out;
+    transition: all 3s;
 
 }
 @keyframes rubanvro {
