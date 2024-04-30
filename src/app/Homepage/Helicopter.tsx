@@ -210,7 +210,7 @@ function Helicopter() {
                 className="lg:w-[80%] w-[90%] h-[90%] lg:h-[80%] mx-auto rounded-lg drop-shadow-lg  border-2 border-primarycolor"
               ></Image>
             </div>
-            <div className="lg:w-[50%] relative flex flex-col ">
+            <div className="lg:w-[50%] relative flex h-full flex-col ">
               <ul className="flex flex-row justify-around items-center relative w-full h-14  px-2 md:px-0 bg-gray-200  md:justify-evenly md:text-lg text-sm">
                 <div
                   style={{
@@ -235,7 +235,7 @@ function Helicopter() {
               </ul>
               <div className="lg:p-5">
                 {Content === "Frontend" && (
-                  <div className="p-5 space-y-5">
+                  <div className="p-5 lg:text-start text-center space-y-5">
                     <h1 className="text-xl text-gray-600 font-semibold leading-10">
                       WE EXECUTE OUR IDEAS FROMTHE START TO FINISH
                     </h1>
@@ -264,7 +264,7 @@ function Helicopter() {
                   </div>
                 )}
                 {Content === "Backend" && (
-                  <div className="p-5 space-y-5">
+                  <div className="p-5 lg:text-start text-center space-y-5">
                     <h1 className="text-xl text-gray-600 font-semibold leading-10">
                       WE EXECUTE OUR IDEAS FROMTHE START TO FINISH
                     </h1>
@@ -272,7 +272,7 @@ function Helicopter() {
                       On the other hand we denounce with righteous indignation
                       hill and dislike men who are so beguiled and demoralized.
                     </p>
-                    <div className="flex flex-wrap gap-5 justify-center items-center font-light text-sm">
+                    <div className="grid sm:grid-cols-2 lg:justify-items-start justify-items-center grid-cols-1 gap-5 justify-center items-center font-light text-sm">
                       <p className="flex flex-row items-center">
                         <Image src={tick} alt="" />
                         Cost of supplies and equipment
@@ -293,7 +293,7 @@ function Helicopter() {
                   </div>
                 )}
                 {Content === "Mobile" && (
-                  <div className="p-5 space-y-5">
+                  <div className="p-5 lg:text-start text-center space-y-5">
                     <h1 className="text-xl text-gray-600 font-semibold leading-10">
                       WE EXECUTE OUR IDEAS FROMTHE START TO FINISH
                     </h1>
@@ -301,7 +301,7 @@ function Helicopter() {
                       On the other hand we denounce with righteous indignation
                       hill and dislike men who are so beguiled and demoralized.
                     </p>
-                    <div className="flex flex-wrap gap-5 justify-center items-center font-light text-sm">
+                    <div className="grid sm:grid-cols-2 lg:justify-items-start justify-items-center grid-cols-1 gap-5 justify-center items-center font-light text-sm">
                       <p className="flex flex-row items-center">
                         <Image src={tick} alt="" />
                         Cost of supplies and equipment
@@ -322,7 +322,7 @@ function Helicopter() {
                   </div>
                 )}
                 {Content === "Database" && (
-                  <div className="p-5 space-y-5">
+                  <div className="p-5 lg:text-start text-center space-y-5">
                     <h1 className="text-xl text-gray-600 font-semibold leading-10">
                       WE EXECUTE OUR IDEAS FROMTHE START TO FINISH
                     </h1>
@@ -330,7 +330,7 @@ function Helicopter() {
                       On the other hand we denounce with righteous indignation
                       hill and dislike men who are so beguiled and demoralized.
                     </p>
-                    <div className="flex flex-wrap gap-5 justify-center items-center font-light text-sm">
+                    <div className="grid sm:grid-cols-2 lg:justify-items-start justify-items-center grid-cols-1 gap-5 justify-center items-center font-light text-sm">
                       <p className="flex flex-row items-center">
                         <Image src={tick} alt="" />
                         Cost of supplies and equipment
@@ -351,7 +351,7 @@ function Helicopter() {
                   </div>
                 )}
                 {Content === "CMS" && (
-                  <div className="p-5 space-y-5">
+                  <div className="p-5 lg:text-start text-center space-y-5">
                     <h1 className="text-xl text-gray-600 font-semibold leading-10">
                       WE EXECUTE OUR IDEAS FROMTHE START TO FINISH
                     </h1>
@@ -359,7 +359,7 @@ function Helicopter() {
                       On the other hand we denounce with righteous indignation
                       hill and dislike men who are so beguiled and demoralized.
                     </p>
-                    <div className="flex flex-wrap gap-5 justify-center items-center font-light text-sm">
+                    <div className="grid sm:grid-cols-2 lg:justify-items-start justify-items-center grid-cols-1 gap-5 justify-center items-center font-light text-sm">
                       <p className="flex flex-row items-center">
                         <Image src={tick} alt="" />
                         Cost of supplies and equipment

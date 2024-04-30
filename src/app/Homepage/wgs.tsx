@@ -9,7 +9,7 @@ import Image from "next/image";
 
 const Wgs = () => {
   return (
-    <div className="">
+    <div className="overflow-hidden">
       <div className="flex justify-between sm:flex-row flex-col sm:px-24 py-10">
         <div className="flex flex-col space-y-3 sm:text-start text-center">
           <h2 className="text-[#FF8900] font-semibold md:text-xl text-lg">
@@ -27,8 +27,8 @@ const Wgs = () => {
       </div>
       <section className="flex lg:flex-row flex-col justify-around px-5  items-center pt-10">
         <div className="relative pb-56 sm:pb-40 md:px-10 lg:px-5">
-          <div className="w-80 h-96 relative"><div className="absolute w-full via-slate-300 h-10 bottom-0  bg-gradient-to-b from-transparent to-white"></div><Image src={img1} alt="" className="w-full h-full"  /></div>
-          <div className=" sm:w-80 sm:h-44 w-60 absolute top-72 sm:-ml-8">
+          <div className="sm:w-72 w-[90%] sm:mx-0 mx-auto h-96 relative"><div className="absolute w-full via-slate-300 h-10 bottom-0  bg-gradient-to-b from-transparent to-white"></div><Image src={img1} alt="" className="w-full h-full"  /></div>
+          <div className=" sm:w-72 sm:h-44 w-[80%] absolute top-72 sm:-ml-8">
             <div className="w-full flex flex-col justify-end items-end">
               <p className="bg-[#FF8900] w-fit text-white px-1 py-2 rounded-t-xl text-sm">
                 <FontAwesomeIcon icon={faCalendar} />
@@ -47,8 +47,8 @@ const Wgs = () => {
           </div>
         </div>
         <div className="relative pb-56 sm:pb-40 md:px-10 lg:px-5">
-        <div className="w-80 h-96 relative"><div className="absolute w-full via-slate-300 h-10 bottom-5  bg-gradient-to-b from-transparent to-white"></div><Image src={img2} alt="" className="w-full h-full"  /></div>
-          <div className=" sm:w-80 w-60 h-44 absolute top-72 sm:-ml-8">
+        <div className="sm:w-72 w-[90%] sm:mx-0 mx-auto h-96 relative"><div className="absolute w-full via-slate-300 h-10 bottom-5  bg-gradient-to-b from-transparent to-white"></div><Image src={img2} alt="" className="w-full h-full"  /></div>
+          <div className="sm:w-72 sm:h-44 w-[80%] absolute top-72 sm:-ml-8">
             <div className="w-full flex flex-col justify-end items-end">
               <p className="bg-[#FF8900] w-fit text-white px-1 py-2 rounded-t-xl text-sm">
                 <FontAwesomeIcon icon={faCalendar} />
@@ -67,8 +67,8 @@ const Wgs = () => {
           </div>
         </div>
         <div className="relative pb-56 sm:pb-40 md:px-10 lg:px-5">
-        <div className="w-80 h-96 relative"><div className="absolute w-full via-slate-300 h-10 bottom-5  bg-gradient-to-b from-transparent to-white"></div><Image src={img3} alt="" className="w-full h-full"  /></div>
-          <div className=" sm:w-80 h-44 w-60 absolute top-72 sm:-ml-8">
+        <div className="sm:w-72 w-[90%] sm:mx-0 mx-auto h-96 relative"><div className="absolute w-full via-slate-300 h-10 bottom-5  bg-gradient-to-b from-transparent to-white"></div><Image src={img3} alt="" className="w-full h-full"  /></div>
+          <div className="sm:w-72 sm:h-44 w-[80%] absolute top-72 sm:-ml-8">
             <div className="w-full flex flex-col justify-end items-end">
               <p className="bg-[#FF8900] w-fit text-white px-1 py-2 rounded-t-xl text-sm">
                 <FontAwesomeIcon icon={faCalendar} />
