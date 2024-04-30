@@ -15,7 +15,7 @@ import message1 from "../../../public/message2.png";
 import message2 from "../../../public/Rectangle 129.png";
 import message3 from "../../../public/message5.png";
 import message4 from "../../../public/message4.png";
-import bgorange1 from "../asset/bgorange1.png";
+import bgorange1 from "../../../public/bgorange1.png";
 
 
 const Page = () => {

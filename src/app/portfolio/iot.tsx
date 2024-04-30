@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image';
-import IOTpic from '../asset/IOTpic.png';
+import IOTpic from '../../../public/IOTpic.png';
 
 const Iot = () => {
     return (

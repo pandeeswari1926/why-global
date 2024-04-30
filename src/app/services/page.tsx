@@ -18,9 +18,9 @@ import landing from "../../../public/19.png";
 import redesign from "../../../public/20.png";
 import ourService from "../../../public/cat-image.png";
 import serve from "../../../public/wgs slider services (3) 1.png";
-import robo from '../asset/robo.gif'
-import side from '../asset/sides.png'
-import bgorange1 from "../asset/bgorange1.png";
+import robo from '../../../public/robo.gif'
+import side from '../../../public/sides.png'
+import bgorange1 from "../../../public/bgorange1.png";
 
 function Services() {
   const bgimages = ["/bgimage1.png", "/bgimage2.png", "/bgimage3.png"];

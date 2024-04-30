@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import life from "../../public/life1.png";
 import process from "../../../public/project.png";
 import "swiper/css";
 import "swiper/css/bundle";
@@ -42,11 +41,10 @@ import sqaud32 from "../../../public/Rectangle 90.png";
 import sqaud33 from "../../../public/Rectangle 91.png";
 import sqaud34 from "../../../public/Rectangle 92.png";
 import sqaud35 from "../../../public/Rectangle 93.png";
-import sqaud36 from "../../../public/Rectangle 94.png";
-// import banner from "../asset/lifeAtWhy.gif";
-import life1 from "../asset/life.png";
+// import banner from "../../../public/lifeAtWhy.gif";
+import life1 from "../../../public/life.png";
 import Slides from "./Slides";
-import bgorange1 from "../asset/bgorange1.png";
+import bgorange1 from "../../../public/bgorange1.png";
 
 
 function Why() {
