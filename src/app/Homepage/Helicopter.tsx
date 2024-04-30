@@ -56,7 +56,7 @@ function Helicopter() {
       ></link>
       <div className="bg-custom w-full h-full bg-no-repeat relative lg:p-10">
         <div className="relative z-10">
-          <div className="w-full h-full lg:h-[400px] relative mx-auto bg-white right-0 z-10">
+          <div className="w-full h-full lg:h-[400px] relative mx-auto bg-white right-0 ">
             <div className="pt-6 lg:text-start text-center lg:pl-10">
               <h1 className="lg:text-2xl text-xl text-primarycolor font-semibold text-center">
                 Our Clients Review
@@ -191,29 +191,19 @@ function Helicopter() {
             </div>
           </div>
         </div>
-        <div className="oran bg-primarycolor fixed top-[24%] md:top-[18%] lg:top-[10%] left-0  w-[60%] h-[50%] lg:block hidden">
-          <div className="flex flex-col gap-8 justify-center absolute items-center h-full lg:left-10 lg:top-24">
-            <div className="">
-              <p className="lg:text-2xl md:text-2xl text-lg text-white">
-                Technology
-              </p>
-              <p className="lg:text-5xl md:text-4xl text-xl text-white">
-                We Work With
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="w-full lg:h-fit relative  mx-auto right-0 z-10 mt-[15%] ">
-          <div className="lg:hidden">
-            <p className="lg:text-2xl md:text-2xl text-2xl pt-5 text-primarycolor text-center">
+
+        <div className="w-full lg:h-fit relative  mx-auto right-0  mt-[15%] ">
+          <div className="lg:block hidden oran bg-primarycolor -left-10 -top-[85%] absolute w-[60%]  h-[500px]"></div>
+          <div className="absolute lg:-top-[30%] lg:left-10 xs:-top-[11%] -top-[9%] z-10 left-1/2 -translate-x-1/2 lg:-translate-x-0 ">
+            <p className="lg:text-2xl md:text-2xl xs:text-2xl text-sm pt-5 lg:text-white lg:text-start text-center text-black">
               Technology
             </p>
-            <p className="lg:text-3xl md:text-4xl text-3xl  font-semibold text-center">
+            <p className="lg:text-3xl md:text-4xl xs:text-3xl text-base font-semibold lg:text-start text-center lg:text-white text-primarycolor">
               We Work With
             </p>
           </div>
           <div className="w-full h-full bg-white flex lg:flex-row flex-col gap-5 justify-center rounded-md drop-shadow-lg  relative">
-            <div className="lg:w-[50%] flex justify-center items-center">
+            <div className="lg:w-[50%] flex justify-center pt-5 lg:pt-0 items-center">
               <Image
                 src={heli}
                 alt="Helicopter"
@@ -231,11 +221,11 @@ function Helicopter() {
                 {listItems.map((item, index) => (
                   <li
                     key={index}
-                    className="cursor-pointer font-semibold text-xs md:text-lg"
+                    className="cursor-pointer text-gray-500 text-xs md:text-lg"
                     style={
                       clickindex === index
                         ? { color: "#FF9315" }
-                        : { color: "black" }
+                        : { color: "rgb(107 114 128 /1)" }
                     }
                     onClick={(e) => handleclick(index, e)}
                   >
@@ -253,7 +243,7 @@ function Helicopter() {
                       On the other hand we denounce with righteous indignation
                       hill and dislike men who are so beguiled and demoralized.
                     </p>
-                    <div className="grid grid-cols-2 font-light text-sm space-y-5 justify-items-start">
+                    <div className="flex flex-wrap gap-5 justify-center items-center font-light text-sm">
                       <p className="flex flex-row items-center">
                         <Image src={tick} alt="" />
                         Cost of supplies and equipment
@@ -282,7 +272,7 @@ function Helicopter() {
                       On the other hand we denounce with righteous indignation
                       hill and dislike men who are so beguiled and demoralized.
                     </p>
-                    <div className="grid grid-cols-2 font-light text-sm space-y-5 justify-items-start">
+                    <div className="flex flex-wrap gap-5 justify-center items-center font-light text-sm">
                       <p className="flex flex-row items-center">
                         <Image src={tick} alt="" />
                         Cost of supplies and equipment
@@ -311,7 +301,7 @@ function Helicopter() {
                       On the other hand we denounce with righteous indignation
                       hill and dislike men who are so beguiled and demoralized.
                     </p>
-                    <div className="grid grid-cols-2 font-light text-sm space-y-5 justify-items-start">
+                    <div className="flex flex-wrap gap-5 justify-center items-center font-light text-sm">
                       <p className="flex flex-row items-center">
                         <Image src={tick} alt="" />
                         Cost of supplies and equipment
@@ -340,7 +330,7 @@ function Helicopter() {
                       On the other hand we denounce with righteous indignation
                       hill and dislike men who are so beguiled and demoralized.
                     </p>
-                    <div className="grid grid-cols-2 font-light text-sm space-y-5 justify-items-start">
+                    <div className="flex flex-wrap gap-5 justify-center items-center font-light text-sm">
                       <p className="flex flex-row items-center">
                         <Image src={tick} alt="" />
                         Cost of supplies and equipment
@@ -369,7 +359,7 @@ function Helicopter() {
                       On the other hand we denounce with righteous indignation
                       hill and dislike men who are so beguiled and demoralized.
                     </p>
-                    <div className="grid grid-cols-2 font-light text-sm space-y-5 justify-items-start">
+                    <div className="flex flex-wrap gap-5 justify-center items-center font-light text-sm">
                       <p className="flex flex-row items-center">
                         <Image src={tick} alt="" />
                         Cost of supplies and equipment
