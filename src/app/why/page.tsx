@@ -46,7 +46,6 @@ import life1 from "../../../public/life.png";
 import Slides from "./Slides";
 import bgorange1 from "../../../public/bgorange1.png";
 
-
 function Why() {
   return (
     <>
@@ -60,11 +59,10 @@ function Why() {
             className=" absolute bottom-0 left-0  z-10  w-full h-full"
           ></div>
           <div className="absolute h-full bg-black bg-opacity-50 w-full"></div>
-          <div className="w-full h-full ">
-          </div>
-          <div className="absolute top-5 left-20">
+          <div className="w-full h-full "></div>
+          <div className="absolute top-5 sm:left-20 left-10">
             <Image src={life1} alt="" />
-            <p className="text-white w-[60%] -mt-10 text-sm">
+            <p className="text-white w-[60%] xs:-mt-10 text-sm">
               We place great importance on promoting physical and mental
               well-being.
             </p>
@@ -85,30 +83,32 @@ function Why() {
           <h3 className="text-lg text-[#FF9315] font-bold md:text-left text-center">
             OUR WORK PROCESS
           </h3>
-          <h1 className="text-3xl text-gray-500 leading-relaxed font-semibold md:text-left text-center">
+          <h1 className="text-3xl text-gray-500 leading-10 font-semibold md:text-left text-center ">
             We understand that a healthy employee is a productive and engaged
             one
           </h1>
-          <p className="text-xs xl:w-[85%] w-full font-light md:text-left text-center">
-            We strive to create an environment that nurtures and supports these
-            pillars, ensuring our employees’ overall well-being and
-            satisfaction.
-            <br />
-            <br />
-            In terms of a healthy life, we place great importance on promoting
-            physical and mental well-being. Our comprehensive wellness programs
-            encompass fitness activities, mindfulness sessions, and access to
-            resources that encourage a balanced lifestyle. We understand that a
-            healthy employee is a productive and engaged one, and we provide the
-            necessary tools and support to help our team members prioritize
-            their health.
-            <br />
-            <br />
-            We also recognize the significance of a fulfilling social life. At
-            WHY Global Services, we foster a vibrant and inclusive community
-            where colleagues can connect, collaborate, and build meaningful
-            relationships
-          </p>
+          <div className="space-y-4 text-gray-500">
+            <p className="text-xs xl:w-[85%] w-full font-light md:text-left text-justify md:px-0 xs:px-5">
+              We strive to create an environment that nurtures and supports
+              these pillars, ensuring our employees’ overall well-being and
+              satisfaction.
+            </p>
+            <p className="text-xs xl:w-[85%] w-full font-light md:text-left text-justify md:px-0 xs:px-5">
+              In terms of a healthy life, we place great importance on promoting
+              physical and mental well-being. Our comprehensive wellness
+              programs encompass fitness activities, mindfulness sessions, and
+              access to resources that encourage a balanced lifestyle. We
+              understand that a healthy employee is a productive and engaged
+              one, and we provide the necessary tools and support to help our
+              team members prioritize their health.
+            </p>
+            <p className="text-xs xl:w-[85%] w-full font-light md:text-left text-justify md:px-0 xs:px-5 z-10">
+              We also recognize the significance of a fulfilling social life. At
+              WHY Global Services, we foster a vibrant and inclusive community
+              where colleagues can connect, collaborate, and build meaningful
+              relationships
+            </p>
+          </div>
         </div>
         <div className="w-full h-full z-10 lg:mt-4">
           <Image src={process} alt="our work process" className="" />
@@ -167,10 +167,14 @@ function Why() {
       {/* last section */}
       <div className="flex flex-col justify-center items-center overflow-hidden py-5">
         <div className="relative w-full lg:h-[236px] h-[250px]  px-10">
-          <Image src={bgorange1} alt="" className="w-full h-full object-cover" />
+          <Image
+            src={bgorange1}
+            alt=""
+            className="w-full h-full object-cover"
+          />
           <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2  text-center space-y-10">
-            <h2 className="font-semibold sm:text-5xl text-3xl text-white">
-            Do you have any project to working with?
+            <h2 className="font-semibold sm:text-4xl text-3xl text-white">
+              Do you have any project to working with?
             </h2>
             <button className="bg-white drop-shadow-xl text-[#FF8900] rounded-full sm:px-32 px-20 py-4 font-semibold sm:text-xl text-lg">
               Get Started
