@@ -81,7 +81,8 @@ const Slides = () => {
               <Image
                 src={lifewhy3small}
                 alt=""
-                className="w-[30%] rounded-xl drop-shadow-xl sm:mt-16"
+                className="w-[30%] rounded-
+                xl drop-shadow-xl sm:mt-16"
               />
             </section>
           </article>
