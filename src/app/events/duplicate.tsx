@@ -1,4 +1,3 @@
-"use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { Pagination } from "antd";
@@ -28,18 +27,28 @@ const itemRender = (_: any, type: any, originalElement: any) => {
   return originalElement;
 };
 
+interface EventContent {
+  title: string;
+  Image: { image: { asset: { url: string } } }[];
+}
+
+interface Event {
+  content: EventContent[];
+}
+
 const GridContent1 = () => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<Event[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [pageSize] = useState(4);
-  const [image, setImage] = useState([]);
+  const [image, setImage] = useState<string[][]>([]);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-  React.useEffect(() => {
-    SanityClient.fetch(
+
+  useEffect(() => {
+    SanityClient.fetch<Event[]>(
       `*[_type == "events"]{content[]{title, Image[]{image{asset -> {url}}}}}`
     ).then((data) => {
       console.log(data[0].content, "data");
-      setData(data[0].content);
+      setData(data);
       setImage(
         data[0].content.map((item: any) =>
           item.Image.map((img: any) => img.image.asset.url)
@@ -57,13 +66,15 @@ const GridContent1 = () => {
 
     return () => clearInterval(intervalId);
   }, [image]);
-  console.log(image.length, "jajaj");
 
   const indexOfLastItem = currentPage * pageSize;
   const indexOfFirstItem = indexOfLastItem - pageSize;
-  const currentData = data.slice(indexOfFirstItem, indexOfLastItem);
+  const currentData = data
+    .map((event) => event.content)
+    .flat() // flatten the array of arrays
+    .slice(indexOfFirstItem, indexOfLastItem);
 
-  const handlePageChange = (page: any) => {
+  const handlePageChange = (page: number) => {
     setCurrentPage(page);
   };
 

@@ -9,12 +9,12 @@ function Video(){
             <div className=" w-fit flex flex-col h-full justify-around px-5 items-center text-white">
                 <div className="flex flex-col justify-center items-center gap-3">
                 <p className="md:text-3xl text-xl text-center font-semibold">OUR INFRASTRUCTURE</p>
-                <p className="text-sm text-center">ISO certification is a significant milestone for us</p>
+                <p className="text-sm text-center text-md">ISO certification is a significant milestone for us</p>
                 </div>
                 <div className="w-20 h-20">
                     <Image src={yicon} className="w-full object-cover h-full" alt="" />
                 </div>
-                <p className="md:w-[70%] w-full text-center">ISO certification is a significant milestone for us, signifying that we have implemented robust quality management systems and processes in line with international standards. It demonstrates our focus on delivering reliable and high-quality IT solutions that meet and exceed client expectations.</p>
+                <p className="md:w-[70%] w-full text-center text-md">ISO certification is a significant milestone for us, signifying that we have implemented robust quality management systems and processes in line with international standards. It demonstrates our focus on delivering reliable and high-quality IT solutions that meet and exceed client expectations.</p>
               
             </div>
            <div className="w-full h-full -z-10  absolute top-0">
