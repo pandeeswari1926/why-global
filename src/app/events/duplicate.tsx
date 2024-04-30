@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { Pagination } from "antd";
 import eventabsolutepic from "../asset/eventabsolutepic.png";
-import eventsidebg from "../asset/Eventsidebg.png";
+import eventsidebg from "/Eventsidebg.png";
 import {
   MdOutlineKeyboardArrowLeft,
   MdOutlineKeyboardArrowRight,

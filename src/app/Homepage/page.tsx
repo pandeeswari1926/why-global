@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComputer } from "@fortawesome/free-solid-svg-icons";
 import tick from "../asset/tick.png";
 import "../css/home.css";
-import video1 from "../asset/WGS VIDEO (1).gif"
+// import video1 from "../asset/WGS VIDEO (1).gif"
 import person from "../asset/ceosir.png";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import Globe from "./Globe";
@@ -109,11 +109,11 @@ function Page() {
             </div>
           ))} */}
           <div className="w-full h-full">
-            <Image
+            {/* <Image
               src={video1}
               alt="Background Image"
               className="w-full h-[95%] items-center md:object-cover object-cover"
-            />
+            /> */}
           </div>
 
           <div className="absolute bottom-0 left-0 els w-full h-full"></div>
