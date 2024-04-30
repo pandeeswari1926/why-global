@@ -132,21 +132,20 @@ function Helicopter() {
                         </div>
                     </div>
                 </div>
-                <div className='oran bg-primarycolor fixed top-[24%] md:top-[18%] lg:top-[10%] left-0  w-[60%] h-[50%] lg:block hidden'>
-                    <div className='flex flex-col gap-8 justify-center absolute items-center h-full lg:left-10 lg:top-24'>
-                        <div className=''>
-                            <p className='lg:text-2xl md:text-2xl text-lg text-white'>Technology</p>
-                            <p className='lg:text-5xl md:text-4xl text-xl text-white'>We Work With</p>
-                        </div>
-                    </div>
-                </div>
+              
                 <div className='w-full lg:h-fit relative  mx-auto right-0 z-10 mt-[15%] '>
                     <div className='lg:hidden'>
                         <p className='lg:text-2xl md:text-2xl text-2xl pt-5 text-primarycolor text-center'>Technology</p>
                         <p className='lg:text-3xl md:text-4xl text-3xl  font-semibold text-center'>We Work With</p>
                     </div>
-                    <div className='w-full h-full bg-white flex lg:flex-row flex-col gap-5 justify-center rounded-md drop-shadow-lg  relative'>
+                    <div className='relative'>
+                    <div className='oran bg-primarycolor w-24 h-24 absolute top-0 right-0'>
+                   
+                   </div>
+                        <div className='w-full h-full bg-white flex lg:flex-row flex-col gap-5 justify-center rounded-md drop-shadow-lg  relative'>
                     
+              
+                   
                         <div className='lg:w-[50%] flex justify-center items-center'>
                             <Image src={heli} alt='Helicopter' className='lg:w-[80%] w-[90%] h-[90%] lg:h-[80%] mx-auto rounded-lg drop-shadow-lg  border-2 border-primarycolor' ></Image>
                         </div>
@@ -173,7 +172,8 @@ function Helicopter() {
                                 }
                             </div>
                         </div>
-                    </div>
+                    </div></div>
+                    
                 </div>
             </div>
         </div>
