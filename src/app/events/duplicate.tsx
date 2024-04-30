@@ -28,7 +28,7 @@ const itemRender = (_: any, type: any, originalElement: any) => {
   return originalElement;
 };
 
-const GridContent = () => {
+const GridContent1 = () => {
   const [data, setData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [pageSize] = useState(4);
@@ -42,7 +42,7 @@ const GridContent = () => {
       setData(data[0].content);
       setImage(
         data[0].content.map((item: any) =>
-          item.Image.map((img: any) => img?.image?.asset?.url)
+          item.Image.map((img: any) => img.image.asset.url)
         )
       );
     });
@@ -116,4 +116,4 @@ const GridContent = () => {
   );
 };
 
-export default GridContent;
+export default GridContent1;
