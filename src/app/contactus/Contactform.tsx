@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import contactgettin from "../asset/getin.png";
+import contactgettin from "../../../public/getin.png";
 import { MdEmail, MdLocationOn, MdLocalPhone } from "react-icons/md";
 import {
   FaFacebookSquare,

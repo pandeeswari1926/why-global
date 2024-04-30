@@ -1,32 +1,27 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import hr from "../asset/hr.png";
+import hr from "../../../public/hr.png";
 import wgsperson from "../asset/wgsperson.gif";
-import line from "../asset/line.png";
+import line from "../../../public/line.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComputer } from "@fortawesome/free-solid-svg-icons";
-import Certificate from "../asset/certificate.png";
+import Certificate from "../../../public/certificate.png";
 import "react-html5video/dist/styles.css";
-import arrow from "../asset/arrow.gif";
-import timer from "../asset/timer.gif";
-import rocket from "../asset/rocket.gif";
-import style2 from "../asset/style2.png";
-import profile1 from "../asset/profile1.png";
-import style3 from "../asset/style3.png";
-import star from "../asset/stars.png";
+import arrow from "../../../public/arrow.gif";
+import timer from "../../../public/timer.gif";
+import rocket from "../../../public/rocket.gif";
+import style2 from "../../../public/style2.png";
+import profile1 from "../../../public/profile1.png";
+import style3 from "../../../public/style3.png";
+import star from "../../../public/stars.png";
 import Slider from "react-slick";
 import "next-cloudinary/dist/cld-video-player.css";
-import bgorange1 from "../asset/bgorange1.png";
-import icon1 from "../asset/wgs gifs (19).gif";
-import icon2 from "../asset/wgs gifs (17).gif";
-import icon3 from "../asset/wgs gifs (20).gif";
-import icon4 from "../asset/wgs gifs (18).gif";
-import ourculture from "../asset/Vector 48.png";
-import ourculture2 from "../asset/Vector 49.png";
-import ourculture3 from "../asset/Vector 50.png";
-import ourculture4 from "../asset/Vector 51.png";
-import ourculture5 from "../asset/Vector 52.png";
+import bgorange1 from "../../../public/bgorange1.png";
+import icon1 from "../../../public/wgs gifs (19).gif";
+import icon2 from "../../../public/wgs gifs (17).gif";
+import icon3 from "../../../public/wgs gifs (20).gif";
+import icon4 from "../../../public/wgs gifs (18).gif";
 import bg from "../asset/background.png"
 // import Culture from "./Culture";
 import slidegray from "../asset/slidergray.png";
@@ -39,8 +34,8 @@ import { BsFillBriefcaseFill } from "react-icons/bs";
 import { BsPeopleFill } from "react-icons/bs";
 import { GiPieChart } from "react-icons/gi"
 import { FaLocationDot } from "react-icons/fa6";
-import sides from "../asset/round.png"
-import sides2 from "../asset/round2.png"
+import sides from "../../../public/round.png"
+import sides2 from "../../../public/round2.png"
 
 import Video from "./Video";
 

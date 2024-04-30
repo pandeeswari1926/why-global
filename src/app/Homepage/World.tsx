@@ -2,7 +2,7 @@
 import React from 'react'
 import Image from 'next/image'
 import CountUp from 'react-countup'
-import plus from '../asset/+.png';
+import plus from '../../../public/+.png';
 
 const World = () => {
     return (

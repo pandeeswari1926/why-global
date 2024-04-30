@@ -1,14 +1,14 @@
 import React from "react";
-import msgicon from "../asset/mailiconb.png";
+import msgicon from "../../../public/mailiconb.png";
 import Link from "next/link";
-import locationicon from "../asset/locationiconb.png";
+import locationicon from "../../../public/locationiconb.png";
 import Image from "next/image";
-import facebookicon from "../asset/facebookiconb.png";
-import twittericon from "../asset/twittericonb.png";
-import instagramicon from "../asset/instagramiconb.png";
-import linkedinicon from "../asset/linkediniconb.png";
-import youtubeicon from "../asset/youtubeiconb.png";
-import callicon from "../asset/calliconb.png";
+import facebookicon from "../../../public/facebookiconb.png";
+import twittericon from "../../../public/twittericonb.png";
+import instagramicon from "../../../public/twittericonb.png";
+import linkedinicon from "../../../public/linkediniconb.png";
+import youtubeicon from "../../../public/youtubeiconb.png";
+import callicon from "../../../public/calliconb.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowRight,

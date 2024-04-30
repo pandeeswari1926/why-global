@@ -1,10 +1,10 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendar } from "@fortawesome/free-solid-svg-icons";
-import img1 from "../asset/img1.jpeg";
-import img2 from "../asset/img2.jpeg";
-import img3 from "../asset/img3.jpg";
-import bgorange1 from "../asset/bgorange1.png";
+import img1 from "../../../public/img1.jpeg";
+import img2 from "../../../public/img2.jpeg";
+import img3 from "../../../public/img3.jpg";
+import bgorange1 from "../../../public/bgorange1.png";
 import Image from "next/image";
 
 const Wgs = () => {

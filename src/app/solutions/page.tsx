@@ -1,10 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import solution from "../../../public/solution page.png";
-import sol from "../../../public/istockphoto-180723571-612x612-removebg-preview 1.png";
-import img from "../../../public/unsplash_dBaz0xhCkPY-removebg 1.png";
-import gif from "../asset/wgs gifs (10).gif";
+import gif from "../../../public/wgs gifs (10).gif";
 import feature from "../../../public/25.png";
 import feature1 from "../../../public/28.png";
 import feature2 from "../../../public/27.png";
@@ -15,9 +12,9 @@ import benifits from "../../../public/sevice.png";
 import signin from "../../../public/Rectangle 113.png";
 import DashBoard from "../../../public/Rectangle 113 (1).png";
 import Faculty from "../../../public/Rectangle 113 (2).png";
-import rubenvro from "../asset/rubanbro1.png";
+import rubenvro from "../../../public/rubanbro1.png";
 import why from "../../../public/why.png";
-import bgorange1 from "../asset/bgorange1.png";
+import bgorange1 from "../../../public/bgorange1.png";
 
 function Solutions() {
   const [showActiveContent, setShowActiveContent] = useState("SignIn");
