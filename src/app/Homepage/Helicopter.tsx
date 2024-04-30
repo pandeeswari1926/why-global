@@ -212,195 +212,183 @@ function Helicopter() {
               We Work With
             </p>
           </div>
-          <div className="relative">
-            <div className="oran bg-primarycolor w-24 h-24 absolute top-0 left-0">
-                
+          <div className="w-full h-full bg-white flex lg:flex-row flex-col gap-5 justify-center rounded-md drop-shadow-lg  relative">
+            <div className="lg:w-[50%] flex justify-center items-center">
+              <Image
+                src={heli}
+                alt="Helicopter"
+                className="lg:w-[80%] w-[90%] h-[90%] lg:h-[80%] mx-auto rounded-lg drop-shadow-lg  border-2 border-primarycolor"
+              ></Image>
             </div>
-            <div>
-              <div className="w-full h-full bg-white flex lg:flex-row flex-col gap-5 justify-center rounded-md drop-shadow-lg  relative">
-                <div className="lg:w-[50%] flex justify-center items-center">
-                  <Image
-                    src={heli}
-                    alt="Helicopter"
-                    className="lg:w-[80%] w-[90%] h-[90%] lg:h-[80%] mx-auto rounded-lg drop-shadow-lg  border-2 border-primarycolor"
-                  ></Image>
-                </div>
-                <div className="lg:w-[50%] relative flex flex-col ">
-                  <ul className="flex flex-row justify-around items-center relative w-full h-14  px-2 md:px-0 bg-gray-200  md:justify-evenly md:text-lg text-sm">
-                    <div
-                      style={{
-                        clipPath: `polygon(0 63%, 0 100%, 41% 100%)`,
-                      }}
-                      className="w-20 h-full lg:flex hidden absolute top-0 left-0 bottom-0 bg-white  z-10"
-                    ></div>
-                    {listItems.map((item, index) => (
-                      <li
-                        key={index}
-                        className="cursor-pointer font-semibold text-xs md:text-lg"
-                        style={
-                          clickindex === index
-                            ? { color: "#FF9315" }
-                            : { color: "black" }
-                        }
-                        onClick={(e) => handleclick(index, e)}
-                      >
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="lg:p-5">
-                    {Content === "Frontend" && (
-                      <div className="p-5 space-y-5">
-                        <h1 className="text-xl text-gray-600 font-semibold leading-10">
-                          WE EXECUTE OUR IDEAS FROMTHE START TO FINISH
-                        </h1>
-                        <p className="text-gray-400 font-light text-sm leading-8 w-[98%]">
-                          On the other hand we denounce with righteous
-                          indignation hill and dislike men who are so beguiled
-                          and demoralized.
-                        </p>
-                        <div className="grid grid-cols-2 font-light text-sm space-y-5 justify-items-start">
-                          <p className="flex flex-row items-center">
-                            <Image src={tick} alt="" />
-                            Cost of supplies and equipment
-                          </p>
-                          <p className="flex flex-row items-center">
-                            <Image src={tick} alt="" />
-                            Cost of supplies and equipment
-                          </p>
-                          <p className="flex flex-row items-center ">
-                            <Image src={tick} alt="" />
-                            Cost of supplies and equipment
-                          </p>
-                          <p className="flex flex-row items-center">
-                            <Image src={tick} alt="" />
-                            Cost of supplies and equipment
-                          </p>
-                        </div>
-                      </div>
-                    )}
-                    {Content === "Backend" && (
-                      <div className="p-5 space-y-5">
-                        <h1 className="text-xl text-gray-600 font-semibold leading-10">
-                          WE EXECUTE OUR IDEAS FROMTHE START TO FINISH
-                        </h1>
-                        <p className="text-gray-400 font-light text-sm leading-8 w-[98%]">
-                          On the other hand we denounce with righteous
-                          indignation hill and dislike men who are so beguiled
-                          and demoralized.
-                        </p>
-                        <div className="grid grid-cols-2 font-light text-sm space-y-5 justify-items-start">
-                          <p className="flex flex-row items-center">
-                            <Image src={tick} alt="" />
-                            Cost of supplies and equipment
-                          </p>
-                          <p className="flex flex-row items-center">
-                            <Image src={tick} alt="" />
-                            Cost of supplies and equipment
-                          </p>
-                          <p className="flex flex-row items-center ">
-                            <Image src={tick} alt="" />
-                            Cost of supplies and equipment
-                          </p>
-                          <p className="flex flex-row items-center">
-                            <Image src={tick} alt="" />
-                            Cost of supplies and equipment
-                          </p>
-                        </div>
-                      </div>
-                    )}
-                    {Content === "Mobile" && (
-                      <div className="p-5 space-y-5">
-                        <h1 className="text-xl text-gray-600 font-semibold leading-10">
-                          WE EXECUTE OUR IDEAS FROMTHE START TO FINISH
-                        </h1>
-                        <p className="text-gray-400 font-light text-sm leading-8 w-[98%]">
-                          On the other hand we denounce with righteous
-                          indignation hill and dislike men who are so beguiled
-                          and demoralized.
-                        </p>
-                        <div className="grid grid-cols-2 font-light text-sm space-y-5 justify-items-start">
-                          <p className="flex flex-row items-center">
-                            <Image src={tick} alt="" />
-                            Cost of supplies and equipment
-                          </p>
-                          <p className="flex flex-row items-center">
-                            <Image src={tick} alt="" />
-                            Cost of supplies and equipment
-                          </p>
-                          <p className="flex flex-row items-center ">
-                            <Image src={tick} alt="" />
-                            Cost of supplies and equipment
-                          </p>
-                          <p className="flex flex-row items-center">
-                            <Image src={tick} alt="" />
-                            Cost of supplies and equipment
-                          </p>
-                        </div>
-                      </div>
-                    )}
-                    {Content === "Database" && (
-                      <div className="p-5 space-y-5">
-                        <h1 className="text-xl text-gray-600 font-semibold leading-10">
-                          WE EXECUTE OUR IDEAS FROMTHE START TO FINISH
-                        </h1>
-                        <p className="text-gray-400 font-light text-sm leading-8 w-[98%]">
-                          On the other hand we denounce with righteous
-                          indignation hill and dislike men who are so beguiled
-                          and demoralized.
-                        </p>
-                        <div className="grid grid-cols-2 font-light text-sm space-y-5 justify-items-start">
-                          <p className="flex flex-row items-center">
-                            <Image src={tick} alt="" />
-                            Cost of supplies and equipment
-                          </p>
-                          <p className="flex flex-row items-center">
-                            <Image src={tick} alt="" />
-                            Cost of supplies and equipment
-                          </p>
-                          <p className="flex flex-row items-center ">
-                            <Image src={tick} alt="" />
-                            Cost of supplies and equipment
-                          </p>
-                          <p className="flex flex-row items-center">
-                            <Image src={tick} alt="" />
-                            Cost of supplies and equipment
-                          </p>
-                        </div>
-                      </div>
-                    )}
-                    {Content === "CMS" && (
-                      <div className="p-5 space-y-5">
-                        <h1 className="text-xl text-gray-600 font-semibold leading-10">
-                          WE EXECUTE OUR IDEAS FROMTHE START TO FINISH
-                        </h1>
-                        <p className="text-gray-400 font-light text-sm leading-8 w-[98%]">
-                          On the other hand we denounce with righteous
-                          indignation hill and dislike men who are so beguiled
-                          and demoralized.
-                        </p>
-                        <div className="grid grid-cols-2 font-light text-sm space-y-5 justify-items-start">
-                          <p className="flex flex-row items-center">
-                            <Image src={tick} alt="" />
-                            Cost of supplies and equipment
-                          </p>
-                          <p className="flex flex-row items-center">
-                            <Image src={tick} alt="" />
-                            Cost of supplies and equipment
-                          </p>
-                          <p className="flex flex-row items-center ">
-                            <Image src={tick} alt="" />
-                            Cost of supplies and equipment
-                          </p>
-                          <p className="flex flex-row items-center">
-                            <Image src={tick} alt="" />
-                            Cost of supplies and equipment
-                          </p>
-                        </div>
-                      </div>
-                    )}
+            <div className="lg:w-[50%] relative flex flex-col ">
+              <ul className="flex flex-row justify-around items-center relative w-full h-14  px-2 md:px-0 bg-gray-200  md:justify-evenly md:text-lg text-sm">
+                <div
+                  style={{
+                    clipPath: `polygon(0 63%, 0 100%, 41% 100%)`,
+                  }}
+                  className="w-20 h-full lg:flex hidden absolute top-0 left-0 bottom-0 bg-white  z-10"
+                ></div>
+                {listItems.map((item, index) => (
+                  <li
+                    key={index}
+                    className="cursor-pointer font-semibold text-xs md:text-lg"
+                    style={
+                      clickindex === index
+                        ? { color: "#FF9315" }
+                        : { color: "black" }
+                    }
+                    onClick={(e) => handleclick(index, e)}
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <div className="lg:p-5">
+                {Content === "Frontend" && (
+                  <div className="p-5 space-y-5">
+                    <h1 className="text-xl text-gray-600 font-semibold leading-10">
+                      WE EXECUTE OUR IDEAS FROMTHE START TO FINISH
+                    </h1>
+                    <p className="text-gray-400 font-light text-sm leading-8 w-[98%]">
+                      On the other hand we denounce with righteous indignation
+                      hill and dislike men who are so beguiled and demoralized.
+                    </p>
+                    <div className="grid grid-cols-2 font-light text-sm space-y-5 justify-items-start">
+                      <p className="flex flex-row items-center">
+                        <Image src={tick} alt="" />
+                        Cost of supplies and equipment
+                      </p>
+                      <p className="flex flex-row items-center">
+                        <Image src={tick} alt="" />
+                        Cost of supplies and equipment
+                      </p>
+                      <p className="flex flex-row items-center ">
+                        <Image src={tick} alt="" />
+                        Cost of supplies and equipment
+                      </p>
+                      <p className="flex flex-row items-center">
+                        <Image src={tick} alt="" />
+                        Cost of supplies and equipment
+                      </p>
+                    </div>
                   </div>
-                </div>
+                )}
+                {Content === "Backend" && (
+                  <div className="p-5 space-y-5">
+                    <h1 className="text-xl text-gray-600 font-semibold leading-10">
+                      WE EXECUTE OUR IDEAS FROMTHE START TO FINISH
+                    </h1>
+                    <p className="text-gray-400 font-light text-sm leading-8 w-[98%]">
+                      On the other hand we denounce with righteous indignation
+                      hill and dislike men who are so beguiled and demoralized.
+                    </p>
+                    <div className="grid grid-cols-2 font-light text-sm space-y-5 justify-items-start">
+                      <p className="flex flex-row items-center">
+                        <Image src={tick} alt="" />
+                        Cost of supplies and equipment
+                      </p>
+                      <p className="flex flex-row items-center">
+                        <Image src={tick} alt="" />
+                        Cost of supplies and equipment
+                      </p>
+                      <p className="flex flex-row items-center ">
+                        <Image src={tick} alt="" />
+                        Cost of supplies and equipment
+                      </p>
+                      <p className="flex flex-row items-center">
+                        <Image src={tick} alt="" />
+                        Cost of supplies and equipment
+                      </p>
+                    </div>
+                  </div>
+                )}
+                {Content === "Mobile" && (
+                  <div className="p-5 space-y-5">
+                    <h1 className="text-xl text-gray-600 font-semibold leading-10">
+                      WE EXECUTE OUR IDEAS FROMTHE START TO FINISH
+                    </h1>
+                    <p className="text-gray-400 font-light text-sm leading-8 w-[98%]">
+                      On the other hand we denounce with righteous indignation
+                      hill and dislike men who are so beguiled and demoralized.
+                    </p>
+                    <div className="grid grid-cols-2 font-light text-sm space-y-5 justify-items-start">
+                      <p className="flex flex-row items-center">
+                        <Image src={tick} alt="" />
+                        Cost of supplies and equipment
+                      </p>
+                      <p className="flex flex-row items-center">
+                        <Image src={tick} alt="" />
+                        Cost of supplies and equipment
+                      </p>
+                      <p className="flex flex-row items-center ">
+                        <Image src={tick} alt="" />
+                        Cost of supplies and equipment
+                      </p>
+                      <p className="flex flex-row items-center">
+                        <Image src={tick} alt="" />
+                        Cost of supplies and equipment
+                      </p>
+                    </div>
+                  </div>
+                )}
+                {Content === "Database" && (
+                  <div className="p-5 space-y-5">
+                    <h1 className="text-xl text-gray-600 font-semibold leading-10">
+                      WE EXECUTE OUR IDEAS FROMTHE START TO FINISH
+                    </h1>
+                    <p className="text-gray-400 font-light text-sm leading-8 w-[98%]">
+                      On the other hand we denounce with righteous indignation
+                      hill and dislike men who are so beguiled and demoralized.
+                    </p>
+                    <div className="grid grid-cols-2 font-light text-sm space-y-5 justify-items-start">
+                      <p className="flex flex-row items-center">
+                        <Image src={tick} alt="" />
+                        Cost of supplies and equipment
+                      </p>
+                      <p className="flex flex-row items-center">
+                        <Image src={tick} alt="" />
+                        Cost of supplies and equipment
+                      </p>
+                      <p className="flex flex-row items-center ">
+                        <Image src={tick} alt="" />
+                        Cost of supplies and equipment
+                      </p>
+                      <p className="flex flex-row items-center">
+                        <Image src={tick} alt="" />
+                        Cost of supplies and equipment
+                      </p>
+                    </div>
+                  </div>
+                )}
+                {Content === "CMS" && (
+                  <div className="p-5 space-y-5">
+                    <h1 className="text-xl text-gray-600 font-semibold leading-10">
+                      WE EXECUTE OUR IDEAS FROMTHE START TO FINISH
+                    </h1>
+                    <p className="text-gray-400 font-light text-sm leading-8 w-[98%]">
+                      On the other hand we denounce with righteous indignation
+                      hill and dislike men who are so beguiled and demoralized.
+                    </p>
+                    <div className="grid grid-cols-2 font-light text-sm space-y-5 justify-items-start">
+                      <p className="flex flex-row items-center">
+                        <Image src={tick} alt="" />
+                        Cost of supplies and equipment
+                      </p>
+                      <p className="flex flex-row items-center">
+                        <Image src={tick} alt="" />
+                        Cost of supplies and equipment
+                      </p>
+                      <p className="flex flex-row items-center ">
+                        <Image src={tick} alt="" />
+                        Cost of supplies and equipment
+                      </p>
+                      <p className="flex flex-row items-center">
+                        <Image src={tick} alt="" />
+                        Cost of supplies and equipment
+                      </p>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </div>
