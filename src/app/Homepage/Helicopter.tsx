@@ -140,17 +140,24 @@ function Helicopter() {
                         </div>
                     </div>
                 </div>
-                <div className='w-full lg:h-fit relative  mx-auto bg-white right-0 z-10 mt-[15%] '>
+                <div className='w-full lg:h-fit relative  mx-auto right-0 z-10 mt-[15%] '>
                     <div className='lg:hidden'>
                         <p className='lg:text-2xl md:text-2xl text-2xl pt-5 text-primarycolor text-center'>Technology</p>
                         <p className='lg:text-3xl md:text-4xl text-3xl  font-semibold text-center'>We Work With</p>
                     </div>
-                    <div className='w-full h-full flex lg:flex-row flex-col'>
-                        <div className='w-full md:h-full h-[50%]'>
-                            <Image src={heli} alt='Helicopter' className='h-full' ></Image>
+                    <div className='w-full h-full bg-white flex lg:flex-row flex-col gap-5 justify-center rounded-md drop-shadow-lg  relative'>
+                    
+                        <div className='lg:w-[50%] flex justify-center items-center'>
+                            <Image src={heli} alt='Helicopter' className='lg:w-[80%] w-[90%] h-[90%] lg:h-[80%] mx-auto rounded-lg drop-shadow-lg  border-2 border-primarycolor' ></Image>
                         </div>
-                        <div className='w-full relative flex flex-col md:gap-7 lg:pt-20'>
-                            <ul className='w-full  flex flex-row justify-around  px-2 md:px-0  md:justify-evenly md:text-lg text-sm'>
+                        <div className='lg:w-[50%] relative flex flex-col justify-between '>
+                          
+                        <ul className='flex flex-row justify-around items-center relative w-full h-14  px-2 md:px-0 bg-gray-200  md:justify-evenly md:text-lg text-sm'>
+                        <div style={{
+                                clipPath: `polygon(0 63%, 0 100%, 41% 100%)`
+
+
+                            }} className='w-20 h-full lg:flex hidden absolute top-0 left-0 bg-white bottom-0 z-10'></div>
                                 {listItems.map((item, index) => <li key={index} className='cursor-pointer font-semibold text-xs md:text-lg' style={clickindex === index ? { color: "#FF9315" } : { color: "black" }} onClick={(e) => handleclick(index, e)}>{item}</li>)}
                             </ul>
                             <div className='lg:p-5'>
