@@ -1,12 +1,9 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import client from "../asset/7.png";
-// import build from '../../assests/img3.png';
-import second from "../asset/8.png";
-import third from "../asset/9.png";
-// import fourth from '../../assests/10.png';
-// import fifth from '../../assests/11.png';
+import client from "../../../public/7.png";
+import second from "../../../public/8.png";
+import third from "../../../public/9.png";
 import { BiSolidQuoteAltLeft } from "react-icons/bi";
 import { FaStar } from "react-icons/fa";
 import { BiSolidQuoteAltRight } from "react-icons/bi";

@@ -1,15 +1,14 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import line from "../../../public/Line 1.png";
 import ceo from "../../../public/WGS LIVE PICS (6) 1.png";
-import gif from "../asset/wgs gifs (22).gif";
+import gif from "../../../public/wgs gifs (22).gif";
 import message from "../../../public/Vector 86.png";
 import SliderPage from "./slider";
 import Test from "./test";
-import bg from "../asset/testmonialbg.png";
-import warn from '../asset/warn.png'
-import small from '../asset/small2.png'
+import bg from "../../../public/testmonialbg.png";
+import warn from '../../../public/warn.png'
+import small from '../../../public/small2.png'
 const Page = () => {
   return (
     <>
