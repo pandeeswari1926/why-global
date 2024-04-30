@@ -2,8 +2,8 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { Pagination } from "antd";
-import eventabsolutepic from "../asset/eventabsolutepic.png";
-import eventsidebg from "../asset/Eventsidebg.png";
+import eventabsolutepic from "../../../public/eventabsolutepic.png";
+import eventsidebg from "../../../public/Eventsidebg.png";
 import {
   MdOutlineKeyboardArrowLeft,
   MdOutlineKeyboardArrowRight,
