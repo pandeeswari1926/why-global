@@ -351,3 +351,19 @@
        
     }
 }
+
+
+.downup{
+    animation: drop1 0.3s ease-in-out;
+}
+@keyframes drop1 {
+    0%{
+        transform: translateY(-10px);
+        opacity: 0.5;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+
+    }
+}
