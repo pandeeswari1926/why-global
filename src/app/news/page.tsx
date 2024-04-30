@@ -1,11 +1,11 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import image1 from "../asset/social media.jpeg";
-import image2 from "../asset/social media.jpeg";
-import image3 from "../asset/e-commerce.jpg";
-import image4 from "../asset/crm.jpg";
-import image5 from "../asset/collaborator.jpg";
+import image1 from "../../../public/social media.jpeg";
+import image2 from "../../../public/social media.jpeg";
+import image3 from "../../../public/e-commerce.jpg";
+import image4 from "../../../public/crm.jpg";
+import image5 from "../../../public/collaborator.jpg";
 import { BsDot } from "react-icons/bs";
 function Page(){
   const [showActiveContent, setShowActiveContent] = React.useState("Popular");

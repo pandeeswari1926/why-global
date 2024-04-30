@@ -1,7 +1,7 @@
 "use client"
 import React from 'react'
 import Image from 'next/image'
-import ruban from '../asset/ruban.png'
+import ruban from '../../../public/ruban.png'
 function Culture() {
   return (
     <div>

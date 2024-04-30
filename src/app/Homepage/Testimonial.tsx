@@ -1,10 +1,10 @@
 'use client';
 import React from 'react';
 import Image from "next/image";
-import style2 from '../asset/style2.png';
-import profile1 from '../asset/profile1.png';
-import style3 from '../asset/style3.png';
-import star from '../asset/stars.png';
+import style2 from '../../../public/style2.png';
+import profile1 from '../../../public/profile1.png';
+import style3 from '../../../public/style3.png';
+import star from '../../../public/stars.png';
 import Slider from 'react-slick';
 
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import Whyglobalservicesworldmapimg from '../asset/whyglobalservicesworldmapimg.png'
+import Whyglobalservicesworldmapimg from '../../../public/whyglobalservicesworldmapimg.png';
 
 function Map(){
   return (

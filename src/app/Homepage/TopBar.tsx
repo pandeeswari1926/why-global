@@ -1,14 +1,11 @@
 import React from "react";
 import Link from "next/link";
-import msgicon from "../asset/msgicon.png";
-import locationicon from "../asset/locationicon.png";
 import Image from "next/image";
-import facebookicon from "../asset/facebookicon.png";
-import twittericon from "../asset/twittericon.png";
-import instagramicon from "../asset/instagramicon.png";
-import linkedinicon from "../asset/linkedinicon.png";
-import youtubeicon from "../asset/youtubeicon.png";
-import { FaMailchimp } from "react-icons/fa";
+import facebookicon from "../../../public/facebookicon.png";
+import twittericon from "../../../public/twittericon.png";
+import instagramicon from "../../../public/instagramicon.png";
+import linkedinicon from "../../../public/linkedinicon.png";
+import youtubeicon from "../../../public/youtubeicon.png";
 import { CiMail } from "react-icons/ci";
 import { IoLocationOutline } from "react-icons/io5";
 

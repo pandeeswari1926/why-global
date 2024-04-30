@@ -1,5 +1,5 @@
 import React from 'react'
-import globe from '../asset/globe.png'
+import globe from '../../../public/globe.png'
 import Image from 'next/image'
 
 function Globe() {

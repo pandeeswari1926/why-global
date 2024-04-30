@@ -1,7 +1,7 @@
 import React from "react";
 // import theatre from '../asset/theatre.gif'
 import Image from "next/image";
-import yicon from "../asset/yicon.png"
+import yicon from "../../../public/yicon.png"
 function Video(){
     return(
         <div className="py-5">
