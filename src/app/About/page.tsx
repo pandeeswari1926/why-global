@@ -22,14 +22,14 @@ import icon1 from "../../../public/wgs gifs (19).gif";
 import icon2 from "../../../public/wgs gifs (17).gif";
 import icon3 from "../../../public/wgs gifs (20).gif";
 import icon4 from "../../../public/wgs gifs (18).gif";
-import bg from "../asset/background.png"
+import bg from "../../../public/background.png"
 // import Culture from "./Culture";
-import slidegray from "../asset/slidergray.png";
-import ruban from "../asset/rubanbox.jpg";
-import dha from "../asset/dhanushbox.jpg";
-import ram from "../asset/ramyabox.jpg";
-import ajin from "../asset/sudalaibox.jpg";
-import niv from "../asset/veenabox.jpg";
+import slidegray from "../../../public/slidergray.png";
+import ruban from "../../../public/rubanbox.jpg";
+import dha from "../../../public/dhanushbox.jpg";
+import ram from "../../../public/ramyabox.jpg";
+import ajin from "../../../public/sudalaibox.jpg";
+import niv from "../../../public/veenabox.jpg";
 import { BsFillBriefcaseFill } from "react-icons/bs";
 import { BsPeopleFill } from "react-icons/bs";
 import { GiPieChart } from "react-icons/gi"
