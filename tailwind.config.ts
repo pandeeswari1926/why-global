@@ -20,14 +20,14 @@ const config: Config = {
         appbg1: 'url("/appbg1.png")',
         appbg2: 'url("/appbg2.png")',
         appbg3: 'url("/appbg3.png")',
-        'world': "url('./asset/worldblack.gif')",
-        'custom': "url('/asset/b1.png')",
-        'bgslide': "url('/asset/Vector.png')",
-        'summa': "url('/asset/background.png')",
-        'about': "url('/asset/Vector3.png')",
-        'second': "url('/asset/second.png')",
-        'customer': 'url("/asset/White Waves Pattern.png")',
-        'getin':'url("/asset/getinbg.png")'
+        'world': "url('/worldblack.gif')",
+        'custom': "url('/b1.png')",
+        'bgslide': "url('/Vector.png')",
+        'summa': "url('/background.png')",
+        'about': "url('/Vector3.png')",
+        'second': "url('/second.png')",
+        'customer': 'url("/White Waves Pattern.png")',
+        'getin':'url("/getinbg.png")'
       },
       screens: {
         "xs": '431px',
