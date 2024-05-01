@@ -10,6 +10,7 @@ import linkedinicon from "../../../public/linkediniconb.png";
 import youtubeicon from "../../../public/youtubeiconb.png";
 import callicon from "../../../public/calliconb.png";
 import latest from "../../../public/Rectangle 83.png";
+import buss from '../../../public/buss.png'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowRight,
@@ -114,8 +115,8 @@ const Footer = () => {
           <section className="space-y-5 sm:w-72">
             <h1 className="font-bold text-xl ">Latest News</h1>
             <section className="text-xs space-y-2">
-              <div className="flex gap-2">
-                <Image src={latest} alt="suhail" className="w-16 h-16" />
+              <div className="flex gap-2 items-center">
+                <Image src={buss} alt="suhail" className="w-16 h-16" />
                 <div className="leading-loose">
                   <h2>How to become successful bussinessman</h2>
                   <div className="flex items-center gap-1">
@@ -124,8 +125,8 @@ const Footer = () => {
                   </div>
                 </div>
               </div>
-              <div className="flex gap-2">
-                <Image src={latest} alt="suhail" className="w-16 h-16" />
+              <div className="flex gap-2 items-center">
+                <Image src={buss} alt="suhail" className="w-16 h-16" />
                 <div className="leading-loose">
                   <h2>How to become successful bussinessman</h2>
                   <div className="flex items-center gap-1">

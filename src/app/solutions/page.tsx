@@ -9,12 +9,13 @@ import feature3 from "../../../public/29.png";
 import feature4 from "../../../public/26.png";
 import feature5 from "../../../public/24.png";
 import benifits from "../../../public/sevice.png";
-import signin from "../../../public/Rectangle 113.png";
+import signin from "../../../public/log.png";
 import DashBoard from "../../../public/Rectangle 113 (1).png";
-import Faculty from "../../../public/Rectangle 113 (2).png";
-import rubenvro from "../../../public/rubanbro1.png";
+import Faculty from "../../../public/Faculty.png";
+import rubenvro from "../../../public/upruban.png";
 import why from "../../../public/why.png";
 import bgorange1 from "../../../public/bgorange1.png";
+import lmsin from '../../../public/Instituteadmin.png'
 
 function Solutions() {
   const [showActiveContent, setShowActiveContent] = useState("SignIn");
@@ -89,7 +90,7 @@ function Solutions() {
         </div>
       </div> */}
 
-      <div className="grid w-full h-screen overflow-hidden grid-cols-1 md:grid-cols-2 ">
+      <div className="grid w-full h-screen relative  overflow-hidden grid-cols-1 md:grid-cols-2 ">
         <div className="flex flex-col gap-5 p-5 md:p-20">
           <p className="uppercase text-sm sm:text-base text-orange-500 font-semibold md:text-left text-center">
             Learning management system
@@ -108,11 +109,13 @@ function Solutions() {
           </p>
         </div>
 
-        <div className="h-full w-full flex flex-col justify-center items-center">
+        <div className="h-full w-full  flex flex-col justify-center items-center">
+          
+  
           <Image
             src={rubenvro}
             alt="ruben vro"
-            className="md:w-full md:h-full rubanbro xs:w-96 object-cover xs:h-80 w-64 h-52 "
+            className="md:w-full md:h-full rubanbro  xs:w-96 object-cover xs:h-80 w-64 h-52 "
           />
         </div>
       </div>
@@ -332,18 +335,18 @@ function Solutions() {
             </button>
           </div>
           {showActiveContent === "SignIn" && (
-            <div className="bg-white md:w-[80%] w-full  p-10 xl:px-32 rounded-md">
-              <Image src={signin} alt="" className="" />
+            <div className="bg-white md:w-[80%] w-full xl:w-[90%]  p-10 xl:px-32 rounded-md">
+              <Image src={signin} alt="" className="w-full" />
             </div>
           )}
           {showActiveContent === "DashBoard" && (
-            <div className="bg-white md:w-[80%] w-full  p-10 xl:px-32 rounded-md ">
-              <Image src={DashBoard} alt="" className="" />
+            <div className="bg-white md:w-[80%] w-full xl:w-[90%] p-10 xl:px-32 rounded-md ">
+              <Image src={lmsin} alt="" className="w-full" />
             </div>
           )}
           {showActiveContent === "Faculty" && (
-            <div className="bg-white md:w-[80%] w-full  p-10 xl:px-32 rounded-md ">
-              <Image src={Faculty} alt="" className="" />
+            <div className="bg-white md:w-[80%] w-full xl:w-[90%]  p-10 xl:px-32 rounded-md ">
+              <Image src={Faculty} alt="" className="w-full" />
             </div>
           )}
         </div>

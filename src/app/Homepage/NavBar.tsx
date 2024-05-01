@@ -13,7 +13,7 @@ const NavBar = () => {
   const [open, setOpen] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
   const [ShowOpen, SetshowOpen] = useState(false);
-  const closeTimeout = React.useRef(null);
+  const closeTimeout = React.useRef<NodeJS.Timeout>();
 
   const toggleShow = () => {
     SetshowOpen(!ShowOpen);
@@ -48,7 +48,7 @@ const NavBar = () => {
     closeDropdown();
   };
 
-  const handleOutsideClick = (e) => {
+  const handleOutsideClick = (e:any) => {
     if (!e.target.closest(".dropdown-container")) {
       closeDropdown();
     }

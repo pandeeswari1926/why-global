@@ -35,7 +35,7 @@ export default function RootLayout({
    
         <TopBar />
         <NavBar />
-        <div className="pt-[66px] sm:pt-[72px] md:pt-[96px]">
+        <div className="pt-[66px] sm:pt-[72px] md:pt-[90px]">
           {children}
         </div>
         <Footer />
