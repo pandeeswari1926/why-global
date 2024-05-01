@@ -87,7 +87,7 @@ function About() {
               <p className="font-semibold md:text-3xl text-gray-500">
                 Empowering Your Digital Success - WHY Global Services
               </p>
-              <p className="font-semibold text-xs md:w-[75%] ">
+              <p className="font-semibold text-md md:w-[75%] ">
                 We are an innovative IT company dedicated to transforming
                 businesses through cutting-edge technology solutions. With a
                 team of skilled professionals and a passion for excellence.

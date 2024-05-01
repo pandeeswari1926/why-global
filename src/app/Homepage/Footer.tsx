@@ -40,7 +40,7 @@ const Footer = () => {
               target="_blank"
             >
               <CiMail className="size-4 bg-primarycolor text-white rounded" />
-              <p className="text-sm text-primarycolor">
+              <p className="text-md text-primarycolor">
                 contact@whyglobalservices.com
               </p>
             </Link>
@@ -50,7 +50,7 @@ const Footer = () => {
               target="_blank"
             >
               <IoLocationOutline className="size-4 bg-primarycolor text-white rounded" />
-              <p className="text-sm text-primarycolor">Egmore, Chennai.</p>
+              <p className="text-md text-primarycolor">Egmore, Chennai.</p>
             </Link>
             <Link
               href="tel:+918270099990"
@@ -58,7 +58,7 @@ const Footer = () => {
               target="_blank"
             >
               <FaPhone className="size-4 text-primarycolor rounded" />
-              <p className="text-sm text-primarycolor">+91-82700 99990</p>
+              <p className="text-md text-primarycolor">+91-82700 99990</p>
             </Link>
 
             <section className="flex space-x-5 pt-1">
@@ -97,7 +97,7 @@ const Footer = () => {
         <section className="bg-black text-white p-10 grid lg:grid-cols-4 sm:grid-cols-2 lg:gap-0 gap-10 sm:justify-items-center">
           <section className="space-y-5 sm:w-72">
             <h1 className="font-bold text-xl">About Us</h1>
-            <p className="text-xs leading-loose text-gray-200">
+            <p className="text-md leading-loose text-gray-200">
               We designed a culture that allows our stewards to assimilate with
               our clients and bring our best
             </p>

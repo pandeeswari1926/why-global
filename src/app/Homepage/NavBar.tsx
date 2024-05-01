@@ -82,7 +82,7 @@ const NavBar = () => {
               {showDropdown && (
                 <div className="absolute -ml-14 downup bg-white text-black mt-2 w-44 p-4 rounded shadow-lg">
                   <div className="flex flex-col justify-center items-center text-sm leading-loose">
-                    <Link className="hover:text-primarycolor " href="/about">
+                    <Link className="hover:text-primarycolor " href="/About">
                       Who We Are
                     </Link>
                     <Link
@@ -219,7 +219,7 @@ const NavBar = () => {
                     Back
                   </li>
                   <Link
-                    href="/about"
+                    href="/About"
                     className="hover:bg-white hover:text-primarycolor p-1"
                     onClick={toggleNavbar}
                   >

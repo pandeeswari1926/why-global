@@ -32,7 +32,7 @@ const Wgs = () => {
             <div className="w-full flex flex-col justify-end items-end">
               <p className="bg-[#FF8900] w-fit text-white px-1 py-2 rounded-t-xl text-sm">
                 <FontAwesomeIcon icon={faCalendar} />
-                &nbsp; jun 04,2023
+                &nbsp; Jun 04,2023
               </p>
             </div>
             <div className="bg-white drop-shadow-xl p-4">
@@ -52,7 +52,7 @@ const Wgs = () => {
             <div className="w-full flex flex-col justify-end items-end">
               <p className="bg-[#FF8900] w-fit text-white px-1 py-2 rounded-t-xl text-sm">
                 <FontAwesomeIcon icon={faCalendar} />
-                &nbsp; jun 04,2023
+                &nbsp; Jun 04,2023
               </p>
             </div>
             <div className="bg-white drop-shadow-xl p-4">
@@ -72,7 +72,7 @@ const Wgs = () => {
             <div className="w-full flex flex-col justify-end items-end">
               <p className="bg-[#FF8900] w-fit text-white px-1 py-2 rounded-t-xl text-sm">
                 <FontAwesomeIcon icon={faCalendar} />
-                &nbsp; jun 04,2023
+                &nbsp; Jun 04,2023
               </p>
             </div>
             <div className="bg-white drop-shadow-xl p-4">
