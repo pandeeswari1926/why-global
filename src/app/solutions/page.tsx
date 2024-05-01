@@ -102,7 +102,7 @@ function Solutions() {
             </p>
           </div>
 
-          <p className="font-light md:text-sm text-sm md:text-left text-center leading-loose text-gray-500">
+          <p className="font-light md:text-base text-sm md:text-left text-center leading-loose text-gray-500">
             Welcome to our Learning Management System (LMS) page, where we offer
             a comprehensive solution designed to transform the way you deliver
             and manage online learning.
