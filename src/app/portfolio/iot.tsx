@@ -37,8 +37,8 @@ interface IotItem {
               }
           }`
       ).then((res: { iot: IotItem[] }[]) => {
-        console.log(res[0].iot, "iot");
-        SetIot(res[0].iot);
+        console.log(res[0]?.iot, "iot");
+        SetIot(res[0]?.iot);
       });
     }, []);
   
@@ -51,14 +51,14 @@ interface IotItem {
           >
             <div className="space-y-5 font-sans xl:w-[87%]">
               <h1 className="text-[#FF9315] sm:text-xl font-semibold">
-                {item.heading}
+                {item?.heading}
               </h1>
               <h1 className="sm:text-3xl text-lg text-gray-500 font-bold">
-                {item.subHeading}
+                {item?.subHeading}
               </h1>
               {item.content.map((items, index) => (
                 <p key={index} className="text-sm text-gray-500 text-justify">
-                  {items.Content}
+                  {items?.Content}
                 </p>
               ))}
             </div>

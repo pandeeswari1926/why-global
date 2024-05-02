@@ -34,8 +34,8 @@ const WebDesign: React.FC = () => {
             }
         }`
     ).then((res: { webDesign: WebDesignItem[] }[]) => {
-      console.log(res[0].webDesign, "webdesign");
-      setWebDesign(res[0].webDesign);
+      console.log(res[0]?.webDesign, "webdesign");
+      setWebDesign(res[0]?.webDesign);
     });
   }, []);
 
@@ -48,14 +48,14 @@ const WebDesign: React.FC = () => {
         >
           <div className="space-y-5 font-sans xl:w-[87%]">
             <h1 className="text-[#FF9315] sm:text-xl font-semibold">
-              {item.heading}
+              {item?.heading}
             </h1>
             <h1 className="sm:text-3xl text-lg text-gray-500 font-bold">
-              {item.subHeading}
+              {item?.subHeading}
             </h1>
-            {item.content.map((para, ind) => (
+            {item?.content?.map((para, ind) => (
               <p className="text-sm text-justify text-gray-500" key={ind}>
-                {para.Content}
+                {para?.Content}
               </p>
             ))}
           </div>

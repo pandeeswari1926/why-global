@@ -37,11 +37,11 @@ export const Banner: React.FC = () => {
         >
           <div className="space-y-2 pt-5 lg:pt-0">
             <h1 className="text-white text-xl sm:text-4xl lg:text-7xl font-semibold lg:w-[90%] lg:mx-auto">
-              {item.heading}
+              {item?.heading}
             </h1>
           </div>
           <p className="text-white sm:text-base text-sm p-2 sm:p-0 lg:w-1/2 lg:mx-auto">
-            {item.content}
+            {item?.content}
           </p>
           <button className="bg-[#FF9315] text-white border-2 border-white font-semibold xs2:p-4 p-2 px-5 xs2:px-10 lg:px-16 rounded-full hover:text-[#FF9315] hover:bg-white drop-shadow-2xl text-xl lg:text-2xl ">
             Get started

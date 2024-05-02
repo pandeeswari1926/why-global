@@ -37,14 +37,14 @@ function TestimonalsClient() {
                 }
             }`
     ).then((res) => {
-      console.log(res[0].review, "sliderdata");
-      setsliderdata(res[0].review);
+      console.log(res[0]?.review, "sliderdata");
+      setsliderdata(res[0]?.review);
     });
   }, []);
  
   useEffect(() => {
     const interval = setInterval(() => {
-      setLoops((prev) => (prev + 1) % sliderdata.length);
+      setLoops((prev) => (prev + 1) % sliderdata?.length);
     }, 5000);
 
     return () => clearInterval(interval);
