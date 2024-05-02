@@ -1,70 +1,112 @@
 "use client";
-import React, { useEffect } from 'react'
-import Image from 'next/image'
-import CountUp from 'react-countup'
-import plus from '../../../public/+.png';
-import SanityClient from '../SanityClient';
+import React, { useEffect, useState } from "react";
+import Image from "next/image";
+import CountUp from "react-countup";
+import plus from "../../../public/+.png";
+import SanityClient from "../SanityClient";
+import Item from "antd/es/list/Item";
 
 const World = () => {
-    useEffect(()=>{
-        SanityClient.fetch(`*[_type=='Home']{
-            World[]{
-                title,
-                growth[]{
-                    growth,
-                    Content,
+  interface world {
+    title: string;
+    growth1: [
+      {
+        growth: number;
+        Content: string;
+      }
+    ];
+    growth2: [
+      {
+        growth: number;
+        Content: string;
+      }
+    ];
+  }
+  interface AllData {
+    World: world[];
+  }
+  const [data, setData] = useState<AllData | null>(null);
+  useEffect(() => {
+    const getData = () => {
+      SanityClient.fetch(
+        `*[_type=='Home']{
+                World[]{
+                    title,
+                    growth1[]{
+                        growth,
+                        Content,
+                    },
+                    growth2[]{
+                        growth,
+                        Content,
+                    }
                 }
-            }
-        }`).then((res)=>{
-            console.log(res)
-        })
-    },[])
-    return (
-        <>
-            <section className='bg-world bg-cover h-[10%] w-full p-5 md:p-20 flex flex-col text-center text-white grayscale-'>
-                <h1 className='text-base sm:text-xl md:text-2xl font-bold pb-[8%]'>LET’S TALK ABOUT OUR BUSINESS GROWTH IN<br /> CONSULTING SOLUTION</h1>
-                <section className='grid grid-cols-1 lg:grid-cols-2'>
-                    <section className='flex flex-col pt-8 pb-[10%]'>
-                        <div className='flex text-center justify-center'>
-                            <h1 className='text-7xl md:text-9xl font-bold'><CountUp start={0} end={100} duration={3} delay={0} /></h1>
-                            <Image src={plus} alt='plus icon' className='h-5 w-5' /><br />
-                        </div>
-                        <p className=''>Learn More About Our Success Stories</p>
+            }`
+      ).then((res) => {
+        console.log(res);
+        setData(res[0]);
+      });
+    };
+    getData();
+  }, []);
+  return (
+    <>
+      <section className="bg-world bg-cover h-[10%] w-full p-5 md:p-20 flex flex-col text-center text-white grayscale-">
+        {data &&
+          data.World.map((Item, index) => (
+            <div>
+              <h1 className="text-base sm:text-xl md:text-2xl font-bold pb-[8%]">
+                {Item.title}
+              </h1>
+              <section className="grid grid-cols-1 lg:grid-cols-2">
+                {Item.growth1.map((item: any, index: any) => (
+                  <div>
+                    <section className="flex flex-col pt-8 pb-[10%]">
+                      <div className="flex text-center justify-center">
+                        <h1 className="text-7xl md:text-9xl font-bold">
+                          <CountUp
+                            start={0}
+                            end={item.growth}
+                            duration={3}
+                            delay={0}
+                          />
+                        </h1>
+                        <img
+                          src="./+.png"
+                          alt="plus icon"
+                          className="h-5 w-5"
+                        />
+                        <br />
+                      </div>
+                      <p className="">{item.Content}</p>
                     </section>
-                    <section className='grid grid-cols-1 sm:grid-cols-2 gap-10'>
-                        <section className='flex flex-col'>
-                            <div className='flex text-center justify-center'>
-                                <h1 className='text-4xl md:text-7xl'><CountUp start={0} end={100} duration={3} delay={0} /></h1>
-                                <Image src={plus} alt='plus icon' className='h-5 w-5' /><br />
-                            </div>
-                            <p className=''>About Our Success Stories</p>
-                        </section>
-                        <section className='flex flex-col'>
-                            <div className='flex text-center justify-center'>
-                                <h1 className='text-4xl md:text-7xl'><CountUp start={0} end={100} duration={3} delay={0} /></h1>
-                                <Image src={plus} alt='plus icon' className='h-5 w-5' /><br />
-                            </div>
-                            <p className=''>About Our Success Stories</p>
-                        </section>
-                        <section className='flex flex-col'>
-                            <div className='flex text-center justify-center'>
-                                <h1 className='text-4xl md:text-7xl'><CountUp start={0} end={100} duration={3} delay={0} /></h1>
-                                <Image src={plus} alt='plus icon' className='h-5 w-5' /><br />
-                            </div>
-                            <p className=''>About Our Success Stories</p>
-                        </section>
-                        <section className='flex flex-col'>
-                            <div className='flex text-center justify-center'>
-                                <h1 className='text-4xl md:text-7xl'><CountUp start={0} end={100} duration={3} delay={0} /></h1>
-                                <Image src={plus} alt='plus icon' className='h-5 w-5' /><br />
-                            </div>
-                            <p className=''>About Our Success Stories</p>
-                        </section>
+                  </div>
+                ))}
+                <section className="grid grid-cols-1 sm:grid-cols-2 gap-10">
+                  {Item.growth2.map((items, indexes) => (
+                    <section className="flex flex-col">
+                      <div className="flex text-center justify-center">
+                        <h1 className="text-4xl md:text-7xl">
+                          <CountUp
+                            start={0}
+                            end={items.growth}
+                            duration={3}
+                            delay={0}
+                          />
+                        </h1>
+                        <Image src={plus} alt="plus icon" className="h-5 w-5" />
+                        <br />
+                      </div>
+                      <p className="">{items.Content}</p>
                     </section>
+                  ))}
                 </section>
-            </section>
-        </>
-    )
-}
+              </section>
+            </div>
+          ))}
+      </section>
+    </>
+  );
+};
 
-export default World
+export default World;

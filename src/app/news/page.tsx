@@ -7,6 +7,7 @@ import image3 from "../../../public/e-commerce.jpg";
 import image4 from "../../../public/crm.jpg";
 import image5 from "../../../public/collaborator.jpg";
 import { BsDot } from "react-icons/bs";
+import SanityClient from "../SanityClient";
 function Page(){
   const [showActiveContent, setShowActiveContent] = React.useState("Popular");
   const toggleContent = (content: string) => {
@@ -101,10 +102,52 @@ function Page(){
       category: "Tech Updates",
     },
   ];
-  const [filterData, setFilterData] = useState(data2);
+  interface NewsArray {
+    image : {asset:{url:string}};
+    heading :string;
+    date:string;
+    content:string;
+    postStatus:string;
+    category:string;
+  }
+
+  interface AllData {
+    newsArray : NewsArray[]
+  }
+  const [dataItems,setDataItems] = useState<AllData |null>(null);
+  useEffect(()=>{
+    const getdata = () =>{
+      SanityClient.fetch(`*[_type=='news']{
+        metaTitle,
+        MetaDescription,
+        MetaData,
+        FocusKeyword,
+        MetaURL,
+        newsArray[]{
+          image{
+            asset->{
+              url
+            }
+          },
+          heading,
+          date,
+          content,
+          postStatus,
+          category,
+        }
+      }`).then((res)=>{
+        console.log(res);
+        setDataItems(res[0]);
+      }).catch((err)=>{
+        console.log(err);
+      })
+    }
+    getdata(); 
+  },[])
+  const [filterData, setFilterData] = useState<NewsArray[] | null>(dataItems?.newsArray || null);
   useEffect(() => {
-    const filterDatas = data2.filter(
-      (item) => item.status.toLowerCase() === showActiveContent.toLowerCase()
+    const filterDatas =dataItems && dataItems?.newsArray?.filter(
+      (items:any) => items.postStatus.toLowerCase() === showActiveContent.toLowerCase()
     );
     setFilterData(filterDatas);
   }, [showActiveContent]);
@@ -114,12 +157,12 @@ function Page(){
         <h1 className="py-5 font-bold text-4xl xs:mx-0 mx-auto relative flex flex-col w-fit"><span>NEWS</span><span className="w-full bg-primarycolor  h-[2px]"></span></h1>
         <div className="flex lg:flex-row flex-col-reverse gap-10 w-full ">
           <div className="flex flex-col gap-5 lg:w-[70%] w-full h-full">
-            {data.map((item, index) => (
+            {dataItems && dataItems.newsArray.map((item:any, index:any) => (
               <div key={index} className="flex flex-col gap-5">
                 <div className=" flex lg:flex-row flex-col gap-5 justify-between items-center">
                   <div className="sm:w-[50%] sm:h-[250px] w-full h-full">
                     <img
-                      src={item.image}
+                      src={item?.image?.asset?.url}
                       alt="duplicate"
                       className="w-full h-full object-cover"
                     />
@@ -164,14 +207,15 @@ function Page(){
                 </button>
               </div>
               <div className="space-y-3">
-                {filterData.map((item: any, index: any) => (
-                  <div key={index} className="flex flex-row gap-3">
+                {filterData?.map((items: any, indexs: any) => (
+                  <div key={indexs} className="flex flex-row gap-3">
                     <div className="w-[20%] h-12">
-                      <img src={item.image} alt="" className="w-full h-full" />
+                      <img src={items?.image?.asset?.url} alt="" className="w-full h-full" />
                     </div>
                     <div className="w-[70%]">
-                      <h1 className="font-bold text-xs">{item.heading}</h1>
-                      <p className="text-xs">{item.date}</p>
+                      <h1 className="font-bold text-xs">{items.heading}
+                      </h1>
+                      <p className="text-xs">{items.date}</p>
                     </div>
                   </div>
                 ))}
@@ -180,7 +224,7 @@ function Page(){
             <div className="lg:w-full sm:w-[50%] w-full h-full">
               <h1 className="font-bold text-lg">Categories</h1>
               <div>
-                {data2.map((item: any, index: any) => (
+                {dataItems && dataItems.newsArray.map((item: any, index: any) => (
                   <div key={index}>
                     <div className="flex flex-row items-center text-sm">
                       <BsDot className="text-primarycolor size-8" />

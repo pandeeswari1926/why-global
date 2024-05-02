@@ -1,5 +1,5 @@
 "use client";
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import heli from "../../../public/helicopter.gif";
 import style2 from "../../../public/style2.png";
@@ -9,6 +9,7 @@ import star from "../../../public/stars.png";
 import Slider from "react-slick";
 import tick from "../../../public/tick.png";
 import SanityClient from "../SanityClient";
+import { url } from "inspector";
 
 function Helicopter() {
   var settings = {
@@ -34,8 +35,43 @@ function Helicopter() {
       },
     ],
   };
-  useEffect(()=>{
-    SanityClient.fetch(`*[_type=='Home']{
+  interface Review {
+    title: string;
+    subtitle: string;
+    client: [
+      {
+        Photo: { asset: { url: string } };
+        Content: string;
+        name: string;
+        role: string;
+      }
+    ];
+  }
+
+  interface Technology {
+    Photo: { asset: { url: string } };
+    programming: [
+      {
+        technology: string;
+        heading: string;
+        content: string;
+        list: [
+          {
+            list: string;
+          }
+        ];
+      }
+    ];
+  }
+  interface AllData {
+    review: Review[];
+    technology: Technology[];
+  }
+  const [data, setData] = useState<AllData | null>(null);
+  useEffect(() => {
+    const getData = () => {
+      SanityClient.fetch(
+        `*[_type=='Home']{
         review[]{
             title,
             subtitle,
@@ -65,10 +101,14 @@ function Helicopter() {
             }
           },
         },
-    }`).then((res)=>{
-        console.log(res)
-    })
-})
+    }`
+      ).then((res) => {
+        console.log(res);
+        setData(res[0]);
+      });
+    };
+    getData();
+  }, []);
   const [clickindex, setclickindex] = useState(0);
   function handleclick(value: any, e: any) {
     setContent(e.target.textContent);
@@ -91,144 +131,67 @@ function Helicopter() {
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
       ></link>
       <div className="bg-custom w-full h-full bg-no-repeat relative lg:p-10">
-        <div className="relative z-10">
-          <div className="w-full h-full lg:h-[400px] relative mx-auto bg-white right-0 ">
-            <div className="pt-6 lg:text-start text-center lg:pl-10">
-              <h1 className="lg:text-2xl text-xl text-primarycolor font-semibold text-center">
-                Our Clients Review
-              </h1>
-              <h1 className="lg:text-2xl text-lg text-gray-600 font-semibold text-center">
-                Our Clients Testimonials About
-              </h1>
+        {data &&
+          data.review.map((item: any, index: any) => (
+            <div className="relative z-10">
+              <div className="w-full h-full lg:h-[400px] relative mx-auto bg-white right-0 ">
+                <div className="pt-6 lg:text-start text-center lg:pl-10">
+                  <h1 className="lg:text-2xl text-xl text-primarycolor font-semibold text-center">
+                    {item.title}
+                  </h1>
+                  <h1 className="lg:text-2xl text-lg text-gray-600 font-semibold text-center">
+                    {item.subtitle}
+                  </h1>
+                </div>
+                <div className="flex lg:flex-row flex-col gap-10 p-5">
+                  <Slider {...settings} className="overflow-hidden">
+                    {item.client.map((items: any, indexs: any) => (
+                      <div>
+                        <div className="flex gap-2 justify-center lg:flex-row flex-col w-[90%] relative mx-auto  pt-8">
+                          <div className="lg:w-[80%] w-full relative">
+                            <Image
+                              src={style2}
+                              alt="style2"
+                              className="lg:w-[80%] w-full"
+                            />
+                            <img
+                              src={items?.Photo?.asset?.url}
+                              alt="Profile1"
+                              className="lg:w-[70%] w-full top-2 absolute"
+                            />
+                            <Image
+                              src={style3}
+                              alt="style2"
+                              className="absolute sm:w-[20%] w-[30%] top-0 right-[80%]"
+                            />
+                          </div>
+                          <div className="w-full lg:pt-2">
+                            <p className="lg:text-left lg:text-md font-normal text-[#5D5D5D] text-justify">
+                              {items.Content}
+                            </p>
+                            <hr className=" h-0.5 bg-[#FF8900]  mt-4 " />
+                            <div className="flex md:flex-row flex-col justify-between">
+                              <div>
+                                <p className="text-center">{items.name}</p>
+                                <p className=" text-center text-[#FF8900]">
+                                  {items.role}
+                                </p>
+                              </div>
+                              <div className="justify-center items-center  md:pl-0 md:w-[30%] mx-auto">
+                                <Image src={star} alt="" className=" md:mt-5" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </Slider>
+                </div>
+              </div>
             </div>
-            <div className="flex lg:flex-row flex-col gap-10 p-5">
-              <Slider {...settings} className="overflow-hidden">
-                <div>
-                  <div className="flex gap-2 justify-center lg:flex-row flex-col w-[90%] relative mx-auto  pt-8">
-                    <div className="lg:w-[80%] w-full relative">
-                      <Image
-                        src={style2}
-                        alt="style2"
-                        className="lg:w-[80%] w-full"
-                      />
-                      <Image
-                        src={profile1}
-                        alt="Profile1"
-                        className="lg:w-[70%] w-full top-2 absolute"
-                      />
-                      <Image
-                        src={style3}
-                        alt="style2"
-                        className="absolute sm:w-[20%] w-[30%] top-0 right-[80%]"
-                      />
-                    </div>
-                    <div className="w-full lg:pt-2">
-                      <p className="lg:text-left lg:text-md font-normal text-[#5D5D5D] text-justify">
-                        Virtual reality environments offer a way to ingrain
-                        knowledge more deeply and quickly compared to
-                        traditional methods. By prioritizing spatial
-                        information, VR helps learners map their understanding
-                        effectively.
-                      </p>
-                      <hr className=" h-0.5 bg-[#FF8900] mt-4 " />
-                      <div className="flex md:flex-row flex-col justify-between">
-                        <div>
-                          <p className="text-center">MARK</p>
-                          <p className=" text-center text-[#FF8900]">CEO</p>
-                        </div>
-                        <div className="justify-center items-center  md:pl-0 md:w-[30%] mx-auto">
-                          <Image src={star} alt="" className=" md:mt-5" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <div className="flex gap-2 justify-center lg:flex-row flex-col w-[90%] relative mx-auto  pt-8">
-                    <div className="lg:w-[80%] w-full relative">
-                      <Image
-                        src={style2}
-                        alt="style2"
-                        className="lg:w-[80%] w-full"
-                      />
-                      <Image
-                        src={profile1}
-                        alt="Profile1"
-                        className="lg:w-[70%] w-full top-2 absolute"
-                      />
-                      <Image
-                        src={style3}
-                        alt="style2"
-                        className="absolute sm:w-[20%] w-[30%] top-0 right-[80%]"
-                      />
-                    </div>
-                    <div className="w-full lg:pt-2">
-                      <p className="lg:text-left lg:text-md font-normal text-[#5D5D5D] text-justify">
-                        Virtual reality environments offer a way to ingrain
-                        knowledge more deeply and quickly compared to
-                        traditional methods. By prioritizing spatial
-                        information, VR helps learners map their understanding
-                        effectively.
-                      </p>
-                      <hr className=" h-0.5 bg-[#FF8900]  mt-4 " />
-                      <div className="flex md:flex-row flex-col justify-between">
-                        <div>
-                          <p className="text-center">MARK</p>
-                          <p className=" text-center text-[#FF8900]">CEO</p>
-                        </div>
-                        <div className="justify-center items-center  md:pl-0 md:w-[30%] mx-auto">
-                          <Image src={star} alt="" className=" md:mt-5" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <div className="flex gap-2 justify-center lg:flex-row flex-col w-[90%] relative mx-auto  pt-8">
-                    <div className="lg:w-[80%] w-full relative">
-                      <Image
-                        src={style2}
-                        alt="style2"
-                        className="lg:w-[80%] w-full"
-                      />
-                      <Image
-                        src={profile1}
-                        alt="Profile1"
-                        className="lg:w-[70%] w-full top-2 absolute"
-                      />
-                      <Image
-                        src={style3}
-                        alt="style2"
-                        className="absolute sm:w-[20%] w-[30%] top-0 right-[80%]"
-                      />
-                    </div>
-                    <div className="w-full lg:pt-2">
-                      <p className="lg:text-left lg:text-md font-normal text-[#5D5D5D] text-justify">
-                        Virtual reality environments offer a way to ingrain
-                        knowledge more deeply and quickly compared to
-                        traditional methods. By prioritizing spatial
-                        information, VR helps learners map their understanding
-                        effectively.
-                      </p>
-                      <hr className=" h-0.5 bg-[#FF8900]  mt-4 " />
-                      <div className="flex md:flex-row flex-col justify-between">
-                        <div>
-                          <p className="text-center">MARK</p>
-                          <p className=" text-center text-[#FF8900]">CEO</p>
-                        </div>
-                        <div className="justify-center items-center  md:pl-0 md:w-[30%] mx-auto">
-                          <Image src={star} alt="" className=" md:mt-5" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </Slider>
-            </div>
-          </div>
-        </div>
-
-        <div className="w-full lg:h-fit relative  mx-auto right-0  mt-[15%] ">
+          ))}
+        {data && data.technology.map((item,index)=>(
+          <div className="w-full lg:h-fit relative  mx-auto right-0  mt-[15%] ">
           <div className="lg:block hidden oran bg-primarycolor -left-10 -top-[85%] absolute w-[60%]  h-[500px]"></div>
           <div className="absolute lg:-top-[30%] lg:left-10 xs:-top-[11%] -top-[9%] z-10 left-1/2 -translate-x-1/2 lg:-translate-x-0 ">
             <p className="lg:text-2xl md:text-2xl xs:text-2xl text-sm pt-5 lg:text-white lg:text-start text-center text-black">
@@ -240,11 +203,11 @@ function Helicopter() {
           </div>
           <div className="w-full h-full bg-white flex lg:flex-row flex-col gap-5 justify-center rounded-md drop-shadow-lg  relative">
             <div className="lg:w-[50%] flex justify-center pt-5 lg:pt-0 items-center">
-              <Image
-                src={heli}
+              <img
+                src={item?.Photo?.asset?.url}
                 alt="Helicopter"
                 className="lg:w-[80%] w-[90%] h-[90%] lg:h-[80%] mx-auto rounded-lg drop-shadow-lg  border-2 border-primarycolor"
-              ></Image>
+              />
             </div>
             <div className="lg:w-[50%] relative flex h-full flex-col ">
               <ul className="flex flex-row justify-around items-center relative w-full h-14  px-2 md:px-0 bg-gray-200  md:justify-evenly md:text-lg text-sm">
@@ -419,6 +382,8 @@ function Helicopter() {
             </div>
           </div>
         </div>
+        ))}
+        
       </div>
     </div>
   );
