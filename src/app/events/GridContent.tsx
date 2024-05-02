@@ -25,8 +25,12 @@ const itemRender = (_: any, type: any, originalElement: any) => {
   return originalElement;
 };
 
+interface EventTitle {
+  title: string;
+}
+
 const GridContent = () => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<EventTitle[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [pageSize] = useState(4);
   const [image, setImage] = useState([]);
@@ -58,7 +62,7 @@ const GridContent = () => {
 
   const indexOfLastItem = currentPage * pageSize;
   const indexOfFirstItem = indexOfLastItem - pageSize;
-  const currentData = data.slice(indexOfFirstItem, indexOfLastItem);
+  const currentData: EventTitle[] = data.slice(indexOfFirstItem, indexOfLastItem);
 
   const handlePageChange = (page: any) => {
     setCurrentPage(page);
