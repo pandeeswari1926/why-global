@@ -14,7 +14,7 @@ function Page(){
   };
   const data = [
     {
-      image: image1,
+      image: "./social media.jpeg",
       heading: "Chennai's Social Media Companies Redefining Strategies",
       date: "By Admin April 20th 2024",
       content:
@@ -22,7 +22,7 @@ function Page(){
       status: "Popular",
     },
     {
-      image: image2,
+      image: "./social media.jpeg",
       heading: "Digital Marketing Comparison: SEO vs PPC",
       date: "By Admin April 20th 2024",
       content:
@@ -30,7 +30,7 @@ function Page(){
       status: "Popular",
     },
     {
-      image: image3,
+      image: "./e-commerce.jpg",
       heading: "Exploring Career Foundry's Dynamic UX Design Curriculum",
       date: "By Admin April 20th 2024",
       content:
@@ -38,7 +38,7 @@ function Page(){
       status: "Recent",
     },
     {
-      image: image4,
+      image: "./crm.jpg",
       heading: "E-commerce Development: Building Your Online Retail Empire",
       date: "By Admin April 20th 2024",
       content:
@@ -46,7 +46,7 @@ function Page(){
       status: "Recent",
     },
     {
-      image: image5,
+      image: "./collaborator.jpg",
       heading: "Unlocking Success: The Art of Email Campaign Management",
       date: "By Admin April 20th 2024",
       content:
@@ -56,7 +56,7 @@ function Page(){
   ];
   const data2 = [
     {
-      image: image1,
+      image: "./social media.jpeg",
       heading: "Chennai's Social Media Companies Redefining Strategies",
       date: "By Admin April 20th 2024",
       content:
@@ -65,7 +65,7 @@ function Page(){
       category: "Partnerships and Collaborations",
     },
     {
-      image: image2,
+      image: "./social media.jpeg",
       heading: "Digital Marketing Comparison: SEO vs PPC",
       date: "By Admin April 20th 2024",
       content:
@@ -74,7 +74,7 @@ function Page(){
       category: "Company Achievements",
     },
     {
-      image: image3,
+      image: "./e-commerce.jpg",
       heading: "Exploring Career Foundry's Dynamic UX Design Curriculum",
       date: "By Admin April 20th 2024",
       content:
@@ -83,7 +83,7 @@ function Page(){
       category: "CSR Initiatives",
     },
     {
-      image: image4,
+      image: "./crm.jpg",
       heading: "E-commerce Development: Building Your Online Retail Empire",
       date: "By Admin April 20th 2024",
       content:
@@ -92,7 +92,7 @@ function Page(){
       category: "Tech Updates",
     },
     {
-      image: image5,
+      image: "./collaborator.jpg",
       heading: "Unlocking Success: The Art of Email Campaign Management",
       date: "By Admin April 20th 2024",
       content:
@@ -118,7 +118,7 @@ function Page(){
               <div key={index} className="flex flex-col gap-5">
                 <div className=" flex lg:flex-row flex-col gap-5 justify-between items-center">
                   <div className="sm:w-[50%] sm:h-[250px] w-full h-full">
-                    <Image
+                    <img
                       src={item.image}
                       alt="duplicate"
                       className="w-full h-full object-cover"
@@ -167,7 +167,7 @@ function Page(){
                 {filterData.map((item: any, index: any) => (
                   <div key={index} className="flex flex-row gap-3">
                     <div className="w-[20%] h-12">
-                      <Image src={item.image} alt="" className="w-full h-full" />
+                      <img src={item.image} alt="" className="w-full h-full" />
                     </div>
                     <div className="w-[70%]">
                       <h1 className="font-bold text-xs">{item.heading}</h1>
