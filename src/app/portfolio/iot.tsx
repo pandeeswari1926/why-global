@@ -1,8 +1,28 @@
-import React from 'react'
+"use client";
+import React, { useEffect } from 'react'
 import Image from 'next/image';
 import IOTpic from '../../../public/IOTpic.png';
+import SanityClient from '../SanityClient';
 
 const Iot = () => {
+    useEffect(()=>{
+        SanityClient.fetch(`*[_type=='portfolio']{
+            iot[]{
+                heading,
+                subHeading,
+                image{
+                    asset->{
+                        url
+                    }
+                },
+                content[]{
+                    Content
+                },
+            }
+        }`).then((res)=>{
+            console.log(res)
+        })
+    },[])
     return (
         <>
             <div className='sm:m-10 m-5 py-5 sm:py-0 justify-items-center grid lg:grid-cols-2 grid-cols-1 lg:gap-0 gap-8'>
@@ -15,7 +35,7 @@ const Iot = () => {
                     <p className='text-sm text-gray-500 text-justify'> Provide real-world examples and case studies showcasing successful implementations of IoT solutions, highlighting the benefits achieved and lessons learned from each deployment.</p>
                 </div>
                 <div className='w-full h-full'>
-                    <Image src={IOTpic} alt='' className='w-full' />
+                    <img src='./IOTpic.png' alt='' className='w-full' />
                 </div>
             </div>
         </>

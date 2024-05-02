@@ -1,8 +1,28 @@
-import React from 'react'
+"use client";
+import React, { useEffect } from 'react'
 import Image from 'next/image';
 import live from '../../../public/WGS LIVE PICS.gif';
+import SanityClient from '../SanityClient';
 
 const WebDesign = () => {
+    useEffect(()=>{
+        SanityClient.fetch(`*[_type=='portfolio']{
+            webDesign[]{
+                heading,
+                subHeading,
+                content[]{
+                    Content,
+                },
+                image{
+                    asset->{
+                        url
+                    }
+                },
+            }
+        }`).then((res)=>{
+            console.log(res)
+        })
+    },[])
     return (
         <>
             <div className='m-5 sm:m-10 justify-items-center grid lg:grid-cols-2 grid-cols-1 lg:gap-0 gap-10'>
@@ -15,7 +35,7 @@ const WebDesign = () => {
                     <p className='text-sm text-gray-500 text-justify'>But we don&apos;t just stop at aesthetics. Our websites are not only visually stunning but also highly functional and user-friendly. We employ the latest web technologies and best practices to ensure seamless navigation, fast loading times, and optimal performance across all devices and platforms.</p>
                 </div>
                 <div className='w-full h-full'>
-                    <Image src={live} alt='' className='w-full' />
+                    <img src='./WGS LIVE PICS.gif' alt='' className='w-full' />
                 </div>
             </div>
         </>

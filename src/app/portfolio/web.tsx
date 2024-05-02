@@ -1,9 +1,10 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import ecommerce from "../../../public/36.png";
 import wordpress from "../../../public/37.png";
 import html from "../../../public/38.png";
+import SanityClient from "../SanityClient";
 
 const Web = () => {
   const [showActiveContent, setShowActiveContent] =
@@ -11,6 +12,24 @@ const Web = () => {
   const toggleContent = (content: string) => {
     setShowActiveContent(content);
   };
+  useEffect(()=>{
+    SanityClient.fetch(`*[_type=='portfolio']{
+      webDevelopment[]{
+        title,
+        content[]{
+          heading,
+          content,
+          image{
+            asset->{
+              url
+            }
+          }
+        }
+      }
+    }`).then((res)=>{
+      console.log(res)
+    })
+  },[])
   return (
     <>
       <div className="relative  w-full lg:grid lg:grid-cols-2 lg:pr-[20%] py-5">
@@ -86,7 +105,7 @@ const Web = () => {
                   </button>
                   <div className="flex lg:justify-evenly justify-center">
                     <div className="lg:block hidden"></div>
-                    <Image src={ecommerce} alt="" className="w-96" />
+                    <img src='./36.png' alt="" className="w-96" />
                   </div>
                 </div>
               </div>
@@ -113,7 +132,7 @@ const Web = () => {
                   </button>
                   <div className="flex lg:justify-evenly justify-center">
                     <div className="lg:block hidden"></div>
-                    <Image src={ecommerce} alt="" className="w-96" />
+                    <img src='./36.png' alt="" className="w-96" />
                   </div>
                 </div>
               </div>
@@ -140,7 +159,7 @@ const Web = () => {
                   </button>
                   <div className="flex lg:justify-evenly justify-center">
                     <div className="lg:block hidden"></div>
-                    <Image src={ecommerce} alt="" className="w-96" />
+                    <img src='./36.png' alt="" className="w-96" />
                   </div>
                 </div>
               </div>

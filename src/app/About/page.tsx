@@ -98,7 +98,7 @@ function About() {
             <div className="lg:absolute relative lg:w-[70%] w-full md:top-[65%] lg:top-[43%] xl:top-[35%]  md:left-0 pl-10 z-10">
               <div className="grid lg:grid-cols-4 grid-cols-2 p-2 justify-evenly">
                 <div className="lg:w-[60%] w-[70%]">
-                  <Image alt="" src={icon1}></Image>
+                  <img alt="" src='./wgs gifs (19).gif' />
                   <p className="text-center md:text-3xl text-xl font-semibold pt-4 text-gray-500">
                     500%
                   </p>
@@ -107,7 +107,7 @@ function About() {
                   </p>
                 </div>
                 <div className="lg:w-[60%] w-[70%]">
-                  <Image alt="" src={icon2}></Image>
+                  <img alt="" src='./wgs gifs (17).gif' />
                   <p className="text-center md:text-3xl text-xl font-semibold pt-4 text-gray-500">
                     500%
                   </p>
@@ -116,7 +116,7 @@ function About() {
                   </p>
                 </div>
                 <div className="lg:w-[60%] w-[70%]">
-                  <Image alt="" src={icon3}></Image>
+                  <img alt="" src='/wgs gifs (20).gif' />
                   <p className="text-center md:text-3xl text-xl font-semibold pt-4 text-gray-500">
                     500%
                   </p>
@@ -125,7 +125,7 @@ function About() {
                   </p>
                 </div>
                 <div className="lg:w-[60%] w-[70%]">
-                  <Image alt="" src={icon4}></Image>
+                  <img alt="" src='./wgs-gifs-18--unscreen.gif' />
                   <p className="text-center md:text-3xl text-xl font-semibold pt-4 text-gray-500">
                     500%
                   </p>
@@ -140,19 +140,19 @@ function About() {
         <div className="w-full h-full bottom-0 tri absolute"></div>
         <div className="w-full h-full bottom-0 left-0 shadow-lg whitetri absolute"></div>
         <div className="absolute bottom-0 right-0  w-[45%] md:w-[40%] lg:w-[42%] z-10 lg:block hidden">
-          <Image alt="" src={hr}></Image>
+          <img alt="" src='./hr.png' />
         </div>
         <div className="absolute md:block hidden lg:top-[30%] md:top-[50%] bottom-[25%] right-0  w-[50%] md:w-[40%] lg:w-[40%]">
-          <Image alt="" src={line}></Image>
+          <img alt="" src='./line.png' />
         </div>
       </div>
       <div className="w-full flex flex-col justify-center items-center mt-7 ">
         <div className="relative w-full">
           <div className="flex lg:flex-row flex-col w-full  justify-center items-center gap-6 ">
             <div className="bg-white  outline outline-[#FF9315] relative w-[60%] h-52 lg:w-40  lg:h-44 md:w-[40%]  rounded-3xl drop-shadow-lg flex flex-col justify-center gap-3 items-center">
-              <BsFillBriefcaseFill
+              <img src="./suitcase.png"
               
-                className="lg:size-12 size-20  text-[#FF9315]"
+                className="lg:size-12 size-20   text-[#FF9315]"
               />
               <p className=" text-xl md:text-lg flex flex-col justify-center items-center text-center ">
                 <span className="text-3xl text-gray-400 font-semibold">12+</span>
@@ -160,7 +160,7 @@ function About() {
               </p>
             </div>
             <div className="bg-white  outline outline-[#FF9315] relative w-[60%] h-52 lg:w-40  lg:h-44 md:w-[40%]  rounded-3xl drop-shadow-lg flex flex-col justify-center gap-3 items-center">
-              <FaLocationDot
+              <img src="./pin.png"
               
                 className="lg:size-12 size-20  text-[#FF9315]"
               />
@@ -170,7 +170,7 @@ function About() {
               </p>
             </div>
             <div className="bg-white  outline outline-[#FF9315] relative w-[60%] h-52 lg:w-40  lg:h-44 md:w-[40%]  rounded-3xl drop-shadow-lg flex flex-col justify-center gap-3 items-center">
-              <GiPieChart
+              <img src="./bi.png"
               
                 className="lg:size-12 size-20  text-[#FF9315]"
               />
@@ -180,8 +180,8 @@ function About() {
               </p>
             </div>
             <div className="bg-white  outline outline-[#FF9315] relative w-[60%] h-52 lg:w-40  lg:h-44 md:w-[40%]  rounded-3xl drop-shadow-lg flex flex-col justify-center gap-3 items-center">
-              <BsPeopleFill
-              
+              <img
+              src="./peop.png"
                 className="lg:size-12 size-20  text-[#FF9315]"
               />
               <p className=" text-xl md:text-lg flex flex-col justify-center items-center text-center ">
@@ -195,14 +195,14 @@ function About() {
 
       <div className="w-full h-fit relative bg-no-repeat ">
         <div className="w-full h-full absolute lg:-top-16 -top-7 left-0 -z-10">
-          <Image src={slidegray} className="w-full h-full" alt=""></Image>
+          <img src='./slidergray.png' className="w-full h-full" alt="" />
         </div>
         <div className="flex lg:flex-row flex-col items-center justify-around">
           <div
             className=" lg:w-[50%] w-full
        md:p-10"
           >
-            <Image src={Certificate} className="w-full h-full" alt=""></Image>
+            <img src='./certificate.png' className="w-full h-full" alt="" />
           </div>
           <div className="lg:w-[50%] w-full lg:text-left text-justify p-5 ">
             <p className="text-xl  font-semibold text-primarycolor text-center md:text-left">
@@ -254,7 +254,7 @@ function About() {
         <div className="grid md:grid-cols-3 md:p-10 p-5  grid-cols-1 lg:gap-16 gap-5 h-full w-full items-center  justify-items-center lg:px-20 ">
           <div className="lg:w-[90%] h-full relative drop-shadow-2xl">
             <div className="border-2 mt-10 text-center bg-white rounded-tr-3xl">
-              <Image src={arrow} alt="project" className="w-[80%]" />
+              <img src='./arrow.gif' alt="project" className="w-[80%]" />
               <h1 className="xl:font-bold font-medium xl:p-3 lg:p-1 p-3 ">
                 IT DESIGN PROJECT
               </h1>
@@ -269,7 +269,7 @@ function About() {
           </div>
           <div className="h-full lg:w-[90%] relative drop-shadow-2xl">
             <div className=" border-2 bg-white text-center rounded-tr-3xl">
-              <Image src={rocket} alt="" className="w-[80%]" />
+              <img src='./rocket.gif' alt="" className="w-[80%]" />
               <h1 className="xl:font-bold font-medium  xl:p-3 lg:p-1 p-3">
                 PRODUCT ENGINEER
               </h1>
@@ -284,7 +284,7 @@ function About() {
           </div>
           <div className="lg:w-[90%] h-full relative drop-shadow-2xl">
             <div className="border-2 sm:mt-10 text-center bg-white rounded-tr-3xl">
-              <Image src={timer} alt="" className="w-[80%]" />
+              <img src='./timer.gif' alt="" className="w-[80%]" />
               <h1 className="xl:font-bold font-medium xl:p-3 lg:p-1 p-3">
                 CLOUD INTEGRATION
               </h1>
@@ -301,8 +301,8 @@ function About() {
       </main>
 <Video />
       <div className="mt-5 relative ">
-<Image src={sides} className="absolute top-0 left-0" alt=""></Image>
-<Image src={sides2} className="absolute -z-10 -top-10  lg:left-1/2 left-3/4 xs:block hidden" alt=""></Image>
+<img src='./round.png' className="absolute top-0 left-0" alt="" />
+<img src='./round2.png' className="absolute -z-10 -top-10  lg:left-1/2 left-3/4 xs:block hidden" alt="" />
         <div className="flex lg:flex-row flex-col justify-center items-center">
           <div className="lg:w-56 w-52 lg:h-56 h-52  bg-white flex drop-shadow-2xl justify-center items-center rounded-full">
             <div className="w-[70%] h-[70%] drop-shadow-lg text-center border-2 border-orange-400 font-semibold content-center text-lg text-orange-500 bg-white rounded-full">
@@ -315,25 +315,25 @@ function About() {
     <div className="w-full gap-2 flex sm:flex-row flex-col">
       <div className="sm:w-1/2 w-full relative">
       
-        <Image alt="" src={ruban} className="w-full h-full"></Image>
+        <img alt="" src='./rubanbox.jpg' className="w-full h-full" />
         <div className="bg-black absolute top-0 left-0 w-full h-full opacity-50"></div> 
         <p className="flex flex-col absolute w-full bottom-2 left-1/2 -translate-x-1/2 text-white px-2"><span className="text-center text-primarycolor md:text-lg sm:text-xl text-lg font-semibold">Ethical Responsibility</span><span className="text-center text-sm lg:w-[80%] w-full mx-auto">Ethical responsibility and social impact define our culture.</span></p>
         </div>
-      <div className="sm:w-1/2 w-full relative"><Image alt="" src={ram} className="w-full h-full">        
-      </Image>
+      <div className="sm:w-1/2 w-full relative"><img alt="" src='/ramyabox.jpg' className="w-full h-full" />        
+      
       <div className="bg-black absolute top-0 left-0 w-full h-full opacity-50"></div>
       <p className="flex flex-col absolute w-full bottom-2 left-1/2 -translate-x-1/2 text-white px-2"><span className="text-center text-primarycolor md:text-lg sm:text-xl text-lg font-semibold">Employee Empowerment</span><span className="text-center text-sm lg:w-[80%] w-full mx-auto">Ethical responsibility and social impact define our culture.</span></p>
  
            </div>
     </div>
     <div className="w-full gap-2 flex sm:flex-row flex-col">
-      <div className="sm:w-1/2 w-full relative"><Image alt="" src={dha} className="w-full h-full"></Image>
+      <div className="sm:w-1/2 w-full relative"><img alt="" src='./dhanushbox.jpg' className="w-full h-full" />
       <div className="bg-black absolute top-0 left-0 w-full h-full opacity-50"></div> 
       <p className="flex flex-col absolute w-full bottom-2 left-1/2 -translate-x-1/2 text-white px-2"><span className="text-center text-primarycolor md:text-lg sm:text-xl text-lg font-semibold">Ethical Responsibility</span><span className="text-center text-sm lg:w-[80%] w-full mx-auto">Ethical responsibility and social impact define our culture.</span></p>
 
 
       </div>
-      <div className="sm:w-1/2 w-full relative"><Image alt="" src={ajin} className="w-full h-full"></Image>        <div className="bg-black absolute top-0 left-0 w-full h-full opacity-50"></div> 
+      <div className="sm:w-1/2 w-full relative"><img alt="" src='./sudalaibox.jpg' className="w-full h-full" />       <div className="bg-black absolute top-0 left-0 w-full h-full opacity-50"></div> 
       <p className="flex flex-col absolute w-full bottom-2 left-1/2 -translate-x-1/2 text-white px-2"><span className="text-center text-primarycolor md:text-lg sm:text-xl text-lg font-semibold">Ethical Responsibility</span><span className="text-center text-sm lg:w-[80%] w-full mx-auto">Ethical responsibility and social impact define our culture.</span></p>
 
 </div>
@@ -342,7 +342,7 @@ function About() {
   </div>
 <div className="lg:w-[30%] w-full relative">
 <div className="bg-black absolute top-0 left-0 w-full h-full opacity-50"></div> 
-  <Image src={niv} className="w-full h-full" alt=""></Image>
+  <img src='./veenabox.jpg' className="w-full h-full" alt="" />
   <p className="flex flex-col absolute w-full bottom-2 left-1/2 -translate-x-1/2 text-white px-2"><span className="text-center text-primarycolor md:text-lg sm:text-xl text-lg font-semibold">Ethical Responsibility</span><span className="text-center text-sm lg:w-[90%] w-full mx-auto">WHY Global Services thrives on fearless innovation. Our culture embraces creativity,encourages out-of-the-box thinking.</span></p>
 
 </div>
@@ -358,18 +358,18 @@ function About() {
           <div>
             <div className="flex justify-center lg:flex-row flex-col w-[90%] relative mx-auto  pt-8">
               <div className="lg:w-[80%] w-full relative">
-                <Image
-                  src={style2}
+                <img
+                  src='./style2.png'
                   alt="style2"
                   className="lg:w-[80%] w-full"
                 />
-                <Image
-                  src={profile1}
+                <img
+                  src='./profile1.png'
                   alt="Profile1"
                   className="lg:w-[70%] w-full top-2 absolute"
                 />
-                <Image
-                  src={style3}
+                <img
+                  src='./style3.png'
                   alt="style2"
                   className="absolute sm:w-[20%] w-[30%] top-0 right-[80%]"
                 />
@@ -388,7 +388,7 @@ function About() {
                     <p className=" text-center text-[#FF8900]">CEO</p>
                   </div>
                   <div className="justify-center items-center pl-[10%] md:pl-0 md:w-[30%] mx-auto">
-                    <Image src={star} alt="" className=" md:mt-5" />
+                    <img src='./stars.png' alt="" className=" md:mt-5" />
                   </div>
                 </div>
               </div>
@@ -397,18 +397,18 @@ function About() {
           <div>
             <div className="flex justify-center lg:flex-row flex-col w-[90%] relative mx-auto  pt-8">
               <div className="lg:w-[80%] w-full relative">
-                <Image
-                  src={style2}
+                <img
+                  src='./style2.png'
                   alt="style2"
                   className="lg:w-[80%] w-full"
                 />
-                <Image
-                  src={profile1}
+                <img
+                  src='./profile1.png'
                   alt="Profile1"
                   className="lg:w-[70%] w-full top-2 absolute"
                 />
-                <Image
-                  src={style3}
+                <img
+              src='./style3.png'
                   alt="style2"
                   className="absolute sm:w-[20%] w-[30%] top-0 right-[80%]"
                 />
@@ -427,7 +427,7 @@ function About() {
                     <p className=" text-center text-[#FF8900]">CEO</p>
                   </div>
                   <div className="justify-center items-center pl-[10%] md:pl-0 md:w-[30%] mx-auto">
-                    <Image src={star} alt="" className=" md:mt-5" />
+                  <img src='./stars.png' alt="" className=" md:mt-5" />
                   </div>
                 </div>
               </div>
@@ -436,18 +436,18 @@ function About() {
           <div>
             <div className="flex justify-center lg:flex-row flex-col w-[90%] relative mx-auto  pt-8">
               <div className="lg:w-[80%] w-full relative">
-                <Image
-                  src={style2}
+              <img
+                  src='./style2.png'
                   alt="style2"
                   className="lg:w-[80%] w-full"
                 />
-                <Image
-                  src={profile1}
+                <img
+                  src='./profile1.png'
                   alt="Profile1"
                   className="lg:w-[70%] w-full top-2 absolute"
                 />
-                <Image
-                  src={style3}
+                <img
+              src='./style3.png'
                   alt="style2"
                   className="absolute sm:w-[20%] w-[30%] top-0 right-[80%]"
                 />
@@ -466,7 +466,7 @@ function About() {
                     <p className=" text-center text-[#FF8900]">CEO</p>
                   </div>
                   <div className="justify-center items-center pl-[10%] md:pl-0 md:w-[30%] mx-auto">
-                    <Image src={star} alt="" className=" md:mt-5" />
+                  <img src='./stars.png' alt="" className=" md:mt-5" />
                   </div>
                 </div>
               </div>
@@ -475,18 +475,22 @@ function About() {
         </Slider>
       </div>
       <div className="flex flex-col justify-center items-center overflow-hidden py-5">
-        <div className="relative w-full lg:h-[236px] h-[250px]  px-10">
-          <Image src={bgorange1} alt="" className="w-full h-full object-cover" />
+        <div className="relative w-full sm:h-[236px] h-[170px]  px-10">
+          <img
+            src="./bgorange1.png"
+            alt=""
+            className="w-full h-full object-cover"
+          />
           <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2  text-center space-y-10">
-            <h2 className="font-semibold sm:text-5xl text-xl text-white">
+            <h2 className="font-semibold sm:text-3xl lg:text-5xl text-lg text-white">
               Connect with Us!
             </h2>
-            <button className="bg-white drop-shadow-xl text-[#FF8900] rounded-full sm:px-32 xs:px-20 px-10 py-4 font-semibold sm:text-xl text-base">
+            <button className="bg-white drop-shadow-xl text-[#FF8900] rounded-full md:px-32 sm:px-20 px-5 sm:py-4 py-2 font-semibold sm:text-xl text-sm">
               Get Started
             </button>
           </div>
         </div>
-      </div>
+      </div>
     </div>
   );
 }

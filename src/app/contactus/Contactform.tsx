@@ -9,16 +9,17 @@ import {
   FaLinkedin,
   FaYoutubeSquare,
 } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Contactform = () => {
   return (
     <section className="pb-96 md:pb-36">
       <div className=" w-full p-5 md:p-10 h-full">
         <div className="relative max-w-5xl w-full h-80 mx-auto rounded-3xl drop-shadow-sm">
-          <Image
-            src={contactgettin}
+          <img
+            src='./getin.png'
             alt="Background"
-            layout="fill"
+            
             objectFit="cover"
             className="rounded-lg"
           />
@@ -43,12 +44,12 @@ const Contactform = () => {
                     <MdLocalPhone /> +91-7299119900
                   </li>
                 </ul>
-                <div className="flex flex-row text-white text-lg px-2 gap-1 drop-shadow-sm">
+                <div className="flex flex-row text-white text-lg px-2 gap-1 items-center drop-shadow-sm">
                   <a href="https://www.facebook.com/whyglobal/">
                     <FaFacebookSquare />
                   </a>
                   <a href="https://twitter.com/wehelpyou19">
-                    <FaTwitterSquare />
+                    <FaXTwitter />
                   </a>
                   <a href="https://www.instagram.com/whyglobalservices/">
                     <FaInstagramSquare />
