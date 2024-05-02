@@ -1,10 +1,32 @@
+"use client";
 import Image from "next/image";
 import project from "../../../public/icon.png";
 import project2 from "../../../public/icon2.png";
 import project3 from "../../../public/project3.png";
 import project4 from "../../../public/project4.png";
+import { useEffect } from "react";
+import SanityClient from "../SanityClient";
 
 export default function Home() {
+  useEffect(()=>{
+    SanityClient.fetch(`*[_type=='Home']{
+      OurWorkProcess[]{
+        title,
+        subTitle,
+        card[]{
+          icon{
+            asset->{
+              url,
+            }
+          },
+          cardTitle,
+          cardContent,
+        }
+      }
+    }`).then((res)=>{
+      console.log(res)
+    })
+  },[])
   return (
     <div className="p-5">
       <main className="md:bg-summa md:min-h-96 md:object-cover md:bg-cover md:flex md:flex-col">
