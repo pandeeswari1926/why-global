@@ -10,6 +10,14 @@ import Image from "next/image";
 import SanityClient from "../SanityClient";
 
 const Wgs = () => {
+  interface Blog {
+    Photo : {asset : {url:string}};
+    icon : {asset:{url:string}};
+    date : string;
+    title:string;
+    content:string;
+  }
+  interface ALLData
   useEffect(()=>{
     SanityClient.fetch(`*[_type=='Home']{
       blog[]{
