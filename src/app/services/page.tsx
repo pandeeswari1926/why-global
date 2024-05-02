@@ -284,7 +284,7 @@ function Services() {
             {alldata && alldata.webDesign&&alldata.webDesign.map((item:any,index:any)=>(
           <div  className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:ml-20 justify-evenly md:-mt-24 lg:gap-5 gap-10 p-5"> 
             {item&&item.array1.map((list:any,indexs:any)=>(
-              <div key={indexs} className={`lg:w-[52%] h-fit relative ${index==2?'lg:ml-[70px]':'lg:ml-0'} `}>
+              <div key={indexs} className={`lg:w-[52%] h-fit relative ${indexs==1?'lg:ml-[70px]':'lg:ml-0'} `}>
  <div className="pt-10 bg-white p-5 mx-auto rounded-md shadow-xl">
    <h1 className="text-xl font-medium">{list?.title}</h1>
    <br />
@@ -310,7 +310,7 @@ function Services() {
             <div className="lg:block hidden"></div>
             {/* card3 */}
             {item&&item.array2.map((list:any,indexs:any)=>(
- <div className={`lg:w-[60%] h-fit relative ${indexs==2?'lg:ml-36':'lg:ml-0'}`}>
+ <div className={`lg:w-[60%] h-fit relative ${indexs==1?'lg:ml-36':'lg:ml-0'}`}>
  <div className=" bg-white p-5 pt-14 rounded-md shadow-xl mx-auto">
    <h1 className="text-xl font-medium">{list?.title}</h1>
    <br />
@@ -356,7 +356,7 @@ function Services() {
              <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:ml-20 justify-evenly lg:-mt-24 lg:gap-5 gap-10  p-5">
              {/* card5 */}
              {item&&item.array3.map((list:any,indexs:any)=>(
-  <div className={`lg:w-[50%] h-fit relative ${indexs==2?'lg:ml-[70px]':'lg:ml-0'}`}>
+  <div className={`lg:w-[50%] h-fit relative ${indexs==1?'lg:ml-[70px]':'lg:ml-0'}`}>
   <div className="bg-white p-5 pt-10 mx-auto rounded-md shadow-xl">
     <h1 className="text-xl font-medium">{list?.title}</h1>
     <br />

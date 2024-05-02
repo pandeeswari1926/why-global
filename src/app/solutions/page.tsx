@@ -8,7 +8,7 @@ function Solutions() {
     setShowActiveContent(content);
   };
   useEffect(()=>{
-    SanityClient.fetch(`*[_type=='solution']{
+   const getdata=async()=>{ await SanityClient.fetch(`*[_type=='solution']{
       metaTitle,
       MetaDescription,
       MetaData,
@@ -104,7 +104,8 @@ function Solutions() {
       }
     }`).then((res)=>{
       console.log(res)
-    })
+    })}
+    getdata()
   },[])
   return (
     <>
