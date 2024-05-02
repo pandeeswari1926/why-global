@@ -24,7 +24,7 @@ const Page = () => {
       {/* first section */}
 
       <div className="bg-portfolio bg-cover bg-no-repeat bg-center lg:pb-32 pb-14">
-        <div className="flex flex-col justify-center items-center text-center py-5 lg:py-0 lg:h-[86vh] gap-5 sm:gap-10">
+        <div className="flex flex-col justify-center items-center text-center py-5 lg:py-0 lg:h-[90vh] gap-5 sm:gap-10">
           <div className="space-y-2 pt-5 lg:pt-0">
             <h1 className="text-white text-xl sm:text-4xl lg:text-7xl font-semibold">
               TAKE YOUR IDEAS TO THE
@@ -49,10 +49,10 @@ const Page = () => {
             <div className="flex justify-center items-center lg:absolute lg:-translate-x-1/2 lg:-translate-y-1/2 lg:top-1/2 lg:left-1/2">
               <div className="relative w-fit flex justify-center flex-col">
                 <div className="lg:w-96 sm:w-52 w-36 bg-white rounded-full border-[20px] border-gray-300 drop-shadow-2xl border-opacity-25">
-                  <Image src={portfolio3} alt="" className="rounded-full lg:p-10 p-5" />
+                  <img src='./wgs gifs (14).gif' alt="" className="rounded-full lg:p-10 p-5" />
                 </div>
-                <Image
-                  src={message4}
+                <img
+                  src='./message4.png'
                   alt=""
                   className="absolute w-40 -mb-8 right-0 bottom-0 -mr-16 lg:-mr-0"
                 />
@@ -62,28 +62,28 @@ const Page = () => {
             <div className="flex sm:flex-row flex-col items-center justify-center lg:justify-around gap-5 md:gap-20 lg:gap-0">
               <div className="relative">
                 <div className="w-36 rounded-full bg-white border-8 border-gray-300 drop-shadow-2xl border-opacity-25">
-                <Image
-                  src={portfolio5}
+                <img
+                  src='./wgs gifs (16).gif'
                   alt=""
                   className="w-36 rounded-full p-3"
                 />
                 </div>
-                <Image
-                  src={message2}
+                <img
+                  src='./Rectangle 129.png'
                   alt=""
                   className="absolute w-36 -mt-10 sm:-ml-28 -ml-14"
                 />
               </div>
               <div className="relative">
                 <div className="bg-white w-36 rounded-full border-8 border-gray-300 drop-shadow-2xl border-opacity-25 p-3">
-                <Image
-                  src={portfolio4}
+                <img
+                  src='./wgs gifs (15).gif'
                   alt=""
                   className="w-36 rounded-full  p-1"
                 />
                 </div>
-                <Image
-                  src={message1}
+                <img
+                  src='/message2.png'
                   alt=""
                   className="absolute w-36 -mt-10 sm:ml-28 ml-14"
                 />
@@ -93,14 +93,14 @@ const Page = () => {
             <div className="flex sm:flex-row flex-col items-center justify-center lg:justify-between gap-5 md:gap-20 lg:gap-0 lg:px-40">
               <div className="">
                 <div className="w-36 rounded-full border-8 border-gray-300 drop-shadow-2xl border-opacity-25 bg-white">
-                <Image
-                  src={portfolio2}
+                <img
+                  src='./wgs gifs (13).gif'
                   alt=""
                   className="w-36 rounded-full p-3"
                 />
                 </div>
-                <Image
-                  src={message}
+                <img
+                  src='./message3.png'
                   alt=""
                   className="absolute w-36 -mt-10 sm:-ml-28 -ml-14"
                 />
@@ -108,14 +108,14 @@ const Page = () => {
 
               <div className="">
                 <div className="w-36 rounded-full border-8 border-gray-300 drop-shadow-2xl border-opacity-25 bg-white">
-                <Image
-                  src={portfolio1}
+                <img
+                  src='./wgs gifs (12).gif'
                   alt=""
                   className="w-36 rounded-full p-3"
                 />
                 </div>
-                <Image
-                  src={message3}
+                <img
+                  src='./message5.png'
                   alt=""
                   className="absolute w-36 -mt-10 sm:ml-28 ml-14"
                 />

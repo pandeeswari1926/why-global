@@ -75,10 +75,10 @@ const Digitalmarketing = () => {
                     </div>
                     <div className="flex gap-3 justify-center items-center">
                       <div className="sm:w-[66%] w-28 h-28 xs:w-44 xs:h-44  sm:h-52 bg-white rounded-lg flex flex-col sm:justify-center justify-end pb-5 xs:pb-8 sm:pb-0">
-                        <Image src={dm1} alt="" />
+                        <img src='./dm1.png' alt="" />
                       </div>
                       <div className="sm:w-[16%] w-28 h-28 xs:w-44 xs:h-44 sm:h-52 bg-white rounded-lg flex flex-col justify-center items-center">
-                        <Image src={dmcircle1} className="p-3" alt="" />
+                        <img src='./dmcircle1.png' className="p-3" alt="" />
                       </div>
                     </div>
                   </div>
@@ -86,7 +86,7 @@ const Digitalmarketing = () => {
                   <article className="absolute -translate-x-1/2 -translate-y-1/2 left-1/2 bottom-0 sm:-mb-36 -mb-[157px] sm:block hidden">
                     <div className="flex xs:gap-1 sm:gap-3">
                       <div className="sm:w-64 xs:w-40 w-24 bg-white drop-shadow-lg rounded-lg flex flex-col justify-end ">
-                        <Image src={dmpoint1} className="rounded-lg " alt="" />
+                        <img src='./dmpoint1.png' className="rounded-lg " alt="" />
                       </div>
                       <div className="bg-white drop-shadow-lg rounded-lg w-[130px]">
                         <div className="flex justify-center items-center gap-3  xs:px-2 py-4 ">
@@ -107,14 +107,14 @@ const Digitalmarketing = () => {
                         </div>
                       </div>
                       <div className="bg-white drop-shadow-lg flex flex-col justify-center px-2 pt-4 w-24 rounded-lg">
-                        <Image src={dmwave1} className="" alt="" />
+                        <img src='./dmwave1.png' className="" alt="" />
                       </div>
                     </div>
                   </article>
                   <article className="absolute -translate-x-1/2 -translate-y-1/2 right-0 -mr-[68px] xs:-mr-[75px] sm:-mr-[101px] top-[46%] xs:top-[43%] sm:top-[20.5%]">
                     <div className="flex justify-center items-center bg-white drop-shadow-lg w-32 xs:w-44 sm:w-40 sm:h-20 h-14  rounded-lg gap-2">
-                      <Image
-                        src={dmlike1}
+                      <img
+                        src='./dmlike1.png'
                         className="w-10 h-10 rounded-full"
                         alt=""
                       />
@@ -130,8 +130,8 @@ const Digitalmarketing = () => {
                   </article>
                   <article className="absolute -translate-x-1/2 -translate-y-1/2 top-0 sm:top-2 md:left-0 sm:left-14 left-[50%]">
                     <div className="bg-white drop-shadow-lg border border-whytap transition-colors duration-500 ease-in-out  px-4 py-2 rounded-lg logo1">
-                      <Image
-                        src={whytaplogo}
+                      <img
+                        src='./whytaplogo.png'
                         className="sm:w-28 xs:w-24 w-20"
                         alt=""
                       />
@@ -152,7 +152,7 @@ const Digitalmarketing = () => {
                         </div>
                       </div>
                       <div className="sm:w-20 xs:w-12 w-8 mx-auto ">
-                        <Image src={dmbar1} alt="" />
+                        <img src='./dmbar1.png' alt="" />
                       </div>
                     </div>
                   </article>
@@ -295,10 +295,10 @@ const Digitalmarketing = () => {
 
                     <div className="flex gap-3 justify-center items-center">
                       <div className="sm:w-[66%] w-28 h-28 xs:w-44 xs:h-44  sm:h-52 bg-white rounded-lg flex flex-col sm:justify-center justify-end pb-5 xs:pb-8 sm:pb-0">
-                        <Image src={dm2} alt="" />
+                        <img src='./dm2.png' alt="" />
                       </div>
                       <div className="sm:w-[16%] w-28 h-28 xs:w-44 xs:h-44 sm:h-52 bg-white rounded-lg flex flex-col justify-center items-center">
-                        <Image src={dmcircle2} className="p-3" alt="" />
+                        <img src='./dmcircle2.png' className="p-3" alt="" />
                       </div>
                     </div>
                   </div>
@@ -307,7 +307,7 @@ const Digitalmarketing = () => {
                   <article className="absolute -translate-x-1/2 -translate-y-1/2 left-1/2 bottom-0 sm:-mb-36 -mb-[157px] sm:block hidden">
                     <div className="flex xs:gap-1 sm:gap-3">
                       <div className="sm:w-64 xs:w-40 w-24 bg-white drop-shadow-lg rounded-lg flex flex-col justify-end ">
-                        <Image src={dmpoint1} className="rounded-lg" alt="" />
+                        <img src='./dmpoint1.png' className="rounded-lg" alt="" />
                       </div>
                       <div className="bg-white drop-shadow-lg rounded-lg w-[130px]">
                         <div className="flex justify-center items-center gap-3  xs:px-2 py-4 ">
@@ -328,15 +328,15 @@ const Digitalmarketing = () => {
                         </div>
                       </div>
                       <div className="bg-white drop-shadow-lg flex flex-col justify-center px-2 pt-4 w-24 rounded-lg">
-                        <Image src={dmwave1} className="" alt="" />
+                        <img src='./dmwave1.png' className="" alt="" />
                       </div>
                     </div>
                   </article>
 
                   <article className="absolute -translate-x-1/2 -translate-y-1/2 right-0 -mr-[68px] xs:-mr-[75px] sm:-mr-[101px] top-[46%] xs:top-[43%] sm:top-[20.5%]">
                     <div className="flex justify-center items-center bg-white drop-shadow-lg w-32 xs:w-44 sm:w-40 sm:h-20 h-14  rounded-lg gap-2">
-                      <Image
-                        src={dmlike2}
+                      <img
+                        src='./dmlike2.png'
                         className="w-10 h-10 rounded-full"
                         alt=""
                       />
@@ -352,8 +352,8 @@ const Digitalmarketing = () => {
                   </article>
                   <article className="absolute -translate-x-1/2 -translate-y-1/2 top-0 sm:top-2 md:left-0 sm:left-14 left-[50%]">
                     <div className="bg-white drop-shadow-lg border border-kush transition-colors duration-500 ease-in-out px-4 py-2 rounded-lg logo1">
-                      <Image
-                        src={kushlogo}
+                      <img
+                        src='./kushlogo.png'
                         className="sm:w-28 xs:w-24 w-20"
                         alt=""
                       />
@@ -374,7 +374,7 @@ const Digitalmarketing = () => {
                         </div>
                       </div>
                       <div className="sm:w-20 xs:w-12 w-8 mx-auto ">
-                        <Image src={dmbar2} alt="" />
+                        <img src='./dmbar2.png' alt="" />
                       </div>
                     </div>
                   </article>
@@ -517,10 +517,10 @@ const Digitalmarketing = () => {
                     </div>
                     <div className="flex gap-3 justify-center items-center">
                       <div className="sm:w-[66%] w-28 h-28 xs:w-44 xs:h-44  sm:h-52 bg-white rounded-lg flex flex-col sm:justify-center justify-end pb-5 xs:pb-8 sm:pb-0">
-                        <Image src={dm3} alt="" />
+                        <img src='./dm3.png' alt="" />
                       </div>
                       <div className="sm:w-[16%] w-28 h-28 xs:w-44 xs:h-44 sm:h-52 bg-white rounded-lg flex flex-col justify-center items-center">
-                        <Image src={dmcircle3} alt="" className="p-3" />
+                        <img src='./dmcircle3.png' alt="" className="p-3" />
                       </div>
                     </div>
                   </div>
@@ -529,7 +529,7 @@ const Digitalmarketing = () => {
                   <article className="absolute -translate-x-1/2 -translate-y-1/2 left-1/2 bottom-0 sm:-mb-36 -mb-[157px] sm:block hidden">
                     <div className="flex xs:gap-1 sm:gap-3">
                       <div className="sm:w-64 xs:w-40 w-24 bg-white drop-shadow-lg rounded-lg flex flex-col justify-end ">
-                        <Image src={dmpoint1} className="rounded-lg" alt="" />
+                        <img src='./dmpoint1.png' className="rounded-lg" alt="" />
                       </div>
                       <div className="bg-white drop-shadow-lg rounded-lg w-[130px]">
                         <div className="flex justify-center items-center gap-3  xs:px-2 py-4 ">
@@ -550,15 +550,15 @@ const Digitalmarketing = () => {
                         </div>
                       </div>
                       <div className="bg-white drop-shadow-lg flex flex-col justify-center px-2 pt-4 w-24 rounded-lg">
-                        <Image src={dmwave1} className="" alt="" />
+                        <img src='./dmwave1.png' className="" alt="" />
                       </div>
                     </div>
                   </article>
 
                   <article className="absolute -translate-x-1/2 -translate-y-1/2 right-0 -mr-[68px] xs:-mr-[75px] sm:-mr-[101px] top-[46%] xs:top-[43%] sm:top-[20.5%]">
                     <div className="flex justify-center items-center bg-white drop-shadow-lg w-32 xs:w-44 sm:w-40 sm:h-20 h-14  rounded-lg gap-2">
-                      <Image
-                        src={dmlike3}
+                      <img
+                        src='./dmlike3.png'
                         className="w-10 h-10 rounded-full"
                         alt=""
                       />
@@ -575,7 +575,7 @@ const Digitalmarketing = () => {
 
                   <article className="absolute -translate-x-1/2 -translate-y-1/2 top-0 sm:top-2 md:left-0 sm:left-14 left-[50%]">
                     <div className="bg-white drop-shadow-lg border border-abhis transition-colors duration-500 ease-in-out px-4 py-2 rounded-lg logo1 sm:w-32 xs:w-24 h-16 flex flex-col justify-center items-center">
-                      <Image src={abhislogo} className="w-10 h-10" alt="" />
+                      <img src='./abhislogo.png' className="w-10 h-10" alt="" />
                     </div>
                   </article>
                   <article className="absolute -translate-x-1/2 -translate-y-1/2 md:top-48 xs:top-60 top-64 sm:top-52 md:-ml-4 md:left-0 left-12">
@@ -593,7 +593,7 @@ const Digitalmarketing = () => {
                         </div>
                       </div>
                       <div className="sm:w-20 xs:w-12 w-8 mx-auto ">
-                        <Image src={dmbar3} alt="" />
+                        <img src='./dmbar3.png' alt="" />
                       </div>
                     </div>
                   </article>
@@ -710,7 +710,7 @@ const Digitalmarketing = () => {
         </h2>
       </section>
       <article className="relative xl:h-[700px] sm:h-[600px] h-[450px] -mt-5">
-        <Image src={dmbg} className="h-full xl:block hidden" alt="" />
+        <img src='./dmbg.png' className="h-full xl:block hidden" alt="" />
         {renderContent(currentArticle)}
         <div className="absolute xl:top-[15%] top-[4.5%] left-0 xl:block hidden">
           <div className="bg-[#FF9315] rounded-r-xl text-white md:h-24 h-12 w-64 md:w-96 flex  justify-end items-center">
