@@ -42,8 +42,8 @@ const Web = () => {
         }
       }`
     ).then((res: any) => {
-      setWebdata(res[0].webDevelopment);
-      setShowActiveContent(res[0].webDevelopment[0].title);
+      setWebdata(res[0]?.webDevelopment);
+      setShowActiveContent(res[0]?.webDevelopment[0]?.title);
     });
   }, []);
 
@@ -70,7 +70,7 @@ const Web = () => {
               {webdata.map((item, ind) => (
                 <button
                   key={ind}
-                  onClick={() => toggleContent(item.title)}
+                  onClick={() => toggleContent(item?.title)}
                   className={`w-40 rounded-lg py-2 drop-shadow-lg ${
                     showActiveContent === item.title
                       ? "text-white bg-[#FF9315] "
@@ -79,7 +79,7 @@ const Web = () => {
                   ${ind === 1 ? "xl:ml-5" : ""}
                   `}
                 >
-                  {item.title}
+                  {item?.title}
                 </button>
               ))}
             </div>
@@ -91,17 +91,17 @@ const Web = () => {
               key={ind}
               className=" flex flex-col justify-center items-center"
             >
-              {showActiveContent === item.title && (
+              {showActiveContent === item?.title && (
                 <div className="xs:w-[80%]  w-full flex pt-6 p-3 xs:ml-0 flex-col justify-center items-center">
-                  {item.content.map((contents, index) => (
+                  {item?.content?.map((contents, index) => (
                     <div className="flex flex-col w-full mx-auto" key={index}>
                       <h1 className="text-xl sm:text-5xl text-gray-500 font-semibold">
-                        {contents.heading}
+                        {contents?.heading}
                       </h1>
                       <br />
                       <hr className="h-2 bg-gradient-to-r from-[#D1A25E] ml-20 to-transparent " />
                       <br />
-                      <p className="text-start text-sm text-gray-500 leading-loose">{contents.content}</p>
+                      <p className="text-start text-sm text-gray-500 leading-loose">{contents?.content}</p>
                       <br />
                       <div className="">
                         <button className="bg-white text-[#D1A25E] border-2 border-[#D1A25E] w-fit px-3 py-1 rounded-md hover:text-white hover:bg-[#D1A25E]">

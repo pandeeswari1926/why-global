@@ -42,8 +42,8 @@ const banner = () => {
                 }
             }`
     ).then((res) => {
-      console.log(res[0].banner, "Bannerdata");
-      setBannerData(res[0].banner);
+      console.log(res[0]?.banner, "Bannerdata");
+      setBannerData(res[0]?.banner);
     });
   }, []);
   return (
@@ -66,10 +66,10 @@ const banner = () => {
                 <img src="./small2.png" alt="" className="w-full" />
                 <div className="absolute lg:top-12 lg:left-16 top-5 left-5 space-y-5">
                   <p className="sm:text-lg xs:text-base text-xs text-primarycolor font-semibold">
-                    {item.messageTitle}
+                    {item?.messageTitle}
                   </p>
                   <h1 className=" xs:text-2xl text-xs text-gray-500 font-semibold">
-                    {item.messageContent}
+                    {item?.messageContent}
                   </h1>
                 </div>
               </div>
@@ -84,18 +84,18 @@ const banner = () => {
               className="text-white bg-white bg-opacity-20 absolute bottom-0 md:right-28 w-[80%] p-3 pl-8 rounded-t-xl"
               style={{ backdropFilter: "blur(8px)" }}
             >
-              <h1 className="md:text-2xl text-lg font-semibold">{item.name}</h1>
-              <p className="text-sm font-semibold">{item.role}</p>
+              <h1 className="md:text-2xl text-lg font-semibold">{item?.name}</h1>
+              <p className="text-sm font-semibold">{item?.role}</p>
             </div>
           </div>
           <div className="lg:w-[550px] xs:w-[450px] lg:block hidden absolute bottom-1/2  left-28">
             <img src="./Vector 86.png" alt="" className="" />
             <div className="absolute lg:top-12 lg:left-16 top-5 left-5 space-y-5">
               <p className="sm:text-lg xs:text-base text-xs text-primarycolor font-semibold">
-                {item.messageTitle}
+                {item?.messageTitle}
               </p>
               <h1 className="sm:text-3xl xs:text-lg text-xs text-gray-500 font-semibold">
-                {item.messageContent}
+                {item?.messageContent}
               </h1>
             </div>
           </div>

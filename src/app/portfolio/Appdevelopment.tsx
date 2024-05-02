@@ -1,15 +1,5 @@
 'use client'
 import React from 'react'
-import Image from 'next/image'
-import appdev1 from '../../../public/appDev1.png'
-import appdev2 from '../../../public/appDev2.png'
-import appdev3 from '../../../public/appDev3.png'
-import appdevbig1 from '../../../public/appDevbig1.png'
-import appdevbig2 from '../../../public/appDevbig2.png'
-import appdevbig3 from '../../../public/appDevbig3.png'
-import ionic from '../../../public/ionic.png'
-import react from '../../../public/react.png'
-import flutter from '../../../public/flutter.png'
 
 
 

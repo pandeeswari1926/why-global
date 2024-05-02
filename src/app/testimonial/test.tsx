@@ -34,8 +34,8 @@ const Test = () => {
                 }
             }`
     ).then((res) => {
-      console.log(res[0].content, "Our Employee");
-      setEmployee(res[0].content);
+      console.log(res[0]?.content, "Our Employee");
+      setEmployee(res[0]?.content);
     });
   }, []);
   return (
@@ -49,7 +49,7 @@ const Test = () => {
                   <BiSolidQuoteAltLeft className="text-primarycolor size-10 " />
                 </div>
                 <p className="md:w-[50%] w-full text-start">
-                  {item.content}
+                  {item?.content}
                 </p>
                 <div className="flex flex-col justify-items-start md:w-[50%] w-full">
                   <BiSolidQuoteAltLeft className="text-primarycolor size-10" />
@@ -58,9 +58,9 @@ const Test = () => {
               <div className="md:w-[50%] w-full flex md:flex-col flex-col-reverse justify-center md:items-start items-center">
                 <div className="flex flex-col justify-end w-full">
                   <h1 className="font-semibold text-xl md:mt-0 mt-5">
-                    {item.name}
+                    {item?.name}
                   </h1>
-                  <p>{item.role}</p>
+                  <p>{item?.role}</p>
                 </div>
                 <div>
                   <img src={item?.image?.asset?.url} alt="Our Employee" />

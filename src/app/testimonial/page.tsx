@@ -9,11 +9,11 @@ const Page = () => {
     <>
       {/* first section */}
       <div className="">
-        {/* <Banner/> */}
+        <Banner/>
         {/* second section */}
       </div>
       <div className="">
-        {/* <SliderPage /> */}
+        <SliderPage />
       </div>
       {/* third section */}
       <div>

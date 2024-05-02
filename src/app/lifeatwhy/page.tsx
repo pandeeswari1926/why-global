@@ -1,159 +1,103 @@
 "use client";
-import React from "react";
-import Image from "next/image";
-import process from "../../../public/project.png";
+import React, { useEffect, useState } from "react";
 import "swiper/css";
 import "swiper/css/bundle";
 import "swiper/css/pagination";
-import sqaud from "../../../public/Rectangle 59.png";
-import sqaud1 from "../../../public/Rectangle 60.png";
-import sqaud2 from "../../../public/Rectangle 61.png";
-import sqaud3 from "../../../public/Rectangle 62.png";
-import sqaud4 from "../../../public/Rectangle 63.png";
-import sqaud5 from "../../../public/Rectangle 64.png";
-import sqaud6 from "../../../public/Rectangle 65.png";
-import sqaud7 from "../../../public/Rectangle 66.png";
-import sqaud8 from "../../../public/Rectangle 67.png";
-import sqaud9 from "../../../public/Rectangle 68.png";
-import sqaud10 from "../../../public/Rectangle 69.png";
-import sqaud11 from "../../../public/Rectangle 70.png";
-import sqaud12 from "../../../public/Rectangle 71.png";
-import sqaud13 from "../../../public/Rectangle 72.png";
-import sqaud14 from "../../../public/Rectangle 73.png";
-import sqaud15 from "../../../public/Rectangle 74.png";
-import sqaud16 from "../../../public/Rectangle 75.png";
-import sqaud17 from "../../../public/Rectangle 76.png";
-import sqaud18 from "../../../public/Rectangle 77.png";
-import sqaud19 from "../../../public/Rectangle 78.png";
-import sqaud20 from "../../../public/Rectangle 79.png";
-import sqaud21 from "../../../public/Rectangle 80.png";
-import sqaud22 from "../../../public/Rectangle 81.png";
-import sqaud23 from "../../../public/Rectangle 82.png";
-import sqaud24 from "../../../public/Rectangle 83.png";
-import sqaud25 from "../../../public/Rectangle 84.png";
-import sqaud26 from "../../../public/Rectangle 85.png";
-import sqaud27 from "../../../public/Rectangle 86.png";
-import sqaud28 from "../../../public/Rectangle 87.png";
-import sqaud29 from "../../../public/Rectangle 88.png";
-import sqaud30 from "../../../public/Rectangle 88.png";
-import sqaud31 from "../../../public/Rectangle 89.png";
-import sqaud32 from "../../../public/Rectangle 90.png";
-import sqaud33 from "../../../public/Rectangle 91.png";
-import sqaud34 from "../../../public/Rectangle 92.png";
-import sqaud35 from "../../../public/Rectangle 93.png";
 // import banner from "../../../public/lifeAtWhy.gif";
-import life1 from "../../../public/life.png";
 import Slides from "./Slides";
-import bgorange1 from "../../../public/bgorange1.png";
+import SanityClient from "../SanityClient";
+
+interface Banner {
+  content: string;
+  titleImage: {
+    asset: {
+      url: string;
+    };
+  };
+}
+
+interface WorkProcessContent {
+  content: string;
+}
+
+interface WorkProcess {
+  heading: string;
+  subHeading: string;
+  contents: WorkProcessContent[];
+  image: {
+    asset: {
+      url: string;
+    };
+  };
+}
+interface WhySquadItem {
+  image: {
+    asset: {
+      url: string;
+    };
+  };
+}
+
+
 
 function Why() {
-  const why = [
-    {
-      image: "./Rectangle 59.png",
-    },
-    {
-      image: "./Rectangle 60.png",
-    },
-    {
-      image: "./Rectangle 61.png",
-    },
-    {
-      image: "./Rectangle 62.png",
-    },
-    {
-      image: "./Rectangle 63.png",
-    },
-    {
-      image: "./Rectangle 64.png",
-    },
-    {
-      image: "./Rectangle 65.png",
-    },
-    {
-      image: "./Rectangle 66.png",
-    },
-    {
-      image: "./Rectangle 67.png",
-    },
-    {
-      image: "./Rectangle 68.png",
-    },
-    {
-      image: "./Rectangle 69.png",
-    },
-    {
-      image: "./Rectangle 70.png",
-    },
-    {
-      image: "./Rectangle 71.png",
-    },
-    {
-      image: "./Rectangle 72.png",
-    },
-    {
-      image: "./Rectangle 73.png",
-    },
-    {
-      image: "./Rectangle 74.png",
-    },
-    {
-      image: "./Rectangle 75.png",
-    },
-    {
-      image: "./Rectangle 76.png",
-    },
-    {
-      image: "./Rectangle 77.png",
-    },
-    {
-      image: "./Rectangle 78.png",
-    },
-    {
-      image: "./Rectangle 79.png",
-    },
-    {
-      image: "./Rectangle 80.png",
-    },
-    {
-      image: "./Rectangle 81.png",
-    },
-    {
-      image: "./Rectangle 82.png",
-    },
-    {
-      image: "./Rectangle 83.png",
-    },
-    {
-      image: "./Rectangle 84.png",
-    },
-    {
-      image: "./Rectangle 85.png",
-    },
-    {
-      image: "./Rectangle 86.png",
-    },
-    {
-      image: "./Rectangle 87.png",
-    },
-    {
-      image: "./Rectangle 88.png",
-    },
-    {
-      image: "./Rectangle 89.png",
-    },
-    {
-      image: "./Rectangle 90.png",
-    },
-    {
-      image: "./Rectangle 91.png",
-    },
-    {
-      image: "./Rectangle 92.png",
-    },
-    {
-      image: "./Rectangle 93.png",
-    },
-  ];
+  
+
+  const [bannerdata, setbannerdata] = useState<Banner | null>(null);
+  const [workprocess, setworkprocess] = useState<WorkProcess | null>(null);
+  const [whySquad, setWhySquad] = useState<WhySquadItem[]>([]);
+
+
+  useEffect(() => {
+    SanityClient.fetch(
+      `*[_type=='lifeAtWhy']{
+      banner[]{
+        content,
+        titleImage{
+        asset->{
+            url
+        }
+          },
+          },
+          ourWorkProcess[]{
+            heading,
+            subHeading,
+            contents[]{
+              content
+            },
+            image{
+              asset->{
+                url
+              },
+              
+            },
+            
+            
+          },
+          whySquad[]{
+            image{
+              asset->{
+                url
+              }
+            }
+          },
+
+          
+          
+          
+          
+      }`
+    ).then((res) => {
+      console.log(res[0], "LifeAtWhyData");
+      setbannerdata(res[0]?.banner[0]);
+      setworkprocess(res[0]?.ourWorkProcess[0]);
+      setWhySquad(res[0]?.whySquad)
+    });
+  }, []);
+
+
+  
+
   return (
     <>
       <div className="w-full md:h-screen h-[500px]">
@@ -168,10 +112,9 @@ function Why() {
           <div className="absolute h-full bg-black bg-opacity-50 w-full"></div>
           <div className="w-full h-full "></div>
           <div className="absolute top-5 sm:left-20 left-10">
-            <img src="./life.png" alt="" />
+            <img src={bannerdata?.titleImage?.asset?.url} alt="" />
             <p className="text-white w-[60%] xs:-mt-10 text-sm">
-              We place great importance on promoting physical and mental
-              well-being.
+              {bannerdata?.content}
             </p>
           </div>
         </div>
@@ -188,57 +131,42 @@ function Why() {
         ></div>
         <div className="w-full xl:pl-20 mx-auto flex flex-col gap-7">
           <h3 className="text-lg text-[#FF9315] font-bold md:text-left text-center">
-            OUR WORK PROCESS
+            {workprocess?.heading}
           </h3>
           <h1 className="text-3xl text-gray-500 leading-10 font-semibold md:text-left text-center ">
-            We understand that a healthy employee is a productive and engaged
-            one
+            {workprocess?.subHeading}
           </h1>
           <div className="space-y-4 text-gray-500">
-            <p className="text-xs xl:w-[85%] w-full font-light md:text-left text-justify md:px-0 xs:px-5">
-              We strive to create an environment that nurtures and supports
-              these pillars, ensuring our employees’ overall well-being and
-              satisfaction.
-            </p>
-            <p className="text-xs xl:w-[85%] w-full font-light md:text-left text-justify md:px-0 xs:px-5">
-              In terms of a healthy life, we place great importance on promoting
-              physical and mental well-being. Our comprehensive wellness
-              programs encompass fitness activities, mindfulness sessions, and
-              access to resources that encourage a balanced lifestyle. We
-              understand that a healthy employee is a productive and engaged
-              one, and we provide the necessary tools and support to help our
-              team members prioritize their health.
-            </p>
-            <p className="text-xs xl:w-[85%] w-full font-light md:text-left text-justify md:px-0 xs:px-5 z-10">
-              We also recognize the significance of a fulfilling social life. At
-              WHY Global Services, we foster a vibrant and inclusive community
-              where colleagues can connect, collaborate, and build meaningful
-              relationships
-            </p>
+            {workprocess?.contents?.map((item,ind) => (
+              <p key={ind} className="text-xs xl:w-[85%] w-full font-light md:text-left text-justify md:px-0 xs:px-5 z-10">
+                {item.content}
+              </p>
+            ))}
           </div>
         </div>
         <div className="w-full h-full z-10 lg:mt-4">
-          <img src="./project.png" alt="our work process" className="" />
+          <img src={workprocess?.image?.asset?.url} alt="our work process" className="" />
         </div>
         <div className="polygon"></div>
       </div>
       {/* Third section */}
-      <div className="h-[80vh]">
+      <div className="md:h-[90vh] h-full bg-custom bg-cover bg-no-repeat flex justify-center items-center">
         <Slides />
       </div>
       {/* Fourth section */}
       <div className="bg-white shadow-xl">
         <div className="grid lg:grid-cols-9 md:grid-cols-6 sm:grid-cols-5 xs:grid-cols-4 grid-cols-3 mt-5">
-          {why.map((item, index) => (
-            <img src={item.image} alt="" />
-          ))}
+          {
+            whySquad.map((item,ind)=>(
+              <img key={ind} src={item?.image?.asset?.url} alt="whysquad" />
+            ))
+          }
         </div>
         <h1 className="text-center text-[#FF9315] text-2xl font-font p-5">
           #WHYsquad
         </h1>
       </div>
 
-      {/* last section */}
       <div className="flex flex-col justify-center items-center overflow-hidden py-5">
         <div className="relative w-full sm:h-[236px] h-[170px]  px-10">
           <img
@@ -255,7 +183,8 @@ function Why() {
             </button>
           </div>
         </div>
-      </div>
+      </div>
+
     </>
   );
 }
