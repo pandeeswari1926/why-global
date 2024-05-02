@@ -47,6 +47,113 @@ import Slides from "./Slides";
 import bgorange1 from "../../../public/bgorange1.png";
 
 function Why() {
+  const why = [
+    {
+      image: "./Rectangle 59.png",
+    },
+    {
+      image: "./Rectangle 60.png",
+    },
+    {
+      image: "./Rectangle 61.png",
+    },
+    {
+      image: "./Rectangle 62.png",
+    },
+    {
+      image: "./Rectangle 63.png",
+    },
+    {
+      image: "./Rectangle 64.png",
+    },
+    {
+      image: "./Rectangle 65.png",
+    },
+    {
+      image: "./Rectangle 66.png",
+    },
+    {
+      image: "./Rectangle 67.png",
+    },
+    {
+      image: "./Rectangle 68.png",
+    },
+    {
+      image: "./Rectangle 69.png",
+    },
+    {
+      image: "./Rectangle 70.png",
+    },
+    {
+      image: "./Rectangle 71.png",
+    },
+    {
+      image: "./Rectangle 72.png",
+    },
+    {
+      image: "./Rectangle 73.png",
+    },
+    {
+      image: "./Rectangle 74.png",
+    },
+    {
+      image: "./Rectangle 75.png",
+    },
+    {
+      image: "./Rectangle 76.png",
+    },
+    {
+      image: "./Rectangle 77.png",
+    },
+    {
+      image: "./Rectangle 78.png",
+    },
+    {
+      image: "./Rectangle 79.png",
+    },
+    {
+      image: "./Rectangle 80.png",
+    },
+    {
+      image: "./Rectangle 81.png",
+    },
+    {
+      image: "./Rectangle 82.png",
+    },
+    {
+      image: "./Rectangle 83.png",
+    },
+    {
+      image: "./Rectangle 84.png",
+    },
+    {
+      image: "./Rectangle 85.png",
+    },
+    {
+      image: "./Rectangle 86.png",
+    },
+    {
+      image: "./Rectangle 87.png",
+    },
+    {
+      image: "./Rectangle 88.png",
+    },
+    {
+      image: "./Rectangle 89.png",
+    },
+    {
+      image: "./Rectangle 90.png",
+    },
+    {
+      image: "./Rectangle 91.png",
+    },
+    {
+      image: "./Rectangle 92.png",
+    },
+    {
+      image: "./Rectangle 93.png",
+    },
+  ];
   return (
     <>
       <div className="w-full md:h-screen h-[500px]">
@@ -61,7 +168,7 @@ function Why() {
           <div className="absolute h-full bg-black bg-opacity-50 w-full"></div>
           <div className="w-full h-full "></div>
           <div className="absolute top-5 sm:left-20 left-10">
-            <Image src={life1} alt="" />
+            <img src="./life.png" alt="" />
             <p className="text-white w-[60%] xs:-mt-10 text-sm">
               We place great importance on promoting physical and mental
               well-being.
@@ -111,53 +218,20 @@ function Why() {
           </div>
         </div>
         <div className="w-full h-full z-10 lg:mt-4">
-          <Image src={process} alt="our work process" className="" />
+          <img src="./project.png" alt="our work process" className="" />
         </div>
         <div className="polygon"></div>
       </div>
       {/* Third section */}
       <div className="h-[80vh]">
-        <Slides/>
+        <Slides />
       </div>
       {/* Fourth section */}
       <div className="bg-white shadow-xl">
         <div className="grid lg:grid-cols-9 md:grid-cols-6 sm:grid-cols-5 xs:grid-cols-4 grid-cols-3 mt-5">
-          <Image src={sqaud} alt="" />
-          <Image src={sqaud1} alt="" />
-          <Image src={sqaud2} alt="" />
-          <Image src={sqaud3} alt="" />
-          <Image src={sqaud4} alt="" />
-          <Image src={sqaud5} alt="" />
-          <Image src={sqaud6} alt="" />
-          <Image src={sqaud7} alt="" />
-          <Image src={sqaud8} alt="" />
-          <Image src={sqaud9} alt="" />
-          <Image src={sqaud10} alt="" />
-          <Image src={sqaud11} alt="" />
-          <Image src={sqaud12} alt="" />
-          <Image src={sqaud13} alt="" />
-          <Image src={sqaud14} alt="" />
-          <Image src={sqaud15} alt="" />
-          <Image src={sqaud16} alt="" />
-          <Image src={sqaud17} alt="" />
-          <Image src={sqaud18} alt="" />
-          <Image src={sqaud19} alt="" />
-          <Image src={sqaud20} alt="" />
-          <Image src={sqaud21} alt="" />
-          <Image src={sqaud22} alt="" />
-          <Image src={sqaud23} alt="" />
-          <Image src={sqaud24} alt="" />
-          <Image src={sqaud25} alt="" />
-          <Image src={sqaud26} alt="" />
-          <Image src={sqaud27} alt="" />
-          <Image src={sqaud28} alt="" />
-          <Image src={sqaud29} alt="" />
-          <Image src={sqaud30} alt="" />
-          <Image src={sqaud31} alt="" />
-          <Image src={sqaud32} alt="" />
-          <Image src={sqaud33} alt="" />
-          <Image src={sqaud34} alt="" />
-          <Image src={sqaud35} alt="" />
+          {why.map((item, index) => (
+            <img src={item.image} alt="" />
+          ))}
         </div>
         <h1 className="text-center text-[#FF9315] text-2xl font-font p-5">
           #WHYsquad
@@ -166,17 +240,17 @@ function Why() {
 
       {/* last section */}
       <div className="flex flex-col justify-center items-center overflow-hidden py-5">
-        <div className="relative w-full lg:h-[236px] h-[250px]  px-10">
-          <Image
-            src={bgorange1}
+        <div className="relative w-full sm:h-[236px] h-[170px]  px-10">
+          <img
+            src="./bgorange1.png"
             alt=""
             className="w-full h-full object-cover"
           />
           <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2  text-center space-y-10">
-            <h2 className="font-semibold sm:text-4xl text-3xl text-white">
-              Do you have any project to working with?
+            <h2 className="font-semibold sm:text-3xl lg:text-5xl text-lg text-white">
+              Connect with Us!
             </h2>
-            <button className="bg-white drop-shadow-xl text-[#FF8900] rounded-full sm:px-32 px-20 py-4 font-semibold sm:text-xl text-lg">
+            <button className="bg-white drop-shadow-xl text-[#FF8900] rounded-full md:px-32 sm:px-20 px-5 sm:py-4 py-2 font-semibold sm:text-xl text-sm">
               Get Started
             </button>
           </div>

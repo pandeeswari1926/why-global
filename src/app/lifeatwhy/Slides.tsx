@@ -25,8 +25,8 @@ const Slides = () => {
             <section className=" flex sm:flex-row flex-col sm:justify-center  items-center overflow-hidden">
               <div className="relative z-10">
                 <section className="relative festival ">
-                  <Image
-                    src={lifewhy1big}
+                  <img
+                    src="./lifewhy1big.png"
                     alt=""
                     className="w-[400px] lg:mt-0 md:-mt-14 sm:mt-0 -mt-14 h-full rounded-xl drop-shadow-xl "
                   />
@@ -35,13 +35,13 @@ const Slides = () => {
                   </h1>
                 </section>
               </div>
-              <Image
-                src={lifewhy2small}
+              <img
+                src="./lifewhy2small.png"
                 alt=""
                 className="w-[30%] rounded-xl drop-shadow-xl sm:mt-16 sm:block hidden"
               />
-              <Image
-                src={lifewhy3small}
+              <img
+                src="./lifewhy3small.png"
                 alt=""
                 className="w-[30%] rounded-xl drop-shadow-xl sm:mt-16 sm:block hidden"
               />
@@ -53,8 +53,8 @@ const Slides = () => {
         return (
           <article className="relative">
             <div className="z-10 trips sm:hidden flex justify-center">
-              <Image
-                src={lifewhy2big}
+              <img
+                src="./lifewhy2big.png"
                 alt=""
                 className="w-[400px] h-full sm:mt-0 -mt-14 rounded-xl drop-shadow-xl"
               />
@@ -63,8 +63,8 @@ const Slides = () => {
               </h1>
             </div>
             <div className="absolute -translate-x-1/2 left-[50%]  z-10 trips sm:block hidden">
-              <Image
-                src={lifewhy2big}
+              <img
+                src="./lifewhy2big.png"
                 alt=""
                 className="w-[400px] h-full lg:mt-0 md:-mt-14 sm:mt-0 -mt-14 rounded-xl drop-shadow-xl"
               />
@@ -73,13 +73,13 @@ const Slides = () => {
               </h1>
             </div>
             <section className=" sm:flex-row flex-col sm:justify-evenly sm:gap-0 items-center sm:flex hidden">
-              <Image
-                src={lifewhy1small}
+              <img
+                src="./lifewhy1small.png"
                 alt=""
                 className="w-[30%] rounded-xl drop-shadow-xl sm:mt-16"
               />
-              <Image
-                src={lifewhy3small}
+              <img
+                src="./lifewhy3small.png"
                 alt=""
                 className="w-[30%] rounded-
                 xl drop-shadow-xl sm:mt-16"
@@ -91,19 +91,19 @@ const Slides = () => {
         return (
           <article className="relative">
             <div className="flex justify-center items-center ">
-              <Image
-                src={lifewhy1small}
+              <img
+                src="./lifewhy1small.png"
                 alt=""
                 className="w-[30%] rounded-xl drop-shadow-xl sm:mt-16 sm:block hidden"
               />
-              <Image
-                src={lifewhy2small}
+              <img
+                src="./lifewhy2small.png"
                 alt=""
                 className="w-[30%] rounded-xl drop-shadow-xl sm:mt-16 sm:block hidden"
               />
               <div className="relative z-10 celebrations">
-                <Image
-                  src={lifewhy3big}
+                <img
+                  src="./lifewhy3big.png"
                   alt=""
                   className="w-[400px] h-full lg:mt-0 md:-mt-14 sm:mt-0 -mt-14 rounded-xl drop-shadow-xl"
                 />

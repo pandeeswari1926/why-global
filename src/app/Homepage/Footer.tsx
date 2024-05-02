@@ -97,7 +97,7 @@ const Footer = () => {
         <section className="bg-black text-white p-10 grid lg:grid-cols-4 sm:grid-cols-2 lg:gap-0 gap-10 sm:justify-items-center">
           <section className="space-y-5 sm:w-72">
             <h1 className="font-bold text-xl">About Us</h1>
-            <p className="text-md leading-loose text-gray-200">
+            <p className="text-xs leading-loose text-gray-200">
               We designed a culture that allows our stewards to assimilate with
               our clients and bring our best
             </p>
