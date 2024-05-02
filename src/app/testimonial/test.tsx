@@ -28,7 +28,7 @@ const Test = () => {
                 <p>Web Developer</p>
               </div>
               <div>
-                <Image src={wgs} alt="Our Employee" />
+                <img src="./WGS LIVE PICS (8) 1.png" alt="Our Employee" />
               </div>
             </div>
           </div>
