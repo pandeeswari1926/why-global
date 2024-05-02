@@ -20,7 +20,7 @@ const Contactform = () => {
             src='./getin.png'
             alt="Background"
             
-            objectFit="cover"
+           
             className="rounded-lg"
           />
           <div className="flex absolute inset-0 md:p-10 justify-between w-full">
