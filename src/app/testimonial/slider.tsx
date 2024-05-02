@@ -1,45 +1,38 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
-import client from "../../../public/7.png";
-import second from "../../../public/8.png";
-import third from "../../../public/9.png";
 import { BiSolidQuoteAltLeft } from "react-icons/bi";
 import { FaStar } from "react-icons/fa";
-import { BiSolidQuoteAltRight } from "react-icons/bi";
 import { FaFaceSmileBeam } from "react-icons/fa6";
 function TestimonalsClient() {
   const [loops, setLoops] = useState(0);
   const arr = [
     {
-      image: client,
+      image: "./7.png",
       name: "Chandra",
       content:
         "I recently sold my warehouse in India to Riofin, and I couldn't be happier with the experience. From the initial contact to the final closing, everything was handled smoothly and efficiently. They truly made the process hassle-free, and there were no hidden charges or surprises along the way",
       role: "Warehouse Owner",
     },
     {
-      image: second,
+      image: "./8.png",
       name: "Maxwell",
       content:
         "I sold my warehouse in India to Riofin, and I couldn't be happier with the experience. From the initial contact to the final closing, everything was handled smoothly and efficiently. They truly made the process hassle-free, and there were no hidden charges or surprises along the way",
       role: "Warehouse Owner",
     },
     {
-      image: third,
+      image: "./9.png",
       name: "Maxwell",
       content:
         "I sold my warehouse in India to Riofin, and I couldn't be happier with the experience. From the initial contact to the final closing, everything was handled smoothly and efficiently. They truly made the process hassle-free, and there were no hidden charges or surprises along the way",
       role: "Warehouse Owner",
     },
-    // { image: fourth, name: "Maxwell", content: "I sold my warehouse in India to Riofin, and I couldn't be happier with the experience. From the initial contact to the final closing, everything was handled smoothly and efficiently. They truly made the process hassle-free, and there were no hidden charges or surprises along the way", role: "Warehouse Owner" },
-    // { image: fifth, name: "Maxwell", content: "I sold my warehouse in India to Riofin, and I couldn't be happier with the experience. From the initial contact to the final closing, everything was handled smoothly and efficiently. They truly made the process hassle-free, and there were no hidden charges or surprises along the way", role: "Warehouse Owner" },
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setLoops((prev) => (prev + 1) % arr.length);
-    }, 5000); // Change the interval time as needed
+    }, 5000);
 
     return () => clearInterval(interval);
   }, [arr.length]);
@@ -52,13 +45,13 @@ function TestimonalsClient() {
       <div className="w-full flex justify-center items-center  lg:justify-end lg:items-end py-5">
         <div className="flex lg:flex-row flex-col justify-center items-center w-full  lg:w-[95%]">
           <div className="z-10 rounded-xl drop-shadow-xl relative">
-            <Image
+            <img
               src={arr[loops].image}
               alt=""
               className="lg:w-[500px] rounded-xl lg:h-[450px] z-40 w-[250px]  sm:w-[300px]   bg-no-repeat bg-cover bg-center"
             />
             <div className="absolute top-1/2 bg-white p-3 sm:-right-8 -right-0 border border-primarycolor rounded-lg">
-                <FaFaceSmileBeam className="sm:size-10 size-5 text-primarycolor"/>
+              <FaFaceSmileBeam className="sm:size-10 size-5 text-primarycolor" />
             </div>
           </div>
           <div className="lg:bg-primarycolor lg:-mt-0 -mt-4 relative lg:pl-28 pl-0 w-full h-fit lg:h-[300px]">

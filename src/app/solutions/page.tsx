@@ -1,95 +1,14 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import Image from "next/image";
-import gif from "../../../public/wgs gifs (10).gif";
-import feature from "../../../public/25.png";
-import feature1 from "../../../public/28.png";
-import feature2 from "../../../public/27.png";
-import feature3 from "../../../public/29.png";
-import feature4 from "../../../public/26.png";
-import feature5 from "../../../public/24.png";
-import benifits from "../../../public/sevice.png";
-import signin from "../../../public/log.png";
-import DashBoard from "../../../public/Rectangle 113 (1).png";
-import Faculty from "../../../public/Faculty.png";
-import rubenvro from "../../../public/upruban.png";
-import why from "../../../public/why.png";
-import bgorange1 from "../../../public/bgorange1.png";
-import lmsin from '../../../public/Instituteadmin.png'
+import React, { useState } from "react";
 
 function Solutions() {
   const [showActiveContent, setShowActiveContent] = useState("SignIn");
   const toggleContent = (content: React.SetStateAction<string>) => {
-    // Toggle between "Active Projects" and "Completed Projects"
     setShowActiveContent(content);
   };
   return (
     <>
       {/* first section */}
-      {/* <div className="flex md:flex-row flex-col w-full relative p-10 pt-20">
-        <div className="space-y-10">
-          <h1 className="xl:text-xl md:text-base text-xl text-[#FF9315] font-semibold pt-20 lg:pl-10">
-            LEARNING MANAGEMENT SYSTEM
-          </h1>
-          <h1 className="xl:text-4xl md:text-xl text-4xl font-bold text-gray-600 lg:pl-10">
-            UNLOCKING KNOWLEDGE,
-            <br className="md:block hidden" />
-            <br className="md:block hidden" /> EMPOWERING LEARNING
-          </h1>
-          <p className="lg:pl-10 lg:text-base md:text-xs text-gray-500 leading-8 ">
-            Welcome to our Learning Management System (LMS) page, where we offer
-            a comprehensive solution designed to transform the way you deliver
-            and manage online learning.
-          </p>
-          <div className="mr-20 w-full h-full">
-            <Image src={solution} alt="" className="md:block hidden" />
-          </div>
-        </div>
-        <div className="flex flex-row w-full">
-          <div>
-            <Image
-              src={sol}
-              alt=""
-              className="absolute lg:right-96 md:right-72 right lg:w-fit md:w-[20%] w-[30%] "
-            />
-          </div>
-          <div className="solution absolute bg-gradient-to-b from-[#f9d5ad] via-[#f9d5ad] to-transparent xl:w-[900px] lg:w-[700px] md:w-[500px] w-[900px] lg:h-[500px] md:h-[300px] sm:h-[700px] h-[500px]"></div>
-          <div>
-            <Image
-              src={img}
-              alt=""
-              className="absolute right-0 lg:w-[30%] md:w-[30%] w-[70%] "
-            />
-          </div>
-        </div>
-      </div> */}
-      {/* second section */}
-      {/* <div className="flex lg:flex-row flex-col p-10 lg:px-20 mx-auto w-full md:pt-0 pt-[650px] ">
-        <div className="w-full h-full flex flex-col gap-8">
-          <h1 className="lg:text-xl text-lg text-[#FF9315] font-semibold leading-8">
-            LEARNING MANAGEMENT SYSTEM
-          </h1>
-          <h1 className="lg:text-3xl text-xl text-gray-500 font-semibold lg:leading-loose leading-10">
-            ELEVATE YOUR LEARNING JOURNEY WITH OUR CUTTING-EDGE LMS SOLUTION!
-          </h1>
-          <p className="text-gray-500 font-light lg:w-[85%] lg:text-start text-justify">
-            An LMS, or Learning Management System, is a comprehensive software
-            platform designed to facilitate online learning and training
-            programs. LMSs offer a wide range of features that support the
-            management, delivery, and tracking of educational content.
-            <br />
-            <br />
-            One of the key features of an LMS is course management, which allows
-            administrators to create and organize courses, modules, and lessons.
-            Users can easily access these courses, track their progress, and
-            engage with interactive learning materials.
-          </p>
-        </div>
-        <div className="w-full h-full mx-auto ">
-          <Image src={gif} alt="" className="mx-auto" />
-        </div>
-      </div> */}
-
       <div className="grid w-full h-screen relative  overflow-hidden grid-cols-1 md:grid-cols-2 ">
         <div className="flex flex-col gap-5 p-5 md:p-20">
           <p className="uppercase text-sm sm:text-base text-orange-500 font-semibold md:text-left text-center">
@@ -110,11 +29,9 @@ function Solutions() {
         </div>
 
         <div className="h-full w-full  flex flex-col justify-center items-center">
-          
-  
-          <Image
-            src={rubenvro}
-            alt="ruben vro"
+          <img
+            src="./upruban.png"
+            alt="ruben"
             className="md:w-full md:h-full rubanbro  xs:w-96 object-cover xs:h-80 w-64 h-52 "
           />
         </div>
@@ -144,7 +61,7 @@ function Solutions() {
           </p>
         </div>
         <div className="w-full h-full mx-auto flex justify-center items-center">
-          <Image src={gif} alt="" className="mx-auto" />
+          <img src="./wgs gifs (10).gif" alt="" className="mx-auto" />
         </div>
       </div>
       {/* third section */}
@@ -176,7 +93,7 @@ function Solutions() {
                 </p>
               </div>
               <div className="rounded-full drop-shadow-2xl p-5 bg-white w-fit absolute -top-8 -right-8 ">
-                <Image src={feature} alt="" />
+                <img src="./25.png" alt="" />
               </div>
             </div>
 
@@ -194,7 +111,7 @@ function Solutions() {
                 </p>
               </div>
               <div className="rounded-full drop-shadow-2xl p-5 bg-white w-fit absolute -top-8 -right-8">
-                <Image src={feature1} alt="" />
+                <img src="./28.png" alt="" />
               </div>
             </div>
             <div className="flex flex-col justify-center lg:block hidden ml-10 mt-5">
@@ -222,7 +139,7 @@ function Solutions() {
                 </p>
               </div>
               <div className="rounded-full drop-shadow-2xl p-5 bg-white w-fit absolute -top-8 -right-8 ">
-                <Image src={feature2} alt="" />
+                <img src="./27.png" alt="" />
               </div>
             </div>
             {/* card4 */}
@@ -240,7 +157,7 @@ function Solutions() {
                 </p>
               </div>
               <div className="rounded-full drop-shadow-2xl p-5 bg-white w-fit absolute -top-8 -right-8">
-                <Image src={feature3} alt="" />
+                <img src="./29.png" alt="" />
               </div>
             </div>
           </div>
@@ -259,7 +176,7 @@ function Solutions() {
                 </p>
               </div>
               <div className="rounded-full drop-shadow-2xl p-5 bg-white w-fit absolute -top-8 -right-8 ">
-                <Image src={feature4} alt="" className="" />
+                <img src="./26.png" alt="" className="" />
               </div>
             </div>
             {/* card6 */}
@@ -276,17 +193,21 @@ function Solutions() {
                 </p>
               </div>
               <div className="rounded-full drop-shadow-2xl p-5 bg-white w-fit absolute -top-8 -right-8">
-                <Image src={feature5} alt="" />
+                <img src="./24.png" alt="" />
               </div>
             </div>
           </div>
-          <Image src={benifits} alt="" className="lg:-mt-32 lg:block hidden" />
+          <img
+            src="./sevice.png"
+            alt=""
+            className="lg:-mt-32 lg:block hidden"
+          />
         </div>
       </div>
       {/* fourth section */}
       <div className="text-center relative  w-full overflow-hidden  lg:h-[500px] md:h-[400px] sm:h-72 h-56 ">
         <div className="w-full h-full absolute top-0 ">
-          <Image src={why} className="w-full object-fill h-full" alt="" />
+          <img src="./why.png" className="w-full object-fill h-full" alt="" />
         </div>
         <div className="bg-black opacity-30 absolute w-full h-full top-0"></div>
         <h1 className="lg:text-6xl text-xl text-white font-bold drop-shadow-2xl  xl:pt-32 lg:pt-32 md:pt-20 sm:pt-10 pt-10">
@@ -336,34 +257,34 @@ function Solutions() {
           </div>
           {showActiveContent === "SignIn" && (
             <div className="bg-white md:w-[80%] w-full xl:w-[90%]  p-10 xl:px-32 rounded-md">
-              <Image src={signin} alt="" className="w-full" />
+              <img src="./log.png" alt="" className="w-full" />
             </div>
           )}
           {showActiveContent === "DashBoard" && (
             <div className="bg-white md:w-[80%] w-full xl:w-[90%] p-10 xl:px-32 rounded-md ">
-              <Image src={lmsin} alt="" className="w-full" />
+              <img src="./Instituteadmin.png" alt="" className="w-full" />
             </div>
           )}
           {showActiveContent === "Faculty" && (
             <div className="bg-white md:w-[80%] w-full xl:w-[90%]  p-10 xl:px-32 rounded-md ">
-              <Image src={Faculty} alt="" className="w-full" />
+              <img src="./Faculty.png" alt="" className="w-full" />
             </div>
           )}
         </div>
       </div>
       {/* sixth section */}
       <div className="flex flex-col justify-center items-center overflow-hidden py-5">
-        <div className="relative w-full lg:h-[236px] h-[250px]  px-10">
-          <Image
-            src={bgorange1}
+        <div className="relative w-full sm:h-[236px] h-[170px]  px-10">
+          <img
+            src="./bgorange1.png"
             alt=""
             className="w-full h-full object-cover"
           />
           <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2  text-center space-y-10">
-            <h2 className="font-semibold sm:text-5xl text-xl text-white">
+            <h2 className="font-semibold sm:text-3xl lg:text-5xl text-lg text-white">
               Connect with Us!
             </h2>
-            <button className="bg-white drop-shadow-xl text-[#FF8900] rounded-full sm:px-32 xs:px-20 px-5 py-4 font-semibold sm:text-xl text-base">
+            <button className="bg-white drop-shadow-xl text-[#FF8900] rounded-full md:px-32 sm:px-20 px-5 sm:py-4 py-2 font-semibold sm:text-xl text-sm">
               Get Started
             </button>
           </div>
