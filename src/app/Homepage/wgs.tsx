@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendar } from "@fortawesome/free-solid-svg-icons";
 import img1 from "../../../public/img1.jpeg";
@@ -6,8 +7,30 @@ import img2 from "../../../public/img2.jpeg";
 import img3 from "../../../public/img3.jpg";
 import bgorange1 from "../../../public/bgorange1.png";
 import Image from "next/image";
+import SanityClient from "../SanityClient";
 
 const Wgs = () => {
+  useEffect(()=>{
+    SanityClient.fetch(`*[_type=='Home']{
+      blog[]{
+        Photo{
+          asset->{
+            url
+          }
+        },
+        icon{
+          asset->{
+            url
+          }
+        },
+        date,
+        title,
+        content,
+      }
+    }`).then((res)=>{
+      console.log(res)
+    })
+  })
   return (
     <div className="overflow-hidden">
       <div className="flex justify-between sm:flex-row flex-col sm:px-24 py-10">

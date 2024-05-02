@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import Image from "next/image";
 import heli from "../../../public/helicopter.gif";
 import style2 from "../../../public/style2.png";
@@ -8,6 +8,7 @@ import style3 from "../../../public/style3.png";
 import star from "../../../public/stars.png";
 import Slider from "react-slick";
 import tick from "../../../public/tick.png";
+import SanityClient from "../SanityClient";
 
 function Helicopter() {
   var settings = {
@@ -33,6 +34,41 @@ function Helicopter() {
       },
     ],
   };
+  useEffect(()=>{
+    SanityClient.fetch(`*[_type=='Home']{
+        review[]{
+            title,
+            subtitle,
+            client[]{
+                Photo{
+                    asset->{
+                        url
+                    }
+                },
+                Content,
+                name,
+                role,
+            }
+        },
+        technology[]{
+          Photo{
+            asset->{
+              url
+            }
+          },
+          programming[]{
+            technology,
+            heading,
+            content,
+            list[]{
+              list
+            }
+          },
+        },
+    }`).then((res)=>{
+        console.log(res)
+    })
+})
   const [clickindex, setclickindex] = useState(0);
   function handleclick(value: any, e: any) {
     setContent(e.target.textContent);

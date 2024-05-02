@@ -1,10 +1,24 @@
 "use client";
-import React from 'react'
+import React, { useEffect } from 'react'
 import Image from 'next/image'
 import CountUp from 'react-countup'
 import plus from '../../../public/+.png';
+import SanityClient from '../SanityClient';
 
 const World = () => {
+    useEffect(()=>{
+        SanityClient.fetch(`*[_type=='Home']{
+            World[]{
+                title,
+                growth[]{
+                    growth,
+                    Content,
+                }
+            }
+        }`).then((res)=>{
+            console.log(res)
+        })
+    },[])
     return (
         <>
             <section className='bg-world bg-cover h-[10%] w-full p-5 md:p-20 flex flex-col text-center text-white grayscale-'>
