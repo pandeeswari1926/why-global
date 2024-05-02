@@ -17,7 +17,6 @@ const Wgs = () => {
     title:string;
     content:string;
   }
-  interface ALLData
   useEffect(()=>{
     SanityClient.fetch(`*[_type=='Home']{
       blog[]{
