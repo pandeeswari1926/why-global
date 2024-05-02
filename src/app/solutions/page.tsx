@@ -1,12 +1,62 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import SanityClient from "../SanityClient";
+import { ContentSourceMapDocumentValueSource } from "@sanity/client";
+import Item from "antd/es/list/Item";
 
 function Solutions() {
   const [showActiveContent, setShowActiveContent] = useState("SignIn");
   const toggleContent = (content: React.SetStateAction<string>) => {
     setShowActiveContent(content);
   };
+  interface features{
+    features:[
+      {
+      card1:[{content:string,title:string,icon:{asset:{url:string}}}]},
+      {
+      card2:[{content:string,title:string,icon:{asset:{url:string}}}]},
+      {
+      card3:[{content:string,title:string,icon:{asset:{url:string}}}]}
+    
+    ]
+  }
+
+
+interface Banner{
+  BannerImage:[{image:{asset:{url:string}}}],
+  title:string,
+  subTitle:string,
+  content:string
+}
+  interface Alldata{
+    Banner:Banner[],
+    learning:[{
+      heading:string,
+      title:string,
+      gif:{asset:{url: string}},
+      content:[{content:string}]
+      
+    }],
+    features:features[],
+    
+weProvidesolution:[{
+  
+Heading:string,
+image:{asset:{url:string}},
+
+}],
+customerServices:[
+  {
+    
+dashboard:[{image:{asset:{url:string}},title:string }],
+faculty:[{image:{asset:{url:string}},title:string }],
+signin:[{image:{asset:{url:string}},title:string }]
+
+
+  }
+]
+  }
+  const[alldata,setalldata]=useState<Alldata |null>(null)
   useEffect(()=>{
    const getdata=async()=>{ await SanityClient.fetch(`*[_type=='solution']{
       metaTitle,
@@ -102,73 +152,79 @@ function Solutions() {
           content,
         }
       }
-    }`).then((res)=>{
+    }`).then((res:any)=>{
       console.log(res)
+      setalldata(res[0])
     })}
     getdata()
   },[])
   return (
     <>
       {/* first section */}
-      <div className="grid w-full h-screen relative  overflow-hidden grid-cols-1 md:grid-cols-2 ">
+      {alldata && alldata.Banner.map((item,index)=>(
+        <div className="grid w-full lg:h-screen  relative  overflow-hidden grid-cols-1 lg:grid-cols-2 ">
         <div className="flex flex-col gap-5 p-5 md:p-20">
           <p className="uppercase text-sm sm:text-base text-orange-500 font-semibold md:text-left text-center">
-            Learning management system
+           {item?.title}
           </p>
 
           <div className="uppercase lg:text-3xl sm:text-xl xs:text-lg text-base md:text-left text-center font-semibold space-y-3 text-gray-500">
             <p className="space-y-2">
-              Unlocking KNOWLEDGE, Empowering learning
+             {item?.subTitle}
             </p>
           </div>
 
           <p className="font-light md:text-base text-sm md:text-left text-center leading-loose text-gray-500">
-            Welcome to our Learning Management System (LMS) page, where we offer
-            a comprehensive solution designed to transform the way you deliver
-            and manage online learning.
+         {item.content}
           </p>
         </div>
 
-        <div className="h-full w-full  flex flex-col justify-center items-center">
+        <div className="h-full w-full hidden lg:flex flex-col justify-center items-center">
           <img
-            src="./upruban.png"
+            src={item?.BannerImage[0]?.image?.asset?.url}
             alt="ruben"
             className="md:w-full md:h-full rubanbro  xs:w-96 object-cover xs:h-80 w-64 h-52 "
           />
         </div>
+        <div className="h-full w-full lg:hidden flex flex-col justify-center items-center">
+          <img
+            src={item?.BannerImage[0]?.image?.asset?.url}
+            alt="ruben"
+            className="md:w-full md:h-full   xs:w-96 object-cover xs:h-80 w-64 h-52 "
+          />
+        </div>
       </div>
+      ))}
+      {alldata&&alldata.learning.map((item:any,index:any)=>(
+ <div className="grid grid-cols-1 md:grid-cols-2">
+ <div className="flex flex-col justify-center gap-5 p-5 md:p-10">
+   <h1 className="uppercase text-sm sm:text-base text-orange-500 font-semibold md:text-left text-center">
+    {item?.heading}
+   </h1>
+
+   <h1 className="uppercase lg:text-3xl text-gray-500 sm:text-xl xs:text-lg text-base md:text-left text-center font-bold">
+     {item?.title}
+   </h1>
+{item&& item.content&& item.content.map((list:any,listindex:any)=>(
+   <p className="font-light text-sm  md:text-left text-justify md:px-0 px-5 text-gray-500">
+   {list.content}
+ </p>
+))}
+  
+
+ </div>
+ <div className="w-full h-full mx-auto flex justify-center items-center">
+   <img src={item?.gif?.asset?.url} alt="" className="mx-auto" />
+ </div>
+</div>
+      ))}
       {/* second section */}
-      <div className="grid grid-cols-1 md:grid-cols-2">
-        <div className="flex flex-col justify-center gap-5 p-5 md:p-10">
-          <h1 className="uppercase text-sm sm:text-base text-orange-500 font-semibold md:text-left text-center">
-            LEARNING MANAGEMENT SYSTEM
-          </h1>
-
-          <h1 className="uppercase lg:text-3xl text-gray-500 sm:text-xl xs:text-lg text-base md:text-left text-center font-bold">
-            ELEVATE YOUR LEARNING JOURNEY WITH OUR CUTTING-EDGE LMS SOLUTION!
-          </h1>
-
-          <p className="font-light text-sm  md:text-left text-justify md:px-0 px-5 text-gray-500">
-            An LMS, or Learning Management System, is a comprehensive software
-            platform designed to facilitate online learning and training
-            programs. LMSs offer a wide range of features that support the
-            management, delivery, and tracking of educational content.
-          </p>
-          <p className="font-light  text-sm md:text-left text-justify md:px-0 px-5 text-gray-500">
-            One of the key features of an LMS is course management, which allows
-            administrators to create and organize courses, modules, and lessons.
-            Users can easily access these courses, track their progress, and
-            engage with interactive learning materials.
-          </p>
-        </div>
-        <div className="w-full h-full mx-auto flex justify-center items-center">
-          <img src="./wgs gifs (10).gif" alt="" className="mx-auto" />
-        </div>
-      </div>
+     
       {/* third section */}
+   
       <div className="bg-gray-100  lg:py-20 ">
         <div className="mt-10">
-          <div className="flex flex-col justify-center xs:block lg:hidden p-5">
+          <div className="flex flex-col justify-center items-center  xs:block lg:hidden p-5">
             <h1 className="text-xl text-[#FF9315] font-semibold">
               YOU MUST KNOW THE
             </h1>
@@ -177,127 +233,87 @@ function Solutions() {
               KEY FEATURES & BENEFITS
             </h1>
           </div>
+          {alldata&&alldata.features&&alldata.features.map((item:any,index:any)=>(
 
-          <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:px-20 px-10 justify-evenly lg:-mt-24 lg:gap-5 gap-10 p-5">
-            {/* card1 */}
-            <div className="lg:w-[65%] h-fit relative ">
-              <div className=" bg-white p-5 pt-10 mx-auto rounded-md shadow-xl">
-                <h1 className="text-lg font-medium">
-                  Engaging <br className="lg:block hidden" />
-                  Learning Experiences
-                </h1>
-                <br />
-                <p className="text-xs font-light text-gray-500">
-                  We understand the importance of learner engagement. Our LMS
-                  offers a range of interactive features, including multimedia
-                  integration.
-                </p>
-              </div>
-              <div className="rounded-full drop-shadow-2xl p-5 bg-white w-fit absolute -top-8 -right-8 ">
-                <img src="./25.png" alt="" />
-              </div>
-            </div>
+<div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:px-20 px-10 justify-evenly lg:-mt-24 lg:gap-5 gap-10 p-5">
+           
+     {item&&item.card1&&item.card1.map((list:any,indexlist:any)=>(
+      <div className={`lg:w-56 h-fit relative ${indexlist==1?'lg:ml-40':'lg:ml-0'} `}>
+  <div className=" bg-white p-5 pt-10 mx-auto rounded-md shadow-xl">
+    <h1 className="text-lg font-medium">
+     {list?.title}
+    </h1>
+    <br />
+    <p className="text-xs font-light text-gray-500">
+     {list?.content}
+    </p>
+  </div>
+  <div className="rounded-full drop-shadow-2xl p-5 bg-white w-fit absolute -top-8 -right-8 ">
+    <img src={list?.icon?.asset?.url} alt="" />
+  </div>
+</div>
+     ))}      
 
-            {/* card2 */}
-            <div className="lg:w-[65%] h-fit relative lg:ml-36 ">
-              <div className="bg-white p-5 pt-10 mx-auto rounded-md shadow-xl">
-                <h1 className="text-lg font-medium">
-                  Seamless <br className="lg:block hidden" /> Integration
-                </h1>
-                <br />
-                <p className="text-xs font-light text-gray-500">
-                  Our LMS seamlessly integrates with existing systems, allowing
-                  for easy deployment and integration into your organization’s
-                  infrastructure.{" "}
-                </p>
-              </div>
-              <div className="rounded-full drop-shadow-2xl p-5 bg-white w-fit absolute -top-8 -right-8">
-                <img src="./28.png" alt="" />
-              </div>
-            </div>
-            <div className="flex flex-col justify-center lg:block hidden ml-10 mt-5">
-              <h1 className="text-xl text-[#FF9315] font-semibold">
-                YOU MUST KNOW THE
-              </h1>
-              <br />
-              <h1 className="text-xl text-gray-500 font-semibold">
-                KEY FEATURES & BENEFITS
-              </h1>
-            </div>
-          </div>
-          <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 justify-evenly lg:px-20 px-10 lg:gap-5 gap-10 p-5 lg:-mt-24">
+
+
+<div className="flex flex-col justify-center lg:block hidden ml-12 mt-5">
+  <h1 className="text-xl text-[#FF9315] font-semibold">
+    YOU MUST KNOW THE
+  </h1>
+  <br />
+  <h1 className="text-xl text-gray-500 font-semibold">
+    KEY FEATURES & BENEFITS
+  </h1>
+</div>
+</div>
+          ))}
+          {alldata&&alldata.features&&alldata.features.map((item:any,index:any)=>(
+            <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 justify-evenly lg:px-9 px-10 lg:gap-5 gap-10 p-5 lg:-mt-24">
             <div className="lg:block hidden"></div>
-            {/* card3 */}
-            <div className="lg:w-[75%] h-full relative">
-              <div className="bg-white p-5 pt-10 mx-auto rounded-md shadow-xl">
-                <h1 className="text-lg font-medium">
-                  Robust Analytics & Reporting
-                </h1>
-                <br />
-                <p className="text-xs font-light text-gray-500">
-                  Track the effectiveness of your online learning initiatives
-                  with our robust analytics and reporting capabilities
-                </p>
-              </div>
-              <div className="rounded-full drop-shadow-2xl p-5 bg-white w-fit absolute -top-8 -right-8 ">
-                <img src="./27.png" alt="" />
-              </div>
-            </div>
-            {/* card4 */}
-            <div className="lg:w-[95%] h-full relative lg:ml-52 lg:pl-5 mx-auto">
-              <div className=" bg-white p-5 pt-10 rounded-md mx-auto shadow-xl">
-                <h1 className="text-lg font-medium">
-                  Engaging <br className="lg:block hidden" />
-                  Learning Experiences{" "}
-                </h1>
-                <br />
-                <p className="text-xs font-light text-gray-500">
-                  We understand the importance of learner engagement. Our LMS
-                  offers a range of interactive features, including multimedia
-                  integration, discussion forums.
-                </p>
-              </div>
-              <div className="rounded-full drop-shadow-2xl p-5 bg-white w-fit absolute -top-8 -right-8">
-                <img src="./29.png" alt="" />
-              </div>
-            </div>
+             {item&&item.card1&&item.card1.map((list:any,indexlist:any)=>(
+  <div className={`lg:w-56 h-full relative ${indexlist==1?'lg:ml-56':'lg:ml-0 lg:pl-0'}`}>
+  <div className="bg-white p-5 pt-10 mx-auto rounded-md shadow-xl">
+    <h1 className="text-lg font-medium">
+    {list?.title}
+    </h1>
+    <br />
+    <p className="text-xs font-light text-gray-500">
+    {list?.content}
+    </p>
+  </div>
+  <div className="rounded-full drop-shadow-2xl p-5 bg-white w-fit absolute -top-8 -right-8 ">
+    <img src={list?.icon?.asset?.url} alt="" />
+  </div>
+</div>
+             ))}
+           
+           
           </div>
-          <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:px-20 px-10 justify-evenly lg:-mt-24 lg:gap-5 gap-10 p-5">
-            {/* card5 */}
-            <div className="lg:w-[60%] h-fit relative ">
-              <div className=" bg-white p-5 pt-10 mx-auto rounded-md shadow-xl">
-                <h1 className="text-lg font-medium">
-                  Personalized Learning Paths
-                </h1>
-                <br />
-                <p className="text-xs font-light text-gray-500">
-                  Tailor the learning experience with our LMS’s personalized
-                  learning paths. By providing learners with customized content,
-                  assessments.
-                </p>
+          ))}
+          {alldata&&alldata.features&&alldata.features.map((item:any,index:any)=>(
+              <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:px-20 px-10 justify-evenly lg:-mt-24 lg:gap-5 gap-10 p-5">
+              {/* card5 */}
+              {item&&item.card1&&item.card1.map((list:any,indexlist:any)=>(
+                <div className={`lg:w-56 h-fit relative ${indexlist==1?'lg:ml-32 ':'lg:pl-0'} `}>
+                <div className=" bg-white p-5 pt-10 mx-auto rounded-md shadow-xl">
+                  <h1 className="text-lg font-medium">
+                  {list?.title}
+                  </h1>
+                  <br />
+                  <p className="text-xs font-light text-gray-500">
+                  {list?.content}
+                  </p>
+                </div>
+                <div className="rounded-full drop-shadow-2xl p-5 bg-white w-fit absolute -top-8 -right-8 ">
+                  <img src={list?.icon?.asset?.url} alt="" className="" />
+                </div>
               </div>
-              <div className="rounded-full drop-shadow-2xl p-5 bg-white w-fit absolute -top-8 -right-8 ">
-                <img src="./26.png" alt="" className="" />
-              </div>
+              ))}
+              
+              
             </div>
-            {/* card6 */}
-            <div className="lg:w-[98%] h-full relative lg:pl-32">
-              <div className="bg-white p-5 pt-10 mx-auto rounded-md shadow-xl">
-                <h1 className="text-lg font-medium">
-                  Efficient Course Creation
-                </h1>
-                <br />
-                <p className="text-xs font-light text-gray-500">
-                  Our LMS seamlessly integrates with existing systems, allowing
-                  for easy deployment and integration into your organization’s
-                  infrastructure.
-                </p>
-              </div>
-              <div className="rounded-full drop-shadow-2xl p-5 bg-white w-fit absolute -top-8 -right-8">
-                <img src="./24.png" alt="" />
-              </div>
-            </div>
-          </div>
+          ))}
+        
           <img
             src="./sevice.png"
             alt=""
@@ -306,15 +322,18 @@ function Solutions() {
         </div>
       </div>
       {/* fourth section */}
-      <div className="text-center relative  w-full overflow-hidden  lg:h-[500px] md:h-[400px] sm:h-72 h-56 ">
-        <div className="w-full h-full absolute top-0 ">
-          <img src="./why.png" className="w-full object-fill h-full" alt="" />
-        </div>
-        <div className="bg-black opacity-30 absolute w-full h-full top-0"></div>
-        <h1 className="lg:text-6xl text-xl text-white font-bold drop-shadow-2xl  xl:pt-32 lg:pt-32 md:pt-20 sm:pt-10 pt-10">
-          “WE PROVIDE SOLUTIONS”
-        </h1>
-      </div>
+      {alldata&&alldata.weProvidesolution.map((item:any,index:any)=>(
+    <div className="text-center relative  w-full overflow-hidden  lg:h-[500px] md:h-[400px] sm:h-72 h-56 ">
+    <div className="w-full h-full absolute top-0 ">
+      <img src={item?.image?.asset?.url} className="w-full object-fill h-full" alt="" />
+    </div>
+    <div className="bg-black opacity-30 absolute w-full h-full top-0"></div>
+    <h1 className="lg:text-6xl text-xl text-white font-bold drop-shadow-2xl  xl:pt-32 lg:pt-32 md:pt-20 sm:pt-10 pt-10">
+    {item?.Heading}
+    </h1>
+  </div>
+      ))}
+  
 
       {/* fifth section */}
       <div className="relative bg-customer  h-fit  w-full">
@@ -322,56 +341,59 @@ function Solutions() {
         <div className="lg:w-[600px] md:w-[350px]  w-[200px] h-[200px] bg-[#FF9315] top-0 absolute right-0 text-center text-white  lg:text-3xl md:text-base text-xs font-bold sm:p-4 p-3">
           Customer Services
         </div>
+{alldata&&alldata.customerServices&&alldata.customerServices.map((item,index)=>(
+   <div key={index} className="xl:ml-20 lg:ml-10 md:ml-5 ml-0 pt-10 mx-auto  drop-shadow-2xl">
+   <div className="flex flex-row xl:gap-10 gap-1 p-4 bg-white w-fit rounded-t-md">
 
-        <div className="xl:ml-20 lg:ml-10 md:ml-5 ml-0 pt-10 mx-auto  drop-shadow-2xl">
-          <div className="flex flex-row xl:gap-10 gap-1 p-4 bg-white w-fit rounded-t-md">
-            <button
-              onClick={() => toggleContent("SignIn")}
-              className={`focus:outline-none font-medium sm:text-base text-xs ${
-                showActiveContent === "SignIn"
-                  ? "text-white border-2 bg-[#FF9315] p-1 md:px-5 px-2 rounded-md"
-                  : "bg-gray-400 text-white p-1 px-5 rounded-md"
-              }`}
-            >
-              SigIn
-            </button>
-            <button
-              onClick={() => toggleContent("DashBoard")}
-              className={`focus: outline-none font-medium sm:text-base text-xs ${
-                showActiveContent === "DashBoard"
-                  ? "text-white border-2 bg-[#FF9315] p-1 md:px-5 px-2 rounded-md"
-                  : "bg-gray-400 text-white p-1 px-5 rounded-md"
-              }`}
-            >
-              DashBoard
-            </button>
-            <button
-              onClick={() => toggleContent("Faculty")}
-              className={`focus: outline-none font-medium sm:text-base text-xs ${
-                showActiveContent === "Faculty"
-                  ? "text-white border-2 bg-[#FF9315] p-1 md:px-5 px-2 rounded-md"
-                  : "bg-gray-400 text-white p-1 px-5 rounded-md"
-              }`}
-            >
-              Faculty
-            </button>
-          </div>
-          {showActiveContent === "SignIn" && (
-            <div className="bg-white md:w-[80%] w-full xl:w-[90%]  p-10 xl:px-32 rounded-md">
-              <img src="./log.png" alt="" className="w-full" />
-            </div>
-          )}
-          {showActiveContent === "DashBoard" && (
-            <div className="bg-white md:w-[80%] w-full xl:w-[90%] p-10 xl:px-32 rounded-md ">
-              <img src="./Instituteadmin.png" alt="" className="w-full" />
-            </div>
-          )}
-          {showActiveContent === "Faculty" && (
-            <div className="bg-white md:w-[80%] w-full xl:w-[90%]  p-10 xl:px-32 rounded-md ">
-              <img src="./Faculty.png" alt="" className="w-full" />
-            </div>
-          )}
-        </div>
+     <button
+       onClick={() => toggleContent(item?.signin[0].title)}
+       className={`focus:outline-none font-medium sm:text-base text-xs ${
+         showActiveContent === item?.signin[0].title
+           ? "text-white border-2 bg-[#FF9315] p-1 md:px-5 px-2 rounded-md"
+           : "bg-gray-400 text-white p-1 px-5 rounded-md"
+       }`}
+     >
+       {item?.signin[0].title}
+     </button>
+     <button
+       onClick={() => toggleContent(item?.dashboard[0].title)}
+       className={`focus: outline-none font-medium sm:text-base text-xs ${
+         showActiveContent === "DashBoard"
+           ? "text-white border-2 bg-[#FF9315] p-1 md:px-5 px-2 rounded-md"
+           : "bg-gray-400 text-white p-1 px-5 rounded-md"
+       }`}
+     >
+       {item?.dashboard[0].title}
+     </button>
+     <button
+       onClick={() => toggleContent(item?.faculty[0].title)}
+       className={`focus: outline-none font-medium sm:text-base text-xs ${
+         showActiveContent === "Faculty"
+           ? "text-white border-2 bg-[#FF9315] p-1 md:px-5 px-2 rounded-md"
+           : "bg-gray-400 text-white p-1 px-5 rounded-md"
+       }`}
+     >
+      {item?.faculty[0].title}
+     </button>
+   </div>
+   {showActiveContent === "SignIn" && (
+     <div className="bg-white md:w-[80%] w-full xl:w-[90%]  p-10 xl:px-32 rounded-md">
+       <img src={alldata&&alldata.customerServices[0]?.signin[0]?.image?.asset?.url} alt="" className="w-full" />
+     </div>
+   )}
+   {showActiveContent === "DashBoard" && (
+     <div className="bg-white md:w-[80%] w-full xl:w-[90%] p-10 xl:px-32 rounded-md ">
+       <img src={alldata&&alldata.customerServices[0]?.dashboard[0]?.image?.asset?.url} alt="" className="w-full" />
+     </div>
+   )}
+   {showActiveContent === "Faculty" && (
+     <div className="bg-white md:w-[80%] w-full xl:w-[90%]  p-10 xl:px-32 rounded-md ">
+       <img src={alldata&&alldata.customerServices[0]?.faculty[0]?.image?.asset?.url} alt="" className="w-full" />
+     </div>
+   )}
+ </div>
+))}
+       
       </div>
       {/* sixth section */}
       <div className="flex flex-col justify-center items-center overflow-hidden py-5">
