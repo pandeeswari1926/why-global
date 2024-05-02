@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import Web from "./web";
 import WebDesign from "./webDesign";
@@ -16,9 +17,26 @@ import message2 from "../../../public/Rectangle 129.png";
 import message3 from "../../../public/message5.png";
 import message4 from "../../../public/message4.png";
 import bgorange1 from "../../../public/bgorange1.png";
+import SanityClient from "../SanityClient";
 
 
 const Page = () => {
+  useEffect(()=>{
+    SanityClient.fetch(`*[_type=='portfolio']{
+      metaTitle,
+      MetaDescription,
+      MetaData,
+      FocusKeyword,
+      MetaURL,
+      Banner[]{
+        heading,
+        content,
+      }
+    }`).then((res)=>{
+      console.log(res)
+      
+    })
+  },[])
   return (
     <>
       {/* first section */}
