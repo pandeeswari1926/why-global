@@ -27,37 +27,43 @@ import Item from "antd/es/list/Item";
 import { log } from "console";
 
 function Services() {
-  interface webDesign{
-    array1:[{content:string,icon:{asset:{url:string}},title:string}],
-    array2:[{content:string,icon:{asset:{url:string}},title:string}],
-    array3:[{content:string,icon:{asset:{url:string}},title:string}],
+  interface webDesign {
+    array1: [
+      { content: string; icon: { asset: { url: string } }; title: string }
+    ];
+    array2: [
+      { content: string; icon: { asset: { url: string } }; title: string }
+    ];
+    array3: [
+      { content: string; icon: { asset: { url: string } }; title: string }
+    ];
   }
-  interface About{
+  interface About {
     content: string;
-    title: string,
-    image:object
-    }
-  interface services{
-    content: string;
-    title: string,
-    image:{asset:{url:string}},
-    services:[{serviceName:string,icon:{asset:{url:string}}}]
-    }
-   interface BannerItem {
-    BannerImage:[{url:string}],
-    clients:string,
     title: string;
-   }
+    image: object;
+  }
+  interface services {
+    content: string;
+    title: string;
+    image: { asset: { url: string } };
+    services: [{ serviceName: string; icon: { asset: { url: string } } }];
+  }
+  interface BannerItem {
+    BannerImage: [{ url: string }];
+    clients: string;
+    title: string;
+  }
   interface AllData {
-    webDesign:webDesign[],
-    Banner: BannerItem[],
-    about:About[],
-    service:services[],
-    WeServe:[{
-      image:{asset:{url:string}}
-    }],
-    
-
+    webDesign: webDesign[];
+    Banner: BannerItem[];
+    about: About[];
+    service: services[];
+    WeServe: [
+      {
+        image: { asset: { url: string } };
+      }
+    ];
   }
   const bgimages = ["/bgimage1.png", "/bgimage2.png", "/bgimage3.png"];
 
@@ -72,10 +78,11 @@ function Services() {
     return () => clearInterval(interval);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  const [alldata,setalldata]=useState<AllData |null>(null)
-  useEffect(()=>{
-    const getdata=async()=>{ 
-      await SanityClient.fetch(`*[_type=='service']{
+  const [alldata, setalldata] = useState<AllData | null>(null);
+  useEffect(() => {
+    const getdata = async () => {
+      await SanityClient.fetch(
+        `*[_type=='service']{
       metaTitle,
       MetaDescription,
       MetaData,
@@ -156,13 +163,14 @@ function Services() {
           content
         },
       }
-    }`).then((res)=>{
-      console.log(res)
-      setalldata(res[0])
-    })}   
-    getdata()
-    
-  },[])
+    }`
+      ).then((res) => {
+        console.log(res);
+        setalldata(res[0]);
+      });
+    };
+    getdata();
+  }, []);
 
   return (
     <div className="">
@@ -175,97 +183,100 @@ function Services() {
         </div>
 
         <div className="lg:px-32 px-5 z-10 relative py-10 bg-gradient-to-b from-[#f9d5ad] to-transparent">
-          {alldata && alldata.Banner && alldata.Banner[0] &&alldata.Banner&&alldata.Banner.map((item:any,ind:any)=>(
-            <div key={ind}>
-               <div
-            className="bg-cover xl:h-[500px] lg:h-[400px]  w-full h-full lg:relative"
-            style={{
-              backgroundImage: `url(${item?.BannerImage[index]?.image?.asset?.url})`,
-              backgroundPosition: "center",
-              transition: "background-image 2s ease",
-            }}
-          >
-            <div className="bg-gradient-to-b from-gray-900 w-full h-[500px] lg:absolute ">
-              <h1 className="text-3xl text-white font-semibold flex justify-start items-end h-[400px] ml-20 -mb-20 ">
-                {item?.title}
-              </h1>
-              <img
-                src="./Rectangle 14.png"
-                alt=""
-                className="lg:absolute bottom-20 -left-14 lg:-ml-0 -ml-10"
-              />
-              <div className="flex flex-col lg:absolute right-10 lg:top-6 lg:mt-0 mt-44 gap-5 rounded-ss-3xl bg-gradient-to-b from-slate-50 p-10 drop-shadow-2xl lg:border-0 border-2 ">
-                <input
-                  type="text"
-                  placeholder="Name *"
-                  className="p-2 border-2 border-[#FF9315] placeholder:text-black"
-                />
-                <input
-                  type="text"
-                  placeholder="Email *"
-                  className="p-2 border-2 border-[#FF9315] placeholder:text-black"
-                />
-                <input
-                  type="text"
-                  placeholder="Mobile Number *"
-                  className="p-2 border-2 border-[#FF9315] placeholder:text-black"
-                />
-                <input
-                  type="text"
-                  placeholder="Services *"
-                  className="p-2 border-2 border-[#FF9315] placeholder:text-black"
-                />
-                <textarea
-                  placeholder="Message*"
-                  className="p-2 border-2 border-[#FF9315] placeholder:text-black"
-                ></textarea>
-                <button className="bg-white text-[#FF9315] w-fit  px-5 mx-auto py-3 rounded-lg font-semibold hover:bg-[#FF9315] hover:text-white">
-                  Send
-                </button>
+          {alldata &&
+            alldata.Banner &&
+            alldata.Banner[0] &&
+            alldata.Banner &&
+            alldata.Banner.map((item: any, ind: any) => (
+              <div key={ind}>
+                <div
+                  className="bg-cover xl:h-[500px] lg:h-[400px]  w-full h-full lg:relative"
+                  style={{
+                    backgroundImage: `url(${item?.BannerImage[index]?.image?.asset?.url})`,
+                    backgroundPosition: "center",
+                    transition: "background-image 2s ease",
+                  }}
+                >
+                  <div className="bg-gradient-to-b from-gray-900 w-full h-[500px] lg:absolute ">
+                    <h1 className="text-3xl text-white font-semibold flex justify-start items-end h-[400px] ml-20 -mb-20 ">
+                      {item?.title}
+                    </h1>
+                    <img
+                      src="./Rectangle 14.png"
+                      alt=""
+                      className="lg:absolute bottom-20 -left-14 lg:-ml-0 -ml-10"
+                    />
+                    <div className="flex flex-col lg:absolute right-10 lg:top-6 lg:mt-0 mt-44 gap-5 rounded-ss-3xl bg-gradient-to-b from-slate-50 p-10 drop-shadow-2xl lg:border-0 border-2 ">
+                      <input
+                        type="text"
+                        placeholder="Name *"
+                        className="p-2 border-2 border-[#FF9315] placeholder:text-black"
+                      />
+                      <input
+                        type="text"
+                        placeholder="Email *"
+                        className="p-2 border-2 border-[#FF9315] placeholder:text-black"
+                      />
+                      <input
+                        type="text"
+                        placeholder="Mobile Number *"
+                        className="p-2 border-2 border-[#FF9315] placeholder:text-black"
+                      />
+                      <input
+                        type="text"
+                        placeholder="Services *"
+                        className="p-2 border-2 border-[#FF9315] placeholder:text-black"
+                      />
+                      <textarea
+                        placeholder="Message*"
+                        className="p-2 border-2 border-[#FF9315] placeholder:text-black"
+                      ></textarea>
+                      <button className="bg-white text-[#FF9315] w-fit  px-5 mx-auto py-3 rounded-lg font-semibold hover:bg-[#FF9315] hover:text-white">
+                        Send
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex justify-end items-end">
+                  <div className="w-[80%] bg-[#FF9315] p-4">
+                    <h1 className="text-white ">
+                      <span className="text-2xl font-semibold">
+                        {" "}
+                        {item?.clients}
+                      </span>
+                    </h1>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div className="flex justify-end items-end">
-            <div className="w-[80%] bg-[#FF9315] p-4">
-              <h1 className="text-white ">
-                <span className="text-2xl font-semibold">     {item?.clients}</span>
-                
-              </h1>
-            </div>
-          </div>
-            </div>
-          )
-          )}
-         
+            ))}
         </div>
       </div>
       {/* second section */}
-      {alldata && alldata.about &&alldata.about.map((items:any,ind:any)=>(
-        
-        <div className="grid lg:grid-cols-2 grid-cols-1 items-center justify-items-center gap-20 p-8 lg:px-28 lg:pt-0 pt-[500px] ">
-          
-        <div className="flex flex-col gap-3">
-          <h1 className="text-xl font-medium text-[#FF9315]">ABOUT</h1>
-         
-            <div>
-              <h1 className="text-3xl font-semibold mb-5 text-gray-500">
-            {items?.title}
-          </h1>
-          {items&&items.content&&items.content.map((list:any,listindex:any)=>(
-            <p className="text-sm lg:text-start text-justify mb-5 text-gray-500">
-           {list?.content}
-           </p>
-          ))}
-          
-       
+      {alldata &&
+        alldata.about &&
+        alldata.about.map((items: any, ind: any) => (
+          <div className="grid lg:grid-cols-2 grid-cols-1 items-center justify-items-center gap-20 p-8 lg:px-28 lg:pt-0 pt-[500px] ">
+            <div className="flex flex-col gap-3">
+              <h1 className="text-xl font-medium text-[#FF9315]">ABOUT</h1>
+
+              <div>
+                <h1 className="text-3xl font-semibold mb-5 text-gray-500">
+                  {items?.title}
+                </h1>
+                {items &&
+                  items.content &&
+                  items.content.map((list: any, listindex: any) => (
+                    <p className="text-sm lg:text-start text-justify mb-5 text-gray-500">
+                      {list?.content}
+                    </p>
+                  ))}
+              </div>
             </div>
-          
-          
-        </div>
-        <div className="lg:w-full lg:h-full w-[90%] h-[90%]">
-          <img src="./robo.gif" alt="" className="w-full h-full" />
-        </div>
-      </div>))}
+            <div className="lg:w-full lg:h-full w-[90%] h-[90%]">
+              <img src="./robo.gif" alt="" className="w-full h-full" />
+            </div>
+          </div>
+        ))}
 
       {/* third section */}
       <div className="bg-gray-100">
@@ -281,52 +292,67 @@ function Services() {
           </div>
           <img src="./sevice.png" alt="" />
           <div className="">
-            {alldata && alldata.webDesign&&alldata.webDesign.map((item:any,index:any)=>(
-          <div  className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:ml-20 justify-evenly md:-mt-24 lg:gap-5 gap-10 p-5"> 
-            {item&&item.array1.map((list:any,indexs:any)=>(
-              <div key={indexs} className={`lg:w-[52%] h-fit relative ${indexs==1?'lg:ml-[70px]':'lg:ml-0'} `}>
- <div className="pt-10 bg-white p-5 mx-auto rounded-md shadow-xl">
-   <h1 className="text-xl font-medium">{list?.title}</h1>
-   <br />
-   <p className="text-xs font-light text-gray-400">
-   {list?.content}
-   </p>
- </div>
- <div className="rounded-full drop-shadow-2xl p-5 bg-white w-fit absolute -top-8 md:-right-8 -right-5 ">
-   <img src={list?.icon?.asset?.url} className="size-12 text-[#FF9315]" />
- </div>
-</div>
-            ))}
- </div>
-            ))}
+            {alldata &&
+              alldata.webDesign &&
+              alldata.webDesign.map((item: any, index: any) => (
+                <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:ml-20 justify-evenly md:-mt-24 lg:gap-5 gap-10 p-5">
+                  {item &&
+                    item.array1.map((list: any, indexs: any) => (
+                      <div
+                        key={indexs}
+                        className={`lg:w-[47%] h-fit relative ${
+                          indexs == 1 ? "lg:ml-[70px]" : "lg:ml-0"
+                        } `}
+                      >
+                        <div className="pt-10 bg-white p-5 mx-auto rounded-md shadow-xl">
+                          <h1 className="text-xl font-medium">{list?.title}</h1>
+                          <br />
+                          <p className="text-xs font-light text-gray-400">
+                            {list?.content}
+                          </p>
+                        </div>
+                        <div className="rounded-full drop-shadow-2xl p-5 bg-white w-fit absolute -top-8 md:-right-8 -right-5 ">
+                          <img
+                            src={list?.icon?.asset?.url}
+                            className="size-12 text-[#FF9315]"
+                          />
+                        </div>
+                      </div>
+                    ))}
+                </div>
+              ))}
             {/* card1 */}
-           
 
             {/* card2 */}
-     
           </div>
-          {alldata && alldata.webDesign&&alldata.webDesign.map((item:any,index:any)=>(
-            <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 justify-evenly  lg:-mt-32  gap-10 lg:gap-5  p-5">
-            <div className="lg:block hidden"></div>
-            {/* card3 */}
-            {item&&item.array2.map((list:any,indexs:any)=>(
- <div className={`lg:w-[60%] h-fit relative ${indexs==1?'lg:ml-36':'lg:ml-0'}`}>
- <div className=" bg-white p-5 pt-14 rounded-md shadow-xl mx-auto">
-   <h1 className="text-xl font-medium">{list?.title}</h1>
-   <br />
-   <p className="text-xs font-light text-gray-500">
-   {list?.content}
-   </p>
- </div>
- <div className="rounded-full drop-shadow-2xl p-5 bg-white w-fit absolute -top-8 md:-right-8 -right-5 ">
-   <img src={list?.icon?.asset?.url} alt="" />
- </div>
-</div>
-            ))}
-           
+          {alldata &&
+            alldata.webDesign &&
+            alldata.webDesign.map((item: any, index: any) => (
+              <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 justify-evenly  lg:-mt-32  gap-10 lg:gap-5  p-5">
+                <div className="lg:block hidden"></div>
+                {/* card3 */}
+                {item &&
+                  item.array2.map((list: any, indexs: any) => (
+                    <div
+                      className={`lg:w-[60%] h-fit relative ${
+                        indexs == 1 ? "lg:ml-36" : "lg:ml-0"
+                      }`}
+                    >
+                      <div className=" bg-white p-5 pt-14 rounded-md shadow-xl mx-auto">
+                        <h1 className="text-xl font-medium">{list?.title}</h1>
+                        <br />
+                        <p className="text-xs font-light text-gray-500">
+                          {list?.content}
+                        </p>
+                      </div>
+                      <div className="rounded-full drop-shadow-2xl p-5 bg-white w-fit absolute -top-8 md:-right-8 -right-5 ">
+                        <img src={list?.icon?.asset?.url} alt="" />
+                      </div>
+                    </div>
+                  ))}
 
-            {/* card4 */}
-            {/* <div className="lg:w-[68%] h-full relative lg:ml-36">
+                {/* card4 */}
+                {/* <div className="lg:w-[68%] h-full relative lg:ml-36">
               <div className="bg-white p-5 pt-10 mx-auto rounded-md shadow-xl">
                 <h1 className="text-xl font-medium">
                   Lead <br className="lg:block hidden" /> Generation{" "}
@@ -341,38 +367,44 @@ function Services() {
                 <img src="./14.png" alt="" />
               </div>
             </div> */}
-            <div className="flex flex-col justify-center lg:block hidden lg:mt-20 ml-20">
-              <h1 className="text-xl text-[#FF9315] font-semibold">
-                WHY YOU NEED
-              </h1>
-              <br />
-              <h1 className="text-2xl text-gray-500 font-semibold">
-                WEB DESIGNING?
-              </h1>
-            </div>
-          </div>
-          ))}
-          {alldata && alldata.webDesign&&alldata.webDesign.map((item:any,index:any)=>(
-             <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:ml-20 justify-evenly lg:-mt-24 lg:gap-5 gap-10  p-5">
-             {/* card5 */}
-             {item&&item.array3.map((list:any,indexs:any)=>(
-  <div className={`lg:w-[50%] h-fit relative ${indexs==1?'lg:ml-[70px]':'lg:ml-0'}`}>
-  <div className="bg-white p-5 pt-10 mx-auto rounded-md shadow-xl">
-    <h1 className="text-xl font-medium">{list?.title}</h1>
-    <br />
-    <p className="text-xs font-light text-gray-500">
-    {list?.content}
-    </p>
-  </div>
-  <div className="rounded-full drop-shadow-2xl p-5 bg-white w-fit absolute -top-8 md:-right-8 -right-5">
-    <img src={list?.icon?.asset?.url} alt="" className="" />
-  </div>
-</div>
-             ))}
-           
- 
-             {/* card6 */}
-             {/* <div className="lg:w-[50%] h-full relative  lg:ml-[70px] ">
+                <div className="flex flex-col justify-center lg:block hidden lg:mt-20 ml-20">
+                  <h1 className="text-xl text-[#FF9315] font-semibold">
+                    WHY YOU NEED
+                  </h1>
+                  <br />
+                  <h1 className="text-2xl text-gray-500 font-semibold">
+                    WEB DESIGNING?
+                  </h1>
+                </div>
+              </div>
+            ))}
+          {alldata &&
+            alldata.webDesign &&
+            alldata.webDesign.map((item: any, index: any) => (
+              <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:ml-20 justify-evenly lg:-mt-24 lg:gap-5 gap-10  p-5">
+                {/* card5 */}
+                {item &&
+                  item.array3.map((list: any, indexs: any) => (
+                    <div
+                      className={`lg:w-[50%] h-fit relative ${
+                        indexs == 1 ? "lg:ml-[70px]" : "lg:ml-0"
+                      }`}
+                    >
+                      <div className="bg-white p-5 pt-10 mx-auto rounded-md shadow-xl">
+                        <h1 className="text-xl font-medium">{list?.title}</h1>
+                        <br />
+                        <p className="text-xs font-light text-gray-500">
+                          {list?.content}
+                        </p>
+                      </div>
+                      <div className="rounded-full drop-shadow-2xl p-5 bg-white w-fit absolute -top-8 md:-right-8 -right-5">
+                        <img src={list?.icon?.asset?.url} alt="" className="" />
+                      </div>
+                    </div>
+                  ))}
+
+                {/* card6 */}
+                {/* <div className="lg:w-[50%] h-full relative  lg:ml-[70px] ">
                <div className="bg-white p-5 pt-10 mx-auto rounded-md shadow-xl">
                  <h1 className="text-xl font-medium">SEO</h1>
                  <br />
@@ -385,35 +417,41 @@ function Services() {
                  <img src="./13.png" alt="" />
                </div>
              </div> */}
-           </div>
-          ))}
-         
+              </div>
+            ))}
         </div>
       </div>
 
       {/* fourth section */}
-      {alldata && alldata.service && alldata.service.map((item,index)=>(
-        <div className="flex lg:flex-row flex-col sm:gap-20 gap-5 lg:px-20 mx-auto sm:pt-20">
-        <div className="p-10 flex flex-col gap-3 justify-center ">
-          <h1 className="lg:text-lg text-3xl text-[#FF9315] font-semibold">
-            OUR
-          </h1>
-          <h1 className="lg:text-2xl text-4xl text-gray-500 font-semibold">
-            SERVICES
-          </h1>
-          <hr className="h-[3px] bg-[#FF9315]" />
-          <p>Here are some of the key services we offer:</p>
-          <div className="flex flex-col mx-auto lg:mx-0 gap-3">
-            {item.services.map((list,listindex)=>(
-   <div key={listindex} className="flex items-center gap-2 bg-gradient-to-r from-gray-200 to-transparent rounded-l-full">
-   <div className="bg-white p-2 shadow-lg rounded-full">
-     <img src={list?.icon?.asset?.url} alt="" className=" " />
-   </div>
-   <h1 className="xs:text-base text-sm">{list?.serviceName}</h1>
- </div>
-            ))}
-         
-            {/* <div className="flex  items-center gap-2 bg-gradient-to-r from-gray-200 to-transparent rounded-l-full">
+      {alldata &&
+        alldata.service &&
+        alldata.service.map((item, index) => (
+          <div className="flex lg:flex-row flex-col sm:gap-20 gap-5 lg:px-20 mx-auto sm:pt-20">
+            <div className="p-10 flex flex-col gap-3 justify-center ">
+              <h1 className="lg:text-lg text-3xl text-[#FF9315] font-semibold">
+                OUR
+              </h1>
+              <h1 className="lg:text-2xl text-4xl text-gray-500 font-semibold">
+                SERVICES
+              </h1>
+              <hr className="h-[3px] bg-[#FF9315]" />
+              <p>Here are some of the key services we offer:</p>
+              <div className="flex flex-col mx-auto lg:mx-0 gap-3">
+                {item.services.map((list, listindex) => (
+                  <div
+                    key={listindex}
+                    className="flex items-center gap-2 bg-gradient-to-r from-gray-200 to-transparent rounded-l-full"
+                  >
+                    <div className="bg-white p-2 shadow-lg rounded-full">
+                      <img src={list?.icon?.asset?.url} alt="" className=" " />
+                    </div>
+                    <h1 className="xs:text-base text-sm">
+                      {list?.serviceName}
+                    </h1>
+                  </div>
+                ))}
+
+                {/* <div className="flex  items-center gap-2 bg-gradient-to-r from-gray-200 to-transparent rounded-l-full">
               <div className="bg-white p-2 shadow-lg rounded-full ">
                 <img src="./16.png" alt="" className=" " />
               </div>
@@ -443,25 +481,27 @@ function Services() {
               </div>
               <h1 className="xs:text-base text-sm">Website Redesign</h1>
             </div> */}
+              </div>
+            </div>
+            <div className="md:relative mx-auto p-5">
+              <img src={item?.image?.asset?.url} alt="" className="mx-auto" />
+              <div>
+                <h1 className="text-gray-500 md:absolute right-5 md:w-[45%] lg:bottom-4 -bottom-5 mx-auto p-5">
+                  {item?.content}
+                </h1>
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="md:relative mx-auto p-5">
-          <img src={item?.image?.asset?.url} alt="" className="mx-auto" />
-          <div>
-            <h1 className="text-gray-500 md:absolute right-5 md:w-[45%] lg:bottom-4 -bottom-5 mx-auto p-5">
-             {item?.content}
-            </h1>
-          </div>
-        </div>
-      </div>
-      ))}
-      
+        ))}
+
       {/* sixth section */}
-      {alldata&&alldata.WeServe&&alldata.WeServe.map((item:any,index:any)=>(
-        <div className="p-5 lg:px-32 mx-auto">
-        <img src={item?.image?.asset?.url} alt="" />
-      </div>
-      ))}
+      {alldata &&
+        alldata.WeServe &&
+        alldata.WeServe.map((item: any, index: any) => (
+          <div className="p-5 lg:px-32 mx-auto">
+            <img src={item?.image?.asset?.url} alt="" />
+          </div>
+        ))}
       {/* seventh section */}
       <div className="flex flex-col justify-center items-center overflow-hidden py-5">
         <div className="relative w-full sm:h-[236px] h-[170px]  px-10">
