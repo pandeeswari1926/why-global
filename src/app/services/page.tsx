@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import service from "../../../public/Rectangle 14.png";
 import gif from "../../../public/wgs gifs (6) 1 (1).png";
@@ -22,6 +22,7 @@ import robo from "../../../public/robo.gif";
 import side from "../../../public/sides.png";
 import bgorange1 from "../../../public/bgorange1.png";
 import { ImGit } from "react-icons/im";
+import SanityClient from "../SanityClient";
 
 function Services() {
   const bgimages = ["/bgimage1.png", "/bgimage2.png", "/bgimage3.png"];
@@ -37,6 +38,59 @@ function Services() {
     return () => clearInterval(interval);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+  useEffect(()=>{
+        SanityClient.fetch(`*[_type=='service']{
+          metaTitle,
+          MetaDescription,
+          MetaData,
+          FocusKeyword,
+          MetaURL,
+          Banner[]{
+            BannerImage[]{
+              image{
+                asset->{
+                  url
+                }
+              }
+            },
+            title,
+            clients,
+          },
+          about[]{
+            title,
+            content[]{
+              content
+            },
+            image{
+              asset->{
+                url
+              }
+            }
+          },
+          service[]{
+            title,
+            services[]{
+              icon,
+              serviceName
+            },
+            image{
+              asset->{
+                url
+              }
+            },
+            content,
+          },
+          WeServe[]{
+            image{
+              asset->{
+                url
+              }
+            }
+          }
+        }`).then((res)=>{
+          console.log(res)
+        })
+  },[])
 
   return (
     <div className="">
