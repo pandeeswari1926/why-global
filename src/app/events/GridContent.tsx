@@ -1,13 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
 import { Pagination } from "antd";
-import event from '../../../public/iv2.png'
-import eventabsolutepic from "../../../public/eventabsolutepic.png";
-import teck from "../../../public/teck.jpg";
-import teck2 from "../../../public/figma.png";
-import vr from "../../../public/vr.png";
-import eventsidebg from "../../../public/Eventsidebg.png";
 import {
   MdOutlineKeyboardArrowLeft,
   MdOutlineKeyboardArrowRight,
@@ -49,19 +42,19 @@ const GridContent = () => {
           item.Image.map((img: any) => img?.image?.asset?.url)
         )
       );
+      setSelectedImageIndex(0)
     });
   }, []);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
       setSelectedImageIndex(
-        (prevIndex) => (prevIndex + image.length - 1) % image.length
+        (prevIndex) => (prevIndex + 3 + 1) % 3
       );
     }, 2000);
 
     return () => clearInterval(intervalId);
   }, [image]);
-  console.log(image.length, "jajaj");
 
   const indexOfLastItem = currentPage * pageSize;
   const indexOfFirstItem = indexOfLastItem - pageSize;
@@ -72,116 +65,51 @@ const GridContent = () => {
   };
 
   return (
-    <article className="flex flex-col gap-5">
+    <article>
       <div className="lg:flex">
-        <section className="grid md:grid-cols-2 lg:w-[90%] w-full place-items-center gap-x-5 gap-y-10 xl:px-10 py-5">
-         
+        <section className="grid md:grid-cols-2 lg:w-[80%] w-full place-items-center gap-x-5 gap-y-10 xl:px-10 py-5">
+          {currentData.map((item, index) => (
             <div
-           
+              key={index}
               className="xl:w-[26rem] xl:h-64 md:w-80 md:h-52 xs2:w-[26rem] xs2:h-64 w-64 h-44 relative"
             >
-              <Image
-                src={teck}
-                className="w-full h-full object-cover rounded-xl"
-                alt="image"
-                
+              <div
+                className="w-full h-full rounded-xl bg-cover"
+                style={{
+                  backgroundImage: `url(${image[index][selectedImageIndex]})`,
+                  backgroundPosition: "center",
+                  transition: "1s ease",
+                }}
               />
+
               <div className="w-[80%] absolute bottom-8 left-0">
                 <div className="relative w-full h-full">
-                  <Image
-                    src={eventabsolutepic}
+                  <img
+                    src="./eventabsolutepic.png"
                     className="w-full h-full"
                     alt="image"
                   />
-                  <h2 className="text-white xs2:text-base text-xs font-bold absolute -translate-x-1/2 left-1/3 -translate-y-1/2 top-1/2 ">
-                  TECHATHLON 2K23
+                  <h2 className="text-white xs2:text-base text-xs font-bold absolute top-[23%] ml-3 ">
+                    {item.title}
                   </h2>
                 </div>
               </div>
             </div>
-            <div
-           
-              className="xl:w-[26rem] xl:h-64 md:w-80 md:h-52 xs2:w-[26rem] xs2:h-64 w-64 h-44 relative"
-            >
-              <Image
-                src={vr}
-                className="w-full h-full object-cover rounded-xl"
-                alt="image"
-               
-              />
-              <div className="w-[80%] absolute bottom-8 left-0">
-                <div className="relative w-full h-full">
-                  <Image
-                    src={eventabsolutepic}
-                    className="w-full h-full"
-                    alt="image"
-                  />
-                  <h2 className="text-white xs2:text-base text-xs font-bold absolute -translate-x-1/2 left-1/3 -translate-y-1/2 top-1/2 ">VR WORKSHOP</h2>
-                </div>
-              </div>
-            </div>
-            <div
-           
-              className="xl:w-[26rem] xl:h-64 md:w-80 md:h-52 xs2:w-[26rem] xs2:h-64 w-64 h-44 relative"
-            >
-              <Image
-                src={event}
-                className="w-full object-cover h-full rounded-xl"
-                alt="image"
-                
-              />
-              <div className="w-[80%] absolute bottom-8 left-0">
-                <div className="relative w-full h-full">
-                  <Image
-                    src={eventabsolutepic}
-                    className="w-full h-full"
-                    alt="image"
-                  />
-                  <h2 className="text-white xs2:text-base text-xs font-bold absolute -translate-x-1/2 left-1/3 -translate-y-1/2 top-1/2 ">
-                  INDUSTRIAL VISIT
-                  </h2>
-                </div>
-              </div>
-            </div>
-            <div
-           
-              className="xl:w-[26rem] xl:h-64 md:w-80 md:h-52 xs2:w-[26rem] xs2:h-64 w-64 h-44 relative"
-            >
-              <Image
-                src={teck2}
-                className="w-full h-full object-cover rounded-xl"
-                alt="image"
-                
-              />
-              <div className="w-[80%] absolute bottom-8 left-0">
-                <div className="relative w-full h-full">
-                  <Image
-                    src={eventabsolutepic}
-                    className="w-full h-full"
-                    alt="image"
-                  />
-                  <h2 className="text-white xs2:text-base text-xs font-bold absolute -translate-x-1/2 left-1/3 -translate-y-1/2 top-1/2 ">
-                  FIGMA WORKSHOP
-                  </h2>
-                </div>
-              </div>
-            </div>
-        
+          ))}
         </section>
-        <section className="w-10% lg:block hidden">
-          <Image src={eventsidebg} className="w-full" alt="image" />
+        <section className="w-[20%] h-full lg:block hidden ">
+          <img src="./Eventsidebg.png" className="w-full h-full mt-5" alt="image" />
         </section>
       </div>
       <div className="flex justify-center pb-5">
-        {currentPage && data.length>0 && data &&pageSize ? <Pagination
+        <Pagination
           current={currentPage}
           total={data.length}
           pageSize={pageSize}
           onChange={handlePageChange}
           itemRender={itemRender}
           showSizeChanger={false}
-        />:null}
-       
+        />
       </div>
     </article>
   );

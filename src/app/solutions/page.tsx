@@ -1,11 +1,111 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import SanityClient from "../SanityClient";
 
 function Solutions() {
   const [showActiveContent, setShowActiveContent] = useState("SignIn");
   const toggleContent = (content: React.SetStateAction<string>) => {
     setShowActiveContent(content);
   };
+  useEffect(()=>{
+    SanityClient.fetch(`*[_type=='solution']{
+      metaTitle,
+      MetaDescription,
+      MetaData,
+      FocusKeyword,
+      MetaURL,
+      Banner[]{
+        title,
+        subTitle,
+        content,
+        BannerImage[]{
+          image{
+            asset->{
+              url,
+            }
+          }
+        },
+
+      },
+      learning[]{
+        heading,
+        title,
+        content[]{
+          content,
+        },
+        gif{
+          asset->{
+            url
+          }
+        }
+      },
+      weProvidesolution[]{
+        Heading,
+        image{
+          asset->{
+            url
+          }
+        }
+      },
+      customerServices[]{
+        signin[]{
+          title,
+          image{
+            asset->{
+              url
+            }
+          }
+        },
+        dashboard[]{
+          title,
+          image{
+            asset->{
+              url
+            }
+          }
+        },
+        faculty[]{
+          title,
+          image{
+            asset->{
+              url
+            }
+          }
+        }
+      },
+      features[]{
+        card1[]{
+          icon{
+            asset->{
+              url,
+            }
+          },
+          title,
+          content,
+        },
+        card2[]{
+          icon{
+            asset->{
+              url
+            }
+          },
+          title,
+          content,
+        },
+        card3[]{
+          icon{
+            asset->{
+              url
+            }
+          },
+          title,
+          content,
+        }
+      }
+    }`).then((res)=>{
+      console.log(res)
+    })
+  },[])
   return (
     <>
       {/* first section */}

@@ -1,8 +1,28 @@
-import React from 'react'
+"use client";
+import React, { useEffect } from 'react'
 import Image from 'next/image';
 import IOTpic from '../../../public/IOTpic.png';
+import SanityClient from '../SanityClient';
 
 const Iot = () => {
+    useEffect(()=>{
+        SanityClient.fetch(`*[_type=='portfolio']{
+            iot[]{
+                heading,
+                subHeading,
+                image{
+                    asset->{
+                        url
+                    }
+                },
+                content[]{
+                    Content
+                },
+            }
+        }`).then((res)=>{
+            console.log(res)
+        })
+    },[])
     return (
         <>
             <div className='sm:m-10 m-5 py-5 sm:py-0 justify-items-center grid lg:grid-cols-2 grid-cols-1 lg:gap-0 gap-8'>
