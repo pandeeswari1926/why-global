@@ -29,13 +29,13 @@ const Appdevelopment = () => {
                         <section className='bg-appbg1 bg-cover flex sm:flex-row flex-col sm:justify-evenly gap-5 sm:gap-0 items-center summa'>
                             <div>
                                 <section className='relative w-36 lg:-ml-28 key1'>
-                                    <Image src={ionic} alt='' />
+                                    <img src='./ionic.png' alt='' />
                                     <p className='absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#686868] text-lg font-semibold'>IONIC</p>
                                 </section>
-                                <Image src={appdevbig1} alt='' className='w-72 rounded-xl drop-shadow-xl p-5 sm:p-0' />
+                                <img src='./appDevbig1.png' alt='' className='w-72 rounded-xl drop-shadow-xl p-5 sm:p-0' />
                             </div>
-                            <Image src={appdev3} alt='' className='w-40 rounded-xl drop-shadow-xl sm:mt-16 hidden sm:block' />
-                            <Image src={appdev2} alt='' className='w-40 rounded-xl drop-shadow-xl sm:mt-16 hidden sm:block' />
+                            <img src='./appDev3.png' alt='' className='w-40 rounded-xl drop-shadow-xl sm:mt-16 hidden sm:block' />
+                            <img src='./appDev2.png' alt='' className='w-40 rounded-xl drop-shadow-xl sm:mt-16 hidden sm:block' />
                         </section>
                     </article>
                 )
@@ -46,14 +46,14 @@ const Appdevelopment = () => {
                     >
                         <div className='absolute  -translate-x-1/2 -translate-y-1/2 sm:top-[11%] top-[5%] left-[67%] mt-4 key2'>
                             <section className='relative w-36'>
-                                <Image src={react} alt='' className='w-72 rounded-xl drop-shadow-xl' />
+                                <img src='./react.png' alt='' className='w-72 rounded-xl drop-shadow-xl' />
                                 <p className='absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#686868] text-lg font-semibold'>React</p>
                             </section>
                         </div>
                         <section className='bg-appbg2 bg-cover flex sm:flex-row flex-col sm:justify-evenly gap-5 sm:gap-0 items-center'>
-                            <Image src={appdev1} alt='' className='w-40 rounded-xl drop-shadow-xl sm:mt-16 hidden sm:block' />
-                            <Image src={appdevbig2} alt='' className='w-72 rounded-xl drop-shadow-xl p-5 sm:p-0' />
-                            <Image src={appdev3} alt='' className='w-40 rounded-xl drop-shadow-xl sm:mt-16 hidden sm:block' />
+                            <img src='./appDev1.png' alt='' className='w-40 rounded-xl drop-shadow-xl sm:mt-16 hidden sm:block' />
+                            <img src='./appDevbig2.png' alt='' className='w-72 rounded-xl drop-shadow-xl p-5 sm:p-0' />
+                            <img src='./appDev3.png' alt='' className='w-40 rounded-xl drop-shadow-xl sm:mt-16 hidden sm:block' />
                         </section>
                     </article>
                 )
@@ -65,14 +65,14 @@ const Appdevelopment = () => {
                         <div className='summa'>
                             <div className='absolute -translate-x-1/2 -translate-y-1/2 sm:top-[11%] top-[8%] right-[2%] key3'>
                                 <section className='relative w-36 lg:-ml-28'>
-                                    <Image src={flutter} alt='' />
+                                    <img src='./flutter.png' alt='' />
                                     <p className='absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#686868] text-lg font-semibold'>Flutter</p>
                                 </section>
                             </div>
                             <section className='bg-appbg3 bg-cover flex sm:flex-row flex-col sm:justify-evenly gap-5 sm:gap-0 items-center'>
-                                <Image src={appdev2} alt='' className='w-36 rounded-xl drop-shadow-xl sm:mt-16 hidden sm:block' />
-                                <Image src={appdev1} alt='' className='w-40 rounded-xl drop-shadow-xl sm:mt-16 hidden sm:block' />
-                                <Image src={appdevbig3} alt='' className='w-72 rounded-xl drop-shadow-xl p-5 sm:p-0' />
+                                <img src='./appDev2.png' alt='' className='w-36 rounded-xl drop-shadow-xl sm:mt-16 hidden sm:block' />
+                                <img src='./appDev1.png' alt='' className='w-40 rounded-xl drop-shadow-xl sm:mt-16 hidden sm:block' />
+                                <img src='./appDevbig3.png' alt='' className='w-72 rounded-xl drop-shadow-xl p-5 sm:p-0' />
                             </section>
                         </div>
                     </article>

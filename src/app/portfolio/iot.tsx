@@ -15,7 +15,7 @@ const Iot = () => {
                     <p className='text-sm text-gray-500 text-justify'> Provide real-world examples and case studies showcasing successful implementations of IoT solutions, highlighting the benefits achieved and lessons learned from each deployment.</p>
                 </div>
                 <div className='w-full h-full'>
-                    <Image src={IOTpic} alt='' className='w-full' />
+                    <img src='./IOTpic.png' alt='' className='w-full' />
                 </div>
             </div>
         </>

@@ -12,7 +12,7 @@ function Video(){
                 <p className="text-sm text-center text-md">ISO certification is a significant milestone for us</p>
                 </div>
                 <div className="w-20 h-20">
-                    <Image src={yicon} className="w-full object-cover h-full" alt="" />
+                    <img src='./yicon.png' className="w-full object-cover h-full" alt="" />
                 </div>
                 <p className="md:w-[70%] w-full text-center text-md">ISO certification is a significant milestone for us, signifying that we have implemented robust quality management systems and processes in line with international standards. It demonstrates our focus on delivering reliable and high-quality IT solutions that meet and exceed client expectations.</p>
               

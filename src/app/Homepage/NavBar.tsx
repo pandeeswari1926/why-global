@@ -82,7 +82,7 @@ const NavBar = () => {
               {showDropdown && (
                 <div className="absolute -ml-14 downup bg-white text-black mt-2 w-44 p-4 rounded shadow-lg">
                   <div className="flex flex-col justify-center items-center text-sm leading-loose">
-                    <Link className="hover:text-primarycolor " href="/About">
+                    <Link className="hover:text-primarycolor " href="/about">
                       Who We Are
                     </Link>
                     <Link

@@ -86,7 +86,7 @@ const Web = () => {
                   </button>
                   <div className="flex lg:justify-evenly justify-center">
                     <div className="lg:block hidden"></div>
-                    <Image src={ecommerce} alt="" className="w-96" />
+                    <img src='./36.png' alt="" className="w-96" />
                   </div>
                 </div>
               </div>
@@ -113,7 +113,7 @@ const Web = () => {
                   </button>
                   <div className="flex lg:justify-evenly justify-center">
                     <div className="lg:block hidden"></div>
-                    <Image src={ecommerce} alt="" className="w-96" />
+                    <img src='./36.png' alt="" className="w-96" />
                   </div>
                 </div>
               </div>
@@ -140,7 +140,7 @@ const Web = () => {
                   </button>
                   <div className="flex lg:justify-evenly justify-center">
                     <div className="lg:block hidden"></div>
-                    <Image src={ecommerce} alt="" className="w-96" />
+                    <img src='./36.png' alt="" className="w-96" />
                   </div>
                 </div>
               </div>
