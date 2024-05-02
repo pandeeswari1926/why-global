@@ -51,7 +51,7 @@ const Wgs = () => {
         });
     };
     getData();
-  });
+  },[]);
   return (
     <div className="overflow-hidden">
       <div className="flex justify-between sm:flex-row flex-col sm:px-24 py-10">
@@ -98,8 +98,8 @@ const Wgs = () => {
       </section>
       <div className="flex flex-col justify-center items-center overflow-hidden py-5">
         <div className="relative w-full lg:h-[236px] h-[250px]  px-10">
-          <Image
-            src={bgorange1}
+          <img
+            src='./bgorange1.png'
             alt=""
             className="w-full h-full object-cover"
           />

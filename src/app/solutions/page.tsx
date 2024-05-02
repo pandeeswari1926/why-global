@@ -223,9 +223,9 @@ signin:[{image:{asset:{url:string}},title:string }]
       {/* third section */}
    
       <div className="bg-gray-100  lg:py-20 ">
-        <div className="mt-10">
+        <div className="mt-10 px-5 ">
           <div className="flex flex-col justify-center items-center  xs:block lg:hidden p-5">
-            <h1 className="text-xl text-[#FF9315] font-semibold">
+            <h1 className="text-lg text-[#FF9315] font-semibold">
               YOU MUST KNOW THE
             </h1>
             <br />
@@ -235,7 +235,7 @@ signin:[{image:{asset:{url:string}},title:string }]
           </div>
           {alldata&&alldata.features&&alldata.features.map((item:any,index:any)=>(
 
-<div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:px-20 px-10 justify-evenly lg:-mt-24 lg:gap-5 gap-10 p-5">
+<div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-evenly  lg:-mt-24 lg:gap-5 gap-10 p-5">
            
      {item&&item.card1&&item.card1.map((list:any,indexlist:any)=>(
       <div className={`lg:w-56 h-fit relative ${indexlist==1?'lg:ml-40':'lg:ml-0'} `}>
@@ -256,8 +256,8 @@ signin:[{image:{asset:{url:string}},title:string }]
 
 
 
-<div className="flex flex-col justify-center lg:block hidden ml-12 mt-5">
-  <h1 className="text-xl text-[#FF9315] font-semibold">
+<div className="flex flex-col justify-center lg:block hidden ml-24 mt-5">
+  <h1 className="text-lg text-[#FF9315] font-semibold">
     YOU MUST KNOW THE
   </h1>
   <br />
@@ -268,10 +268,10 @@ signin:[{image:{asset:{url:string}},title:string }]
 </div>
           ))}
           {alldata&&alldata.features&&alldata.features.map((item:any,index:any)=>(
-            <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 justify-evenly lg:px-9 px-10 lg:gap-5 gap-10 p-5 lg:-mt-24">
+            <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 justify-evenly lg:gap-3 gap-10  p-5 lg:-mt-24">
             <div className="lg:block hidden"></div>
              {item&&item.card1&&item.card1.map((list:any,indexlist:any)=>(
-  <div className={`lg:w-56 h-full relative ${indexlist==1?'lg:ml-56':'lg:ml-0 lg:pl-0'}`}>
+  <div className={`lg:w-56 h-full relative ${indexlist==1?'lg:ml-60':'lg:ml-0 lg:pl-0'}`}>
   <div className="bg-white p-5 pt-10 mx-auto rounded-md shadow-xl">
     <h1 className="text-lg font-medium">
     {list?.title}
@@ -291,10 +291,10 @@ signin:[{image:{asset:{url:string}},title:string }]
           </div>
           ))}
           {alldata&&alldata.features&&alldata.features.map((item:any,index:any)=>(
-              <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:px-20 px-10 justify-evenly lg:-mt-24 lg:gap-5 gap-10 p-5">
+              <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1   justify-evenly lg:-mt-24 lg:gap-5 gap-10 p-5">
               {/* card5 */}
               {item&&item.card1&&item.card1.map((list:any,indexlist:any)=>(
-                <div className={`lg:w-56 h-fit relative ${indexlist==1?'lg:ml-32 ':'lg:pl-0'} `}>
+                <div className={`lg:w-56 h-fit relative ${indexlist==1?'lg:ml-36 ':'lg:pl-0'} `}>
                 <div className=" bg-white p-5 pt-10 mx-auto rounded-md shadow-xl">
                   <h1 className="text-lg font-medium">
                   {list?.title}

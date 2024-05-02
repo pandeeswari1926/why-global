@@ -79,7 +79,7 @@ function Testimonial() {
                     {/* slider1 */}
                     <div className='flex xl:space-x-5 lg:space-x-14 md:space-x-14 sm:space-x-14  pt-5'>
                         <div>
-                            <Image src={style2} alt="style2" className=" ml-[30px] md:mt-[100px] lg:ml-[100px] w-[207px]" />
+                            <img src='/style2.png' alt="style2" className=" ml-[30px] md:mt-[100px] lg:ml-[100px] w-[207px]" />
                             <Image src={profile1} alt="Profile1" className="-mt-[210px] ml-[50px] md:-mt-[210px] w-[181px] lg:ml-[120px]" />
                             <Image src={style3} alt="style2" className="ml-[30px] -mt-[180px] md:-mt-[200px] lg:ml-[100px] w-[57px] drop-shadow-md p-1" />
                         </div>

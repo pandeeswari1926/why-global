@@ -8,8 +8,9 @@ import image4 from "../../../public/crm.jpg";
 import image5 from "../../../public/collaborator.jpg";
 import { BsDot } from "react-icons/bs";
 import SanityClient from "../SanityClient";
+
 function Page(){
-  const [showActiveContent, setShowActiveContent] = React.useState("Popular");
+  const [showActiveContent, setShowActiveContent] = React.useState("Recent");
   const toggleContent = (content: string) => {
     setShowActiveContent(content);
   };
@@ -102,6 +103,7 @@ function Page(){
       category: "Tech Updates",
     },
   ];
+  
   interface NewsArray {
     image : {asset:{url:string}};
     heading :string;
@@ -114,6 +116,9 @@ function Page(){
   interface AllData {
     newsArray : NewsArray[]
   }
+  const[newsArray,setnewarray]=useState<NewsArray[]|null>(null)
+  const[newsArray2,setnewarray2]=useState<NewsArray[]|null>(null)
+  const [filterData, setFilterData] = useState<AllData | null>(null);
   const [dataItems,setDataItems] = useState<AllData |null>(null);
   useEffect(()=>{
     const getdata = () =>{
@@ -138,18 +143,26 @@ function Page(){
       }`).then((res)=>{
         console.log(res);
         setDataItems(res[0]);
+        setFilterData(res[0])
+        setnewarray(res[0].newsArray)
+        setnewarray2(res[0].newsArray)
       }).catch((err)=>{
         console.log(err);
       })
     }
     getdata(); 
   },[])
-  const [filterData, setFilterData] = useState<NewsArray[] | null>(dataItems?.newsArray || null);
+ 
   useEffect(() => {
+    if(showActiveContent=='Recent'){
+      setnewarray(newsArray2);
+    }
+    else{
     const filterDatas =dataItems && dataItems?.newsArray?.filter(
       (items:any) => items.postStatus.toLowerCase() === showActiveContent.toLowerCase()
     );
-    setFilterData(filterDatas);
+    setnewarray(filterDatas)
+  }
   }, [showActiveContent]);
   return (
     <>
@@ -186,16 +199,6 @@ function Page(){
             <div className="lg:w-full sm:w-[50%] w-full space-y-5">
               <div className="flex flex-row gap-5">
                 <button
-                  onClick={() => toggleContent("Popular")}
-                  className={`text-black ${
-                    showActiveContent === "Popular"
-                      ? " border-[#FF9315] border-b-2"
-                      : ""
-                  }`}
-                >
-                  Popular
-                </button>
-                <button
                   onClick={() => toggleContent("Recent")}
                   className={`text-black ${
                     showActiveContent === "Recent"
@@ -205,9 +208,19 @@ function Page(){
                 >
                   Recent
                 </button>
+                <button
+                  onClick={() => toggleContent("Popular")}
+                  className={`text-black ${
+                    showActiveContent === "Popular"
+                      ? " border-[#FF9315] border-b-2"
+                      : ""
+                  }`}
+                >
+                  Popular
+                </button>
               </div>
               <div className="space-y-3">
-                {filterData?.map((items: any, indexs: any) => (
+                {newsArray&&newsArray.map((items: any, indexs: any) => (
                   <div key={indexs} className="flex flex-row gap-3">
                     <div className="w-[20%] h-12">
                       <img src={items?.image?.asset?.url} alt="" className="w-full h-full" />
@@ -224,7 +237,7 @@ function Page(){
             <div className="lg:w-full sm:w-[50%] w-full h-full">
               <h1 className="font-bold text-lg">Categories</h1>
               <div>
-                {dataItems && dataItems.newsArray.map((item: any, index: any) => (
+                {newsArray&&newsArray.map((item: any, index: any) => (
                   <div key={index}>
                     <div className="flex flex-row items-center text-sm">
                       <BsDot className="text-primarycolor size-8" />

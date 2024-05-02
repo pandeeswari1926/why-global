@@ -19,6 +19,7 @@ import SanityClient from "../SanityClient";
 import { FcEngineering } from "react-icons/fc";
 import { RiCustomerService2Fill } from "react-icons/ri";
 import { FaLaptop } from "react-icons/fa";
+import Loader from "../home/Loader";
 
 function Page() {
   interface banner {
@@ -50,6 +51,7 @@ function Page() {
     SecondSection: second[];
     Banner: banner[];
   }
+  const[loader,setLoader]=useState(true)
   const [data, setdata] = useState<AllData | null>(null);
   useEffect(() => {
     console.log("test");
@@ -89,6 +91,7 @@ function Page() {
         .then((res) => {
           console.log(res, "wasi");
           setdata(res[0]);
+          setLoader(false)
         })
         .catch((err: any) => {
           console.log(err);
@@ -99,7 +102,8 @@ function Page() {
   console.log("ss");
 
   return (
-    <>
+    <div>
+    {loader==true?<Loader />:  <>
       <div className="">
         <link
           rel="stylesheet"
@@ -218,7 +222,9 @@ function Page() {
       <Client />
       <Helicopter />
       <Wgs />
-    </>
+    </>}
+  
+    </div>
   );
 }
 

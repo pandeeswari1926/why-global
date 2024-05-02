@@ -149,8 +149,8 @@ function Helicopter() {
                       <div>
                         <div className="flex gap-2 justify-center lg:flex-row flex-col w-[90%] relative mx-auto  pt-8">
                           <div className="lg:w-[80%] w-full relative">
-                            <Image
-                              src={style2}
+                            <img
+                              src='./style2.png'
                               alt="style2"
                               className="lg:w-[80%] w-full"
                             />
@@ -159,8 +159,8 @@ function Helicopter() {
                               alt="Profile1"
                               className="lg:w-[70%] w-full top-2 absolute"
                             />
-                            <Image
-                              src={style3}
+                            <img
+                              src='./style3.png'
                               alt="style2"
                               className="absolute sm:w-[20%] w-[30%] top-0 right-[80%]"
                             />
@@ -178,7 +178,7 @@ function Helicopter() {
                                 </p>
                               </div>
                               <div className="justify-center items-center  md:pl-0 md:w-[30%] mx-auto">
-                                <Image src={star} alt="" className=" md:mt-5" />
+                                <img src='./stars.png' alt="" className=" md:mt-5" />
                               </div>
                             </div>
                           </div>
@@ -210,44 +210,55 @@ function Helicopter() {
               />
             </div>
             <div className="lg:w-[50%] relative flex h-full flex-col ">
-              <ul className="flex flex-row justify-around items-center relative w-full h-14  px-2 md:px-0 bg-gray-200  md:justify-evenly md:text-lg text-sm">
-                <div
+              <ul>
+              
+                {data&&data.technology.map((item, index) => (
+                  <div  className="flex flex-row justify-around items-center relative w-full h-14  px-2 md:px-0 bg-gray-200  md:justify-evenly md:text-lg text-sm">
+                      <div
                   style={{
                     clipPath: `polygon(0 63%, 0 100%, 41% 100%)`,
                   }}
                   className="w-20 h-full lg:flex hidden absolute top-0 left-0 bottom-0 bg-white  z-10"
                 ></div>
-                {listItems.map((item, index) => (
-                  <li
-                    key={index}
-                    className="cursor-pointer text-gray-500 text-xs md:text-lg"
-                    style={
-                      clickindex === index
-                        ? { color: "#FF9315" }
-                        : { color: "rgb(107 114 128 /1)" }
-                    }
-                    onClick={(e) => handleclick(index, e)}
-                  >
-                    {item}
-                  </li>
+                    {item&&item.programming.map((list,indexes)=>(
+ <li
+ key={indexes}
+ className="cursor-pointer text-gray-500 text-xs md:text-lg"
+ style={
+   clickindex === indexes
+     ? { color: "#FF9315" }
+     : { color: "rgb(107 114 128 /1)" }
+ }
+ onClick={(e) => handleclick(indexes, e)}
+>
+  {list?.technology}
+
+</li>
+                    ))}
+                   
+                
+                </div>
+                  
                 ))}
               </ul>
               <div className="lg:p-5">
-                {Content === "Frontend" && (
+            
                   <div className="p-5 lg:text-start text-center space-y-5">
                     <h1 className="text-xl text-gray-600 font-semibold leading-10">
-                      WE EXECUTE OUR IDEAS FROMTHE START TO FINISH
+                      {item&& item.programming&& item.programming[clickindex]&&item?.programming[clickindex].heading}
                     </h1>
                     <p className="text-gray-400 font-light text-sm leading-8 w-[98%]">
-                      On the other hand we denounce with righteous indignation
-                      hill and dislike men who are so beguiled and demoralized.
+                    {item&& item.programming&& item.programming[clickindex]&&item?.programming[clickindex].content}
                     </p>
                     <div className="flex flex-wrap gap-5 justify-center items-center font-light text-sm">
-                      <p className="flex flex-row items-center">
-                        <Image src={tick} alt="" />
-                        Cost of supplies and equipment
-                      </p>
-                      <p className="flex flex-row items-center">
+                    {item&& item.programming&& item.programming[clickindex]&&item?.programming[clickindex].list&&item?.programming[clickindex].list.map((lists:any,indexlist:any)=>(
+ <p key={indexlist} className="flex flex-row items-center">
+ <Image src={tick} alt="" />
+ {lists.list}
+</p>
+                    ))}
+                     
+                      {/* <p className="flex flex-row items-center">
                         <Image src={tick} alt="" />
                         Cost of supplies and equipment
                       </p>
@@ -258,11 +269,11 @@ function Helicopter() {
                       <p className="flex flex-row items-center">
                         <Image src={tick} alt="" />
                         Cost of supplies and equipment
-                      </p>
+                      </p> */}
                     </div>
                   </div>
-                )}
-                {Content === "Backend" && (
+              
+                {/* {Content === "Backend" && (
                   <div className="p-5 lg:text-start text-center space-y-5">
                     <h1 className="text-xl text-gray-600 font-semibold leading-10">
                       WE EXECUTE OUR IDEAS FROMTHE START TO FINISH
@@ -377,7 +388,7 @@ function Helicopter() {
                       </p>
                     </div>
                   </div>
-                )}
+                )} */}
               </div>
             </div>
           </div>
