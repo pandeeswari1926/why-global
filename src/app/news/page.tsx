@@ -129,6 +129,19 @@ function Page() {
     content: string;
     postStatus: string;
   }
+  interface cate{
+    category:string
+  }
+  interface list{
+    category:string,
+    result:[{
+      contentAndImage:[{image:{asset:{url:string}}}]}]
+
+  }
+  interface ListObject {
+    category: string;
+    result: list[];
+  }
   const [newsArray, setnewarray] = useState<AllData[] | null>(null);
   const [newsArray2, setnewarray2] = useState<AllData[] | null>(null);
   const [filterData, setFilterData] = useState<AllData | null>(null);
@@ -155,7 +168,7 @@ function Page() {
       }`
       )
         .then((res) => {
-          console.log(res);
+          // console.log(res);
           setDataItems(res);
           setFilterData(res);
           setnewarray(res);
@@ -168,6 +181,50 @@ function Page() {
     };
     getdata();
   }, []);
+  const[arrays,setarrays]=useState<cate[] |[]>([])
+  const[allvalues,setallvalues]=useState<list[]|[]>([])
+  useEffect(() => {
+    const productscategory = async () => {
+      try {
+        const categories = await SanityClient.fetch(`*[_type=="newsCategory"]{
+          category
+        }`);
+        console.log(categories);
+        setarrays(categories);
+  
+        const list = [];
+  
+        for (let i = 0; i < categories.length; i++) {
+          const category = categories[i].category;
+          console.log('ss');
+  
+          const result = await SanityClient.fetch(`*[_type=="news" && category->category=="Partnerships and Collaborations"]{
+            contentAndImage[]{
+              image{
+                asset->{
+                  url
+                }
+              }
+            }
+          }`);
+         if(result.length>0){
+          list.push({ category, result });
+          console.log(list);
+         }
+
+          
+        }
+        setallvalues(list)
+  
+      } catch (error) {
+        console.error(error);
+      }
+    };
+  
+    productscategory();
+  
+  }, []);
+  
 
   useEffect(() => {
     if (showActiveContent == "Recent") {
@@ -307,23 +364,25 @@ function Page() {
               </div>
             </div>
           </div> */}
-          <div className="flex flex-row p-10">
-            <div className="w-[70%] grid lg:grid-cols-2 grid-cols-1 mx-auto justify-between space-y-5">
-              {dataItems &&
-                dataItems.map((item, index) => (
-                  <div className="bg-white shadow-xl w-[80%] cursor-pointer">
+          <div className="flex relative lg:flex-row flex-col p-10">
+            <div className="w-[70%] grid lg:grid-cols-2 grid-cols-1 mx-auto justify-between justify-items-center gap-5 lg:gap-10">
+              {allvalues &&
+                allvalues.map((item, index) => (
+                  <Link href={`/news/${item.category}`} className=" w-[80%]">
+                   <div className="bg-primarycolor shadow-xl w-full cursor-pointer">
                     <div className="sm:h-[250px] w-full h-full">
                       <img
-                        src={item.image.asset.url}
+                        src={item?.result[0]?.contentAndImage[0]?.image?.asset?.url}
                         alt="duplicate"
-                        className="w-full h-full object-cover p-5"
+                        className="w-full h-full object-cover"
                       />
                     </div>
-                    <h1 className="px-5 pb-5">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      At, quae.
+                    <h1 className="text-center text-lg text-white py-3 font-semibold">
+                      {item.category}
                     </h1>
                   </div>
+                  </Link>
+                 
                 ))}
 
               {/* <div className="bg-white shadow-xl w-[80%] cursor-pointer">
@@ -366,7 +425,7 @@ function Page() {
                 </h1>
               </div> */}
             </div>
-            <div className="lg:w-[30%] w-full flex lg:flex-col sm:flex-row flex-col  h-full space-y-4">
+            <div className="lg:w-[30%] top-28 sticky w-full flex lg:flex-col sm:flex-row flex-col  h-full space-y-4">
               <div className="lg:w-full sm:w-[50%] w-full space-y-5">
                 <div className="flex flex-row gap-5">
                   <button
