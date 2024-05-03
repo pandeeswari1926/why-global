@@ -6,7 +6,7 @@ import Loader from "../home/Loader";
 
 function Solutions() {
   const [showActiveContent, setShowActiveContent] = useState("SignIn");
-  const [loader,setLoader] = useState(true)
+  const [loader, setLoader] = useState(true);
   const toggleContent = (content: React.SetStateAction<string>) => {
     setShowActiveContent(content);
   };
@@ -37,13 +37,12 @@ function Solutions() {
     content: string;
   }
   interface Alldata {
-    
-metaTitle: string,
-    MetaDescription: string,
-    MetaData: string,
-    FocusKeyword: string,
-    MetaURL: string,
-    Banner: Banner[],
+    metaTitle: string;
+    MetaDescription: string;
+    MetaData: string;
+    FocusKeyword: string;
+    MetaURL: string;
+    Banner: Banner[];
     learning: [
       {
         heading: string;
@@ -166,30 +165,40 @@ metaTitle: string,
           content,
         }
       }
-    }`).then((res:any)=>{
-      console.log(res[0])
-      setalldata(res[0])
-      setLoader(false)
-    })}
-    getdata()
-  },[])
-  return (
-    (
-      loader === true ? <Loader/> :
-    
+    }`
+      ).then((res: any) => {
+        console.log(res[0]);
+        setalldata(res[0]);
+        setLoader(false);
+      });
+    };
+    getdata();
+  }, []);
+  return loader === true ? (
+    <Loader />
+  ) : (
     <>
       <Helmet>
-        <title property="og:title">{alldata&&alldata.metaTitle}</title>
-        <meta property="og:description" content={alldata ? alldata.MetaDescription : ""}/>
+        <title property="og:title">{alldata && alldata.metaTitle}</title>
+        <meta
+          property="og:description"
+          content={alldata ? alldata.MetaDescription : ""}
+        />
         <meta property="og:url" content={alldata ? alldata.MetaData : ""} />
-        <meta name="keywords" content={alldata ? alldata.FocusKeyword : ""}></meta>
+        <meta
+          name="keywords"
+          content={alldata ? alldata.FocusKeyword : ""}
+        ></meta>
         <meta name="alldata" content={alldata ? alldata.MetaURL : ""}></meta>
       </Helmet>
 
       {/* first section */}
       {alldata &&
         alldata.Banner.map((item, index) => (
-          <div className="grid w-full lg:h-screen  relative  overflow-hidden grid-cols-1 lg:grid-cols-2 ">
+          <div
+            key={index}
+            className="grid w-full lg:h-screen  relative  overflow-hidden grid-cols-1 lg:grid-cols-2 "
+          >
             <div className="flex flex-col gap-5 p-5 md:p-20">
               <p className="uppercase text-sm sm:text-base text-orange-500 font-semibold md:text-left text-center">
                 {item?.title}
@@ -222,7 +231,7 @@ metaTitle: string,
         ))}
       {alldata &&
         alldata.learning.map((item: any, index: any) => (
-          <div className="grid grid-cols-1 md:grid-cols-2">
+          <div key={index} className="grid grid-cols-1 md:grid-cols-2">
             <div className="flex flex-col justify-center gap-5 p-5 md:p-10">
               <h1 className="uppercase text-sm sm:text-base text-orange-500 font-semibold md:text-left text-center">
                 {item?.heading}
@@ -234,7 +243,10 @@ metaTitle: string,
               {item &&
                 item.content &&
                 item.content.map((list: any, listindex: any) => (
-                  <p className="font-light text-sm  md:text-left text-justify md:px-0 px-5 text-gray-500">
+                  <p
+                    key={listindex}
+                    className="font-light text-sm  md:text-left text-justify md:px-0 px-5 text-gray-500"
+                  >
                     {list.content}
                   </p>
                 ))}
@@ -259,87 +271,97 @@ metaTitle: string,
               KEY FEATURES & BENEFITS
             </h1>
           </div>
-          {alldata&&alldata.features&&alldata.features.map((item:any,index:any)=>(
+          {alldata &&
+            alldata.features &&
+            alldata.features.map((item: any, index: any) => (
+              <div key={index} className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-evenly  lg:-mt-24 lg:gap-5 gap-10 p-5">
+                {item &&
+                  item.card1 &&
+                  item.card1.map((list: any, indexlist: any) => (
+                    <div key={indexlist}
+                      className={`lg:w-56 h-fit relative ${
+                        indexlist == 1 ? "lg:ml-40" : "lg:ml-0"
+                      } `}
+                    >
+                      <div className=" bg-white p-5 pt-10 mx-auto rounded-md shadow-xl">
+                        <h1 className="text-lg font-medium">{list?.title}</h1>
+                        <br />
+                        <p className="text-xs font-light text-gray-500">
+                          {list?.content}
+                        </p>
+                      </div>
+                      <div className="rounded-full drop-shadow-2xl p-5 bg-white w-fit absolute -top-8 -right-8 ">
+                        <img src={list?.icon?.asset?.url} alt="" />
+                      </div>
+                    </div>
+                  ))}
 
-<div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-evenly  lg:-mt-24 lg:gap-5 gap-10 p-5">
-           
-     {item&&item.card1&&item.card1.map((list:any,indexlist:any)=>(
-      <div className={`lg:w-56 h-fit relative ${indexlist==1?'lg:ml-40':'lg:ml-0'} `}>
-  <div className=" bg-white p-5 pt-10 mx-auto rounded-md shadow-xl">
-    <h1 className="text-lg font-medium">
-     {list?.title}
-    </h1>
-    <br />
-    <p className="text-xs font-light text-gray-500">
-     {list?.content}
-    </p>
-  </div>
-  <div className="rounded-full drop-shadow-2xl p-5 bg-white w-fit absolute -top-8 -right-8 ">
-    <img src={list?.icon?.asset?.url} alt="" />
-  </div>
-</div>
-     ))}      
-
-
-
-<div className="flex flex-col justify-center lg:block hidden ml-24 mt-5">
-  <h1 className="text-lg text-[#FF9315] font-semibold">
-    YOU MUST KNOW THE
-  </h1>
-  <br />
-  <h1 className="text-xl text-gray-500 font-semibold">
-    KEY FEATURES & BENEFITS
-  </h1>
-</div>
-</div>
-          ))}
-          {alldata&&alldata.features&&alldata.features.map((item:any,index:any)=>(
-            <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 justify-evenly lg:gap-3 gap-10  p-5 lg:-mt-24">
-            <div className="lg:block hidden"></div>
-             {item&&item.card1&&item.card1.map((list:any,indexlist:any)=>(
-  <div className={`lg:w-56 h-full relative ${indexlist==1?'lg:ml-60':'lg:ml-0 lg:pl-0'}`}>
-  <div className="bg-white p-5 pt-10 mx-auto rounded-md shadow-xl">
-    <h1 className="text-lg font-medium">
-    {list?.title}
-    </h1>
-    <br />
-    <p className="text-xs font-light text-gray-500">
-    {list?.content}
-    </p>
-  </div>
-  <div className="rounded-full drop-shadow-2xl p-5 bg-white w-fit absolute -top-8 -right-8 ">
-    <img src={list?.icon?.asset?.url} alt="" />
-  </div>
-</div>
-             ))}
-           
-           
-          </div>
-          ))}
-          {alldata&&alldata.features&&alldata.features.map((item:any,index:any)=>(
-              <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1   justify-evenly lg:-mt-24 lg:gap-5 gap-10 p-5">
-              {/* card5 */}
-              {item&&item.card1&&item.card1.map((list:any,indexlist:any)=>(
-                <div className={`lg:w-56 h-fit relative ${indexlist==1?'lg:ml-36 ':'lg:pl-0'} `}>
-                <div className=" bg-white p-5 pt-10 mx-auto rounded-md shadow-xl">
-                  <h1 className="text-lg font-medium">
-                  {list?.title}
+                <div className="flex flex-col justify-center lg:block hidden ml-24 mt-5">
+                  <h1 className="text-lg text-[#FF9315] font-semibold">
+                    YOU MUST KNOW THE
                   </h1>
                   <br />
-                  <p className="text-xs font-light text-gray-500">
-                  {list?.content}
-                  </p>
-                </div>
-                <div className="rounded-full drop-shadow-2xl p-5 bg-white w-fit absolute -top-8 -right-8 ">
-                  <img src={list?.icon?.asset?.url} alt="" className="" />
+                  <h1 className="text-xl text-gray-500 font-semibold">
+                    KEY FEATURES & BENEFITS
+                  </h1>
                 </div>
               </div>
-              ))}
-              
-              
-            </div>
-          ))}
-        
+            ))}
+          {alldata &&
+            alldata.features &&
+            alldata.features.map((item: any, index: any) => (
+              <div key={index} className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 justify-evenly lg:gap-3 gap-10  p-5 lg:-mt-24">
+                <div className="lg:block hidden"></div>
+                {item &&
+                  item.card1 &&
+                  item.card1.map((list: any, indexlist: any) => (
+                    <div key={indexlist}
+                      className={`lg:w-56 h-full relative ${
+                        indexlist == 1 ? "lg:ml-60" : "lg:ml-0 lg:pl-0"
+                      }`}
+                    >
+                      <div className="bg-white p-5 pt-10 mx-auto rounded-md shadow-xl">
+                        <h1 className="text-lg font-medium">{list?.title}</h1>
+                        <br />
+                        <p className="text-xs font-light text-gray-500">
+                          {list?.content}
+                        </p>
+                      </div>
+                      <div className="rounded-full drop-shadow-2xl p-5 bg-white w-fit absolute -top-8 -right-8 ">
+                        <img src={list?.icon?.asset?.url} alt="" />
+                      </div>
+                    </div>
+                  ))}
+              </div>
+            ))}
+          {alldata &&
+            alldata.features &&
+            alldata.features.map((item: any, index: any) => (
+              <div key={index} className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1   justify-evenly lg:-mt-24 lg:gap-5 gap-10 p-5">
+                {/* card5 */}
+                {item &&
+                  item.card1 &&
+                  item.card1.map((list: any, indexlist: any) => (
+                    <div key={indexlist}
+                      className={`lg:w-56 h-fit relative ${
+                        indexlist == 1 ? "lg:ml-36 " : "lg:pl-0"
+                      } `}
+                    >
+                      <div className=" bg-white p-5 pt-10 mx-auto rounded-md shadow-xl">
+                        <h1 className="text-lg font-medium">{list?.title}</h1>
+                        <br />
+                        <p className="text-xs font-light text-gray-500">
+                          {list?.content}
+                        </p>
+                      </div>
+                      <div className="rounded-full drop-shadow-2xl p-5 bg-white w-fit absolute -top-8 -right-8 ">
+                        <img src={list?.icon?.asset?.url} alt="" className="" />
+                      </div>
+                    </div>
+                  ))}
+              </div>
+            ))}
+
           <img
             src="./sevice.png"
             alt=""
@@ -350,7 +372,7 @@ metaTitle: string,
       {/* fourth section */}
       {alldata &&
         alldata.weProvidesolution.map((item: any, index: any) => (
-          <div className="text-center relative  w-full overflow-hidden  lg:h-[500px] md:h-[400px] sm:h-72 h-56 ">
+          <div key={index} className="text-center relative  w-full overflow-hidden  lg:h-[500px] md:h-[400px] sm:h-72 h-56 ">
             <div className="w-full h-full absolute top-0 ">
               <img
                 src={item?.image?.asset?.url}
@@ -469,7 +491,6 @@ metaTitle: string,
         </div>
       </div>
     </>
-    )
   );
 }
 

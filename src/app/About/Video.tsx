@@ -72,7 +72,7 @@ function Video(){
     return(
         <div className="py-5">
             {alldata&&alldata.infrastructure&&alldata.infrastructure.map((item:any,index:any)=>(
-                <div className="w-full relative h-screen">
+                <div key={index} className="w-full relative h-screen">
                 <div className=" w-fit flex flex-col h-full justify-around px-5 items-center text-white">
                     <div className="flex flex-col justify-center items-center gap-3">
                     <p className="md:text-3xl text-xl text-center font-semibold">{item?.title}</p>

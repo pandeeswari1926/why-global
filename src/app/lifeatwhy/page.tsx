@@ -103,7 +103,7 @@ function Why() {
 
   return (
     (loader === true ? <Loader/> : 
-
+    
     <>
       <div className="w-full md:h-screen h-[500px]">
         <div className=" relative w-full h-full ">

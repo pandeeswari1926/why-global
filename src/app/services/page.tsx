@@ -272,7 +272,7 @@ function Services() {
       {alldata &&
         alldata.about &&
         alldata.about.map((items: any, ind: any) => (
-          <div className="grid lg:grid-cols-2 grid-cols-1 items-center justify-items-center gap-20 p-8 lg:px-28 lg:pt-0 pt-[500px] ">
+          <div key={ind} className="grid lg:grid-cols-2 grid-cols-1 items-center justify-items-center gap-20 p-8 lg:px-28 lg:pt-0 pt-[500px] ">
             <div className="flex flex-col gap-3">
               <h1 className="text-xl font-medium text-[#FF9315]">ABOUT</h1>
 
@@ -283,7 +283,7 @@ function Services() {
                 {items &&
                   items.content &&
                   items.content.map((list: any, listindex: any) => (
-                    <p className="text-sm lg:text-start text-justify mb-5 text-gray-500">
+                    <p key={listindex} className="text-sm lg:text-start text-justify mb-5 text-gray-500">
                       {list?.content}
                     </p>
                   ))}
@@ -312,7 +312,7 @@ function Services() {
             {alldata &&
               alldata.webDesign &&
               alldata.webDesign.map((item: any, index: any) => (
-                <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:ml-20 justify-evenly md:-mt-24 lg:gap-5 gap-10 p-5">
+                <div key={index} className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:ml-20 justify-evenly md:-mt-24 lg:gap-5 gap-10 p-5">
                   {item &&
                     item.array1.map((list: any, indexs: any) => (
                       <div
@@ -345,12 +345,12 @@ function Services() {
           {alldata &&
             alldata.webDesign &&
             alldata.webDesign.map((item: any, index: any) => (
-              <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 justify-evenly  lg:-mt-32  gap-10 lg:gap-5  p-5">
+              <div key={index} className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 justify-evenly  lg:-mt-32  gap-10 lg:gap-5  p-5">
                 <div className="lg:block hidden"></div>
                 {/* card3 */}
                 {item &&
                   item.array2.map((list: any, indexs: any) => (
-                    <div
+                    <div key={indexs}
                       className={`lg:w-[60%] h-fit relative ${
                         indexs == 1 ? "lg:ml-36" : "lg:ml-0"
                       }`}
@@ -398,11 +398,11 @@ function Services() {
           {alldata &&
             alldata.webDesign &&
             alldata.webDesign.map((item: any, index: any) => (
-              <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:ml-20 justify-evenly lg:-mt-24 lg:gap-5 gap-10  p-5">
+              <div key={index} className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:ml-20 justify-evenly lg:-mt-24 lg:gap-5 gap-10  p-5">
                 {/* card5 */}
                 {item &&
                   item.array3.map((list: any, indexs: any) => (
-                    <div
+                    <div key={indexs}
                       className={`lg:w-[50%] h-fit relative ${
                         indexs == 1 ? "lg:ml-[70px]" : "lg:ml-0"
                       }`}
@@ -443,7 +443,7 @@ function Services() {
       {alldata &&
         alldata.service &&
         alldata.service.map((item, index) => (
-          <div className="flex lg:flex-row flex-col sm:gap-20 gap-5 lg:px-20 mx-auto sm:pt-20">
+          <div key={index} className="flex lg:flex-row flex-col sm:gap-20 gap-5 lg:px-20 mx-auto sm:pt-20">
             <div className="p-10 flex flex-col gap-3 justify-center ">
               <h1 className="lg:text-lg text-3xl text-[#FF9315] font-semibold">
                 OUR
@@ -515,7 +515,7 @@ function Services() {
       {alldata &&
         alldata.WeServe &&
         alldata.WeServe.map((item: any, index: any) => (
-          <div className="p-5 lg:px-32 mx-auto">
+          <div key={index} className="p-5 lg:px-32 mx-auto">
             <img src={item?.image?.asset?.url} alt="" />
           </div>
         ))}

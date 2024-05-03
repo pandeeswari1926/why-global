@@ -54,13 +54,13 @@ const World = () => {
       <section className="bg-world bg-cover h-[10%] w-full p-5 md:p-20 flex flex-col text-center text-white grayscale-">
         {data &&
           data.World.map((Item, index) => (
-            <div>
+            <div key={index}>
               <h1 className="text-base sm:text-xl md:text-2xl font-bold pb-[8%]">
                 {Item.title}
               </h1>
               <section className="grid grid-cols-1 lg:grid-cols-2">
                 {Item.growth1.map((item: any, index: any) => (
-                  <div>
+                  <div key={index}>
                     <section className="flex flex-col pt-8 pb-[10%]">
                       <div className="flex text-center justify-center">
                         <h1 className="text-7xl md:text-9xl font-bold">
@@ -84,7 +84,7 @@ const World = () => {
                 ))}
                 <section className="grid grid-cols-1 sm:grid-cols-2 gap-10">
                   {Item.growth2.map((items, indexes) => (
-                    <section className="flex flex-col">
+                    <section key={indexes} className="flex flex-col">
                       <div className="flex text-center justify-center">
                         <h1 className="text-4xl md:text-7xl">
                           <CountUp

@@ -72,7 +72,7 @@ const Wgs = () => {
       <section className="flex lg:flex-row flex-col justify-around px-5  items-center pt-10">
         {data &&
           data.blog.map((item, index) => (
-            <div className="relative pb-56 sm:pb-40 md:px-10 lg:px-5">
+            <div key={index} className="relative pb-56 sm:pb-40 md:px-10 lg:px-5">
               <div className="sm:w-72 w-[90%] sm:mx-0 mx-auto h-96 relative">
                 <div className="absolute w-full via-slate-300 h-10 bottom-0  bg-gradient-to-b from-transparent to-white"></div>
                 <img

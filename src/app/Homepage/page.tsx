@@ -129,7 +129,7 @@ function Page() {
           <div className="absolute right-0 bottom-0 w-full h-full wh"></div>
           {data &&
             data.Banner.map((item, index) => (
-              <div>
+              <div key={index}>
                 <h1 className=" md:text-5xl text-3xl absolute md:top-48 top-48 text-black md:right-20 right-3 text-right font-bold">
                   {item?.title1}
                 </h1>
@@ -141,11 +141,11 @@ function Page() {
         </div>
         {data &&
           data.Banner.map((item, index) => (
-            <div className="lg:-mt-20 w-full flex lg:flex-row lg:mb-20 mb-5 flex-col justify-center items-center h-fit">
+            <div key={index} className="lg:-mt-20 w-full flex lg:flex-row lg:mb-20 mb-5 flex-col justify-center items-center h-fit">
               <div className="flex lg:flex-row flex-col w-full lg:w-[50%] justify-center items-center gap-6 ">
                 {item &&
                   item.card.map((items, index) => (
-                    <div className="bg-white outline outline-[#FF9315] relative w-[60%] h-52 lg:w-40 lg:h-44 md:w-[40%]  rounded-3xl drop-shadow-lg flex flex-col justify-center gap-3 items-center">
+                    <div key={index} className="bg-white outline outline-[#FF9315] relative w-[60%] h-52 lg:w-40 lg:h-44 md:w-[40%]  rounded-3xl drop-shadow-lg flex flex-col justify-center gap-3 items-center">
                       <img src={items?.siteIcon?.asset?.url} alt="" />
                       <p className=" text-xl md:text-lg text-center w-[80%] ">
                         {items.cardTitle}
@@ -169,7 +169,7 @@ function Page() {
         <div>
           {data &&
             data.SecondSection.map((item, index) => (
-              <div className="lg:grid grid grid-cols-1 lg:grid-cols-2 ">
+              <div key={index} className="lg:grid grid grid-cols-1 lg:grid-cols-2 ">
                 <div className="md:w-[400px] relative w-[95%] md:h-[500px] mx-auto">
                   <div className=" absolute lg:top-1/2 lg:-right-20 bottom-0 left-1/2 lg:left-3/4 lg:-translate-x-0  -translate-x-1/2">
                     {" "}
@@ -198,7 +198,7 @@ function Page() {
                   </p>
                   <div className="grid lg:grid-cols-2 grid-cols-1 justify-around items-center px-5 text-gray-500 ">
                     {item.list.map((items, indexs) => (
-                      <div>
+                      <div key={indexs}>
                         <div className="flex justify-center items-center leading-loose">
                           <div className="">
                             <img alt="" src="./tick.png" />

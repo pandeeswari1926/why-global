@@ -20,7 +20,7 @@ interface BannerItem {
   role: string;
 }
 
-const banner = () => {
+const Banner = () => {
   const[loader,setLoader]=useState(true)
   const [bannerData, setBannerData] = useState([]);
   React.useEffect(() => {
@@ -116,4 +116,4 @@ const banner = () => {
   );
 };
 
-export default banner;
+export default Banner;
