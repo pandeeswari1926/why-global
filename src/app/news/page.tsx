@@ -12,7 +12,6 @@ import Loader from "../home/Loader";
 import { Helmet } from "react-helmet";
 import Link from "next/link";
 
-
 function Page() {
   const [showActiveContent, setShowActiveContent] = React.useState("Recent");
   const toggleContent = (content: string) => {
@@ -123,12 +122,12 @@ function Page() {
     MetaData: string;
     FocusKeyword: string;
     MetaURL: string;
-    
-    image: {asset: {url:string}};
-    heading:string;
-    date:string;
-    content:string;
-    postStatus:string;
+
+    image: { asset: { url: string } };
+    heading: string;
+    date: string;
+    content: string;
+    postStatus: string;
   }
   const [newsArray, setnewarray] = useState<AllData[] | null>(null);
   const [newsArray2, setnewarray2] = useState<AllData[] | null>(null);
@@ -210,7 +209,7 @@ function Page() {
               content={dataItems ? dataItems.MetaURL : ""}
             ></meta>
           </Helmet> */}
-          <div className="xs:p-10 p-7">
+          {/* <div className="xs:p-10 p-7">
             <h1 className="py-5 font-bold text-4xl xs:mx-0 mx-auto relative flex flex-col w-fit">
               <span>NEWS</span>
               <span className="w-full bg-primarycolor  h-[2px]"></span>
@@ -290,7 +289,7 @@ function Page() {
                 </div>
                 <div className="lg:w-full sm:w-[50%] w-full h-full">
                   <h1 className="font-bold text-lg">Categories</h1>
-                  {/* <div>
+                  <div>
                   {newsArray &&
                     newsArray.map((item: any, index: any) => (
                       <div key={index}>
@@ -303,7 +302,111 @@ function Page() {
                         </div>
                       </div>
                     ))}
-                </div> */}
+                </div>
+                </div>
+              </div>
+            </div>
+          </div> */}
+          <div className="flex flex-row p-10">
+            <div className="w-[70%] grid lg:grid-cols-2 grid-cols-1 mx-auto justify-between space-y-5">
+              {dataItems &&
+                dataItems.map((item, index) => (
+                  <div className="bg-white shadow-xl w-[80%] cursor-pointer">
+                    <div className="sm:h-[250px] w-full h-full">
+                      <img
+                        src={item.image.asset.url}
+                        alt="duplicate"
+                        className="w-full h-full object-cover p-5"
+                      />
+                    </div>
+                    <h1 className="px-5 pb-5">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      At, quae.
+                    </h1>
+                  </div>
+                ))}
+
+              {/* <div className="bg-white shadow-xl w-[80%] cursor-pointer">
+                <div className="sm:h-[250px] w-full h-full">
+                  <img
+                    src="./social media.jpeg"
+                    alt="duplicate"
+                    className="w-full h-full object-cover p-5"
+                  />
+                </div>
+                <h1 className="px-5 pb-5">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. At,
+                  quae.
+                </h1>
+              </div>
+              <div className="bg-white shadow-xl w-[80%] cursor-pointer">
+                <div className="sm:h-[250px] w-full h-full">
+                  <img
+                    src="./social media.jpeg"
+                    alt="duplicate"
+                    className="w-full h-full object-cover p-5"
+                  />
+                </div>
+                <h1 className="px-5 pb-5">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. At,
+                  quae.
+                </h1>
+              </div>
+              <div className="bg-white shadow-xl w-[80%] cursor-pointer">
+                <div className="sm:h-[250px] w-full h-full">
+                  <img
+                    src="./social media.jpeg"
+                    alt="duplicate"
+                    className="w-full h-full object-cover p-5"
+                  />
+                </div>
+                <h1 className="px-5 pb-5">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. At,
+                  quae.
+                </h1>
+              </div> */}
+            </div>
+            <div className="lg:w-[30%] w-full flex lg:flex-col sm:flex-row flex-col  h-full space-y-4">
+              <div className="lg:w-full sm:w-[50%] w-full space-y-5">
+                <div className="flex flex-row gap-5">
+                  <button
+                    onClick={() => toggleContent("Recent")}
+                    className={`text-black ${
+                      showActiveContent === "Recent"
+                        ? " border-[#FF9315] border-b-2"
+                        : ""
+                    }`}
+                  >
+                    Recent
+                  </button>
+                  <button
+                    onClick={() => toggleContent("Popular")}
+                    className={`text-black ${
+                      showActiveContent === "Popular"
+                        ? " border-[#FF9315] border-b-2"
+                        : ""
+                    }`}
+                  >
+                    Popular
+                  </button>
+                </div>
+                <div className="space-y-3">
+                  {newsArray &&
+                    newsArray.map((items: any, indexs: any) => (
+                      <div key={indexs} className="flex flex-row gap-3">
+                        <div className="w-[20%] h-12">
+                          <img
+                            src={items?.image?.asset?.url}
+                            alt=""
+                            className="w-full h-full"
+                          />
+                        </div>
+                        <div className="w-[70%]">
+                          <h1 className="font-bold text-xs">{items.heading}</h1>
+                          <p className="text-xs">{items.date}</p>
+                        </div>
+                      </div>
+                    ))}
                 </div>
               </div>
             </div>
