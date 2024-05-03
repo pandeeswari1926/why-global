@@ -9,6 +9,7 @@ import image5 from "../../../public/collaborator.jpg";
 import { BsDot } from "react-icons/bs";
 import SanityClient from "../SanityClient";
 import Loader from "../home/Loader";
+import { Helmet } from "react-helmet";
 
 function Page() {
   const [showActiveContent, setShowActiveContent] = React.useState("Recent");
@@ -111,10 +112,14 @@ function Page() {
     date: string;
     content: string;
     postStatus: string;
-    category: string;
   }
 
   interface AllData {
+    metaTitle: string;
+    MetaDescription: string;
+    MetaData: string;
+    FocusKeyword: string;
+    MetaURL: string;
     newsArray: NewsArray[];
   }
   const [newsArray, setnewarray] = useState<NewsArray[] | null>(null);
@@ -151,7 +156,7 @@ function Page() {
           setFilterData(res[0]);
           setnewarray(res[0].newsArray);
           setnewarray2(res[0].newsArray);
-          setLoader(false)
+          setLoader(false);
         })
         .catch((err) => {
           console.log(err);
@@ -178,85 +183,104 @@ function Page() {
       {loader === true ? (
         <Loader />
       ) : (
-        <div className="xs:p-10 p-7">
-          <h1 className="py-5 font-bold text-4xl xs:mx-0 mx-auto relative flex flex-col w-fit">
-            <span>NEWS</span>
-            <span className="w-full bg-primarycolor  h-[2px]"></span>
-          </h1>
-          <div className="flex lg:flex-row flex-col-reverse gap-10 w-full ">
-            <div className="flex flex-col gap-5 lg:w-[70%] w-full h-full">
-              {dataItems &&
-                dataItems.newsArray.map((item: any, index: any) => (
-                  <div key={index} className="flex flex-col gap-5">
-                    <div className=" flex lg:flex-row flex-col gap-5 justify-between items-center">
-                      <div className="sm:w-[50%] sm:h-[250px] w-full h-full">
-                        <img
-                          src={item?.image?.asset?.url}
-                          alt="duplicate"
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                      <div className="space-y-4 lg:w-[50%] w-full  h-full">
-                        <h1 className="font-bold text-xl">{item.heading}</h1>
-                        <p className="text-sm">{item.date}</p>
-                        <p className="text-justify text-sm">{item.content}</p>
-                        <p className="text-base cursor-pointer text-primarycolor">
-                          READ MORE
-                        </p>
-                      </div>
-                    </div>
-                    <div>
-                      <hr className="w-full h-0.5 bg-gray-300" />
-                    </div>
-                  </div>
-                ))}
-            </div>
-            <div className="lg:w-[30%] w-full flex lg:flex-col sm:flex-row flex-col  h-full space-y-4">
-              <div className="lg:w-full sm:w-[50%] w-full space-y-5">
-                <div className="flex flex-row gap-5">
-                  <button
-                    onClick={() => toggleContent("Recent")}
-                    className={`text-black ${
-                      showActiveContent === "Recent"
-                        ? " border-[#FF9315] border-b-2"
-                        : ""
-                    }`}
-                  >
-                    Recent
-                  </button>
-                  <button
-                    onClick={() => toggleContent("Popular")}
-                    className={`text-black ${
-                      showActiveContent === "Popular"
-                        ? " border-[#FF9315] border-b-2"
-                        : ""
-                    }`}
-                  >
-                    Popular
-                  </button>
-                </div>
-                <div className="space-y-3">
-                  {newsArray &&
-                    newsArray.map((items: any, indexs: any) => (
-                      <div key={indexs} className="flex flex-row gap-3">
-                        <div className="w-[20%] h-12">
+        <>
+          <Helmet>
+            <title property="og:title">{dataItems && dataItems?.metaTitle}</title>
+            <meta
+              property="og:description"
+              content={dataItems ? dataItems.MetaDescription : ""}
+            />
+            <meta property="og:url" content={dataItems ? dataItems.MetaData : ""} />
+            <meta
+              name="keywords"
+              content={dataItems ? dataItems.FocusKeyword : ""}
+            ></meta>
+            <meta
+              name="alldata"
+              content={dataItems ? dataItems.MetaURL : ""}
+            ></meta>
+          </Helmet>
+          <div className="xs:p-10 p-7">
+            <h1 className="py-5 font-bold text-4xl xs:mx-0 mx-auto relative flex flex-col w-fit">
+              <span>NEWS</span>
+              <span className="w-full bg-primarycolor  h-[2px]"></span>
+            </h1>
+            <div className="flex lg:flex-row flex-col-reverse gap-10 w-full ">
+              <div className="flex flex-col gap-5 lg:w-[70%] w-full h-full">
+                {dataItems &&
+                  dataItems.newsArray.map((item: any, index: any) => (
+                    <div key={index} className="flex flex-col gap-5">
+                      <div className=" flex lg:flex-row flex-col gap-5 justify-between items-center">
+                        <div className="sm:w-[50%] sm:h-[250px] w-full h-full">
                           <img
-                            src={items?.image?.asset?.url}
-                            alt=""
-                            className="w-full h-full"
+                            src={item?.image?.asset?.url}
+                            alt="duplicate"
+                            className="w-full h-full object-cover"
                           />
                         </div>
-                        <div className="w-[70%]">
-                          <h1 className="font-bold text-xs">{items.heading}</h1>
-                          <p className="text-xs">{items.date}</p>
+                        <div className="space-y-4 lg:w-[50%] w-full  h-full">
+                          <h1 className="font-bold text-xl">{item.heading}</h1>
+                          <p className="text-sm">{item.date}</p>
+                          <p className="text-justify text-sm">{item.content}</p>
+                          <p className="text-base cursor-pointer text-primarycolor">
+                            READ MORE
+                          </p>
                         </div>
                       </div>
-                    ))}
-                </div>
+                      <div>
+                        <hr className="w-full h-0.5 bg-gray-300" />
+                      </div>
+                    </div>
+                  ))}
               </div>
-              <div className="lg:w-full sm:w-[50%] w-full h-full">
-                <h1 className="font-bold text-lg">Categories</h1>
-                <div>
+              <div className="lg:w-[30%] w-full flex lg:flex-col sm:flex-row flex-col  h-full space-y-4">
+                <div className="lg:w-full sm:w-[50%] w-full space-y-5">
+                  <div className="flex flex-row gap-5">
+                    <button
+                      onClick={() => toggleContent("Recent")}
+                      className={`text-black ${
+                        showActiveContent === "Recent"
+                          ? " border-[#FF9315] border-b-2"
+                          : ""
+                      }`}
+                    >
+                      Recent
+                    </button>
+                    <button
+                      onClick={() => toggleContent("Popular")}
+                      className={`text-black ${
+                        showActiveContent === "Popular"
+                          ? " border-[#FF9315] border-b-2"
+                          : ""
+                      }`}
+                    >
+                      Popular
+                    </button>
+                  </div>
+                  <div className="space-y-3">
+                    {newsArray &&
+                      newsArray.map((items: any, indexs: any) => (
+                        <div key={indexs} className="flex flex-row gap-3">
+                          <div className="w-[20%] h-12">
+                            <img
+                              src={items?.image?.asset?.url}
+                              alt=""
+                              className="w-full h-full"
+                            />
+                          </div>
+                          <div className="w-[70%]">
+                            <h1 className="font-bold text-xs">
+                              {items.heading}
+                            </h1>
+                            <p className="text-xs">{items.date}</p>
+                          </div>
+                        </div>
+                      ))}
+                  </div>
+                </div>
+                <div className="lg:w-full sm:w-[50%] w-full h-full">
+                  <h1 className="font-bold text-lg">Categories</h1>
+                  {/* <div>
                   {newsArray &&
                     newsArray.map((item: any, index: any) => (
                       <div key={index}>
@@ -269,11 +293,12 @@ function Page() {
                         </div>
                       </div>
                     ))}
+                </div> */}
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </>
       )}
     </>
   );

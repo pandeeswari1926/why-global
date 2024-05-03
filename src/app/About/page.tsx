@@ -40,9 +40,15 @@ import sides2 from "../../../public/round2.png";
 import Video from "./Video";
 import SanityClient from "../SanityClient";
 import Loader from "../home/Loader";
+import { Helmet } from "react-helmet";
 
 function About() {
   interface Alldata {
+    metaTitle: string;
+    MetaDescription: string;
+    MetaData: string;
+    FocusKeyword: string;
+    MetaURL: string;
     Banner: [
       {
         title1: string;
@@ -116,7 +122,7 @@ function About() {
     const getdata = async () => {
       await SanityClient.fetch(
         `*[_type=="About"]{
-        metaTitle,
+          metaTitle,
         MetaDescription,
         MetaData,
         FocusKeyword,
@@ -237,6 +243,19 @@ asset->{
     <Loader />
   ) : (
     <div>
+      <Helmet>
+        <title property="og:title">{alldata ? alldata.metaTitle : ""}</title>
+        <meta
+          property="og:description"
+          content={alldata ? alldata.MetaDescription : ""}
+        />
+        <meta property="og:url" content={alldata ? alldata.MetaData : ""} />
+        <meta
+          name="keywords"
+          content={alldata ? alldata.FocusKeyword : ""}
+        ></meta>
+        <meta name="alldata" content={alldata ? alldata.MetaURL : ""}></meta>
+      </Helmet>
       <link
         rel="stylesheet"
         type="text/css"
@@ -335,7 +354,10 @@ asset->{
           <div className="flex lg:flex-row flex-col w-full  justify-center items-center gap-6 ">
             {alldata &&
               alldata.SecondSection.map((item: any, index: any) => (
-                <div key={index} className="bg-white  outline outline-[#FF9315] relative w-[60%] h-52 lg:w-40  lg:h-44 md:w-[40%]  rounded-3xl drop-shadow-lg flex flex-col justify-center gap-3 items-center">
+                <div
+                  key={index}
+                  className="bg-white  outline outline-[#FF9315] relative w-[60%] h-52 lg:w-40  lg:h-44 md:w-[40%]  rounded-3xl drop-shadow-lg flex flex-col justify-center gap-3 items-center"
+                >
                   <img
                     src={item?.icon?.asset?.url}
                     className="lg:size-12 size-20   text-[#FF9315]"
@@ -416,7 +438,9 @@ asset->{
                 <br></br>
                 {item &&
                   item.content.map((list: any, index: any) => (
-                    <p key={index} className="text-gray-400 mb-5">{list?.content}</p>
+                    <p key={index} className="text-gray-400 mb-5">
+                      {list?.content}
+                    </p>
                   ))}
               </div>
             </div>
@@ -425,7 +449,10 @@ asset->{
       {alldata &&
         alldata.WorkProcess &&
         alldata.WorkProcess.map((item: any, index: any) => (
-          <main key={index} className="md:bg-summa  relative md:object-cover p-5 md:p-10 md:bg-cover md:flex md:flex-col">
+          <main
+            key={index}
+            className="md:bg-summa  relative md:object-cover p-5 md:p-10 md:bg-cover md:flex md:flex-col"
+          >
             {/* <div className="absolute lg:flex hidden top-0 left-0 w-full h-full"><Image src={bg} alt="" /></div> */}
             <div>
               <h3 className="text-[#FF8900] lg:text-start text-center   font-bold">
@@ -440,7 +467,10 @@ asset->{
               {item &&
                 item.card &&
                 item.card.map((item: any, index: any) => (
-                  <div key={index} className="lg:w-[90%] h-full relative drop-shadow-2xl">
+                  <div
+                    key={index}
+                    className="lg:w-[90%] h-full relative drop-shadow-2xl"
+                  >
                     <div
                       className={`border-2 ${
                         index % 2 != 0 ? "lg:mt-10" : "mt-0"

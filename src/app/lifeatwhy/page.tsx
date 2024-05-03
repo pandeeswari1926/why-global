@@ -7,6 +7,7 @@ import "swiper/css/pagination";
 import Slides from "./Slides";
 import SanityClient from "../SanityClient";
 import Loader from "../home/Loader";
+import { Helmet } from "react-helmet";
 
 interface Banner {
   content: string;
@@ -38,21 +39,29 @@ interface WhySquadItem {
     };
   };
 }
-
-
+interface AllData {
+  metaTitle:string;
+  MetaDescription:string;
+  MetaData:string;
+  FocusKeyword:string;
+  MetaURL:string;
+}
 
 function Why() {
-  
-
   const [bannerdata, setbannerdata] = useState<Banner | null>(null);
   const [workprocess, setworkprocess] = useState<WorkProcess | null>(null);
   const [whySquad, setWhySquad] = useState<WhySquadItem[]>([]);
-  const [ loader,setLoader] = useState(true)
-
+  const [loader, setLoader] = useState(true);
+  const [allData, setAllData] = useState<AllData | null>(null);
 
   useEffect(() => {
     SanityClient.fetch(
       `*[_type=='lifeAtWhy']{
+        metaTitle,
+        MetaDescription,
+        MetaData,
+        FocusKeyword,
+        MetaURL,
       banner[]{
         content,
         titleImage{
@@ -93,18 +102,29 @@ function Why() {
       console.log(res[0], "LifeAtWhyData");
       setbannerdata(res[0]?.banner[0]);
       setworkprocess(res[0]?.ourWorkProcess[0]);
-      setWhySquad(res[0]?.whySquad)
-      setLoader(false)
+      setWhySquad(res[0]?.whySquad);
+      setLoader(false);
+      setAllData(res[0]);
     });
   }, []);
 
-
-  
-
-  return (
-    (loader === true ? <Loader/> : 
-    
+  return loader === true ? (
+    <Loader />
+  ) : (
     <>
+    <Helmet>
+    <title property="og:title">{allData ? allData.metaTitle : ""}</title>
+        <meta
+          property="og:description"
+          content={allData ? allData.MetaDescription : ""}
+        />
+        <meta property="og:url" content={allData ? allData.MetaData : ""} />
+        <meta
+          name="keywords"
+          content={allData ? allData.FocusKeyword : ""}
+        ></meta>
+        <meta name="alldata" content={allData ? allData.MetaURL : ""}></meta>
+    </Helmet>
       <div className="w-full md:h-screen h-[500px]">
         <div className=" relative w-full h-full ">
           <div
@@ -142,15 +162,22 @@ function Why() {
             {workprocess?.subHeading}
           </h1>
           <div className="space-y-4 text-gray-500">
-            {workprocess?.contents?.map((item,ind) => (
-              <p key={ind} className="text-xs xl:w-[85%] w-full font-light md:text-left text-justify md:px-0 xs:px-5 z-10">
+            {workprocess?.contents?.map((item, ind) => (
+              <p
+                key={ind}
+                className="text-xs xl:w-[85%] w-full font-light md:text-left text-justify md:px-0 xs:px-5 z-10"
+              >
                 {item.content}
               </p>
             ))}
           </div>
         </div>
         <div className="w-full h-full z-10 lg:mt-4">
-          <img src={workprocess?.image?.asset?.url} alt="our work process" className="" />
+          <img
+            src={workprocess?.image?.asset?.url}
+            alt="our work process"
+            className=""
+          />
         </div>
         <div className="polygon"></div>
       </div>
@@ -161,11 +188,9 @@ function Why() {
       {/* Fourth section */}
       <div className="bg-white shadow-xl">
         <div className="grid lg:grid-cols-9 md:grid-cols-6 sm:grid-cols-5 xs:grid-cols-4 grid-cols-3 mt-5">
-          {
-            whySquad.map((item,ind)=>(
-              <img key={ind} src={item?.image?.asset?.url} alt="whysquad" />
-            ))
-          }
+          {whySquad.map((item, ind) => (
+            <img key={ind} src={item?.image?.asset?.url} alt="whysquad" />
+          ))}
         </div>
         <h1 className="text-center text-[#FF9315] text-2xl font-font p-5">
           #WHYsquad
@@ -188,9 +213,9 @@ function Why() {
             </button>
           </div>
         </div>
-      </div>
-
-    </> )
+              
+      </div>
+    </>
   );
 }
 

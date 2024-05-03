@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import SanityClient from "../SanityClient";
 import Loader from "../home/Loader";
+import { Helmet } from "react-helmet";
 
 interface BannerItem {
   messageTitle: string;
@@ -19,13 +20,27 @@ interface BannerItem {
   name: string;
   role: string;
 }
+interface AllData {
+  metaTitle: string;
+  MetaDescription: string;
+  MetaData: string;
+  FocusKeyword: string;
+  MetaURL: string;
+}
+
 
 const Banner = () => {
-  const[loader,setLoader]=useState(true)
+  const [loader, setLoader] = useState(true);
   const [bannerData, setBannerData] = useState([]);
+  const [allData, setAllData] = useState<AllData | null>(null);
   React.useEffect(() => {
     SanityClient.fetch(
       `*[_type=='testimonial']{
+        metaTitle,
+        MetaDescription,
+        MetaData,
+        FocusKeyword,
+        MetaURL,
             banner[]{
                 messageTitle,
                 messageContent,
@@ -46,14 +61,27 @@ const Banner = () => {
     ).then((res) => {
       console.log(res[0]?.banner, "Bannerdata");
       setBannerData(res[0]?.banner);
-      setLoader(false)
+      setLoader(false);
+      setAllData(res[0]);
     });
   }, []);
-  return (
-    (
-      loader === true ? <Loader/> :
-    
+  return loader === true ? (
+    <Loader />
+  ) : (
     <section>
+      <Helmet>
+        <title property="og:title">{allData ? allData.metaTitle : ""}</title>
+        <meta
+          property="og:description"
+          content={allData ? allData.MetaDescription : ""}
+        />
+        <meta property="og:url" content={allData ? allData.MetaData : ""} />
+        <meta
+          name="keywords"
+          content={allData ? allData.FocusKeyword : ""}
+        ></meta>
+        <meta name="alldata" content={allData ? allData.MetaURL : ""}></meta>
+      </Helmet>
       {bannerData.map((item: BannerItem, ind: number) => (
         <div
           key={ind}
@@ -90,7 +118,9 @@ const Banner = () => {
               className="text-white bg-white bg-opacity-20 absolute bottom-0 md:right-28 w-[80%] p-3 pl-8 rounded-t-xl"
               style={{ backdropFilter: "blur(8px)" }}
             >
-              <h1 className="md:text-2xl text-lg font-semibold">{item?.name}</h1>
+              <h1 className="md:text-2xl text-lg font-semibold">
+                {item?.name}
+              </h1>
               <p className="text-sm font-semibold">{item?.role}</p>
             </div>
           </div>
@@ -112,7 +142,6 @@ const Banner = () => {
         </div>
       ))}
     </section>
-    )
   );
 };
 
