@@ -211,8 +211,7 @@ const NavBar = () => {
               </li>
             </ul>
             {ShowOpen && (
-              <div className="absolute todown  top-0 pt-5 pl-10 float-right ani2  h-full
-               w-full overflow-hidden bg-primarycolor text-white  ">
+              <div className="absolute todown  top-0 pt-5 pl-10 float-right ani2  h-full w-full overflow-hidden bg-primarycolor text-white">
                 <ul className="flex  flex-col justify-center text-left leading-loose">
                   <li
                     onClick={toggleShow}
