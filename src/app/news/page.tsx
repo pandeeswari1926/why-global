@@ -112,6 +112,7 @@ function Page() {
     date: string;
     content: string;
     postStatus: string;
+    category: [];
   }
 
   interface AllData {
@@ -120,12 +121,17 @@ function Page() {
     MetaData: string;
     FocusKeyword: string;
     MetaURL: string;
-    newsArray: NewsArray[];
+    
+    image: {asset: {url:string}};
+    heading:string;
+    date:string;
+    content:string;
+    postStatus:string;
   }
-  const [newsArray, setnewarray] = useState<NewsArray[] | null>(null);
-  const [newsArray2, setnewarray2] = useState<NewsArray[] | null>(null);
+  const [newsArray, setnewarray] = useState<AllData[] | null>(null);
+  const [newsArray2, setnewarray2] = useState<AllData[] | null>(null);
   const [filterData, setFilterData] = useState<AllData | null>(null);
-  const [dataItems, setDataItems] = useState<AllData | null>(null);
+  const [dataItems, setDataItems] = useState<AllData[] | []>([]);
   const [loader, setLoader] = useState(true);
   useEffect(() => {
     const getdata = () => {
@@ -136,26 +142,23 @@ function Page() {
         MetaData,
         FocusKeyword,
         MetaURL,
-        newsArray[]{
-          image{
-            asset->{
-              url
-            }
-          },
-          heading,
-          date,
-          content,
-          postStatus,
-          category,
-        }
+        image{
+          asset->{
+            url
+          }
+        },
+        heading,
+        date,
+        content,
+        postStatus,
       }`
       )
         .then((res) => {
           console.log(res);
-          setDataItems(res[0]);
-          setFilterData(res[0]);
-          setnewarray(res[0].newsArray);
-          setnewarray2(res[0].newsArray);
+          setDataItems(res);
+          setFilterData(res);
+          setnewarray(res);
+          setnewarray2(res);
           setLoader(false);
         })
         .catch((err) => {
@@ -171,7 +174,7 @@ function Page() {
     } else {
       const filterDatas =
         dataItems &&
-        dataItems?.newsArray?.filter(
+        dataItems?.filter(
           (items: any) =>
             items.postStatus.toLowerCase() === showActiveContent.toLowerCase()
         );
@@ -184,13 +187,18 @@ function Page() {
         <Loader />
       ) : (
         <>
-          <Helmet>
-            <title property="og:title">{dataItems && dataItems?.metaTitle}</title>
+          {/* <Helmet>
+            <title property="og:title">
+              {dataItems && dataItems?.metaTitle}
+            </title>
             <meta
               property="og:description"
               content={dataItems ? dataItems.MetaDescription : ""}
             />
-            <meta property="og:url" content={dataItems ? dataItems.MetaData : ""} />
+            <meta
+              property="og:url"
+              content={dataItems ? dataItems.MetaData : ""}
+            />
             <meta
               name="keywords"
               content={dataItems ? dataItems.FocusKeyword : ""}
@@ -199,7 +207,7 @@ function Page() {
               name="alldata"
               content={dataItems ? dataItems.MetaURL : ""}
             ></meta>
-          </Helmet>
+          </Helmet> */}
           <div className="xs:p-10 p-7">
             <h1 className="py-5 font-bold text-4xl xs:mx-0 mx-auto relative flex flex-col w-fit">
               <span>NEWS</span>
@@ -207,8 +215,7 @@ function Page() {
             </h1>
             <div className="flex lg:flex-row flex-col-reverse gap-10 w-full ">
               <div className="flex flex-col gap-5 lg:w-[70%] w-full h-full">
-                {dataItems &&
-                  dataItems.newsArray.map((item: any, index: any) => (
+                {dataItems && dataItems.map((item: any, index: any) => (
                     <div key={index} className="flex flex-col gap-5">
                       <div className=" flex lg:flex-row flex-col gap-5 justify-between items-center">
                         <div className="sm:w-[50%] sm:h-[250px] w-full h-full">
