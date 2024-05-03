@@ -35,12 +35,13 @@ function Solutions() {
     content: string;
   }
   interface Alldata {
-    metaTitle: string;
-    MetaDescription: string;
-    MetaData: string;
-    FocusKeyword: string;
-    MetaURL: string;
-    Banner: Banner[];
+    
+metaTitle: string,
+    MetaDescription: string,
+    MetaData: string,
+    FocusKeyword: string,
+    MetaURL: string,
+    Banner: Banner[],
     learning: [
       {
         heading: string;
@@ -164,7 +165,7 @@ function Solutions() {
         }
       }
     }`).then((res:any)=>{
-      console.log(res)
+      console.log(res[0])
       setalldata(res[0])
     })}
     getdata()
@@ -172,7 +173,7 @@ function Solutions() {
   return (
     <>
       <Helmet>
-        <title property="og:title">{alldata&&alldata?.metaTitle}</title>
+        <title property="og:title">{alldata&&alldata.metaTitle}</title>
         <meta property="og:description" content={alldata ? alldata.MetaDescription : ""}/>
         <meta property="og:url" content={alldata ? alldata.MetaData : ""} />
         <meta name="keywords" content={alldata ? alldata.FocusKeyword : ""}></meta>

@@ -99,7 +99,7 @@ function Page() {
     };
     getdata();
   }, []);
-  console.log("ss");
+ 
 
   return (
     <div>
