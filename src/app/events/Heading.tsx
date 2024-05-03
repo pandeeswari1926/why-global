@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import bgs from "../../../public/bgs.png";
 import Image from "next/image";
 import SanityClient from "../SanityClient";
-
+import Loader from "../home/Loader";
 
 interface EventData {
   title: string;
@@ -12,17 +12,22 @@ interface EventData {
 
 const Heading = () => {
   const [data, setData] = useState<EventData | null>(null); 
+  const [loader,setLoader] = useState(true)
 
   useEffect(() => {
     SanityClient.fetch<EventData[]>(`*[_type == "events"]{title, SubTitle}`).then((events: EventData[]) => {
       console.log(events, "eventTitle");
       if (events.length > 0) {
         setData(events[0]); 
+        setLoader(false)
       }
     });
   }, []);
 
   return (
+    (
+      loader === true ? <Loader/> : 
+    
     <div className="w-full md:h-60 h-32 relative">
       <div className="w-full h-full absolute top-0 left-0">
         <Image src={bgs} alt="" className="w-full h-full" />
@@ -36,6 +41,7 @@ const Heading = () => {
         </p>
       </div>
     </div>
+    )
   );
 };
 

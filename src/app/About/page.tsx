@@ -39,6 +39,7 @@ import sides2 from "../../../public/round2.png"
 
 import Video from "./Video";
 import SanityClient from "../SanityClient";
+import Loader from "../home/Loader";
 
 
 function About() {
@@ -80,6 +81,7 @@ ourCulture:[
 
   }
   const[alldata,setalldata]=useState<Alldata|null>(null)
+  const [loader,setLoader]=useState(true)
   useEffect(()=>{
     const getdata=async()=>{
       await SanityClient.fetch(`*[_type=="About"]{
@@ -171,6 +173,7 @@ asset->{
       }`).then((res)=>{
         console.log(res[0])
         setalldata(res[0])
+        setLoader(false)
       })
     }
     getdata()
@@ -199,6 +202,7 @@ asset->{
     ],
   };
   return (
+    (loader === true ? <Loader/> :
     <div>
       <link
         rel="stylesheet"
@@ -664,7 +668,7 @@ asset->{
           </div>
         </div>
       </div>
-    </div>
+    </div> )
   );
 }
 

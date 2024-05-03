@@ -6,6 +6,7 @@ import "swiper/css/pagination";
 // import banner from "../../../public/lifeAtWhy.gif";
 import Slides from "./Slides";
 import SanityClient from "../SanityClient";
+import Loader from "../home/Loader";
 
 interface Banner {
   content: string;
@@ -46,6 +47,7 @@ function Why() {
   const [bannerdata, setbannerdata] = useState<Banner | null>(null);
   const [workprocess, setworkprocess] = useState<WorkProcess | null>(null);
   const [whySquad, setWhySquad] = useState<WhySquadItem[]>([]);
+  const [ loader,setLoader] = useState(true)
 
 
   useEffect(() => {
@@ -92,6 +94,7 @@ function Why() {
       setbannerdata(res[0]?.banner[0]);
       setworkprocess(res[0]?.ourWorkProcess[0]);
       setWhySquad(res[0]?.whySquad)
+      setLoader(false)
     });
   }, []);
 
@@ -99,6 +102,8 @@ function Why() {
   
 
   return (
+    (loader === true ? <Loader/> : 
+
     <>
       <div className="w-full md:h-screen h-[500px]">
         <div className=" relative w-full h-full ">
@@ -185,7 +190,7 @@ function Why() {
         </div>
       </div>
 
-    </>
+    </> )
   );
 }
 

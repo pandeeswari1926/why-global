@@ -2,9 +2,11 @@
 import React, { useEffect, useState } from "react";
 import SanityClient from "../SanityClient";
 import { Helmet } from "react-helmet";
+import Loader from "../home/Loader";
 
 function Solutions() {
   const [showActiveContent, setShowActiveContent] = useState("SignIn");
+  const [loader,setLoader] = useState(true)
   const toggleContent = (content: React.SetStateAction<string>) => {
     setShowActiveContent(content);
   };
@@ -167,10 +169,14 @@ metaTitle: string,
     }`).then((res:any)=>{
       console.log(res[0])
       setalldata(res[0])
+      setLoader(false)
     })}
     getdata()
   },[])
   return (
+    (
+      loader === true ? <Loader/> :
+    
     <>
       <Helmet>
         <title property="og:title">{alldata&&alldata.metaTitle}</title>
@@ -463,6 +469,7 @@ metaTitle: string,
         </div>
       </div>
     </>
+    )
   );
 }
 
