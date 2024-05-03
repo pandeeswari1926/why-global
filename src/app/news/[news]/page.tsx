@@ -7,10 +7,11 @@ import image3 from "../../../public/e-commerce.jpg";
 import image4 from "../../../public/crm.jpg";
 import image5 from "../../../public/collaborator.jpg";
 import { BsDot } from "react-icons/bs";
-import SanityClient from "../SanityClient";
-import Loader from "../home/Loader";
+
 import { Helmet } from "react-helmet";
 import Link from "next/link";
+import SanityClient from "@/app/SanityClient";
+import Loader from "@/app/home/Loader";
 
 
 function Page() {
@@ -155,7 +156,7 @@ function Page() {
         postStatus,
       }`
       )
-        .then((res) => {
+        .then((res:any) => {
           console.log(res);
           setDataItems(res);
           setFilterData(res);
@@ -163,7 +164,7 @@ function Page() {
           setnewarray2(res);
           setLoader(false);
         })
-        .catch((err) => {
+        .catch((err:any) => {
           console.log(err);
         });
     };
@@ -231,7 +232,7 @@ function Page() {
                           <h1 className="font-bold text-xl">{item.heading}</h1>
                           <p className="text-sm">{item.date}</p>
                           <p className="text-justify text-sm">{item.content}</p>
-                          <Link href={`/news/[page]`} as={`/news/${item.heading}`}><p className="text-base cursor-pointer text-primarycolor">
+                          <Link href={`/news/[page]`} as={`/news/${item.heading}/${item.heading}`}><p className="text-base cursor-pointer text-primarycolor">
                             READ MORE
                           </p></Link>
                           
