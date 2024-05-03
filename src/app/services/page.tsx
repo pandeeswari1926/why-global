@@ -25,6 +25,8 @@ import { ImGit } from "react-icons/im";
 import SanityClient from "../SanityClient";
 import Item from "antd/es/list/Item";
 import { log } from "console";
+import Loader from "../home/Loader";
+import { Helmet } from "react-helmet";
 
 function Services() {
   interface webDesign {
@@ -55,6 +57,11 @@ function Services() {
     title: string;
   }
   interface AllData {
+    metaTitle:string,
+    MetaDescription:string;
+    MetaData:string;
+    FocusKeyword:string;
+    MetaURL:string;
     webDesign: webDesign[];
     Banner: BannerItem[];
     about: About[];
@@ -69,6 +76,7 @@ function Services() {
 
   const [bgimage, Setbgimage] = React.useState(bgimages);
   const [index, SetIndex] = React.useState(0);
+  const [loader,setLoader] = React.useState(true)
 
   const changeBgimages = () => {
     SetIndex((prev) => (prev + 1) % bgimage.length);
@@ -167,13 +175,22 @@ function Services() {
       ).then((res) => {
         console.log(res);
         setalldata(res[0]);
+        setLoader(false)
       });
     };
     getdata();
   }, []);
 
   return (
+    (loader === true ? <Loader/> : 
     <div className="">
+      <Helmet>
+        <title property="og:title">{alldata&&alldata?.metaTitle}</title>
+        <meta property="og:description" content={alldata ? alldata.MetaDescription : ""}/>
+        <meta property="og:url" content={alldata ? alldata.MetaData : ""} />
+        <meta name="keywords" content={alldata ? alldata.FocusKeyword : ""}></meta>
+        <meta name="alldata" content={alldata ? alldata.MetaURL : ""}></meta>
+      </Helmet>
       <div className="relative h-fit w-full">
         <div className=" absolute bottom-0 w-16 lg:flex hidden  z-10">
           <img className="w-full h-full" src="./sides.png" alt=""></img>
@@ -520,7 +537,7 @@ function Services() {
           </div>
         </div>
       </div>
-    </div>
+    </div> )
   );
 }
 

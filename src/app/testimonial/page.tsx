@@ -1,10 +1,12 @@
 "use client";
-import React from "react";
+import React,{useState} from "react";
 import SliderPage from "./slider";
 import Test from "./test";
 import Banner from "./banner"
 
+
 const Page = () => {
+  
   return (
     <>
       {/* first section */}

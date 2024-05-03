@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import SanityClient from "../SanityClient";
+import Loader from "../home/Loader";
 
 interface BannerItem {
   messageTitle: string;
@@ -20,6 +21,7 @@ interface BannerItem {
 }
 
 const banner = () => {
+  const[loader,setLoader]=useState(true)
   const [bannerData, setBannerData] = useState([]);
   React.useEffect(() => {
     SanityClient.fetch(
@@ -44,9 +46,13 @@ const banner = () => {
     ).then((res) => {
       console.log(res[0]?.banner, "Bannerdata");
       setBannerData(res[0]?.banner);
+      setLoader(false)
     });
   }, []);
   return (
+    (
+      loader === true ? <Loader/> :
+    
     <section>
       {bannerData.map((item: BannerItem, ind: number) => (
         <div
@@ -106,6 +112,7 @@ const banner = () => {
         </div>
       ))}
     </section>
+    )
   );
 };
 
