@@ -239,12 +239,14 @@ asset->{
       },
     ],
   };
+  
+  
   return loader === true ? (
     <Loader />
   ) : (
     <div>
       <Helmet>
-        <title property="og:title">{alldata ? alldata.metaTitle : ""}</title>
+        <title property="og:title">{alldata ? alldata?.metaTitle : ""}</title>
         <meta
           property="og:description"
           content={alldata ? alldata.MetaDescription : ""}

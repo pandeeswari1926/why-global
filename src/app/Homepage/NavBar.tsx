@@ -37,7 +37,7 @@ const NavBar = () => {
   const closeDropdown = () => {
     closeTimeout.current = setTimeout(() => {
       setShowDropdown(false);
-    }, 200); // Adjust this delay as needed
+    }, 200); 
   };
 
   const handleMouseEnter = () => {
@@ -135,6 +135,7 @@ const NavBar = () => {
             />
           )}
         </section>
+
         {open && (
           <div className="w-[65%] relative float-right todown lg:hidden">
             <ul className="flex  flex-col justify-center pl-10 text-left  pr-4 bg-primarycolor pb-5 pt-5">
@@ -210,7 +211,7 @@ const NavBar = () => {
               </li>
             </ul>
             {ShowOpen && (
-              <div className="absolute todown  top-0 pt-5 pl-10 float-right ani2  h-[57.5vh] w-full overflow-hidden bg-primarycolor text-white  ">
+              <div className="absolute todown  top-0 pt-5 pl-10 float-right ani2  h-full w-full overflow-hidden bg-primarycolor text-white">
                 <ul className="flex  flex-col justify-center text-left leading-loose">
                   <li
                     onClick={toggleShow}
@@ -219,7 +220,7 @@ const NavBar = () => {
                     Back
                   </li>
                   <Link
-                    href="/About"
+                    href="/about"
                     className="hover:bg-white hover:text-primarycolor p-1"
                     onClick={toggleNavbar}
                   >
