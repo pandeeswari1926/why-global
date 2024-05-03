@@ -239,6 +239,8 @@ asset->{
       },
     ],
   };
+  console.log(alldata?.metaTitle,"fuc");
+  
   return loader === true ? (
     <Loader />
   ) : (

@@ -47,6 +47,7 @@ interface AllData {
   MetaURL:string;
 }
 
+
 function Why() {
   const [bannerdata, setbannerdata] = useState<Banner | null>(null);
   const [workprocess, setworkprocess] = useState<WorkProcess | null>(null);
@@ -107,6 +108,7 @@ function Why() {
       setAllData(res[0]);
     });
   }, []);
+
 
   return loader === true ? (
     <Loader />
