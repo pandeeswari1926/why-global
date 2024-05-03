@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import { GetStaticPaths, GetStaticProps } from 'next';
 import Image from "next/image";
 import image1 from "../../../public/social media.jpeg";
 import image2 from "../../../public/social media.jpeg";
@@ -14,7 +15,9 @@ import SanityClient from "@/app/SanityClient";
 import Loader from "@/app/home/Loader";
 
 
-function Page() {
+const Page=({params}:any)=> {
+    const datas = params.news;
+    const decodedUrl = decodeURIComponent(datas.replace(/\+/g, " "));
   const [showActiveContent, setShowActiveContent] = React.useState("Recent");
   const toggleContent = (content: string) => {
     setShowActiveContent(content);
@@ -136,10 +139,11 @@ function Page() {
   const [filterData, setFilterData] = useState<AllData | null>(null);
   const [dataItems, setDataItems] = useState<AllData[] | []>([]);
   const [loader, setLoader] = useState(true);
+
   useEffect(() => {
     const getdata = () => {
       SanityClient.fetch(
-        `*[_type=='news']{
+        `*[_type=='news'&& category->category==${JSON.stringify(decodedUrl)}]{
         metaTitle,
         MetaDescription,
         MetaData,
@@ -221,18 +225,18 @@ function Page() {
                 {dataItems && dataItems.map((item: any, index: any) => (
                     <div key={index} className="flex flex-col gap-5">
                       <div className=" flex lg:flex-row flex-col gap-5 justify-between items-center">
-                        <div className="sm:w-[50%] sm:h-[250px] w-full h-full">
+                        <div className="md:w-[50%] md:h-[250px] w-full h-full">
                           <img
                             src={item?.image?.asset?.url}
                             alt="duplicate"
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-contain md:object-cover"
                           />
                         </div>
-                        <div className="space-y-4 lg:w-[50%] w-full  h-full">
+                        <div className="space-y-4 lg:w-[50%] flex flex-col gap-3 w-full  h-full">
                           <h1 className="font-bold text-xl">{item.heading}</h1>
                           <p className="text-sm">{item.date}</p>
                           <p className="text-justify text-sm">{item.content}</p>
-                          <Link href={`/news/[page]`} as={`/news/${item.heading}/${item.heading}`}><p className="text-base cursor-pointer text-primarycolor">
+                          <Link href={`/news/[page]`} as={`/news/${item.heading}/${item.heading}`}><p className="text-base cursor-pointer hover:text-orange-600 duration-100 text-primarycolor">
                             READ MORE
                           </p></Link>
                           
@@ -244,7 +248,7 @@ function Page() {
                     </div>
                   ))}
               </div>
-              <div className="lg:w-[30%] w-full flex lg:flex-col sm:flex-row flex-col  h-full space-y-4">
+              <div className="lg:w-[30%] lg:sticky top-28 w-full flex lg:flex-col sm:flex-row flex-col  h-full space-y-4">
                 <div className="lg:w-full sm:w-[50%] w-full space-y-5">
                   <div className="flex flex-row gap-5">
                     <button
@@ -271,7 +275,9 @@ function Page() {
                   <div className="space-y-3">
                     {newsArray &&
                       newsArray.map((items: any, indexs: any) => (
-                        <div key={indexs} className="flex flex-row gap-3">
+                        
+                        <Link href={'/news'} key={indexs} className="flex flex-row gap-3">
+                        
                           <div className="w-[20%] h-12">
                             <img
                               src={items?.image?.asset?.url}
@@ -285,12 +291,12 @@ function Page() {
                             </h1>
                             <p className="text-xs">{items.date}</p>
                           </div>
-                        </div>
+                        </Link>
                       ))}
                   </div>
                 </div>
                 <div className="lg:w-full sm:w-[50%] w-full h-full">
-                  <h1 className="font-bold text-lg">Categories</h1>
+                  {/* <h1 className="font-bold text-lg">Categories</h1> */}
                   {/* <div>
                   {newsArray &&
                     newsArray.map((item: any, index: any) => (

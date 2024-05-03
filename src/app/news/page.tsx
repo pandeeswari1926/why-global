@@ -198,7 +198,7 @@ function Page() {
           const category = categories[i].category;
           console.log('ss');
   
-          const result = await SanityClient.fetch(`*[_type=="news" && category->category=="Partnerships and Collaborations"]{
+          const result = await SanityClient.fetch(`*[_type=="news" && category->category==${JSON.stringify(category)}]{
             contentAndImage[]{
               image{
                 asset->{
@@ -364,17 +364,17 @@ function Page() {
               </div>
             </div>
           </div> */}
-          <div className="flex relative lg:flex-row flex-col p-10">
-            <div className="w-[70%] grid lg:grid-cols-2 grid-cols-1 mx-auto justify-between justify-items-center gap-5 lg:gap-10">
+          <div className="flex relative lg:flex-row gap-5 flex-col p-5 lg:p-10">
+            <div className="lg:w-[70%] w-full grid lg:grid-cols-2 grid-cols-1  mx-auto justify-between justify-items-center gap-5 lg:gap-10">
               {allvalues &&
                 allvalues.map((item, index) => (
-                  <Link href={`/news/${item.category}`} className=" w-[80%]">
-                   <div className="bg-primarycolor shadow-xl w-full cursor-pointer">
-                    <div className="sm:h-[250px] w-full h-full">
+                  <Link key={index} href={`/news/${item.category}`} className="w-full lg:w-[80%]">
+                   <div className="bg-primarycolor shadow-xl md:w-[50%] mx-auto lg:w-full w-full cursor-pointer">
+                    <div className="md:h-[250px]   w-full h-full">
                       <img
                         src={item?.result[0]?.contentAndImage[0]?.image?.asset?.url}
                         alt="duplicate"
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-contain md:object-cover"
                       />
                     </div>
                     <h1 className="text-center text-lg text-white py-3 font-semibold">
@@ -425,7 +425,7 @@ function Page() {
                 </h1>
               </div> */}
             </div>
-            <div className="lg:w-[30%] top-28 sticky w-full flex lg:flex-col sm:flex-row flex-col  h-full space-y-4">
+            <div className="lg:w-[30%] top-28 lg:sticky w-full order-first lg:order-none flex lg:flex-col sm:flex-row flex-col  h-full space-y-4">
               <div className="lg:w-full sm:w-[50%] w-full space-y-5">
                 <div className="flex flex-row gap-5">
                   <button

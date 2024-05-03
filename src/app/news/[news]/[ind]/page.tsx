@@ -1,14 +1,16 @@
 "use client";
 import SanityClient from "@/app/SanityClient";
-
+import Loader from "@/app/home/Loader";
+import Link from "next/link";
+import { GetStaticPaths, GetStaticProps } from 'next';
 import React, { useEffect, useState } from "react";
 import { FaCalendar } from "react-icons/fa";
 
 interface newsDetails {
-  title: string;
+heading: string;
   subTitle: string;
 
-  postDate: string;
+  date: string;
   contentAndImage: [
     {
       image: { asset: { url: string } };
@@ -23,11 +25,12 @@ interface news {
   postStatus:string;
 }
 
-function Page({ params }: any) {
+const Page=({ params }: any)=> {
   const [showActiveContent, setShowActiveContent] = React.useState("Recent");
   const toggleContent = (content: string) => {
     setShowActiveContent(content);
   };
+  const[loader,setLoader]=useState(true)
   console.log(params.ind);
   const [alldata, setalldata] = useState<newsDetails | null>(null);
   const [filterData, setFilterData] = useState<news | null>(null);
@@ -39,10 +42,10 @@ function Page({ params }: any) {
   useEffect(() => {
     const getdata = async () => {
       await SanityClient.fetch(
-        `*[_type=="newsDetails" && title==${JSON.stringify(decodedUrl)}]{
-            title,
+        `*[_type=="news" && heading==${JSON.stringify(decodedUrl)}]{
+            heading,
             subTitle,
-            postDate,
+            date,
             contentAndImage[]{
                 image{asset->{url}},
                 contents[]{content}
@@ -51,6 +54,7 @@ function Page({ params }: any) {
       ).then((res: any) => {
         console.log(res);
         setalldata(res[0]);
+        setLoader(false)
       });
     };
     getdata();
@@ -89,86 +93,87 @@ function Page({ params }: any) {
     }
   }, [showActiveContent]);
   return (
-    <div className="w-full p-5">
-      <div className="flex lg:flex-row flex-col-reverse gap-10 w-full relative">
-        <div className="lg:w-[60%] w-full">
-          <div className="w-full flex flex-col gap-5 h-full">
-            <p className="md:text-3xl text-xl font-semibold">
-              {alldata && alldata.title}
+    (loader ==true?<Loader />:<div className="w-full p-5">
+    <div className="flex lg:flex-row flex-col-reverse gap-10 w-full relative">
+      <div className="lg:w-[60%] w-full">
+        <div className="w-full flex flex-col gap-5 h-full">
+          <p className="md:text-3xl text-xl font-semibold">
+            {alldata && alldata.heading}
+          </p>
+          <div className="lg:flex-row flex flex-col w-full justify-between items-center">
+            <p className="text-sm">{alldata && alldata.subTitle}</p>
+            <p className="text-sm date flex gap-2 justify-center  items-start">
+              <span>{alldata && alldata.date}</span>{" "}
+              <FaCalendar className="size-4" />
             </p>
-            <div className="lg:flex-row flex flex-col w-full justify-between items-center">
-              <p className="text-sm">{alldata && alldata.subTitle}</p>
-              <p className="text-sm date flex gap-2 justify-center  items-start">
-                <span>{alldata && alldata.postDate}</span>{" "}
-                <FaCalendar className="size-4" />
-              </p>
-            </div>
-            {alldata &&
-              alldata.contentAndImage &&
-              alldata.contentAndImage.map((item: any, index: any) => (
-                <div className="flex flex-col gap-5">
-                  <div className="w-full h-[400px]">
-                    <img
-                      src={item?.image?.asset?.url}
-                      className="w-full h-full"
-                    ></img>
-                  </div>
-                  <div className="flex flex-col gap-5">
-                    {item &&
-                      item.contents.map((list: any, indess: any) => (
-                        <p className="text-justify">{list.content}</p>
-                      ))}
-                  </div>
-                </div>
-              ))}
           </div>
+          {alldata &&
+            alldata.contentAndImage &&
+            alldata.contentAndImage.map((item: any, index: any) => (
+              <div key={index} className="flex flex-col gap-5">
+                <div className="w-full md:h-[400px]">
+                  <img
+                    src={item?.image?.asset?.url}
+                    className="w-full h-full object-contain sm:object-cover"
+                  ></img>
+                </div>
+                <div className="flex flex-col gap-5">
+                  {item &&
+                    item.contents&&item.contents.map((list: any, indess: any) => (
+                      <p key={indess} className="text-justify">{list&&list.content}</p>
+                    ))}
+                </div>
+              </div>
+            ))}
         </div>
-        <div className="lg:w-[30%] w-full sticky">
-          <div className="lg:w-full sm:w-[50%] w-full space-y-5">
-            <div className="flex flex-row gap-5">
-              <button
-                onClick={() => toggleContent("Recent")}
-                className={`text-black ${
-                  showActiveContent === "Recent"
-                    ? " border-[#FF9315] border-b-2"
-                    : ""
-                }`}
-              >
-                Recent
-              </button>
-              <button
-                onClick={() => toggleContent("Popular")}
-                className={`text-black ${
-                  showActiveContent === "Popular"
-                    ? " border-[#FF9315] border-b-2"
-                    : ""
-                }`}
-              >
-                Popular
-              </button>
-            </div>
-            <div className="space-y-3">
-              {newsArray &&
-                newsArray.map((items: any, indexs: any) => (
-                  <div key={indexs} className="flex flex-row gap-3">
-                    <div className="w-[20%] h-12">
-                      <img
-                        src={items?.image?.asset?.url}
-                        alt=""
-                        className="w-full h-full"
-                      />
-                    </div>
-                    <div className="w-[70%]">
-                      <h1 className="font-bold text-xs">{items.heading}</h1>
-                      <p className="text-xs">{items.date}</p>
-                    </div>
+      </div>
+      <div className="lg:w-[40%] lg:sticky top-28 w-full flex lg:flex-col sm:flex-row flex-col  h-full space-y-4">
+        <div className="lg:w-full sm:w-[50%] w-full space-y-5">
+          <div className="flex flex-row gap-5">
+            <button
+              onClick={() => toggleContent("Recent")}
+              className={`text-black ${
+                showActiveContent === "Recent"
+                  ? " border-[#FF9315] border-b-2"
+                  : ""
+              }`}
+            >
+              Recent
+            </button>
+            <button
+              onClick={() => toggleContent("Popular")}
+              className={`text-black ${
+                showActiveContent === "Popular"
+                  ? " border-[#FF9315] border-b-2"
+                  : ""
+              }`}
+            >
+              Popular
+            </button>
+          </div>
+          <div className="space-y-3">
+            {newsArray &&
+              newsArray.map((items: any, indexs: any) => (
+                <Link href={'/news'} key={indexs} className="flex flex-row gap-3">
+                  <div className="w-[20%] h-12">
+                    <img
+                      src={items?.image?.asset?.url}
+                      alt=""
+                      className="w-full h-full"
+                    />
                   </div>
-                ))}
-            </div>
+                  <div className="w-[70%]">
+                    <h1 className="font-bold text-xs">{items.heading}</h1>
+                    <p className="text-xs">{items.date}</p>
+                  </div>
+                </Link>
+              ))}
           </div>
         </div>
       </div>
     </div>
+  </div>)
+    
   );
 }
 export default Page;
