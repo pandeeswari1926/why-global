@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // output: "export",
+  output: "export",
   env: {
     API_URL: "http://localhost:3010/api",
     // API_URL: "https://antiapi.w8loss.uk/api",

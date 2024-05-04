@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { GetStaticPaths, GetStaticProps } from 'next';
+
 import Image from "next/image";
 import image1 from "../../../public/social media.jpeg";
 import image2 from "../../../public/social media.jpeg";
@@ -8,7 +8,7 @@ import image3 from "../../../public/e-commerce.jpg";
 import image4 from "../../../public/crm.jpg";
 import image5 from "../../../public/collaborator.jpg";
 import { BsDot } from "react-icons/bs";
-
+import { GetStaticPaths, GetStaticProps } from 'next';
 import { Helmet } from "react-helmet";
 import Link from "next/link";
 import SanityClient from "@/app/SanityClient";
@@ -296,21 +296,7 @@ const Page=({params}:any)=> {
                   </div>
                 </div>
                 <div className="lg:w-full sm:w-[50%] w-full h-full">
-                  {/* <h1 className="font-bold text-lg">Categories</h1> */}
-                  {/* <div>
-                  {newsArray &&
-                    newsArray.map((item: any, index: any) => (
-                      <div key={index}>
-                        <div className="flex flex-row items-center text-sm">
-                          <BsDot className="text-primarycolor size-8" />
-                          <p>{item.category}</p>
-                        </div>
-                        <div>
-                          <hr className="w-full h-0.5 bg-gray-300" />
-                        </div>
-                      </div>
-                    ))}
-                </div> */}
+          
                 </div>
               </div>
             </div>
@@ -322,3 +308,36 @@ const Page=({params}:any)=> {
 }
 
 export default Page;
+
+
+//  const getStaticPaths: GetStaticPaths = async () => {
+//   // Fetch dynamic news data from your source (e.g., an API or file system)
+//   const data12 = [
+//     // Your news data here
+//   ];
+
+//   // Generate paths based on the news data
+//   // const paths = data12.map((news) => ({
+//   //   params: {
+//   //     page: encodeURIComponent(news.heading),
+//   //   },
+//   // }));
+
+//   return {
+ 
+//     fallback: false, // or 'blocking' if you want to use incremental static regeneration
+//   };
+// };
+
+//  const getStaticProps: GetStaticProps = async ({ params }:string) => {
+//   // Fetch data for the specific news page based on the params
+//   const nope = [
+//     // Your data fetching logic here
+//   ];
+
+//   return {
+//     props: {
+    
+//     },
+//   };
+// };

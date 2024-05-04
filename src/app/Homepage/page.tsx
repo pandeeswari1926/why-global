@@ -60,7 +60,7 @@ function Page() {
   const [loader, setLoader] = useState(true);
   const [data, setdata] = useState<AllData | null>(null);
   useEffect(() => {
-    console.log("test");
+    
     const getdata = async () => {
       await SanityClient.fetch(
         `*[_type=="Home"]{
@@ -99,7 +99,7 @@ function Page() {
             }
           }`
       )
-        .then((res) => {
+        .then((res:any) => {
           console.log(res, "wasi");
           setdata(res[0]);
           setLoader(false);
