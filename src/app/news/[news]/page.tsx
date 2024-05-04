@@ -276,7 +276,7 @@ const Page=({params}:any)=> {
                     {newsArray &&
                       newsArray.map((items: any, indexs: any) => (
                         
-                        <Link href={'/news'} key={indexs} className="flex flex-row gap-3">
+                        <Link href={`/news/1/${items.heading}`} key={indexs} className="flex flex-row gap-3">
                         
                           <div className="w-[20%] h-12">
                             <img

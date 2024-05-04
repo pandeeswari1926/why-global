@@ -129,14 +129,16 @@ function Page() {
     content: string;
     postStatus: string;
   }
-  interface cate{
-    category:string
+  interface cate {
+    category: string;
   }
-  interface list{
-    category:string,
-    result:[{
-      contentAndImage:[{image:{asset:{url:string}}}]}]
-
+  interface list {
+    category: string;
+    result: [
+      {
+        contentAndImage: [{ image: { asset: { url: string } } }];
+      }
+    ];
   }
   interface ListObject {
     category: string;
@@ -181,8 +183,8 @@ function Page() {
     };
     getdata();
   }, []);
-  const[arrays,setarrays]=useState<cate[] |[]>([])
-  const[allvalues,setallvalues]=useState<list[]|[]>([])
+  const [arrays, setarrays] = useState<cate[] | []>([]);
+  const [allvalues, setallvalues] = useState<list[] | []>([]);
   useEffect(() => {
     const productscategory = async () => {
       try {
@@ -191,14 +193,17 @@ function Page() {
         }`);
         console.log(categories);
         setarrays(categories);
-  
+
         const list = [];
-  
+
         for (let i = 0; i < categories.length; i++) {
           const category = categories[i].category;
-          console.log('ss');
-  
-          const result = await SanityClient.fetch(`*[_type=="news" && category->category==${JSON.stringify(category)}]{
+          console.log("ss");
+
+          const result =
+            await SanityClient.fetch(`*[_type=="news" && category->category==${JSON.stringify(
+              category
+            )}]{
             contentAndImage[]{
               image{
                 asset->{
@@ -207,24 +212,19 @@ function Page() {
               }
             }
           }`);
-         if(result.length>0){
-          list.push({ category, result });
-          console.log(list);
-         }
-
-          
+          if (result.length > 0) {
+            list.push({ category, result });
+            console.log(list);
+          }
         }
-        setallvalues(list)
-  
+        setallvalues(list);
       } catch (error) {
         console.error(error);
       }
     };
-  
+
     productscategory();
-  
   }, []);
-  
 
   useEffect(() => {
     if (showActiveContent == "Recent") {
@@ -368,21 +368,27 @@ function Page() {
             <div className="lg:w-[70%] w-full grid lg:grid-cols-2 grid-cols-1  mx-auto justify-between justify-items-center gap-5 lg:gap-10">
               {allvalues &&
                 allvalues.map((item, index) => (
-                  <Link key={index} href={`/news/${item.category}`} className="w-full lg:w-[80%]">
-                   <div className="bg-primarycolor shadow-xl md:w-[50%] mx-auto lg:w-full w-full cursor-pointer">
-                    <div className="md:h-[250px]   w-full h-full">
-                      <img
-                        src={item?.result[0]?.contentAndImage[0]?.image?.asset?.url}
-                        alt="duplicate"
-                        className="w-full h-full object-contain md:object-cover"
-                      />
+                  <Link
+                    key={index}
+                    href={`/news/${item.category}`}
+                    className="w-full lg:w-[80%]"
+                  >
+                    <div className="bg-primarycolor shadow-xl md:w-[50%] mx-auto lg:w-full w-full cursor-pointer">
+                      <div className="md:h-[250px]   w-full h-full">
+                        <img
+                          src={
+                            item?.result[0]?.contentAndImage[0]?.image?.asset
+                              ?.url
+                          }
+                          alt="duplicate"
+                          className="w-full h-full object-contain md:object-cover"
+                        />
+                      </div>
+                      <h1 className="text-center text-lg text-white py-3 font-semibold">
+                        {item.category}
+                      </h1>
                     </div>
-                    <h1 className="text-center text-lg text-white py-3 font-semibold">
-                      {item.category}
-                    </h1>
-                  </div>
                   </Link>
-                 
                 ))}
 
               {/* <div className="bg-white shadow-xl w-[80%] cursor-pointer">
@@ -449,22 +455,26 @@ function Page() {
                     Popular
                   </button>
                 </div>
-                <div className="space-y-3">
+                <div className="flex flex-col gap-3">
                   {newsArray &&
                     newsArray.map((items: any, indexs: any) => (
-                      <div key={indexs} className="flex flex-row gap-3">
-                        <div className="w-[20%] h-12">
-                          <img
-                            src={items?.image?.asset?.url}
-                            alt=""
-                            className="w-full h-full"
-                          />
+                      <Link href={`/news/1/${items.heading}`}>
+                        <div key={indexs} className="flex flex-row gap-3">
+                          <div className="w-[20%] h-12">
+                            <img
+                              src={items?.image?.asset?.url}
+                              alt=""
+                              className="w-full h-full"
+                            />
+                          </div>
+                          <div className="w-[70%]">
+                            <h1 className="font-bold text-xs">
+                              {items.heading}
+                            </h1>
+                            <p className="text-xs">{items.date}</p>
+                          </div>
                         </div>
-                        <div className="w-[70%]">
-                          <h1 className="font-bold text-xs">{items.heading}</h1>
-                          <p className="text-xs">{items.date}</p>
-                        </div>
-                      </div>
+                      </Link>
                     ))}
                 </div>
               </div>
