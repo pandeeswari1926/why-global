@@ -458,7 +458,7 @@ function Page() {
                 <div className="flex flex-col gap-3">
                   {newsArray &&
                     newsArray.map((items: any, indexs: any) => (
-                      <Link href={`/news/1/${items.heading}`}>
+                      <Link key={indexs} href={`/news/1/${items.heading}`}>
                         <div key={indexs} className="flex flex-row gap-3">
                           <div className="w-[20%] h-12">
                             <img

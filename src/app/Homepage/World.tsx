@@ -94,10 +94,10 @@ const World = () => {
                             delay={0}
                           />
                         </h1>
-                        <img src="" alt="plus icon" className="h-5 w-5" />
+                        <img src="/+.png" alt="plus icon" className="h-5 w-5" />
                         <br />
                       </div>
-                      <p className="/+.png">{items.Content}</p>
+                      <p className="">{items.Content}</p>
                     </section>
                   ))}
                 </section>

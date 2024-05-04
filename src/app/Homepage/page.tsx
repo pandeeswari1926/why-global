@@ -159,10 +159,10 @@ function Page() {
               {data &&
                 data.Banner.map((item, index) => (
                   <div key={index}>
-                    <h1 className=" md:text-5xl text-3xl absolute md:top-48 top-48 text-black md:right-20 right-3 text-right font-bold">
+                    <h1 className=" md:text-5xl text-3xl absolute md:top-48 top-48 text-primarycolor md:right-20 right-3 text-right font-bold">
                       {item?.title1}
                     </h1>
-                    <p className="md:text-5xl text-3xl md:top-36 top-32 md:right-20 right-3 absolute text-black text-right font-bold">
+                    <p className="md:text-5xl text-3xl md:top-36 top-32 md:right-20 right-3 absolute text-white text-right font-bold">
                       {item?.title2}
                     </p>
                   </div>

@@ -217,7 +217,7 @@ const Page=({params}:any)=> {
           </Helmet> */}
           <div className="xs:p-10 p-7">
             <h1 className="py-5 font-bold text-4xl xs:mx-0 mx-auto relative flex flex-col w-fit">
-              <span>NEWS</span>
+              <span>{decodedUrl}</span>
               <span className="w-full bg-primarycolor  h-[2px]"></span>
             </h1>
             <div className="flex lg:flex-row flex-col-reverse gap-10 w-full ">

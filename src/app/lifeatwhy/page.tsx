@@ -40,13 +40,12 @@ interface WhySquadItem {
   };
 }
 interface AllData {
-  metaTitle:string;
-  MetaDescription:string;
-  MetaData:string;
-  FocusKeyword:string;
-  MetaURL:string;
+  metaTitle: string;
+  MetaDescription: string;
+  MetaData: string;
+  FocusKeyword: string;
+  MetaURL: string;
 }
-
 
 function Why() {
   const [bannerdata, setbannerdata] = useState<Banner | null>(null);
@@ -109,13 +108,12 @@ function Why() {
     });
   }, []);
 
-
   return loader === true ? (
     <Loader />
   ) : (
     <>
-    <Helmet>
-    <title property="og:title">{allData ? allData.metaTitle : ""}</title>
+      <Helmet>
+        <title property="og:title">{allData ? allData.metaTitle : ""}</title>
         <meta
           property="og:description"
           content={allData ? allData.MetaDescription : ""}
@@ -126,7 +124,7 @@ function Why() {
           content={allData ? allData.FocusKeyword : ""}
         ></meta>
         <meta name="alldata" content={allData ? allData.MetaURL : ""}></meta>
-    </Helmet>
+      </Helmet>
       <div className="w-full md:h-screen h-[500px]">
         <div className=" relative w-full h-full ">
           <div
@@ -137,7 +135,9 @@ function Why() {
             className=" absolute bottom-0 left-0  z-10  w-full h-full"
           ></div>
           <div className="absolute h-full bg-black bg-opacity-50 w-full"></div>
-          <div className="w-full h-full "></div>
+          <div className="w-full h-full ">
+            <img src="./lifeAtWHY.gif" alt="" />
+          </div>
           <div className="absolute top-5 sm:left-20 left-10">
             <img src={bannerdata?.titleImage?.asset?.url} alt="" />
             <p className="text-white w-[60%] xs:-mt-10 text-sm">
