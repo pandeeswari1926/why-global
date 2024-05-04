@@ -66,7 +66,7 @@ const NavBar = () => {
       <div className="z-20 fixed w-full md:top-7 top-0 ">
         <section className="bg-white flex justify-between px-5 items-center p-2   drop-shadow-xl z-10  w-full top-0">
           <Link href="/Homepage">
-            <Image src={logoicon2} alt="logo" className="w-48" />
+            <img src="./logo-300x70.png" alt="logo" className="w-48" />
           </Link>
           <ul className="space-x-5  lg:flex flex-row hidden justify-center items-center cursor-pointer font-medium xl:text-base text-sm">
             <div

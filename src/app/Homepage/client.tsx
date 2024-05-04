@@ -20,28 +20,28 @@ function Client() {
             <main className='grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 grid-cols-1  lg:gap-10 gap-5 px-10'>
                 <div className='flex flex-col gap-2'>
                     <div className='p-2 grid sm:grid-cols-2 grid-cols-2 gap-10' >
-                        <Image src={logo} alt='' className=' bg-white' />
-                        <Image src={riofin} alt='' className='  bg-white md:hidden block' />
+                        <img src="./logo.png" alt='' className=' bg-white' />
+                        <img src="./riofin.png" alt='' className='  bg-white md:hidden block' />
                     </div>
                     <div className='grid grid-cols-2  md:gap-0 gap-10 p-2 lg:mr-44 lg:justify-items-start  justify-items-center  items-center '>
-                        <Image src={riofin} alt='' className='  bg-white md:block hidden' />
-                        <Image src={whytap} alt='' className=' bg-white' />
-                        <Image src={hrc} alt='' className=' bg-white md:hidden block' />
+                        <img src="./riofin.png" alt='' className='  bg-white md:block hidden' />
+                        <img src="./whytap.png" alt='' className=' bg-white' />
+                        <img src="./hrc.png" alt='' className=' bg-white md:hidden block' />
                     </div>
                     <div className='grid md:grid-cols-3 grid-cols-2 lg:justify-items-start justify-items-center  items-center gap-10 p-2 '>
-                        <Image src={hrc} alt='' className=' bg-white md:block hidden' />
-                        <Image src={sennata} alt='' className=' bg-white' />
-                        <Image src={ehs} alt='' className=' bg-white' />
+                        <img src="./hrc.png" alt='' className=' bg-white md:block hidden' />
+                        <img src="./sennata.png" alt='' className=' bg-white' />
+                        <img src="./ehs.png" alt='' className=' bg-white' />
                     </div>
                     <div className='grid md:grid-cols-4 grid-cols-2 lg:justify-items-start justify-items-center  items-center gap-10 p-2'>
-                        <Image src={five} alt='' className=' bg-white' />
-                        <Image src={w8loss} alt='' className=' bg-white' />
-                        <Image src={antimalaries} alt='' className=' bg-white ' />
-                        <Image src={abhis} alt='' className=' bg-white' />
+                        <img src="./five.png" alt='' className=' bg-white' />
+                        <img src="./w8loss.png" alt='' className=' bg-white' />
+                        <img src="./antimalaries.png" alt='' className=' bg-white ' />
+                        <img src="./abhis.png" alt='' className=' bg-white' />
                     </div>
                 </div>
                 <div className=''>
-                    <Image src={map} alt='' />
+                    <img src="./map.png" alt='' />
                     <hr className='w-[50%] h-1 bg-[#FF8900] mb-10 ml-[50%] md:block hidden' />
                 </div>
             </main >

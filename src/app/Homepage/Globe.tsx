@@ -12,10 +12,10 @@ function Globe() {
         </div>
       </div>
       <div className='w-[50%] h-[550px] flex-col items-center justify-center lg:block hidden gl'>
-        <Image src={globe} alt='Globe' className='w-full' />
+        <img src="./globe.png" alt='Globe' className='w-full' />
       </div>
       <div className='w-full rt h-[50%] flex-col items-center justify-center mx-auto  lg:hidden block'>
-        <Image src={globe} alt='Globe' className='w-full' />
+        <img src="./globe.png" alt='Globe' className='w-full' />
       </div>
     </>
   )

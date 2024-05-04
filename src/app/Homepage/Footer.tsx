@@ -116,7 +116,7 @@ const Footer = () => {
             <h1 className="font-bold text-xl ">Latest News</h1>
             <section className="text-xs space-y-2">
               <div className="flex gap-2 items-center">
-                <Image src={buss} alt="suhail" className="w-16 h-16" />
+                <img src="./buss.png" alt="suhail" className="w-16 h-16" />
                 <div className="leading-loose">
                   <h2>How to become successful bussinessman</h2>
                   <div className="flex items-center gap-1">
@@ -126,7 +126,7 @@ const Footer = () => {
                 </div>
               </div>
               <div className="flex gap-2 items-center">
-                <Image src={buss} alt="suhail" className="w-16 h-16" />
+                <img src="./buss.png" alt="suhail" className="w-16 h-16" />
                 <div className="leading-loose">
                   <h2>How to become successful bussinessman</h2>
                   <div className="flex items-center gap-1">
