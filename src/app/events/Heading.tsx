@@ -63,7 +63,7 @@ const Heading = () => {
       </Helmet>
       <div className="w-full md:h-60 h-32 relative">
         <div className="w-full h-full absolute top-0 left-0">
-          <Image src={bgs} alt="" className="w-full h-full" />
+        <img src="./bgs.png" alt="" className="w-full h-full" />
         </div>
         <div className="absolute w-full flex flex-col items-center justify-center top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2">
           <p className="xl:text-8xl md:text-6xl xs:text-3xl text-xl  bg-gradient-to-b from-white to-transparent text-transparent font-bold bg-clip-text">

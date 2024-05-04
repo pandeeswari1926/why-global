@@ -9,7 +9,7 @@ function Culture() {
        <div className='w-[25%] h-[300px] rad  bg-black'></div>
        <div>
         <div className='relative w-full flex flex-col'>
-          <div><Image src={ruban} alt=''></Image></div>
+          <div><img src="./ruban.png" alt='' /></div>
         <div className='w-full'><p>Ethical Responsibility<br></br><span className='text-sm'>Ethical responsibility and social impact define our culture.</span></p></div>
         </div>
        </div>
