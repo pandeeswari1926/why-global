@@ -118,7 +118,7 @@ function Page() {
       ) : (
         <>
           <Helmet>
-            <title property="og:title">{data ? data.metaTitle : ""}</title>
+            {/* <title property="og:title">{data ? data.metaTitle : ""}</title> */}
             <meta
               property="og:description"
               content={data ? data.MetaDescription : ""}

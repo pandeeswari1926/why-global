@@ -170,7 +170,7 @@ function Page() {
       }`
       )
         .then((res) => {
-          // console.log(res);
+          console.log(res[0],"pandi");
           setDataItems(res);
           setFilterData(res);
           setnewarray(res);
@@ -245,27 +245,27 @@ function Page() {
         <Loader />
       ) : (
         <>
-          {/* <Helmet>
+          <Helmet>
             <title property="og:title">
-              {dataItems && dataItems?.metaTitle}
+              {dataItems && dataItems[0]?.metaTitle}
             </title>
             <meta
               property="og:description"
-              content={dataItems ? dataItems.MetaDescription : ""}
+              content={dataItems ? dataItems[0].MetaDescription : ""}
             />
             <meta
               property="og:url"
-              content={dataItems ? dataItems.MetaData : ""}
+              content={dataItems ? dataItems[0].MetaData : ""}
             />
             <meta
               name="keywords"
-              content={dataItems ? dataItems.FocusKeyword : ""}
+              content={dataItems ? dataItems[0].FocusKeyword : ""}
             ></meta>
             <meta
               name="alldata"
-              content={dataItems ? dataItems.MetaURL : ""}
+              content={dataItems ? dataItems[0].MetaURL : ""}
             ></meta>
-          </Helmet> */}
+          </Helmet>
           {/* <div className="xs:p-10 p-7">
             <h1 className="py-5 font-bold text-4xl xs:mx-0 mx-auto relative flex flex-col w-fit">
               <span>NEWS</span>
