@@ -116,7 +116,7 @@ useEffect(()=>{
 
   return (
     <>
-      <div className="z-20 fixed w-full md:top-7 top-0 ">
+      <div className="z-30 fixed w-full md:top-7 top-0 ">
         <section className="bg-white flex justify-between px-5 items-center p-4   drop-shadow-xl z-10  w-full top-0">
           <Link href="/Homepage">
             <img src="./logo-300x70.png" alt="logo" className="w-48" />
