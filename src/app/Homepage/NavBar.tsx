@@ -1,9 +1,6 @@
 "use client";
 import Link from "next/link";
 import React, { useState } from "react";
-import Image from "next/image";
-import logoicon from "../asset/logo.png";
-import logoicon2 from "../../../public/logo-300x70.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faClose, faL } from "@fortawesome/free-solid-svg-icons";
 import { RiArrowDropDownLine } from "react-icons/ri";
@@ -11,59 +8,90 @@ import { IoIosArrowForward } from "react-icons/io";
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
-  const [showDropdown, setShowDropdown] = useState(false);
-  const [ShowOpen, SetshowOpen] = useState(false);
-  const closeTimeout = React.useRef<NodeJS.Timeout>();
-  const[service,setservice]=useState(false)
-  const toggleShow = () => {
-    SetshowOpen(!ShowOpen);
+  const [showDropdowncompany, setShowDropdowncompany] = useState(false);
+  const [ShowOpencompany, SetshowOpencompany] = useState(false);
+  const [ShowOpenservice, SetshowOpenservice] = useState(false);
+  const closeTimeoutcompany = React.useRef<NodeJS.Timeout>();
+  const closeTimeoutservice = React.useRef<NodeJS.Timeout>();
+  const [servicedropdown, setservicedropdown] = useState(false);
+  const toggleShowcompany = () => {
+    SetshowOpencompany(!ShowOpencompany);
+  };
+  const toggleShowservice = () => {
+    SetshowOpenservice(!ShowOpenservice);
   };
 
   const toggleNavbar = () => {
     setOpen(!open);
-    SetshowOpen(false);
+    SetshowOpencompany(false);
   };
 
   const handleClick = () => {
     setOpen(!open);
     console.log(open);
-    SetshowOpen(false)
-  };
-  const openDropdown = () => {
-    setShowDropdown(true);
-    clearTimeout(closeTimeout.current);
+    SetshowOpencompany(false);
   };
 
-  const closeDropdown = () => {
-    closeTimeout.current = setTimeout(() => {
-      setShowDropdown(false);
-      setservice(false)
-    }, 200); 
+  const openDropdowncompany = () => {
+    setShowDropdowncompany(true);
+    clearTimeout(closeTimeoutcompany.current);
   };
 
-  const handleMouseEnter = () => {
-    openDropdown();
+  const closeDropdowncompany = () => {
+    closeTimeoutcompany.current = setTimeout(() => {
+      setShowDropdowncompany(false);
+    }, 300);
+  };
+  const openDropdownservice = () => {
+    setservicedropdown(true);
+    clearTimeout(closeTimeoutservice.current);
   };
 
-  const handleMouseLeave = () => {
-    closeDropdown();
+  const closeDropdownservice = () => {
+    closeTimeoutservice.current = setTimeout(() => {
+      setservicedropdown(false);
+    }, 300);
   };
 
-  const handleOutsideClick = (e:any) => {
+  const handleMouseEntercompany = () => {
+    openDropdowncompany();
+  };
+  const handleMouseEnterservice = () => {
+    openDropdownservice();
+  };
+
+  const handleMouseLeavecompany = () => {
+    closeDropdowncompany();
+    setservicedropdown(false);
+  };
+  const handleMouseLeaveservice = () => {
+    closeDropdownservice();
+    setShowDropdowncompany(false);
+  };
+
+  const handleOutsideClickcompany = (e: any) => {
     if (!e.target.closest(".dropdown-container")) {
-      closeDropdown();
+      closeDropdowncompany();
     }
   };
-  function handleout(e:any){
-    closeTimeout.current=setTimeout(() => {
-    setservice(false)
-   }, 300);
-  }
 
   React.useEffect(() => {
-    document.body.addEventListener("click", handleOutsideClick);
+    document.body.addEventListener("click", handleOutsideClickcompany);
     return () => {
-      document.body.removeEventListener("click", handleOutsideClick);
+      document.body.removeEventListener("click", handleOutsideClickcompany);
+    };
+  }, []);
+
+  const handleOutsideClickservice = (e: any) => {
+    if (!e.target.closest(".dropdown-containerservice")) {
+      closeDropdowncompany();
+    }
+  };
+
+  React.useEffect(() => {
+    document.body.addEventListener("click", handleOutsideClickservice);
+    return () => {
+      document.body.removeEventListener("click", handleOutsideClickservice);
     };
   }, []);
 
@@ -77,15 +105,15 @@ const NavBar = () => {
           <ul className="space-x-5  lg:flex flex-row hidden justify-center items-center cursor-pointer font-medium xl:text-base text-sm">
             <div
               className="relative dropdown-container"
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
+              onMouseEnter={handleMouseEntercompany}
+              onMouseLeave={handleMouseLeavecompany}
             >
               <div>
                 <li className="hover:text-primarycolor flex items-center">
                   Company <RiArrowDropDownLine size={20} className="" />
                 </li>
               </div>
-              {showDropdown && (
+              {showDropdowncompany && (
                 <div className="absolute -ml-14 downup bg-white text-black mt-2 w-44 p-4 rounded shadow-lg">
                   <div className="flex flex-col justify-center items-center text-sm leading-loose">
                     <Link className="hover:text-primarycolor " href="/about">
@@ -101,17 +129,35 @@ const NavBar = () => {
                 </div>
               )}
             </div>
-            <div onMouseEnter={()=>setservice(true)}>
-            <Link className="relative h-full"  href="/services">
-              <li className="hover:text-primarycolor h-full">Services</li>
-
-              {service?<div onMouseEnter={()=>setservice(true)} onMouseLeave={handleout}  className="absolute -ml-14 downup bg-white text-black mt-2 w-40 p-4 rounded shadow-lg">
-<Link className="hover:text-primarycolor" href={{pathname:'/Server',query:{name:'DIGITAL MARKETING'}}}>Digital Marketing</Link>
-              </div>:null}
-            </Link>
+            <div
+              className="relative dropdown-containerservice"
+              onMouseEnter={handleMouseEnterservice}
+              onMouseLeave={handleMouseLeaveservice}
+            >
+              <div>
+                <Link
+                  href="/services"
+                  className="hover:text-primarycolor flex items-center"
+                >
+                  Services <RiArrowDropDownLine size={20} className="" />
+                </Link>
+              </div>
+              {servicedropdown && (
+                <div className="absolute -ml-14 downup bg-white text-black mt-2 w-44 p-4 rounded shadow-lg">
+                  <div className="flex flex-col justify-center items-center text-sm leading-loose">
+                    <Link
+                      className="hover:text-primarycolor "
+                      href={{
+                        pathname: "/Server",
+                        query: { name: "DIGITAL MARKETING" },
+                      }}
+                    >
+                      Digital Marketing
+                    </Link>
+                  </div>
+                </div>
+              )}
             </div>
-            
-
 
             <Link href="solutions">
               <li className="hover:text-primarycolor">Solutions</li>
@@ -132,10 +178,13 @@ const NavBar = () => {
               <li className="hover:text-primarycolor">Contact us</li>
             </Link>
           </ul>
-          <Link href={'/contactus'}>  <button className=" w-fit px-3 py-2 cursor-pointer bg-white text-primarycolor  shadow-2xl rounded-md hover:bg-primarycolor hover:text-white border text-sm font-medium border-b-4 lg:block hidden">
-            Get a Quote
-          </button></Link>
-        
+          <Link href={"/contactus"}>
+            {" "}
+            <button className=" w-fit px-3 py-2 cursor-pointer bg-white text-primarycolor  shadow-2xl rounded-md hover:bg-primarycolor hover:text-white border text-sm font-medium border-b-4 lg:block hidden">
+              Get a Quote
+            </button>
+          </Link>
+
           {open === false ? (
             <FontAwesomeIcon
               icon={faBars}
@@ -157,19 +206,19 @@ const NavBar = () => {
               <div>
                 <li
                   className="bg-primarycolor p-2 text-white hover:bg-white hover:text-primarycolor flex items-center gap-1"
-                  onClick={toggleShow}
+                  onClick={toggleShowcompany}
                 >
                   Company <IoIosArrowForward size={13} />
                 </li>
               </div>
-              <Link href="/services">
-                <li
-                  className="bg-primarycolor p-2 text-white hover:bg-white hover:text-primarycolor"
-                  onClick={toggleNavbar}
+              <div>
+              <li
+                  className="bg-primarycolor p-2 text-white hover:bg-white hover:text-primarycolor flex items-center gap-1"
+                  onClick={toggleShowservice}
                 >
-                  Services
+                  Services <IoIosArrowForward size={13} />
                 </li>
-              </Link>
+              </div>
               <Link href="solutions">
                 <li
                   className="bg-primarycolor p-2 text-white hover:bg-white hover:text-primarycolor"
@@ -218,20 +267,20 @@ const NavBar = () => {
                   Testimonials
                 </li>
               </Link>
-              <Link href={'/contactus'}>
-              <li
-                className="p-2 mx-auto w-full flex items-end justify-center   cursor-pointer bg-white text-center text-primarycolor  shadow-2xl rounded-md hover:bg-primarycolor hover:text-white border border-b-4"
-                onClick={toggleNavbar}
-              >
-                Get a Quote
-              </li></Link>
-           
+              <Link href={"/contactus"}>
+                <li
+                  className="p-2 mx-auto w-full flex items-end justify-center   cursor-pointer bg-white text-center text-primarycolor  shadow-2xl rounded-md hover:bg-primarycolor hover:text-white border border-b-4"
+                  onClick={toggleNavbar}
+                >
+                  Get a Quote
+                </li>
+              </Link>
             </ul>
-            {ShowOpen && (
+            {ShowOpencompany && (
               <div className="absolute todown  top-0 pt-5 pl-10 float-right ani2  h-full w-full overflow-hidden bg-primarycolor text-white">
                 <ul className="flex  flex-col justify-center text-left leading-loose">
                   <li
-                    onClick={toggleShow}
+                    onClick={toggleShowcompany}
                     className="hover:bg-white hover:text-primarycolor p-1"
                   >
                     Back
@@ -249,6 +298,35 @@ const NavBar = () => {
                     onClick={toggleNavbar}
                   >
                     Life At WHY
+                  </Link>
+                </ul>
+              </div>
+            )}
+            {ShowOpenservice && (
+              <div className="absolute todown  top-0 pt-5 pl-10 float-right ani2  h-full w-full overflow-hidden bg-primarycolor text-white">
+                <ul className="flex  flex-col justify-center text-left leading-loose">
+                  <li
+                    onClick={toggleShowservice}
+                    className="hover:bg-white hover:text-primarycolor p-1"
+                  >
+                    Back
+                  </li>
+                  <Link
+                    href="/services"
+                    className="hover:bg-white hover:text-primarycolor p-1"
+                    onClick={toggleNavbar}
+                  >
+                    Our Services
+                  </Link>
+                  <Link
+                    className="hover:bg-white hover:text-primarycolor p-1"
+                    href={{
+                      pathname: "/Server",
+                      query: { name: "DIGITAL MARKETING" },
+                    }}
+                    onClick={toggleNavbar}
+                  >
+                    Digital Marketing
                   </Link>
                 </ul>
               </div>
