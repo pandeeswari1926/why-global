@@ -74,19 +74,21 @@ function Page(){
     
     (loader==true?<Loader />:<div className="overflow-hidden ">
     <div className="lg:h-[95vh]  h-[600px] relative w-full">
-    
-    <div className="md:w-[70%] overflow-hidden w-full justify-start flex h-[90%] md:rounded-full shadow-primarycolor bg-gray-200 drop-shadow-2xl absolute top-5 md:-right-1/4">
+    <img className="absolute lg:flex hidden bottom-0" src="./sideline.png"></img>
+    <img className="absolute lg:flex hidden left-1/2 top-5" src="./circ.png"></img>
+    <img className="absolute lg:flex hidden left-1/4 bottom-10" src="./circ.png"></img>
+    <div className="lg:w-[70%] overflow-hidden w-full  h-full lg:rounded-full shadow-primarycolor bg-gray-200 lg:drop-shadow-2xl absolute lg:top-5 lg:-right-[20%]">
    
-        <img src={alldata?.banner[0]?.Image?.asset?.url} className="w-full md:flex object-cover  hidden"></img>
-        <img className="w-full md:hidden object-cover flex" src="./videogif.gif"></img>
+        <img src={alldata?.banner[0]?.Image?.asset?.url} className="w-full h-full lg:flex hidden"></img>
+        <img className="w-full h-full lg:hidden object-cover flex" src="./videogif.gif"></img>
     </div>
-    <div className="absolute bottom-0 left-0 els w-full md:hidden flex xs:h-full h-[70%]"></div>
-    <div className="absolute right-0 bottom-0 w-full xs:h-full  h-[70%] wh md:hidden flex "></div>
+    <div className="absolute bottom-0 left-0 els w-full lg:hidden flex xs:h-full h-[70%]"></div>
+    <div className="absolute right-0 bottom-0 w-full xs:h-full  h-[70%] wh lg:hidden flex "></div>
         {/* Display the value of Services */}
-        <div className="md:text-6xl text-2xl xs:text-3xl w-full xl:text-7xl absolute   font-semibold md:w-[40%]  lg:leading-[70px] text-wrap md:top-20 md:left-10   top-1/2 left-1/2 md:-translate-x-0 md:-translate-y-0 -translate-x-1/2  -translate-y-1/2 md:text-start text-center "><p className="sha bg-clip-text  w-full text-wrap mb-5">{alldata?.banner[0]?.title}</p> 
-        <div className="flex flex-col md:justify-start md:items-start justify-center items-center gap-6 ">
-        <p className="text-sm md:text-gray-500 text-white w-[90%]  leading-6 font-medium">{alldata?.banner[0]?.content}</p>
-        <Link href={'/contactus'}><button className="md:bg-transparent bg-white border-2 border-white md:border-black w-fit hover:bg-primarycolor duration-200 hover:text-white rounded-lg text-sm px-4 py-3">EXPLORE</button></Link>
+        <div className="lg:text-6xl text-2xl xs:text-3xl w-full xl:text-7xl absolute   font-semibold lg:w-[40%]  lg:leading-[70px] text-wrap lg:top-1/2 lg:left-10   top-1/2 left-1/2 lg:-translate-x-0 lg:-translate-y-1/2 -translate-x-1/2  -translate-y-1/2 lg:text-start text-center "><p className="sha bg-clip-text  w-full text-wrap mb-5">{alldata?.banner[0]?.title}</p> 
+        <div className="flex flex-col lg:justify-start lg:items-start justify-center items-center gap-4 ">
+        <p className="text-sm lg:text-gray-500 xl:text-lg text-white w-[90%]  leading-6 font-medium">{alldata?.banner[0]?.content}</p>
+        <Link href={'/contactus'}><button className="lg:bg-transparent bg-white border-2 border-white lg:border-black w-fit hover:bg-primarycolor duration-200 hover:text-white rounded-lg text-sm px-4 py-3">EXPLORE</button></Link>
         </div>
         
         </div>
