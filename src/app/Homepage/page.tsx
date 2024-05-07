@@ -184,7 +184,7 @@ function Page() {
                           key={index}
                           className="bg-white border border-primarycolor relative w-[60%] lg:h-36 lg:w-36 h-48 md:w-[40%]  rounded-3xl drop-shadow-lg flex flex-col justify-center gap-3 items-center"
                         >
-                          <img src={items?.siteIcon?.asset?.url} alt="" className="size-16 object-contain" />
+                          <img src={items?.siteIcon?.asset?.url} alt="" className="size-16 w-10 object-contain" />
                           <p className=" text-xl md:text-[15px] text-center w-[80%] ">
                             {items.cardTitle}
                           </p>
