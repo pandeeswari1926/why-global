@@ -205,7 +205,7 @@ const NavBar = () => {
             <ul className="flex  flex-col justify-center pl-10 text-left  pr-4 bg-primarycolor pb-5 pt-5">
               <div>
                 <li
-                  className="bg-primarycolor p-2 text-white hover:bg-white hover:text-primarycolor flex items-center gap-1"
+                  className="bg-primarycolor cursor-pointer p-2 text-white hover:bg-white hover:text-primarycolor flex items-center gap-1"
                   onClick={toggleShowcompany}
                 >
                   Company <IoIosArrowForward size={13} />
@@ -213,7 +213,7 @@ const NavBar = () => {
               </div>
               <div>
               <li
-                  className="bg-primarycolor p-2 text-white hover:bg-white hover:text-primarycolor flex items-center gap-1"
+                  className="bg-primarycolor cursor-pointer p-2 text-white hover:bg-white hover:text-primarycolor flex items-center gap-1"
                   onClick={toggleShowservice}
                 >
                   Services <IoIosArrowForward size={13} />
@@ -269,7 +269,7 @@ const NavBar = () => {
               </Link>
               <Link href={"/contactus"}>
                 <li
-                  className="p-2 mx-auto w-full flex items-end justify-center   cursor-pointer bg-white text-center text-primarycolor  shadow-2xl rounded-md hover:bg-primarycolor hover:text-white border border-b-4"
+                  className="p-2 mt-2 ml-2 w-full xs:w-48 flex items-end justify-center   cursor-pointer bg-white text-center text-primarycolor  shadow-2xl rounded-md hover:bg-primarycolor hover:text-white border border-b-4"
                   onClick={toggleNavbar}
                 >
                   Get a Quote
@@ -281,7 +281,7 @@ const NavBar = () => {
                 <ul className="flex  flex-col justify-center text-left leading-loose">
                   <li
                     onClick={toggleShowcompany}
-                    className="hover:bg-white hover:text-primarycolor p-1"
+                    className="hover:bg-white hover:text-primarycolor p-1 cursor-pointer"
                   >
                     Back
                   </li>
@@ -307,7 +307,7 @@ const NavBar = () => {
                 <ul className="flex  flex-col justify-center text-left leading-loose">
                   <li
                     onClick={toggleShowservice}
-                    className="hover:bg-white hover:text-primarycolor p-1"
+                    className="hover:bg-white hover:text-primarycolor p-1 cursor-pointer"
                   >
                     Back
                   </li>
