@@ -188,13 +188,13 @@ const NavBar = () => {
           {open === false ? (
             <FontAwesomeIcon
               icon={faBars}
-              className="size-5 my-auto lg:hidden"
+              className="size-5 my-auto lg:hidden rote"
               onClick={handleClick}
             />
           ) : (
             <FontAwesomeIcon
               icon={faClose}
-              className="size-5 my-auto lg:hidden"
+              className="size-5 my-auto lg:hidden rote2"
               onClick={handleClick}
             />
           )}
@@ -267,7 +267,7 @@ const NavBar = () => {
                   Testimonials
                 </li>
               </Link>
-              <Link href={"/contactus"}>
+              <Link href={"/contactus"} className="w-fit">
                 <li
                   className="p-2 mt-2 ml-2 w-full xs:w-48 flex items-end justify-center   cursor-pointer bg-white text-center text-primarycolor  shadow-2xl rounded-md hover:bg-primarycolor hover:text-white border border-b-4"
                   onClick={toggleNavbar}

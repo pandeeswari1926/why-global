@@ -586,4 +586,33 @@
     color: transparent;
   }
 
+
+  .rote{
+    animation: rots 0.3s ease-in-out;
+  }
+
+  @keyframes rots {
+    from{
+      transform: rotate(100deg);
+      opacity: 0.5;
+    }
+    to{
+      transform: rotate(0deg);
+      opacity: 1;
+    }
+  }
+  .rote2{
+    animation: rots2 0.3s ease-in-out;
+  }
+
+  @keyframes rots2 {
+    from{
+      transform: rotate(-100deg);
+      opacity: 0.5;
+    }
+    to{
+      transform: rotate(0deg);
+      opacity: 1;
+    }
+  }
   
