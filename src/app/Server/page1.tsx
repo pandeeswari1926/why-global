@@ -95,7 +95,7 @@ function Page(){
    
         
     </div>
-    <div className="flex justify-between  items-center md:flex-row flex-col w-full md:p-8 p-5">
+    {alldata&&alldata.Secondsection&&alldata.Secondsection[0]&&(<div className="flex justify-between  items-center md:flex-row flex-col w-full md:p-8 p-5">
       <div className="flex flex-col gap-5 md:text-start text-center md:w-1/2">
         <h1 className="text-3xl font-semibold">{alldata&&alldata.Secondsection[0]&&alldata.Secondsection[0].title}</h1>
         <p className="text-xl text-primarycolor">{alldata?.Secondsection[0]?.Secondsubtitle}</p>
@@ -104,7 +104,8 @@ function Page(){
       <div className="md:w-1/2">
         <img src={alldata?.Secondsection[0]?.Image?.asset?.url} alt="" />
       </div>
-    </div>
+    </div>)}
+    
     <div className="w-full py-5">
         <div className="w-full flex flex-col gap-5 ">
    

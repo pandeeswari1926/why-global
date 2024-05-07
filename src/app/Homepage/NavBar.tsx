@@ -1,12 +1,16 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faClose, faL } from "@fortawesome/free-solid-svg-icons";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { IoIosArrowForward } from "react-icons/io";
-
+import SanityClient from "../SanityClient";
+interface Alldata{
+  Categoryname:string
+}
 const NavBar = () => {
+  const [alldata,setalldata]=useState<Alldata[]|null >([])
   const [open, setOpen] = useState(false);
   const [showDropdowncompany, setShowDropdowncompany] = useState(false);
   const [ShowOpencompany, SetshowOpencompany] = useState(false);
@@ -20,6 +24,21 @@ const NavBar = () => {
   const toggleShowservice = () => {
     SetshowOpenservice(!ShowOpenservice);
   };
+useEffect(()=>{
+  const getdata=async()=>{
+    await SanityClient.fetch(`*[_type=="servicecategory"]{
+      Categoryname
+      
+    }`).then((res:any)=>{
+     setalldata(res)
+     console.log(res);
+     
+    })
+  }
+  getdata();
+
+},[])
+
 
   const toggleNavbar = () => {
     setOpen(!open);
@@ -145,15 +164,19 @@ const NavBar = () => {
               {servicedropdown && (
                 <div className="absolute -ml-14 downup bg-white text-black mt-2 w-44 p-4 rounded shadow-lg">
                   <div className="flex flex-col justify-center items-center text-sm leading-loose">
-                    <Link
+                    {alldata&&alldata.map((item:any,index:any)=>(
+                      <Link
+                      key={index}
                       className="hover:text-primarycolor "
                       href={{
                         pathname: "/Server",
-                        query: { name: "DIGITAL MARKETING" },
+                        query: { name:'/' },
                       }}
                     >
-                      Digital Marketing
+                      {item?.Categoryname}
                     </Link>
+                    ))}
+                    
                   </div>
                 </div>
               )}
@@ -318,7 +341,8 @@ const NavBar = () => {
                   >
                     Our Services
                   </Link>
-                  <Link
+                  {alldata&&alldata.map((item:any,index:any)=>(
+                    <Link
                     className="hover:bg-white hover:text-primarycolor p-1"
                     href={{
                       pathname: "/Server",
@@ -326,8 +350,10 @@ const NavBar = () => {
                     }}
                     onClick={toggleNavbar}
                   >
-                    Digital Marketing
+                    {item?.Categoryname}
                   </Link>
+                  ))}
+                  
                 </ul>
               </div>
             )}
