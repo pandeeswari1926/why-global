@@ -122,6 +122,7 @@ function Page() {
     MetaData: string;
     FocusKeyword: string;
     MetaURL: string;
+    slug:{current:string}
 
     image: { asset: { url: string } };
     heading: string;
@@ -158,6 +159,7 @@ function Page() {
         MetaData,
         FocusKeyword,
         MetaURL,
+        slug,
         image{
           asset->{
             url
@@ -370,7 +372,7 @@ function Page() {
                 allvalues.map((item, index) => (
                   <Link
                     key={index}
-                    href={`/news/${item.category}`}
+                    href={{pathname:'/Newsbrief',query:{name:item.category}}}
                     className="w-full lg:w-[80%]"
                   >
                     <div className="bg-primarycolor shadow-xl  mx-auto  w-full cursor-pointer">
@@ -458,7 +460,7 @@ function Page() {
                 <div className="flex flex-col gap-3">
                   {newsArray &&
                     newsArray.map((items: any, indexs: any) => (
-                      <Link key={indexs} href={`/news/1/${items.heading}`}>
+                      <Link key={indexs}  href={{pathname:'/IndiviNews',query:{name:items.slug.current}}}>
                         <div key={indexs} className="flex flex-row gap-3">
                           <div className="w-[20%] h-12">
                             <img
