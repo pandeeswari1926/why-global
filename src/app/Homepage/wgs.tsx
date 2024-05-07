@@ -89,8 +89,8 @@ const Wgs = () => {
                     {item.date}
                   </p>
                 </div>
-                <div className="bg-white drop-shadow-xl p-4">
-                  <h2 className="text-xl">{item.title}</h2>
+                <div className="bg-white drop-shadow-xl p-4 min-h-44">
+                  <h2 className="font-semibold">{item.title}</h2>
                   <p className="pt-2">{item.content}</p>
                 </div>
               </div>
