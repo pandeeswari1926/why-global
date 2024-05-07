@@ -77,17 +77,18 @@ function Page(){
     <img className="absolute lg:flex hidden bottom-0" src="./sideline.png"></img>
     <img className="absolute lg:flex hidden left-1/2 top-5" src="./circ.png"></img>
     <img className="absolute lg:flex hidden left-1/4 bottom-10" src="./circ.png"></img>
-    <div className="lg:w-[70%] overflow-hidden w-full  h-full lg:rounded-full shadow-primarycolor bg-gray-200 lg:drop-shadow-2xl absolute lg:top-5 lg:-right-[20%]">
+    <div className="lg:w-[70%]  overflow-hidden w-full  h-full lg:rounded-full shadow-primarycolor bg-gray-200 lg:drop-shadow-2xl absolute lg:top-5 lg:-right-[20%]">
    
         <img src={alldata?.banner[0]?.Image?.asset?.url} className="w-full h-full lg:flex hidden"></img>
         <img className="w-full h-full lg:hidden object-cover flex" src="./videogif.gif"></img>
     </div>
+    <div className="w-full h-full bg-black bg-opacity-70 absolute top-0 left-0 lg:hidden flex"></div>
     <div className="absolute bottom-0 left-0 els w-full lg:hidden flex xs:h-full h-[70%]"></div>
     <div className="absolute right-0 bottom-0 w-full xs:h-full  h-[70%] wh lg:hidden flex "></div>
         {/* Display the value of Services */}
         <div className="lg:text-6xl text-2xl xs:text-3xl w-full xl:text-7xl absolute   font-semibold lg:w-[40%]  lg:leading-[70px] text-wrap lg:top-1/2 lg:left-10   top-1/2 left-1/2 lg:-translate-x-0 lg:-translate-y-1/2 -translate-x-1/2  -translate-y-1/2 lg:text-start text-center "><p className="sha bg-clip-text  w-full text-wrap mb-5">{alldata?.banner[0]?.title}</p> 
         <div className="flex flex-col lg:justify-start lg:items-start justify-center items-center gap-4 ">
-        <p className="text-sm lg:text-gray-500 xl:text-lg text-white w-[90%]  leading-6 font-medium">{alldata?.banner[0]?.content}</p>
+        <p className="text-sm lg:text-gray-500 xl:text-base text-white w-[90%]  leading-6 font-medium">{alldata?.banner[0]?.content}</p>
         <Link href={'/contactus'}><button className="lg:bg-transparent bg-white border-2 border-white lg:border-black w-fit hover:bg-primarycolor duration-200 hover:text-white rounded-lg text-sm px-4 py-3">EXPLORE</button></Link>
         </div>
         
@@ -98,14 +99,14 @@ function Page(){
     <div className="py-10">  
        {alldata&&alldata.Secondsection&&alldata.Secondsection.map((item,index)=>
   (index%2!=0? 
-  <div key={index} className="flex justify-between   items-center md:flex-row-reverse flex-col w-full ">
+  <div key={index} className="flex justify-between  gap-5 items-center md:flex-row-reverse md:p-8 p-5 flex-col w-full ">
   <div className="flex flex-col gap-5 md:text-start text-center md:w-1/2">
     <h1 className="text-3xl font-semibold">{alldata&&item?.title}</h1>
     <p className="text-xl text-primarycolor">{alldata&&item?.Secondsubtitle}</p>
     <p className="text-justify">{alldata&&item?.content}</p>
     </div>
-  <div className="md:w-1/2 bg-primarycolor">
-    <img className="w-full shadow-2xl" src={item?.Image?.asset?.url} alt="" />
+  <div className="md:w-1/2 h-[400px] bg-primarycolor">
+    <img className="w-full h-full shadow-2xl" src={item?.Image?.asset?.url} alt="" />
   </div>
 </div>:
   <div key={index} className="flex justify-between  items-center md:flex-row flex-col gap-5 w-full md:p-8 p-5">
@@ -114,8 +115,8 @@ function Page(){
     <p className="text-xl text-primarycolor">{alldata&&item?.Secondsubtitle}</p>
     <p className="text-justify">{alldata&&item?.content}</p>
     </div>
-  <div className="md:w-1/2">
-    <img src={item?.Image?.asset?.url} alt="" />
+  <div className="md:w-1/2 h-[400px]">
+    <img className="w-full h-full" src={item?.Image?.asset?.url} alt="" />
   </div>
 </div>)  
   )
