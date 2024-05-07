@@ -21,6 +21,7 @@ import { RiCustomerService2Fill } from "react-icons/ri";
 import { FaLaptop } from "react-icons/fa";
 import Loader from "../home/Loader";
 import { Helmet } from "react-helmet";
+import Link from "next/link";
 
 function Page() {
   interface banner {
@@ -31,6 +32,7 @@ function Page() {
       {
         siteIcon: { asset: { url: string } };
         cardTitle: string;
+        link:string;
       }
     ];
   }
@@ -94,7 +96,8 @@ function Page() {
                     url
                   }
                 },
-                cardTitle
+                cardTitle,
+                link
               }
             }
           }`
@@ -180,7 +183,7 @@ function Page() {
                   <div className="flex lg:flex-row flex-col w-full lg:w-[50%] justify-center items-center gap-6 ">
                     {item &&
                       item.card.map((items, index) => (
-                        <div
+                        <Link target={index!=2?'_blank':'_parent'} href={`${items?.link}`}><div
                           key={index}
                           className="bg-white border border-primarycolor relative w-[60%] lg:h-36 lg:w-36 h-48 md:w-[40%]  rounded-3xl drop-shadow-lg flex flex-col justify-center gap-3 items-center"
                         >
@@ -189,6 +192,7 @@ function Page() {
                             {items.cardTitle}
                           </p>
                         </div>
+                        </Link>
                       ))}
                   </div>
                   <div className="mt-10 z-10 lg:w-[50%] w-full text-center lg:text-start p-3">
@@ -236,7 +240,7 @@ function Page() {
                       <h1 className="md:text-3xl text-xl text-center lg:text-start text-gray-600 font-semibold w-full">
                         {item.SubTitle}
                       </h1>
-                      <p className="text-md text-gray-500 w-full text-center lg:text-start">
+                      <p className="text-sm text-gray-500 w-full text-center lg:text-start">
                         {item.content1}
                       </p>
                       <div className="grid md:grid-cols-2 grid-cols-1 gap-5 justify- items-center   text-gray-500 ">
@@ -251,7 +255,7 @@ function Page() {
                           </div>
                         ))}
                       </div>
-                      <p className="lg:text-sm text-lg text-justify lg:text-start">
+                      <p className="text-sm text-gray-500 w-full text-center lg:text-start">
                         {item.content2}
                       </p>
                     </div>

@@ -65,9 +65,9 @@ const Wgs = () => {
           </h2>
         </div>
         <div className="flex flex-col justify-center items-center pt-5 sm:pt-0">
-          <button className="bg-white drop-shadow-xl p-2 text-[#FF8900]">
+          {/* <button className="bg-white drop-shadow-xl p-2 text-[#FF8900]">
             View all
-          </button>
+          </button> */}
         </div>
       </div>
       <section className="flex lg:flex-row flex-col justify-around px-5  items-center pt-10">

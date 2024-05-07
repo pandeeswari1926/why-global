@@ -55,7 +55,7 @@ const World = () => {
         {data &&
           data.World.map((Item, index) => (
             <div key={index}>
-              <h1 className="text-base sm:text-xl md:text-[30px] lg:w-[80%]  mx-auto font-bold pb-[8%]">
+              <h1 className="text-base sm:text-xl md:text-[30px] lg:w-[80%] leading-10 mx-auto font-bold pb-[8%]">
                 {Item.title}
               </h1>
               <section className="grid grid-cols-1 lg:grid-cols-2">
