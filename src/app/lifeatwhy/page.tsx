@@ -149,7 +149,7 @@ function Why() {
       </div>
 
       {/* second section */}
-      <div className="grid lg:grid-cols-2 grid-cols-1 lg:h-[500px] h-full bg-gray-200 px-10 p-10 relative">
+      <div className="grid lg:grid-cols-2 grid-cols-1 lg:h-[560px] h-full bg-gray-200 px-10 p-10 relative">
         <div
           style={{
             clipPath: "polygon(76% 84%, 100% 50%, 100% 100%, 0% 100%)",
@@ -175,7 +175,7 @@ function Why() {
             ))}
           </div>
         </div>
-        <div className="w-full h-full z-10 lg:mt-4">
+        <div className="w-full h-full z-10 flex flex-col justify-end lg:mt-7">
           <img
             src={workprocess?.image?.asset?.url}
             alt="our work process"

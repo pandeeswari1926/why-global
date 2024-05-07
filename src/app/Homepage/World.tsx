@@ -72,7 +72,7 @@ const World = () => {
                           />
                         </h1>
                         <img
-                          src="./+.png"
+                          src="./percent.png"
                           alt="plus icon"
                           className="h-5 w-5"
                         />
