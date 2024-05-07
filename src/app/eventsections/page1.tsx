@@ -10,7 +10,7 @@ interface Alldata{
     FocusKeyword:string,
     MetaURL:string,
     MetaData:string,
-  content:{title:string,Image:[{image:{asset:{url:string}}}]}
+  content:{venue:string,title:string,Image:[{image:{asset:{url:string}}}]}
 }
 const page = () => {
   const [alldata,setalldata]=useState<Alldata|null>(null)
@@ -28,6 +28,7 @@ const page = () => {
     MetaData,
     content[${id}]{
       title,
+      venue,
       Image[]{
         image{
           asset->{
@@ -69,8 +70,8 @@ const page = () => {
           <p className="xl:text-8xl md:text-6xl xs:text-3xl text-xl  bg-gradient-to-b from-white to-transparent text-transparent font-bold bg-clip-text">
             {alldata && alldata?.content?.title}
           </p>
-          <p className="text-white xl:text-4xl md:text-2xl xs:text-lg text-sm font-medium">
-            {alldata&&alldata?.content?.title}
+          <p className="text-white xl:text-3xl md:text-2xl xs:text-lg text-sm font-medium">
+            {alldata&&alldata?.content?.venue}
           </p>
         </div>
       </div>

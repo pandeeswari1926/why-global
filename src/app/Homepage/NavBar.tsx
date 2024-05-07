@@ -169,8 +169,8 @@ useEffect(()=>{
                       key={index}
                       className="hover:text-primarycolor "
                       href={{
-                        pathname: "/Server",
-                        query: { name:'/' },
+                        pathname: "/servicesections",
+                        query: { name:item?.Categoryname },
                       }}
                     >
                       {item?.Categoryname}

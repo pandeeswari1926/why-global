@@ -95,16 +95,32 @@ function Page(){
    
         
     </div>
-    {alldata&&alldata.Secondsection&&alldata.Secondsection[0]&&(<div className="flex justify-between  items-center md:flex-row flex-col w-full md:p-8 p-5">
-      <div className="flex flex-col gap-5 md:text-start text-center md:w-1/2">
-        <h1 className="text-3xl font-semibold">{alldata&&alldata.Secondsection[0]&&alldata.Secondsection[0].title}</h1>
-        <p className="text-xl text-primarycolor">{alldata?.Secondsection[0]?.Secondsubtitle}</p>
-        <p className="text-justify">{alldata?.Secondsection[0]?.content}</p>
-        </div>
-      <div className="md:w-1/2">
-        <img src={alldata?.Secondsection[0]?.Image?.asset?.url} alt="" />
-      </div>
-    </div>)}
+    <div className="py-10">  
+       {alldata&&alldata.Secondsection&&alldata.Secondsection.map((item,index)=>
+  (index%2!=0? 
+  <div key={index} className="flex justify-between   items-center md:flex-row-reverse flex-col w-full ">
+  <div className="flex flex-col gap-5 md:text-start text-center md:w-1/2">
+    <h1 className="text-3xl font-semibold">{alldata&&item?.title}</h1>
+    <p className="text-xl text-primarycolor">{alldata&&item?.Secondsubtitle}</p>
+    <p className="text-justify">{alldata&&item?.content}</p>
+    </div>
+  <div className="md:w-1/2 bg-primarycolor">
+    <img className="w-full shadow-2xl" src={item?.Image?.asset?.url} alt="" />
+  </div>
+</div>:
+  <div key={index} className="flex justify-between  items-center md:flex-row flex-col gap-5 w-full md:p-8 p-5">
+  <div className="flex flex-col gap-5 md:text-start text-center md:w-1/2">
+    <h1 className="text-3xl font-semibold">{alldata&&item?.title}</h1>
+    <p className="text-xl text-primarycolor">{alldata&&item?.Secondsubtitle}</p>
+    <p className="text-justify">{alldata&&item?.content}</p>
+    </div>
+  <div className="md:w-1/2">
+    <img src={item?.Image?.asset?.url} alt="" />
+  </div>
+</div>)  
+  )
+    }</div>
+ 
     
     <div className="w-full py-5">
         <div className="w-full flex flex-col gap-5 ">
@@ -113,8 +129,8 @@ function Page(){
             <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 md:gap-10 p-8 justify-items-center">
             {alldata?.thirdsection?.map((item:any,index:any)=>(
    <div key={index} className="flex justify-center items-center p-3 shadow-2xl drop-shadow-2xl flex-col gap-5 xs:w-72 w-full h-80 rounded-lg border-2 border-primarycolor">
-   <img src={item?.Image?.asset?.url} alt="" className="size-14 object-contain" />
-   <h1 className="text-xl font-semibold text-center">{item&& item?.title}</h1>
+   <img src={item?.Image?.asset?.url} alt="" className="w-16 object-contain" />
+   <h1 className="lg:text-start text-sm font-semibold text-center">{item&& item?.title}</h1>
    <p className="text-gray-400 text-sm text-justify">{item&& item?.content}</p>
    </div>
             ))}
