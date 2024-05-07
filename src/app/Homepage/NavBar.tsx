@@ -345,8 +345,8 @@ useEffect(()=>{
                     <Link
                     className="hover:bg-white hover:text-primarycolor p-1"
                     href={{
-                      pathname: "/Server",
-                      query: { name: "DIGITAL MARKETING" },
+                      pathname: "/servicesections",
+                      query: { name:item?.Categoryname },
                     }}
                     onClick={toggleNavbar}
                   >
