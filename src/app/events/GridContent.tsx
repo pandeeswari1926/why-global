@@ -6,6 +6,7 @@ import {
   MdOutlineKeyboardArrowRight,
 } from "react-icons/md";
 import SanityClient from "../SanityClient";
+import Link from "next/link";
 
 const itemRender = (_: any, type: any, originalElement: any) => {
   if (type === "prev") {
@@ -73,7 +74,8 @@ const GridContent = () => {
       <div className="lg:flex">
         <section className="grid md:grid-cols-2 lg:w-[80%] w-full place-items-center gap-x-5 gap-y-10 xl:px-10 py-5">
           {currentData.map((item, index) => (
-            <div
+            <Link href={{pathname:`/eventsections`,query:{name:item.title,id:index}}}>
+<div
               key={index}
               className="xl:w-[26rem] xl:h-64 md:w-80 md:h-52 xs2:w-[26rem] xs2:h-64 w-64 h-44 relative"
             >
@@ -99,6 +101,8 @@ const GridContent = () => {
                 </div>
               </div>
             </div>
+            </Link>
+            
           ))}
         </section>
         <section className="w-[20%] h-full lg:block hidden ">
