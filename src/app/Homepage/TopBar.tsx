@@ -17,7 +17,7 @@ import { FaYoutube } from "react-icons/fa";
 const TopBar = () => {
   return (
     <>
-      <section className="bg-primarycolor text-white w-full h-8 px-10 md:flex justify-between  hidden fixed z-20">
+      <section className="bg-primarycolor text-white w-full h-8 px-10 md:flex justify-between  hidden fixed z-30">
         <section className="flex gap-2 items-center justify-center mb-1">
           <Link
             href="mailto:contact@whyglobalservices.com"
