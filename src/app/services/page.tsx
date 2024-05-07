@@ -216,7 +216,7 @@ function Services() {
                   }}
                 >
                   <div className="bg-gradient-to-b from-gray-900 w-full h-[500px] lg:absolute ">
-                    <h1 className="text-3xl text-white font-semibold flex justify-start items-end h-[400px] ml-20 -mb-20 ">
+                    <h1 className="text-3xl text-white font-semibold flex justify-start items-end md:w-60 h-[400px] ml-20 -mb-20 ">
                       {item?.title}
                     </h1>
                     <img
@@ -228,7 +228,7 @@ function Services() {
                       <input
                         type="text"
                         placeholder="Name *"
-                        className="p-2 border-2 border-[#FF9315] placeholder:text-black"
+                        className="p-2 w-64 border-2 border-[#FF9315] placeholder:text-black"
                       />
                       <input
                         type="text"

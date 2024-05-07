@@ -42,6 +42,7 @@ import SanityClient from "../SanityClient";
 import Loader from "../home/Loader";
 import { Helmet } from "react-helmet";
 import Link from "next/link";
+import CountUp from "react-countup";
 
 function About() {
   interface Alldata {
@@ -240,8 +241,7 @@ asset->{
       },
     ],
   };
-  
-  
+
   return loader === true ? (
     <Loader />
   ) : (
@@ -294,7 +294,7 @@ asset->{
                   </div>
                 </div>
                 <div>
-                  <div className="lg:absolute relative lg:w-[70%] w-full md:top-[65%] lg:top-[43%] xl:top-[35%]  md:left-0 pl-10 z-10">
+                  <div className="lg:absolute relative lg:w-[70%] w-full md:top-[65%] lg:top-[43%] xl:top-[40%]  md:left-0 pl-10 z-10">
                     <div className="grid lg:grid-cols-4 grid-cols-2 p-2 justify-evenly">
                       {item &&
                         item.gif &&
@@ -366,8 +366,14 @@ asset->{
                     className="lg:size-12 size-20   text-[#FF9315]"
                   />
                   <p className=" text-xl md:text-lg flex flex-col justify-center items-center text-center ">
-                    <span className="text-3xl text-gray-400 font-semibold">
-                      {item.number}
+                    <span className="text-3xl text-gray-400 font-semibold flex text-center justify-center">
+                      <CountUp
+                        start={0}
+                        end={item.number}
+                        duration={3}
+                        delay={0}
+                      />
+                      <p>+</p>
                     </span>
                     <span className="text-sm lg:w-[80%] text-gray-400">
                       {item.content}
@@ -563,7 +569,7 @@ asset->{
                               <span className="text-center text-primarycolor md:text-lg sm:text-xl text-lg font-semibold">
                                 {list?.heading}
                               </span>
-                              <span className="text-center text-sm lg:w-[80%] w-full mx-auto">
+                              <span className="text-center text-sm lg:w-[80%] w-full mx-auto line-clamp-2">
                                 {list?.content}
                               </span>
                             </p>
@@ -773,7 +779,7 @@ asset->{
       <div className="flex flex-col justify-center items-center overflow-hidden py-5">
         <div className="relative w-full lg:h-[236px] h-[250px]  px-10">
           <img
-            src='./bgorange1.png'
+            src="./bgorange1.png"
             alt=""
             className="w-full h-full object-cover"
           />
@@ -781,11 +787,11 @@ asset->{
             <h2 className="font-semibold sm:text-5xl text-3xl mb-4 text-white">
               Connect with Us!
             </h2>
-            <Link href={'/contactus'}>
-            <button className="bg-white drop-shadow-xl text-[#FF8900] rounded-full sm:px-32 px-16 w-full py-4 font-semibold sm:text-xl text-lg">
-              Get Started
-            </button></Link>
-            
+            <Link href={"/contactus"}>
+              <button className="bg-white drop-shadow-xl text-[#FF8900] rounded-full sm:px-32 px-16 w-full py-4 font-semibold sm:text-xl text-lg">
+                Get Started
+              </button>
+            </Link>
           </div>
         </div>
       </div>

@@ -170,7 +170,7 @@ function Helicopter() {
                               {items.Content}
                             </p>
                             <hr className=" h-0.5 bg-[#FF8900]  mt-4 " />
-                            <div className="flex md:flex-row flex-col justify-between">
+                            <div className="flex md:flex-row flex-col justify-between mt-3 items-center">
                               <div>
                                 <p className="text-center">{items.name}</p>
                                 <p className=" text-center text-[#FF8900]">
@@ -181,7 +181,7 @@ function Helicopter() {
                                 <img
                                   src="./stars.png"
                                   alt=""
-                                  className=" md:mt-5"
+                                  className=" "
                                 />
                               </div>
                             </div>
@@ -263,7 +263,7 @@ function Helicopter() {
                           item.programming[clickindex] &&
                           item?.programming[clickindex].content}
                       </p>
-                      <div className="flex flex-wrap gap-5 justify-center items-center font-light text-sm">
+                      <div className="grid grid-cols-2 gap-5 justify-center items-center font-light text-sm">
                         {item &&
                           item.programming &&
                           item.programming[clickindex] &&
@@ -272,7 +272,7 @@ function Helicopter() {
                             (lists: any, indexlist: any) => (
                               <p
                                 key={indexlist}
-                                className="flex flex-row items-center"
+                                className="flex flex-row items-center gap-2"
                               >
                                 <img src="./tick.png" alt="" />
                                 {lists.list}
