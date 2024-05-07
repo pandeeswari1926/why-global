@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import SanityClient from "../SanityClient";
 import Loader from "../home/Loader";
 import { Helmet } from "react-helmet";
+import Link from "next/link";
 
 interface BannerItem {
   heading: string;
@@ -76,9 +77,9 @@ export const Banner: React.FC = () => {
                 <p className="text-white sm:text-base text-sm p-2 sm:p-0 lg:w-1/2 lg:mx-auto">
                   {item.content}
                 </p>
-                <button className="bg-[#FF9315] text-white border-2 border-white font-semibold xs2:p-4 p-2 px-5 xs2:px-10 lg:px-16 rounded-full hover:text-[#FF9315] hover:bg-white drop-shadow-2xl text-xl lg:text-2xl ">
+                <Link href={'/contactus'}><button className="bg-[#FF9315] text-white border-2 border-white font-semibold xs2:p-4 p-2 px-5 xs2:px-10 lg:px-16 rounded-full hover:text-[#FF9315] hover:bg-white drop-shadow-2xl text-xl lg:text-2xl ">
                   Get started
-                </button>
+                </button></Link>
               </div>
             ))}
             <div className="h-full">

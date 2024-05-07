@@ -34,9 +34,21 @@
     border-bottom: 1px;
     border-color: #ff9315;
 }
+.wh{
+  background-color: white;
+  outline: none;
+  clip-path: polygon(0% 87.27%, 0% 100%, 100% 89.03%, 0% 100%, 0% 100%, 69.28% 89.03%, 100% 70.07%, 100% 100%, 90.02% 100%, 0% 100%);
+                                                    
+  
+
+}
 
 /* appdevelopment */
+.els{
+  background-color: #FF9315;
 
+  clip-path: polygon(0% 100%, 78% 93%, 0% 57.8%);
+}
 .key1{
     animation: key1 1s  ease-in-out;
 }
@@ -568,4 +580,10 @@
       clip-path: inset(0 0 0 100%);
     }
   }
+  
+  .sha{
+    -webkit-text-stroke: 2px #FF9315;
+    color: transparent;
+  }
+
   

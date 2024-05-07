@@ -5,7 +5,7 @@ import Image from "next/image";
 import logoicon from "../asset/logo.png";
 import logoicon2 from "../../../public/logo-300x70.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faClose } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faClose, faL } from "@fortawesome/free-solid-svg-icons";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { IoIosArrowForward } from "react-icons/io";
 
@@ -14,7 +14,7 @@ const NavBar = () => {
   const [showDropdown, setShowDropdown] = useState(false);
   const [ShowOpen, SetshowOpen] = useState(false);
   const closeTimeout = React.useRef<NodeJS.Timeout>();
-
+  const[service,setservice]=useState(false)
   const toggleShow = () => {
     SetshowOpen(!ShowOpen);
   };
@@ -37,6 +37,7 @@ const NavBar = () => {
   const closeDropdown = () => {
     closeTimeout.current = setTimeout(() => {
       setShowDropdown(false);
+      setservice(false)
     }, 200); 
   };
 
@@ -53,6 +54,11 @@ const NavBar = () => {
       closeDropdown();
     }
   };
+  function handleout(e:any){
+    closeTimeout.current=setTimeout(() => {
+    setservice(false)
+   }, 300);
+  }
 
   React.useEffect(() => {
     document.body.addEventListener("click", handleOutsideClick);
@@ -64,7 +70,7 @@ const NavBar = () => {
   return (
     <>
       <div className="z-20 fixed w-full md:top-7 top-0 ">
-        <section className="bg-white flex justify-between px-5 items-center p-2   drop-shadow-xl z-10  w-full top-0">
+        <section className="bg-white flex justify-between px-5 items-center p-4   drop-shadow-xl z-10  w-full top-0">
           <Link href="/Homepage">
             <img src="./logo-300x70.png" alt="logo" className="w-48" />
           </Link>
@@ -95,10 +101,18 @@ const NavBar = () => {
                 </div>
               )}
             </div>
+            <div onMouseEnter={()=>setservice(true)}>
+            <Link className="relative h-full"  href="/services">
+              <li className="hover:text-primarycolor h-full">Services</li>
 
-            <Link href="/services">
-              <li className="hover:text-primarycolor">Services</li>
+              {service?<div onMouseEnter={()=>setservice(true)} onMouseLeave={handleout}  className="absolute -ml-14 downup bg-white text-black mt-2 w-40 p-4 rounded shadow-lg">
+<Link className="hover:text-primarycolor" href={{pathname:'/Server',query:{name:'DIGITAL MARKETING'}}}>Digital Marketing</Link>
+              </div>:null}
             </Link>
+            </div>
+            
+
+
             <Link href="solutions">
               <li className="hover:text-primarycolor">Solutions</li>
             </Link>
@@ -118,9 +132,10 @@ const NavBar = () => {
               <li className="hover:text-primarycolor">Contact us</li>
             </Link>
           </ul>
-          <button className=" w-fit px-3 py-2 cursor-pointer bg-white text-primarycolor  shadow-2xl rounded-md hover:bg-primarycolor hover:text-white border text-sm font-medium border-b-4 lg:block hidden">
+          <Link href={'/contactus'}>  <button className=" w-fit px-3 py-2 cursor-pointer bg-white text-primarycolor  shadow-2xl rounded-md hover:bg-primarycolor hover:text-white border text-sm font-medium border-b-4 lg:block hidden">
             Get a Quote
-          </button>
+          </button></Link>
+        
           {open === false ? (
             <FontAwesomeIcon
               icon={faBars}
@@ -203,12 +218,14 @@ const NavBar = () => {
                   Testimonials
                 </li>
               </Link>
+              <Link href={'/contactus'}>
               <li
                 className="p-2 mx-auto w-full flex items-end justify-center   cursor-pointer bg-white text-center text-primarycolor  shadow-2xl rounded-md hover:bg-primarycolor hover:text-white border border-b-4"
                 onClick={toggleNavbar}
               >
                 Get a Quote
-              </li>
+              </li></Link>
+           
             </ul>
             {ShowOpen && (
               <div className="absolute todown  top-0 pt-5 pl-10 float-right ani2  h-full w-full overflow-hidden bg-primarycolor text-white">

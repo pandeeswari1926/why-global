@@ -159,36 +159,39 @@ function Page() {
               {data &&
                 data.Banner.map((item, index) => (
                   <div key={index}>
-                    <h1 className=" md:text-5xl text-3xl absolute md:top-48 top-48 text-primarycolor md:right-20 right-3 text-right font-bold">
-                      {item?.title1}
-                    </h1>
-                    <p className="md:text-5xl text-3xl md:top-36 top-32 md:right-20 right-3 absolute text-white text-right font-bold">
+                    <h1 className=" md:text-4xl text-3xl absolute md:top-48 top-48 text-primarycolor md:right-20 right-3 text-right font-semibold">
                       {item?.title2}
+                    </h1>
+                    <p className="md:text-4xl text-3xl md:top-36 top-32 md:right-20 right-3 absolute text-white text-right font-bold">
+                      {item?.title1}
                     </p>
                   </div>
                 ))}
+
+
+
             </div>
             {data &&
               data.Banner.map((item, index) => (
                 <div
                   key={index}
-                  className="lg:-mt-20 w-full flex lg:flex-row lg:mb-20 mb-5 flex-col justify-center items-center h-fit"
+                  className="lg:-mt-20 w-[90%] mx-auto flex lg:flex-row lg:mb-20 mb-5 flex-col justify-center items-center h-fit"
                 >
                   <div className="flex lg:flex-row flex-col w-full lg:w-[50%] justify-center items-center gap-6 ">
                     {item &&
                       item.card.map((items, index) => (
                         <div
                           key={index}
-                          className="bg-white outline outline-[#FF9315] relative w-[60%] h-52 lg:w-40 lg:h-44 md:w-[40%]  rounded-3xl drop-shadow-lg flex flex-col justify-center gap-3 items-center"
+                          className="bg-white border border-primarycolor relative w-[60%] lg:h-36 lg:w-36 h-48 md:w-[40%]  rounded-3xl drop-shadow-lg flex flex-col justify-center gap-3 items-center"
                         >
-                          <img src={items?.siteIcon?.asset?.url} alt="" />
-                          <p className=" text-xl md:text-lg text-center w-[80%] ">
+                          <img src={items?.siteIcon?.asset?.url} alt="" className="size-16 object-contain" />
+                          <p className=" text-xl md:text-[15px] text-center w-[80%] ">
                             {items.cardTitle}
                           </p>
                         </div>
                       ))}
                   </div>
-                  <div className="mt-10 lg:w-[50%] w-full text-center p-3">
+                  <div className="mt-10 z-10 lg:w-[50%] w-full text-center lg:text-start p-3">
                     <p className="">
                       Join our team We are looking for talented & driven people
                       to come work with us Available Positions
@@ -197,8 +200,8 @@ function Page() {
                 </div>
               ))}
           </div>
-          <div className="relative w-full h-full bg-cover lg:bg-bgslide md:bg-bgslide bg-no-repeat  ">
-            <div className="absolute w-full h-full -z-10">
+          <div className="relative w-full h-full bg-cover  bg-no-repeat  ">
+            <div className="absolute w-full -top-16 h-full -z-10">
               <img src="./ce.png" alt="" />
             </div>
             <div>
@@ -226,29 +229,29 @@ function Page() {
                         className="sm:w-full w-[90%] h-[90%] mx-auto sm:h-full md:object-cover object-cover"
                       />
                     </div>
-                    <div className="flex flex-col gap-8 w-[100%] lg:p-10 p-5 text-center md:h-[60%]">
-                      <p className="md:text-lg text-xl text-[#FF9315] font-semibold">
+                    <div className="flex flex-col gap-8 w-[100%] lg:p-10 p-5 lg:text-start text-center md:h-[60%]">
+                      <p className="md:text-xl text-xl text-[#FF9315] font-semibold">
                         {item.title}
                       </p>
-                      <h1 className="md:text-2xl text-xl text-center lg:text-start text-gray-600 font-semibold w-full">
+                      <h1 className="md:text-3xl text-xl text-center lg:text-start text-gray-600 font-semibold w-full">
                         {item.SubTitle}
                       </h1>
                       <p className="text-md text-gray-500 w-full text-center lg:text-start">
                         {item.content1}
                       </p>
-                      <div className="grid lg:grid-cols-2 grid-cols-1 justify-around items-center px-5 text-gray-500 ">
+                      <div className="grid md:grid-cols-2 grid-cols-1 gap-5 justify- items-center   text-gray-500 ">
                         {item.list.map((items, indexs) => (
                           <div key={indexs}>
-                            <div className="flex justify-center items-center leading-loose">
+                            <div className="flex  items-center justify-center  lg:justify-start leading-loose">
                               <div className="">
                                 <img alt="" src="./tick.png" />
                               </div>{" "}
-                              <p className="text-xs"> {items.ListContent}</p>
+                              <p className="text-[13px] font-medium"> {items.ListContent}</p>
                             </div>
                           </div>
                         ))}
                       </div>
-                      <p className="md:text-md text-sm text-justify lg:text-start">
+                      <p className="lg:text-sm text-lg text-justify lg:text-start">
                         {item.content2}
                       </p>
                     </div>

@@ -15,22 +15,22 @@ const Contactform = () => {
   return (
     <section className="pb-96 md:pb-36">
       <div className=" w-full p-5 md:p-10 h-full">
-        <div className="relative max-w-5xl w-full h-80 mx-auto rounded-3xl drop-shadow-sm">
+        <div className="relative max-w-5xl w-full h-80  mx-auto rounded-3xl drop-shadow-sm">
           <img
             src='./getin.png'
             alt="Background"
             
            
-            className="rounded-lg"
+            className="rounded-lg w-full h-full "
           />
           <div className="flex absolute inset-0 md:p-10 justify-between w-full">
             <div className="flex md:flex-row flex-col md:gap-5 lg:gap-0 gap-10 justify-between w-full">
-              <div className="flex flex-col justify-between item-center p-5 md:p-0">
+              <div className="flex  flex-col justify-between item-center p-5 md:p-0">
                 <h3 className=" text-white text-3xl lg:text-5xl font-bold -mt-2 ml-1">
                   Get in Touch
                 </h3>
 
-                <ul className="flex flex-col px-2 py-5 text-white text-xs sm:text-sm">
+                <ul className="flex flex-col px-2 gap-5 py-5 text-white text-xs sm:text-sm">
                   <li className="flex items-center gap-2">
                     {" "}
                     <MdEmail /> contact@whyglobalservices.com
@@ -66,7 +66,7 @@ const Contactform = () => {
               <div className="drop-shadow-xl bg-white h-[480px] md:h-[450px] rounded-xl md:w-[70%] lg:w-[60%] w-full p-5 ">
                 <form
                   action=""
-                  className="grid grid-cols-1 md:grid-cols-2 p-2 md:p-7 gap-2 md:gap-4 text-sm"
+                  className="grid grid-cols-1 md:grid-cols-2 p-2 md:p-7 gap-2 md:gap-5 text-sm"
                 >
                   <input
                     type="text"
@@ -99,8 +99,8 @@ const Contactform = () => {
                     placeholder="Message"
                   ></textarea>
                 </div>
-                <div className="flex justify-end px-2 md:px-6">
-                  <button className="w-fit rounded-md px-2 py-1.5 bg-white drop-shadow-lg">
+                <div className="flex justify-center items-center pt-2 px-2 md:px-6">
+                  <button className="w-fit rounded-md px-2 py-1.5 hover:bg-primarycolor duration-200 hover:text-white bg-white drop-shadow-lg">
                     Submit
                   </button>
                 </div>

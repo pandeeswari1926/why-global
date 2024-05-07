@@ -364,8 +364,8 @@ function Page() {
               </div>
             </div>
           </div> */}
-          <div className="flex relative lg:flex-row gap-5 flex-col p-5 lg:p-10">
-            <div className="lg:w-[70%] w-full grid lg:grid-cols-2 grid-cols-1  mx-auto justify-between justify-items-center gap-5 lg:gap-10">
+          <div className="flex relative lg:flex-row gap-5 flex-col p-5 lg:p-0 lg:py-10">
+            <div className="lg:w-[70%] w-full grid md:grid-cols-2 grid-cols-1  mx-auto justify-between justify-items-center gap-5 lg:gap-10">
               {allvalues &&
                 allvalues.map((item, index) => (
                   <Link
@@ -373,7 +373,7 @@ function Page() {
                     href={`/news/${item.category}`}
                     className="w-full lg:w-[80%]"
                   >
-                    <div className="bg-primarycolor shadow-xl md:w-[50%] mx-auto lg:w-full w-full cursor-pointer">
+                    <div className="bg-primarycolor shadow-xl  mx-auto  w-full cursor-pointer">
                       <div className="md:h-[250px]   w-full h-full">
                         <img
                           src={
@@ -480,8 +480,28 @@ function Page() {
               </div>
             </div>
           </div>
+
         </>
       )}
+        <div className="flex flex-col justify-center items-center overflow-hidden py-5">
+        <div className="relative w-full lg:h-[236px] h-[250px]  px-10">
+          <img
+            src='./bgorange1.png'
+            alt=""
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2  text-center space-y-10">
+            <h2 className="font-semibold sm:text-5xl text-3xl mb-4 text-white">
+              Connect with Us!
+            </h2>
+            <Link href={'/contactus'}>
+            <button className="bg-white drop-shadow-xl text-[#FF8900] rounded-full sm:px-32 px-16 w-full py-4 font-semibold sm:text-xl text-lg">
+              Get Started
+            </button></Link>
+            
+          </div>
+        </div>
+      </div>
     </>
   );
 }

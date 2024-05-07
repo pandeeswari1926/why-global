@@ -41,6 +41,7 @@ import Video from "./Video";
 import SanityClient from "../SanityClient";
 import Loader from "../home/Loader";
 import { Helmet } from "react-helmet";
+import Link from "next/link";
 
 function About() {
   interface Alldata {
@@ -770,22 +771,23 @@ asset->{
           </div>
         ))}
       <div className="flex flex-col justify-center items-center overflow-hidden py-5">
-        <div className="relative w-full sm:h-[236px] h-[170px]  px-10">
+        <div className="relative w-full lg:h-[236px] h-[250px]  px-10">
           <img
-            src="./bgorange1.png"
+            src='./bgorange1.png'
             alt=""
             className="w-full h-full object-cover"
           />
           <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2  text-center space-y-10">
-            <h2 className="font-semibold sm:text-3xl lg:text-5xl text-lg text-white">
+            <h2 className="font-semibold sm:text-5xl text-3xl mb-4 text-white">
               Connect with Us!
             </h2>
-            <button className="bg-white drop-shadow-xl text-[#FF8900] rounded-full md:px-32 sm:px-20 px-5 sm:py-4 py-2 font-semibold sm:text-xl text-sm">
+            <Link href={'/contactus'}>
+            <button className="bg-white drop-shadow-xl text-[#FF8900] rounded-full sm:px-32 px-16 w-full py-4 font-semibold sm:text-xl text-lg">
               Get Started
-            </button>
+            </button></Link>
+            
           </div>
         </div>
-              
       </div>
     </div>
   );

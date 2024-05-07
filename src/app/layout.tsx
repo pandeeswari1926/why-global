@@ -9,7 +9,7 @@ import fav from '../../public/smallwgs.png'
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "WHY Global sevices",
+  title: "WHY Global Sevices",
   description: "WHY Global sevices",
  
 };

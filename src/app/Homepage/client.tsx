@@ -20,7 +20,7 @@ function Client() {
             <main className='grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 grid-cols-1  lg:gap-10 gap-5 px-10'>
                 <div className='flex flex-col gap-2'>
                     <div className='p-2 grid sm:grid-cols-2 grid-cols-2 gap-10' >
-                        <img src="./logo.png" alt='' className=' bg-white' />
+                        <img src="./kushlogo.png" alt='' className=' w-32 bg-white' />
                         <img src="./riofin.png" alt='' className='  bg-white md:hidden block' />
                     </div>
                     <div className='grid grid-cols-2  md:gap-0 gap-10 p-2 lg:mr-44 lg:justify-items-start  justify-items-center  items-center '>

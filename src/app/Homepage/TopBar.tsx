@@ -17,7 +17,7 @@ import { FaYoutube } from "react-icons/fa";
 const TopBar = () => {
   return (
     <>
-      <section className="bg-primarycolor text-white w-full h-8 px-[8%] md:flex justify-between  hidden fixed z-20">
+      <section className="bg-primarycolor text-white w-full h-8 px-10 md:flex justify-between  hidden fixed z-20">
         <section className="flex gap-2 items-center justify-center mb-1">
           <Link
             href="mailto:contact@whyglobalservices.com"
@@ -43,7 +43,7 @@ const TopBar = () => {
           >
             <FaFacebookSquare className="h-4 cursor-pointer" />
           </Link>
-          <FaSquareXTwitter className="h-4 cursor-pointer" target="_blank" />
+          <Link target="_blank" href={'https://twitter.com/wehelpyou19'}><FaSquareXTwitter className="h-4 cursor-pointer" target="_blank" /></Link>
           <Link
             href="https://www.instagram.com/whyglobalservices/"
             target="_blank"

@@ -8,6 +8,7 @@ import img3 from "../../../public/img3.jpg";
 import bgorange1 from "../../../public/bgorange1.png";
 import Image from "next/image";
 import SanityClient from "../SanityClient";
+import Link from "next/link";
 
 const Wgs = () => {
   interface Blog {
@@ -104,12 +105,14 @@ const Wgs = () => {
             className="w-full h-full object-cover"
           />
           <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2  text-center space-y-10">
-            <h2 className="font-semibold sm:text-5xl text-3xl text-white">
+            <h2 className="font-semibold sm:text-5xl text-3xl mb-4 text-white">
               Connect with Us!
             </h2>
+            <Link href={'/contactus'}>
             <button className="bg-white drop-shadow-xl text-[#FF8900] rounded-full sm:px-32 px-20 py-4 font-semibold sm:text-xl text-lg">
               Get Started
-            </button>
+            </button></Link>
+            
           </div>
         </div>
       </div>

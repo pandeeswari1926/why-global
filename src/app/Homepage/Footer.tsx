@@ -94,29 +94,49 @@ const Footer = () => {
             </section>
           </section>
         </section>
-        <section className="bg-black text-white p-10 grid lg:grid-cols-4 sm:grid-cols-2 lg:gap-0 gap-10 sm:justify-items-center">
+        <section className="bg-black text-white p-10 grid lg:grid-cols-4 sm:grid-cols-2 lg:gap-0 gap-10 sm:justify-items-start lg:justify-items-center">
           <section className="space-y-5 sm:w-72">
             <h1 className="font-bold text-xl">About Us</h1>
             <p className="text-xs leading-loose text-gray-200">
               We designed a culture that allows our stewards to assimilate with
               our clients and bring our best
+              We designed a culture that allows our stewards to assimilate with
+              our clients and bring our best
+            
             </p>
           </section>
-          <section className="space-y-5 sm:w-72 lg:flex lg:flex-col lg:items-center">
-            <h1 className="font-bold text-xl">Information</h1>
-            <ul className="list-disc text-xs leading-loose text-gray-200">
-              <li className="">Managed IT Services</li>
-              <li className="">IT Consultancy</li>
-              <li className="">Business Solutions</li>
-              <li className="">Digital Services</li>
-              <li className="">Best Seller</li>
+          <section className="space-y-4   lg:flex lg:flex-col lg:justify-center">
+            <h1 className="font-bold text-xl">Links</h1>
+            <ul className=" text-sm leading-loose text-gray-200">
+            <Link href="/about">
+              <li className="hover:text-primarycolor">About</li>
+            </Link>
+            <Link href="/services">
+              <li className="hover:text-primarycolor">Services</li>
+            </Link>
+            <Link href="solutions">
+              <li className="hover:text-primarycolor">Solutions</li>
+            </Link>
+            <Link href="/portfolio">
+              <li className="hover:text-primarycolor">Portfolio</li>
+            </Link>
+            <Link href="/testimonial">
+              <li className="hover:text-primarycolor">Testimonials</li>
+            </Link>
+            <Link href="/events">
+              <li className="hover:text-primarycolor">Events</li>
+            </Link>
+            <Link href="/news">
+              <li className="hover:text-primarycolor">News</li>
+            </Link>
+              
             </ul>
           </section>
           <section className="space-y-5 sm:w-72">
             <h1 className="font-bold text-xl ">Latest News</h1>
             <section className="text-xs space-y-2">
               <div className="flex gap-2 items-center">
-                <img src="./buss.png" alt="suhail" className="w-16 h-16" />
+                <img src="./buss.png" alt="suhail" className="w-16 h-16 object-cover" />
                 <div className="leading-loose">
                   <h2>How to become successful bussinessman</h2>
                   <div className="flex items-center gap-1">
@@ -126,7 +146,7 @@ const Footer = () => {
                 </div>
               </div>
               <div className="flex gap-2 items-center">
-                <img src="./buss.png" alt="suhail" className="w-16 h-16" />
+                <img src="./buss.png" alt="suhail" className="w-16 h-16 object-cover" />
                 <div className="leading-loose">
                   <h2>How to become successful bussinessman</h2>
                   <div className="flex items-center gap-1">
