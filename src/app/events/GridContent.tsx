@@ -47,15 +47,13 @@ const GridContent = () => {
           item.Image.map((img: any) => img?.image?.asset?.url)
         )
       );
-      setSelectedImageIndex(0)
+      setSelectedImageIndex(0);
     });
   }, []);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setSelectedImageIndex(
-        (prevIndex) => (prevIndex + 3 + 1) % 3
-      );
+      setSelectedImageIndex((prevIndex) => (prevIndex + 3 + 1) % 3);
     }, 2000);
 
     return () => clearInterval(intervalId);
@@ -63,50 +61,63 @@ const GridContent = () => {
 
   const indexOfLastItem = currentPage * pageSize;
   const indexOfFirstItem = indexOfLastItem - pageSize;
-  const currentData: EventTitle[] = data.slice(indexOfFirstItem, indexOfLastItem);
+  const currentData: EventTitle[] = data.slice(
+    indexOfFirstItem,
+    indexOfLastItem
+  );
 
   const handlePageChange = (page: any) => {
     setCurrentPage(page);
+    setSelectedImageIndex(0);
   };
 
   return (
     <article>
       <div className="lg:flex">
         <section className="grid md:grid-cols-2 lg:w-[80%] w-full place-items-center gap-x-5 gap-y-10 xl:px-10 py-5">
-          {currentData.map((item, index) => (
-            <Link href={{pathname:`/eventsections`,query:{name:item.title,id:index}}}>
-<div
-              key={index}
-              className="xl:w-[26rem] xl:h-64 md:w-80 md:h-52 xs2:w-[26rem] xs2:h-64 w-64 h-44 relative"
-            >
-              <div
-                className="w-full h-full rounded-xl bg-cover"
-                style={{
-                  backgroundImage: `url(${image[index][selectedImageIndex]})`,
-                  backgroundPosition: "center",
-                  transition: "1s ease",
+          {currentData.map((item, index) => {
+            const dataIndex = indexOfFirstItem + index;
+            return (
+              <Link
+                key={index}
+                href={{
+                  pathname: `/eventsections`,
+                  query: { name: item.title, id: dataIndex },
                 }}
-              />
-
-              <div className="w-[80%] absolute bottom-8 left-0">
-                <div className="relative w-full h-full">
-                  <img
-                    src="./eventabsolutepic.png"
-                    className="w-full h-full"
-                    alt="image"
+              >
+                <div className="xl:w-[26rem] xl:h-64 md:w-80 md:h-52 xs2:w-[26rem] xs2:h-64 w-64 h-44 relative">
+                  <div
+                    className="w-full h-full rounded-xl bg-cover"
+                    style={{
+                      backgroundImage: `url(${image[dataIndex][selectedImageIndex]})`,
+                      backgroundPosition: "center",
+                      transition: "1s ease",
+                    }}
                   />
-                  <h2 className="text-white xs2:text-base text-xs font-bold absolute top-[23%] ml-3 ">
-                    {item.title}
-                  </h2>
+
+                  <div className="w-[80%] absolute bottom-8 left-0">
+                    <div className="relative w-full h-full">
+                      <img
+                        src="./eventabsolutepic.png"
+                        className="w-full h-full"
+                        alt="image"
+                      />
+                      <h2 className="text-white xs2:text-base text-xs font-bold absolute top-[23%] ml-3 ">
+                        {item.title}
+                      </h2>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-            </Link>
-            
-          ))}
+              </Link>
+            );
+          })}
         </section>
         <section className="w-[20%] h-full lg:block hidden ">
-          <img src="./Eventsidebg.png" className="w-full h-full mt-5" alt="image" />
+          <img
+            src="./Eventsidebg.png"
+            className="w-full h-full mt-5"
+            alt="image"
+          />
         </section>
       </div>
       <div className="flex justify-center pb-5">

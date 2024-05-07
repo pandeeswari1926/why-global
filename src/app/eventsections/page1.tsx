@@ -78,7 +78,7 @@ const page = () => {
     </>
       <div className="w-full flex flex-wrap gap-10 justify-center mt-5 cursor-pointer p-5 lg:p-0">
         {alldata&&alldata.content&&alldata.content.Image&&alldata.content.Image.map((image,index)=>(
-          <div className="lg:w-96 w-full group relative transition-all duration-200 overflow-hidden h-full">
+          <div className="lg:w-96 lg:h-64 w-full group relative transition-all duration-200 overflow-hidden h-full">
           <img
             src={image?.image?.asset?.url}
             style={{
