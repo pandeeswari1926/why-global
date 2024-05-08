@@ -9,7 +9,7 @@ content:string;
 Image:{asset:{url:string}}
   }]
 }
-const page = () => {
+const Page = () => {
   const[loader,setloader]=useState(true)
   const datas=useSearchParams()
   const Search=datas.get('name')
@@ -42,7 +42,7 @@ const page = () => {
     </section>
   <section className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-items-center">
     {alldata&&alldata.map((item:any,index:any)=>(
-       <div className="relative mt-20 flex w-80 h-[350px]  flex-col rounded-xl bg-slate-200 mx-3 xs:mx-0 bg-clip-border text-gray-700 shadow-lg">
+       <div key={index} className="relative mt-20 flex w-80 h-[350px]  flex-col rounded-xl bg-slate-200 mx-3 xs:mx-0 bg-clip-border text-gray-700 shadow-lg">
        <div className="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-orange-400 to-primarycolor ">
          <img
            src={item?.banner[0]?.Image?.asset?.url}
@@ -78,4 +78,4 @@ const page = () => {
     
   );
 };
-export default page;
+export default Page;

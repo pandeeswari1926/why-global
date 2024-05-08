@@ -342,7 +342,7 @@ useEffect(()=>{
                     Our Services
                   </Link>
                   {alldata&&alldata.map((item:any,index:any)=>(
-                    <Link
+                    <Link key={index}
                     className="hover:bg-white hover:text-primarycolor p-1"
                     href={{
                       pathname: "/servicesections",

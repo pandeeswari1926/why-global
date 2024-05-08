@@ -63,7 +63,7 @@ export default function Home() {
               <h3 className="text-[#FF8900] text-xl lg:pt-10 pt-5 lg:pl-14 lg:text-start text-center font-semibold">
                 {item.title}
               </h3>
-              <h2 className="lg:pl-14 lg:text-start text-center font-semibold pt-3 text-lg lg:text-[30px] text-gray-500 leading-[50px] lg:w-[60%]">
+              <h2 className="lg:pl-14 lg:text-start text-center font-semibold pt-3 xs:text-lg text-base lg:text-[30px] text-gray-500 leading-[50px] lg:w-[60%]">
                 {item.subTitle}
               </h2>
               <div className=""><div className="grid lg:grid-cols-4  sm:grid-cols-2 grid-cols-1 lg:gap-5 gap-10 w-[85%] mx-auto justify-items-center items-center py-10 sm:px-10 lg:px-0 lg:ml-28  ">

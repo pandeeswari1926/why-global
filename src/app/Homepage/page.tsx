@@ -183,11 +183,11 @@ function Page() {
                   <div className="flex lg:flex-row flex-col w-full lg:w-[50%] justify-center items-center gap-6 ">
                     {item &&
                       item.card.map((items, index) => (
-                        <Link target={index!=2?'_blank':'_parent'} href={`${items?.link}`}><div
+                        <Link className="w-[70%] lg:h-36 lg:w-36 h-48 md:w-[40%]" key={index} target={index!=2?'_blank':'_parent'} href={`${items?.link}`}><div
                           key={index}
-                          className="bg-white border border-primarycolor relative w-[60%] lg:h-36 lg:w-36 h-48 md:w-[40%]  rounded-3xl drop-shadow-lg flex flex-col justify-center gap-3 items-center"
+                          className="bg-white border border-primarycolor relative w-full h-full  rounded-3xl drop-shadow-lg flex flex-col justify-center gap-3 items-center"
                         >
-                          <img src={items?.siteIcon?.asset?.url} alt="" className="size-16 w-10 object-contain" />
+                          <img src={items?.siteIcon?.asset?.url} alt="" className="size-16 lg:w-10 w-16 object-contain" />
                           <p className=" text-xl md:text-[15px] text-center w-[80%] ">
                             {items.cardTitle}
                           </p>
@@ -243,19 +243,19 @@ function Page() {
                       <p className="text-sm text-gray-500 w-full text-center lg:text-start">
                         {item.content1}
                       </p>
-                      <div className="grid md:grid-cols-2 grid-cols-1 gap-5 justify- items-center   text-gray-500 ">
+                      <div className="grid md:grid-cols-2 grid-cols-1 gap-5  mx-auto lg:mx-0   text-gray-500 ">
                         {item.list.map((items, indexs) => (
                           <div key={indexs}>
-                            <div className="flex  items-center justify-center  lg:justify-start leading-loose">
+                            <div className="flex  items-center justify-start leading-loose">
                               <div className="">
                                 <img alt="" src="./tick.png" />
                               </div>{" "}
-                              <p className="text-[13px] font-medium"> {items.ListContent}</p>
+                              <p className="lg:text-[13px] xs:text-xl text-lg font-medium"> {items.ListContent}</p>
                             </div>
                           </div>
                         ))}
                       </div>
-                      <p className="text-sm text-gray-500 w-full text-center lg:text-start">
+                      <p className="text-sm text-gray-500 w-full text-justify lg:text-start">
                         {item.content2}
                       </p>
                     </div>
