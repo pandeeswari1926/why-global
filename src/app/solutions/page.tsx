@@ -422,7 +422,7 @@ function Solutions() {
                   onClick={() => toggleContent(item?.signin[0].title)}
                   className={`focus:outline-none  sm:text-base text-xs ${
                     showActiveContent === item?.signin[0].title
-                      ? " border-2 text-primarycolor shadow-xl border-[#FF9315] p-1 md:px-5 px-2 rounded-md"
+                      ? " border text-primarycolor shadow-xl border-[#FF9315] p-1 md:px-5 px-2 rounded-md"
                       : " p-1 px-5 rounded-md"
                   }`}
                 >
@@ -432,7 +432,7 @@ function Solutions() {
                   onClick={() => toggleContent(item?.dashboard[0].title)}
                   className={`focus: outline-none font-medium sm:text-base text-xs ${
                     showActiveContent === "Dashboard"
-                      ? " border-2 text-primarycolor shadow-xl border-[#FF9315] p-1 md:px-5 px-2 rounded-md"
+                      ? " border text-primarycolor shadow-xl border-[#FF9315] p-1 md:px-5 px-2 rounded-md"
                       : " p-1 px-5 rounded-md"
                   }`}
                 >
@@ -442,7 +442,7 @@ function Solutions() {
                   onClick={() => toggleContent(item?.faculty[0].title)}
                   className={`focus: outline-none font-medium sm:text-base text-xs ${
                     showActiveContent === "Faculty"
-                      ? " border-2 text-primarycolor shadow-xl border-[#FF9315] p-1 md:px-5 px-2 rounded-md"
+                      ? " border text-primarycolor shadow-xl border-[#FF9315] p-1 md:px-5 px-2 rounded-md"
                       : " p-1 px-5 rounded-md"
                   }`}
                 >
@@ -457,7 +457,7 @@ function Solutions() {
                       alldata.customerServices[0]?.signin[0]?.image?.asset?.url
                     }
                     alt=""
-                    className="w-full"
+                    className="w-full border border-black rounded-md"
                   />
                 </div>
               )}
@@ -470,7 +470,7 @@ function Solutions() {
                         ?.url
                     }
                     alt=""
-                    className="w-full"
+                    className="w-full border border-black rounded-md"
                   />
                 </div>
               )}
@@ -482,7 +482,7 @@ function Solutions() {
                       alldata.customerServices[0]?.faculty[0]?.image?.asset?.url
                     }
                     alt=""
-                    className="w-full"
+                    className="w-full border border-black rounded-md"
                   />
                 </div>
               )}
