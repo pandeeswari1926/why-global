@@ -70,6 +70,7 @@ function About() {
     SecondSection: [
       {
         content: string;
+        percentage:string;
         icon: { asset: { url: string } };
         number: string;
       }
@@ -156,6 +157,7 @@ function About() {
             url
            }
           },
+          percentage,
           content,
           number
         },
@@ -280,15 +282,15 @@ asset->{
           >
             <div>
               <div>
-                <div className="lg:absolute top-10 md:pl-16 left-4">
-                  <div className="flex flex-col gap-5 w-full md:w-[60%] pt-10   lg:pt-0 lg:w-[80%] justify-center md:justify-start md:items-start items-center text-justify md:text-start md:px-0 px-7">
+                <div className="lg:absolute top-10 lg:pl-16 left-4">
+                  <div className="flex flex-col gap-5 w-full  pt-10   lg:pt-0 lg:w-[80%] justify-center md:justify-start md:items-start items-center text-justify md:text-start lg:px-0 md:px-10 px-7">
                     <p className="text-primarycolor font-semibold md:text-xl text-3xl lg:pt-6 ">
                       {item?.title1}
                     </p>
                     <p className="font-semibold md:text-3xl text-gray-500">
                       {item?.title2}
                     </p>
-                    <p className="font-semibold text-md md:w-[75%] ">
+                    <p className=" text-md lg:w-[75%] ">
                       {item?.bannercontent}
                     </p>
                   </div>
@@ -301,42 +303,20 @@ asset->{
                         item.gif.map((list: any, listindex: any) => (
                           <div key={listindex} className="lg:w-[60%] w-[70%]">
                             <img alt="" src={list?.gif?.asset?.url} />
-                            <p className="text-center md:text-3xl text-xl font-semibold pt-4 text-gray-500">
-                              {list?.percentage}
+                            <p className="text-center flex flex-row justify-center gap-1 items-center md:text-3xl text-xl font-semibold pt-4 text-gray-500">
+                              <CountUp
+                                start={0}
+                                end={list?.percentage}
+                                duration={3}
+                                delay={0}
+                              />
+                              {listindex == 0 ? <p>%</p>:<p>+</p>}
                             </p>
                             <p className="text-xs text-center text-gray-500">
                               {list?.content}
                             </p>
                           </div>
                         ))}
-
-                      {/* <div className="lg:w-[60%] w-[70%]">
-                  <img alt="" src='./wgs gifs (17).gif' />
-                  <p className="text-center md:text-3xl text-xl font-semibold pt-4 text-gray-500">
-                    500%
-                  </p>
-                  <p className="text-xs text-center text-gray-500">
-                    Experience in the IT field
-                  </p>
-                </div>
-                <div className="lg:w-[60%] w-[70%]">
-                  <img alt="" src='/wgs gifs (20).gif' />
-                  <p className="text-center md:text-3xl text-xl font-semibold pt-4 text-gray-500">
-                    500%
-                  </p>
-                  <p className="text-xs text-center text-gray-500 ">
-                    Projects Delivered
-                  </p>
-                </div>
-                <div className="lg:w-[60%] w-[70%]">
-                  <img alt="" src='./wgs-gifs-18--unscreen.gif' />
-                  <p className="text-center md:text-3xl text-xl font-semibold pt-4 text-gray-500">
-                    500%
-                  </p>
-                  <p className="text-xs text-center text-gray-500">
-                    Happy Clients
-                  </p>
-                </div> */}
                     </div>
                   </div>
                 </div>
@@ -366,10 +346,10 @@ asset->{
                     className="lg:size-12 size-20   text-[#FF9315]"
                   />
                   <p className=" text-xl md:text-lg flex flex-col justify-center items-center text-center ">
-                    <span className="text-3xl text-gray-400 font-semibold flex text-center justify-center">
+                    <span className="text-3xl text-gray-400 font-semibold flex gap-1 text-center justify-center">
                       <CountUp
                         start={0}
-                        end={item.number}
+                        end={item.percentage}
                         duration={3}
                         delay={0}
                       />
@@ -381,37 +361,6 @@ asset->{
                   </p>
                 </div>
               ))}
-
-            {/* <div className="bg-white  outline outline-[#FF9315] relative w-[60%] h-52 lg:w-40  lg:h-44 md:w-[40%]  rounded-3xl drop-shadow-lg flex flex-col justify-center gap-3 items-center">
-              <img src="./pin.png"
-              
-                className="lg:size-12 size-20  text-[#FF9315]"
-              />
-              <p className=" text-xl md:text-lg flex flex-col justify-center items-center text-center ">
-                <span className="text-3xl text-gray-400 font-semibold">15+</span>
-                <span className="text-sm lg:w-[80%] text-gray-400">Countries</span>
-              </p>
-            </div>
-            <div className="bg-white  outline outline-[#FF9315] relative w-[60%] h-52 lg:w-40  lg:h-44 md:w-[40%]  rounded-3xl drop-shadow-lg flex flex-col justify-center gap-3 items-center">
-              <img src="./bi.png"
-              
-                className="lg:size-12 size-20  text-[#FF9315]"
-              />
-              <p className=" text-xl md:text-lg flex flex-col justify-center items-center text-center ">
-                <span className="text-3xl text-gray-400 font-semibold">30+</span>
-                <span className="text-sm lg:w-[80%] text-gray-400">Sectors</span>
-              </p>
-            </div>
-            <div className="bg-white  outline outline-[#FF9315] relative w-[60%] h-52 lg:w-40  lg:h-44 md:w-[40%]  rounded-3xl drop-shadow-lg flex flex-col justify-center gap-3 items-center">
-              <img
-              src="./peop.png"
-                className="lg:size-12 size-20  text-[#FF9315]"
-              />
-              <p className=" text-xl md:text-lg flex flex-col justify-center items-center text-center ">
-                <span className="text-3xl text-gray-400 font-semibold">150+</span>
-                <span className="text-sm lg:w-[80%] text-gray-400">Employees</span>
-              </p>
-            </div> */}
           </div>
         </div>
       </div>
@@ -462,7 +411,6 @@ asset->{
             key={index}
             className="md:bg-summa  relative md:object-cover p-5 md:p-10 md:bg-cover md:flex md:flex-col"
           >
-            {/* <div className="absolute lg:flex hidden top-0 left-0 w-full h-full"><Image src={bg} alt="" /></div> */}
             <div>
               <h3 className="text-[#FF8900] lg:text-start text-center   font-bold">
                 {item?.title}
@@ -500,37 +448,6 @@ asset->{
                     </div>
                   </div>
                 ))}
-
-              {/* <div className="h-full lg:w-[90%] relative drop-shadow-2xl">
-     <div className=" border-2 bg-white text-center rounded-tr-3xl">
-       <img src='./rocket.gif' alt="" className="w-[80%]" />
-       <h1 className="xl:font-bold font-medium  xl:p-3 lg:p-1 p-3">
-         PRODUCT ENGINEER
-       </h1>
-       <p className="p-3 text-xs">
-         Design and propose products improvements through periodical and
-         accurate testing.
-       </p>
-     </div>
-     <div className="bg-white border-2 w-fit h-fit p-1 px-3 rounded-full  absolute -right-4 lg:bottom-56 sm:bottom-44 bottom-36">
-       2
-     </div>
-   </div>
-   <div className="lg:w-[90%] h-full relative drop-shadow-2xl">
-     <div className="border-2 sm:mt-10 text-center bg-white rounded-tr-3xl">
-       <img src='./timer.gif' alt="" className="w-[80%]" />
-       <h1 className="xl:font-bold font-medium xl:p-3 lg:p-1 p-3">
-         CLOUD INTEGRATION
-       </h1>
-       <p className="p-3 text-xs">
-         Design and propose products improvements through periodical and
-         accurate testing.
-       </p>
-     </div>
-     <div className="bg-white border-2 w-fit h-fit p-1 px-3 rounded-full  absolute -right-4 lg:bottom-48 md:bottom-40 bottom-36 ">
-       3
-     </div>
-   </div> */}
             </div>
           </main>
         ))}
@@ -575,44 +492,7 @@ asset->{
                             </p>
                           </div>
                         ))}
-
-                      {/* <div className="w-full relative">
-      
-        <img alt="" src='./rubanbox.jpg' className="w-full h-full" />
-        <div className="bg-black absolute top-0 left-0 w-full h-full opacity-50"></div> 
-        <p className="flex flex-col absolute w-full bottom-2 left-1/2 -translate-x-1/2 text-white px-2"><span className="text-center text-primarycolor md:text-lg sm:text-xl text-lg font-semibold">Ethical Responsibility</span><span className="text-center text-sm lg:w-[80%] w-full mx-auto">Ethical responsibility and social impact define our culture.</span></p>
-        </div> */}
-                      {/* <div className="w-full relative">
-      
-        <img alt="" src='./rubanbox.jpg' className="w-full h-full" />
-        <div className="bg-black absolute top-0 left-0 w-full h-full opacity-50"></div> 
-        <p className="flex flex-col absolute w-full bottom-2 left-1/2 -translate-x-1/2 text-white px-2"><span className="text-center text-primarycolor md:text-lg sm:text-xl text-lg font-semibold">Ethical Responsibility</span><span className="text-center text-sm lg:w-[80%] w-full mx-auto">Ethical responsibility and social impact define our culture.</span></p>
-        </div> */}
-                      {/* <div className="w-full relative">
-      
-        <img alt="" src='./rubanbox.jpg' className="w-full h-full" />
-        <div className="bg-black absolute top-0 left-0 w-full h-full opacity-50"></div> 
-        <p className="flex flex-col absolute w-full bottom-2 left-1/2 -translate-x-1/2 text-white px-2"><span className="text-center text-primarycolor md:text-lg sm:text-xl text-lg font-semibold">Ethical Responsibility</span><span className="text-center text-sm lg:w-[80%] w-full mx-auto">Ethical responsibility and social impact define our culture.</span></p>
-        </div> */}
-                      {/* <div className="sm:w-1/2 w-full relative"><img alt="" src='/ramyabox.jpg' className="w-full h-full" />        
-      
-      <div className="bg-black absolute top-0 left-0 w-full h-full opacity-50"></div>
-      <p className="flex flex-col absolute w-full bottom-2 left-1/2 -translate-x-1/2 text-white px-2"><span className="text-center text-primarycolor md:text-lg sm:text-xl text-lg font-semibold">Employee Empowerment</span><span className="text-center text-sm lg:w-[80%] w-full mx-auto">Ethical responsibility and social impact define our culture.</span></p>
- 
-           </div> */}
                     </div>
-                    {/* <div className="w-full gap-2 flex sm:flex-row flex-col">
-      <div className="sm:w-1/2 w-full relative"><img alt="" src='./dhanushbox.jpg' className="w-full h-full" />
-      <div className="bg-black absolute top-0 left-0 w-full h-full opacity-50"></div> 
-      <p className="flex flex-col absolute w-full bottom-2 left-1/2 -translate-x-1/2 text-white px-2"><span className="text-center text-primarycolor md:text-lg sm:text-xl text-lg font-semibold">Ethical Responsibility</span><span className="text-center text-sm lg:w-[80%] w-full mx-auto">Ethical responsibility and social impact define our culture.</span></p>
-
-
-      </div>
-      <div className="sm:w-1/2 w-full relative"><img alt="" src='./sudalaibox.jpg' className="w-full h-full" />       <div className="bg-black absolute top-0 left-0 w-full h-full opacity-50"></div> 
-      <p className="flex flex-col absolute w-full bottom-2 left-1/2 -translate-x-1/2 text-white px-2"><span className="text-center text-primarycolor md:text-lg sm:text-xl text-lg font-semibold">Ethical Responsibility</span><span className="text-center text-sm lg:w-[80%] w-full mx-auto">Ethical responsibility and social impact define our culture.</span></p>
-
-</div>
-    </div> */}
                   </div>
                   <div className="lg:w-[30%] w-full relative">
                     <div className="bg-black absolute top-0 left-0 w-full h-full opacity-50"></div>
@@ -662,7 +542,7 @@ asset->{
                         <img
                           src={profile?.image?.asset?.url}
                           alt="Profile1"
-                          className="lg:w-[70%] w-full top-2 absolute"
+                          className="lg:w-[70%] w-[80%] top-2 absolute"
                         />
                         <img
                           src="./style3.png"
@@ -676,17 +556,17 @@ asset->{
                         </p>
                         <hr className=" h-0.5 bg-[#FF8900] mt-4 " />
                         <div className="flex md:flex-row flex-col justify-between">
-                          <div>
-                            <p className="text-center">{profile?.name}</p>
-                            <p className=" text-center text-[#FF8900]">
+                          <div className="flex flex-col justify-start ">
+                            <p className="">{profile?.name}</p>
+                            <p className="  text-[#FF8900]">
                               {profile.role}
                             </p>
                           </div>
-                          <div className="justify-center items-center pl-[10%] md:pl-0 md:w-[30%] mx-auto">
+                          <div className="  md:pl-0 md:w-[30%]">
                             <img
                               src="./stars.png"
                               alt=""
-                              className=" md:mt-5"
+                              className=" pt-2"
                             />
                           </div>
                         </div>

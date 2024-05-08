@@ -125,7 +125,7 @@ function Video() {
                 </div>
               </Link>
 
-              <p className="md:w-[70%] w-full text-center text-md">
+              <p className="md:w-[70%] w-full md:text-center text-md text-justify">
                 {item?.content}
               </p>
             </div>

@@ -149,48 +149,48 @@ function Why() {
       </div>
 
       {/* second section */}
-      <div className="grid lg:grid-cols-2 grid-cols-1 lg:h-[560px] h-full bg-gray-200 px-10 p-10 relative">
+      <div className=" lg:h-[500px] h-full bg-gray-200 lg:p-10 p-6   overflow-hidden relative">
         <div
           style={{
             clipPath: "polygon(76% 84%, 100% 50%, 100% 100%, 0% 100%)",
             backgroundColor: "#FF9315",
           }}
-          className=" absolute bottom-0 right-0 w-[80%] h-full"
+          className=" absolute bottom-0 right-0 lg:w-[80%] w-[30%] h-[25%] lg:h-full"
         ></div>
-        <div className="w-full xl:pl-20 mx-auto flex flex-col gap-7">
-          <h3 className="text-lg text-[#FF9315] font-bold md:text-left text-center">
+        <div className="min-w-3/4  lg:w-1/2 w-full h-full   flex flex-col justify-center gap-5">
+          <h3 className="text-lg text-[#FF9315] font-bold lg:text-left text-center">
             {workprocess?.heading}
           </h3>
-          <h1 className="text-3xl text-gray-500 leading-10 font-semibold md:text-left text-center ">
+          <h1 className="md:text-3xl text-lg text-[#686868]  md:leading-10 font-semibold md:text-left text-center ">
             {workprocess?.subHeading}
           </h1>
           <div className="space-y-4 text-gray-500">
             {workprocess?.contents?.map((item, ind) => (
               <p
                 key={ind}
-                className="text-xs xl:w-[85%] w-full font-light md:text-left text-justify md:px-0 xs:px-5 z-10"
+                className="text-xs xl:w-[85%] w-full font-light lg:text-left text-justify md:px-0 xs:px-5 z-10"
               >
                 {item.content}
               </p>
             ))}
           </div>
         </div>
-        <div className="w-full h-full z-10 flex flex-col justify-end lg:mt-7">
+        <div className=" w-[700px] h-full lg:flex hidden    absolute  -right-16 bottom-0">
           <img
             src={workprocess?.image?.asset?.url}
             alt="our work process"
-            className=""
+            className="w-full h-full"
           />
         </div>
         <div className="polygon"></div>
       </div>
       {/* Third section */}
-      <div className="md:h-[90vh] h-full bg-custom bg-cover bg-no-repeat flex justify-center items-center">
+      <div className=" h-[500px] md:h-[450px] bg-custom bg-cover bg-no-repeat flex justify-center items-center">
         <Slides />
       </div>
       {/* Fourth section */}
       <div className="bg-white shadow-xl">
-        <div className="grid lg:grid-cols-9 md:grid-cols-6 sm:grid-cols-5 xs:grid-cols-4 grid-cols-3 mt-5">
+        <div className="grid lg:grid-cols-9 md:grid-cols-6 sm:grid-cols-5 xs:grid-cols-4 grid-cols-3 ">
           {whySquad.map((item, ind) => (
             <img key={ind} src={item?.image?.asset?.url} alt="whysquad" />
           ))}
@@ -208,11 +208,11 @@ function Why() {
             className="w-full h-full object-cover"
           />
           <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2  text-center space-y-10">
-            <h2 className="font-semibold sm:text-5xl text-3xl mb-4 text-white">
+            <h2 className="font-semibold sm:text-4xl xs:text-2xl text-xl mb-5 text-white">
               Connect with Us!
             </h2>
             <Link href={'/contactus'}>
-            <button className="bg-white drop-shadow-xl text-[#FF8900] rounded-full sm:px-32 px-16 w-full py-4 font-semibold sm:text-xl text-lg">
+            <button className="bg-white drop-shadow-xl text-[#FF8900] rounded-full sm:px-28  w-full py-4 font-semibold sm:text-xl text-sm">
               Get Started
             </button></Link>
             
