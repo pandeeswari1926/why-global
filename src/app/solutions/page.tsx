@@ -205,11 +205,11 @@ function Solutions() {
                 {item?.title}
               </p>
 
-              <div className="uppercase lg:text-3xl sm:text-xl xs:text-lg text-base md:text-left text-center font-semibold space-y-3 text-gray-500">
-                <p className="space-y-2">{item?.subTitle}</p>
+              <div className="uppercase lg:text-3xl sm:text-xl xs:text-lg text-base md:text-left text-center font-semibold space-y-3 text-gray-500 ">
+                <p className="space-y-2 leading-10">{item?.subTitle}</p>
               </div>
 
-              <p className="font-light md:text-base text-sm md:text-left text-center leading-loose text-gray-500">
+              <p className="font-light md:text-base text-sm md:text-left text-justify md:px-0 px-5 leading-loose text-gray-500">
                 {item.content}
               </p>
             </div>
@@ -232,13 +232,13 @@ function Solutions() {
         ))}
       {alldata &&
         alldata.learning.map((item: any, index: any) => (
-          <div key={index} className="grid grid-cols-1 md:grid-cols-2">
-            <div className="flex flex-col justify-center gap-5 p-5 md:p-10">
+          <div key={index} className="grid grid-cols-1 md:grid-cols-2 md:px-14">
+            <div className="flex flex-col justify-center gap-5 p-5 md:p-10 ">
               <h1 className="uppercase text-sm sm:text-base text-orange-500 font-semibold md:text-left text-center">
                 {item?.heading}
               </h1>
 
-              <h1 className="uppercase lg:text-3xl text-gray-500 sm:text-xl xs:text-lg text-base md:text-left text-center font-bold">
+              <h1 className="uppercase lg:text-2xl text-gray-500 sm:text-xl xs:text-lg text-base md:text-left text-center font-bold leading-10">
                 {item?.title}
               </h1>
               {item &&
@@ -263,25 +263,28 @@ function Solutions() {
 
       <div className="bg-gray-100  lg:py-20 ">
         <div className="mt-10 px-5 ">
-          <div className="flex flex-col justify-center items-center  xs:block lg:hidden p-5">
+          <div className=" space-y-5 xs:block lg:hidden p-5">
             <h1 className="text-lg text-[#FF9315] font-semibold">
               YOU MUST KNOW THE
             </h1>
-            <br />
-            <h1 className="text-2xl text-gray-500 font-semibold">
+            <h1 className="text-2xl  text-gray-500 font-semibold">
               KEY FEATURES & BENEFITS
             </h1>
           </div>
           {alldata &&
             alldata.features &&
             alldata.features.map((item: any, index: any) => (
-              <div key={index} className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-evenly  lg:-mt-24 lg:gap-5 gap-10 p-5">
+              <div
+                key={index}
+                className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-evenly  lg:-mt-24 lg:gap-5 gap-10 p-5"
+              >
                 {item &&
                   item.card1 &&
                   item.card1.map((list: any, indexlist: any) => (
-                    <div key={indexlist}
+                    <div
+                      key={indexlist}
                       className={`lg:w-56 h-fit relative ${
-                        indexlist == 1 ? "lg:ml-40" : "lg:ml-0"
+                        indexlist == 1 ? "lg:ml-48" : "lg:ml-14"
                       } `}
                     >
                       <div className=" bg-white p-5 pt-10 mx-auto rounded-md shadow-xl">
@@ -311,14 +314,18 @@ function Solutions() {
           {alldata &&
             alldata.features &&
             alldata.features.map((item: any, index: any) => (
-              <div key={index} className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 justify-evenly lg:gap-3 gap-10  p-5 lg:-mt-24">
+              <div
+                key={index}
+                className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 justify-evenly lg:gap-3 gap-10  p-5 lg:-mt-24"
+              >
                 <div className="lg:block hidden"></div>
                 {item &&
-                  item.card1 &&
-                  item.card1.map((list: any, indexlist: any) => (
-                    <div key={indexlist}
+                  item.card2 &&
+                  item.card2.map((list: any, indexlist: any) => (
+                    <div
+                      key={indexlist}
                       className={`lg:w-56 h-full relative ${
-                        indexlist == 1 ? "lg:ml-60" : "lg:ml-0 lg:pl-0"
+                        indexlist == 1 ? "lg:ml-64" : "lg:ml-6 lg:pl-0"
                       }`}
                     >
                       <div className="bg-white p-5 pt-10 mx-auto rounded-md shadow-xl">
@@ -338,14 +345,18 @@ function Solutions() {
           {alldata &&
             alldata.features &&
             alldata.features.map((item: any, index: any) => (
-              <div key={index} className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1   justify-evenly lg:-mt-24 lg:gap-5 gap-10 p-5">
+              <div
+                key={index}
+                className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1   justify-evenly lg:-mt-24 lg:gap-5 gap-10 p-5"
+              >
                 {/* card5 */}
                 {item &&
-                  item.card1 &&
-                  item.card1.map((list: any, indexlist: any) => (
-                    <div key={indexlist}
-                      className={`lg:w-56 h-fit relative ${
-                        indexlist == 1 ? "lg:ml-36 " : "lg:pl-0"
+                  item.card3 &&
+                  item.card3.map((list: any, indexlist: any) => (
+                    <div
+                      key={indexlist}
+                      className={`lg:w-52 h-fit relative ${
+                        indexlist == 1 ? "lg:ml-48 " : "lg:pl-0 lg:ml-14"
                       } `}
                     >
                       <div className=" bg-white p-5 pt-10 mx-auto rounded-md shadow-xl">
@@ -373,7 +384,10 @@ function Solutions() {
       {/* fourth section */}
       {alldata &&
         alldata.weProvidesolution.map((item: any, index: any) => (
-          <div key={index} className="text-center relative  w-full overflow-hidden  lg:h-[500px] md:h-[400px] sm:h-72 h-56 ">
+          <div
+            key={index}
+            className="text-center relative  w-full overflow-hidden  lg:h-[500px] md:h-[400px] sm:h-72 h-56 "
+          >
             <div className="w-full h-full absolute top-0 ">
               <img
                 src={item?.image?.asset?.url}
@@ -391,7 +405,7 @@ function Solutions() {
       {/* fifth section */}
       <div className="relative bg-customer  h-fit  w-full">
         <div className="bg-gray-100 absolute top-0 w-full h-[70%]"></div>
-        <div className="lg:w-[600px] md:w-[350px]  w-[200px] h-[200px] bg-[#FF9315] top-0 absolute right-0 text-center text-white  lg:text-3xl md:text-base text-xs font-bold sm:p-4 p-3">
+        <div className="lg:w-[600px] md:w-[350px]  w-[200px] h-[200px] bg-[#FF9315] top-0 absolute right-0 text-center text-white  lg:text-3xl md:text-base text-xs font-bold sm:pt-7 p-5">
           Customer Services
         </div>
         {alldata &&
@@ -475,21 +489,21 @@ function Solutions() {
       </div>
       {/* sixth section */}
       <div className="flex flex-col justify-center items-center overflow-hidden py-5">
-        <div className="relative w-full lg:h-[236px] h-[250px]  px-10">
+        <div className="relative w-full lg:h-[236px] h-[250px] mt-10 px-10">
           <img
-            src='./bgorange1.png'
+            src="./bgorange1.png"
             alt=""
             className="w-full h-full object-cover"
           />
           <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2  text-center space-y-10">
-            <h2 className="font-semibold sm:text-5xl text-3xl mb-4 text-white">
-              Connect with Us!
+            <h2 className="font-semibold sm:text-4xl text-xl mb-4 text-white">
+              Contact us today to explore the possibilities!
             </h2>
-            <Link href={'/contactus'}>
-            <button className="bg-white drop-shadow-xl text-[#FF8900] rounded-full sm:px-32 px-20 py-4 font-semibold sm:text-xl text-lg">
-              Get Started
-            </button></Link>
-            
+            <Link href={"/contactus"}>
+              <button className="bg-white drop-shadow-xl text-[#FF8900] rounded-full px-10 py-4 font-semibold sm:text-xl text-lg">
+                Get Started
+              </button>
+            </Link>
           </div>
         </div>
       </div>

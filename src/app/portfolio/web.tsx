@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import SanityClient from "../SanityClient";
+import Link from "next/link";
 
 // Define interfaces
 interface ContentItem {
@@ -23,7 +24,9 @@ interface PortfolioData {
 
 const Web = () => {
   const [webdata, setWebdata] = useState<WebDevelopmentItem[]>([]);
-  const [showActiveContent, setShowActiveContent] = useState<string | null>(null);
+  const [showActiveContent, setShowActiveContent] = useState<string | null>(
+    null
+  );
 
   useEffect(() => {
     SanityClient.fetch<PortfolioData>(
@@ -54,7 +57,9 @@ const Web = () => {
   return (
     <>
       <div className="flex lg:flex-row flex-col items-center lg:gap-0 gap-10">
-        <h1 className="text-[#FF9315] text-xl  font-bold sm:hidden pt-5">WEB DEVELOPMENT</h1>
+        <h1 className="text-[#FF9315] text-xl  font-bold sm:hidden pt-5">
+          WEB DEVELOPMENT
+        </h1>
         <div className="lg:w-[40%] lg:h-[85vh] w-full mx-auto flex justify-center">
           <div className="flex flex-row justify-center items-center relative  w-fit">
             <div className="p-5 shadow-lg shadow-gray-300 rounded-full">
@@ -99,14 +104,26 @@ const Web = () => {
                         {contents?.heading}
                       </h1>
                       <br />
-                      <hr className="h-2 bg-gradient-to-r from-[#D1A25E] ml-20 to-transparent " />
+                      <hr
+                        className={`h-2 ml-20  ${
+                          ind == 0
+                            ? "bg-gradient-to-r from-[#D1A25E] to-transparent"
+                            : ind == 1
+                            ? "bg-gradient-to-r from-blue-200 to-transparent"
+                            : "bg-gradient-to-r from-primarycolor to-transparent"
+                        } `}
+                      />
                       <br />
-                      <p className="text-start text-sm text-gray-500 leading-loose">{contents?.content}</p>
+                      <p className="text-start text-sm text-gray-500 leading-loose">
+                        {contents?.content}
+                      </p>
                       <br />
                       <div className="">
-                        <button className="bg-white text-[#D1A25E] border-2 border-[#D1A25E] w-fit px-3 py-1 rounded-md hover:text-white hover:bg-[#D1A25E]">
-                          Enquire Now
-                        </button>
+                        <Link href={'/contactus'}>
+                          <button className={`bg-white  border-2  w-fit px-3 py-1 rounded-md hover:text-white  ${ind==0 ? "text-[#D1A25E] border-[#D1A25E] hover:bg-[#D1A25E]": ind == 1 ? "text-blue-200 border-blue-200 hover:bg-blue-200" : "text-primarycolor border-primarycolor hover:bg-primarycolor"}`}>
+                            Enquire Now
+                          </button>
+                        </Link>
                         <div className="flex lg:justify-evenly justify-center">
                           <div className="lg:block hidden"></div>
                           <img
