@@ -205,7 +205,7 @@ function Solutions() {
                 {item?.title}
               </p>
 
-              <div className="uppercase lg:text-3xl sm:text-xl xs:text-lg text-base md:text-left text-center font-semibold space-y-3 text-gray-500 ">
+              <div className="uppercase lg:text-[30px] sm:text-xl xs:text-lg text-base md:text-left text-center font-semibold space-y-3 text-gray-500 ">
                 <p className="space-y-2 leading-10">{item?.subTitle}</p>
               </div>
 
@@ -213,7 +213,6 @@ function Solutions() {
                 {item.content}
               </p>
             </div>
-
             <div className="h-full w-full hidden lg:flex flex-col justify-center items-center">
               <img
                 src={item?.BannerImage[0]?.image?.asset?.url}
@@ -228,6 +227,9 @@ function Solutions() {
                 className="md:w-full md:h-full   xs:w-96 object-cover xs:h-80 w-64 h-52 "
               />
             </div>
+            <div className="absolute bottom-7 left-0 w-[60%] lg:block hidden">
+              <img src="./lineNew.png" alt="line" className="w-full " />
+            </div>
           </div>
         ))}
       {alldata &&
@@ -238,7 +240,7 @@ function Solutions() {
                 {item?.heading}
               </h1>
 
-              <h1 className="uppercase lg:text-2xl text-gray-500 sm:text-xl xs:text-lg text-base md:text-left text-center font-bold leading-10">
+              <h1 className="uppercase lg:text-2xl text-gray-500 sm:text-[20px] xs:text-lg text-base md:text-left text-center font-bold leading-[30px]">
                 {item?.title}
               </h1>
               {item &&
@@ -261,7 +263,7 @@ function Solutions() {
 
       {/* third section */}
 
-      <div className="bg-gray-100  lg:py-20 ">
+      <div className="bg-gray-50  lg:py-20 ">
         <div className="mt-10 px-5 ">
           <div className=" space-y-5 xs:block lg:hidden p-5">
             <h1 className="text-lg text-[#FF9315] font-semibold">
@@ -418,10 +420,10 @@ function Solutions() {
               <div className="flex flex-row xl:gap-10 gap-1 p-4 bg-white w-fit rounded-t-md">
                 <button
                   onClick={() => toggleContent(item?.signin[0].title)}
-                  className={`focus:outline-none font-medium sm:text-base text-xs ${
+                  className={`focus:outline-none  sm:text-base text-xs ${
                     showActiveContent === item?.signin[0].title
-                      ? "text-white border-2 bg-[#FF9315] p-1 md:px-5 px-2 rounded-md"
-                      : "bg-gray-400 text-white p-1 px-5 rounded-md"
+                      ? " border-2 text-primarycolor shadow-xl border-[#FF9315] p-1 md:px-5 px-2 rounded-md"
+                      : " p-1 px-5 rounded-md"
                   }`}
                 >
                   {item?.signin[0].title}
@@ -429,9 +431,9 @@ function Solutions() {
                 <button
                   onClick={() => toggleContent(item?.dashboard[0].title)}
                   className={`focus: outline-none font-medium sm:text-base text-xs ${
-                    showActiveContent === "DashBoard"
-                      ? "text-white border-2 bg-[#FF9315] p-1 md:px-5 px-2 rounded-md"
-                      : "bg-gray-400 text-white p-1 px-5 rounded-md"
+                    showActiveContent === "Dashboard"
+                      ? " border-2 text-primarycolor shadow-xl border-[#FF9315] p-1 md:px-5 px-2 rounded-md"
+                      : " p-1 px-5 rounded-md"
                   }`}
                 >
                   {item?.dashboard[0].title}
@@ -440,8 +442,8 @@ function Solutions() {
                   onClick={() => toggleContent(item?.faculty[0].title)}
                   className={`focus: outline-none font-medium sm:text-base text-xs ${
                     showActiveContent === "Faculty"
-                      ? "text-white border-2 bg-[#FF9315] p-1 md:px-5 px-2 rounded-md"
-                      : "bg-gray-400 text-white p-1 px-5 rounded-md"
+                      ? " border-2 text-primarycolor shadow-xl border-[#FF9315] p-1 md:px-5 px-2 rounded-md"
+                      : " p-1 px-5 rounded-md"
                   }`}
                 >
                   {item?.faculty[0].title}
@@ -459,7 +461,7 @@ function Solutions() {
                   />
                 </div>
               )}
-              {showActiveContent === "DashBoard" && (
+              {showActiveContent === "Dashboard" && (
                 <div className="bg-white md:w-[80%] w-full xl:w-[90%] p-10 xl:px-32 rounded-md ">
                   <img
                     src={
