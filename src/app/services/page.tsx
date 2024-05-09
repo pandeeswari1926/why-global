@@ -208,7 +208,7 @@ function Services() {
             alldata.Banner.map((item: any, ind: any) => (
               <div key={ind}>
                 <div
-                  className="bg-cover xl:h-[500px] lg:h-[400px]  w-full h-full lg:relative"
+                  className="bg-cover lg:h-[500px] w-full h-full lg:relative"
                   style={{
                     backgroundImage: `url(${item?.BannerImage[index]?.image?.asset?.url})`,
                     backgroundPosition: "center",
@@ -216,7 +216,7 @@ function Services() {
                   }}
                 >
                   <div className="bg-gradient-to-b from-gray-900 w-full h-[500px] lg:absolute ">
-                    <h1 className="text-3xl text-white font-semibold flex justify-start items-end md:w-60 h-[400px] ml-20 -mb-20 ">
+                    <h1 className="text-2xl sm:text-4xl text-white font-semibold flex justify-start items-end md:w-72 h-[400px] ml-16 lg:ml-14 -mb-24   lg:mt-5  leading-[50px]">
                       {item?.title}
                     </h1>
                     <img
@@ -228,26 +228,26 @@ function Services() {
                       <input
                         type="text"
                         placeholder="Name *"
-                        className="p-2 w-64 border-2 border-[#FF9315] placeholder:text-black"
+                        className="p-2 border-[1.3px] border-[#FF9315] placeholder:text-black placeholder:text-sm rounded-md"
                       />
                       <input
                         type="text"
                         placeholder="Email *"
-                        className="p-2 border-2 border-[#FF9315] placeholder:text-black"
+                        className="p-2 border-[1.3px] border-[#FF9315] placeholder:text-black placeholder:text-sm rounded-md"
                       />
                       <input
                         type="text"
                         placeholder="Mobile Number *"
-                        className="p-2 border-2 border-[#FF9315] placeholder:text-black"
+                        className="p-2 border-[1.3px] border-[#FF9315] placeholder:text-black placeholder:text-sm rounded-md"
                       />
                       <input
                         type="text"
                         placeholder="Services *"
-                        className="p-2 border-2 border-[#FF9315] placeholder:text-black"
+                        className="p-2 border-[1.3px] border-[#FF9315] placeholder:text-black placeholder:text-sm rounded-md"
                       />
                       <textarea
                         placeholder="Message*"
-                        className="p-2 border-2 border-[#FF9315] placeholder:text-black"
+                        className="p-2 border-[1.3px] border-[#FF9315] placeholder:text-black placeholder:text-sm rounded-md"
                       ></textarea>
                       <button className="bg-white text-[#FF9315] w-fit  px-5 mx-auto py-3 rounded-lg font-semibold hover:bg-[#FF9315] hover:text-white">
                         Send
@@ -258,7 +258,7 @@ function Services() {
                 <div className="flex justify-end items-end">
                   <div className="w-[80%] bg-[#FF9315] p-4">
                     <h1 className="text-white ">
-                      <span className="text-2xl font-semibold">
+                      <span className="text-lg sm:text-2xl font-semibold">
                         {" "}
                         {item?.clients}
                       </span>
@@ -273,9 +273,9 @@ function Services() {
       {alldata &&
         alldata.about &&
         alldata.about.map((items: any, ind: any) => (
-          <div key={ind} className="grid lg:grid-cols-2 grid-cols-1 items-center justify-items-center gap-20 p-8 lg:px-28 lg:pt-0 pt-[500px] ">
+          <div key={ind} className="grid lg:grid-cols-2 grid-cols-1 items-center justify-items-center lg:gap-20 p-8 lg:px-28 lg:pt-0 pt-[500px] ">
             <div className="flex flex-col gap-3">
-              <h1 className="text-xl font-medium text-[#FF9315]">ABOUT</h1>
+              <h1 className="text-xl font-semibold text-[#FF9315]">ABOUT</h1>
 
               <div>
                 <h1 className="text-3xl font-semibold mb-5 text-gray-500">
@@ -299,16 +299,16 @@ function Services() {
       {/* third section */}
       <div className="bg-gray-100">
         <div className="pt-10">
-          <div className="flex flex-col justify-center xs:block lg:hidden p-5">
+          <div className="flex flex-col justify-center xs:block lg:hidden p-5 ">
             <h1 className="text-xl text-[#FF9315] font-semibold">
               WHY YOU NEED
             </h1>
             <br />
-            <h1 className="text-2xl text-gray-500 font-semibold">
+            <h1 className="text-2xl text-gray-500 font-semibold md:pb-10">
               WEB DESIGNING?
             </h1>
           </div>
-          <img src="./sevice.png" alt="" />
+          <img src="./sevice.png" alt="" className="md:block hidden"/>
           <div className="">
             {alldata &&
               alldata.webDesign &&
@@ -385,12 +385,12 @@ function Services() {
                 <img src="./14.png" alt="" />
               </div>
             </div> */}
-                <div className="flex flex-col justify-center lg:block hidden lg:mt-20 ml-20">
+                <div className="flex flex-col justify-center lg:block hidden lg:mt-20 ml-20 overflow-hidden">
                   <h1 className="text-xl text-[#FF9315] font-semibold">
                     WHY YOU NEED
                   </h1>
                   <br />
-                  <h1 className="text-2xl text-gray-500 font-semibold">
+                  <h1 className="text-2xl text-gray-500 font-semibold xl:w-96 ">
                     WEB DESIGNING?
                   </h1>
                 </div>
@@ -446,15 +446,15 @@ function Services() {
         alldata.service.map((item, index) => (
           <div key={index} className="flex lg:flex-row flex-col sm:gap-20 gap-5 lg:px-20 mx-auto sm:pt-20">
             <div className="p-10 flex flex-col gap-3 justify-center ">
-              <h1 className="lg:text-lg text-3xl text-[#FF9315] font-semibold">
+              <h1 className="text-xl  text-[#FF9315] font-semibold">
                 OUR
               </h1>
-              <h1 className="lg:text-2xl text-4xl text-gray-500 font-semibold">
+              <h1 className="text-2xl text-gray-500 font-semibold">
                 SERVICES
               </h1>
               <hr className="h-[3px] bg-[#FF9315]" />
-              <p>Here are some of the key services we offer:</p>
-              <div className="flex flex-col mx-auto lg:mx-0 gap-3">
+              <p className="text-gray-500 text-sm">Here are some of the key services we offer:</p>
+              <div className="flex flex-col mx-auto lg:mx-0 gap-5 text-gray-500">
                 {item.services.map((list, listindex) => (
                   <div
                     key={listindex}
@@ -463,7 +463,7 @@ function Services() {
                     <div className="bg-white p-2 shadow-lg rounded-full">
                       <img src={list?.icon?.asset?.url} alt="" className=" " />
                     </div>
-                    <h1 className="xs:text-base text-sm">
+                    <h1 className="text-sm">
                       {list?.serviceName}
                     </h1>
                   </div>
@@ -504,7 +504,7 @@ function Services() {
             <div className="md:relative mx-auto p-5">
               <img src={item?.image?.asset?.url} alt="" className="mx-auto" />
               <div>
-                <h1 className="text-gray-500 md:absolute right-5 md:w-[45%] lg:bottom-4 -bottom-5 mx-auto p-5">
+                <h1 className="text-gray-500 text-justify text-sm md:absolute right-5 md:w-[45%] lg:bottom-14 -bottom-5 mx-auto p-5">
                   {item?.content}
                 </h1>
               </div>
@@ -522,18 +522,18 @@ function Services() {
         ))}
       {/* seventh section */}
       <div className="flex flex-col justify-center items-center overflow-hidden py-5">
-        <div className="relative w-full lg:h-[236px] h-[250px]  px-10">
+        <div className="relative w-full lg:h-[236px] h-[250px]  sm:px-10 px-5">
           <img
             src='./bgorange1.png'
             alt=""
             className="w-full h-full object-cover"
           />
-          <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2  text-center space-y-10">
-            <h2 className="font-semibold sm:text-5xl text-3xl mb-4 text-white">
-              Connect with Us!
+          <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full text-center space-y-10">
+            <h2 className="font-semibold lg:text-4xl md:text-2xl sm:text-lg text-sm mb-4 text-white ">
+              Ready to Wow Your Audience?
             </h2>
             <Link href={'/contactus'}>
-            <button className="bg-white drop-shadow-xl text-[#FF8900] rounded-full sm:px-32 px-20 py-4 font-semibold sm:text-xl text-lg">
+            <button className="bg-white drop-shadow-xl text-[#FF8900] rounded-full mt-4 sm:px-20 px-5 py-2 sm:py-4 font-semibold sm:text-xl text-sm">
               Get Started
             </button></Link>
             
