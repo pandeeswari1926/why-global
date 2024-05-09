@@ -67,7 +67,7 @@ const Page = () => {
         <img src="./bgs.png" alt="" className="w-full h-full" />
         </div>
         <div className="absolute w-full flex flex-col items-center justify-center top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2">
-          <p className="xl:text-6xl md:text-6xl xs:text-3xl text-xl  bg-gradient-to-b from-white to-transparent text-transparent font-bold bg-clip-text">
+          <p className="xl:text-6xl md:text-6xl xs:text-3xl text-[1.4rem] text-center bg-gradient-to-b from-white to-transparent text-transparent font-bold bg-clip-text">
             {alldata && alldata?.content?.title}
           </p>
           <p className="text-white xl:text-3xl md:text-2xl xs:text-lg text-sm font-medium">
