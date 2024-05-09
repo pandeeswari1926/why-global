@@ -32,7 +32,7 @@ function Page() {
       {
         siteIcon: { asset: { url: string } };
         cardTitle: string;
-        link:string;
+        link: string;
       }
     ];
   }
@@ -51,18 +51,17 @@ function Page() {
   }
 
   interface AllData {
-    metaTitle:string;
-    MetaDescription:string;
-    MetaData:string;
-    FocusKeyword:string;
-    MetaURL:string;
+    metaTitle: string;
+    MetaDescription: string;
+    MetaData: string;
+    FocusKeyword: string;
+    MetaURL: string;
     SecondSection: second[];
     Banner: banner[];
   }
   const [loader, setLoader] = useState(true);
   const [data, setdata] = useState<AllData | null>(null);
   useEffect(() => {
-    
     const getdata = async () => {
       await SanityClient.fetch(
         `*[_type=="Home"]{
@@ -102,7 +101,7 @@ function Page() {
             }
           }`
       )
-        .then((res:any) => {
+        .then((res: any) => {
           console.log(res, "wasi");
           setdata(res[0]);
           setLoader(false);
@@ -113,6 +112,7 @@ function Page() {
     };
     getdata();
   }, []);
+
 
   return (
     <div>
@@ -131,10 +131,7 @@ function Page() {
               name="keywords"
               content={data ? data.FocusKeyword : ""}
             ></meta>
-            <meta
-              name="alldata"
-              content={data ? data.MetaURL : ""}
-            ></meta>
+            <meta name="alldata" content={data ? data.MetaURL : ""}></meta>
           </Helmet>
           <div className="">
             <link
@@ -149,7 +146,7 @@ function Page() {
               href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
             />
             <div className="h-screen  w-full relative">
-              <div className="w-full h-full">
+              <div className="w-full h-full bg-gray-500">
                 <img
                   src="./WGS VIDEO (1).gif"
                   alt="Background Image"
@@ -170,9 +167,6 @@ function Page() {
                     </p>
                   </div>
                 ))}
-
-
-
             </div>
             {data &&
               data.Banner.map((item, index) => (
@@ -183,22 +177,36 @@ function Page() {
                   <div className="flex lg:flex-row flex-col w-full lg:w-[50%] justify-center items-center gap-6 ">
                     {item &&
                       item.card.map((items, index) => (
-                        <Link className="w-[70%] lg:h-36 lg:w-36 h-48 md:w-[40%]" key={index} target={index!=2?'_blank':'_parent'} href={`${items?.link}`}><div
-                          key={index}
-                          className="bg-white border border-primarycolor relative w-full h-full  rounded-3xl drop-shadow-lg flex flex-col justify-center gap-3 items-center"
+                        <Link className="w-[70%] lg:h-36 lg:w-36 h-48 md:w-[40%]" key={index}
+                          target={index != 2 ? "_blank" : "_parent"}
+                          href={`${items?.link}`}
                         >
-                          <img src={items?.siteIcon?.asset?.url} alt="" className="size-16 lg:w-10 w-16 object-contain" />
-                          <p className=" text-xl md:text-[15px] text-center w-[80%] ">
-                            {items.cardTitle}
-                          </p>
-                        </div>
+                          <div
+                            key={index}
+                            className="bg-white border border-primarycolor relative w-full h-full  rounded-3xl drop-shadow-lg flex flex-col justify-center gap-3 items-center"
+                          >
+                            <img
+                              src={items?.siteIcon?.asset?.url}
+                              alt=""
+                              className={`size-16 lg:w-10 w-16 object-contain ${index == 1 ? 'w-[2.9rem]' : ''}`}
+                            />
+                            <p className=" text-xl md:text-[15px] text-center w-[80%]">
+                              {items.cardTitle}
+                            </p>
+                          </div>
                         </Link>
                       ))}
                   </div>
                   <div className="mt-10 z-10 lg:w-[50%] w-full text-center lg:text-start p-3">
-                    <p className="">
-                      Join our team We are looking for talented & driven people
-                      to come work with us Available Positions
+                    <p className="text-gray-600">
+                      Join our team - We are looking for talented & driven
+                      people to come work with us 
+                      <Link
+                        href="/contactus"
+                        className=" cursor-pointer text-black"
+                      >
+                        <span> &nbsp;<span className="underline">Available Positions</span></span>
+                      </Link>
                     </p>
                   </div>
                 </div>
@@ -223,7 +231,7 @@ function Page() {
                             {item.client}
                           </p>
                           <p className="sm:text-base text-xs">
-                            Satisfied Client
+                            Satisfied Clients
                           </p>
                         </div>
                       </div>
@@ -234,23 +242,23 @@ function Page() {
                       />
                     </div>
                     <div className="flex flex-col gap-8 w-[100%] lg:p-10 p-5 lg:text-start text-center md:h-[60%]">
-                      <p className="md:text-xl text-xl text-[#FF9315] font-semibold">
+                      <p className="md:text-xl text-xl text-[#FF9315] font-semibold uppercase">
                         {item.title}
                       </p>
-                      <h1 className="md:text-3xl text-xl text-center lg:text-start text-gray-600 font-semibold w-full">
+                      <h1 className="md:text-3xl text-xl text-center lg:text-start text-gray-500 font-semibold w-full ">
                         {item.SubTitle}
                       </h1>
                       <p className="text-sm text-gray-500 w-full text-center lg:text-start">
                         {item.content1}
                       </p>
-                      <div className="grid md:grid-cols-2 grid-cols-1 gap-5  mx-auto lg:mx-0   text-gray-500 ">
+                      <div className="grid md:grid-cols-2 grid-cols-1 gap-3  mx-auto lg:mx-0   text-gray-500 ">
                         {item.list.map((items, indexs) => (
                           <div key={indexs}>
-                            <div className="flex  items-center justify-start leading-loose">
+                            <div className="flex  items-center justify-start leading-tight gap-1">
                               <div className="">
                                 <img alt="" src="./tick.png" />
                               </div>{" "}
-                              <p className="lg:text-[13px] xs:text-xl text-lg font-medium"> {items.ListContent}</p>
+                              <p className="text-[13px] font-medium"> {items.ListContent}</p>
                             </div>
                           </div>
                         ))}

@@ -205,15 +205,14 @@ function Solutions() {
                 {item?.title}
               </p>
 
-              <div className="uppercase lg:text-3xl sm:text-xl xs:text-lg text-base md:text-left text-center font-semibold space-y-3 text-gray-500">
-                <p className="space-y-2">{item?.subTitle}</p>
+              <div className="uppercase lg:text-[30px] sm:text-xl xs:text-lg text-base md:text-left text-center font-semibold space-y-3 text-gray-500 ">
+                <p className="space-y-2 leading-10">{item?.subTitle}</p>
               </div>
 
-              <p className="font-light md:text-base text-sm md:text-left text-center leading-loose text-gray-500">
+              <p className="font-light md:text-base text-sm md:text-left text-justify md:px-0 px-5 leading-loose text-gray-500">
                 {item.content}
               </p>
             </div>
-
             <div className="h-full w-full hidden lg:flex flex-col justify-center items-center">
               <img
                 src={item?.BannerImage[0]?.image?.asset?.url}
@@ -228,17 +227,20 @@ function Solutions() {
                 className="md:w-full md:h-full   xs:w-96 object-cover xs:h-80 w-64 h-52 "
               />
             </div>
+            <div className="absolute bottom-7 left-0 w-[60%] lg:block hidden">
+              <img src="./lineNew.png" alt="line" className="w-full " />
+            </div>
           </div>
         ))}
       {alldata &&
         alldata.learning.map((item: any, index: any) => (
-          <div key={index} className="grid grid-cols-1 md:grid-cols-2">
-            <div className="flex flex-col justify-center gap-5 p-5 md:p-10">
+          <div key={index} className="grid grid-cols-1 md:grid-cols-2 md:px-14">
+            <div className="flex flex-col justify-center gap-5 p-5 md:p-10 ">
               <h1 className="uppercase text-sm sm:text-base text-orange-500 font-semibold md:text-left text-center">
                 {item?.heading}
               </h1>
 
-              <h1 className="uppercase lg:text-3xl text-gray-500 sm:text-xl xs:text-lg text-base md:text-left text-center font-bold">
+              <h1 className="uppercase lg:text-2xl text-gray-500 sm:text-[20px] xs:text-lg text-base md:text-left text-center font-bold leading-[30px]">
                 {item?.title}
               </h1>
               {item &&
@@ -261,27 +263,30 @@ function Solutions() {
 
       {/* third section */}
 
-      <div className="bg-gray-100  lg:py-20 ">
+      <div className="bg-gray-50  lg:py-20 ">
         <div className="mt-10 px-5 ">
-          <div className="flex flex-col justify-center items-center  xs:block lg:hidden p-5">
+          <div className=" space-y-5 xs:block lg:hidden p-5">
             <h1 className="text-lg text-[#FF9315] font-semibold">
               YOU MUST KNOW THE
             </h1>
-            <br />
-            <h1 className="text-2xl text-gray-500 font-semibold">
+            <h1 className="text-2xl  text-gray-500 font-semibold">
               KEY FEATURES & BENEFITS
             </h1>
           </div>
           {alldata &&
             alldata.features &&
             alldata.features.map((item: any, index: any) => (
-              <div key={index} className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-evenly  lg:-mt-24 lg:gap-5 gap-10 p-5">
+              <div
+                key={index}
+                className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-evenly  lg:-mt-24 lg:gap-5 gap-10 p-5"
+              >
                 {item &&
                   item.card1 &&
                   item.card1.map((list: any, indexlist: any) => (
-                    <div key={indexlist}
+                    <div
+                      key={indexlist}
                       className={`lg:w-56 h-fit relative ${
-                        indexlist == 1 ? "lg:ml-40" : "lg:ml-0"
+                        indexlist == 1 ? "lg:ml-48" : "lg:ml-14"
                       } `}
                     >
                       <div className=" bg-white p-5 pt-10 mx-auto rounded-md shadow-xl">
@@ -311,14 +316,18 @@ function Solutions() {
           {alldata &&
             alldata.features &&
             alldata.features.map((item: any, index: any) => (
-              <div key={index} className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 justify-evenly lg:gap-3 gap-10  p-5 lg:-mt-24">
+              <div
+                key={index}
+                className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 justify-evenly lg:gap-3 gap-10  p-5 lg:-mt-24"
+              >
                 <div className="lg:block hidden"></div>
                 {item &&
-                  item.card1 &&
-                  item.card1.map((list: any, indexlist: any) => (
-                    <div key={indexlist}
+                  item.card2 &&
+                  item.card2.map((list: any, indexlist: any) => (
+                    <div
+                      key={indexlist}
                       className={`lg:w-56 h-full relative ${
-                        indexlist == 1 ? "lg:ml-60" : "lg:ml-0 lg:pl-0"
+                        indexlist == 1 ? "lg:ml-64" : "lg:ml-6 lg:pl-0"
                       }`}
                     >
                       <div className="bg-white p-5 pt-10 mx-auto rounded-md shadow-xl">
@@ -338,14 +347,18 @@ function Solutions() {
           {alldata &&
             alldata.features &&
             alldata.features.map((item: any, index: any) => (
-              <div key={index} className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1   justify-evenly lg:-mt-24 lg:gap-5 gap-10 p-5">
+              <div
+                key={index}
+                className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1   justify-evenly lg:-mt-24 lg:gap-5 gap-10 p-5"
+              >
                 {/* card5 */}
                 {item &&
-                  item.card1 &&
-                  item.card1.map((list: any, indexlist: any) => (
-                    <div key={indexlist}
-                      className={`lg:w-56 h-fit relative ${
-                        indexlist == 1 ? "lg:ml-36 " : "lg:pl-0"
+                  item.card3 &&
+                  item.card3.map((list: any, indexlist: any) => (
+                    <div
+                      key={indexlist}
+                      className={`lg:w-52 h-fit relative ${
+                        indexlist == 1 ? "lg:ml-48 " : "lg:pl-0 lg:ml-14"
                       } `}
                     >
                       <div className=" bg-white p-5 pt-10 mx-auto rounded-md shadow-xl">
@@ -373,7 +386,10 @@ function Solutions() {
       {/* fourth section */}
       {alldata &&
         alldata.weProvidesolution.map((item: any, index: any) => (
-          <div key={index} className="text-center relative  w-full overflow-hidden  lg:h-[500px] md:h-[400px] sm:h-72 h-56 ">
+          <div
+            key={index}
+            className="text-center relative  w-full overflow-hidden  lg:h-[500px] md:h-[400px] sm:h-72 h-56 "
+          >
             <div className="w-full h-full absolute top-0 ">
               <img
                 src={item?.image?.asset?.url}
@@ -391,7 +407,7 @@ function Solutions() {
       {/* fifth section */}
       <div className="relative bg-customer  h-fit  w-full">
         <div className="bg-gray-100 absolute top-0 w-full h-[70%]"></div>
-        <div className="lg:w-[600px] md:w-[350px]  w-[200px] h-[200px] bg-[#FF9315] top-0 absolute right-0 text-center text-white  lg:text-3xl md:text-base text-xs font-bold sm:p-4 p-3">
+        <div className="lg:w-[600px] md:w-[350px]  w-[200px] h-[200px] bg-[#FF9315] top-0 absolute right-0 text-center text-white  lg:text-3xl md:text-base text-xs font-bold sm:pt-7 p-5">
           Customer Services
         </div>
         {alldata &&
@@ -404,10 +420,10 @@ function Solutions() {
               <div className="flex flex-row xl:gap-10 gap-1 p-4 bg-white w-fit rounded-t-md">
                 <button
                   onClick={() => toggleContent(item?.signin[0].title)}
-                  className={`focus:outline-none font-medium sm:text-base text-xs ${
+                  className={`focus:outline-none  sm:text-base text-xs ${
                     showActiveContent === item?.signin[0].title
-                      ? "text-white border-2 bg-[#FF9315] p-1 md:px-5 px-2 rounded-md"
-                      : "bg-gray-400 text-white p-1 px-5 rounded-md"
+                      ? " border text-primarycolor shadow-xl border-[#FF9315] p-1 md:px-5 px-2 rounded-md"
+                      : " p-1 px-5 rounded-md"
                   }`}
                 >
                   {item?.signin[0].title}
@@ -415,9 +431,9 @@ function Solutions() {
                 <button
                   onClick={() => toggleContent(item?.dashboard[0].title)}
                   className={`focus: outline-none font-medium sm:text-base text-xs ${
-                    showActiveContent === "DashBoard"
-                      ? "text-white border-2 bg-[#FF9315] p-1 md:px-5 px-2 rounded-md"
-                      : "bg-gray-400 text-white p-1 px-5 rounded-md"
+                    showActiveContent === "Dashboard"
+                      ? " border text-primarycolor shadow-xl border-[#FF9315] p-1 md:px-5 px-2 rounded-md"
+                      : " p-1 px-5 rounded-md"
                   }`}
                 >
                   {item?.dashboard[0].title}
@@ -426,8 +442,8 @@ function Solutions() {
                   onClick={() => toggleContent(item?.faculty[0].title)}
                   className={`focus: outline-none font-medium sm:text-base text-xs ${
                     showActiveContent === "Faculty"
-                      ? "text-white border-2 bg-[#FF9315] p-1 md:px-5 px-2 rounded-md"
-                      : "bg-gray-400 text-white p-1 px-5 rounded-md"
+                      ? " border text-primarycolor shadow-xl border-[#FF9315] p-1 md:px-5 px-2 rounded-md"
+                      : " p-1 px-5 rounded-md"
                   }`}
                 >
                   {item?.faculty[0].title}
@@ -441,11 +457,11 @@ function Solutions() {
                       alldata.customerServices[0]?.signin[0]?.image?.asset?.url
                     }
                     alt=""
-                    className="w-full"
+                    className="w-full border border-black rounded-md"
                   />
                 </div>
               )}
-              {showActiveContent === "DashBoard" && (
+              {showActiveContent === "Dashboard" && (
                 <div className="bg-white md:w-[80%] w-full xl:w-[90%] p-10 xl:px-32 rounded-md ">
                   <img
                     src={
@@ -454,7 +470,7 @@ function Solutions() {
                         ?.url
                     }
                     alt=""
-                    className="w-full"
+                    className="w-full border border-black rounded-md"
                   />
                 </div>
               )}
@@ -466,7 +482,7 @@ function Solutions() {
                       alldata.customerServices[0]?.faculty[0]?.image?.asset?.url
                     }
                     alt=""
-                    className="w-full"
+                    className="w-full border border-black rounded-md"
                   />
                 </div>
               )}
@@ -475,21 +491,21 @@ function Solutions() {
       </div>
       {/* sixth section */}
       <div className="flex flex-col justify-center items-center overflow-hidden py-5">
-        <div className="relative w-full lg:h-[236px] h-[250px]  px-10">
+        <div className="relative w-full lg:h-[236px] h-[250px] mt-10 px-10">
           <img
-            src='./bgorange1.png'
+            src="./bgorange1.png"
             alt=""
             className="w-full h-full object-cover"
           />
           <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2  text-center space-y-10">
-            <h2 className="font-semibold sm:text-5xl text-3xl mb-4 text-white">
-              Connect with Us!
+            <h2 className="font-semibold sm:text-4xl text-xl mb-4 text-white">
+              Contact us today to explore the possibilities!
             </h2>
-            <Link href={'/contactus'}>
-            <button className="bg-white drop-shadow-xl text-[#FF8900] rounded-full sm:px-32 px-20 py-4 font-semibold sm:text-xl text-lg">
-              Get Started
-            </button></Link>
-            
+            <Link href={"/contactus"}>
+              <button className="bg-white drop-shadow-xl text-[#FF8900] rounded-full px-10 py-4 font-semibold sm:text-xl text-lg">
+                Get Started
+              </button>
+            </Link>
           </div>
         </div>
       </div>

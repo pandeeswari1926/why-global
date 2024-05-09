@@ -1,9 +1,4 @@
 "use client";
-import Image from "next/image";
-import project from "../../../public/icon.png";
-import project2 from "../../../public/icon2.png";
-import project3 from "../../../public/project3.png";
-import project4 from "../../../public/project4.png";
 import { useEffect, useState } from "react";
 import SanityClient from "../SanityClient";
 
@@ -60,16 +55,16 @@ export default function Home() {
         {data &&
           data.OurWorkProcess.map((item, index) => (
             <div key={index}>
-              <h3 className="text-[#FF8900] text-xl lg:pt-10 pt-5 lg:pl-14 lg:text-start text-center font-semibold">
+              <h3 className="text-[#FF8900] text-xl lg:pt-10 pt-5 lg:pl-24 lg:text-start text-center font-semibold">
                 {item.title}
               </h3>
-              <h2 className="lg:pl-14 lg:text-start text-center font-semibold pt-3 xs:text-lg text-base lg:text-[30px] text-gray-500 leading-[50px] lg:w-[60%]">
+              <h2 className="lg:pl-24 lg:text-start text-center font-semibold pt-3 text-lg lg:text-[30px] text-gray-500 leading-[50px] lg:w-[60%]">
                 {item.subTitle}
               </h2>
               <div className=""><div className="grid lg:grid-cols-4  sm:grid-cols-2 grid-cols-1 lg:gap-5 gap-10 w-[85%] mx-auto justify-items-center items-center py-10 sm:px-10 lg:px-0 lg:ml-28  ">
                 {item.card.map((items, indexs) => (
                   <div   className=" w-full h-full relative flex justify-center items-center " key={indexs}>
-                    <div className={` lg:w-[200px]  px-5 py-3 bg-white w-full h-full relative drop-shadow-2xl flex flex-col justify-around items-start rounded-xl rounded-ss-none  ${indexs%2!=0 ? "" : "lg:mt-16"}`}>
+                    <div className={` lg:w-[200px]  px-5 py-3 bg-white w-full h-full relative drop-shadow-2xl flex flex-col justify-center gap-5 items-start rounded-xl rounded-ss-none  ${indexs%2!=0 ? "" : "lg:mt-16"}`}>
                       <div className="gap-2 flex lg:justify-start lg:items-start justify-center items-center w-full flex-col">
                       <img src={items?.icon?.asset?.url} className="w-[70px] lg:mx-0 mx-auto" alt="project" />
                       <h1 className="xl:font-semibold lg:text-start text-center w-full  text-sm">

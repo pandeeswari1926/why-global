@@ -55,10 +55,10 @@ const World = () => {
         {data &&
           data.World.map((Item, index) => (
             <div key={index}>
-              <h1 className="text-base sm:text-xl md:text-[30px] lg:w-[80%] leading-10 mx-auto font-bold pb-[8%]">
+              <h1 className="lg:mt-3 lg:leading-[50px] text-base sm:text-xl md:text-[30px] lg:w-[80%] leading-10 mx-auto font-semibold pb-[8%]">
                 {Item.title}
               </h1>
-              <section className="grid grid-cols-1 lg:grid-cols-2">
+              <section className="grid grid-cols-1 lg:grid-cols-2 ">
                 {Item.growth1.map((item: any, index: any) => (
                   <div key={index}>
                     <section className="flex flex-col pt-8 pb-[10%]">
@@ -71,6 +71,7 @@ const World = () => {
                             delay={0}
                           />
                         </h1>
+                        
                         <img
                           src="./percent.png"
                           alt="plus icon"
@@ -94,7 +95,22 @@ const World = () => {
                             delay={0}
                           />
                         </h1>
-                        <img src="/+.png" alt="plus icon" className="h-5 w-5" />
+                        {/* <img src="/+.png" alt="plus icon" className="h-5 w-5" /> */}
+                        {
+                          indexes == 0 ? (
+                            <img
+                            src="./percent.png"
+                            alt="plus icon"
+                            className="h-5 w-5"
+                          />
+                          ) : (
+                            <img
+                            src="/+.png"
+                            alt="plus icon"
+                            className="h-5 w-5"
+                          />
+                          )
+                        }
                         <br />
                       </div>
                       <p className="">{items.Content}</p>
