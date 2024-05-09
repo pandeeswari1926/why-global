@@ -57,7 +57,7 @@ const Test = () => {
               </div>
               <div className="md:w-[45%] w-full flex md:flex-col flex-col-reverse justify-between md:items-start items-center ">
                 <div className="flex flex-col justify-end  w-full">
-                  <h1 className="font-semibold text-xl md:mt-0 ml-16 mt-5 text-gray-600">
+                  <h1 className="font-semiboldt ext-xl md:mt-0 ml-16 mt-5 text-gray-600">
                     {item?.name}
                   </h1>
                   <p className="text-gray-500 text-sm ">{item?.role}</p>

@@ -243,14 +243,14 @@ function Helicopter() {
                       ))}
                   </ul>
                   <div className="lg:p-5">
-                    <div className="p-5 lg:text-start text-center space-y-5">
+                    <div className="lg:p-5 p-2 lg:text-start text-center space-y-5">
                       <h1 className="text-xl text-gray-600 font-semibold leading-10">
                         {item &&
                           item.programming &&
                           item.programming[clickindex] &&
                           item?.programming[clickindex].heading}
                       </h1>
-                      <p className="text-gray-400 font-light text-sm leading-8 w-[98%]">
+                      <p className="text-gray-400 font-light text-justify text-sm leading-8 w-[98%]">
                         {item &&
                           item.programming &&
                           item.programming[clickindex] &&
@@ -265,7 +265,7 @@ function Helicopter() {
                             (lists: any, indexlist: any) => (
                               <p
                                 key={indexlist}
-                                className="flex flex-row items-center gap-2"
+                                className="flex flex-row text-[10px] xs:text-sm items-center gap-2"
                               >
                                 <img src="./tick.png" alt="" />
                                 {lists.list}

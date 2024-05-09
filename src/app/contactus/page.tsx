@@ -10,7 +10,7 @@ const page = () => {
         <Contactform />
         <Map />
       </div>
-      <div className="flex flex-col justify-center items-center overflow-hidden py-5">
+      {/* <div className="flex flex-col justify-center items-center overflow-hidden py-5">
         <div className="relative w-full lg:h-[236px] h-[250px]  px-10">
           <img
             src='./bgorange1.png'
@@ -28,7 +28,7 @@ const page = () => {
             
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

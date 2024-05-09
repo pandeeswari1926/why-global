@@ -367,13 +367,13 @@ function Page() {
             </div>
           </div> */}
           <div className="flex relative lg:flex-row gap-5 flex-col p-5 lg:p-0 lg:py-10">
-            <div className="lg:w-[70%] w-full grid md:grid-cols-2 grid-cols-1  mx-auto justify-between justify-items-center gap-5 lg:gap-10">
+            <div className="lg:w-[70%] w-full grid md:grid-cols-2 grid-cols-1  mx-auto justify-center  justify-items-center gap-5 lg:gap-10 px-10">
               {allvalues &&
                 allvalues.map((item, index) => (
                   <Link
                     key={index}
                     href={{pathname:'/Newsbrief',query:{name:item.category}}}
-                    className="w-full lg:w-[80%]"
+                    className="w-full 2xl:w-[80%]"
                   >
                     <div className="bg-primarycolor shadow-xl  mx-auto  w-full cursor-pointer">
                       <div className="md:h-[250px]   w-full h-full">
@@ -383,7 +383,7 @@ function Page() {
                               ?.url
                           }
                           alt="duplicate"
-                          className="w-full h-full object-contain md:object-cover"
+                          className="w-full h-full "
                         />
                       </div>
                       <h1 className="text-center text-lg text-white py-3 font-semibold">
