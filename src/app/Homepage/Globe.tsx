@@ -8,7 +8,7 @@ function Globe() {
       <div className='w-full'>
         <div className='lg:px-10 px-5 lg:text-start text-center flex flex-col  gap-4 '>
           <p className='text-xl lg:pt-10 pt-5 lg:pl-16 lg:text-start text-center font-semibold text-primarycolor'>OUR SERVICES</p>
-          <h1 className="lg:pl-16 lg:text-start text-center font-semibold pt-3 text-lg lg:text-[30px] text-gray-500 leading-[50px] lg:w-[60%]">WE PROVIDE BEST SOLUTIONS FOR PREPARING YOUR SUCCESS</h1>
+          <h1 className="lg:pl-16 lg:text-start text-center font-semibold pt-3 text-sm sm:text-lg lg:text-[30px] text-gray-500 lg:leading-[50px] lg:w-[60%]">WE PROVIDE BEST SOLUTIONS FOR PREPARING YOUR SUCCESS</h1>
         </div>
       </div>
       <div className='w-[50%] h-[550px] flex-col items-center justify-center lg:block hidden gl'>

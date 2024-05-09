@@ -1,15 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
-import heli from "../../../public/helicopter.gif";
-import style2 from "../../../public/style2.png";
-import profile1 from "../../../public/profile1.png";
-import style3 from "../../../public/style3.png";
-import star from "../../../public/stars.png";
 import Slider from "react-slick";
-import tick from "../../../public/tick.png";
 import SanityClient from "../SanityClient";
-import { url } from "inspector";
+
 
 function Helicopter() {
   var settings = {
@@ -134,12 +127,12 @@ function Helicopter() {
         {data &&
           data.review.map((item: any, index: any) => (
             <div key={index} className="relative z-10">
-              <div className="w-full h-full lg:h-[400px] relative mx-auto bg-white right-0 ">
+              <div className="w-full h-full lg:h-[470px] relative mx-auto lg:rounded-tl-[3rem] py-10 bg-white shadow-md shadow-gray-400 right-0 ">
                 <div className="pt-6 lg:text-start text-center lg:pl-10">
-                  <h1 className="lg:text-2xl text-xl text-primarycolor font-semibold text-center">
+                  <h1 className="lg:text-2xl text-xl text-primarycolor font-semibold pb-5">
                     {item.title}
                   </h1>
-                  <h1 className="lg:text-2xl text-lg text-gray-600 font-semibold text-center">
+                  <h1 className="lg:text-3xl text-lg text-gray-500 font-semibold ">
                     {item.subtitle}
                   </h1>
                 </div>
@@ -198,11 +191,11 @@ function Helicopter() {
           data.technology.map((item, index) => (
             <div
               key={index}
-              className="w-full lg:h-fit relative  mx-auto right-0  mt-[15%] "
+              className="w-full lg:h-fit relative  mx-auto right-0  mt-[15%] pt-10 lg:pt-0"
             >
               <div className="lg:block hidden oran bg-primarycolor -left-10 -top-[85%] absolute w-[60%]  h-[500px]"></div>
-              <div className="absolute lg:-top-[30%] lg:left-10 xs:-top-[11%] -top-[9%] z-10 left-1/2 -translate-x-1/2 lg:-translate-x-0 ">
-                <p className="lg:text-2xl md:text-2xl xs:text-2xl text-sm pt-5 lg:text-white lg:text-start text-center text-black">
+              <div className="absolute pt-5 lg:pt-0 lg:-top-[30%] lg:left-10 xs:-top-[11%] -top-[9%] z-10 left-1/2 -translate-x-1/2 lg:-translate-x-0 ">
+                <p className="xs:text-xl text-sm pt-10 lg:text-white lg:text-start text-center text-black uppercase">
                   Technologies
                 </p>
                 <p className="lg:text-3xl md:text-4xl xs:text-3xl text-base font-semibold lg:text-start text-center lg:text-white text-primarycolor">
@@ -217,7 +210,7 @@ function Helicopter() {
                     className="lg:w-[80%] w-[90%] h-[90%] lg:h-[80%] mx-auto rounded-lg drop-shadow-lg  border-2 border-primarycolor"
                   />
                 </div>
-                <div className="lg:w-[50%] relative flex h-full flex-col ">
+                <div className="lg:w-[50%] relative flex h-full flex-col mx-5 lg:mx-0">
                   <ul>
                     {data &&
                       data.technology.map((item, index) => (

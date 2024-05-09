@@ -113,6 +113,7 @@ function Page() {
     getdata();
   }, []);
 
+
   return (
     <div>
       {loader == true ? (

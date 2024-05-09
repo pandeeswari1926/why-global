@@ -15,9 +15,9 @@ import map from "../../../public/map.png";
 
 function Client() {
   return (
-    <div className="flex flex-col md:items-start items-center justify-center gap-5 relative py-5">
-      <section className="lg:pl-16 lg:space-y-5">
-        <h1 className="font-bold text-xl lg:text-2xl text-[#FF8900] md:px-10 pt-10 text-center md:text-start py-5 md:py-0">
+    <div className="flex flex-col md:items-start items-center justify-center gap-5 relative py-5 md:py-10">
+      <section className="lg:pl-16 lg:space-y-7">
+        <h1 className="font-bold text-xl md:ml-3 text-[#FF8900] md:px-10 pt-10 text-center md:text-start py-5 md:py-0">
           OUR CLIENTS
         </h1>
         <main className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 grid-cols-1  lg:gap-10 gap-5 sm:px-10 px-5 ">
