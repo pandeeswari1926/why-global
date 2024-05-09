@@ -45,7 +45,7 @@ const Digitalmarketing = () => {
                       Overview
                     </h1>
                     <div className="grid grid-cols-2 place-items-center sm:flex flex-row justify-center items-center gap-3 px-5 sm:px-0">
-                      <div className="flex justify-center items-center gap-4   bg-white w-28 xs:w-44 sm:w-fit px-1 py-4 rounded-lg">
+                      <div className="flex justify-center items-center gap-4   bg-white w-28 xs:w-44 sm:w-36 px-1 py-4 rounded-lg">
                         <div className="bg-whytap transition-colors duration-500 ease-in-out  w-6 h-6 rounded-full" />
                         <div>
                           <h1 className="text-[10px] xs:text-xs font-medium">
@@ -53,20 +53,20 @@ const Digitalmarketing = () => {
                           </h1>
                         </div>
                       </div>
-                      <div className="flex justify-center items-center gap-4 bg-white w-28 xs:w-44 sm:w-fit px-1 py-4 rounded-lg">
+                      <div className="flex justify-center items-center gap-4 bg-white w-28 xs:w-44 sm:w-36 px-1 py-4 rounded-lg">
                         <div className="bg-whytap transition-colors duration-500 ease-in-out  w-6 h-6 rounded-full" />
                         <div>
                           <h1 className="text-[10px] xs:text-xs font-medium">
-                            No.1 Institute
+                          17000+ students
                           </h1>
                           {/* <p className='text-xs'>Student's Empowerment</p> */}
                         </div>
                       </div>
-                      <div className="flex justify-center items-center gap-4 bg-white w-28 xs:w-44 sm:w-fit px-1 py-4 rounded-lg">
+                      <div className="flex justify-center items-center gap-4 bg-white w-28 xs:w-44 sm:w-36 px-1 py-4 rounded-lg">
                         <div className="bg-whytap transition-colors duration-500 ease-in-out  w-6 h-6 rounded-full" />
                         <div>
                           <h1 className="text-[10px] xs:text-xs font-medium">
-                            No.1 Institute
+                          13+ years
                           </h1>
                           {/* <p className='text-xs'>Student's Empowerment</p> */}
                         </div>
@@ -101,7 +101,7 @@ const Digitalmarketing = () => {
                           <div className="bg-whytap transition-colors duration-500 ease-in-out  w-6 h-6 rounded-full" />
                           <div>
                             <h1 className="text-[10px] xs:text-xs font-medium">
-                              No.1 Institute
+                            13+ years
                             </h1>
                           </div>
                         </div>
@@ -184,7 +184,7 @@ const Digitalmarketing = () => {
                           }
                           unCheckedChildren={
                             <span className="text-[10px] flex justify-center items-center w-14">
-                              NeedAction
+                              Need Action
                             </span>
                           }
                           className="bg-whytap transition-colors duration-500 ease-in-out "
@@ -265,28 +265,28 @@ const Digitalmarketing = () => {
                       Overview
                     </h1>
                     <div className="grid grid-cols-2 place-items-center sm:flex flex-row justify-center items-center gap-3 px-5 sm:px-0">
-                      <div className="flex justify-center items-center gap-4   bg-white w-28 xs:w-44 sm:w-fit px-1 py-4 rounded-lg">
+                      <div className="flex justify-center items-center gap-4   bg-white w-28 xs:w-44 sm:w-36 px-1 py-4 rounded-lg">
                         <div className="bg-kush transition-colors duration-500 ease-in-out w-6 h-6 rounded-full" />
                         <div>
                           <h1 className="text-[10px] xs:text-xs font-medium">
-                            No.1 Institute
+                          Advanced IR
                           </h1>
                           {/* <p className='text-xs'>Student's Empowerment</p> */}
                         </div>
                       </div>
-                      <div className="flex justify-center items-center gap-4 bg-white w-28 xs:w-44 sm:w-fit px-1 py-4 rounded-lg">
+                      <div className="flex justify-center items-center gap-4 bg-white w-28 xs:w-44 sm:w-36 px-1 py-4 rounded-lg">
                         <div className="bg-kush transition-colors duration-500 ease-in-out w-6 h-6 rounded-full" />
                         <div>
                           <h1 className="text-[10px] xs:text-xs font-medium">
-                            No.1 Institute
+                          Speciality
                           </h1>
                         </div>
                       </div>
-                      <div className="flex justify-center items-center gap-4 bg-white w-28 xs:w-44 sm:w-fit px-1 py-4 rounded-lg">
+                      <div className="flex justify-center items-center gap-4 bg-white w-28 xs:w-44 sm:w-36 px-1 py-4 rounded-lg">
                         <div className="bg-kush transition-colors duration-500 ease-in-out w-6 h-6 rounded-full" />
                         <div>
                           <h1 className="text-[10px] xs:text-xs font-medium">
-                            No.1 Institute
+                          Lab services
                           </h1>
                         </div>
                       </div>
@@ -314,7 +314,7 @@ const Digitalmarketing = () => {
                           <div className="bg-kush transition-colors duration-500 ease-in-out w-6 h-6 rounded-full" />
                           <div>
                             <h1 className="text-[10px] xs:text-xs font-medium">
-                              No.1 Institute
+                            Imaging 
                             </h1>
                           </div>
                         </div>
@@ -322,7 +322,7 @@ const Digitalmarketing = () => {
                           <div className="bg-kush transition-colors duration-500 ease-in-out w-6 h-6 rounded-full" />
                           <div>
                             <h1 className="text-[10px] xs:text-xs font-medium">
-                              No.1 Institute
+                            Services
                             </h1>
                           </div>
                         </div>
@@ -406,7 +406,7 @@ const Digitalmarketing = () => {
                           }
                           unCheckedChildren={
                             <span className="text-[10px] flex justify-center items-center w-14">
-                              NeedAction
+                              Need Action
                             </span>
                           }
                           className="bg-kush transition-colors duration-500 ease-in-out"
@@ -489,27 +489,27 @@ const Digitalmarketing = () => {
                     </h1>
 
                     <div className="grid grid-cols-2 place-items-center sm:flex flex-row justify-center items-center gap-3 px-5 sm:px-0">
-                      <div className="flex justify-center items-center gap-4   bg-white w-28 xs:w-44 sm:w-fit px-1 py-4 rounded-lg">
+                      <div className="flex justify-center items-center gap-4   bg-white w-28 xs:w-44 sm:w-36 px-1 py-4 rounded-lg">
                         <div className="bg-abhis transition-colors duration-500 ease-in-out w-6 h-6 rounded-full" />
                         <div>
                           <h1 className="text-[10px] xs:text-xs font-medium">
-                            No.1 Institute
+                          500+ students
                           </h1>
                         </div>
                       </div>
-                      <div className="flex justify-center items-center gap-4 bg-white w-28 xs:w-44 sm:w-fit px-1 py-4 rounded-lg">
+                      <div className="flex justify-center items-center gap-4 bg-white w-28 xs:w-44 sm:w-36 px-1 py-4 rounded-lg">
                         <div className="bg-abhis transition-colors duration-500 ease-in-out w-6 h-6 rounded-full" />
                         <div>
                           <h1 className="text-[10px] xs:text-xs font-medium">
-                            No.1 Institute
+                          50+ universities
                           </h1>
                         </div>
                       </div>
-                      <div className="flex justify-center items-center gap-4 bg-white w-28 xs:w-44 sm:w-fit px-1 py-4 rounded-lg">
+                      <div className="flex justify-center items-center gap-4 bg-white w-28 xs:w-44 sm:w-36 px-1 py-4 rounded-lg">
                         <div className="bg-abhis transition-colors duration-500 ease-in-out w-6 h-6 rounded-full" />
                         <div>
                           <h1 className="text-[10px] xs:text-xs font-medium">
-                            No.1 Institute
+                          7+ countries
                           </h1>
                         </div>
                       </div>
@@ -536,7 +536,7 @@ const Digitalmarketing = () => {
                           <div className="bg-abhis transition-colors duration-500 ease-in-out w-6 h-6 rounded-full" />
                           <div>
                             <h1 className="text-[10px] xs:text-xs font-medium">
-                              No.1 Institute
+                            13+ years 
                             </h1>
                           </div>
                         </div>
@@ -544,7 +544,7 @@ const Digitalmarketing = () => {
                           <div className="bg-abhis transition-colors duration-500 ease-in-out w-6 h-6 rounded-full" />
                           <div>
                             <h1 className="text-[10px] xs:text-xs font-medium">
-                              No.1 Institute
+                            500+ students
                             </h1>
                           </div>
                         </div>
@@ -626,7 +626,7 @@ const Digitalmarketing = () => {
                           }
                           unCheckedChildren={
                             <span className="text-[10px] flex justify-center items-center w-14">
-                              NeedAction
+                              Need Action
                             </span>
                           }
                           className="bg-abhis transition-colors duration-500 ease-in-out"

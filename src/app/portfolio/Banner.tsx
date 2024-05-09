@@ -78,7 +78,7 @@ export const Banner: React.FC = () => {
                   {item.content}
                 </p>
                 <Link href={'/contactus'}><button className="bg-[#FF9315] text-white border-2 border-white font-semibold xs2:p-4 p-2 px-5 xs2:px-10 lg:px-16 rounded-full hover:text-[#FF9315] hover:bg-white drop-shadow-2xl text-xl lg:text-2xl ">
-                  Get started
+                  Get Started
                 </button></Link>
               </div>
             ))}
