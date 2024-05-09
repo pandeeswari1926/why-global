@@ -70,7 +70,7 @@ function About() {
     SecondSection: [
       {
         content: string;
-        percentage:string;
+        percentage: string;
         icon: { asset: { url: string } };
         number: string;
       }
@@ -116,8 +116,8 @@ function About() {
         title: string;
         Fourimage: [{ image: { asset: { url: string } } }];
         sideimage: string;
-        content:string
-        heading:string
+        content: string;
+        heading: string;
       }
     ];
   }
@@ -303,12 +303,10 @@ asset->{
                     <p className="text-primarycolor font-semibold md:text-xl text-3xl lg:pt-6 ">
                       {item?.title1}
                     </p>
-                    <p className="font-semibold md:text-3xl text-grayColor ">
+                    <p className="font-semibold md:text-3xl text-center text-grayColor ">
                       {item?.title2}
                     </p>
-                    <p className=" text-sm  ">
-                      {item?.bannercontent}
-                    </p>
+                    <p className=" text-sm  ">{item?.bannercontent}</p>
                   </div>
                 </div>
                 <div>
@@ -326,7 +324,7 @@ asset->{
                                 duration={3}
                                 delay={0}
                               />
-                              {listindex == 0 ? <p>%</p>:<p>+</p>}
+                              {listindex == 0 ? <p>%</p> : <p>+</p>}
                             </p>
                             <p className="text-xs text-center text-gray-500">
                               {list?.content}
@@ -426,7 +424,11 @@ asset->{
           <main
             key={index}
             className="  relative md:object-cover p-5 lg:p-10 md:bg-cover md:flex md:flex-col gap-5"
-          ><img src="./background1.png" className="w-full h-fit absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></img>
+          >
+            <img
+              src="./background1.png"
+              className="w-full h-fit absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            ></img>
             <div className="lg:pl-5">
               <h3 className="text-[#FF8900] lg:text-start text-center   font-bold">
                 {item?.title}
@@ -444,31 +446,35 @@ asset->{
                     key={index}
                     className="largewidth:w-[80%]  sm:w-[90%] h-full relative drop-shadow-2xl"
                   >
-                    <div className="relative"> <div className="bg-white border-2 w-fit h-fit p-1 px-3 rounded-full absolute text-primarycolor -right-4 top-14 md:top-12 z-20">
-                      {index + 1}
-                    </div>
-                    <div style={{clipPath:'polygon(87% 0, 100% 14%, 100% 100%, 0 100%, 0 0)'}}
-                      className={`${
-                        index % 2 != 0 ? "lg:mt-8" : "lg:-mt-5"
-                      } text-center  lg:h-full bg-white relative rounded-tr-3xl`}
-                    >
-                      
-                      <img
-                        src={item?.gif?.asset?.url}
-                        alt="project"
-                        className="w-[50%] mx-auto"
-                      />
-                      <div className="flex flex-col  p-5">
-                      <h1 className="font-semibold text-grayColor ">
-                        {item?.cardTitle}
-                      </h1>
-                      <p className=" text-xs text-gray-400 p-3">{item?.content}</p>
+                    <div className="relative">
+                      {" "}
+                      <div className="bg-white border-2 w-fit h-fit p-1 px-3 rounded-full absolute text-primarycolor -right-4 top-14 md:top-12 z-20">
+                        {index + 1}
                       </div>
-                     
+                      <div
+                        style={{
+                          clipPath:
+                            "polygon(87% 0, 100% 14%, 100% 100%, 0 100%, 0 0)",
+                        }}
+                        className={`${
+                          index % 2 != 0 ? "lg:mt-8" : "lg:-mt-5"
+                        } text-center  lg:h-full bg-white relative rounded-tr-3xl`}
+                      >
+                        <img
+                          src={item?.gif?.asset?.url}
+                          alt="project"
+                          className="w-[50%] mx-auto"
+                        />
+                        <div className="flex flex-col  p-5">
+                          <h1 className="font-semibold text-grayColor ">
+                            {item?.cardTitle}
+                          </h1>
+                          <p className=" text-xs text-gray-400 p-3">
+                            {item?.content}
+                          </p>
+                        </div>
+                      </div>
                     </div>
-                    </div>
-                   
-                   
                   </div>
                 ))}
             </div>
@@ -498,7 +504,7 @@ asset->{
                     <div className="w-full gap-2 grid grid-cols-1 lg:grid-cols-2">
                       {item &&
                         item.Fourimage.map((list: any, listItems: any) => (
-                          <div key={listItems} className=" w-full relative">
+                          <div key={listItems} className=" w-full relative ">
                             <img
                               alt=""
                               src={list?.image?.asset?.url}
@@ -517,7 +523,7 @@ asset->{
                         ))}
                     </div>
                   </div>
-                  <div className="lg:w-[30%] w-full relative">
+                  <div className="lg:w-[30%]  w-full relative">
                     <div className="bg-black absolute top-0 left-0 w-full h-full opacity-50"></div>
                     <img
                       src="./veenabox.jpg"
@@ -526,10 +532,10 @@ asset->{
                     />
                     <p className="flex flex-col absolute w-full bottom-2 left-1/2 -translate-x-1/2 text-white px-2">
                       <span className="text-center text-primarycolor md:text-lg sm:text-xl text-lg font-semibold">
-                      {item?.heading}
+                        {item?.heading}
                       </span>
                       <span className="text-center text-sm lg:w-[90%] w-full mx-auto">
-                      {item?.content}
+                        {item?.content}
                       </span>
                     </p>
                   </div>
@@ -542,90 +548,86 @@ asset->{
       {alldata &&
         alldata.teamMember &&
         alldata.teamMember.map((item: any, index: any) => (
-          <div key={index} style={{backgroundImage:`url(./b1.png)`}} className="py-10 flex justify-end">
-          <div  key={index} className="bg-white px-5 flex flex-col drop-shadow-2xl rounded-l-lg   h-full py-10 w-full lg:w-[95%]">
-            <p className="text-primarycolor lg:text-start text-center font-semibold pl-5 text-lg">
-              {item?.title}
-            </p>
-            <h1 className="md:text-2xl xs:text-xl lg:text-start text-center font-semibold pl-5 text-gray-500">
-              {item?.subTitle}
-            </h1>
-            <div className="pt-5">
-            <div className="">
-              <Slider {...settings} className="overflow-hidden py-8 flex ">
-               {item &&
-                item.card.map((profile: any, index: any) => ( 
-                  
-
-                <div key={index} className="md:px-5 w-full">
-                  <div className="w-full h-full flex lg:flex-row flex-col justify-center items-center gap-3">
-                    <div className="lg:w-[300px] w-full flex  justify-center items-center h-52 relative">
-                    <img
-                          src="./fine.png"
-                          alt="style2"
-                          className=" absolute -z-10 right-0 w-full object-contain h-full"
-                        />
-                             <div className="relative lg:w-full ">
-                              <div  className="w-[170px] relative mx-auto h-48 ">
-                              
-                              <img style={{clipPath:'polygon(18% 0, 100% 1%, 100% 100%, 14% 100%, 5% 33%)'}}
-                          src={profile?.image?.asset?.url}
-                          alt="Profile1"
-                          className=" w-full h-full   rounded-lg -ml-2 -mt-6 "
-                        /><img
-                        src="./minus.png"
-                        alt="style2"
-                        className="absolute top-3 shadow-2xl w-6 left-1"
-                       />
+          <div
+            key={index}
+            style={{ backgroundImage: `url(./b1.png)` }}
+            className="py-10 flex justify-end"
+          >
+            <div
+              key={index}
+              className="bg-white px-5 flex flex-col drop-shadow-2xl rounded-l-lg   h-full py-10 w-full lg:w-[95%]"
+            >
+              <p className="text-primarycolor lg:text-start text-center font-semibold pl-5 text-lg">
+                {item?.title}
+              </p>
+              <h1 className="md:text-2xl xs:text-xl text-xs lg:text-start text-center font-semibold pl-5 text-gray-500">
+                {item?.subTitle}
+              </h1>
+              <div className="pt-5">
+                <div className="">
+                  <Slider {...settings} className="overflow-hidden py-8 flex ">
+                    {item &&
+                      item.card.map((profile: any, index: any) => (
+                        <div key={index} className="md:px-5 w-full">
+                          <div className="w-full h-full flex lg:flex-row flex-col justify-center items-center gap-3">
+                            <div className="lg:w-[300px] w-full flex  justify-center items-center h-52 relative">
+                              <img
+                                src="./fine.png"
+                                alt="style2"
+                                className=" absolute -z-10 right-0 w-full object-contain h-full"
+                              />
+                              <div className="relative lg:w-full ">
+                                <div className="w-[170px] relative mx-auto h-48 ">
+                                  <img
+                                    style={{
+                                      clipPath:
+                                        "polygon(18% 0, 100% 1%, 100% 100%, 14% 100%, 5% 33%)",
+                                    }}
+                                    src={profile?.image?.asset?.url}
+                                    alt="Profile1"
+                                    className=" w-full h-full   rounded-lg -ml-2 -mt-6 "
+                                  />
+                                  <img
+                                    src="./minus.png"
+                                    alt="style2"
+                                    className="absolute top-3 shadow-2xl w-6 left-1"
+                                  />
+                                </div>
                               </div>
-                            
-                        
-                             </div>
-
-                        
-
-                    </div>
-                    <div className=" xs:w-[380px] w-full ">
-                     <div className="w-full lg:pt-2">
-                        <p className="lg:text-left px-2 text-xs lg:text-md font-normal text-[#5D5D5D] text-justify">
-                          {profile?.content}
-                        </p>
-                        <div></div>
-                        <hr className=" h-0.5 bg-[#FF8900] mt-4 " />
-                        <div className="flex lg:flex-row flex-col mt-3 justify-center gap-2 lg:items-start items-center lg:justify-between">
-                          <div className="flex flex-col justify-center lg:items-start items-center lg:justify-start ">
-                            <p className="">{profile?.role}</p>
-                            <p className="  text-[#FF8900]">
-                              {profile?.name}
-                            </p>
-                          </div>
-                          <div className="  md:pl-0 md:w-[30%]">
-                            <img
-                              src="./stars.png"
-                              alt=""
-                              className=" pt-2"
-                            />
+                            </div>
+                            <div className=" xs:w-[380px] w-full ">
+                              <div className="w-full lg:pt-2">
+                                <p className="lg:text-left px-2 text-xs lg:text-md font-normal text-[#5D5D5D] text-justify">
+                                  {profile?.content}
+                                </p>
+                                <div></div>
+                                <hr className=" h-0.5 bg-[#FF8900] mt-4 " />
+                                <div className="flex lg:flex-row flex-col mt-3 justify-center gap-2 lg:items-start items-center lg:justify-between">
+                                  <div className="flex flex-col justify-center lg:items-start items-center lg:justify-start ">
+                                    <p className="">{profile?.role}</p>
+                                    <p className="  text-[#FF8900]">
+                                      {profile?.name}
+                                    </p>
+                                  </div>
+                                  <div className="  md:pl-0 md:w-[30%]">
+                                    <img
+                                      src="./stars.png"
+                                      alt=""
+                                      className=" pt-2"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
                           </div>
                         </div>
-                        
-                      </div>
-                    </div>
-
-                  </div>
-
+                      ))}
+                  </Slider>
                 </div>
-          
-
-            
-            
-          
-        ))}
-        
-        </Slider></div>
+              </div>
             </div>
-           
-            
-        </div></div>))}
+          </div>
+        ))}
       <div className="flex flex-col justify-center items-center overflow-hidden py-5">
         <div className="relative w-full lg:h-[236px] h-[250px] px-5  md:px-10">
           <img
@@ -635,7 +637,8 @@ asset->{
           />
           <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full  text-center space-y-10">
             <h2 className="font-semibold sm:text-3xl w-full px-10  text-lg mb-4  text-white">
-            Elevate your online presence with us. Let's build success together!
+              Elevate your online presence with us. Let's build success
+              together!
             </h2>
             <Link href={"/contactus"}>
               <button className="bg-white drop-shadow-xl text-[#FF8900] rounded-full w-fit sm:px-24 px-8  py-4 font-semibold sm:text-xl text-sm">
