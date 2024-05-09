@@ -198,35 +198,40 @@ function Solutions() {
         alldata.Banner.map((item, index) => (
           <div
             key={index}
-            className="grid w-full lg:h-screen  relative  overflow-hidden grid-cols-1 lg:grid-cols-2 "
+            className="grid w-full lg:h-screen  relative  overflow-hidden grid-cols-1 lg:grid-cols-2 mt-7 lg:mt-0"
           >
-            <div className="flex flex-col gap-5 p-5 md:p-20">
-              <p className="uppercase text-sm sm:text-base text-orange-500 font-semibold md:text-left text-center">
+            <div className="flex flex-col gap-5 p-5 lg:p-20">
+              <p className="uppercase lg:px-0 px-5 text-sm sm:text-base text-orange-500 font-semibold md:text-left text-center">
                 {item?.title}
               </p>
 
               <div className="uppercase lg:text-[30px] sm:text-xl xs:text-lg text-base md:text-left text-center font-semibold space-y-3 text-gray-500 ">
-                <p className="space-y-2 leading-10">{item?.subTitle}</p>
+                <p className="space-y-2 md:leading-10 lg:px-0 px-5">{item?.subTitle}</p>
               </div>
 
-              <p className="font-light md:text-[16px] text-[14px] md:text-left text-justify md:px-0 px-5 leading-[30px] text-gray-500">
+              <p className="font-light md:text-[16px] text-[14px]  text-justify lg:px-0 px-5  md:leading-[30px] text-gray-500">
                 {item.content}
               </p>
             </div>
-            <div className="h-full w-full hidden lg:flex flex-col justify-center items-center">
+            <div className="h-full w-full flex flex-col justify-center items-center">
               <img
                 src={item?.BannerImage[0]?.image?.asset?.url}
                 alt="ruben"
-                className="md:w-full md:h-full rubanbro  xs:w-96 object-contain xs:h-80 w-64 h-52 "
+                className="lg:w-full lg:h-full lg:block hidden rubanbro xs:w-96 object-contain xs:h-80 w-64 h-52"
+              />
+              <img
+                src={item?.BannerImage[0]?.image?.asset?.url}
+                alt="ruben"
+                className="lg:w-full lg:h-full lg:hidden  xs:w-96 object-contain xs:h-80 w-64 h-52"
               />
             </div>
-            <div className="h-full w-full lg:hidden flex flex-col justify-center items-center">
+            {/* <div className="h-full w-full lg:hidden flex flex-col justify-center items-center">
               <img
                 src={item?.BannerImage[0]?.image?.asset?.url}
                 alt="ruben"
                 className="md:w-full md:h-full   xs:w-96 object-cover xs:h-80 w-64 h-52 "
               />
-            </div>
+            </div> */}
             <div className="absolute bottom-7 left-0 w-[60%] lg:block hidden">
               <img src="./lineNew.png" alt="line" className="w-full " />
             </div>
@@ -234,8 +239,8 @@ function Solutions() {
         ))}
       {alldata &&
         alldata.learning.map((item: any, index: any) => (
-          <div key={index} className="grid grid-cols-1 md:grid-cols-2 md:px-14">
-            <div className="flex flex-col justify-center gap-5 p-5 lg:p-10 ">
+          <div key={index} className="grid grid-cols-1 lg:grid-cols-2 lg:px-14 mt-10 lg:mt-0">
+            <div className="flex flex-col justify-center gap-5 p-5  md:p-10 ">
               <h1 className="uppercase text-sm sm:text-base text-orange-500 font-semibold md:text-left text-center">
                 {item?.heading}
               </h1>
@@ -255,7 +260,7 @@ function Solutions() {
                 ))}
             </div>
             <div className="w-full h-full mx-auto flex justify-center items-center">
-              <img src={item?.gif?.asset?.url} alt="" className="mx-auto" />
+              <img src={item?.gif?.asset?.url} alt="" className="mx-auto lg:w-full lg:h-full xs:w-96 object-contain xs:h-80 w-64 h-52" />
             </div>
           </div>
         ))}
@@ -302,12 +307,12 @@ function Solutions() {
                     </div>
                   ))}
 
-                <div className="flex flex-col justify-center lg:block hidden ml-16 mt-5">
-                  <h1 className="text-lg text-[#FF9315] font-semibold">
+                <div className="justify-center lg:block hidden ml-16 mt-5">
+                  <h1 className="text-lg text-[#FF9315] font-semibold space-y-3">
                     YOU MUST KNOW THE
                   </h1>
-                  <br />
-                  <h1 className="text-xl text-gray-500 font-semibold">
+                  
+                  <h1 className="text-xl text-gray-500 font-semibold mt-2">
                     KEY FEATURES & BENEFITS
                   </h1>
                 </div>
@@ -393,13 +398,13 @@ function Solutions() {
             <div className="w-full h-full absolute top-0 ">
               <img
                 src={item?.image?.asset?.url}
-                className="w-full object-fill h-full"
+                className="w-full h-full xs:object-fill object-cover"
                 alt=""
               />
             </div>
             <div className="bg-black opacity-30 absolute w-full h-full top-0"></div>
-            <h1 className="lg:text-6xl text-xl text-white font-bold drop-shadow-2xl  xl:pt-32 lg:pt-32 md:pt-20 sm:pt-10 pt-10">
-              {item?.Heading}
+            <h1 className="lg:text-6xl text-xl text-white font-bold drop-shadow-xl  xl:pt-32 lg:pt-32 md:pt-20 sm:pt-10 pt-10">
+              "{item?.Heading}"
             </h1>
           </div>
         ))}
@@ -504,21 +509,21 @@ function Solutions() {
       </div>
       {/* sixth section */}
       <div className="flex flex-col justify-center items-center overflow-hidden py-5">
-        <div className="relative w-full lg:h-[236px] h-[250px] mt-10 px-10">
+        <div className="relative w-full lg:h-[236px] h-[250px]  sm:px-10 px-5">
           <img
-            src="./bgorange1.png"
+            src='./bgorange1.png'
             alt=""
             className="w-full h-full object-cover"
           />
-          <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2  text-center space-y-10">
-            <h2 className="font-semibold sm:text-4xl text-xl mb-4 text-white">
-              Contact us today to explore the possibilities!
+          <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full text-center space-y-10">
+            <h2 className="font-semibold lg:text-4xl md:text-2xl sm:text-lg text-sm mb-4 text-white ">
+            Contact us today to explore the possibilities!
             </h2>
-            <Link href={"/contactus"}>
-              <button className="bg-white drop-shadow-xl text-[#FF8900] rounded-full px-10 py-4 font-semibold sm:text-xl text-lg">
-                Get Started
-              </button>
-            </Link>
+            <Link href={'/contactus'}>
+            <button className="bg-white drop-shadow-xl text-[#FF8900] rounded-full mt-4 sm:px-20 px-5 py-2 sm:py-4 font-semibold sm:text-xl text-sm">
+              Get Started
+            </button></Link>
+            
           </div>
         </div>
       </div>
