@@ -74,7 +74,7 @@ const Appdevelopment = () => {
 
     return (
         <article className='bg-gray-100'>
-            <h1 className='text-xl sm:text-2xl md:text-3xl font-bold text-center bg-gradient-to-b from-[#4d4d4d] bg-clip-text text-transparent to-gray-300  py-5'>APP DEVELOPMENT</h1>
+            <h1 className='text-xl sm:text-2xl md:text-3xl lg:text-5xl font-bold text-center bg-gradient-to-b from-[#4d4d4d] bg-clip-text text-transparent to-gray-100  pb-5 pt-10'>APP DEVELOPMENT</h1>
             {renderContent(currentArticle)}
         </article>  
     )

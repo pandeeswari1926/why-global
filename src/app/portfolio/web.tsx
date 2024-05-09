@@ -57,10 +57,10 @@ const Web = () => {
   return (
     <>
       <div className="flex lg:flex-row flex-col items-center lg:gap-0 gap-10">
-        <h1 className="text-[#FF9315] text-xl  font-bold sm:hidden pt-5">
+        <h1 className="text-[#FF9315] text-xl  font-bold sm:hidden pt-10">
           WEB DEVELOPMENT
         </h1>
-        <div className="lg:w-[40%] lg:h-[85vh] w-full mx-auto flex justify-center">
+        <div className="lg:w-[40%] lg:h-[550px] xl:h-[85vh] w-full mx-auto flex justify-center">
           <div className="flex flex-row justify-center items-center relative  w-fit">
             <div className="p-5 shadow-lg shadow-gray-300 rounded-full">
               <div className="border-2 sm:border-[#FF9315] w-48 h-48 xl:w-48 xl:h-48 lg:w-44 lg:h-44 drop-shadow-xl rounded-full flex justify-center items-center">
@@ -90,7 +90,7 @@ const Web = () => {
             </div>
           </div>
         </div>
-        <div className="lg:w-[60%] lg:h-[85vh] w-full">
+        <div className="lg:w-[60%] lg:h-[550px] xl:h-[85vh] w-full">
           {webdata.map((item, ind) => (
             <div
               key={ind}
@@ -99,7 +99,7 @@ const Web = () => {
               {showActiveContent === item?.title && (
                 <div className="xs:w-[80%]  w-full flex pt-6 p-3 xs:ml-0 flex-col justify-center items-center">
                   {item?.content?.map((contents, index) => (
-                    <div className="flex flex-col w-full mx-auto" key={index}>
+                    <div className="flex flex-col w-full mx-auto px-2" key={index}>
                       <h1 className="text-xl sm:text-5xl text-gray-500 font-semibold">
                         {contents?.heading}
                       </h1>
@@ -114,7 +114,7 @@ const Web = () => {
                         } `}
                       />
                       <br />
-                      <p className="text-start text-sm text-gray-500 leading-loose">
+                      <p className="text-justify text-sm text-gray-500 leading-loose">
                         {contents?.content}
                       </p>
                       <br />
