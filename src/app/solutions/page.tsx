@@ -209,7 +209,7 @@ function Solutions() {
                 <p className="space-y-2 leading-10">{item?.subTitle}</p>
               </div>
 
-              <p className="font-light md:text-base text-sm md:text-left text-justify md:px-0 px-5 leading-loose text-gray-500">
+              <p className="font-light md:text-[16px] text-[14px] md:text-left text-justify md:px-0 px-5 leading-[30px] text-gray-500">
                 {item.content}
               </p>
             </div>
@@ -217,7 +217,7 @@ function Solutions() {
               <img
                 src={item?.BannerImage[0]?.image?.asset?.url}
                 alt="ruben"
-                className="md:w-full md:h-full rubanbro  xs:w-96 object-cover xs:h-80 w-64 h-52 "
+                className="md:w-full md:h-full rubanbro  xs:w-96 object-contain xs:h-80 w-64 h-52 "
               />
             </div>
             <div className="h-full w-full lg:hidden flex flex-col justify-center items-center">
@@ -417,7 +417,7 @@ function Solutions() {
               key={index}
               className="xl:ml-20 lg:ml-10 md:ml-5 ml-0 pt-10 mx-auto  drop-shadow-2xl"
             >
-              <div className="flex flex-row xl:gap-10 gap-1 p-4 bg-white w-fit rounded-t-md">
+              <div className="flex relative flex-row xl:gap-10 gap-1 p-4 bg-white w-fit rounded-t-md">
                 <button
                   onClick={() => toggleContent(item?.signin[0].title)}
                   className={`focus:outline-none  sm:text-base text-xs ${
@@ -449,22 +449,20 @@ function Solutions() {
                   {item?.faculty[0].title}
                 </button>
               </div>
-              {showActiveContent === "Sign In" && (
-                <div className="bg-white md:w-[80%] w-full xl:w-[90%]  p-10 xl:px-32 rounded-md">
-                  <img
+              <div className="bg-white overflow-hidden z-20 relative md:w-[80%] w-full xl:w-[90%]  p-10 xl:px-32 rounded-md">
+              <img src="./sides.png" className="absolute  md:flex hidden -z-10 w-16 top-20 rotate-180  -right-0"></img>
+                  <img src="./sides.png" className="absolute -z-10 w-16 md:flex hidden bottom-0  left-0"></img>
+                <div className="z-30 w-full h-full" >
+             
+                  <div className="-z-20  w-full">  {showActiveContent === "Sign In" && ( <img
                     src={
                       alldata &&
                       alldata.customerServices[0]?.signin[0]?.image?.asset?.url
                     }
                     alt=""
                     className="w-full border border-black rounded-md"
-                  />
-                 
-                </div>
-              )}
-              {showActiveContent === "Dashboard" && (
-                <div className="bg-white md:w-[80%] w-full xl:w-[90%] p-10 xl:px-32 rounded-md ">
-                  <img
+                  /> )}</div>
+                  <div>{showActiveContent === "Dashboard" && (<img
                     src={
                       alldata &&
                       alldata.customerServices[0]?.dashboard[0]?.image?.asset
@@ -472,21 +470,35 @@ function Solutions() {
                     }
                     alt=""
                     className="w-full border border-black rounded-md"
-                  />
-                </div>
-              )}
-              {showActiveContent === "Faculty" && (
-                <div className="bg-white md:w-[80%] w-full xl:w-[90%]  p-10 xl:px-32 rounded-md ">
-                  <img
+                  /> )}</div>
+                  <div>{showActiveContent === "Faculty" && (     <img
                     src={
                       alldata &&
                       alldata.customerServices[0]?.faculty[0]?.image?.asset?.url
                     }
                     alt=""
                     className="w-full border border-black rounded-md"
-                  />
+                  /> )}</div>
+              
+                 
+
+
+
                 </div>
-              )}
+                
+                </div>
+                
+             
+              
+                {/* <div className="bg-white md:w-[80%] w-full xl:w-[90%] p-10 xl:px-32 rounded-md ">
+                  
+                </div> */}
+             
+             
+                {/* <div className="bg-white md:w-[80%] w-full xl:w-[90%]  p-10 xl:px-32 rounded-md ">
+              
+                </div> */}
+            
             </div>
           ))}
       </div>
