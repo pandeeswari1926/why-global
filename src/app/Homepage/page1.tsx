@@ -50,7 +50,7 @@ export default function Home() {
   }, []);
   return (
     <div className="">
-      <main className=" relative lg:h-[600px] xl:h-screen md:object-cover md:flex md:flex-col">
+      <main className=" relative lg:h-[600px]  md:object-cover md:flex md:flex-col">
         <div className="absolute w-full  top-1/2 left-1/2 -translate-x-1/2 -translate-y-[60%]"><img src="./lines.png" className="w-full h-fit"></img></div>
         {data &&
           data.OurWorkProcess.map((item, index) => (

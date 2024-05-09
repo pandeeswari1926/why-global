@@ -128,7 +128,9 @@ function Helicopter() {
           data.review.map((item: any, index: any) => (
             <div key={index} className="relative w-full h-full z-10 py-5">
               <div className="flex w-full justify-end items-end">
-                <div className="lg:w-[95%] w-full h-full lg:h-full relative  lg:rounded-tl-[3rem] py-5 bg-white shadow-md shadow-gray-400 right-0 ">
+                <div style={{
+                  clipPath:'polygon(4% 0, 100% 0, 100% 100%, 0 100%, 0 10%)'
+                }} className="lg:w-[95%] w-full h-full lg:h-full relative  lg:rounded-tl-[3rem] py-5 bg-white shadow-md shadow-gray-400 right-0 ">
                 <div className="pt-6 lg:text-start text-center lg:pl-10">
                   <h1 className="lg:text-2xl text-xl text-primarycolor font-semibold pb-5">
                     {item.title}
@@ -253,9 +255,9 @@ function Helicopter() {
                         </div>
                       ))}
                   </ul>
-                  <div className="lg:p-5 p-3">
-                    <div className="lg:p-5 p-2 lg:text-start text-center space-y-5">
-                      <h1 className="text-xl text-gray-600 font-semibold leading-10">
+                  <div className="lg:p-5 h-full w-full flex  justify-center items-center p-3">
+                    <div className="lg:p-5 p-2 lg:text-start  h-full text-center space-y-5">
+                      <h1 className="xl:text-2xl text-xl text-gray-600 font-semibold leading-10">
                         {item &&
                           item.programming &&
                           item.programming[clickindex] &&

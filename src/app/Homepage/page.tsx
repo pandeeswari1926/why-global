@@ -214,7 +214,7 @@ function Page() {
           </div>
           <div className="relative w-full h-full bg-cover  bg-no-repeat  ">
             <div className="absolute w-full -top-16 h-full -z-10">
-              <img src="./ce.png" alt="" />
+              <img src="./ce.png" alt="" className="w-full h-full" />
             </div>
             <div>
               {data &&
@@ -238,7 +238,7 @@ function Page() {
                       <img
                         src={item?.Photo?.asset?.url}
                         alt="Background Image"
-                        className="sm:w-full w-[90%] h-[90%] mx-auto sm:h-full md:object-cover object-cover"
+                        className="sm:w-full w-[90%] h-[90%] mx-auto sm:h-full object-cover"
                       />
                     </div>
                     <div className="flex flex-col gap-8 w-[100%] lg:p-10 p-5 lg:text-start text-center md:h-[60%]">

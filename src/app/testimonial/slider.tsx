@@ -52,10 +52,10 @@ function TestimonalsClient() {
 
 
   return (
-    <div className="bg-gray-100">
-      <div className="relative w-full pt-5 h-[70px]">
+    <div className="bg-gray-100 py-5">
+      {/* <div className="relative w-full pt-5 h-[70px]">
         <p className="w-[60%] h-[2px] absolute left-0 bottom-0 bg-mygreen"></p>
-      </div>
+      </div> */}
       <div className="w-full flex justify-center items-center  lg:justify-end lg:items-end py-5">
         <div className="flex lg:flex-row flex-col justify-center items-center w-full  lg:w-[95%]">
           <div className="z-10 rounded-xl drop-shadow-xl relative">
