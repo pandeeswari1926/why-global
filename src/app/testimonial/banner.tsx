@@ -28,7 +28,6 @@ interface AllData {
   MetaURL: string;
 }
 
-
 const Banner = () => {
   const [loader, setLoader] = useState(true);
   const [bannerData, setBannerData] = useState([]);
@@ -107,15 +106,21 @@ const Banner = () => {
                   </h1>
                 </div>
               </div>
+              <div className="">
+                <img
+                  src="./warn.png"
+                  alt="ceo"
+                  className=" -left-6 md:flex hidden bottom-10 absolute w-[50%]"
+                />
+              </div>
               <img
-                src="./warn.png"
+                src={item?.image?.asset?.url}
                 alt="ceo"
-                className=" -left-14 md:flex hidden bottom-5 absolute"
+                className="w-full lg:ml-28"
               />
-              <img src={item?.image?.asset?.url} alt="ceo" className="w-full ml-24" />
             </div>
             <div
-              className="text-white bg-white bg-opacity-20 absolute bottom-0 md:right-28 w-[70%] p-3 pl-8 rounded-t-xl"
+              className="text-white bg-white bg-opacity-20 absolute bottom-0 md:right-24 w-[70%] p-3 pl-10 rounded-t-xl"
               style={{ backdropFilter: "blur(8px)" }}
             >
               <h1 className="md:text-2xl text-lg font-semibold">
