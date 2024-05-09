@@ -290,14 +290,14 @@ useEffect(()=>{
                   Testimonials
                 </li>
               </Link>
-              <Link href={"/contactus"} className="w-fit">
+              {/* <Link href={"/contactus"} className="w-fit">
                 <li
                   className="p-2 mt-2 ml-2 w-full xs:w-48 flex items-end justify-center   cursor-pointer bg-white text-center text-primarycolor  shadow-2xl rounded-md hover:bg-primarycolor hover:text-white border border-b-4"
                   onClick={toggleNavbar}
                 >
                   GET FREE QUOTE
                 </li>
-              </Link>
+              </Link> */}
             </ul>
             {ShowOpencompany && (
               <div className="absolute todown  top-0 pt-5 pl-10 float-right ani2  h-full w-full overflow-hidden bg-primarycolor text-white">

@@ -148,14 +148,14 @@ function Page() {
             <div className="h-screen  w-full relative">
               <div className="w-full h-full bg-gray-500">
                 <img
-                  src="./WGS VIDEO (1).gif"
+                  src="./banner.gif"
                   alt="Background Image"
                   className="w-full h-[95%] items-center md:object-cover object-cover"
                 />
               </div>
 
-              <div className="absolute bottom-0 left-0 els w-full h-full"></div>
-              <div className="absolute right-0 bottom-0 w-full h-full wh"></div>
+              <div className="absolute bottom-0 left-0 els sm:w-full w-[90%] h-[50%]   sm:h-full"></div>
+              <div className="absolute right-0 bottom-0 w-full  h-[50%]   sm:h-full wh"></div>
               {data &&
                 data.Banner.map((item, index) => (
                   <div key={index}>
@@ -248,10 +248,10 @@ function Page() {
                       <h1 className="md:text-3xl text-xl text-center lg:text-start text-gray-500 font-semibold w-full ">
                         {item.SubTitle}
                       </h1>
-                      <p className="text-sm text-gray-500 w-full text-center lg:text-start">
+                      <p className="text-sm text-gray-500 w-full text-justify lg:text-start">
                         {item.content1}
                       </p>
-                      <div className="grid md:grid-cols-2 grid-cols-1 gap-3  mx-auto lg:mx-0   text-gray-500 ">
+                      <div className="grid  xs:grid-cols-2 grid-cols-1 lg:gap-3 gap-2  xs:mx-auto gap-x-10 sm:gap-x-60 justify-between  text-gray-500 ">
                         {item.list.map((items, indexs) => (
                           <div key={indexs}>
                             <div className="flex  items-center justify-start leading-tight gap-1">

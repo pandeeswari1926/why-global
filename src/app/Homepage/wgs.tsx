@@ -83,25 +83,27 @@ const Wgs = () => {
             Recent News
           </h2>
           <h2 className="font-semibold md:text-3xl text-xl text-gray-500">
-            WHAT&apos;S GOING ON IN OUR BLOG ?
+          Catch Up on the Latest News!
           </h2>
         </div>
         <div className="flex flex-col justify-center items-center pt-5 sm:pt-0">
-          <Link href="/news" className="bg-white shadow-md shadow-gray-300 p-2 text-[#FF8900]">
+        <Link href="/news" className="bg-white shadow-md shadow-gray-300 mx-auto w-fit lg:flex hidden p-2 text-[#FF8900]">
             View all
           </Link>
         </div>
       </div>
-      <section className="flex lg:flex-row flex-col justify-around px-5  items-center pt-10">
+     
+      <section className="flex h-fit lg:flex-row flex-col justify-around px-5 gap-5 items-center pt-10">
+     
         {dataItems &&
           dataItems.slice(0,3).map((item, index) => (
-            <div key={index} className="relative  md:px-10 lg:px-5">
+            <div key={index} className="relative  h-[550px] md:px-10 lg:px-5">
               <div className="sm:w-72 w-80 sm:mx-0 mx-auto h-80 relative">
                 <div className="absolute w-full via-slate-300 h-10 bottom-0  bg-gradient-to-b from-transparent to-white"></div>
                 <img
                   src={item?.image?.asset?.url}
                   alt=""
-                  className="w-full h-full object-cover"
+                  className="xs:w-full w-[90%] mx-auto h-full object-cover"
                 />
               </div>
               <div className=" sm:w-72 sm:h-44 w-[80%] absolute top-64 sm:-ml-8">
@@ -118,8 +120,12 @@ const Wgs = () => {
               </div>
             </div>
           ))}
+         
       </section>
-      <div className="flex flex-col justify-center items-center overflow-hidden py-5 pt-56 sm:pt-56">
+      <Link href="/news" className="bg-white shadow-md shadow-gray-300 mx-auto w-fit lg:hidden flex p-2 text-[#FF8900]">
+            View all
+          </Link>
+      <div className="flex flex-col justify-center items-center overflow-hidden py-5">
         <div className="relative w-full lg:h-[236px] h-[250px]  px-10">
           <img
             src='./bgorange1.png'
