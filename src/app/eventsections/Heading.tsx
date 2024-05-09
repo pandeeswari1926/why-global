@@ -65,7 +65,7 @@ const Headingsection = () => {
         </div>
         <div className="absolute w-full flex flex-col items-center justify-center top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2">
           <p className="xl:text-8xl md:text-6xl xs:text-3xl text-xl  bg-gradient-to-b from-white to-transparent text-transparent font-bold bg-clip-text">
-            {data && data.title}
+            {data && data.title}sss
           </p>
           <p className="text-white xl:text-4xl md:text-2xl xs:text-lg text-sm font-medium">
             {data && data.SubTitle}

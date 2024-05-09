@@ -615,4 +615,25 @@
       opacity: 1;
     }
   }
+
+  .text-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /* Custom CSS for padding */
+  .text-container {
+    padding: 20px;
+  }
+  .wrapper li{
+    list-style: disc;
+    margin-bottom: 10px;
+    margin-left: 40px;
+  }
+  .wrapper p{
+    margin-bottom: 20px;
+  }
+  .wrapper h5{
+    margin-bottom: 10px;
+  }
   

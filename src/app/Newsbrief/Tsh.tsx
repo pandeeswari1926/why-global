@@ -223,8 +223,8 @@ const Page=()=> {
               content={dataItems ? dataItems.MetaURL : ""}
             ></meta>
           </Helmet> */}
-          <div className="xs:p-5 p-7">
-            <h1 className="py-5 font-bold text-4xl xs:mx-0 mx-auto relative flex flex-col w-fit">
+          <div className="xs:p-5 p-7 ">
+            <h1 className="py-5 font-bold text-4xl xs:mx-10 mx-auto relative flex flex-col w-fit">
               <span>{dataItems&&dataItems[0]?.category?.category}</span>
               <span className="w-full bg-primarycolor  h-[2px]"></span>
             </h1>
@@ -232,7 +232,7 @@ const Page=()=> {
               <div className="flex flex-col gap-5 lg:w-[70%] w-full h-full">
                 {dataItems && dataItems.map((item: any, index: any) => (
                     <div key={index} className="flex flex-col gap-5">
-                      <div className=" flex lg:flex-row flex-col gap-5 justify-between items-center">
+                      <div className=" flex lg:flex-row flex-col gap-5 justify-between items-center px-5">
                         <div className="lg:w-[50%] md:h-[400px] h-full lg:h-[250px] w-full ">
                           <img
                             src={item?.image?.asset?.url}
@@ -240,18 +240,18 @@ const Page=()=> {
                             className="w-full h-full "
                           />
                         </div>
-                        <div className="space-y-4 lg:w-[50%] flex flex-col gap-3 w-full  h-full">
+                        <div className="space-y-2 lg:w-[50%] flex flex-col gap-3 w-full  h-full">
                           <h1 className="font-bold text-xl line-clamp-2">{item.heading}</h1>
                           <p className="text-sm">{item.date}</p>
-                          <p className="text-justify text-sm line-clamp-3">{item.content}</p>
-                          <Link href={{pathname:'/IndiviNews',query:{name:item.slug.current}}} ><p className="text-base cursor-pointer hover:text-orange-600 duration-100 text-primarycolor">
+                          <p className="text-justify text-sm line-clamp-5">{item.content}</p>
+                          <Link href={{pathname:'/IndiviNews',query:{name:item.slug.current}}} ><p className="text-xs cursor-pointer hover:text-orange-600 duration-100 text-primarycolor ">
                             READ MORE
                           </p></Link>
                           
                         </div>
                       </div>
-                      <div>
-                        <hr className="w-full h-0.5 bg-gray-300" />
+                      <div className="px-5">
+                        <hr className="w-full h-0.5 bg-gray-300 " />
                       </div>
                     </div>
                   ))}
