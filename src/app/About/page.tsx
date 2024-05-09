@@ -116,6 +116,8 @@ function About() {
         title: string;
         Fourimage: [{ image: { asset: { url: string } } }];
         sideimage: string;
+        content:string
+        heading:string
       }
     ];
   }
@@ -202,7 +204,9 @@ asset->{
           Fourimage[]{
             image{asset->{url}},heading,content
           },
-          sideimage
+          sideimage,
+          content,
+          heading
         },
         infrastructure[]{
           title,
@@ -283,14 +287,14 @@ asset->{
             <div>
               <div>
                 <div className="lg:absolute top-10 lg:pl-16 left-4">
-                  <div className="flex flex-col gap-5 w-full  pt-10   lg:pt-0 lg:w-[80%] justify-center md:justify-start md:items-start items-center text-justify md:text-start lg:px-0 md:px-10 px-7">
+                  <div className="flex flex-col gap-3 w-full  pt-10   lg:pt-0 lg:w-[90%] justify-center md:justify-start md:items-start items-center text-justify md:text-start lg:px-0 md:px-10 px-7">
                     <p className="text-primarycolor font-semibold md:text-xl text-3xl lg:pt-6 ">
                       {item?.title1}
                     </p>
-                    <p className="font-semibold md:text-3xl text-gray-500">
+                    <p className="font-semibold md:text-3xl text-grayColor ">
                       {item?.title2}
                     </p>
-                    <p className=" text-md lg:w-[75%] ">
+                    <p className=" text-sm  ">
                       {item?.bannercontent}
                     </p>
                   </div>
@@ -303,7 +307,7 @@ asset->{
                         item.gif.map((list: any, listindex: any) => (
                           <div key={listindex} className="lg:w-[60%] w-[70%]">
                             <img alt="" src={list?.gif?.asset?.url} />
-                            <p className="text-center flex flex-row justify-center gap-1 items-center md:text-3xl text-xl font-semibold pt-4 text-gray-500">
+                            <p className="text-center flex flex-row justify-center gap-1 md:text-3xl text-xl font-semibold pt-4 text-gray-500">
                               <CountUp
                                 start={0}
                                 end={list?.percentage}
@@ -332,9 +336,9 @@ asset->{
             </div>
           </div>
         ))}
-      <div className="w-full flex flex-col justify-center items-center mt-7 ">
+      <div className="w-full flex flex-col justify-center items-center py-8 ">
         <div className="relative w-full">
-          <div className="flex lg:flex-row flex-col w-full  justify-center items-center gap-6 ">
+          <div className="flex lg:flex-row flex-col w-full  justify-center items-center lg:gap-16 gap-10">
             {alldata &&
               alldata.SecondSection.map((item: any, index: any) => (
                 <div
@@ -385,12 +389,12 @@ asset->{
                   alt=""
                 />
               </div>
-              <div className="lg:w-[50%] w-full lg:text-left text-justify p-5 ">
-                <p className="text-xl  font-semibold text-primarycolor text-center md:text-left">
+              <div className="lg:w-[50%] w-full lg:text-left text-justify p-5 lg:p-2 ">
+                <p className="text-xl uppercase font-semibold text-primarycolor text-center lg:text-left">
                   {item?.title}
                 </p>
                 <br></br>
-                <p className="md:text-3xl text-xl font-semibold text-gray-500 text-center md:text-left">
+                <p className="md:text-3xl text-xl font-semibold text-gray-500 text-center lg:text-left">
                   {item?.subTitle}
                 </p>
                 <br></br>
@@ -409,43 +413,50 @@ asset->{
         alldata.WorkProcess.map((item: any, index: any) => (
           <main
             key={index}
-            className="md:bg-summa  relative md:object-cover p-5 md:p-10 md:bg-cover md:flex md:flex-col"
-          >
-            <div>
+            className="  relative md:object-cover p-5 lg:p-10 md:bg-cover md:flex md:flex-col gap-5"
+          ><img src="./background1.png" className="w-full h-fit absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></img>
+            <div className="lg:pl-5">
               <h3 className="text-[#FF8900] lg:text-start text-center   font-bold">
                 {item?.title}
               </h3>
-              <h2 className=" font-medium pt-3 lg:text-start text-center lg:text-2xl">
+              <h2 className=" font-semibold pt-3 lg:text-start text-center text-grayColor lg:w-[50%] lg:text-[30px] md:leading-[50px]">
                 {item?.subTitle}
               </h2>
             </div>
 
-            <div className="grid md:grid-cols-3 md:p-10 p-5  grid-cols-1 lg:gap-16 gap-5 h-full w-full items-center  justify-items-center lg:px-20 ">
+            <div className="grid md:grid-cols-3  p-5  grid-cols-1 lg:gap-16 gap-5 h-full w-full items-center  justify-items-center lg:px-16 ">
               {item &&
                 item.card &&
                 item.card.map((item: any, index: any) => (
                   <div
                     key={index}
-                    className="lg:w-[90%] h-full relative drop-shadow-2xl"
+                    className="largewidth:w-[80%]  sm:w-[90%] h-full relative drop-shadow-2xl"
                   >
-                    <div
-                      className={`border-2 ${
-                        index % 2 != 0 ? "lg:mt-10" : "mt-0"
-                      } text-center bg-white rounded-tr-3xl`}
+                    <div className="relative"> <div className="bg-white border-2 w-fit h-fit p-1 px-3 rounded-full absolute -right-4 top-14 md:top-12 z-20">
+                      {index + 1}
+                    </div>
+                    <div style={{clipPath:'polygon(87% 0, 100% 14%, 100% 100%, 0 100%, 0 0)'}}
+                      className={`${
+                        index % 2 != 0 ? "lg:mt-8" : "lg:-mt-5"
+                      } text-center lg:h-full bg-white relative rounded-tr-3xl`}
                     >
+                      
                       <img
                         src={item?.gif?.asset?.url}
                         alt="project"
-                        className="w-[80%]"
+                        className="w-[50%] mx-auto"
                       />
-                      <h1 className="xl:font-bold font-medium xl:p-3 lg:p-1 p-3 ">
+                      <div className="flex flex-col  p-5">
+                      <h1 className="font-semibold text-grayColor ">
                         {item?.cardTitle}
                       </h1>
-                      <p className="p-3 text-xs">{item?.content}</p>
+                      <p className=" text-xs text-gray-400 p-3">{item?.content}</p>
+                      </div>
+                     
                     </div>
-                    <div className="bg-white border-2 w-fit h-fit p-1 px-3 rounded-full absolute -right-4 lg:bottom-48 md:bottom-40 bottom-36">
-                      {index + 1}
                     </div>
+                   
+                   
                   </div>
                 ))}
             </div>
@@ -456,8 +467,8 @@ asset->{
       {alldata &&
         alldata.ourCulture &&
         alldata.ourCulture.map((item: any, index: any) => (
-          <div key={index} className="mt-5 relative ">
-            <img src="./round.png" className="absolute top-0 left-0" alt="" />
+          <div key={index} className=" relative ">
+            <img src="./round.png" className="absolute top-0  left-0" alt="" />
             <img
               src="./round2.png"
               className="absolute -z-10 -top-10  lg:left-1/2 left-3/4 xs:block hidden"
@@ -486,7 +497,7 @@ asset->{
                               <span className="text-center text-primarycolor md:text-lg sm:text-xl text-lg font-semibold">
                                 {list?.heading}
                               </span>
-                              <span className="text-center text-sm lg:w-[80%] w-full mx-auto line-clamp-2">
+                              <span className="text-center text-sm lg:w-[80%] w-full mx-auto ">
                                 {list?.content}
                               </span>
                             </p>
@@ -503,12 +514,10 @@ asset->{
                     />
                     <p className="flex flex-col absolute w-full bottom-2 left-1/2 -translate-x-1/2 text-white px-2">
                       <span className="text-center text-primarycolor md:text-lg sm:text-xl text-lg font-semibold">
-                        Ethical Responsibility
+                      {item?.heading}
                       </span>
                       <span className="text-center text-sm lg:w-[90%] w-full mx-auto">
-                        WHY Global Services thrives on fearless innovation. Our
-                        culture embraces creativity,encourages out-of-the-box
-                        thinking.
+                      {item?.content}
                       </span>
                     </p>
                   </div>
@@ -521,45 +530,61 @@ asset->{
       {alldata &&
         alldata.teamMember &&
         alldata.teamMember.map((item: any, index: any) => (
-          <div key={index} className="p-10">
-            <p className="text-primarycolor font-semibold text-lg">
+          <div style={{backgroundImage:`url(./b1.png)`}} className="py-10 flex justify-end">
+          <div  key={index} className="bg-white px-5 flex flex-col drop-shadow-2xl rounded-l-lg   h-full py-10 w-full lg:w-[95%]">
+            <p className="text-primarycolor lg:text-start text-center font-semibold pl-5 text-lg">
               {item?.title}
             </p>
-            <h1 className="text-xl font-semibold text-gray-500">
+            <h1 className="md:text-2xl xs:text-xl lg:text-start text-center font-semibold pl-5 text-gray-500">
               {item?.subTitle}
             </h1>
-            <Slider {...settings} className="overflow-hidden">
-              {item &&
-                item.card.map((profile: any, index: any) => (
-                  <div key={index}>
-                    <div className="flex justify-center lg:flex-row flex-col w-[90%] relative mx-auto  pt-8">
-                      <div className="lg:w-[80%] w-full relative">
-                        <img
-                          src="./style2.png"
+            <div className="pt-5">
+            <div className="">
+              <Slider {...settings} className="overflow-hidden py-8 flex ">
+               {item &&
+                item.card.map((profile: any, index: any) => ( 
+                  
+
+                <div className="md:px-5 w-full">
+                  <div className="w-full h-full flex lg:flex-row flex-col justify-center items-center gap-5">
+                    <div className="lg:w-[300px] w-full flex  justify-center items-center h-52 relative">
+                    <img
+                          src="./fine.png"
                           alt="style2"
-                          className="lg:w-[80%] w-full"
+                          className=" absolute -z-10 right-0 w-full object-contain h-full"
                         />
-                        <img
+                             <div className="relative lg:w-full ">
+                              <div  className="w-[170px] relative mx-auto h-48 ">
+                              
+                              <img style={{clipPath:'polygon(18% 0, 100% 1%, 100% 100%, 14% 100%, 5% 33%)'}}
                           src={profile?.image?.asset?.url}
                           alt="Profile1"
-                          className="lg:w-[70%] w-[80%] top-2 absolute"
-                        />
-                        <img
-                          src="./style3.png"
-                          alt="style2"
-                          className="absolute sm:w-[20%] w-[30%] top-0 right-[80%]"
-                        />
-                      </div>
-                      <div className="w-full lg:pt-2">
-                        <p className="lg:text-left lg:text-md font-normal text-[#5D5D5D] text-justify">
+                          className=" w-full h-full   rounded-lg -ml-2 -mt-6 "
+                        /><img
+                        src="./minus.png"
+                        alt="style2"
+                        className="absolute top-3 shadow-2xl w-6 left-2"
+                       />
+                              </div>
+                            
+                        
+                             </div>
+
+                        
+
+                    </div>
+                    <div className="w-full ">
+                     <div className="w-full lg:pt-2">
+                        <p className="lg:text-left px-2 text-xs lg:text-md font-normal text-[#5D5D5D] text-justify">
                           {profile?.content}
                         </p>
+                        <div></div>
                         <hr className=" h-0.5 bg-[#FF8900] mt-4 " />
-                        <div className="flex md:flex-row flex-col justify-between">
-                          <div className="flex flex-col justify-start ">
-                            <p className="">{profile?.name}</p>
+                        <div className="flex lg:flex-row flex-col mt-3 justify-center lg:items-start items-center lg:justify-between">
+                          <div className="flex flex-col justify-center lg:items-start items-center lg:justify-start ">
+                            <p className="">{profile?.role}</p>
                             <p className="  text-[#FF8900]">
-                              {profile.role}
+                              {profile?.name}
                             </p>
                           </div>
                           <div className="  md:pl-0 md:w-[30%]">
@@ -570,92 +595,25 @@ asset->{
                             />
                           </div>
                         </div>
+                        
                       </div>
                     </div>
-                  </div>
-                ))}
 
-              {/* <div>
-            <div className="flex justify-center lg:flex-row flex-col w-[90%] relative mx-auto  pt-8">
-              <div className="lg:w-[80%] w-full relative">
-                <img
-                  src='./style2.png'
-                  alt="style2"
-                  className="lg:w-[80%] w-full"
-                />
-                <img
-                  src='./profile1.png'
-                  alt="Profile1"
-                  className="lg:w-[70%] w-full top-2 absolute"
-                />
-                <img
-              src='./style3.png'
-                  alt="style2"
-                  className="absolute sm:w-[20%] w-[30%] top-0 right-[80%]"
-                />
-              </div>
-              <div className="w-full lg:pt-2">
-                <p className="lg:text-left lg:text-md font-normal text-[#5D5D5D] text-justify">
-                  Virtual reality environments offer a way to ingrain knowledge
-                  more deeply and quickly compared to traditional methods. By
-                  prioritizing spatial information, VR helps learners map their
-                  understanding effectively.
-                </p>
-                <hr className=" h-0.5 bg-[#FF8900]  mt-4 " />
-                <div className="flex md:flex-row flex-col justify-between">
-                  <div>
-                    <p className="text-center">MARK</p>
-                    <p className=" text-center text-[#FF8900]">CEO</p>
                   </div>
-                  <div className="justify-center items-center pl-[10%] md:pl-0 md:w-[30%] mx-auto">
-                  <img src='./stars.png' alt="" className=" md:mt-5" />
-                  </div>
+
                 </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div className="flex justify-center lg:flex-row flex-col w-[90%] relative mx-auto  pt-8">
-              <div className="lg:w-[80%] w-full relative">
-              <img
-                  src='./style2.png'
-                  alt="style2"
-                  className="lg:w-[80%] w-full"
-                />
-                <img
-                  src='./profile1.png'
-                  alt="Profile1"
-                  className="lg:w-[70%] w-full top-2 absolute"
-                />
-                <img
-              src='./style3.png'
-                  alt="style2"
-                  className="absolute sm:w-[20%] w-[30%] top-0 right-[80%]"
-                />
-              </div>
-              <div className="w-full lg:pt-2">
-                <p className="lg:text-left lg:text-md font-normal text-[#5D5D5D] text-justify">
-                  Virtual reality environments offer a way to ingrain knowledge
-                  more deeply and quickly compared to traditional methods. By
-                  prioritizing spatial information, VR helps learners map their
-                  understanding effectively.
-                </p>
-                <hr className=" h-0.5 bg-[#FF8900]  mt-4 " />
-                <div className="flex md:flex-row flex-col justify-between">
-                  <div>
-                    <p className="text-center">MARK</p>
-                    <p className=" text-center text-[#FF8900]">CEO</p>
-                  </div>
-                  <div className="justify-center items-center pl-[10%] md:pl-0 md:w-[30%] mx-auto">
-                  <img src='./stars.png' alt="" className=" md:mt-5" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> */}
-            </Slider>
-          </div>
+          
+
+            
+            
+          
         ))}
+        
+        </Slider></div>
+            </div>
+           
+            
+        </div></div>))}
       <div className="flex flex-col justify-center items-center overflow-hidden py-5">
         <div className="relative w-full lg:h-[236px] h-[250px]  px-10">
           <img
