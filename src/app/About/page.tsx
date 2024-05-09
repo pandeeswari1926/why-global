@@ -228,8 +228,8 @@ asset->{
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 2,
+    slidesToShow: 3,
+    slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 1500,
     responsive: [
@@ -238,6 +238,18 @@ asset->{
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+          arrows: false,
+          autoplay: true,
+          autoplaySpeed: 2000,
+        },
+      },
+      {
+        breakpoint: 1500,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
           infinite: true,
           dots: true,
           arrows: false,
@@ -432,13 +444,13 @@ asset->{
                     key={index}
                     className="largewidth:w-[80%]  sm:w-[90%] h-full relative drop-shadow-2xl"
                   >
-                    <div className="relative"> <div className="bg-white border-2 w-fit h-fit p-1 px-3 rounded-full absolute -right-4 top-14 md:top-12 z-20">
+                    <div className="relative"> <div className="bg-white border-2 w-fit h-fit p-1 px-3 rounded-full absolute text-primarycolor -right-4 top-14 md:top-12 z-20">
                       {index + 1}
                     </div>
                     <div style={{clipPath:'polygon(87% 0, 100% 14%, 100% 100%, 0 100%, 0 0)'}}
                       className={`${
                         index % 2 != 0 ? "lg:mt-8" : "lg:-mt-5"
-                      } text-center lg:h-full bg-white relative rounded-tr-3xl`}
+                      } text-center  lg:h-full bg-white relative rounded-tr-3xl`}
                     >
                       
                       <img
@@ -530,7 +542,7 @@ asset->{
       {alldata &&
         alldata.teamMember &&
         alldata.teamMember.map((item: any, index: any) => (
-          <div style={{backgroundImage:`url(./b1.png)`}} className="py-10 flex justify-end">
+          <div key={index} style={{backgroundImage:`url(./b1.png)`}} className="py-10 flex justify-end">
           <div  key={index} className="bg-white px-5 flex flex-col drop-shadow-2xl rounded-l-lg   h-full py-10 w-full lg:w-[95%]">
             <p className="text-primarycolor lg:text-start text-center font-semibold pl-5 text-lg">
               {item?.title}
@@ -545,8 +557,8 @@ asset->{
                 item.card.map((profile: any, index: any) => ( 
                   
 
-                <div className="md:px-5 w-full">
-                  <div className="w-full h-full flex lg:flex-row flex-col justify-center items-center gap-5">
+                <div key={index} className="md:px-5 w-full">
+                  <div className="w-full h-full flex lg:flex-row flex-col justify-center items-center gap-3">
                     <div className="lg:w-[300px] w-full flex  justify-center items-center h-52 relative">
                     <img
                           src="./fine.png"
@@ -563,7 +575,7 @@ asset->{
                         /><img
                         src="./minus.png"
                         alt="style2"
-                        className="absolute top-3 shadow-2xl w-6 left-2"
+                        className="absolute top-3 shadow-2xl w-6 left-1"
                        />
                               </div>
                             
@@ -573,14 +585,14 @@ asset->{
                         
 
                     </div>
-                    <div className="w-full ">
+                    <div className=" xs:w-[380px] w-full ">
                      <div className="w-full lg:pt-2">
                         <p className="lg:text-left px-2 text-xs lg:text-md font-normal text-[#5D5D5D] text-justify">
                           {profile?.content}
                         </p>
                         <div></div>
                         <hr className=" h-0.5 bg-[#FF8900] mt-4 " />
-                        <div className="flex lg:flex-row flex-col mt-3 justify-center lg:items-start items-center lg:justify-between">
+                        <div className="flex lg:flex-row flex-col mt-3 justify-center gap-2 lg:items-start items-center lg:justify-between">
                           <div className="flex flex-col justify-center lg:items-start items-center lg:justify-start ">
                             <p className="">{profile?.role}</p>
                             <p className="  text-[#FF8900]">
@@ -615,18 +627,18 @@ asset->{
             
         </div></div>))}
       <div className="flex flex-col justify-center items-center overflow-hidden py-5">
-        <div className="relative w-full lg:h-[236px] h-[250px]  px-10">
+        <div className="relative w-full lg:h-[236px] h-[250px] px-5  md:px-10">
           <img
             src="./bgorange1.png"
             alt=""
             className="w-full h-full object-cover"
           />
-          <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2  text-center space-y-10">
-            <h2 className="font-semibold sm:text-5xl text-3xl mb-4 text-white">
-              Connect with Us!
+          <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full  text-center space-y-10">
+            <h2 className="font-semibold sm:text-3xl w-full px-10  text-lg mb-4  text-white">
+            Elevate your online presence with us. Let's build success together!
             </h2>
             <Link href={"/contactus"}>
-              <button className="bg-white drop-shadow-xl text-[#FF8900] rounded-full sm:px-32 px-16 w-full py-4 font-semibold sm:text-xl text-lg">
+              <button className="bg-white drop-shadow-xl text-[#FF8900] rounded-full w-fit sm:px-24 px-8  py-4 font-semibold sm:text-xl text-sm">
                 Get Started
               </button>
             </Link>

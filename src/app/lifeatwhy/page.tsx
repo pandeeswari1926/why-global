@@ -135,13 +135,13 @@ function Why() {
             }}
             className=" absolute bottom-0 left-0  z-10  w-full h-full"
           ></div>
-          <div className="absolute h-full bg-black bg-opacity-50 w-full"></div>
+          <div className="absolute h-full bg-black bg-opacity-70 w-full"></div>
           <div className="w-full h-full ">
-            <img src="./lifeAtWHY.gif" className="w-full h-full object-cover" alt="" />
+            <img src="./arut.gif" className="w-full h-full object-cover" alt="" />
           </div>
-          <div className="absolute top-5 sm:left-20 left-10">
+          <div className="absolute top-7 sm:left-20 left-10">
             <img src={bannerdata?.titleImage?.asset?.url} alt="" />
-            <p className="text-white w-[60%] xs:-mt-10 text-sm">
+            <p className="text-white w-[60%]  xs:-mt-14 lg:leading-6 text-sm">
               {bannerdata?.content}
             </p>
           </div>
@@ -149,7 +149,7 @@ function Why() {
       </div>
 
       {/* second section */}
-      <div className=" lg:h-[500px] h-full bg-gray-200 lg:p-10 p-6   overflow-hidden relative">
+      <div className=" lg:h-[500px] h-full bg-gray-100 lg:p-10 p-5   overflow-hidden relative">
         <div
           style={{
             clipPath: "polygon(76% 84%, 100% 50%, 100% 100%, 0% 100%)",
@@ -157,11 +157,11 @@ function Why() {
           }}
           className=" absolute bottom-0 right-0 lg:w-[80%] w-[30%] h-[25%] lg:h-full"
         ></div>
-        <div className="min-w-3/4  lg:w-1/2 w-full h-full   flex flex-col justify-center gap-5">
+        <div className="  lg:w-1/2 w-full h-full lg:pl-10   flex flex-col justify-center gap-5">
           <h3 className="text-lg text-[#FF9315] font-bold lg:text-left text-center">
             {workprocess?.heading}
           </h3>
-          <h1 className="md:text-3xl text-lg text-[#686868]  md:leading-10 font-semibold md:text-left text-center ">
+          <h1 className="md:text-3xl sm:text-lg text-sm text-[#686868]  md:leading-10 font-semibold md:text-left text-center ">
             {workprocess?.subHeading}
           </h1>
           <div className="space-y-4 text-gray-500">
@@ -175,7 +175,7 @@ function Why() {
             ))}
           </div>
         </div>
-        <div className=" w-[700px] h-full lg:flex hidden    absolute  -right-16 bottom-0">
+        <div className=" w-[650px] h-full lg:flex hidden    absolute  -right-20 bottom-0">
           <img
             src={workprocess?.image?.asset?.url}
             alt="our work process"
@@ -195,8 +195,8 @@ function Why() {
             <img key={ind} src={item?.image?.asset?.url} alt="whysquad" />
           ))}
         </div>
-        <h1 className="text-center text-[#FF9315] text-2xl font-font p-5">
-          #WHYsquad
+        <h1  className="text-center text-[#FF9315] xs:text-4xl text-2xl  p-5">
+          <em>#WHYsquad</em>
         </h1>
       </div>
 
@@ -207,12 +207,11 @@ function Why() {
             alt=""
             className="w-full h-full object-cover"
           />
-          <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2  text-center space-y-10">
-            <h2 className="font-semibold sm:text-4xl xs:text-2xl text-xl mb-5 text-white">
-              Connect with Us!
-            </h2>
+          <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full  text-center space-y-10">
+            <h2 className="font-semibold sm:text-3xl w-full px-10  text-lg mb-4  text-white">
+            Do you have any project to working with?</h2>
             <Link href={'/contactus'}>
-            <button className="bg-white drop-shadow-xl text-[#FF8900] rounded-full sm:px-28  w-full py-4 font-semibold sm:text-xl text-sm">
+            <button className="bg-white drop-shadow-xl text-[#FF8900] rounded-full w-fit sm:px-24 px-8  py-4 font-semibold sm:text-xl text-sm">
               Get Started
             </button></Link>
             
