@@ -59,8 +59,8 @@ const WebDesign: React.FC = () => {
               </p>
             ))}
           </div>
-          <div className="w-full h-full">
-            <img src={item?.image?.asset?.url} alt="" className="w-full" />
+          <div className="w-full h-full ">
+            <img src={item?.image?.asset?.url} alt="" className="w-full h-full" />
           </div>
         </div>
       ))}
