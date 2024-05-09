@@ -130,9 +130,9 @@ function Video() {
               </p>
             </div>
             <div className="w-full h-full -z-10  absolute top-0">
-              <img alt="" src="./videogif.gif" className="w-full object-cover h-full" />
+              <img alt="" src="./infrastructure.gif" className="w-full object-cover h-full" />
             </div>
-            <div className="bg-black -z-10   opacity-65 absolute top-0 w-full h-full"></div>
+            <div className="bg-black -z-10 opacity-50 absolute top-0 w-full h-full"></div>
           </div>
         ))}
     </div>
