@@ -232,7 +232,7 @@ const Page=()=> {
               <div className="flex flex-col gap-5 lg:w-[70%] w-full h-full">
                 {dataItems && dataItems.map((item: any, index: any) => (
                     <div key={index} className="flex flex-col gap-5">
-                      <div className=" flex lg:flex-row flex-col gap-5 justify-between items-center px-5">
+                      <div className=" flex lg:flex-row flex-col gap-5 justify-between items-center lg:px-5">
                         <div className="lg:w-[50%] md:h-[400px] h-full lg:h-[250px] w-full ">
                           <img
                             src={item?.image?.asset?.url}
@@ -250,13 +250,13 @@ const Page=()=> {
                           
                         </div>
                       </div>
-                      <div className="px-5">
+                      <div className="lg:px-5">
                         <hr className="w-full h-0.5 bg-gray-300 " />
                       </div>
                     </div>
                   ))}
               </div>
-              <div className="lg:w-[30%] lg:sticky top-28 w-full flex lg:flex-col sm:flex-row flex-col  h-full space-y-4">
+              <div className="lg:w-[30%] mt-5 lg:mt-0  lg:sticky top-28 w-full flex lg:flex-col sm:flex-row flex-col  h-full space-y-4">
                 <div className="lg:w-full sm:w-[50%] w-full space-y-5">
                   <div className="flex flex-row gap-5">
                     <button

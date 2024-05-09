@@ -204,7 +204,7 @@ asset->{
           Fourimage[]{
             image{asset->{url}},heading,content
           },
-          sideimage,
+          sideimage{asset->{url}},
           content,
           heading
         },
@@ -294,7 +294,7 @@ asset->{
         alldata.Banner.map((item: any, index: any) => (
           <div
             key={index}
-            className="w-full h-[900px] md:h-[1200px] lg:h-[550px] xl:h-[650px] lg:bg-contain cover  relative bg-no-repeat"
+            className="w-full h-full  lg:h-[550px] xl:h-[650px] lg:bg-contain cover  relative bg-no-repeat pb-5"
           >
             <div>
               <div>
@@ -303,10 +303,10 @@ asset->{
                     <p className="text-primarycolor font-semibold md:text-xl text-3xl lg:pt-6 ">
                       {item?.title1}
                     </p>
-                    <p className="font-semibold md:text-3xl text-grayColor ">
+                    <p className="font-semibold sm:text-base text-sm md:text-3xl text-grayColor ">
                       {item?.title2}
                     </p>
-                    <p className=" text-sm  ">
+                    <p className=" text-sm  text-gray-500">
                       {item?.bannercontent}
                     </p>
                   </div>
@@ -337,20 +337,20 @@ asset->{
                   </div>
                 </div>
               </div>
-              <div className="w-full h-full bottom-0 tri absolute"></div>
+              <div className="w-full h-full lg:block hidden bottom-0 tri absolute"></div>
               <div className="w-full h-full bottom-0 left-0 shadow-lg whitetri absolute"></div>
               <div className="absolute bottom-0 right-0  w-[45%] md:w-[40%] lg:w-[42%] z-10 lg:block hidden">
                 <img alt="" src={item?.BannerImage?.asset?.url} />
               </div>
-              <div className="absolute md:block hidden lg:top-[30%] md:top-[50%] bottom-[25%] right-0  w-[50%] md:w-[40%] lg:w-[40%]">
+              <div className="absolute lg:block hidden lg:top-[30%] md:top-[50%] bottom-[25%] right-0  w-[50%] md:w-[40%] lg:w-[40%]">
                 <img alt="" src="./line.png" />
               </div>
             </div>
           </div>
         ))}
-      <div className="w-full flex flex-col justify-center items-center py-8 ">
+      <div className="w-full flex flex-col justify-center items-center py-10">
         <div className="relative w-full">
-          <div className="flex lg:flex-row flex-col w-full  justify-center items-center lg:gap-16 gap-10">
+          <div className="flex md:flex-row flex-wrap w-full  justify-center items-center lg:gap-16 gap-10">
             {alldata &&
               alldata.SecondSection.map((item: any, index: any) => (
                 <div
@@ -401,15 +401,13 @@ asset->{
                   alt=""
                 />
               </div>
-              <div className="lg:w-[50%] w-full lg:text-left text-justify p-5 lg:p-2 ">
+              <div className="lg:w-[50%] w-full lg:text-left text-justify p-5 md:p-8 lg:p-2 space-y-2 md:space-y-4">
                 <p className="text-xl uppercase font-semibold text-primarycolor text-center lg:text-left">
                   {item?.title}
                 </p>
-                <br></br>
-                <p className="md:text-3xl text-xl font-semibold text-gray-500 text-center lg:text-left">
+                <p className="md:text-3xl  font-semibold text-gray-500 text-center lg:text-left">
                   {item?.subTitle}
                 </p>
-                <br></br>
                 {item &&
                   item.content.map((list: any, index: any) => (
                     <p key={index} className="text-gray-400 mb-5">
@@ -428,10 +426,10 @@ asset->{
             className="  relative md:object-cover p-5 lg:p-10 md:bg-cover md:flex md:flex-col gap-5"
           ><img src="./background1.png" className="w-full h-fit absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></img>
             <div className="lg:pl-5">
-              <h3 className="text-[#FF8900] lg:text-start text-center   font-bold">
+              <h3 className="text-[#FF8900] lg:text-start text-center text-xl  font-bold">
                 {item?.title}
               </h3>
-              <h2 className=" font-semibold pt-3 lg:text-start text-center text-grayColor lg:w-[50%] lg:text-[30px] md:leading-[50px]">
+              <h2 className=" font-semibold pt-3 lg:text-start text-center text-grayColor lg:w-[50%]  md:text-3xl md:leading-[50px]">
                 {item?.subTitle}
               </h2>
             </div>
@@ -498,7 +496,7 @@ asset->{
                     <div className="w-full gap-2 grid grid-cols-1 lg:grid-cols-2">
                       {item &&
                         item.Fourimage.map((list: any, listItems: any) => (
-                          <div key={listItems} className=" w-full relative">
+                          <div key={listItems} className=" w-full  relative">
                             <img
                               alt=""
                               src={list?.image?.asset?.url}
@@ -520,7 +518,7 @@ asset->{
                   <div className="lg:w-[30%] w-full relative">
                     <div className="bg-black absolute top-0 left-0 w-full h-full opacity-50"></div>
                     <img
-                      src="./veenabox.jpg"
+                      src={item?.sideimage?.asset?.url}
                       className="w-full h-full"
                       alt=""
                     />
