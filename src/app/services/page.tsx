@@ -504,7 +504,7 @@ function Services() {
             <div className="md:relative mx-auto p-5">
               <img src={item?.image?.asset?.url} alt="" className="mx-auto" />
               <div>
-                <h1 className="text-gray-500 text-justify md:absolute right-5 md:w-[45%] lg:bottom-4 -bottom-5 mx-auto p-5">
+                <h1 className="text-gray-500 text-justify text-sm md:absolute right-5 md:w-[45%] lg:bottom-14 -bottom-5 mx-auto p-5">
                   {item?.content}
                 </h1>
               </div>
