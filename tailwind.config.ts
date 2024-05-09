@@ -34,7 +34,8 @@ const config: Config = {
         "xs": '431px',
         "xs2": '530px',
         "leawidth":"320px",
-        "lastwidth":'350px'
+        "lastwidth":'350px',
+        'largewidth':'1050px'
       },
       fontSize: {
         "2xs": '0.7rem',
@@ -48,6 +49,7 @@ const config: Config = {
         abhis: "#0D5D50",
         kush: "#EECF64",
         primarycolor: '#FF9315',
+        grayColor:'#686868'
       }
     },
   },

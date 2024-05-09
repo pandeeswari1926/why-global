@@ -62,7 +62,7 @@ function TestimonalsClient() {
             <img
               src={sliderdata[loops]?.image?.asset?.url}
               alt=""
-              className="lg:w-[550px] rounded-xl lg:h-[450px] z-40 w-[250px]  sm:w-[300px]   bg-no-repeat bg-cover bg-center"
+              className="lg:w-[500px] rounded-xl lg:h-[400px] z-40 w-[250px]  sm:w-[300px]   bg-no-repeat bg-cover bg-center"
             />
             <div className="absolute top-1/2 bg-white p-3 sm:-right-8 -right-0 border border-primarycolor rounded-lg">
               <FaFaceSmileBeam className="sm:size-10 size-5 text-primarycolor" />
@@ -74,7 +74,7 @@ function TestimonalsClient() {
                 size={80}
                 className="text-white lg:flex hidden opacity-60"
               />
-              <div className="lg:w-[550px] min-h-64 w-full relative lg:mx-0 mx-auto flex -mt-5 flex-col justify-around gap-3 rounded-lg bg-white drop-shadow-2xl lg:p-10 p-6">
+              <div className="lg:w-[550px] min-h-60 w-full relative lg:mx-0 mx-auto flex -mt-5 flex-col justify-around gap-3 rounded-lg bg-white drop-shadow-2xl lg:p-10 p-6">
                 <BiSolidQuoteAltLeft
                   size={30}
                   className=" text-primarycolor lg:hidden hidden xs:flex -top-4 left-0 absolute"
@@ -87,6 +87,8 @@ function TestimonalsClient() {
                 </div>
                 <p className="text-sm text-justify ">{sliderdata[loops]?.content}</p>
                 <div className="flex gap-2 ">
+                  <FaStar className="text-primarycolor"/>
+                  <FaStar className="text-primarycolor"/>
                   <FaStar className="text-primarycolor"/>
                   <FaStar className="text-primarycolor"/>
                   <FaStar className="text-primarycolor"/>

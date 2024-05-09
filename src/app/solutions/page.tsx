@@ -6,7 +6,7 @@ import Loader from "../home/Loader";
 import Link from "next/link";
 
 function Solutions() {
-  const [showActiveContent, setShowActiveContent] = useState("SignIn");
+  const [showActiveContent, setShowActiveContent] = useState("Sign In");
   const [loader, setLoader] = useState(true);
   const toggleContent = (content: React.SetStateAction<string>) => {
     setShowActiveContent(content);
@@ -235,7 +235,7 @@ function Solutions() {
       {alldata &&
         alldata.learning.map((item: any, index: any) => (
           <div key={index} className="grid grid-cols-1 md:grid-cols-2 md:px-14">
-            <div className="flex flex-col justify-center gap-5 p-5 md:p-10 ">
+            <div className="flex flex-col justify-center gap-5 p-5 lg:p-10 ">
               <h1 className="uppercase text-sm sm:text-base text-orange-500 font-semibold md:text-left text-center">
                 {item?.heading}
               </h1>
@@ -285,7 +285,7 @@ function Solutions() {
                   item.card1.map((list: any, indexlist: any) => (
                     <div
                       key={indexlist}
-                      className={`lg:w-56 h-fit relative ${
+                      className={`lg:w-52 h-fit relative ${
                         indexlist == 1 ? "lg:ml-48" : "lg:ml-14"
                       } `}
                     >
@@ -302,7 +302,7 @@ function Solutions() {
                     </div>
                   ))}
 
-                <div className="flex flex-col justify-center lg:block hidden ml-24 mt-5">
+                <div className="flex flex-col justify-center lg:block hidden ml-16 mt-5">
                   <h1 className="text-lg text-[#FF9315] font-semibold">
                     YOU MUST KNOW THE
                   </h1>
@@ -326,7 +326,7 @@ function Solutions() {
                   item.card2.map((list: any, indexlist: any) => (
                     <div
                       key={indexlist}
-                      className={`lg:w-56 h-full relative ${
+                      className={`lg:w-52 h-full relative ${
                         indexlist == 1 ? "lg:ml-64" : "lg:ml-6 lg:pl-0"
                       }`}
                     >
@@ -408,7 +408,7 @@ function Solutions() {
       <div className="relative bg-customer  h-fit  w-full">
         <div className="bg-gray-100 absolute top-0 w-full h-[70%]"></div>
         <div className="lg:w-[600px] md:w-[350px]  w-[200px] h-[200px] bg-[#FF9315] top-0 absolute right-0 text-center text-white  lg:text-3xl md:text-base text-xs font-bold sm:pt-7 p-5">
-          Customer Services
+          CUSTOMER SERVICES
         </div>
         {alldata &&
           alldata.customerServices &&
@@ -449,7 +449,7 @@ function Solutions() {
                   {item?.faculty[0].title}
                 </button>
               </div>
-              {showActiveContent === "SignIn" && (
+              {showActiveContent === "Sign In" && (
                 <div className="bg-white md:w-[80%] w-full xl:w-[90%]  p-10 xl:px-32 rounded-md">
                   <img
                     src={
@@ -459,6 +459,7 @@ function Solutions() {
                     alt=""
                     className="w-full border border-black rounded-md"
                   />
+                 
                 </div>
               )}
               {showActiveContent === "Dashboard" && (

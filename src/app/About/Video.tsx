@@ -103,7 +103,7 @@ function Video() {
     getdata();
   }, []);
   return (
-    <div className="py-5">
+    <div className="py-10">
       {alldata &&
         alldata.infrastructure &&
         alldata.infrastructure.map((item: any, index: any) => (
@@ -115,7 +115,7 @@ function Video() {
                 </p>
                 <p className="text-sm text-center text-md">{item?.subtitle}</p>
               </div>
-              <Link href={item?.link}>
+              <Link target="_blank" href={item?.link}>
                 <div className="w-20 h-20">
                   <img
                     src="./yicon.png"
