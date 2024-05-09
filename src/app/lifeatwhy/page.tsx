@@ -141,7 +141,7 @@ function Why() {
           </div>
           <div className="absolute top-7 sm:left-20 left-10">
             <img src={bannerdata?.titleImage?.asset?.url} alt="" />
-            <p className="text-white w-[60%]  xs:-mt-14 lg:leading-6 text-sm">
+            <p className="text-white leawidth:w-[60%]  xs:-mt-14 lg:leading-6 text-sm">
               {bannerdata?.content}
             </p>
           </div>

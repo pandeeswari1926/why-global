@@ -123,11 +123,12 @@ function Helicopter() {
         type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
       ></link>
-      <div className="bg-custom w-full h-full bg-no-repeat relative lg:p-10">
+      <div className="bg-custom w-full h-full bg-no-repeat relative ">
         {data &&
           data.review.map((item: any, index: any) => (
-            <div key={index} className="relative z-10">
-              <div className="w-full h-full lg:h-[470px] relative mx-auto lg:rounded-tl-[3rem] py-10 bg-white shadow-md shadow-gray-400 right-0 ">
+            <div key={index} className="relative w-full h-full z-10 py-5">
+              <div className="flex w-full justify-end items-end">
+                <div className="lg:w-[95%] w-full h-full lg:h-full relative  lg:rounded-tl-[3rem] py-5 bg-white shadow-md shadow-gray-400 right-0 ">
                 <div className="pt-6 lg:text-start text-center lg:pl-10">
                   <h1 className="lg:text-2xl text-xl text-primarycolor font-semibold pb-5">
                     {item.title}
@@ -150,7 +151,7 @@ function Helicopter() {
                             <img
                               src={items?.Photo?.asset?.url}
                               alt="Profile1"
-                              className="lg:w-[70%] w-full top-2 absolute"
+                              className="lg:w-[65%] w-[90%] mx-auto top-5 absolute"
                             />
                             <img
                               src="./style3.png"
@@ -185,24 +186,34 @@ function Helicopter() {
                   </Slider>
                 </div>
               </div>
+              </div>
+              
             </div>
           ))}
         {data &&
           data.technology.map((item, index) => (
             <div
               key={index}
-              className="w-full lg:h-fit relative  mx-auto right-0  mt-[15%] pt-10 lg:pt-0"
-            >
-              <div className="lg:block hidden oran bg-primarycolor -left-10 -top-[85%] absolute w-[60%]  h-[500px]"></div>
-              <div className="absolute pt-5 lg:pt-0 lg:-top-[30%] lg:left-10 xs:-top-[11%] -top-[9%] z-10 left-1/2 -translate-x-1/2 lg:-translate-x-0 ">
-                <p className="xs:text-xl text-sm pt-10 lg:text-white lg:text-start text-center text-black uppercase">
-                  Technologies
-                </p>
-                <p className="lg:text-3xl md:text-4xl xs:text-3xl text-base font-semibold lg:text-start text-center lg:text-white text-primarycolor">
-                  We Work With
-                </p>
-              </div>
-              <div className="w-full h-full bg-white flex lg:flex-row flex-col gap-5 justify-center rounded-md drop-shadow-lg  relative">
+              className="w-full lg:h-fit relative  mx-auto right-0  "
+            > <div style={{
+              backgroundImage:`url(./homeOrange.png)`
+            }} className="lg:block hidden  absolute w-[300px] bg-contain  -top-36 left-0  h-[200px]">
+
+          <div className="w-full h-full relative flex justify-center items-center">
+          <div className="flex flex-col absolute w-full top-1/4 left-1/2 -translate-x-[120px] ">
+          <p className="text-lg text-white font-semibold">TECHNOLOGIES</p>
+          <p className="text-2xl w-full text-white font-semibold">WE WORK WITH</p>
+        </div>
+          </div>
+        
+            </div>
+            <div className="w-full h-full relative">
+              <div className="w-full h-full bg-white flex lg:mt-28 z-20 lg:flex-row flex-col gap-5 justify-center rounded-md drop-shadow-lg  relative">
+             <div className="flex flex-col gap-3 justify-center items-center pt-5 lg:hidden">
+             <p className="text-xl text-primarycolor font-semibold">TECHNOLOGIES</p>
+          <p className="text-3xl  text-grayColor font-semibold">WE WORK WITH</p>
+              
+              </div>                 
                 <div className="lg:w-[50%] flex justify-center pt-5 lg:pt-0 items-center">
                   <img
                     src={item?.Photo?.asset?.url}
@@ -210,7 +221,7 @@ function Helicopter() {
                     className="lg:w-[80%] w-[90%] h-[90%] lg:h-[80%] mx-auto rounded-lg drop-shadow-lg  border-2 border-primarycolor"
                   />
                 </div>
-                <div className="lg:w-[50%] relative flex h-full flex-col mx-5 lg:mx-0">
+                <div className="lg:w-[50%] relative flex h-full flex-col  lg:mx-0">
                   <ul>
                     {data &&
                       data.technology.map((item, index) => (
@@ -242,7 +253,7 @@ function Helicopter() {
                         </div>
                       ))}
                   </ul>
-                  <div className="lg:p-5">
+                  <div className="lg:p-5 p-3">
                     <div className="lg:p-5 p-2 lg:text-start text-center space-y-5">
                       <h1 className="text-xl text-gray-600 font-semibold leading-10">
                         {item &&
@@ -276,6 +287,7 @@ function Helicopter() {
                     </div>
                   </div>
                 </div>
+              </div>
               </div>
             </div>
           ))}

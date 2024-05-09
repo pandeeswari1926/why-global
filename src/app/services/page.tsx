@@ -200,7 +200,7 @@ function Services() {
           <img className="w-full h-full" src="./sides.png" alt=""></img>
         </div>
 
-        <div className="lg:px-32 px-5 z-10 relative py-10 bg-gradient-to-b from-[#f9d5ad] to-transparent">
+        <div className="lg:px-28 px-5 z-10 relative py-10 bg-gradient-to-b from-[#f9d5ad] to-transparent">
           {alldata &&
             alldata.Banner &&
             alldata.Banner[0] &&
@@ -222,9 +222,9 @@ function Services() {
                     <img
                       src="./Rectangle 14.png"
                       alt=""
-                      className="lg:absolute bottom-20 -left-14 lg:-ml-0 -ml-10"
+                      className="lg:absolute  bottom-20 -left-14 lg:-ml-0 -ml-10"
                     />
-                    <div className="flex flex-col lg:absolute right-10 lg:top-6 lg:mt-0 mt-44 gap-5 rounded-ss-3xl bg-gradient-to-b from-slate-50 p-10 drop-shadow-2xl lg:border-0 border-2 ">
+                    <div style={{clipPath:'polygon(13% 0, 100% 0, 100% 20%, 100% 80%, 100% 100%, 0 100%, 0% 80%, 0 10%)'}} className="flex flex-col lg:absolute right-10 lg:top-6 lg:mt-0 mt-44 gap-5 rounded-ss-3xl bg-gradient-to-b from-slate-50 p-10 drop-shadow-2xl lg:border-0 border-2 ">
                       <input
                         type="text"
                         placeholder="Name *"

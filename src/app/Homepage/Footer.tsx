@@ -21,7 +21,7 @@ const Footer = () => {
     <>
       <article className="mt-5 lg:mt-20">
         <section className=" bg-black flex justify-end relative">
-          <section className="top-0 lg:w-[94%] lg:-mt-12 grid sm:grid-cols-2 md:flex justify-evenly place-items-center gap-3 bg-white lg:h-24 py-5 rounded-b-lg lg:rounded-br-none  lg:rounded-l-lg shadow-lg shadow-black px-5 w-full">
+          <section className="top-0 lg:w-[95%] lg:-mt-12 grid sm:grid-cols-2 md:flex justify-evenly place-items-center gap-3 bg-white lg:h-24 py-5  lg:rounded-lg mx-auto  shadow-lg shadow-black px-5 w-full">
             <Link
               href="mailto:contact@whyglobalservices.com"
               className="flex items-center gap-2"
