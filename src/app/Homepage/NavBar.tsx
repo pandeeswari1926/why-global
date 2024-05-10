@@ -6,6 +6,7 @@ import { faBars, faClose, faL } from "@fortawesome/free-solid-svg-icons";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { IoIosArrowForward } from "react-icons/io";
 import SanityClient from "../SanityClient";
+import { MdArrowBackIos } from "react-icons/md";
 interface Alldata{
   Categoryname:string
 }
@@ -133,13 +134,13 @@ useEffect(()=>{
                 </li>
               </div>
               {showDropdowncompany && (
-                <div className="absolute -ml-14 downup bg-white text-black mt-2 w-44 p-4 rounded shadow-lg">
-                  <div className="flex flex-col justify-center items-center text-sm leading-loose">
-                    <Link className="hover:text-primarycolor " href="/about">
+                <div className="absolute  downup bg-white text-black mt-2 w-44 p-4 rounded drop-shadow-md">
+                  <div className="flex flex-col pl-2 text-sm">
+                    <Link className="hover:text-primarycolor border-b pb-2" href="/about">
                       Who We Are
                     </Link>
                     <Link
-                      className="hover:text-primarycolor "
+                      className="hover:text-primarycolor border-b py-2.5"
                       href="/lifeatwhy"
                     >
                       Life At WHY
@@ -162,12 +163,12 @@ useEffect(()=>{
                 </Link>
               </div>
               {servicedropdown && (
-                <div className="absolute -ml-14 downup bg-white text-black mt-2 w-44 p-4 rounded shadow-lg">
-                  <div className="flex flex-col justify-center items-center text-sm leading-loose">
+                <div className="absolute  downup bg-white text-black mt-2 w-44 p-4 rounded ">
+                  <div className="flex flex-col pl-2 text-sm ">
                     {alldata&&alldata.map((item:any,index:any)=>(
                       <Link
                       key={index}
-                      className="hover:text-primarycolor "
+                      className="hover:text-primarycolor border-b py-2.5"
                       href={{
                         pathname: "/servicesections",
                         query: { name:item?.Categoryname },
@@ -304,9 +305,9 @@ useEffect(()=>{
                 <ul className="flex  flex-col justify-center text-left leading-loose">
                   <li
                     onClick={toggleShowcompany}
-                    className="hover:bg-white hover:text-primarycolor p-1 cursor-pointer"
+                    className="hover:bg-white hover:text-primarycolor p-1 cursor-pointer flex items-center gap-1"
                   >
-                    Back
+                     <MdArrowBackIos size={12}/>Back  
                   </li>
                   <Link
                     href="/about"
@@ -330,9 +331,9 @@ useEffect(()=>{
                 <ul className="flex  flex-col justify-center text-left leading-loose">
                   <li
                     onClick={toggleShowservice}
-                    className="hover:bg-white hover:text-primarycolor p-1 cursor-pointer"
+                    className="hover:bg-white hover:text-primarycolor p-1 cursor-pointer flex items-center gap-1"
                   >
-                    Back
+                    <MdArrowBackIos size={12}/>Back
                   </li>
                   <Link
                     href="/services"
