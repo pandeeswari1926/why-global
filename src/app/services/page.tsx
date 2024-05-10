@@ -275,10 +275,10 @@ function Services() {
         alldata.about.map((items: any, ind: any) => (
           <div key={ind} className="grid lg:grid-cols-2 grid-cols-1 items-center justify-items-center lg:gap-20 p-8 lg:px-28 lg:pt-0 pt-[500px] ">
             <div className="flex flex-col gap-3">
-              <h1 className="text-xl font-semibold text-[#FF9315]">ABOUT</h1>
+              <h1 className="sm:text-xl font-semibold text-[#FF9315]">ABOUT</h1>
 
               <div>
-                <h1 className="text-3xl font-semibold mb-5 text-gray-500">
+                <h1 className="sm:text-3xl text-xl font-semibold mb-5 text-gray-500">
                   {items?.title}
                 </h1>
                 {items &&
@@ -297,14 +297,14 @@ function Services() {
         ))}
 
       {/* third section */}
-      <div className="bg-gray-100">
+      <div className="bg-gray-100 ">
         <div className="pt-10">
           <div className="flex flex-col justify-center xs:block lg:hidden p-5 ">
-            <h1 className="text-xl text-[#FF9315] font-semibold">
+            <h1 className="sm:text-xl text-[#FF9315] font-semibold">
               WHY YOU NEED
             </h1>
-            <br />
-            <h1 className="text-2xl text-gray-500 font-semibold md:pb-10">
+            
+            <h1 className="sm:text-3xl mt-2 text-xl text-gray-500 font-semibold md:pb-10">
               WEB DESIGNING?
             </h1>
           </div>
@@ -325,11 +325,11 @@ function Services() {
                         <div className="pt-10 bg-white p-5 mx-auto rounded-md shadow-xl">
                           <h1 className="text-xl font-medium">{list?.title}</h1>
                           <br />
-                          <p className="text-xs font-light text-gray-400">
+                          <p className="text-xs font-light text-gray-400 text-justify">
                             {list?.content}
                           </p>
                         </div>
-                        <div className="rounded-full drop-shadow-2xl p-5 bg-white w-fit absolute -top-8 md:-right-8 -right-5 ">
+                        <div className="rounded-full drop-shadow-2xl p-5 bg-white w-fit absolute -top-8 md:-right-8 -right-2 ">
                           <img
                             src={list?.icon?.asset?.url}
                             className="size-12 text-[#FF9315]"
@@ -359,11 +359,11 @@ function Services() {
                       <div className=" bg-white p-5 pt-14 rounded-md shadow-xl mx-auto">
                         <h1 className="text-xl font-medium">{list?.title}</h1>
                         <br />
-                        <p className="text-xs font-light text-gray-500">
+                        <p className="text-xs font-light text-gray-500 text-justify">
                           {list?.content}
                         </p>
                       </div>
-                      <div className="rounded-full drop-shadow-2xl p-5 bg-white w-fit absolute -top-8 md:-right-8 -right-5 ">
+                      <div className="rounded-full drop-shadow-2xl p-5 bg-white w-fit absolute -top-8 md:-right-8 -right-2 ">
                         <img src={list?.icon?.asset?.url} alt="" />
                       </div>
                     </div>
@@ -390,7 +390,7 @@ function Services() {
                     WHY YOU NEED
                   </h1>
                   <br />
-                  <h1 className="text-2xl text-gray-500 font-semibold xl:w-96 ">
+                  <h1 className="text-2xl text-gray-400 font-semibold xl:w-96 ">
                     WEB DESIGNING?
                   </h1>
                 </div>
@@ -408,14 +408,14 @@ function Services() {
                         indexs == 1 ? "lg:ml-[70px]" : "lg:ml-0"
                       }`}
                     >
-                      <div className="bg-white p-5 pt-10 mx-auto rounded-md shadow-xl">
+                      <div className="bg-white p-5 pt-10 mx-auto rounded-md shadow-xl ">
                         <h1 className="text-xl font-medium">{list?.title}</h1>
                         <br />
-                        <p className="text-xs font-light text-gray-500">
+                        <p className="text-xs font-light text-gray-400 text-justify">
                           {list?.content}
                         </p>
                       </div>
-                      <div className="rounded-full drop-shadow-2xl p-5 bg-white w-fit absolute -top-8 md:-right-8 -right-5">
+                      <div className="rounded-full drop-shadow-2xl p-5 bg-white w-fit absolute -top-8 md:-right-8 -right-2">
                         <img src={list?.icon?.asset?.url} alt="" className="" />
                       </div>
                     </div>
@@ -445,22 +445,22 @@ function Services() {
         alldata.service &&
         alldata.service.map((item, index) => (
           <div key={index} className="flex lg:flex-row flex-col sm:gap-20 gap-5 lg:px-20 mx-auto sm:pt-20">
-            <div className="p-10 flex flex-col gap-3 justify-center ">
-              <h1 className="text-xl  text-[#FF9315] font-semibold">
+            <div className=" p-5 lg:p-10 flex flex-col gap-3 justify-center ">
+              <h1 className="sm:text-xl  text-[#FF9315] font-semibold">
                 OUR
               </h1>
-              <h1 className="text-2xl text-gray-500 font-semibold">
+              <h1 className="sm:text-3xl text-xl text-gray-500 font-semibold">
                 SERVICES
               </h1>
               <hr className="h-[3px] bg-[#FF9315]" />
               <p className="text-gray-500 text-sm">Here are some of the key services we offer:</p>
-              <div className="flex flex-col mx-auto lg:mx-0 gap-5 text-gray-500">
+              <div className="flex flex-col mx-auto lg:mx-0 gap-5 text-gray-500 mt-5">
                 {item.services.map((list, listindex) => (
                   <div
                     key={listindex}
                     className="flex items-center gap-2 bg-gradient-to-r from-gray-200 to-transparent rounded-l-full"
                   >
-                    <div className="bg-white p-2 shadow-lg rounded-full">
+                    <div className="bg-white sm:p-2 shadow-lg rounded-full">
                       <img src={list?.icon?.asset?.url} alt="" className=" " />
                     </div>
                     <h1 className="text-sm">
@@ -504,7 +504,7 @@ function Services() {
             <div className="md:relative mx-auto p-5">
               <img src={item?.image?.asset?.url} alt="" className="mx-auto" />
               <div>
-                <h1 className="text-gray-500 text-justify text-sm md:absolute right-5 md:w-[45%] lg:bottom-14 -bottom-5 mx-auto p-5">
+                <h1 className="text-gray-500 text-justify text-sm md:absolute right-5 md:w-[45%] lg:bottom-14 -bottom-5 mx-auto lg:p-5 mt-5 lg:mt-0">
                   {item?.content}
                 </h1>
               </div>
