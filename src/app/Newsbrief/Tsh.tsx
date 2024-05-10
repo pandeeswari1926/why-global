@@ -224,11 +224,11 @@ const Page=()=> {
             ></meta>
           </Helmet> */}
           <div className="xs:p-5 p-7 ">
-            <h1 className="py-5 font-bold text-4xl xs:mx-10 mx-auto relative flex flex-col w-fit">
+            <h1 className="py-8 font-bold text-4xl xs:mx-10 mx-auto relative flex flex-col w-fit">
               <span>{dataItems&&dataItems[0]?.category?.category}</span>
               <span className="w-full bg-primarycolor  h-[2px]"></span>
             </h1>
-            <div className="flex lg:flex-row flex-col-reverse lg:p-5 gap-10 w-full ">
+            <div className="flex lg:flex-row flex-col lg:p-5 gap-10 w-full ">
               <div className="flex flex-col gap-5 lg:w-[70%] w-full h-full">
                 {dataItems && dataItems.map((item: any, index: any) => (
                     <div key={index} className="flex flex-col gap-5">

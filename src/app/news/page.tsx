@@ -367,7 +367,7 @@ function Page() {
             </div>
           </div> */}
           <div className="flex relative lg:flex-row gap-5  flex-col p-5 lg:p-0 py-10">
-            <div className="lg:w-[70%] w-full grid md:grid-cols-2 grid-cols-1  mx-auto justify-center  justify-items-center gap-10 lg:px-10">
+            <div className="lg:w-[70%] w-full grid md:grid-cols-2 grid-cols-1  mx-auto justify-center  justify-items-center gap-10 lg:px-10 pt-10">
               {allvalues &&
                 allvalues.map((item, index) => (
                   <Link
@@ -433,7 +433,7 @@ function Page() {
                 </h1>
               </div> */}
             </div>
-            <div className="lg:w-[30%] top-28 lg:sticky  hidden w-full order-first lg:order-none lg:flex lg:flex-col sm:flex-row flex-col  h-full space-y-4">
+            <div className="lg:w-[30%] top-28 pt-10 lg:sticky  hidden w-full order-first lg:order-none lg:flex lg:flex-col sm:flex-row flex-col  h-full space-y-4">
               <div className="lg:w-full sm:w-[50%] w-full space-y-5">
                 <div className="flex flex-row gap-5">
                   <button

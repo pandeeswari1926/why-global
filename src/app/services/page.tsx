@@ -265,6 +265,9 @@ function Services() {
                     </h1>
                   </div>
                 </div>
+                <div className="absolute bottom-10 md:block hidden">
+                  <img src="./dot.png" alt="" />
+                </div>
               </div>
             ))}
         </div>
@@ -435,8 +438,8 @@ function Services() {
       {alldata &&
         alldata.service &&
         alldata.service.map((item, index) => (
-          <div key={index} className="flex lg:flex-row flex-col sm:gap-20 gap-5 lg:px-20 mx-auto sm:pt-20">
-            <div className=" p-5 lg:p-10 flex flex-col gap-3 justify-center ">
+          <div key={index} className="flex lg:flex-row flex-col sm:gap- gap-5 lg:px-20 mx-auto sm:pt-20">
+            <div className="lg:w-[35%] p-5 lg:py-10 flex flex-col gap-3 justify-center ">
               <h1 className="sm:text-xl  text-[#FF9315] font-semibold">
                 OUR
               </h1>
