@@ -198,14 +198,14 @@ function Solutions() {
         alldata.Banner.map((item, index) => (
           <div
             key={index}
-            className="grid w-full lg:h-screen  relative  overflow-hidden grid-cols-1 lg:grid-cols-2 mt-7 lg:mt-0"
+            className="grid w-full h-full  relative 2xl:place-items-center  overflow-hidden grid-cols-1 lg:grid-cols-2 mt-7 lg:mt-0"
           >
-            <div className="flex flex-col gap-5 p-5 lg:p-20">
+            <div className="flex flex-col gap-5 p-5 lg:px-20 lg:pt-16">
               <p className="uppercase lg:px-0 px-5 text-sm sm:text-base text-orange-500 font-semibold md:text-left text-center">
                 {item?.title}
               </p>
 
-              <div className="uppercase lg:text-[30px] sm:text-xl xs:text-lg text-base md:text-left text-center font-semibold space-y-3 text-gray-500 ">
+              <div className="uppercase lg:text-2xl xl:text-[30px] sm:text-xl xs:text-lg text-base md:text-left text-center font-semibold space-y-3 text-gray-500">
                 <p className="space-y-2 md:leading-10 lg:px-0 px-5">{item?.subTitle}</p>
               </div>
 
@@ -270,14 +270,14 @@ function Solutions() {
 
       <div className="bg-gray-50  lg:py-20 py-10 px-5">
         <div className="mt-10 px-5 ">
-          <div className=" space-y-5 xs:block lg:hidden p-5">
-            <h1 className="text-lg text-[#FF9315] font-semibold">
+        <div className=" space-y-3 xs:block lg:hidden p-5">
+            <h1 className="sm:text-lg text-[#FF9315] font-semibold">
               YOU MUST KNOW THE
             </h1>
-            <h1 className="text-2xl  text-gray-500 font-semibold">
+            <h1 className="sm:text-2xl text-xl  text-gray-500 font-semibold">
               KEY FEATURES & BENEFITS
             </h1>
-          </div>
+        </div>
           {alldata &&
             alldata.features &&
             alldata.features.map((item: any, index: any) => (
