@@ -366,7 +366,7 @@ function Page() {
               </div>
             </div>
           </div> */}
-          <div className="flex relative lg:flex-row gap-5  flex-col p-5 lg:p-0 lg:py-10">
+          <div className="flex relative lg:flex-row gap-5  flex-col p-5 lg:p-0 py-10">
             <div className="lg:w-[70%] w-full grid md:grid-cols-2 grid-cols-1  mx-auto justify-center  justify-items-center gap-10 lg:px-10">
               {allvalues &&
                 allvalues.map((item, index) => (
@@ -376,7 +376,7 @@ function Page() {
                     className="w-full 2xl:w-[80%]"
                   >
                     <div className="bg-primarycolor shadow-xl  mx-auto  w-full cursor-pointer">
-                      <div className="md:h-[250px]   w-full h-full">
+                      <div className="md:h-[350px]   w-full h-full">
                         <img
                           src={
                             item?.result[0]?.contentAndImage[0]?.image?.asset
@@ -433,7 +433,7 @@ function Page() {
                 </h1>
               </div> */}
             </div>
-            <div className="lg:w-[30%] top-28 lg:sticky w-full order-first lg:order-none flex lg:flex-col sm:flex-row flex-col  h-full space-y-4">
+            <div className="lg:w-[30%] top-28 lg:sticky  hidden w-full order-first lg:order-none lg:flex lg:flex-col sm:flex-row flex-col  h-full space-y-4">
               <div className="lg:w-full sm:w-[50%] w-full space-y-5">
                 <div className="flex flex-row gap-5">
                   <button

@@ -104,7 +104,7 @@ const Page = () => {
   return loader == true ? (
     <Loader />
   ) : (
-    <div className="w-full p-5 pt-10 lg:px-16">
+    <div className="w-full p-5 md:py-14 py-10 lg:px-16">
       <div className="flex lg:flex-row flex-col-reverse gap-10 w-full relative">
         <div className="lg:w-[65%] w-full">
           <div className="w-full flex flex-col gap-5 h-full">
@@ -122,10 +122,10 @@ const Page = () => {
               alldata.contentAndImage &&
               alldata.contentAndImage.map((item: any, index: any) => (
                 <div key={index} className="flex flex-col gap-5">
-                  <div className="w-full md:h-[500px]">
+                  <div className="w-full ">
                     <img
                       src={item?.image?.asset?.url}
-                      className="w-full h-full "
+                      className="w-full h-full object-cover"
                     ></img>
                   </div>
                   {/* <div className="flex flex-col gap-5">
