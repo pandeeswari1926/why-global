@@ -268,13 +268,13 @@ function Solutions() {
 
       {/* third section */}
 
-      <div className="bg-gray-50  lg:py-20 py-10 px-5">
-        <div className="mt-10 px-5 ">
-        <div className=" space-y-3 xs:block lg:hidden p-5">
-            <h1 className="sm:text-lg text-[#FF9315] font-semibold">
+      <div className="bg-gray-50 my-16 px-5">
+        <div className=" px-5 ">
+        <div className=" space-y-3 text-center xs:block largelast:hidden py-5">
+            <h1 className="sm:text-lg text-center text-[#FF9315] font-semibold">
               YOU MUST KNOW THE
             </h1>
-            <h1 className="sm:text-2xl text-xl  text-gray-500 font-semibold">
+            <h1 className="sm:text-2xl text-center text-xl  text-gray-500 font-semibold">
               KEY FEATURES & BENEFITS
             </h1>
         </div>
