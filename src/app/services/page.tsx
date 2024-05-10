@@ -297,146 +297,137 @@ function Services() {
         ))}
 
       {/* third section */}
-      <div className="bg-gray-100 ">
-        <div className="pt-10">
-          <div className="flex flex-col justify-center xs:block lg:hidden p-5 ">
-            <h1 className="sm:text-xl text-[#FF9315] font-semibold">
-              WHY YOU NEED
+      
+      <div className="bg-gray-50  lg:pb-20 py-10 px-5">
+        <div className=" px-5 ">
+        <div className=" space-y-3 xs:block largelast:hidden p-5">
+            <h1 className="sm:text-lg text-[#FF9315] font-semibold">
+            WHY YOU NEED
             </h1>
-            
-            <h1 className="sm:text-3xl mt-2 text-xl text-gray-500 font-semibold md:pb-10">
-              WEB DESIGNING?
+            <h1 className="sm:text-3xl text-xl  text-gray-500 font-semibold">
+            WEB DESIGNING?
             </h1>
-          </div>
-          <img src="./sevice.png" alt="" className="md:block hidden"/>
-          <div className="">
-            {alldata &&
-              alldata.webDesign &&
-              alldata.webDesign.map((item: any, index: any) => (
-                <div key={index} className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:ml-20 justify-evenly md:-mt-24 lg:gap-5 gap-10 p-5">
-                  {item &&
-                    item.array1.map((list: any, indexs: any) => (
-                      <div
-                        key={indexs}
-                        className={`lg:w-[47%] h-fit relative ${
-                          indexs == 1 ? "lg:ml-[70px]" : "lg:ml-0"
-                        } `}
-                      >
-                        <div className="pt-10 bg-white p-5 mx-auto rounded-md shadow-xl">
-                          <h1 className="text-xl font-medium">{list?.title}</h1>
-                          <br />
-                          <p className="text-xs font-light text-gray-400 text-justify">
-                            {list?.content}
-                          </p>
-                        </div>
-                        <div className="rounded-full drop-shadow-2xl p-5 bg-white w-fit absolute -top-8 md:-right-8 -right-2 ">
-                          <img
-                            src={list?.icon?.asset?.url}
-                            className="size-12 text-[#FF9315]"
-                          />
-                        </div>
-                      </div>
-                    ))}
-                </div>
-              ))}
-            {/* card1 */}
-
-            {/* card2 */}
-          </div>
+        </div>
           {alldata &&
             alldata.webDesign &&
             alldata.webDesign.map((item: any, index: any) => (
-              <div key={index} className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 justify-evenly  lg:-mt-32  gap-10 lg:gap-5  p-5">
-                <div className="lg:block hidden"></div>
-                {/* card3 */}
-                {item &&
-                  item.array2.map((list: any, indexs: any) => (
-                    <div key={indexs}
-                      className={`lg:w-[60%] h-fit relative ${
-                        indexs == 1 ? "lg:ml-36" : "lg:ml-0"
-                      }`}
+              <div
+                key={index}
+                className=" flex 2xl:justify-around w-full largelast:justify-between"
+              >
+                <div className="2xl:w-[50%] largelast:w-[60%] w-full flex gap-5 largelast:py-5 md:flex-row flex-col largelast:justify-between">
+                  {item &&
+                  item.array1 &&
+                  item.array1.map((list: any, indexlist: any) => (
+                    <div
+                      key={indexlist}
+                      className={`largelast:w-48 2xl:w-52 h-fit  md:w-[80%] largelast:my-5 largelast:h-[250px] md:h-[180px] relative ${
+                        indexlist == 1 ? "" : ""
+                      } `}
                     >
-                      <div className=" bg-white p-5 pt-14 rounded-md shadow-xl mx-auto">
-                        <h1 className="text-xl font-medium">{list?.title}</h1>
+                      <div className=" bg-white p-5 pt-10 w-full h-full mx-auto rounded-md shadow-xl">
+                        <h1 className="2xl:text-lg text-base font-medium">{list?.title}</h1>
                         <br />
-                        <p className="text-xs font-light text-gray-500 text-justify">
+                        <p className="text-xs font-light text-gray-500">
                           {list?.content}
                         </p>
                       </div>
-                      <div className="rounded-full drop-shadow-2xl p-5 bg-white w-fit absolute -top-8 md:-right-8 -right-2 ">
+                      <div className="rounded-full w-16 drop-shadow-2xl p-5 bg-white  absolute md:-top-5 -top-3 md:-right-4 -right-2  ">
                         <img src={list?.icon?.asset?.url} alt="" />
                       </div>
                     </div>
-                  ))}
+                  ))}</div>
+                
 
-                {/* card4 */}
-                {/* <div className="lg:w-[68%] h-full relative lg:ml-36">
-              <div className="bg-white p-5 pt-10 mx-auto rounded-md shadow-xl">
-                <h1 className="text-xl font-medium">
-                  Lead <br className="lg:block hidden" /> Generation{" "}
-                </h1>
-                <br />
-                <p className="text-xs font-light text-gray-500">
-                  Thoughtfully crafted web designs incorporate persuasive
-                  elements, compelling visitors to take action
-                </p>
-              </div>
-              <div className="rounded-full drop-shadow-2xl p-5 bg-white w-fit absolute -top-8 lg:-right-8 md:-right-5 -right-5">
-                <img src="./14.png" alt="" />
-              </div>
-            </div> */}
-                <div className="flex flex-col justify-center lg:block hidden lg:mt-20 ml-20 overflow-hidden">
-                  <h1 className="text-xl text-[#FF9315] font-semibold">
-                    WHY YOU NEED
+                <div className="justify-center largelast:block hidden ml-16 mt-5">
+                  <h1 className="text-lg text-[#FF9315] font-semibold space-y-3">
+                  WHY YOU NEED
                   </h1>
-                  <br />
-                  <h1 className="text-2xl text-gray-400 font-semibold xl:w-96 ">
-                    WEB DESIGNING?
+                  
+                  <h1 className="text-3xl text-gray-500 font-semibold mt-2">
+                  WEB DESIGNING?
                   </h1>
                 </div>
               </div>
             ))}
-          {alldata &&
+            {alldata &&
             alldata.webDesign &&
             alldata.webDesign.map((item: any, index: any) => (
-              <div key={index} className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:ml-20 justify-evenly lg:-mt-24 lg:gap-5 gap-10  p-5">
-                {/* card5 */}
-                {item &&
-                  item.array3.map((list: any, indexs: any) => (
-                    <div key={indexs}
-                      className={`lg:w-[50%] h-fit relative ${
-                        indexs == 1 ? "lg:ml-[70px]" : "lg:ml-0"
+              <div
+                key={index}
+                className="w-full flex  largelast:-mt-20"
+              >
+                <div className="w-full flex largelast:justify-end largelast:items-end">
+               <div className="largelast:w-[92%] w-full flex md:flex-row flex-col gap-5 largelast:py-5 py-8  largelast:justify-around justify-between items-center largelast:-mt-10">{item &&
+                  item.array2 &&
+                  item.array2.map((list: any, indexlist: any) => (
+                    <div
+                      key={indexlist}
+                      className={`largelast:w-48 2xl:w-52 md:w-[80%] largelast:h-[250px] md:h-[180px] h-full relative ${
+                        indexlist == 0 ? "2xl:-ml-0 largelast:-ml-5" : "largelast:-ml-10 2xl:-ml-0"
                       }`}
                     >
-                      <div className="bg-white p-5 pt-10 mx-auto rounded-md shadow-xl ">
-                        <h1 className="text-xl font-medium">{list?.title}</h1>
+                      <div className="bg-white p-3 2xl:p-5 pt-10 w-full h-full mx-auto rounded-md shadow-xl">
+                        <h1 className="text-lg font-medium">{list?.title}</h1>
                         <br />
-                        <p className="text-xs font-light text-gray-400 text-justify">
+                        <p className="text-xs font-light text-gray-500">
                           {list?.content}
                         </p>
                       </div>
-                      <div className="rounded-full drop-shadow-2xl p-5 bg-white w-fit absolute -top-8 md:-right-8 -right-2">
+                      <div className="rounded-full w-16 drop-shadow-2xl p-5 bg-white  absolute md:-top-5 -top-3 md:-right-4 -right-2 ">
+                        <img src={list?.icon?.asset?.url} alt="" />
+                      </div>
+                    </div>
+                  ))}</div></div>
+                
+              </div>
+            ))}
+         
+         {alldata &&
+            alldata.webDesign &&
+            alldata.webDesign.map((item: any, index: any) => (
+              <div
+                key={index}
+                className=" flex 2xl:justify-around w-full largelast:justify-between largelast:-mt-20"
+              >
+                <div className="2xl:w-[50%] largelast:w-[60%] flex gap-5 largelast:py-5 md:flex-row flex-col justify-between"> {item &&
+                  item.array3 &&
+                  item.array3.map((list: any, indexlist: any) => (
+                    <div
+                      key={indexlist}
+                      className={`largelast:w-48 2xl:w-52 h-fit  md:w-[80%] largelast:my-5 largelast:h-[250px] md:h-[180px] relative ${
+                        indexlist == 1 ? "" : ""
+                      } `}
+                    >
+                      <div className=" bg-white p-5 w-full h-full pt-10 mx-auto rounded-md shadow-xl">
+                        <h1 className="text-lg font-medium">{list?.title}</h1>
+                        <br />
+                        <p className="text-xs font-light text-gray-500">
+                          {list?.content}
+                        </p>
+                      </div>
+                      <div className="rounded-full w-16 drop-shadow-2xl p-5 bg-white  absolute md:-top-5 -top-3 md:-right-4 -right-2  ">
                         <img src={list?.icon?.asset?.url} alt="" className="" />
                       </div>
                     </div>
-                  ))}
-
-                {/* card6 */}
-                {/* <div className="lg:w-[50%] h-full relative  lg:ml-[70px] ">
-               <div className="bg-white p-5 pt-10 mx-auto rounded-md shadow-xl">
-                 <h1 className="text-xl font-medium">SEO</h1>
-                 <br />
-                 <p className="text-xs font-light text-gray-500 lg:w-32">
-                   A well-optimized website design improves visibility on search
-                   engines.
-                 </p>
-               </div>
-               <div className="rounded-full drop-shadow-2xl p-5 bg-white w-fit absolute -top-8 lg:-right-8 md:-right-5 -right-5">
-                 <img src="./13.png" alt="" />
-               </div>
-             </div> */}
+                  ))}</div>
+                {/* card5 */}
+                <div className="justify-center opacity-0 largelast:block hidden ml-16 mt-5">
+                  <h1 className="text-lg text-[#FF9315] font-semibold space-y-3">
+                  WHY YOU NEED
+                  </h1>
+                  
+                  <h1 className="text-3xl text-gray-500 font-semibold mt-2">
+                  WEB DESIGNING?
+                  </h1>
+                </div>
               </div>
             ))}
+          <img
+            src="./sevice.png"
+            alt=""
+            className="lg:-mt-32 lg:block hidden"
+          />
         </div>
       </div>
 
@@ -469,36 +460,7 @@ function Services() {
                   </div>
                 ))}
 
-                {/* <div className="flex  items-center gap-2 bg-gradient-to-r from-gray-200 to-transparent rounded-l-full">
-              <div className="bg-white p-2 shadow-lg rounded-full ">
-                <img src="./16.png" alt="" className=" " />
-              </div>
-              <h1 className="xs:text-base text-sm">UI & UX</h1>
-            </div>
-            <div className="flex  items-center gap-2 bg-gradient-to-r from-gray-200 to-transparent rounded-l-full">
-              <div className="bg-white p-2 shadow-lg rounded-full ">
-                <img src="./17.png" alt="" className=" " />
-              </div>
-              <h1 className="xs:text-base text-sm">CMS Website Design</h1>
-            </div>
-            <div className="flex  items-center gap-2 bg-gradient-to-r from-gray-200 to-transparent rounded-l-full">
-              <div className="bg-white p-2 shadow-lg rounded-full ">
-                <img src="./18.png" alt="" className=" " />
-              </div>
-              <h1 className="xs:text-base text-sm">E-commerce Web Design</h1>
-            </div>
-            <div className="flex items-center gap-2 bg-gradient-to-r from-gray-200 to-transparent rounded-l-full">
-              <div className="bg-white p-2 shadow-lg rounded-full ">
-                <img src="./19.png" alt="" className=" " />
-              </div>
-              <h1 className="xs:text-base text-sm">Landing Page Design</h1>
-            </div>
-            <div className="flex items-center gap-2 bg-gradient-to-r from-gray-200 to-transparent rounded-l-full">
-              <div className="bg-white p-2 shadow-lg rounded-full ">
-                <img src="./20.png" alt="" className=" " />
-              </div>
-              <h1 className="xs:text-base text-sm">Website Redesign</h1>
-            </div> */}
+               
               </div>
             </div>
             <div className="md:relative mx-auto p-5">
