@@ -268,7 +268,7 @@ function Solutions() {
 
       {/* third section */}
 
-      <div className="bg-gray-50  lg:py-20 ">
+      <div className="bg-gray-50  lg:py-20 py-10 px-5">
         <div className="mt-10 px-5 ">
           <div className=" space-y-5 xs:block lg:hidden p-5">
             <h1 className="text-lg text-[#FF9315] font-semibold">
@@ -283,31 +283,33 @@ function Solutions() {
             alldata.features.map((item: any, index: any) => (
               <div
                 key={index}
-                className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-evenly  lg:-mt-24 lg:gap-5 gap-10 p-5"
+                className=" flex 2xl:justify-around w-full largelast:justify-between"
               >
-                {item &&
+                <div className="2xl:w-[50%] largelast:w-[60%] w-full flex gap-5 largelast:py-5 md:flex-row flex-col largelast:justify-between">
+                  {item &&
                   item.card1 &&
                   item.card1.map((list: any, indexlist: any) => (
                     <div
                       key={indexlist}
-                      className={`lg:w-52 h-fit relative ${
-                        indexlist == 1 ? "lg:ml-48" : "lg:ml-14"
+                      className={`largelast:w-48 2xl:w-52 h-fit  md:w-[80%] largelast:my-5 largelast:h-[250px] md:h-[180px] relative ${
+                        indexlist == 1 ? "" : ""
                       } `}
                     >
-                      <div className=" bg-white p-5 pt-10 mx-auto rounded-md shadow-xl">
-                        <h1 className="text-lg font-medium">{list?.title}</h1>
+                      <div className=" bg-white p-5 pt-10 w-full h-full mx-auto rounded-md shadow-xl">
+                        <h1 className="2xl:text-lg text-base font-medium">{list?.title}</h1>
                         <br />
                         <p className="text-xs font-light text-gray-500">
                           {list?.content}
                         </p>
                       </div>
-                      <div className="rounded-full drop-shadow-2xl p-5 bg-white w-fit absolute -top-8 -right-8 ">
+                      <div className="rounded-full w-16 drop-shadow-2xl p-5 bg-white  absolute md:-top-5 -top-3 md:-right-4 -right-2  ">
                         <img src={list?.icon?.asset?.url} alt="" />
                       </div>
                     </div>
-                  ))}
+                  ))}</div>
+                
 
-                <div className="justify-center lg:block hidden ml-16 mt-5">
+                <div className="justify-center largelast:block hidden ml-16 mt-5">
                   <h1 className="text-lg text-[#FF9315] font-semibold space-y-3">
                     YOU MUST KNOW THE
                   </h1>
@@ -318,69 +320,79 @@ function Solutions() {
                 </div>
               </div>
             ))}
-          {alldata &&
+            {alldata &&
             alldata.features &&
             alldata.features.map((item: any, index: any) => (
               <div
                 key={index}
-                className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 justify-evenly lg:gap-3 gap-10  p-5 lg:-mt-24"
+                className="w-full flex  largelast:-mt-20"
               >
-                <div className="lg:block hidden"></div>
-                {item &&
+                <div className="w-full flex largelast:justify-end largelast:items-end">
+               <div className="largelast:w-[92%] w-full flex md:flex-row flex-col gap-5 largelast:py-5 py-8  largelast:justify-around justify-between items-center largelast:-mt-10">{item &&
                   item.card2 &&
                   item.card2.map((list: any, indexlist: any) => (
                     <div
                       key={indexlist}
-                      className={`lg:w-52 h-full relative ${
-                        indexlist == 1 ? "lg:ml-64" : "lg:ml-6 lg:pl-0"
+                      className={`largelast:w-48 2xl:w-52 md:w-[80%] largelast:h-[250px] md:h-[180px] h-full relative ${
+                        indexlist == 0 ? "2xl:-ml-0 largelast:-ml-5" : "largelast:-ml-10 2xl:-ml-0"
                       }`}
                     >
-                      <div className="bg-white p-5 pt-10 mx-auto rounded-md shadow-xl">
+                      <div className="bg-white p-3 2xl:p-5 pt-10 w-full h-full mx-auto rounded-md shadow-xl">
                         <h1 className="text-lg font-medium">{list?.title}</h1>
                         <br />
                         <p className="text-xs font-light text-gray-500">
                           {list?.content}
                         </p>
                       </div>
-                      <div className="rounded-full drop-shadow-2xl p-5 bg-white w-fit absolute -top-8 -right-8 ">
+                      <div className="rounded-full w-16 drop-shadow-2xl p-5 bg-white  absolute md:-top-5 -top-3 md:-right-4 -right-2 ">
                         <img src={list?.icon?.asset?.url} alt="" />
                       </div>
                     </div>
-                  ))}
+                  ))}</div></div>
+                
               </div>
             ))}
-          {alldata &&
+         
+         {alldata &&
             alldata.features &&
             alldata.features.map((item: any, index: any) => (
               <div
                 key={index}
-                className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1   justify-evenly lg:-mt-24 lg:gap-5 gap-10 p-5"
+                className=" flex 2xl:justify-around w-full largelast:justify-between largelast:-mt-20"
               >
-                {/* card5 */}
-                {item &&
+                <div className="2xl:w-[50%] largelast:w-[60%] flex gap-5 largelast:py-5 md:flex-row flex-col justify-between"> {item &&
                   item.card3 &&
                   item.card3.map((list: any, indexlist: any) => (
                     <div
                       key={indexlist}
-                      className={`lg:w-52 h-fit relative ${
-                        indexlist == 1 ? "lg:ml-48 " : "lg:pl-0 lg:ml-14"
+                      className={`largelast:w-48 2xl:w-52 h-fit  md:w-[80%] largelast:my-5 largelast:h-[250px] md:h-[180px] relative ${
+                        indexlist == 1 ? "" : ""
                       } `}
                     >
-                      <div className=" bg-white p-5 pt-10 mx-auto rounded-md shadow-xl">
+                      <div className=" bg-white p-5 w-full h-full pt-10 mx-auto rounded-md shadow-xl">
                         <h1 className="text-lg font-medium">{list?.title}</h1>
                         <br />
                         <p className="text-xs font-light text-gray-500">
                           {list?.content}
                         </p>
                       </div>
-                      <div className="rounded-full drop-shadow-2xl p-5 bg-white w-fit absolute -top-8 -right-8 ">
+                      <div className="rounded-full w-16 drop-shadow-2xl p-5 bg-white  absolute md:-top-5 -top-3 md:-right-4 -right-2  ">
                         <img src={list?.icon?.asset?.url} alt="" className="" />
                       </div>
                     </div>
-                  ))}
+                  ))}</div>
+                {/* card5 */}
+                <div className="justify-center opacity-0 largelast:block hidden ml-16 mt-5">
+                  <h1 className="text-lg text-[#FF9315] font-semibold space-y-3">
+                    YOU MUST KNOW THE
+                  </h1>
+                  
+                  <h1 className="text-xl text-gray-500 font-semibold mt-2">
+                    KEY FEATURES & BENEFITS
+                  </h1>
+                </div>
               </div>
             ))}
-
           <img
             src="./sevice.png"
             alt=""
@@ -389,11 +401,12 @@ function Solutions() {
         </div>
       </div>
       {/* fourth section */}
+      
       {alldata &&
         alldata.weProvidesolution.map((item: any, index: any) => (
           <div
             key={index}
-            className="text-center relative  w-full overflow-hidden  lg:h-[500px] md:h-[400px] sm:h-72 h-56 "
+            className="text-center relative  w-full overflow-hidden 2xl:h-screen  lg:h-[500px] md:h-[400px] sm:h-72 h-56 "
           >
             <div className="w-full h-full absolute top-0 ">
               <img
@@ -403,11 +416,12 @@ function Solutions() {
               />
             </div>
             <div className="bg-black opacity-30 absolute w-full h-full top-0"></div>
-            <h1 className="lg:text-6xl text-xl text-white font-bold drop-shadow-xl  xl:pt-32 lg:pt-32 md:pt-20 sm:pt-10 pt-10">
+            <h1 className="lg:text-6xl text-xl text-white font-bold drop-shadow-xl 2xl:pt-48 xl:pt-32 lg:pt-32 md:pt-20 sm:pt-10 pt-10">
               "{item?.Heading}"
             </h1>
           </div>
         ))}
+        
 
       {/* fifth section */}
       <div className="relative bg-customer  h-fit  w-full">

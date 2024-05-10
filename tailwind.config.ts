@@ -35,7 +35,8 @@ const config: Config = {
         "xs2": '530px',
         "leawidth":"320px",
         "lastwidth":'350px',
-        'largewidth':'1050px'
+        'largewidth':'1050px',
+        'largelast':'1100px',
       },
       fontSize: {
         "2xs": '0.7rem',

@@ -233,7 +233,7 @@ const Page=()=> {
                 {dataItems && dataItems.map((item: any, index: any) => (
                     <div key={index} className="flex flex-col gap-5">
                       <div className=" flex lg:flex-row flex-col gap-5 justify-between items-center lg:px-5">
-                        <div className="lg:w-[50%] md:h-[400px] h-full lg:h-[250px] w-full ">
+                        <div className="lg:w-[50%]  h-full  w-full ">
                           <img
                             src={item?.image?.asset?.url}
                             alt="duplicate"
@@ -241,10 +241,10 @@ const Page=()=> {
                           />
                         </div>
                         <div className="space-y-2 lg:w-[50%] flex flex-col gap-3 w-full  h-full">
-                          <h1 className="font-bold text-xl line-clamp-2">{item.heading}</h1>
-                          <p className="text-sm">{item.date}</p>
-                          <p className="text-justify text-sm line-clamp-5">{item.content}</p>
-                          <Link href={{pathname:'/IndiviNews',query:{name:item.slug.current}}} ><p className="text-xs cursor-pointer hover:text-orange-600 duration-100 text-primarycolor ">
+                          <h1 className="font-bold 2xl:text-2xl text-xl line-clamp-2">{item.heading}</h1>
+                          <p className="text-sm 2xl:text-xl">{item.date}</p>
+                          <p className="text-justify text-sm  2xl:text-xl line-clamp-5">{item.content}</p>
+                          <Link href={{pathname:'/IndiviNews',query:{name:item.slug.current}}} ><p className="text-sm 2xl:text-2xl cursor-pointer  hover:text-orange-600 duration-100 text-primarycolor ">
                             READ MORE
                           </p></Link>
                           
