@@ -56,10 +56,9 @@ const Footer = () => {
               >
                 <FaFacebookSquare className=" cursor-pointer text-primarycolor size-4 lg:size-6" />
               </Link>
-              <Link href='https://twitter.com/wehelpyou19'>
+              <Link href='https://twitter.com/wehelpyou19 ' target="_blank">
               <FaSquareXTwitter
                 className=" cursor-pointer text-primarycolor size-4 lg:size-6"
-                target="_blank"
               />
               </Link>
               
@@ -124,22 +123,22 @@ const Footer = () => {
             <h1 className="font-bold text-xl ">Latest News</h1>
             <section className="text-xs space-y-2">
               <Link href="/news" className="flex gap-2 items-center">
-                <img src="./buss.png" alt="suhail" className="w-16 h-16 object-cover" />
+                <img src="./WHY Global Services Partners with1.png" alt="suhail" className="w-16 h-16 object-cover" />
                 <div className="leading-loose">
-                  <h2>How to become successful bussinessman</h2>
+                  <h2 className="line-clamp-2">Annular Technologies India Pvt Ltd and WHY Global Services Establish Strategic Collaboration with Memorandum of Understanding (MoU)</h2>
                   <div className="flex items-center gap-1">
                     <FaCalendar />
-                    <p>jun 04,2024</p>
+                    <p>Apr 22,2024</p>
                   </div>
                 </div>
               </Link>
               <Link href="/news" className="flex gap-2 items-center">
-                <img src="./buss.png" alt="suhail" className="w-16 h-16 object-cover" />
+                <img src="./e-commerce.jpg" alt="suhail" className="w-16 h-16 object-cover" />
                 <div className="leading-loose">
-                  <h2>How to become successful bussinessman</h2>
+                  <h2>E-commerce Development: Building Your Online Retail Empire</h2>
                   <div className="flex items-center gap-1">
                     <FaCalendar />
-                    <p>jun 04,2024</p>
+                    <p>Apr 20,2024</p>
                   </div>
                 </div>
               </Link>

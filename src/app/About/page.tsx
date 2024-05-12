@@ -254,7 +254,7 @@ asset->{
           dots: true,
           arrows: false,
           autoplay: true,
-          autoplaySpeed: 1500,
+          autoplaySpeed: 3000,
         },
       },
     ],
