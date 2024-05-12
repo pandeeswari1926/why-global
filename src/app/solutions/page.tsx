@@ -417,7 +417,7 @@ function Solutions() {
             </div>
             <div className="bg-black opacity-30 absolute w-full h-full top-0"></div>
             <h1 className="lg:text-6xl text-xl text-white font-bold drop-shadow-xl 2xl:pt-48 xl:pt-32 lg:pt-32 md:pt-20 sm:pt-10 pt-10">
-              "{item?.Heading}"
+              {item?.Heading}
             </h1>
           </div>
         ))}

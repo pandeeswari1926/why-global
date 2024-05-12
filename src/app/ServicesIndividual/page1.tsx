@@ -106,7 +106,7 @@ function Page() {
           ></img>
           <img
             className="w-full h-full lg:hidden object-cover flex"
-            src="./videogif.gif"
+            src="./banner.gif"
           ></img>
         </div>
         <div className="w-full h-full bg-black bg-opacity-70 absolute top-0 left-0 lg:hidden flex"></div>
@@ -118,7 +118,7 @@ function Page() {
             {alldata?.banner[0]?.title}
           </p>
           <div className="flex flex-col lg:justify-start lg:items-start justify-center items-center gap-4 ">
-            <p className="text-sm lg:text-gray-500 xl:text-base text-white w-[90%]  leading-6 font-medium">
+            <p className="text-sm lg:text-gray-500 xl:text-base text-white w-[90%] text-justify  leading-6 font-medium">
               {alldata?.banner[0]?.content}
             </p>
             <Link href={"/contactus"}>
