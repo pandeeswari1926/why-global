@@ -4,11 +4,13 @@ import Loader from "../home/Loader";
 import Link from "next/link";
 import SanityClient from "../SanityClient";
 import { Modal } from "antd";
+const BlockContent = require("@sanity/block-content-to-react");
 interface Alldata {
   careerPage: [
-    {
+    {rolesAndResponsibility:string;
       skill: string;
       description: string;
+      shortDescription:string;
       experience: string;
       role: string;
       image: {
@@ -27,8 +29,10 @@ const page = () => {
       await SanityClient.fetch(
         `*[_type=='career']{
         careerPage[]{
+          rolesAndResponsibility,
             skill,
             description,
+            shortDescription,
             experience,
             image{
                 asset->{
@@ -49,6 +53,13 @@ const page = () => {
     };
     getdata();
   }, []);
+const[data,setdata]=useState(false)
+const[opens,setopens]=useState(false)
+  function handleClick(details:any){
+    setdata(details)
+    setopens(true)
+
+  }
   return (
     <div className="mt-10">
       <div>
@@ -65,7 +76,7 @@ const page = () => {
             >
               <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-items-center pb-5">
                 {item.careerPage.map((items: any, index: any) => (
-                  <div className="relative mt-20 flex w-[90%] mx-auto xs:w-80 h-[360px]  flex-col rounded-xl bg-slate-200  xs:mx-0 bg-clip-border text-gray-700 shadow-lg">
+                  <div className="relative mt-20 flex w-[90%] mx-auto xs:w-80 h-[400px]  flex-col rounded-xl bg-slate-200  xs:mx-0 bg-clip-border text-gray-700 shadow-lg">
                     <div className="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-orange-400 to-primarycolor ">
                       <img
                         src={items?.image?.asset?.url}
@@ -73,18 +84,18 @@ const page = () => {
                         className="object-cover  w-full h-full"
                       />
                     </div>
-                    <div className="p-6 h-[50%] line-clamp-5">
+                    <div className="p-6 flex flex-col gap-1  line-clamp-5">
                       <h5 className="mb-2 block  text-lg font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
-                        {items?.role}
+                        {items?.rolesAndResponsibility}
                       </h5>
                       <p className="block  text-base  font-light leading-relaxed text-inherit antialiased">
-                        {items?.skill}
+                        <span className="text-blue-gray-900 font-semibold">Skill Required:</span>&nbsp;{items?.skill}
                       </p>
                       <p className="block  text-base  font-light leading-relaxed text-inherit antialiased">
-                        {items?.experience}
+                      <span className="text-blue-gray-900 font-semibold">Exprience:</span>&nbsp;{items?.experience}
                       </p>
-                      <p className=" text-sm  font-light line-clamp-2 text-inherit antialiased">
-                        {items?.description}
+                      <p className=" text-sm  font-light  antialiased">
+                      <span className="text-blue-gray-900 text-base font-semibold">Description:</span>&nbsp;{items?.shortDescription}
                       </p>
                     </div>
                     <div className="p-6 pt-3 flex md:flex-row flex-col justify-between">
@@ -98,7 +109,7 @@ const page = () => {
                           Apply Now
                         </button>
                         <button
-                        onClick={()=>setisopen(true)}
+                        onClick={()=>handleClick(items.description)}
                           data-ripple-light="true"
                           type="button"
                           className="select-none rounded-lg border-primarycolor bg-transparent mt-2 py-3 px-4 border text-center align-middle  text-xs font-bold uppercase text-black  transition-all hover:text-white hover:bg-primarycolor  active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
@@ -139,6 +150,10 @@ const page = () => {
         
 
       </Modal></div>
+      <Modal open={opens} width={'90%'} footer={false} onCancel={()=>setopens(false)}>
+        <div className="detials py-5 px-5"><BlockContent blocks={data} /></div>
+
+      </Modal>
     
     </div>
   );

@@ -639,4 +639,17 @@
   .wrapper h5{
     margin-bottom: 10px;
   }
+  .detials h5{
+    margin-bottom: 10px;
+    font-size: medium;
+  }
+  .detials p{
   
+    font-size: medium;
+  }
+
+  .detials li{
+    list-style: disc;
+    margin-bottom: 10px;
+    margin-left: 40px;
+  }
