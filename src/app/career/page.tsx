@@ -76,7 +76,7 @@ const[opens,setopens]=useState(false)
             >
               <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-items-center pb-5">
                 {item.careerPage.map((items: any, index: any) => (
-                  <div className="relative mt-20 flex w-[90%] mx-auto xs:w-80 h-[400px]  flex-col rounded-xl bg-slate-200  xs:mx-0 bg-clip-border text-gray-700 shadow-lg">
+                  <div className="relative mt-20 flex w-[90%] mx-auto xs:w-80 md:h-[400px]  flex-col rounded-xl bg-slate-200  xs:mx-0 bg-clip-border text-gray-700 shadow-lg">
                     <div className="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-orange-400 to-primarycolor ">
                       <img
                         src={items?.image?.asset?.url}
@@ -84,7 +84,7 @@ const[opens,setopens]=useState(false)
                         className="object-cover  w-full h-full"
                       />
                     </div>
-                    <div className="p-6 flex flex-col gap-1  line-clamp-5">
+                    <div className="p-6 flex flex-col gap-1   line-clamp-5">
                       <h5 className="mb-2 block  text-lg font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
                         {items?.rolesAndResponsibility}
                       </h5>
@@ -94,8 +94,8 @@ const[opens,setopens]=useState(false)
                       <p className="block  text-base  font-light leading-relaxed text-inherit antialiased">
                       <span className="text-blue-gray-900 font-semibold">Exprience:</span>&nbsp;{items?.experience}
                       </p>
-                      <p className=" text-sm  font-light  antialiased">
-                      <span className="text-blue-gray-900 text-base font-semibold">Description:</span>&nbsp;{items?.shortDescription}
+                      <p className=" text-sm  font-light   antialiased">
+                      <span className="text-blue-gray-900 text-base  font-semibold">Description:</span>{items?.shortDescription}
                       </p>
                     </div>
                     <div className="p-6 pt-3 flex md:flex-row flex-col justify-between">
@@ -151,7 +151,7 @@ const[opens,setopens]=useState(false)
 
       </Modal></div>
       <Modal open={opens} width={'90%'} footer={false} onCancel={()=>setopens(false)}>
-        <div className="detials py-5 px-5"><BlockContent blocks={data} /></div>
+        <div className="detials py-5 sm:px-5"><BlockContent blocks={data} /></div>
 
       </Modal>
     

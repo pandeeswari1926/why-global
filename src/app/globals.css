@@ -647,9 +647,15 @@
   
     font-size: medium;
   }
-
+  @media screen and (min-width:800px)  {
+    .detials li{
+      list-style: disc;
+      margin-bottom: 10px;
+      margin-left: 40px;
+    }
+  }
   .detials li{
     list-style: disc;
     margin-bottom: 10px;
-    margin-left: 40px;
+    margin-left: 20px;
   }
