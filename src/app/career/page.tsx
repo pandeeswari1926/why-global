@@ -74,6 +74,12 @@ const page = () => {
                   {item?.careerPage[0]?.role}
                 </h5>
                 <p className="block  text-base  font-light leading-relaxed text-inherit antialiased">
+                  {item?.careerPage[0]?.skill}
+                </p>
+                <p className="block  text-base  font-light leading-relaxed text-inherit antialiased">
+                  {item?.careerPage[0]?.experience}
+                </p>
+                <p className="block  text-base  font-light leading-relaxed text-inherit antialiased">
                   {item?.careerPage[0]?.description}
                 </p>
               </div>
