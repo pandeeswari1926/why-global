@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Loader from "../home/Loader";
 import Link from "next/link";
 import SanityClient from "../SanityClient";
+import { Modal } from "antd";
 interface Alldata {
   careerPage: [
     {
@@ -20,7 +21,7 @@ interface Alldata {
 const page = () => {
   const [loader, setLoader] = useState(true);
   const [alldata, setalldata] = useState<Alldata[] | []>([]);
-
+    const[isopen ,setisopen]=useState(false)
   useEffect(() => {
     const getdata = async () => {
       await SanityClient.fetch(
@@ -64,12 +65,12 @@ const page = () => {
             >
               <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-items-center pb-5">
                 {item.careerPage.map((items: any, index: any) => (
-                  <div className="relative mt-20 flex w-80 h-[360px]  flex-col rounded-xl bg-slate-200 mx-3 xs:mx-0 bg-clip-border text-gray-700 shadow-lg">
+                  <div className="relative mt-20 flex w-[90%] mx-auto xs:w-80 h-[360px]  flex-col rounded-xl bg-slate-200  xs:mx-0 bg-clip-border text-gray-700 shadow-lg">
                     <div className="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-orange-400 to-primarycolor ">
                       <img
-                        src={item?.careerPage[0]?.image?.asset?.url}
+                        src={items?.image?.asset?.url}
                         alt=""
-                        className="object-cover w-full h-full"
+                        className="object-cover  w-full h-full"
                       />
                     </div>
                     <div className="p-6 h-[50%] line-clamp-5">
@@ -82,25 +83,21 @@ const page = () => {
                       <p className="block  text-base  font-light leading-relaxed text-inherit antialiased">
                         {items?.experience}
                       </p>
-                      <p className="block  text-base  font-light leading-relaxed text-inherit antialiased">
+                      <p className=" text-sm  font-light line-clamp-2 text-inherit antialiased">
                         {items?.description}
                       </p>
                     </div>
                     <div className="p-6 pt-3">
-                      <Link
-                        href={{
-                          pathname: "#",
-                          query: { name: items?.title },
-                        }}
-                      >
+                 
                         <button
+                        onClick={()=>setisopen(true)}
                           data-ripple-light="true"
                           type="button"
                           className="select-none rounded-lg bg-primarycolor mt-2 py-3 px-6 text-center align-middle  text-xs font-bold uppercase text-white shadow-md shadow-orange-200 transition-all hover:shadow-lg hover:shadow-orange-200 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                         >
                           Apply Now
                         </button>
-                      </Link>
+                      
                     </div>
                   </div>
                 ))}
@@ -108,6 +105,33 @@ const page = () => {
             </div>
           ))}
       </section>
+      <div>  <Modal
+      
+      open={isopen}
+      onCancel={()=>setisopen(false)}
+      footer={false}
+      >
+        
+          {/* <form className="py-10 w-[90%] mx-auto ">
+            <label className="text-">Name</label>
+          <input className="  w-full flex h-10 text-lg px-3  border" type="text" />
+          </form> */}
+          <form className="flex flex-col gap-2 w-[90%] py-10 mx-auto">
+            <label className="xs:text-3xl text-xl font-semibold">Application Form</label>
+      <input required placeholder="Full Name" className="  border-0 rounded-md p-2 mb-4  outline-none ring-1 ring-gray-300 focus:ring-primarycolor focus:shadow transition ease-in-out duration-150" type="text" />
+      <input required placeholder="Email" className="  border-0 rounded-md p-2 mb-4  outline-none ring-1 ring-gray-300 focus:ring-primarycolor focus:shadow transition ease-in-out duration-150" type="email" />
+      <input required placeholder="Phone Number" className="  border-0 rounded-md p-2 mb-4  outline-none ring-1 ring-gray-300 focus:ring-primarycolor focus:shadow transition ease-in-out duration-150" type="text" />
+      <input required placeholder="LinkedIn Profile URL" className="  border-0 rounded-md p-2 mb-4  outline-none ring-1 ring-gray-300 focus:ring-primarycolor focus:shadow transition ease-in-out duration-150" type="text" />
+      <textarea required placeholder="Cover Letter" className="  border-0 rounded-md p-2 mb-4  outline-none ring-1 ring-gray-300 focus:ring-primarycolor focus:shadow transition ease-in-out duration-150" name="cover_letter"></textarea>
+      <input required placeholder="Resume" className=" file:bg-primarycolor file:border-0 file:ring-0 file:outline-none  border-0 rounded-md h-10 text-white font-semibold file:text-white file:h-full mb-4  outline-none ring-1 ring-gray-300 focus:ring-primarycolor focus:shadow transition ease-in-out duration-150" type="file" />
+
+      <button className="bg-primarycolor text-white font-bold py-2 px-4 rounded-md mt-4 hover:drop-shadow-lg hover:shadow-sm transition ease-in-out duration-150" type="submit">Apply</button>
+    </form>
+        
+        
+
+      </Modal></div>
+    
     </div>
   );
 };
