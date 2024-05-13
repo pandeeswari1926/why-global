@@ -99,7 +99,7 @@ const Wgs = () => {
       <section className="flex h-fit lg:flex-row flex-col justify-around px-5 gap-5 items-center pt-10">
         {dataItems &&
           dataItems.slice(0, 3).map((item, index) => (
-            <div>
+            <div key={index}>
               <Link
                 href={{
                   pathname: "/IndiviNews",

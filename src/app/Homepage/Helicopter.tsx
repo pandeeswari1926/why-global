@@ -150,17 +150,17 @@ function Helicopter() {
                               <img
                                 src="./style2.png"
                                 alt="style2"
-                                className="lg:w-[80%] w-full"
+                                className="lg:w-[80%] md:w-[85%] w-[50%] mx-auto"
                               />
                               <img
                                 src={items?.Photo?.asset?.url}
                                 alt="Profile1"
-                                className="lg:w-[65%] w-[90%] mx-auto top-5 absolute"
+                                className="lg:w-[65%] md:w-[80%] w-[45%] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 lg:-translate-x-0 lg:-translate-y-0 lg:left-10 lg:top-5 absolute"
                               />
                               <img
                                 src="./style3.png"
                                 alt="style2"
-                                className="absolute sm:w-[20%] w-[30%] top-0 right-[80%]"
+                                className="absolute md:w-[15%] w-[10%]  top-0 left-1/3 -translate-x-2/4 md:-translate-x-0  md:left-8"
                               />
                             </div>
                             <div className="w-full lg:pt-2">

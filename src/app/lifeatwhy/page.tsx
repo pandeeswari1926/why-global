@@ -137,7 +137,7 @@ function Why() {
           ></div>
           <div className="absolute h-full bg-black bg-opacity-70 w-full"></div>
           <div className="w-full h-full ">
-            <img src="./arut.gif" className="w-full h-full object-cover" alt="" />
+            <img src="./aru.gif" className="w-full h-full object-cover" alt="" />
           </div>
           <div className="absolute top-7 sm:left-20 left-10">
             <img src={bannerdata?.titleImage?.asset?.url} alt="" />
