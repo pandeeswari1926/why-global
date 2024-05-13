@@ -146,12 +146,15 @@ function Page() {
               href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
             />
             <div className="h-screen  w-full relative">
-              <div className="w-full h-full bg-gray-500">
+              
+              <div className="w-full h-full relative bg-gray-500">
                 <img
-                  src="./banner.gif"
+                  src="./lat.gif"
                   alt="Background Image"
                   className="w-full h-[95%] items-center md:object-cover object-cover"
                 />
+                                <div className="bg-black opacity-40 absolute w-full h-full top-0"></div>
+
               </div>
 
               <div className="absolute bottom-0 left-0 els sm:w-full w-[90%] h-[50%]   sm:h-full"></div>
@@ -159,10 +162,10 @@ function Page() {
               {data &&
                 data.Banner.map((item, index) => (
                   <div key={index}>
-                    <h1 className=" md:text-4xl text-3xl absolute md:top-48 top-48 text-primarycolor md:right-20 right-3 text-right font-semibold">
+                    <h1 className=" md:text-4xl xs:text-3xl text-2xl absolute xs:top-48 top-60 text-primarycolor md:right-20 right-4 text-right font-semibold">
                       {item?.title2}
                     </h1>
-                    <p className="md:text-4xl text-3xl md:top-36 top-32 md:right-20 right-3 absolute text-white text-right font-bold">
+                    <p className="md:text-4xl xs:text-3xl text-2xl xs:top-36 top-48 md:right-20 right-4 absolute text-white text-right font-bold">
                       {item?.title1}
                     </p>
                   </div>
