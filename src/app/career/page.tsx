@@ -64,7 +64,7 @@ const page = () => {
             >
               <div className="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-orange-400 to-primarycolor ">
                 <img
-                  src={item?.careerPage[0]?.Image?.asset?.url}
+                  src={item?.careerPage[0]?.image?.asset?.url}
                   alt=""
                   className="object-cover w-full h-full"
                 />
