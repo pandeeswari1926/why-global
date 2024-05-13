@@ -233,7 +233,7 @@ const Page=()=> {
                 {dataItems && dataItems.map((item: any, index: any) => (
                     <div key={index} className="flex flex-col gap-5">
                       <div className=" flex lg:flex-row flex-col gap-5 justify-between items-center lg:px-5">
-                        <div className="lg:w-[50%]  h-full  w-full ">
+                        <div className="lg:w-[50%]  h-[300px]  w-full ">
                           <img
                             src={item?.image?.asset?.url}
                             alt="duplicate"

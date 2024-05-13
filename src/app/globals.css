@@ -659,3 +659,24 @@
     margin-bottom: 10px;
     margin-left: 20px;
   }
+  .ant-select-focused .ant-select-selector {
+    outline: #FF9315;
+    border-color: #FF9315!important;
+    box-shadow: #FF9315/* Change "yourDesiredColor" to your preferred color */
+     /* Optional: Adjust box-shadow if you want */
+  }
+
+
+  .ant-select-outlined:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer):hover .ant-select-selector {
+  
+    --tw-border-opacity: 1;
+    border-color: rgb(156 163 175 / var(--tw-border-opacity));
+}
+
+.ant-select-outlined:not(.ant-select-customize-input) .ant-select-selector {
+  --tw-border-opacity: 1;
+  border-color: rgb(156 163 175 / var(--tw-border-opacity));
+}
+.ant-select-selector{
+  border-color:#FF9315
+}

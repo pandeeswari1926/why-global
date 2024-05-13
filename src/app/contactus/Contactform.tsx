@@ -1,9 +1,11 @@
-import React from "react";
+'use client'
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import contactgettin from "../../../public/getin.png";
 import { MdEmail, MdLocationOn, MdLocalPhone } from "react-icons/md";
 import { FaYoutube } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
+import { Select } from "antd";
 import {
   FaFacebookSquare,
   FaInstagramSquare,
@@ -13,8 +15,26 @@ import {
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import Link from "next/link";
-
+import SanityClient from "../SanityClient";
+interface Alldata{
+  Categoryname:string
+}
 const Contactform = () => {
+  const[alldata,setalldata]=useState<Alldata[]|[]>([])
+  useEffect(()=>{
+  const getdata=async()=>{
+    await SanityClient.fetch(`*[_type=="servicecategory"]{
+      Categoryname
+      
+    }`).then((res:any)=>{
+     setalldata(res)
+     console.log(res);
+     
+    })
+  }
+  getdata();
+
+},[])
   return (
     <section className="lg:h-[550px] xs:h-[800px] h-[830px]">
       <div className=" w-full p-5 md:p-10 h-full">
@@ -104,11 +124,15 @@ const Contactform = () => {
                     className="border border-gray-400 p-2 rounded-md"
                     placeholder="Mobile Number"
                   />
-                  <input
-                    type="text"
-                    className="border border-gray-400 p-2 rounded-md"
-                    placeholder="Services"
-                  />
+                  <Select
+                  
+                    className="h-10 rounded-md"
+                    placeholder='Service'
+                  >
+                   {alldata?.map((item,index)=>(
+                    <option value={item.Categoryname}>{item.Categoryname}</option>
+                   ))}
+                  </Select>
                 </form>
                 <div className="md:px-7 px-2">
                   <textarea
