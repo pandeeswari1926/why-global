@@ -87,15 +87,23 @@ const page = () => {
                         {items?.description}
                       </p>
                     </div>
-                    <div className="p-6 pt-3">
+                    <div className="p-6 pt-3 flex md:flex-row flex-col justify-between">
                  
                         <button
                         onClick={()=>setisopen(true)}
                           data-ripple-light="true"
                           type="button"
-                          className="select-none rounded-lg bg-primarycolor mt-2 py-3 px-6 text-center align-middle  text-xs font-bold uppercase text-white shadow-md shadow-orange-200 transition-all hover:shadow-lg hover:shadow-orange-200 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                          className="select-none rounded-lg bg-primarycolor mt-2 py-3 px-4 text-center align-middle  text-xs font-bold uppercase text-white shadow-md shadow-orange-200 transition-all hover:shadow-lg hover:shadow-orange-200 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                         >
                           Apply Now
+                        </button>
+                        <button
+                        onClick={()=>setisopen(true)}
+                          data-ripple-light="true"
+                          type="button"
+                          className="select-none rounded-lg border-primarycolor bg-transparent mt-2 py-3 px-4 border text-center align-middle  text-xs font-bold uppercase text-black  transition-all hover:text-white hover:bg-primarycolor  active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                        >
+                          INFO
                         </button>
                       
                     </div>
