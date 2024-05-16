@@ -130,7 +130,7 @@ const Contactform = () => {
                     placeholder='Service'
                   >
                    {alldata?.map((item,index)=>(
-                    <option value={item.Categoryname}>{item.Categoryname}</option>
+                    <option key={index} value={item.Categoryname}>{item.Categoryname}</option>
                    ))}
                   </Select>
                 </form>

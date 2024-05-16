@@ -20,7 +20,7 @@ interface Alldata {
   ];
 }
 
-const page = () => {
+const Page = () => {
   const [loader, setLoader] = useState(true);
   const [alldata, setalldata] = useState<Alldata[] | []>([]);
     const[isopen ,setisopen]=useState(false)
@@ -76,7 +76,7 @@ const[opens,setopens]=useState(false)
             >
               <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-items-center pb-5">
                 {item.careerPage.map((items: any, index: any) => (
-                  <div className="relative mt-20 flex w-[90%] mx-auto xs:w-80 md:h-[400px]  flex-col rounded-xl bg-slate-200  xs:mx-0 bg-clip-border text-gray-700 shadow-lg">
+                  <div key={index} className="relative mt-20 flex w-[90%] mx-auto xs:w-80 md:h-[400px]  flex-col rounded-xl bg-slate-200  xs:mx-0 bg-clip-border text-gray-700 shadow-lg">
                     <div className="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-orange-400 to-primarycolor ">
                       <img
                         src={items?.image?.asset?.url}
@@ -159,4 +159,4 @@ const[opens,setopens]=useState(false)
   );
 };
 
-export default page;
+export default Page;
