@@ -150,7 +150,7 @@ function Page() {
                 <img
                   src="./banner.gif"
                   alt="Background Image"
-                  className="w-full h-[95%] items-center md:object-cover object-cover"
+                  className="w-full h-[95%] items-center md:object-cover object-cover brightness-75"
                 />
               </div>
 
@@ -162,7 +162,7 @@ function Page() {
                     <h1 className=" md:text-4xl text-3xl absolute md:top-48 top-48 text-primarycolor md:right-20 right-3 text-right font-semibold">
                       {item?.title2}
                     </h1>
-                    <p className="md:text-4xl text-3xl md:top-36 top-32 md:right-20 right-3 absolute text-white text-right font-bold">
+                    <p className="md:text-4xl  text-3xl md:top-36 top-32 md:right-20 right-3 absolute text-white text-right font-bold">
                       {item?.title1}
                     </p>
                   </div>
