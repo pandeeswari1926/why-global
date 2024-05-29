@@ -105,7 +105,7 @@ const Page = () => {
     <Loader />
   ) : (
     <div className="w-full p-5 md:py-14 py-10 lg:px-16">
-      <div className="flex lg:flex-row flex-col-reverse gap-10 w-full relative">
+      <div className="flex lg:flex-row flex-col gap-10 w-full relative">
         <div className="lg:w-[65%] w-full">
           <div className="w-full flex flex-col gap-5 h-full">
             <p className="md:text-3xl text-xl font-semibold">

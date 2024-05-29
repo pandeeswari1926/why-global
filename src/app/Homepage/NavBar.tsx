@@ -198,6 +198,9 @@ useEffect(()=>{
             <Link href="/news">
               <li className="hover:text-primarycolor">News</li>
             </Link>
+            <Link href="/career">
+              <li className="hover:text-primarycolor">Career</li>
+            </Link>
             <Link href="/contactus">
               <li className="hover:text-primarycolor">Contact us</li>
             </Link>
@@ -273,6 +276,11 @@ useEffect(()=>{
                   onClick={toggleNavbar}
                 >
                   News
+                </li>
+              </Link>
+              <Link href="/career">
+                <li className="bg-primarycolor p-2 text-white hover:bg-white hover:text-primarycolor">
+                  Career
                 </li>
               </Link>
               <Link href="/contactus">

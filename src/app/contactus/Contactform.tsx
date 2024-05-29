@@ -1,9 +1,11 @@
-import React from "react";
+'use client'
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import contactgettin from "../../../public/getin.png";
 import { MdEmail, MdLocationOn, MdLocalPhone } from "react-icons/md";
 import { FaYoutube } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
+import { Select } from "antd";
 import {
   FaFacebookSquare,
   FaInstagramSquare,
@@ -13,8 +15,26 @@ import {
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import Link from "next/link";
-
+import SanityClient from "../SanityClient";
+interface Alldata{
+  Categoryname:string
+}
 const Contactform = () => {
+  const[alldata,setalldata]=useState<Alldata[]|[]>([])
+  useEffect(()=>{
+  const getdata=async()=>{
+    await SanityClient.fetch(`*[_type=="servicecategory"]{
+      Categoryname
+      
+    }`).then((res:any)=>{
+     setalldata(res)
+     console.log(res);
+     
+    })
+  }
+  getdata();
+
+},[])
   return (
     <section className="lg:h-[550px] xs:h-[800px] h-[830px]">
       <div className=" w-full p-5 md:p-10 h-full">
@@ -24,10 +44,10 @@ const Contactform = () => {
             alt="Background"
             className="rounded-lg w-full h-full "
           />
-          <div className="flex absolute inset-0 lg:p-10 justify-between w-full ">
+          <div className="flex absolute inset-0 sm:p-10 xs:p-5 p-2 pt-5 justify-between w-full ">
             <div className="flex lg:flex-row flex-col lg:gap-5  gap-10 justify-between w-full">
               <div className="flex  flex-col justify-between item-center p-5 lg:p-0">
-                <h3 className=" text-white text-3xl lg:text-5xl font-bold -mt-2 ml-1">
+                <h3 className=" text-white xs:text-5xl text-3xl font-bold sm:-mt-2  ml-1">
                   Get in Touch
                 </h3>
 
@@ -47,8 +67,8 @@ const Contactform = () => {
                     className="flex  gap-2"
                     target="_blank"
                   >
-                    <MdLocationOn className="text-white size-4" />
-                    <p className="  text-white w-[60%]">3rd Floor, New No. 75,77 & 79, Lohmanradhri Towers, Egmore, Chennai, Tamil Nadu 600008.</p>
+                    <MdLocationOn className="text-white size-4 mt-1" />
+                    <p className=" text-white lg:w-[60%]">3<sup>rd</sup> Floor, New No. 75,77 & 79, Lohmanradhri Towers, Egmore, Chennai, Tamil Nadu 600008.</p>
                   </Link>
                   {/* <li className="flex items-center gap-2">
                     {" "}
@@ -102,13 +122,17 @@ const Contactform = () => {
                   <input
                     type="text"
                     className="border border-gray-400 p-2 rounded-md"
-                    placeholder="Mobile No"
+                    placeholder="Mobile Number"
                   />
-                  <input
-                    type="text"
-                    className="border border-gray-400 p-2 rounded-md"
-                    placeholder="Services"
-                  />
+                  <Select
+                  
+                    className="h-10 rounded-md"
+                    placeholder='Service'
+                  >
+                   {alldata?.map((item,index)=>(
+                    <option key={index} value={item.Categoryname}>{item.Categoryname}</option>
+                   ))}
+                  </Select>
                 </form>
                 <div className="md:px-7 px-2">
                   <textarea

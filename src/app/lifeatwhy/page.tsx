@@ -137,7 +137,7 @@ function Why() {
           ></div>
           <div className="absolute h-full bg-black bg-opacity-70 w-full"></div>
           <div className="w-full h-full ">
-            <img src="./arut.gif" className="w-full h-full object-cover" alt="" />
+            <img src="./aru.gif" className="w-full h-full object-cover" alt="" />
           </div>
           <div className="absolute top-7 sm:left-20 left-10">
             <img src={bannerdata?.titleImage?.asset?.url} alt="" />
@@ -149,7 +149,7 @@ function Why() {
       </div>
 
       {/* second section */}
-      <div className=" lg:h-[500px] h-full bg-gray-100 lg:p-10 p-5   overflow-hidden relative">
+      <div className=" lg:h-[500px] h-full bg-white lg:p-10 p-5   overflow-hidden relative">
         <div
           style={{
             clipPath: "polygon(76% 84%, 100% 50%, 100% 100%, 0% 100%)",
@@ -157,6 +157,9 @@ function Why() {
           }}
           className=" absolute bottom-0 right-0 lg:w-[80%] w-[30%] h-[25%] lg:h-full"
         ></div>
+        <div className="absolute right-0 top-5">
+          <img src="./line2.png" alt="" />
+        </div>
         <div className="  lg:w-1/2 w-full h-full lg:pl-10   flex flex-col justify-center gap-5">
           <h3 className="text-lg text-[#FF9315] font-bold lg:text-left text-center">
             {workprocess?.heading}
@@ -195,8 +198,8 @@ function Why() {
             <img key={ind} src={item?.image?.asset?.url} alt="whysquad" />
           ))}
         </div>
-        <h1  className="text-center text-[#FF9315] xs:text-4xl text-2xl  p-5">
-          <em>#WHYsquad</em>
+        <h1  className="text-center text-[#FF9315] xs:text-4xl text-4xl  p-5">
+          <em>#WHY squad</em>
         </h1>
       </div>
 

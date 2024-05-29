@@ -9,7 +9,7 @@ function Map() {
         We&apos;re Global and Growing
       </h1>
       <p className="text-[#808080]  text-sm lg:px-0 xs:pb-10 xs:px-10 px-5 lg:w-[80%] mx-auto text-justify">
-      Building an enterprise-level site doesn't have to be a nightmare or cost you thousands. Our purpose-built solution streamlines development and enhances scalability, ensuring your project meets the highest standards of performance and reliability. With us, you can achieve your digital goals efficiently and effectively, empowering your business for success in the online landscape.
+      Building an enterprise-level site doesn&apos;t have to be a nightmare or cost you thousands. Our purpose-built solution streamlines development and enhances scalability, ensuring your project meets the highest standards of performance and reliability. With us, you can achieve your digital goals efficiently and effectively, empowering your business for success in the online landscape.
       </p>
       <img src="./whyglobalservicesworldmapimg.png" alt="map" />
     </div>
