@@ -219,7 +219,7 @@ function Solutions() {
               <img
                 src={item?.BannerImage[0]?.image?.asset?.url}
                 alt="ruben"
-                className="lg:w-full lg:h-full lg:block hidden rubanbro xs:w-96 object-contain xs:h-80 w-64 h-52"
+                className="lg:w-full lg:h-screen lg:block hidden rubanbro xs:w-96 object-contain xl:object-contain xs:h-80 w-64 h-52"
               />
               <img
                 src={item?.BannerImage[0]?.image?.asset?.url}

@@ -366,8 +366,12 @@ function Page() {
               </div>
             </div>
           </div> */}
-          <div className="flex relative lg:flex-row gap-5  flex-col p-5 lg:p-0 py-10">
-            <div className="lg:w-[70%] w-full grid md:grid-cols-2 grid-cols-1  mx-auto justify-center  justify-items-center gap-10 lg:px-10 pt-10">
+          <div className="lg:px-10 pt-10"> <h2 className="xs2:text-5xl lg:text-start text-center  xs:text-4xl text-2xl bg-clip-text sha ">
+          NEWS
+        </h2></div>
+         
+          <div className="flex relative lg:flex-row g  flex-col p-5 lg:p-0 py-5">
+            <div className="lg:w-[70%] w-full grid md:grid-cols-2 grid-cols-1  mx-auto justify-center  justify-items-center gap-10 lg:px-10 pt-5">
               {allvalues &&
                 allvalues.map((item, index) => (
                   <Link
@@ -435,7 +439,7 @@ function Page() {
             </div>
             <div className="lg:w-[30%] top-28 pt-10 lg:sticky  hidden w-full order-first lg:order-none lg:flex lg:flex-col sm:flex-row flex-col  h-full space-y-4">
               <div className="lg:w-full sm:w-[50%] w-full space-y-5">
-                <div className="flex flex-row gap-5">
+                <div className="flex flex-row gap-5 w-full">
                   <button
                     onClick={() => toggleContent("Recent")}
                     className={`text-black ${
@@ -457,11 +461,11 @@ function Page() {
                     Popular
                   </button>
                 </div>
-                <div className="flex flex-col gap-3">
+                <div className="flex flex-col gap-3 w-full  ">
                   {newsArray &&
                     newsArray.map((items: any, indexs: any) => (
-                      <Link key={indexs}  href={{pathname:'/IndiviNews',query:{name:items.slug.current}}}>
-                        <div key={indexs} className="flex flex-row gap-3">
+                      <Link key={indexs} className="hover:bg-orange-100 w-[98%] p-1  hover:drop-shadow-lg duration-200 "  href={{pathname:'/IndiviNews',query:{name:items.slug.current}}}>
+                        <div key={indexs} className="flex  w-fit  flex-row gap-3">
                           <div className="w-[20%] h-12">
                             <img
                               src={items?.image?.asset?.url}
@@ -470,7 +474,7 @@ function Page() {
                             />
                           </div>
                           <div className="w-[70%]">
-                            <h1 className="font-bold text-xs">
+                            <h1 className="font-bold line-clamp-2 text-xs">
                               {items.heading}
                             </h1>
                             <p className="text-xs">{items.date}</p>

@@ -14,6 +14,7 @@ import Link from "next/link";
 import SanityClient from "@/app/SanityClient";
 import Loader from "@/app/home/Loader";
 import { useSearchParams } from "next/navigation";
+import { FaAngleRight } from "react-icons/fa";
 
 const Page=()=> {
   const para=useSearchParams()
@@ -224,6 +225,12 @@ const Page=()=> {
             ></meta>
           </Helmet> */}
           <div className="xs:p-5 p-7 ">
+          <div className='flex items-center gap-2 px-10 py-5 text-secondary'>
+        <Link href="/news" className='hover:text-primarycolor duration-200'><p>News</p></Link>
+        <FaAngleRight />
+        <p>{search}</p>
+        <p></p>
+    </div>
             <h1 className="py-8 font-bold text-4xl xs:mx-10 mx-auto relative flex flex-col w-fit">
               <span>{dataItems&&dataItems[0]?.category?.category}</span>
               <span className="w-full bg-primarycolor  h-[2px]"></span>
@@ -284,7 +291,7 @@ const Page=()=> {
                     {newsArray &&
                       newsArray.map((items: any, indexs: any) => (
                         
-                        <Link href={{pathname:'/IndiviNews',query:{name:items.slug.current}}} key={indexs} className="flex flex-row gap-3">
+                        <Link  href={{pathname:'/IndiviNews',query:{name:items.slug.current}}} key={indexs} className="flex hover:bg-orange-100 duration-200 hover:drop-shadow-lg p-1 flex-row gap-3">
                         
                           <div className="w-[20%] h-12">
                             <img
@@ -294,7 +301,7 @@ const Page=()=> {
                             />
                           </div>
                           <div className="w-[70%]">
-                            <h1 className="font-bold text-xs">
+                            <h1 className="font-bold line-clamp-2 text-xs">
                               {items.heading}
                             </h1>
                             <p className="text-xs">{items.date}</p>

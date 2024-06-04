@@ -64,7 +64,7 @@ const[opens,setopens]=useState(false)
     <div className="mt-10">
       <div>
         <h2 className="xs2:text-5xl xs:text-4xl text-2xl bg-clip-text sha text-center">
-          Career
+          Careers
         </h2>
       </div>
       <section className="">

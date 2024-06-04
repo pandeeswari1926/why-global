@@ -84,7 +84,7 @@ const Banner = () => {
       {bannerData.map((item: BannerItem, ind: number) => (
         <div
           key={ind}
-          className="relative h-[530px] lastwidth:h-[650px] xs:h-[750px] xs2:h-[900px] sm:h-screen"
+          className="relative h-[530px] overflow-hidden lastwidth:h-[650px] xs:h-[750px] xs2:h-[900px] sm:h-screen"
         >
           <div className="absolute md:-top-7 right-0 lg:w-[80%] w-full xs:h-screen leawidth:h-[650px] h-[500px]">
             <img

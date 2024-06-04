@@ -7,10 +7,12 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 import { IoIosArrowForward } from "react-icons/io";
 import SanityClient from "../SanityClient";
 import { MdArrowBackIos } from "react-icons/md";
+import { usePathname } from 'next/navigation'
 interface Alldata{
   Categoryname:string
 }
 const NavBar = () => {
+  const pathname = usePathname()
   const [alldata,setalldata]=useState<Alldata[]|null >([])
   const [open, setOpen] = useState(false);
   const [showDropdowncompany, setShowDropdowncompany] = useState(false);
@@ -117,10 +119,10 @@ useEffect(()=>{
 
   return (
     <>
-      <div className="z-30 fixed w-full md:top-7 top-0 ">
-        <section className="bg-white  flex justify-between xl:px-20 lg:px-5 items-center p-4   drop-shadow-xl z-10  w-full top-0">
+      <div className="z-30 relative ">
+        <section className="bg-white  flex justify-between xl:px-16 lg:px-5 items-center p-2   drop-shadow-xl z-10  w-full top-0">
           <Link href="/Homepage">
-            <img src="./logo-300x70.png" alt="logo" className="w-48" />
+            <img src="./logo-300x70.png" alt="logo" className="w-[210px]" />
           </Link>
           <ul className="space-x-5  lg:flex flex-row hidden justify-center items-center cursor-pointer xl:text-[15px] text-[12px] font-medium">
             <div
@@ -129,19 +131,18 @@ useEffect(()=>{
               onMouseLeave={handleMouseLeavecompany}
             >
               <div>
-                <li className="hover:text-primarycolor flex items-center">
+                <li className={`${pathname.includes("services")?'text-primarycolor':''} font-semibold hover:text-primarycolor flex items-center`}>
                   Company <RiArrowDropDownLine size={20} className="" />
                 </li>
               </div>
               {showDropdowncompany && (
                 <div className="absolute  downup bg-white text-black mt-2 w-44 p-4 rounded drop-shadow-md">
                   <div className="flex flex-col pl-2 text-sm">
-                    <Link className="hover:text-primarycolor border-b pb-2" href="/about">
+                    <Link className={`${pathname.includes("about")?'text-primarycolor':''} hover:text-primarycolor font-semibold`} href="/about">
                       Who We Are
                     </Link>
                     <Link
-                      className="hover:text-primarycolor border-b py-2.5"
-                      href="/lifeatwhy"
+className={`${pathname.includes("lifeatwhy")?'text-primarycolor':''} hover:text-primarycolor py-2.5 font-semibold`}                      href="/lifeatwhy"
                     >
                       Life At WHY
                     </Link>
@@ -157,18 +158,18 @@ useEffect(()=>{
               <div>
                 <Link
                   href="/services"
-                  className="hover:text-primarycolor flex items-center"
+                  className={`${pathname.includes("services")?'text-primarycolor':''} hover:text-primarycolor font-semibold flex items-center`}
                 >
                   Services <RiArrowDropDownLine size={20} className="" />
                 </Link>
               </div>
               {servicedropdown && (
-                <div className="absolute  downup bg-white text-black mt-2 w-44 p-4 rounded ">
-                  <div className="flex flex-col pl-2 text-sm ">
+                <div className="absolute  downup bg-white text-black mt-2 drop-shadow-md w-44 p-4 rounded ">
+                  <div className="flex flex-col pl-3 text-sm ">
                     {alldata&&alldata.map((item:any,index:any)=>(
                       <Link
                       key={index}
-                      className="hover:text-primarycolor border-b py-2.5"
+                      className="hover:text-primarycolor font-semibold border-b py-2.5"
                       href={{
                         pathname: "/servicesections",
                         query: { name:item?.Categoryname },
@@ -184,25 +185,20 @@ useEffect(()=>{
             </div>
 
             <Link href="solutions">
-              <li className="hover:text-primarycolor">Solutions</li>
+              <li className={ `${pathname.includes("solutions")?"text-primarycolor":""} font-semibold hover:text-primarycolor`}>Solutions</li>
             </Link>
             <Link href="/portfolio">
-              <li className="hover:text-primarycolor">Portfolio</li>
+              <li className={ `${pathname.includes("portfolio")?"text-primarycolor":""} font-semibold hover:text-primarycolor`}>Portfolio</li>
             </Link>
             <Link href="/testimonial">
-              <li className="hover:text-primarycolor">Testimonials</li>
+              <li className={ `${pathname.includes("testimonial")?"text-primarycolor":""} font-semibold hover:text-primarycolor`}>Testimonials</li>
             </Link>
             <Link href="/events">
-              <li className="hover:text-primarycolor">Events</li>
+              <li className={ `${pathname.includes("events")?"text-primarycolor":""} font-semibold hover:text-primarycolor`}>Events</li>
             </Link>
-            <Link href="/news">
-              <li className="hover:text-primarycolor">News</li>
-            </Link>
-            <Link href="/career">
-              <li className="hover:text-primarycolor">Career</li>
-            </Link>
+            
             <Link href="/contactus">
-              <li className="hover:text-primarycolor">Contact us</li>
+              <li className={ `${pathname.includes("contactus")?"text-primarycolor":""} font-semibold hover:text-primarycolor`}>Contact us</li>
             </Link>
           </ul>
           <Link href={"/contactus"}>
@@ -228,11 +224,11 @@ useEffect(()=>{
         </section>
 
         {open && (
-          <div className="w-[65%] relative float-right todown lg:hidden">
+          <div className="w-[65%] absolute  -z-10 right-0 float-right todown lg:hidden">
             <ul className="flex  flex-col justify-center pl-10 text-left  pr-4 bg-primarycolor pb-5 pt-5">
               <div>
                 <li
-                  className="bg-primarycolor cursor-pointer p-2 text-white hover:bg-white hover:text-primarycolor flex items-center gap-1"
+                  className="bg-primarycolor  cursor-pointer p-2 text-white hover:bg-white hover:text-primarycolor flex items-center gap-1"
                   onClick={toggleShowcompany}
                 >
                   Company <IoIosArrowForward size={13} />

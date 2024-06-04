@@ -19,22 +19,42 @@ import SanityClient from "../SanityClient";
 interface Alldata{
   Categoryname:string
 }
+interface name{
+  name:string
+}
 const Contactform = () => {
+  const[select,seselect]=useState(null)
+  const initail={
+    name:'',
+    email:'',
+    message:'',
+    PhoneNumber:'',
+    select:select
+  }
+  const[mesdata,setmesdata]=useState<{ [key: string]: any }>(initail)
   const[alldata,setalldata]=useState<Alldata[]|[]>([])
   useEffect(()=>{
   const getdata=async()=>{
     await SanityClient.fetch(`*[_type=="servicecategory"]{
       Categoryname
-      
     }`).then((res:any)=>{
      setalldata(res)
      console.log(res);
-     
     })
   }
   getdata();
-
 },[])
+function HandleChange(e:any){
+  setmesdata((prev)=>({...prev,[e.target.name]:e.target.value}))
+  console.log(mesdata);
+}
+function handleSubmit(e:any){
+mesdata.select=select
+  e.preventDefault()
+  console.log(mesdata);
+//  axios.post('http://localhost:5000/sendmail',mesdata).then((res)=>{console.log(res)?
+//  })
+}
   return (
     <section className="lg:h-[550px] xs:h-[800px] h-[830px]">
       <div className=" w-full p-5 md:p-10 h-full">
@@ -50,7 +70,6 @@ const Contactform = () => {
                 <h3 className=" text-white xs:text-5xl text-3xl font-bold sm:-mt-2  ml-1">
                   Get in Touch
                 </h3>
-
                 <ul className="flex flex-col px-2 gap-5 pt-8 py-5 text-white text-xs sm:text-sm">
                   <Link
                     href="mailto:contact@whyglobalservices.com"
@@ -103,52 +122,63 @@ const Contactform = () => {
                   </a>
                 </div>
               </div>
-
-              <div className="drop-shadow-xl bg-white h-[480px] md:h-[450px] rounded-xl  lg:w-[70%] w-full p-5 ">
+              <div className="drop-shadow-xl bg-white h-fit rounded-xl  lg:w-[80%] w-full p-5 ">
                 <form
-                  action=""
-                  className="grid grid-cols-1 md:grid-cols-2 p-2 md:p-7 gap-2 md:gap-5 text-sm"
+                  onSubmit={handleSubmit}
+                  className="flex flex-col justify-center items-center   p-2 md:p-5 gap-5  text-sm"
                 >
+                  <div className="flex md:flex-row flex-col w-full gap-5">
                   <input
+                  name="name"
                     type="text"
-                    className="border border-gray-400 p-2 rounded-md"
+                    className="border border-gray-400 w-full p-2 rounded-md"
                     placeholder="Name"
+                    onChange={HandleChange}
                   />
                   <input
+                  name="email"
                     type="text"
-                    className="border border-gray-400 p-2 rounded-md"
+                    className="border border-gray-400 w-full p-2 rounded-md"
                     placeholder="Email ID"
+                    onChange={HandleChange}
                   />
+                  </div>
+                  <div className="flex md:flex-row flex-col w-full gap-5">
                   <input
+                  name="PhoneNumber"
                     type="text"
-                    className="border border-gray-400 p-2 rounded-md"
+                    className="border w-full border-gray-400 p-2 rounded-md"
                     placeholder="Mobile Number"
+                    onChange={HandleChange}
                   />
                   <Select
-                  
-                    className="h-10 rounded-md"
-                    placeholder='Service'
+                   onChange={(e)=>seselect(e)
+                   }
+                    className="h-[38px] w-full rounded-md"
+                    placeholder='Services'
                   >
                    {alldata?.map((item,index)=>(
                     <option key={index} value={item.Categoryname}>{item.Categoryname}</option>
                    ))}
                   </Select>
-                </form>
-                <div className="md:px-7 px-2">
+                  </div>
+                <div className=" w-full flex flex-col justify-center items-center gap-5">
                   <textarea
                     name="message"
                     id="message"
                     cols={1}
-                    rows={8}
+                    rows={5}
                     className="border-gray-400 border rounded-md w-full p-2"
                     placeholder="Message"
+                    onChange={HandleChange}
                   ></textarea>
-                </div>
-                <div className="flex justify-end items-center pt-2 px-2 md:px-6">
-                  <button className="w-28 rounded-md px-2 py-1.5 hover:bg-primarycolor duration-200 hover:text-white bg-white drop-shadow-lg">
+                  <div className="">
+                  <button  className="w-28 rounded-md px-2 py-1.5 hover:bg-primarycolor duration-200 hover:text-white bg-white drop-shadow-lg">
                     Submit
                   </button>
                 </div>
+                </div>
+                </form>
               </div>
             </div>
           </div>
@@ -157,5 +187,4 @@ const Contactform = () => {
     </section>
   );
 };
-
 export default Contactform;

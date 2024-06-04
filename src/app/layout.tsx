@@ -5,15 +5,11 @@ import NavBar from "./Homepage/NavBar";
 import Footer from "./Homepage/Footer";
 import TopBar from "./Homepage/TopBar";
 import fav from '../../public/smallwgs.png'
-
 const inter = Inter({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
   title: "WHY Global Services",
   description: "WHY Global services",
- 
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -29,13 +25,12 @@ export default function RootLayout({
   sizes="<generated>"
 />
   </head>
- 
-  
       <body className={inter.className}>
-   
+        <div className="sticky top-0 w-full z-30">
         <TopBar />
         <NavBar />
-        <div className="pt-[66px] sm:pt-[72px] md:pt-[90px]">
+        </div>
+        <div>
           {children}
         </div>
         <Footer />

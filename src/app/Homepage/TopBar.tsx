@@ -13,60 +13,44 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaSquareInstagram } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
-
 const TopBar = () => {
   return (
     <>
-      <section className="bg-primarycolor text-white w-full h-8 xl:px-24 px-8 md:flex justify-between  hidden fixed z-30">
-        <section className="flex gap-2 items-center justify-center mb-1">
+      <section className="bg-primarycolor text-white w-full h-9 xl:px-16 px-8 md:flex justify-between items-center top-0 hidden ">
+        <section className="flex gap-5 items-center justify-center ">
           <Link
-            href="mailto:contact@whyglobalservices.com"
-            className="flex items-center gap-1" target="_blank"
+            href="tel:+918270099990"
+            className="flex text-sm items-center gap-1" target="_blank"
           >
-            <CiMail />
-            <p className="text-sm">contact@whyglobalservices.com</p>
+            <img className="w-3" src="/indi.jpg"></img>
+            <p className="text-sm font-semibold">+91-82700 99990</p>
           </Link>
-          <p>|</p>
           <Link
-            href="https://www.google.com/maps/place/WHY+Global+Services/@13.0712223,80.2405669,15z/data=!3m2!4b1!5s0x3a526672ac53d709:0xc472fff95bbccecd!4m6!3m5!1s0x3a5265be7d4e0655:0x1ecaf35cce10324c!8m2!3d13.071223!4d80.259021!16s%2Fg%2F1hdzfksp0?entry=ttu, Chennai"
-            className="flex items-center gap-1" target="_blank"
+            href="tel:+447446936883"
+            className="flex text-sm items-center gap-1" target="_blank"
           >
-            <IoLocationOutline />
-            <p className="text-sm">Egmore, Chennai.</p>
+            <img className="w-3" src="/us.jpg"></img>
+            <p className="text-sm font-semibold"> +44-7446936883</p>
+          </Link>
+          <Link
+            href="tel:+6531633121"
+            className="flex text-sm items-center gap-1" target="_blank"
+          >
+            <img className="w-3" src="/singapore.jpg"></img>
+            <p className="text-sm font-semibold">+65-31633121</p>
           </Link>
         </section>
-
-        <section className="flex space-x-5 pt-1">
-          <Link
-            href="https://www.facebook.com/whyglobalservices/"
-            target="_blank"
-          >
-            <FaFacebookSquare className="h-4 cursor-pointer" />
-          </Link>
-          <Link target="_blank" href={'https://twitter.com/wehelpyou19'}><FaSquareXTwitter className="h-4 cursor-pointer" target="_blank" /></Link>
-          <Link
-            href="https://www.instagram.com/whyglobalservices/"
-            target="_blank"
-          >
-            <FaSquareInstagram className="h-4 cursor-pointer" />
-          </Link>
-
-          <Link
-            href="https://www.linkedin.com/company/why-global-services/?originalSubdomain=in"
-            target="_blank"
-          >
-            <FaLinkedin className="h-4 cursor-pointer" />
-          </Link>
-          <Link
-            href="https://www.youtube.com/results?search_query=why+global+services"
-            target="_blank"
-          >
-            <FaYoutube className="h-4 cursor-pointer" />
-          </Link>
+        <section className="flex gap-2 ">
+        <Link className="font-semibold text-sm" href="/news">
+              <p className=''>News</p>
+            </Link>
+            <p className="text-sm">|</p>
+            <Link className="font-semibold text-sm" href="/career">
+              <p className=''>Careers</p>
+            </Link>
         </section>
       </section>
     </>
   );
 };
-
 export default TopBar;

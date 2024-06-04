@@ -4,7 +4,7 @@ import Loader from "@/app/home/Loader";
 import Link from "next/link";
 import { GetStaticPaths, GetStaticProps } from "next";
 import React, { useEffect, useState } from "react";
-import { FaCalendar } from "react-icons/fa";
+import { FaAngleRight, FaCalendar } from "react-icons/fa";
 import { useSearchParams } from "next/navigation";
 const BlockContent = require("@sanity/block-content-to-react");
 
@@ -19,7 +19,9 @@ interface newsDetails {
       contents: [{ content: string }];
       content1: string;
     }
+    
   ];
+  category:{category:string};
 }
 interface news {
   slug: { current: string };
@@ -27,6 +29,7 @@ interface news {
   heading: string;
   date: string;
   postStatus: string;
+ 
 }
 
 const Page = () => {
@@ -49,6 +52,9 @@ const Page = () => {
     const getdata = async () => {
       await SanityClient.fetch(
         `*[_type=="news" && slug.current==${JSON.stringify(id)}]{
+          category->{
+            category
+          },
             heading,
             slug,
             subTitle,
@@ -104,7 +110,13 @@ const Page = () => {
   return loader == true ? (
     <Loader />
   ) : (
-    <div className="w-full p-5 md:py-14 py-10 lg:px-16">
+    <div className="w-full p-5 md:py-10 py-5 lg:px-16">
+      <div className='flex  line-clamp-2 items-center gap-2  py-2 text-secondary'>
+        <Link href="/news" className='hover:text-primarycolor duration-200'><p>News</p></Link>
+        <FaAngleRight />
+        <p onClick={()=>window.history.go(-1)} className='cursor-pointer hover:text-primarycolor duration-200'>{alldata && alldata?.category?.category}</p>
+        <p></p>
+    </div>
       <div className="flex lg:flex-row flex-col gap-10 w-full relative">
         <div className="lg:w-[65%] w-full">
           <div className="w-full flex flex-col gap-5 h-full">
@@ -177,7 +189,7 @@ const Page = () => {
                       query: { name: items.slug.current },
                     }}
                     key={indexs}
-                    className="flex flex-row gap-3"
+                    className="flex hover:bg-orange-100 p-1 hover:drop-shadow-lg duration-200 flex-row gap-3"
                   >
                     <div className="w-[20%] h-12">
                       <img
