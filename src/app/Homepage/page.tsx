@@ -22,6 +22,7 @@ import { FaLaptop } from "react-icons/fa";
 import Loader from "../home/Loader";
 import { Helmet } from "react-helmet";
 import Link from "next/link";
+import Banner from "./Banner"
 
 function Page() {
   interface banner {
@@ -145,7 +146,7 @@ function Page() {
               type="text/css"
               href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
             />
-            <div className="h-screen  w-full relative">
+            {/* <div className="h-screen  w-full relative">
               
               <div className="w-full h-full relative bg-gray-500">
                 <img
@@ -170,12 +171,13 @@ function Page() {
                     </p>
                   </div>
                 ))}
-            </div>
-            {data &&
+            </div> */}
+            <Banner />
+            {/* {data &&
               data.Banner.map((item, index) => (
                 <div
                   key={index}
-                  className="lg:-mt-20 w-[90%] mx-auto flex lg:flex-row lg:mb-20 mb-5 flex-col justify-center items-center h-fit"
+                  className=" mx-auto flex lg:flex-row   flex-col justify-center items-center h-fit"
                 >
                   <div className="flex lg:flex-row flex-col w-full lg:w-[50%] justify-center items-center gap-6 ">
                     {item &&
@@ -213,9 +215,9 @@ function Page() {
                     </p>
                   </div>
                 </div>
-              ))}
+              ))} */}
           </div>
-          <div className="relative w-full h-full bg-cover  bg-no-repeat  ">
+          <div className="relative w-full h-full bg-cover overflow-hidden  bg-no-repeat  ">
             <div className="absolute w-full -top-16 h-full -z-10">
               <img src="./ce.png" alt="" className="w-full h-full" />
             </div>

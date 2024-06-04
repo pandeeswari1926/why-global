@@ -30,7 +30,7 @@ export default function RootLayout({
         <TopBar />
         <NavBar />
         </div>
-        <div>
+        <div className="">
           {children}
         </div>
         <Footer />
