@@ -247,10 +247,12 @@ export default function Page() {
                           target={index != 2 ? "_blank" : "_parent"}
                           href={`${items?.link}`}
                         >
+                            
                           <div
                             key={index}
-                            className="bg-white border border-primarycolor relative w-full h-full  py-1 rounded-xl drop-shadow-lg flex flex-col justify-center gap-3 items-center"
+                            className="bg-white border group cardsrotate border-primarycolor relative w-full h-full  py-1 rounded-xl drop-shadow-lg flex flex-col justify-center overflow-hidden gap-3 items-center  transition-all duration-200"
                           >
+                            <div className='absolute w-10 h-10 -top-5 rounded-full -right-5  bg-primarycolor'></div>
                             <img
                               src={items?.siteIcon?.asset?.url}
                               alt=""
