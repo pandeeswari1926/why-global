@@ -173,11 +173,11 @@ function Page() {
                 ))}
             </div> */}
             <Banner />
-            {/* {data &&
+            {data &&
               data.Banner.map((item, index) => (
                 <div
                   key={index}
-                  className=" mx-auto flex lg:flex-row   flex-col justify-center items-center h-fit"
+                  className=" mx-auto flex md:hidden  py-5  flex-col justify-center items-center h-fit"
                 >
                   <div className="flex lg:flex-row flex-col w-full lg:w-[50%] justify-center items-center gap-6 ">
                     {item &&
@@ -202,7 +202,7 @@ function Page() {
                         </Link>
                       ))}
                   </div>
-                  <div className="mt-10 z-10 lg:w-[50%] w-full text-center lg:text-start p-3">
+                  {/* <div className="mt-10 z-10 lg:w-[50%] w-full text-center lg:text-start p-3">
                     <p className="text-gray-600">
                       Join our team - We are looking for talented & driven
                       people to come work with us 
@@ -213,9 +213,9 @@ function Page() {
                         <span> &nbsp;<span className="underline">Available Positions</span></span>
                       </Link>
                     </p>
-                  </div>
+                  </div> */}
                 </div>
-              ))} */}
+              ))}
           </div>
           <div className="relative w-full h-full bg-cover overflow-hidden  bg-no-repeat  ">
             <div className="absolute w-full -top-16 h-full -z-10">
