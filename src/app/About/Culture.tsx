@@ -4,7 +4,7 @@ import Image from 'next/image'
 import ruban from '../../../public/ruban.png'
 function Culture() {
   return (
-    <div>
+    <div> 
       <div className='pt-10 flex w-full md:flex-row flex-col '>
        <div className='w-[25%] h-[300px] rad  bg-black'></div>
        <div>
