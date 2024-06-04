@@ -238,23 +238,27 @@ export default function Page() {
               data.Banner.map((item, index) => (
                 <div
                   key={index}
-                  className=" mx-auto flex lg:flex-row   flex-col justify-start items-start h-fit"
+                  className=" mx-auto flex lg:flex-row relative  flex-col justify-start items-start h-fit"
                 >
-                  <div className="flex lg:flex-row flex-col w-full justify-start items-start gap-6 ">
+                    
+                  <div className="flex lg:flex-row flex-col w-full relative justify-start items-start gap-6 ">
+                  
                     {item &&
                       item.card.map((items, index) => (
-                        <Link className="w-[70%] lg:h-24 lg:w-24 h-48 md:w-[40%]" key={index}
+                        <Link className="w-[70%] lg:h-24 lg:w-24 relative h-48 md:w-[40%]" key={index}
                           target={index != 2 ? "_blank" : "_parent"}
                           href={`${items?.link}`}
                         >
+                            
                           <div
                             key={index}
-                            className="bg-white border border-primarycolor relative w-full h-full  py-1 rounded-xl drop-shadow-lg flex flex-col justify-center gap-3 items-center"
+                            className="bg-white border group cardsrotate border-primarycolor relative w-full h-full  py-1 rounded-xl drop-shadow-lg flex flex-col justify-center overflow-hidden gap-3 items-center  transition-all duration-200"
                           >
+                            <div className='absolute w-10 h-10 -top-5 rounded-full -right-5  bg-primarycolor'></div>
                             <img
                               src={items?.siteIcon?.asset?.url}
                               alt=""
-                              className={`size-16 lg:w-7 w-16 object-contain ${index == 1 ? 'w-[2.9rem]' : ''}`}
+                              className={`size-16 lg:w-7 w-16 object-contain ${index == 1 ? 'w-[2.9rem]' : ''} group-hover:shadow-[rgba(5, 71, 17, 0.2) -5px 20px 10px 0px]`}
                             />
                             <p className=" text-xl md:text-[12px] text-center">
                               {items.cardTitle}
