@@ -67,7 +67,7 @@ export default function Page() {
     console.log(prev);
   });
   return (
-    <div className=" lg:h-[100vh] mb-10 -mt-16 md:h-[600px] h-[500px] w-full relative overflow-hidden">
+    <div className=" lg:h-[90vh] lg:-mt-10  md:h-[600px] h-[500px] w-full relative overflow-hidden">
       <img
         src="/aigen.jpg"
         className="w-full h-full -z-10 absolute top-0 left-0 object-cover"
@@ -94,7 +94,7 @@ export default function Page() {
                     <span>Magic Today</span>
                   </div>
                 </h1>
-                <p className="bg-primarycolor cursor-pointer text-white font-semibold  px-8 py-3 rounded-md w-fit hover:bg-white duration-500 hover:text-black">
+                <p className="bg-primarycolor cursor-pointer text-white font-semibold  px-6 py-3 rounded-md w-fit hover:bg-white duration-500 hover:text-black">
                   Get a Quote
                 </p>
               </div>
@@ -110,11 +110,11 @@ export default function Page() {
               <GoTriangleLeft className="text-primarycolor size-7" />
               <GoTriangleLeft className="text-primarycolor size-7" />
             </div>
-            <div className="bg-primarycolor w-48 h-48 absolute moved -z-10 left-7 -top-3"></div>
+            <div className="bg-primarycolor w-48 h-48 absolute moved -z-10 -left-3 -top-3"></div>
             <div className="bg-primarycolor w-28 h-28 absolute revmoved -z-10 -right-3 -bottom-3"></div>
             <img
               src="/ramyabox.jpg"
-              className="shadow-2xl object-cover  mx-auto w-[450px] md:h-[300px] h-[200px] lg:h-[350px] 2xl:h-[500px]"
+              className="shadow-2xl object-cover  w-full md:h-[300px] h-[200px] lg:h-[350px] 2xl:h-[450px]"
             ></img>
           </div>
         </div>
@@ -135,7 +135,7 @@ export default function Page() {
                     <span>Excellence Today</span>
                   </div>
                 </h1>
-                <p className="bg-primarycolor cursor-pointer text-white  px-8 py-3 rounded-md w-fit hover:bg-white duration-500 hover:text-black">
+                <p className="bg-primarycolor cursor-pointer text-white  px-6 py-3 rounded-md w-fit hover:bg-white duration-500 hover:text-black">
                   Get a Quote
                 </p>
               </div>
@@ -152,7 +152,7 @@ export default function Page() {
             <div className="bg-primarycolor w-28 h-28 absolute revmoved -z-10 -right-3 -bottom-3"></div>
             <img
               src="/dhanushbox.jpg"
-              className="drop-shadow-xl object-cover  w-full md:h-[300px] h-[200px] lg:h-[380px] 2xl:h-[500px]"
+              className="drop-shadow-xl object-cover  w-full md:h-[300px] h-[200px] lg:h-[350px] 2xl:h-[450px]"
             ></img>
           </div>
         </div>
@@ -173,7 +173,7 @@ export default function Page() {
                     <span>Empowering Business</span>
                   </div>
                 </h1>
-                <p className="bg-primarycolor cursor-pointer  text-white px-8 py-3 rounded-md w-fit hover:bg-white duration-500 hover:text-black">
+                <p className="bg-primarycolor cursor-pointer  text-white px-6 py-3 rounded-md w-fit hover:bg-white duration-500 hover:text-black">
                   Get a Quote
                 </p>
               </div>
@@ -190,7 +190,7 @@ export default function Page() {
             <div className="bg-primarycolor w-28 h-28 absolute revmoved -z-10 -right-3 -bottom-3"></div>
             <img
               src="/sudalaibox.jpg"
-              className="drop-shadow-xl object-cover  w-full md:h-[300px] h-[200px] lg:h-[380px] 2xl:h-[500px]"
+              className="drop-shadow-xl object-cover  w-full md:h-[300px] h-[200px] lg:h-[350px] 2xl:h-[450px]"
             ></img>
           </div>
         </div>
@@ -233,30 +233,30 @@ export default function Page() {
             <img src="/banner.webp" className="drop-shadow-xl h-[350px]  w-full"></img>
         </div>
     </div>} */}
-    <div className="absolute bottom-10 w-full  left-0">
+    <div className="absolute bottom-5 w-full px-5 md:px-10 2xl:px-16  left-0">
     {data &&
               data.Banner.map((item, index) => (
                 <div
                   key={index}
                   className=" mx-auto flex lg:flex-row   flex-col justify-start items-start h-fit"
                 >
-                  <div className="flex lg:flex-row flex-col w-fit justify-center items-center gap-6 ">
+                  <div className="flex lg:flex-row flex-col w-full justify-start items-start gap-6 ">
                     {item &&
                       item.card.map((items, index) => (
-                        <Link className="w-[70%] lg:h-28 lg:w-28 h-48 md:w-[40%]" key={index}
+                        <Link className="w-[70%] lg:h-24 lg:w-24 h-48 md:w-[40%]" key={index}
                           target={index != 2 ? "_blank" : "_parent"}
                           href={`${items?.link}`}
                         >
                           <div
                             key={index}
-                            className="bg-white border border-primarycolor relative w-full h-full  rounded-3xl drop-shadow-lg flex flex-col justify-center gap-3 items-center"
+                            className="bg-white border border-primarycolor relative w-full h-full  py-1 rounded-xl drop-shadow-lg flex flex-col justify-center gap-3 items-center"
                           >
                             <img
                               src={items?.siteIcon?.asset?.url}
                               alt=""
-                              className={`size-16 lg:w-10 w-16 object-contain ${index == 1 ? 'w-[2.9rem]' : ''}`}
+                              className={`size-16 lg:w-7 w-16 object-contain ${index == 1 ? 'w-[2.9rem]' : ''}`}
                             />
-                            <p className=" text-xl md:text-[15px] text-center w-[80%]">
+                            <p className=" text-xl md:text-[12px] text-center">
                               {items.cardTitle}
                             </p>
                           </div>

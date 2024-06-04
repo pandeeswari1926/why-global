@@ -26,7 +26,7 @@ export default function RootLayout({
 />
   </head>
       <body className={inter.className}>
-        <div className="sticky top-0 w-full z-30">
+        <div className="sticky h-fit overflow-hidden top-0 w-full z-30">
         <TopBar />
         <NavBar />
         </div>
