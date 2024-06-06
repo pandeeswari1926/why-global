@@ -67,15 +67,16 @@ export default function Page() {
     console.log(prev);
   });
   return (
-    <div className=" lg:h-[90vh] lg:-mt-10  md:h-[600px] h-[500px] w-full relative overflow-hidden">
+    <div className=" lg:h-[95vh] lg:-mt-12  md:h-[600px] h-[500px] w-full relative overflow-hidden">
       <img
         src="/aigen.jpg"
         className="w-full h-full -z-10 absolute top-0 left-0 object-cover"
       ></img>
+      
       <div className="w-10 h-10  absolute big bg-transparent border-2 border-primarycolor "></div>
       {/* <div className="w-5 h-5 jump top-3/4 left-1/4 absolute  bg-transparent border-2 border-primary "></div> */}
       <div className="w-5 h-5 absolute small   bg-primarycolor"></div>
-      <div className="w-6 h-6 absolute small2 top-5 right-0  bg-primarycolor"></div>
+      <div className="w-3 h-3 absolute small2 top-12 right-5  bg-transparent border-2 border-white"></div>
       <div className="w-3 h-3 jump absolute rounded-full  bottom-0 right-5  bg-primarycolor"></div>
       <div className="bg-black bg-opacity-85 -z-10 absolute top-0 left-0 w-full h-full"></div>
       {prev == 0 && (
@@ -88,7 +89,7 @@ export default function Page() {
                     Boost your brand with
                   </p>
                   <div className="flex flex-col justify-center  md:items-start items-center gap-2">
-                    <span className="sha2 lg:text-6xl font-extrabold 2xl:text-8xl md:text-4xl sm:text-5xl lastwidth:text-4xl text-2xl h-fit w-fit relative">
+                    <span className="sha2 lg:text-6xl font-extrabold 2xl:text-7xl md:text-4xl sm:text-5xl lastwidth:text-4xl text-2xl h-fit w-fit relative">
                       Digital Marketing
                     </span>
                     <span>Magic Today</span>
@@ -114,7 +115,7 @@ export default function Page() {
             <div className="bg-primarycolor w-28 h-28 absolute revmoved -z-10 -right-3 -bottom-3"></div>
             <img
               src="/ramyabox.jpg"
-              className="shadow-2xl object-cover  w-full md:h-[300px] h-[200px] lg:h-[350px] 2xl:h-[450px]"
+              className="shadow-2xl object-cover  w-full md:h-[300px] h-[200px] lg:h-[350px] xl:h-[380px] 2xl:h-[550px]"
             ></img>
           </div>
         </div>
@@ -129,7 +130,7 @@ export default function Page() {
                     Transform your business with
                   </p>
                   <div className="flex flex-col justify-center  md:items-start items-center gap-2">
-                    <span className="sha2 lg:text-6xl font-extrabold 2xl:text-8xl md:text-4xl sm:text-5xl lastwidth:text-4xl text-2xl">
+                    <span className="sha2 lg:text-6xl font-extrabold 2xl:text-7xl md:text-4xl sm:text-5xl lastwidth:text-4xl text-2xl">
                       Web Development
                     </span>{" "}
                     <span>Excellence Today</span>
@@ -152,7 +153,7 @@ export default function Page() {
             <div className="bg-primarycolor w-28 h-28 absolute revmoved -z-10 -right-3 -bottom-3"></div>
             <img
               src="/dhanushbox.jpg"
-              className="drop-shadow-xl object-cover  w-full md:h-[300px] h-[200px] lg:h-[350px] 2xl:h-[450px]"
+              className="drop-shadow-xl object-cover  w-full md:h-[300px] h-[200px] lg:h-[350px] xl:h-[380px] 2xl:h-[550px]"
             ></img>
           </div>
         </div>
@@ -167,7 +168,7 @@ export default function Page() {
                     Transforming Ideas into Visual Masterpieces
                   </p>
                   <div className="flex flex-col justify-center  md:items-start items-center gap-2">
-                    <span className="sha2 lg:text-6xl font-extrabold 2xl:text-8xl md:text-4xl sm:text-5xl lastwidth:text-4xl text-2xl">
+                    <span className="sha2 lg:text-6xl font-extrabold 2xl:text-7xl md:text-4xl sm:text-5xl lastwidth:text-4xl text-2xl">
                       Graphic Design
                     </span>{" "}
                     <span>Empowering Business</span>
@@ -190,7 +191,7 @@ export default function Page() {
             <div className="bg-primarycolor w-28 h-28 absolute revmoved -z-10 -right-3 -bottom-3"></div>
             <img
               src="/sudalaibox.jpg"
-              className="drop-shadow-xl object-cover  w-full md:h-[300px] h-[200px] lg:h-[350px] 2xl:h-[450px]"
+              className="drop-shadow-xl object-cover  w-full md:h-[300px] h-[200px] lg:h-[350px] xl:h-[380px] 2xl:h-[550px]"
             ></img>
           </div>
         </div>
@@ -233,7 +234,7 @@ export default function Page() {
             <img src="/banner.webp" className="drop-shadow-xl h-[350px]  w-full"></img>
         </div>
     </div>} */}
-    <div className="absolute bottom-5 w-full md:block hidden px-5 md:px-10 2xl:px-16  left-0">
+    <div className="absolute  md:bottom-8 w-full md:block hidden px-5 md:px-10 2xl:px-16  left-0">
     {data &&
               data.Banner.map((item, index) => (
                 <div
@@ -250,16 +251,16 @@ export default function Page() {
                             
                           <div
                             key={index}
-                            className="bg-white border group cardsrotate border-primarycolor relative w-full h-full  py-1 rounded-xl drop-shadow-lg flex flex-col justify-center overflow-hidden gap-3 items-center  transition-all duration-200"
+                            className="bg-transparent border group  border-primarycolor relative w-full h-full  py-1 rounded-xl drop-shadow-lg flex flex-col justify-center overflow-hidden gap-3 items-center  transition-all duration-200"
                           >
-                            <div className='absolute w-10 h-10 -top-5 rounded-full -right-5  bg-primarycolor'></div>
+                            <div className='absolute group-hover:w-[100%] group-hover:h-full group-hover:top-0 group-hover:right-0 -z-10 duration-200 transition-all group-hover:rounded-none w-10 h-10 -top-5  -right-5  bg-transparent group-hover:bg-white'></div>
                             <img
                               src={items?.siteIcon?.asset?.url}
                               alt=""
                               className={`size-16 md:w-7 w-16 object-contain ${index == 1 ? 'w-[2.9rem]' : ''}`}
                             />
-                            <p className=" text-xl md:text-[12px] text-center">
-                              {items.cardTitle}
+                            <p className=" text-xl md:text-sm text-center font-semibold w-[80%] group-hover:text-black  text-white">
+                              {items?.cardTitle}
                             </p>
                           </div>
                         </Link>

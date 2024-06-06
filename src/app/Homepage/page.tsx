@@ -177,8 +177,13 @@ function Page() {
               data.Banner.map((item, index) => (
                 <div
                   key={index}
-                  className=" mx-auto flex md:hidden  py-5  flex-col justify-center items-center h-fit"
+                  className=" mx-auto flex md:hidden  py-5  flex-col justify-center items-center h-fit relative overflow-hidden"
                 >
+                  {/* <div className="w-12 h-12  absolute big bg-transparent border-2 border-primarycolor "></div> */}
+      {/* <div className="w-5 h-5 jump top-3/4 left-1/4 absolute  bg-transparent border-2 border-primary "></div> */}
+      {/* <div className="w-5 h-5 absolute small   bg-primarycolor"></div> */}
+      {/* <div className="w-6 h-6 absolute small2 top-5 right-0  bg-primarycolor"></div> */}
+      {/* <div className="w-3 h-3 jump absolute rounded-full  bottom-0 right-5  bg-primarycolor"></div> */}
                   <div className="flex lg:flex-row flex-col w-full lg:w-[50%] justify-center items-center gap-6 ">
                     {item &&
                       item.card.map((items, index) => (
@@ -217,7 +222,7 @@ function Page() {
                 </div>
               ))}
           </div>
-          <div className="relative w-full h-full bg-cover overflow-hidden  bg-no-repeat  ">
+          <div className="relative w-full h-full pt-10 bg-cover overflow-hidden  bg-no-repeat  ">
             <div className="absolute w-full -top-16 h-full -z-10">
               <img src="./ce.png" alt="" className="w-full h-full" />
             </div>
