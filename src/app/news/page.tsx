@@ -370,7 +370,7 @@ function Page() {
           NEWS
         </h2></div>
          
-          <div className="flex relative lg:flex-row g  flex-col p-5 lg:p-0 py-5">
+          <div className="flex relative lg:flex-row   flex-col p-5 lg:p-0 py-5">
             <div className="lg:w-[70%] w-full grid md:grid-cols-2 grid-cols-1  mx-auto justify-center  justify-items-center gap-10 lg:px-10 pt-5">
               {allvalues &&
                 allvalues.map((item, index) => (
