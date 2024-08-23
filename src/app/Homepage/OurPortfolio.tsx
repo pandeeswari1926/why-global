@@ -80,10 +80,10 @@ useEffect(()=>{
                 }}
               >
                 <img
-                  className="rounded-lg overflow-hidden shadow-2xl w-full h-full " // Adjust height for images
+                  className="rounded-lg overflow-hidden shadow-2xl w-full h-full" // Adjust height for images
                   src={item.images}
                   alt={`Portfolio ${index + 1}`}
-                  style={{ width: '350px' }} // Adjust width as needed
+                  style={{ width: '320px' }} // Adjust width as needed
                 />
               </div>
             );
