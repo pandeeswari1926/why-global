@@ -79,31 +79,31 @@ export default function Page() {
       <div className="w-3 h-3 absolute small2 top-12 right-5  bg-transparent border-2 border-white"></div>
       <div className="w-3 h-3 jump absolute rounded-full  bottom-0 right-5  bg-primarycolor"></div>
       <div className="bg-black bg-opacity-85 -z-10 absolute top-0 left-0 w-full h-full"></div>
-      {prev == 0 && (
-        <div className="w-full h-full flex gap-5 justify-center md:justify-between items-center px-5 md:px-10 2xl:px-16">
+      {prev == 1 && (
+        <div className="w-full h-full flex gap-5 justify-center lg:justify-between items-center px-5 md:px-10 2xl:px-16">
           <div className="lg:w-[60%] h-full">
             <div className="w-full flex  items-center  h-full">
-              <div className=" keys flex flex-col  md:justify-center justify-center md:items-start items-center space-y-10">
+              <div className=" keys flex flex-col  md:justify-center justify-center lg:items-start items-center space-y-10">
                 <h1 className="text-white  md:text-4xl sm:text-2xl text-lg font-bold">
-                  <p className="text-primarycolor font-bold md:text-start text-center text-sm py-3 ">
+                  {/* <p className="text-primarycolor font-bold md:text-start text-center text-sm py-3 ">
                     Boost your brand with
-                  </p>
+                  </p> */}
                   <div className="flex flex-col justify-center  md:items-start items-center gap-2">
-                    <span className="sha2 lg:text-6xl font-extrabold 2xl:text-7xl md:text-4xl sm:text-5xl lastwidth:text-4xl text-2xl h-fit w-fit relative">
-                      Digital Marketing
+                    <span className="sha2 text-center lg:text-left lg:text-5xl font-extrabold 2xl:text-7xl md:text-4xl sm:text-5xl lastwidth:text-3xl text-2xl h-fit w-fit relative">
+                    10x Your Business Growth with Our 360° Digital Marketing Strategy
                     </span>
-                    <span>Magic Today</span>
+                    {/* <span>Magic Today</span> */}
                   </div>
                 </h1>
                 <p className="bg-primarycolor cursor-pointer text-white font-semibold  px-6 py-3 rounded-md w-fit hover:bg-white duration-500 hover:text-black">
-                  Get a Quote
+                Let’s get started
                 </p>
               </div>
             </div>
           </div>
           <div
             ref={elemesnts}
-            className="md:w-[40%] lg:w-[50%] md:block hidden images relative"
+            className="md:w-[40%] lg:w-[50%] lg:block hidden images relative"
           >
             <div className="flex arrowed  absolute -bottom-10">
               <GoTriangleLeft className="text-primarycolor size-7" />
@@ -120,29 +120,29 @@ export default function Page() {
           </div>
         </div>
       )}
-      {prev == 1 && (
+      {prev == 0 && (
         <div className="w-full h-full flex gap-5 justify-center md:justify-between items-center px-5 md:px-10 2xl:px-16">
           <div className="lg:w-[60%] h-full">
             <div className="w-full flex  items-center  h-full">
-              <div className=" keys flex flex-col  md:justify-center justify-center md:items-start items-center space-y-10">
+              <div className=" keys flex flex-col  lg:justify-center justify-center lg:items-start items-center space-y-10">
                 <h1 className="text-white  md:text-4xl sm:text-2xl text-lg font-bold">
-                  <p className="text-primarycolor font-bold md:text-start text-center text-sm py-3">
-                    Transform your business with
-                  </p>
-                  <div className="flex flex-col justify-center  md:items-start items-center gap-2">
-                    <span className="sha2 lg:text-6xl font-extrabold 2xl:text-7xl md:text-4xl sm:text-5xl lastwidth:text-4xl text-2xl">
-                      Web Development
+                  {/* <p className="text-primarycolor font-bold md:text-start text-center text-sm py-3">
+                   Empowering Businesses Through Technology 
+                  </p> */}
+                  <div className="flex flex-col justify-center  lg:items-start items-center lg:gap-2 gap-5">
+                    <span className="sha2 lg:text-5xl lg:text-left text-center  font-extrabold 2xl:text-6xl md:text-4xl sm:text-5xl lastwidth:text-3xl text-2xl">
+                    Empowering Businesses Through Technology 
                     </span>{" "}
-                    <span>Excellence Today</span>
+                    <span className="lg:text-5xl text-center">Your Trusted IT Partner</span>
                   </div>
                 </h1>
-                <p className="bg-primarycolor cursor-pointer text-white  px-6 py-3 rounded-md w-fit hover:bg-white duration-500 hover:text-black">
-                  Get a Quote
+                <p className="bg-primarycolor cursor-pointer  text-white  px-6 py-3 rounded-md w-fit hover:bg-white duration-500 hover:text-black">
+                  Let’s build your business
                 </p>
               </div>
             </div>
           </div>
-          <div className="md:w-[40%] lg:w-[50%] md:block hidden images relative">
+          <div className="md:w-[40%] lg:w-[50%] lg:block hidden images relative">
             <div className="flex arrowed  absolute -bottom-10">
               <GoTriangleLeft className="text-primarycolor size-7" />
               <GoTriangleLeft className="text-primarycolor size-7" />
@@ -159,28 +159,28 @@ export default function Page() {
         </div>
       )}
       {prev == 2 && (
-        <div className="w-full h-full flex gap-5 justify-center md:justify-between items-center px-5 md:px-10 2xl:px-16">
+        <div className="w-full h-full flex gap-5 justify-center lg:justify-between items-center px-5 md:px-10 2xl:px-16">
           <div className="lg:w-[60%] h-full">
             <div className="w-full flex  items-center  h-full">
-              <div className=" keys flex flex-col  md:justify-center justify-center md:items-start items-center space-y-10">
+              <div className=" keys flex flex-col  lg:justify-center justify-center lg:items-start items-center space-y-10">
                 <h1 className="text-white  md:text-4xl sm:text-2xl text-lg font-bold">
-                  <p className="text-primarycolor font-bold md:text-start text-center text-sm py-3">
+                  {/* <p className="text-primarycolor font-bold md:text-start text-center text-sm py-3">
                     Transforming Ideas into Visual Masterpieces
-                  </p>
-                  <div className="flex flex-col justify-center  md:items-start items-center gap-2">
-                    <span className="sha2 lg:text-6xl font-extrabold 2xl:text-7xl md:text-4xl sm:text-5xl lastwidth:text-4xl text-2xl">
-                      Graphic Design
+                  </p> */}
+                  <div className="flex flex-col justify-center  lg:items-start items-center lg:gap-2 gap-5">
+                    <span className="sha2 text-center lg:text-left lg:text-5xl font-extrabold 2xl:text-7xl md:text-4xl sm:text-5xl lastwidth:text-3xl text-2xl">
+                    Scale your business with custom applications
                     </span>{" "}
-                    <span>Empowering Business</span>
+                    <span>Your Vision, Our Mission</span>
                   </div>
                 </h1>
                 <p className="bg-primarycolor cursor-pointer  text-white px-6 py-3 rounded-md w-fit hover:bg-white duration-500 hover:text-black">
-                  Get a Quote
+                Partner with us
                 </p>
               </div>
             </div>
           </div>
-          <div className="md:w-[40%] lg:w-[50%] md:block hidden images relative">
+          <div className="md:w-[40%] lg:w-[50%] lg:block hidden images relative">
             <div className="flex arrowed  absolute -bottom-10">
               <GoTriangleLeft className="text-primarycolor size-7" />
               <GoTriangleLeft className="text-primarycolor size-7" />
@@ -234,7 +234,7 @@ export default function Page() {
             <img src="/banner.webp" className="drop-shadow-xl h-[350px]  w-full"></img>
         </div>
     </div>} */}
-    <div className="absolute  md:bottom-8 w-full md:block hidden px-5 md:px-10 2xl:px-16  left-0">
+    <div className="absolute  md:bottom-8 w-fit lg:w-full md:block hidden px-5 md:px-10 2xl:px-16 md:left-1/2 md:-translate-x-1/2 lg:-translate-x-0   lg:left-0">
     {data &&
               data.Banner.map((item, index) => (
                 <div
