@@ -37,10 +37,11 @@ useEffect(()=>{
   };
 
   return (
-    <article>
+    <article className='relative overflow-hidden'>
       <div className='lg:p-14 md:p-8 p-6 bg-gray-100'>
             <p className='lg:text-7xl sixHundred:text-6xl xs:text-4xl text-2xl lg:justify-start justify-center flex items-center font-bold'>Our Portfolio</p>
         </div>
+        <img src="/width_200.png" alt="" className="w-44 absolute right-0 top-0 -mt-16 -mr-20 sm:block hidden"/>
     <section className="pb-10 bg-gray-100 relative  overflow-hidden min-h-[100vh] flex items-center justify-center">
        
       <div className="w-[90%] mx-auto flex items-center justify-center h-full relative">

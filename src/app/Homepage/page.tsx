@@ -313,7 +313,7 @@ function Page() {
           </div> */}
 
           <section className="relative sm:overflow-hidden">
-          <img src="/width_200.png" alt="" className="w-44 absolute right-0 top-0 -mt-20 -mr-20 sm:block hidden"/>
+          <img src="/width_200.png" alt="" className="w-44 absolute right-0 top-0 -mt-16 -mr-20 sm:block hidden"/>
           <div className="w-[90%] mx-auto py-5 ">
             <div className="py-5">
               <h2 className="lg:text-7xl sixHundred:text-6xl xs:text-4xl text-2xl lg:justify-start justify-center flex items-center font-bold">Who we are?</h2>
@@ -325,7 +325,7 @@ function Page() {
             <section className="flex lg:flex-col flex-wrap lg:justify-start justify-center  gap-5 lg:w-[30%] mt-10">
             {
               Whowearecard.map((item,ind)=>(
-                <div className="relative w-[17rem]">
+                <div key={ind} className="relative w-[17rem]">
               <div className="w-20 h-20 rounded-full border-4 border-primarycolor"/>
                
               <div key={ind} className="bg-white border-r-4 border-primarycolor absolute top-0 ml-7  flex flex-col items-center  text-gray-700 w-60 h-20 drop-shadow-lg">
