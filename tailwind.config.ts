@@ -35,6 +35,7 @@ const config: Config = {
         "xs": '431px',
         "xs2": '530px',
         "leawidth":"320px",
+        "sixHundred":"620px",
         "lastwidth":'350px',
         'largewidth':'1050px',
         'largelast':'1100px',

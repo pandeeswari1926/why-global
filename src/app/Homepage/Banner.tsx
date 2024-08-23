@@ -83,7 +83,7 @@ export default function Page() {
         <div className="w-full h-full flex gap-5 justify-center lg:justify-between items-center px-5 md:px-10 2xl:px-16">
           <div className="lg:w-[60%] h-full">
             <div className="w-full flex  items-center  h-full">
-              <div className=" keys flex flex-col  md:justify-center justify-center lg:items-start items-center space-y-10">
+              <div className=" keys flex flex-col  md:justify-center justify-center lg:items-start items-center space-y-7">
                 <h1 className="text-white  md:text-4xl sm:text-2xl text-lg font-bold">
                   {/* <p className="text-primarycolor font-bold md:text-start text-center text-sm py-3 ">
                     Boost your brand with
@@ -124,7 +124,7 @@ export default function Page() {
         <div className="w-full h-full flex gap-5 justify-center md:justify-between items-center px-5 md:px-10 2xl:px-16">
           <div className="lg:w-[60%] h-full">
             <div className="w-full flex  items-center  h-full">
-              <div className=" keys flex flex-col  lg:justify-center justify-center lg:items-start items-center space-y-10">
+              <div className=" keys flex flex-col  lg:justify-center justify-center lg:items-start items-center space-y-7">
                 <h1 className="text-white  md:text-4xl sm:text-2xl text-lg font-bold">
                   {/* <p className="text-primarycolor font-bold md:text-start text-center text-sm py-3">
                    Empowering Businesses Through Technology 
@@ -133,7 +133,7 @@ export default function Page() {
                     <span className="sha2 lg:text-5xl lg:text-left text-center  font-extrabold 2xl:text-6xl md:text-4xl sm:text-5xl lastwidth:text-3xl text-2xl">
                     Empowering Businesses Through Technology 
                     </span>{" "}
-                    <span className="lg:text-5xl text-center">Your Trusted IT Partner</span>
+                    <span className="">Your Trusted IT Partner</span>
                   </div>
                 </h1>
                 <p className="bg-primarycolor cursor-pointer  text-white  px-6 py-3 rounded-md w-fit hover:bg-white duration-500 hover:text-black">
@@ -151,10 +151,13 @@ export default function Page() {
             </div>
             <div className="bg-primarycolor w-48 h-48 absolute moved -z-10 -left-3 -top-3"></div>
             <div className="bg-primarycolor w-28 h-28 absolute revmoved -z-10 -right-3 -bottom-3"></div>
+            <div className="w-full md:h-[300px] h-[200px] bg-white lg:h-[350px] xl:h-[380px] 2xl:h-[550px]">
             <img
-              src="/dhanushbox.jpg"
-              className="drop-shadow-xl object-cover  w-full md:h-[300px] h-[200px] lg:h-[350px] xl:h-[380px] 2xl:h-[550px]"
+              src="/ceo.jpg"
+              className="drop-shadow-xl object-contain mix-blend-normal  w-full h-full"
             ></img>
+            </div>
+            
           </div>
         </div>
       )}
@@ -162,7 +165,7 @@ export default function Page() {
         <div className="w-full h-full flex gap-5 justify-center lg:justify-between items-center px-5 md:px-10 2xl:px-16">
           <div className="lg:w-[60%] h-full">
             <div className="w-full flex  items-center  h-full">
-              <div className=" keys flex flex-col  lg:justify-center justify-center lg:items-start items-center space-y-10">
+              <div className=" keys flex flex-col  lg:justify-center justify-center lg:items-start items-center space-y-7">
                 <h1 className="text-white  md:text-4xl sm:text-2xl text-lg font-bold">
                   {/* <p className="text-primarycolor font-bold md:text-start text-center text-sm py-3">
                     Transforming Ideas into Visual Masterpieces
@@ -199,7 +202,7 @@ export default function Page() {
       {/* {prev==1&&<div className="w-full h-full flex  items-center px-10">
         <div className="lg:w-[60%] h-full">
             <div className="w-full flex justify-center items-center  h-full">
-            <div className=" keys space-y-10">
+            <div className=" keys space-y-7">
               <h1 className="text-white  md:text-5xl text-xl font-bold">
               <p className="text-white font-bold text-sm py-1">For Millions of Users</p>
                 <span className="sha text-7xl ">Web Development</span> Empowering Business
@@ -217,7 +220,7 @@ export default function Page() {
 {prev==2&&<div className="w-full h-full flex lg:flex-row flex-col justify-center items-center px-10">
         <div className="lg:w-[60%] h-full">
             <div className="w-full flex  items-center  h-full">
-            <div className="keys space-y-10">
+            <div className="keys space-y-7">
               <h1 className="text-white  md:text-5xl text-xl font-bold">
               <p className="text-white font-bold text-sm py-1">For Millions of Users</p>
                 <div className="flex flex-col">

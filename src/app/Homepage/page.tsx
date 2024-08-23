@@ -24,6 +24,7 @@ import { Helmet } from "react-helmet";
 import Link from "next/link";
 import Banner from "./Banner"
 import Whychoose from "./WhyChoose"
+import OurPortfolio from "./OurPortfolio";
 
 function Page() {
   interface banner {
@@ -311,16 +312,20 @@ function Page() {
             </div>
           </div> */}
 
-          <div className="w-[90%] mx-auto py-5">
+          <section className="relative sm:overflow-hidden">
+          <img src="/width_200.png" alt="" className="w-44 absolute right-0 top-0 -mt-16 -mr-20 sm:block hidden"/>
+          <div className="w-[90%] mx-auto py-5 ">
             <div className="py-5">
-              <h2 className="font-bold text-2xl sm:text-4xl">Who we are?</h2>
+              <h2 className="lg:text-7xl sixHundred:text-6xl xs:text-4xl text-2xl lg:justify-start justify-center flex items-center font-bold">Who we are?</h2>
             </div>
 
-            <article className="flex lg:flex-row flex-col-reverse">
+            
+            <article className="flex lg:flex-row flex-col-reverse ">
+              
             <section className="flex lg:flex-col flex-wrap lg:justify-start justify-center  gap-5 lg:w-[30%] mt-10">
             {
               Whowearecard.map((item,ind)=>(
-                <div className="relative w-[17rem]">
+                <div key={ind} className="relative w-[17rem]">
               <div className="w-20 h-20 rounded-full border-4 border-primarycolor"/>
                
               <div key={ind} className="bg-white border-r-4 border-primarycolor absolute top-0 ml-7  flex flex-col items-center  text-gray-700 w-60 h-20 drop-shadow-lg">
@@ -342,7 +347,7 @@ function Page() {
             </section>
 
             <section className="lg:w-[70%]">
-              <div className="bg-gray-200  drop-shadow-lg rounded-md p-3">
+              <div className="bg-gray-200 relative  drop-shadow-lg rounded-t-md p-3">
               <h2 className="sm:text-lg text-gray-700 whowearefont sm:text-start text-justify sm:w-[85%] mx-auto">
               “We are your trusted partner, committed to empowering
               businesses through cutting-edge technology solutions.”
@@ -352,9 +357,16 @@ function Page() {
               <p className="">-&nbsp; <span className="font-semibold ">Sathishkumar Kannan</span></p>
               <p className="text-gray-600 font-semibold text-sm">CEO</p>
               </div>
+              <div 
+              style={{
+                clipPath: "polygon(100% 78%, 75% 78%, 100% 100%)",
+              }}
+              className="bg-gray-200 w-24 h-24 absolute  bottom-0 right-0 -mb-5"
+              />
               </div>
+              
               </div>
-
+              
               <div className="w-full flex justify-center mt-5">
         <img src="/worldwhoweare.png" alt="" />
       </div>
@@ -362,11 +374,13 @@ function Page() {
             </article>
           
           </div>
+          </section>
           
           <Home />
           {/* <Globe /> */}
           {/* <World /> */}
           <Whychoose />
+          <OurPortfolio/>
           <Client />
           <Helicopter />
           <Wgs />
