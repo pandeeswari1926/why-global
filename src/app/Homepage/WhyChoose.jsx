@@ -12,8 +12,10 @@ import { GrVmMaintenance } from "react-icons/gr";
 import { GiTeacher } from "react-icons/gi";
 import { MdOutlineLockPerson } from "react-icons/md";
 import { MdSupportAgent } from "react-icons/md";
-import { RiShakeHandsLine } from "react-icons/ri";
+import { RiComputerLine, RiShakeHandsLine } from "react-icons/ri";
 import { FaQuestion } from "react-icons/fa";
+
+
 function WhyChooseUs() {
   return (
     <div className='w-full relative overflow-hidden p-5'>
@@ -28,7 +30,7 @@ function WhyChooseUs() {
                 <div className='flex justify-center items-center'>
                      <div className='bg-blue-50 z-10 drop-shadow-xl rounded-full sixHundred:w-[85px]  sixHundred:h-[85px] w-20 h-20 flex justify-center items-center'>
                         <div className='bg-slate-50 flex justify-center items-center rounded-full drop-shadow-lg w-[85%] h-[85%]'>
-                        <PiMedalFill className='p-1 size-12 text-primarycolor' />
+                        <img src='/Whychooseusimg1.png ' className='p-1 h-12 w-8 text-primarycolor' />
                         </div>
                        
                      </div>
@@ -40,7 +42,7 @@ function WhyChooseUs() {
                 <div className='flex justify-center items-center'>
                      <div className='bg-blue-50 z-10 drop-shadow-xl rounded-full sixHundred:w-[85px]  sixHundred:h-[85px] w-20 h-20 flex justify-center items-center'>
                         <div className='bg-slate-50 flex justify-center items-center rounded-full drop-shadow-lg w-[85%] h-[85%]'>
-                        <MdOutlineVerified className='p-1 size-12 text-primarycolor' />
+                          <img src='/Whychooseusimg2.png ' className='p-1 h-12 w-12 text-primarycolor' />
                         </div>
                        
                      </div>
@@ -52,7 +54,7 @@ function WhyChooseUs() {
                 <div className='flex justify-center items-center'>
                      <div className='bg-blue-50 z-10 drop-shadow-xl rounded-full sixHundred:w-[85px]  sixHundred:h-[85px] w-20 h-20 flex justify-center items-center'>
                         <div className='bg-slate-50 flex justify-center items-center rounded-full drop-shadow-lg w-[85%] h-[85%]'>
-                        <FaUserTie className='p-1 size-12 text-primarycolor' />
+                         <img src='/Whychooseusimg3.png ' className='p-1 h-12 w-14 text-primarycolor' />
                         </div>
                        
                      </div>
@@ -64,7 +66,7 @@ function WhyChooseUs() {
                 <div className='flex justify-center items-center'>
                      <div className='bg-blue-50 z-10 drop-shadow-xl rounded-full sixHundred:w-[85px]  sixHundred:h-[85px] w-20 h-20 flex justify-center items-center'>
                         <div className='bg-slate-50 flex justify-center items-center rounded-full drop-shadow-lg w-[85%] h-[85%]'>
-                        <HiOutlineLightBulb className='p-1 size-12 text-primarycolor' />
+                           <img src='/Whychooseusimg4.png ' className='p-1 h-12 w-12 text-primarycolor' />
                         </div>
                        
                      </div>
@@ -76,7 +78,7 @@ function WhyChooseUs() {
                 <div className='flex justify-center items-center'>
                      <div className='bg-blue-50 z-10 drop-shadow-xl rounded-full sixHundred:w-[85px]  sixHundred:h-[85px] w-20 h-20 flex justify-center items-center'>
                         <div className='bg-slate-50 flex justify-center items-center rounded-full drop-shadow-lg w-[85%] h-[85%]'>
-                        <ImTarget className='p-1 size-12 text-primarycolor' />
+                        <img src='/Whychooseusimg5.png ' className='p-1 h-12 w-12 text-primarycolor' />
                         </div>
                        
                      </div>
@@ -89,7 +91,7 @@ function WhyChooseUs() {
                 <div className='flex justify-center items-center'>
                      <div className='bg-blue-50 z-10 drop-shadow-xl rounded-full sixHundred:w-[85px]  sixHundred:h-[85px] w-20 h-20 flex justify-center items-center'>
                         <div className='bg-slate-50 flex justify-center items-center rounded-full drop-shadow-lg w-[85%] h-[85%]'>
-                        <TiStopwatch className='p-1 size-12 text-primarycolor' />
+                        <img src='/Whychooseusimg6.png ' className='p-1 h-12 w-12 text-primarycolor' />
                         </div>
                        
                      </div>
@@ -101,7 +103,7 @@ function WhyChooseUs() {
                 <div className='flex justify-center items-center'>
                      <div className='bg-blue-50 z-10 drop-shadow-xl rounded-full sixHundred:w-[85px]  sixHundred:h-[85px] w-20 h-20 flex justify-center items-center'>
                         <div className='bg-slate-50 flex justify-center items-center rounded-full drop-shadow-lg w-[85%] h-[85%]'>
-                        <BsPeopleFill className='p-1 size-12 text-primarycolor' />
+                        <img src='/Whychooseusimg7.png ' className='p-1 h-12 w-12 text-primarycolor' />
                         </div>
                        
                      </div>
@@ -117,7 +119,7 @@ function WhyChooseUs() {
                 <div className='flex justify-center items-center'>
                      <div className='bg-blue-50 z-10 drop-shadow-xl rounded-full sixHundred:w-[85px]  sixHundred:h-[85px] w-20 h-20 flex justify-center items-center'>
                         <div className='bg-slate-50 flex justify-center items-center rounded-full drop-shadow-lg w-[85%] h-[85%]'>
-                        <BiSupport className='p-1 size-12 text-primarycolor' />
+                        <img src='/Whychooseusimg8.png ' className='p-1 h-12 w-12 text-primarycolor' />
                         </div>
                        
                      </div>
@@ -129,7 +131,7 @@ function WhyChooseUs() {
                 <div className='flex justify-center items-center'>
                      <div className='bg-blue-50 z-10 drop-shadow-xl rounded-full sixHundred:w-[85px]  sixHundred:h-[85px] w-20 h-20 flex justify-center items-center'>
                         <div className='bg-slate-50 flex justify-center items-center rounded-full drop-shadow-lg w-[85%] h-[85%]'>
-                        <FaComputer className='p-1 size-12 text-primarycolor' />
+                        <RiComputerLine className='p-1 size-12 text-primarycolor' />
                         </div>
                        
                      </div>
@@ -141,7 +143,7 @@ function WhyChooseUs() {
                 <div className='flex justify-center items-center'>
                      <div className='bg-blue-50 z-10 drop-shadow-xl rounded-full sixHundred:w-[85px]  sixHundred:h-[85px] w-20 h-20 flex justify-center items-center'>
                         <div className='bg-slate-50 flex justify-center items-center rounded-full drop-shadow-lg w-[85%] h-[85%]'>
-                        <GrVmMaintenance className='p-1 size-12 text-primarycolor' />
+                        <img src='/Whychooseusimg9.png ' className='p-1 h-12 w-12 text-primarycolor' />
                         </div>
                        
                      </div>
@@ -153,7 +155,7 @@ function WhyChooseUs() {
                 <div className='flex justify-center items-center'>
                      <div className='bg-blue-50 z-10 drop-shadow-xl rounded-full sixHundred:w-[85px]  sixHundred:h-[85px] w-20 h-20 flex justify-center items-center'>
                         <div className='bg-slate-50 flex justify-center items-center rounded-full drop-shadow-lg w-[85%] h-[85%]'>
-                        <GiTeacher className='p-1 size-12 text-primarycolor' />
+                        <img src='/Whychooseusimg10.png ' className='p-1 h-12 w-12 text-primarycolor' />
                         </div>
                        
                      </div>
@@ -165,7 +167,7 @@ function WhyChooseUs() {
                 <div className='flex justify-center items-center'>
                      <div className='bg-blue-50 z-10 drop-shadow-xl rounded-full sixHundred:w-[85px]  sixHundred:h-[85px] w-20 h-20 flex justify-center items-center'>
                         <div className='bg-slate-50 flex justify-center items-center rounded-full drop-shadow-lg w-[85%] h-[85%]'>
-                        <MdOutlineLockPerson className='p-1 size-12 text-primarycolor' />
+                        <img src='/Whychooseusimg11.png ' className='p-1 h-10 w-12 text-primarycolor' />
                         </div>
                        
                      </div>
