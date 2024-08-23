@@ -29,6 +29,7 @@ const config: Config = {
         'customer': 'url("/White Waves Pattern.png")',
         'getin':'url("/getinbg.png")',
         'solution':'url("/Vector 71.png")',
+        'whowearecard':'url("/divwhoweare.png")',
       },
       screens: {
         "xs": '431px',
