@@ -362,12 +362,12 @@ function Page() {
           
           </div>
           
-          {/* <Home />
+          <Home />
           <Globe />
           <World />
           <Client />
           <Helicopter />
-          <Wgs /> */}
+          <Wgs />
         </>
       )}
     </div>
