@@ -341,7 +341,7 @@ function Page() {
             </section>
 
             <section className="lg:w-[70%]">
-              <div className="bg-gray-200  drop-shadow-lg rounded-md p-3">
+              <div className="bg-gray-200 relative  drop-shadow-lg rounded-t-md p-3">
               <h2 className="sm:text-lg text-gray-700 whowearefont sm:text-start text-justify sm:w-[85%] mx-auto">
               “We are your trusted partner, committed to empowering
               businesses through cutting-edge technology solutions.”
@@ -351,9 +351,16 @@ function Page() {
               <p className="">-&nbsp; <span className="font-semibold ">Sathishkumar Kannan</span></p>
               <p className="text-gray-600 font-semibold text-sm">CEO</p>
               </div>
+              <div 
+              style={{
+                clipPath: "polygon(100% 78%, 75% 78%, 100% 100%)",
+              }}
+              className="bg-gray-200 w-24 h-24 absolute  bottom-0 right-0 -mb-5"
+              />
               </div>
+              
               </div>
-
+              
               <div className="w-full flex justify-center mt-5">
         <img src="/worldwhoweare.png" alt="" />
       </div>
