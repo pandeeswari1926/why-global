@@ -4,7 +4,7 @@ import { PiMedalFill } from "react-icons/pi";
 const TimelineCard = () => {
     return (
         <>
-            <div className="bg-gray-50">
+            <div className="bg-gray-50 overflow-hidden">
                 <div className='p-10 '>
                     <p className='text-6xl font-semibold'>Our Services</p>
                 </div>
@@ -12,7 +12,7 @@ const TimelineCard = () => {
 
                     <div>
                         <div>
-                            <div className='flex items-center'>
+                            <div className='flex justify-center sm:justify-start items-center'>
                                 <div className='bg-slate-50 z-10 drop-shadow-xl rounded-full w-16 h-16 flex justify-center items-center'>
                                     <div className='bg-orange-500  flex justify-center items-center rounded-full drop-shadow-lg w-11 h-11 p-2'>
                                         {/* <PiMedalFill className='p-1 size-12 text-white' /> */}
@@ -54,7 +54,7 @@ const TimelineCard = () => {
                         </div>
 
                         <div>
-                            <div className='flex items-center'>
+                            <div className='flex justify-center sm:justify-start items-center'>
                                 <div className='bg-slate-50 z-10 drop-shadow-xl rounded-full w-16 h-16 flex justify-center items-center'>
                                     <div className='bg-orange-500 flex justify-center items-center rounded-full drop-shadow-lg w-11 h-11 p-3'>
                                         {/* <PiMedalFill className='p-1 size-12 text-white' /> */}
@@ -96,7 +96,7 @@ const TimelineCard = () => {
                         </div>
 
                         <div>
-                            <div className='flex items-center'>
+                            <div className='flex justify-center sm:justify-start items-center'>
                                 <div className='bg-slate-50 z-10 drop-shadow-xl rounded-full w-16 h-16 flex justify-center items-center'>
                                     <div className='bg-orange-500 flex justify-center items-center rounded-full drop-shadow-lg w-11 h-11 p-2'>
                                         {/* <PiMedalFill className='p-1 size-12 text-white' /> */}
@@ -140,7 +140,7 @@ const TimelineCard = () => {
 
                     <div>
                         <div>
-                            <div className='flex items-center'>
+                            <div className='flex justify-center sm:justify-start items-center'>
                                 <div className='bg-slate-50 z-10 drop-shadow-xl rounded-full w-16 h-16 flex justify-center items-center'>
                                     <div className='bg-orange-500 flex justify-center items-center rounded-full drop-shadow-lg w-11 h-11 p-2'>
                                         {/* <PiMedalFill className='p-1 size-12 text-white' /> */}
@@ -183,7 +183,7 @@ const TimelineCard = () => {
                         </div>
 
                         <div>
-                            <div className='flex items-center'>
+                            <div className='flex justify-center sm:justify-start items-center'>
                                 <div className='bg-slate-50 z-10 drop-shadow-xl rounded-full w-16 h-16 flex justify-center items-center'>
                                     <div className='bg-orange-500 flex justify-center items-center rounded-full drop-shadow-lg w-11 h-11 p-2'>
                                         {/* <PiMedalFill className='p-1 size-12 text-white' /> */}
