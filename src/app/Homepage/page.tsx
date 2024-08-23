@@ -315,7 +315,7 @@ function Page() {
           <img src="/width_200.png" alt="" className="w-44 absolute right-0 top-0 -mt-20 -mr-20 sm:block hidden"/>
           <div className="w-[90%] mx-auto py-5 ">
             <div className="py-5">
-              <h2 className="font-bold text-2xl sm:text-4xl">Who we are?</h2>
+              <h2 className="lg:text-7xl sixHundred:text-6xl xs:text-4xl text-2xl lg:justify-start justify-center flex items-center font-bold">Who we are?</h2>
             </div>
 
             
