@@ -24,6 +24,7 @@ import { Helmet } from "react-helmet";
 import Link from "next/link";
 import Banner from "./Banner"
 import Whychoose from "./WhyChoose"
+import OurPortfolio from "./OurPortfolio";
 
 function Page() {
   interface banner {
@@ -379,6 +380,7 @@ function Page() {
           {/* <Globe /> */}
           {/* <World /> */}
           <Whychoose />
+          <OurPortfolio/>
           <Client />
           <Helicopter />
           <Wgs />
