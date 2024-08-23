@@ -18,11 +18,11 @@ import { FaQuestion } from "react-icons/fa";
 
 function WhyChooseUs() {
   return (
-    <div className='w-full relative overflow-hidden p-5'>
+    <div className='w-full relative overflow-hidden py-5 '>
           <img src='/ply.png' className='lg:w-44 w-36 -bottom-5 -left-20  absolute'></img>
           <img src='/poly.png' className='lg:w-52 w-32 -top-20 -right-5  absolute'></img>
-        <div className='lg:p-14 md:p-8 p-6'>
-            <p className='lg:text-7xl sixHundred:text-6xl xs:text-4xl text-2xl lg:justify-start justify-center flex items-center font-bold'>Why choose us <FaQuestion className='md:text-5xl'/> </p>
+        <div className='md:py-8 md:pl-10 p-5'>
+            <p className='sixHundred:text-5xl xs:text-4xl text-2xl lg:justify-start justify-center flex items-center font-bold'>Why choose us <FaQuestion className='md:text-3xl'/> </p>
         </div>
 
         <div className='flex lg:flex-row md:px-5 gap-5 flex-col justify-around'>

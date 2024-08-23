@@ -4,9 +4,9 @@ import { PiMedalFill } from "react-icons/pi";
 const TimelineCard = () => {
     return (
         <>
-            <div className="bg-gray-50 overflow-hidden">
-                <div className='p-10 '>
-                    <p className='text-6xl font-semibold'>Our Services</p>
+            <div className="bg-gray-50 py-5 overflow-hidden">
+                <div className='md:py-8 md:pl-10 p-5'>
+                    <p className='sixHundred:text-5xl xs:text-4xl text-2xl lg:justify-start justify-center flex items-center font-bold'>Our Services</p>
                 </div>
                 <div className="w-full h-full flex lg:flex-row flex-col lg:justify-around justify-center items-center lg:items-start py-5 px-5">
 

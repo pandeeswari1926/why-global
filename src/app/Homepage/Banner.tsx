@@ -153,7 +153,7 @@ export default function Page() {
             <div className="bg-primarycolor w-28 h-28 absolute revmoved -z-10 -right-3 -bottom-3"></div>
             <div className="w-full md:h-[300px] h-[200px] bg-white lg:h-[350px] xl:h-[380px] 2xl:h-[550px]">
             <img
-              src="/ceo.jpg"
+              src="/ceo2.png"
               className="drop-shadow-xl object-contain mix-blend-normal  w-full h-full"
             ></img>
             </div>
