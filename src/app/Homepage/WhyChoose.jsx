@@ -34,9 +34,9 @@ function WhyChooseUs() {
                         </div>
                        
                      </div>
-                     <div className='sixHundred:w-[450px] xs:w-[350px] w-[90%] flex justify-start items-center rounded-r-3xl -ml-10 bg-gray-100 h-14'>
-                     <p className='sixHundred:w-16 w-12'></p>
-                        <p className='xs:text-xl  text-sm   font-semibold'>13+ Year of Expertise</p>
+                     <div className='sixHundred:w-[400px] xs:w-[350px] w-[90%] flex justify-start items-center rounded-r-3xl -ml-10 bg-gray-100 h-14'>
+                     <p className='sixHundred:w-14 w-12'></p>
+                        <p className='xs:text-lg  text-sm   font-semibold'>13+ Year of Expertise</p>
                      </div>
                 </div>
                 <div className='flex justify-center items-center'>
@@ -46,9 +46,9 @@ function WhyChooseUs() {
                         </div>
                        
                      </div>
-                     <div className='sixHundred:w-[450px] xs:w-[350px] w-[90%] flex justify-start items-center rounded-r-3xl -ml-10 bg-gray-100 h-14'>
-                        <p className='sixHundred:w-16 w-12'></p>
-                        <p className='xs:text-xl  text-sm   font-semibold'>Proven Track Record</p>
+                     <div className='sixHundred:w-[400px] xs:w-[350px] w-[90%] flex justify-start items-center rounded-r-3xl -ml-10 bg-gray-100 h-14'>
+                        <p className='sixHundred:w-14 w-12'></p>
+                        <p className='xs:text-lg  text-sm   font-semibold'>Proven Track Record</p>
                      </div>
                 </div>
                 <div className='flex justify-center items-center'>
@@ -58,9 +58,9 @@ function WhyChooseUs() {
                         </div>
                        
                      </div>
-                     <div className='sixHundred:w-[450px] xs:w-[350px] w-[90%] flex justify-start items-center rounded-r-3xl -ml-10 bg-gray-100 h-14'>
-                     <p className='sixHundred:w-16 w-12'></p>
-                        <p className='xs:text-xl  text-sm   font-semibold'>Qualified Professionals</p>
+                     <div className='sixHundred:w-[400px] xs:w-[350px] w-[90%] flex justify-start items-center rounded-r-3xl -ml-10 bg-gray-100 h-14'>
+                     <p className='sixHundred:w-14 w-12'></p>
+                        <p className='xs:text-lg  text-sm   font-semibold'>Qualified Professionals</p>
                      </div>
                 </div>
                 <div className='flex justify-center items-center'>
@@ -70,9 +70,9 @@ function WhyChooseUs() {
                         </div>
                        
                      </div>
-                     <div className='sixHundred:w-[450px] xs:w-[350px] w-[90%] flex justify-start items-center rounded-r-3xl -ml-10 bg-gray-100 h-14'>
-                     <p className='sixHundred:w-16 w-12'></p>
-                        <p className='xs:text-xl  text-sm   font-semibold'>Cutting-edge Technologies</p>
+                     <div className='sixHundred:w-[400px] xs:w-[350px] w-[90%] flex justify-start items-center rounded-r-3xl -ml-10 bg-gray-100 h-14'>
+                     <p className='sixHundred:w-14 w-12'></p>
+                        <p className='xs:text-lg  text-sm   font-semibold'>Cutting-edge Technologies</p>
                      </div>
                 </div>
                 <div className='flex justify-center items-center'>
@@ -82,9 +82,9 @@ function WhyChooseUs() {
                         </div>
                        
                      </div>
-                     <div className='sixHundred:w-[450px] xs:w-[350px] w-[90%] flex justify-start items-center rounded-r-3xl -ml-10 bg-gray-100 h-14'>
-                     <p className='sixHundred:w-16 w-12'></p>
-                        <p className='xs:text-xl  text-sm   font-semibold'>Client-Centric Approach</p>
+                     <div className='sixHundred:w-[400px] xs:w-[350px] w-[90%] flex justify-start items-center rounded-r-3xl -ml-10 bg-gray-100 h-14'>
+                     <p className='sixHundred:w-14 w-12'></p>
+                        <p className='xs:text-lg  text-sm   font-semibold'>Client-Centric Approach</p>
 
                      </div>
                 </div>
@@ -95,9 +95,9 @@ function WhyChooseUs() {
                         </div>
                        
                      </div>
-                     <div className='sixHundred:w-[450px] xs:w-[350px] w-[90%] flex justify-start items-center rounded-r-3xl -ml-10 bg-gray-100 h-14'>
-                     <p className='sixHundred:w-16 w-12'></p>
-                        <p className='xs:text-xl  text-sm   font-semibold'>On-time Project Delivery</p>
+                     <div className='sixHundred:w-[400px] xs:w-[350px] w-[90%] flex justify-start items-center rounded-r-3xl -ml-10 bg-gray-100 h-14'>
+                     <p className='sixHundred:w-14 w-12'></p>
+                        <p className='xs:text-lg  text-sm   font-semibold'>On-time Project Delivery</p>
                      </div>
                 </div>
                 <div className='flex justify-center items-center'>
@@ -107,9 +107,9 @@ function WhyChooseUs() {
                         </div>
                        
                      </div>
-                     <div className='sixHundred:w-[450px] xs:w-[350px] w-[90%] flex justify-start items-center rounded-r-3xl -ml-10 bg-gray-100 h-14'>
-                     <p className='sixHundred:w-16 w-12'></p>
-                        <p className='xs:text-xl  text-sm   font-semibold'>Tailor-made products</p>
+                     <div className='sixHundred:w-[400px] xs:w-[350px] w-[90%] flex justify-start items-center rounded-r-3xl -ml-10 bg-gray-100 h-14'>
+                     <p className='sixHundred:w-14 w-12'></p>
+                        <p className='xs:text-lg  text-sm   font-semibold'>Tailor-made products</p>
                      </div>
                 </div>
 
@@ -123,9 +123,9 @@ function WhyChooseUs() {
                         </div>
                        
                      </div>
-                     <div className='sixHundred:w-[450px] xs:w-[350px] w-[90%] flex justify-start items-center rounded-r-3xl -ml-10 bg-gray-100 h-14'>
-                     <p className='sixHundred:w-16 w-12'></p>
-                        <p className='xs:text-xl  text-sm   font-semibold'>24/7 Help Desk</p>
+                     <div className='sixHundred:w-[400px] xs:w-[350px] w-[90%] flex justify-start items-center rounded-r-3xl -ml-10 bg-gray-100 h-14'>
+                     <p className='sixHundred:w-14 w-12'></p>
+                        <p className='xs:text-lg  text-sm   font-semibold'>24/7 Help Desk</p>
                      </div>
                 </div>
                 <div className='flex justify-center items-center'>
@@ -135,9 +135,9 @@ function WhyChooseUs() {
                         </div>
                        
                      </div>
-                     <div className='sixHundred:w-[450px] xs:w-[350px] w-[90%] flex justify-start items-center rounded-r-3xl -ml-10 bg-gray-100 h-14'>
-                        <p className='sixHundred:w-16 w-12'></p>
-                        <p className='texxs:t-xl font-semibold'>Software Updates</p>
+                     <div className='sixHundred:w-[400px] xs:w-[350px] w-[90%] flex justify-start items-center rounded-r-3xl -ml-10 bg-gray-100 h-14'>
+                        <p className='sixHundred:w-14 w-12'></p>
+                        <p className='xs:text-lg  text-sm  font-semibold'>Software Updates</p>
                      </div>
                 </div>
                 <div className='flex justify-center items-center'>
@@ -147,9 +147,9 @@ function WhyChooseUs() {
                         </div>
                        
                      </div>
-                     <div className='sixHundred:w-[450px] xs:w-[350px] w-[90%] flex justify-start items-center rounded-r-3xl -ml-10 bg-gray-100 h-14'>
-                     <p className='sixHundred:w-16 w-12'></p>
-                        <p className='xs:text-xl  text-sm   font-semibold'>Annual Maintenance</p>
+                     <div className='sixHundred:w-[400px] xs:w-[350px] w-[90%] flex justify-start items-center rounded-r-3xl -ml-10 bg-gray-100 h-14'>
+                     <p className='sixHundred:w-14 w-12'></p>
+                        <p className='xs:text-lg  text-sm   font-semibold'>Annual Maintenance</p>
                      </div>
                 </div>
                 <div className='flex justify-center items-center'>
@@ -159,9 +159,9 @@ function WhyChooseUs() {
                         </div>
                        
                      </div>
-                     <div className='sixHundred:w-[450px] xs:w-[350px] w-[90%] flex justify-start items-center rounded-r-3xl -ml-10 bg-gray-100 h-14'>
-                     <p className='sixHundred:w-16 w-12'></p>
-                        <p className='xs:text-xl  text-sm   font-semibold'>Training and Knowledge Transfer</p>
+                     <div className='sixHundred:w-[400px] xs:w-[350px] w-[90%] flex justify-start items-center rounded-r-3xl -ml-10 bg-gray-100 h-14'>
+                     <p className='sixHundred:w-14 w-12'></p>
+                        <p className='xs:text-lg  text-sm   font-semibold'>Training and Knowledge Transfer</p>
                      </div>
                 </div>
                 <div className='flex justify-center items-center'>
@@ -171,9 +171,9 @@ function WhyChooseUs() {
                         </div>
                        
                      </div>
-                     <div className='sixHundred:w-[450px] xs:w-[350px] w-[90%] flex justify-start items-center rounded-r-3xl -ml-10 bg-gray-100 h-14'>
-                     <p className='sixHundred:w-16 w-12'></p>
-                        <p className='xs:text-xl  text-sm   font-semibold'>Security Audit</p>
+                     <div className='sixHundred:w-[400px] xs:w-[350px] w-[90%] flex justify-start items-center rounded-r-3xl -ml-10 bg-gray-100 h-14'>
+                     <p className='sixHundred:w-14 w-12'></p>
+                        <p className='xs:text-lg  text-sm   font-semibold'>Security Audit</p>
 
                      </div>
                 </div>
@@ -184,9 +184,9 @@ function WhyChooseUs() {
                         </div>
                        
                      </div>
-                     <div className='sixHundred:w-[450px] xs:w-[350px] w-[90%] flex justify-start items-center rounded-r-3xl -ml-10 bg-gray-100 h-14'>
-                     <p className='sixHundred:w-16 w-12'></p>
-                        <p className='xs:text-xl  text-sm   font-semibold'>Remote Support</p>
+                     <div className='sixHundred:w-[400px] xs:w-[350px] w-[90%] flex justify-start items-center rounded-r-3xl -ml-10 bg-gray-100 h-14'>
+                     <p className='sixHundred:w-14 w-12'></p>
+                        <p className='xs:text-lg  text-sm   font-semibold'>Remote Support</p>
                      </div>
                 </div>
                 <div className='flex justify-center items-center'>
@@ -196,9 +196,9 @@ function WhyChooseUs() {
                         </div>
                        
                      </div>
-                     <div className='sixHundred:w-[450px] xs:w-[350px] w-[90%] flex justify-start items-center rounded-r-3xl -ml-10 bg-gray-100 h-14'>
-                     <p className='sixHundred:w-16 w-12'></p>
-                        <p className='xs:text-xl  text-sm   font-semibold'>Dedicated Client Relationship Manager</p>
+                     <div className='sixHundred:w-[400px] xs:w-[350px] w-[90%] flex justify-start items-center rounded-r-3xl -ml-10 bg-gray-100 h-14'>
+                     <p className='sixHundred:w-14 w-12'></p>
+                        <p className='xs:text-lg  text-sm   font-semibold'>Dedicated Client Relationship Manager</p>
                      </div>
                 </div>
 
