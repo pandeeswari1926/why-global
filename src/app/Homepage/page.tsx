@@ -25,6 +25,7 @@ import Link from "next/link";
 import Banner from "./Banner"
 import Whychoose from "./WhyChoose"
 import OurPortfolio from "./OurPortfolio";
+import NewServices from "./NewServices";
 
 function Page() {
   interface banner {
@@ -375,7 +376,7 @@ function Page() {
           
           </div>
           </section>
-          
+          <NewServices/>
           <Home />
           {/* <Globe /> */}
           {/* <World /> */}
