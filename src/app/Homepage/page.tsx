@@ -23,6 +23,7 @@ import Loader from "../home/Loader";
 import { Helmet } from "react-helmet";
 import Link from "next/link";
 import Banner from "./Banner"
+import Whychoose from "./WhyChoose"
 
 function Page() {
   interface banner {
@@ -282,8 +283,9 @@ function Page() {
             </div>
           </div>
           <Home />
-          <Globe />
-          <World />
+          {/* <Globe /> */}
+          {/* <World /> */}
+          <Whychoose />
           <Client />
           <Helicopter />
           <Wgs />
