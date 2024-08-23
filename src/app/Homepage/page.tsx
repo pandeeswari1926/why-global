@@ -114,6 +114,34 @@ function Page() {
     getdata();
   }, []);
 
+  const Whowearecard = [
+    {
+      title:"13+",
+      content:"Years of experience",
+      image:"/whoicon1.png"
+    },
+    {
+      title:"15+",
+      content:"Countries",
+      image:"/whoicon2.png"
+    },
+    {
+      title:"30+",
+      content:"Sectors",
+      image:"/whoicon3.png"
+    },
+    {
+      title:"280+",
+      content:"Employees",
+      image:"/whoicon4.png"
+    },
+    {
+      title:"570+",
+      content:"Happy Clients",
+      image:"/whoicon5.png"
+    },
+  ]
+
 
   return (
     <div>
@@ -222,7 +250,7 @@ function Page() {
                 </div>
               ))}
           </div>
-          <div className="relative w-full h-full pt-10 bg-cover overflow-hidden  bg-no-repeat  ">
+          {/* <div className="relative w-full h-full pt-10 bg-cover overflow-hidden  bg-no-repeat  ">
             <div className="absolute w-full -top-16 h-full -z-10">
               <img src="./ce.png" alt="" className="w-full h-full" />
             </div>
@@ -280,13 +308,66 @@ function Page() {
                   </div>
                 ))}
             </div>
+          </div> */}
+
+          <div className="w-[90%] mx-auto py-5">
+            <div className="py-5">
+              <h2 className="font-bold text-2xl sm:text-4xl">Who we are?</h2>
+            </div>
+
+            <article className="flex lg:flex-row flex-col-reverse">
+            <section className="flex lg:flex-col flex-wrap lg:justify-start justify-center  gap-5 lg:w-[30%] mt-10">
+            {
+              Whowearecard.map((item,ind)=>(
+                <div className="relative w-[17rem]">
+              <div className="w-20 h-20 rounded-full border-4 border-primarycolor"/>
+               
+              <div key={ind} className="bg-white border-r-4 border-primarycolor absolute top-0 ml-7  flex flex-col items-center  text-gray-700 w-60 h-20 drop-shadow-lg">
+                <div className="flex gap-4 items-center -ml-14 ">
+                <div className="bg-primarycolor rounded-full w-16 h-16 p-2 mt-2">
+                <img src={item.image} alt="" className="w-full h-full ml-0.5"/>
+                </div>
+                <div className="w-[8.7rem]">
+                <h2 className="font-semibold text-lg">{item.title}</h2>
+                <p className="text-xs">{item.content}</p>
+                </div>
+                </div>
+              </div>
+
+              
+            </div>
+              ))
+            }
+            </section>
+
+            <section className="lg:w-[70%]">
+              <div className="bg-gray-200  drop-shadow-lg rounded-md p-3">
+              <h2 className="sm:text-lg text-gray-700 whowearefont sm:text-start text-justify sm:w-[85%] mx-auto">
+              “We are your trusted partner, committed to empowering
+              businesses through cutting-edge technology solutions.”
+              </h2>
+              <div className="flex flex-col justify-end items-end w-[95%]">
+              <div className="flex flex-col justify-center items-center mt-3">
+              <p className="">-&nbsp; <span className="font-semibold ">Sathishkumar Kannan</span></p>
+              <p className="text-gray-600 font-semibold text-sm">CEO</p>
+              </div>
+              </div>
+              </div>
+
+              <div className="w-full flex justify-center mt-5">
+        <img src="/worldwhoweare.png" alt="" />
+      </div>
+            </section>
+            </article>
+          
           </div>
-          <Home />
+          
+          {/* <Home />
           <Globe />
           <World />
           <Client />
           <Helicopter />
-          <Wgs />
+          <Wgs /> */}
         </>
       )}
     </div>
