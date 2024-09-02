@@ -377,7 +377,7 @@ function Page() {
           </div>
           </section>
           <NewServices/>
-          <Home />
+          {/* <Home /> */}
           {/* <Globe /> */}
           {/* <World /> */}
           <Whychoose />
