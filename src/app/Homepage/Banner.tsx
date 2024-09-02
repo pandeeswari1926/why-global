@@ -72,7 +72,7 @@ export default function Page() {
         src="/aigen.jpg"
         className="w-full h-full -z-10 absolute top-0 left-0 object-cover"
       ></img>
-      
+
       <div className="w-10 h-10  absolute big bg-transparent border-2 border-primarycolor "></div>
       {/* <div className="w-5 h-5 jump top-3/4 left-1/4 absolute  bg-transparent border-2 border-primary "></div> */}
       <div className="w-5 h-5 absolute small   bg-primarycolor"></div>
@@ -90,20 +90,21 @@ export default function Page() {
                   </p> */}
                   <div className="flex flex-col justify-center  md:items-start items-center gap-2">
                     <span className="text-center lg:text-left lg:text-5xl font-extrabold 2xl:text-7xl md:text-4xl sm:text-5xl lastwidth:text-3xl text-2xl h-fit w-fit relative">
-                    10x Your Business Growth With Our 360° Digital Marketing Strategy
+                      10x Your Business Growth With Our 360° Digital Marketing
+                      Strategy
                     </span>
                     {/* <span>Magic Today</span> */}
                   </div>
                 </h1>
                 <p className="bg-primarycolor cursor-pointer text-white font-semibold  px-6 py-3 rounded-md w-fit hover:bg-white duration-500hover:border-2 border-2 border-primarycolor hover:border-primarycolor hover:text-primarycolor">
-                Let’s get started
+                  Let’s get started
                 </p>
               </div>
             </div>
           </div>
           <div
             ref={elemesnts}
-            className="md:w-[40%] lg:w-[50%] lg:block hidden images relative"
+            className="md:w-[40%] lg:w-[50%] lg:block hidden lg:mt-20 images relative"
           >
             <div className="flex arrowed  absolute -bottom-10">
               <GoTriangleLeft className="text-primarycolor size-7" />
@@ -115,7 +116,7 @@ export default function Page() {
             <div className="bg-primarycolor w-28 h-28 absolute revmoved -z-10 -right-3 -bottom-3"></div>
             <img
               src="/ramyabox.jpg"
-              className="shadow-2xl object-cover  w-full md:h-[300px] h-[200px] lg:h-[350px] xl:h-[380px] 2xl:h-[550px]"
+              className="shadow-2xl object-cover   w-full md:h-[300px] h-[200px] lg:h-[350px] xl:h-[380px] 2xl:h-[550px]"
             ></img>
           </div>
         </div>
@@ -131,9 +132,11 @@ export default function Page() {
                   </p> */}
                   <div className="flex flex-col justify-center  lg:items-start items-center lg:gap-2 gap-5">
                     <span className=" lg:text-5xl lg:text-left text-center  font-extrabold 2xl:text-6xl md:text-4xl sm:text-5xl lastwidth:text-3xl text-2xl">
-                    Empowering Businesses Through Technology 
+                      Empowering Businesses Through Technology
                     </span>{" "}
-                    <span className=" lg:mt-2 font-light text-xl">Your Trusted IT Partner</span>
+                    <span className=" lg:mt-2 font-light text-xl">
+                      Your Trusted IT Partner
+                    </span>
                   </div>
                 </h1>
                 <p className="bg-primarycolor cursor-pointer  text-white  px-6 py-3 rounded-md w-fit hover:bg-white duration-500 hover:border-2 border-2 border-primarycolor hover:border-primarycolor hover:text-primarycolor">
@@ -142,7 +145,7 @@ export default function Page() {
               </div>
             </div>
           </div>
-          <div className="md:w-[40%] lg:w-[50%] lg:block hidden images relative">
+          <div className="md:w-[40%] lg:mt-20 lg:w-[50%] lg:block hidden images relative">
             <div className="flex arrowed  absolute -bottom-10">
               <GoTriangleLeft className="text-primarycolor size-7" />
               <GoTriangleLeft className="text-primarycolor size-7" />
@@ -152,12 +155,11 @@ export default function Page() {
             <div className="bg-primarycolor w-48 h-48 absolute moved -z-10 -left-3 -top-3"></div>
             <div className="bg-primarycolor w-28 h-28 absolute revmoved -z-10 -right-3 -bottom-3"></div>
             <div className="w-full md:h-[300px] h-[200px] bg-white lg:h-[350px] xl:h-[380px] 2xl:h-[550px]">
-            <img
-              src="/ceo2.png"
-              className="drop-shadow-xl object-contain mix-blend-normal  w-full h-full"
-            ></img>
+              <img
+                src="/ceo2.png"
+                className="drop-shadow-xl object-contain mix-blend-normal  w-full h-full"
+              ></img>
             </div>
-            
           </div>
         </div>
       )}
@@ -172,18 +174,20 @@ export default function Page() {
                   </p> */}
                   <div className="flex flex-col justify-center  lg:items-start items-center lg:gap-2 gap-5">
                     <span className="text-center lg:text-left lg:text-5xl font-extrabold 2xl:text-7xl md:text-4xl sm:text-5xl lastwidth:text-3xl text-2xl">
-                    Scale Your Business With Custom Applications
+                      Scale Your Business With Custom Applications
                     </span>{" "}
-                    <span className="font-light lg:mt-2 text-xl ">Your Vision, Our Mission</span>
+                    <span className="font-light lg:mt-2 text-xl ">
+                      Your Vision, Our Mission
+                    </span>
                   </div>
                 </h1>
                 <p className="bg-primarycolor cursor-pointer  text-white px-6 py-3 rounded-md w-fit hover:bg-white duration-500 hover:border-2 border-2 border-primarycolor hover:border-primarycolor hover:text-primarycolor">
-                Partner with us
+                  Partner with us
                 </p>
               </div>
             </div>
           </div>
-          <div className="md:w-[40%] lg:w-[50%] lg:block hidden images relative">
+          <div className="md:w-[40%] lg:mt-20 lg:w-[50%] lg:block hidden images relative">
             <div className="flex arrowed  absolute -bottom-10">
               <GoTriangleLeft className="text-primarycolor size-7" />
               <GoTriangleLeft className="text-primarycolor size-7" />
@@ -237,39 +241,42 @@ export default function Page() {
             <img src="/banner.webp" className="drop-shadow-xl h-[350px]  w-full"></img>
         </div>
     </div>} */}
-    <div className="absolute  md:bottom-12 w-fit lg:w-full md:block hidden px-5 md:px-10 2xl:px-16 md:left-1/2 md:-translate-x-1/2 lg:-translate-x-0   lg:left-0">
-    {data &&
-              data.Banner.map((item, index) => (
-                <div
-                  key={index}
-                  className=" mx-auto flex md:flex-row   flex-col justify-start items-start h-fit"
-                >
-                  <div className="flex md:flex-row flex-col w-full justify-start items-start gap-6 ">
-                    {item &&
-                      item.card.map((items, index) => (
-                        <Link className="w-[70%] md:h-24 md:w-24 h-48 " key={index}
-                          target={index != 2 ? "_blank" : "_parent"}
-                          href={`${items?.link}`}
-                        >
-                            
-                          <div
-                            key={index}
-                            className="bg-transparent border group  border-primarycolor relative w-full h-full  py-1 rounded-xl drop-shadow-lg flex flex-col justify-center overflow-hidden gap-3 items-center  transition-all duration-200"
-                          >
-                            <div className='absolute group-hover:w-[100%] group-hover:h-full group-hover:top-0 group-hover:right-0 -z-10 duration-200 transition-all group-hover:rounded-none w-10 h-10 -top-5  -right-5  bg-transparent group-hover:bg-white'></div>
-                            <img
-                              src={items?.siteIcon?.asset?.url}
-                              alt=""
-                              className={`size-16 md:w-7 w-16 object-contain ${index == 1 ? 'w-[2.9rem]' : ''}`}
-                            />
-                            <p className=" text-xl md:text-sm text-center font-semibold w-[80%] group-hover:text-black  text-white">
-                              {items?.cardTitle}
-                            </p>
-                          </div>
-                        </Link>
-                      ))}
-                  </div>
-                  {/* <div className="mt-10 z-10 lg:w-[50%] w-full text-center lg:text-start p-3">
+      <div className="absolute  md:bottom-12 w-fit lg:w-full md:block hidden px-5 md:px-10 2xl:px-16 md:left-1/2 md:-translate-x-1/2 lg:-translate-x-0   lg:left-0">
+        {data &&
+          data.Banner.map((item, index) => (
+            <div
+              key={index}
+              className=" mx-auto flex md:flex-row   flex-col justify-start items-start h-fit"
+            >
+              <div className="flex md:flex-row flex-col w-full justify-start items-start gap-6 ">
+                {item &&
+                  item.card.map((items, index) => (
+                    <Link
+                      className="w-[70%] md:h-24 md:w-24 h-48 "
+                      key={index}
+                      target={index != 2 ? "_blank" : "_parent"}
+                      href={`${items?.link}`}
+                    >
+                      <div
+                        key={index}
+                        className="bg-transparent border group  border-primarycolor relative w-full h-full  py-1 rounded-xl drop-shadow-lg flex flex-col justify-center overflow-hidden gap-3 items-center  transition-all duration-200"
+                      >
+                        <div className="absolute group-hover:w-[100%] group-hover:h-full group-hover:top-0 group-hover:right-0 -z-10 duration-200 transition-all group-hover:rounded-none w-10 h-10 -top-5  -right-5  bg-transparent group-hover:bg-white"></div>
+                        <img
+                          src={items?.siteIcon?.asset?.url}
+                          alt=""
+                          className={`size-16 md:w-7 w-16 object-contain ${
+                            index == 1 ? "w-[2.9rem]" : ""
+                          }`}
+                        />
+                        <p className=" text-xl md:text-sm text-center font-semibold w-[80%] group-hover:text-black  text-white">
+                          {items?.cardTitle}
+                        </p>
+                      </div>
+                    </Link>
+                  ))}
+              </div>
+              {/* <div className="mt-10 z-10 lg:w-[50%] w-full text-center lg:text-start p-3">
                     <p className="text-gray-600">
                       Join our team - We are looking for talented & driven
                       people to come work with us 
@@ -281,9 +288,9 @@ export default function Page() {
                       </Link>
                     </p>
                   </div> */}
-                </div>
-              ))}
-    </div>
+            </div>
+          ))}
+      </div>
     </div>
   );
 }
