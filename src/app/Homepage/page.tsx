@@ -316,20 +316,20 @@ function Page() {
           <section className="relative sm:overflow-hidden">
           <img src="/width_200.png" alt="" className="w-44 absolute right-0 top-0 -mt-16 -mr-20 sm:block hidden"/>
           <div className="w-[90%] mx-auto ">
-            <div className="py-5 lg:-ml-5">
+            <div className="py-9 lg:-ml-5 ">
               <h2 className="sixHundred:text-5xl xs:text-4xl text-2xl lg:justify-start justify-center flex items-center font-bold">Who we are?</h2>
             </div>
 
             
             <article className="flex lg:flex-row flex-col-reverse ">
               
-            <section className="flex lg:flex-col flex-wrap lg:justify-start justify-center lg:-ml-5 py-5  gap-5 lg:w-[30%] mt-10">
+            <section className="flex lg:flex-col flex-wrap lg:justify-start justify-center lg:-ml-5 py-5 px-10  gap-5 lg:w-[30%] mt-10">
             {
               Whowearecard.map((item,ind)=>(
-                <div key={ind} className="relative w-[17rem]">
+                <div key={ind} className="relative w-[17rem] ">
               <div className="w-20 h-20 rounded-full border-4 border-primarycolor"/>
                
-              <div key={ind} className="bg-white border-r-4 border-primarycolor absolute top-0 ml-7  flex flex-col items-center  text-gray-700 w-60 h-20 drop-shadow-lg">
+              <div key={ind} className="bg-white border-r-4 border-primarycolor absolute top-0 ml-7  flex flex-col  items-center  text-gray-700 w-60 h-20 drop-shadow-lg">
                 <div className="flex gap-4 items-center -ml-14 ">
                 <div className="bg-primarycolor rounded-full w-16 h-16 p-2 mt-2">
                 <img src={item.image} alt="" className="w-full h-full ml-0.5"/>
@@ -368,7 +368,7 @@ function Page() {
               
               </div>
               
-              <div className="w-full flex justify-center mt-5">
+              <div className="w-[150%]  flex justify-center mt-5">
         <img src="/worldwhoweare.png" alt="" />
       </div>
             </section>
