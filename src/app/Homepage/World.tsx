@@ -51,7 +51,7 @@ const World = () => {
   }, []);
   return (
     <>
-      <section className="bg-world bg-cover h-[10%] w-full p-5 md:p-20 flex flex-col text-center text-white grayscale-">
+      <section className="bg-world bg-cover h-[10%] w-full p-5 md:p-20 flex flex-col text-center text-white  grayscale-">
         {data &&
           data.World.map((Item, index) => (
             <div key={index}>
