@@ -8,9 +8,9 @@ const TimelineCard = () => {
                 <div className='md:py-8 md:pl-10 p-5'>
                     <p className='sixHundred:text-5xl xs:text-4xl text-2xl lg:justify-start justify-center flex items-center font-bold'>Our Services</p>
                 </div>
-                <div className="w-full h-full flex lg:flex-row flex-col lg:justify-around justify-center items-center lg:items-start py-5 px-5">
+                <div className="w-full h-full grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 lg:justify-around justify-center items-center lg:items-start py-5 px-5">
 
-                    <div>
+                   
                         <div>
                             <div className='flex justify-center sm:justify-start items-center'>
                                 <div className='bg-slate-50 z-10 drop-shadow-xl rounded-full w-16 h-16 flex justify-center items-center'>
@@ -136,9 +136,9 @@ const TimelineCard = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                   
 
-                    <div>
+                    
                         <div>
                             <div className='flex justify-center sm:justify-start items-center'>
                                 <div className='bg-slate-50 z-10 drop-shadow-xl rounded-full w-16 h-16 flex justify-center items-center'>
@@ -238,7 +238,7 @@ const TimelineCard = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                   
                 </div>
             </div>
         </>
