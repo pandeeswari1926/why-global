@@ -120,7 +120,7 @@ useEffect(()=>{
   return (
     <>
       <div className="z-30 relative ">
-        <section className="bg-white  flex justify-between xl:px-16 lg:px-5 items-center p-2   drop-shadow-xl z-10  w-full top-0">
+        <section className="bg-white  flex justify-between xl:px-8 lg:px-5 items-center p-2   drop-shadow-xl z-10  w-full top-0">
           <Link href="/Homepage">
             <img src="./logo-300x70.png" alt="logo" className="w-[210px]" />
           </Link>
