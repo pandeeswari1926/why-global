@@ -78,9 +78,9 @@ export default function Page() {
       <div className="w-5 h-5 absolute small   bg-primarycolor"></div>
       <div className="w-3 h-3 absolute small2 top-12 right-5  bg-transparent border-2 border-white"></div>
       <div className="w-3 h-3 jump absolute rounded-full  bottom-0 right-5  bg-primarycolor"></div>
-      <div className="bg-black bg-opacity-85 -z-10 absolute top-0 left-0 w-full h-full"></div>
+      <div className="bg-black bg-opacity-75 -z-10 absolute top-0 left-0 w-full h-full"></div>
       {prev == 1 && (
-        <div className="w-full h-full flex gap-5 justify-center lg:justify-between items-center px-5 md:px-10 2xl:px-16">
+        <div className="w-full h-full lg:mt-[-2rem] flex gap-5 justify-center lg:justify-between items-center px-5 md:px-10 2xl:px-16">
           <div className="lg:w-[60%] h-full">
             <div className="w-full flex  items-center  h-full">
               <div className=" keys flex flex-col  md:justify-center justify-center lg:items-start items-center space-y-7">
@@ -89,13 +89,13 @@ export default function Page() {
                     Boost your brand with
                   </p> */}
                   <div className="flex flex-col justify-center  md:items-start items-center gap-2">
-                    <span className="sha2 text-center lg:text-left lg:text-5xl font-extrabold 2xl:text-7xl md:text-4xl sm:text-5xl lastwidth:text-3xl text-2xl h-fit w-fit relative">
-                    10x Your Business Growth with Our 360° Digital Marketing Strategy
+                    <span className="text-center lg:text-left lg:text-5xl font-extrabold 2xl:text-7xl md:text-4xl sm:text-5xl lastwidth:text-3xl text-2xl h-fit w-fit relative">
+                    10x Your Business Growth With Our 360° Digital Marketing Strategy
                     </span>
                     {/* <span>Magic Today</span> */}
                   </div>
                 </h1>
-                <p className="bg-primarycolor cursor-pointer text-white font-semibold  px-6 py-3 rounded-md w-fit hover:bg-white duration-500 hover:text-black">
+                <p className="bg-primarycolor cursor-pointer text-white font-semibold  px-6 py-3 rounded-md w-fit hover:bg-white duration-500hover:border-2 border-2 border-primarycolor hover:border-primarycolor hover:text-primarycolor">
                 Let’s get started
                 </p>
               </div>
@@ -121,7 +121,7 @@ export default function Page() {
         </div>
       )}
       {prev == 0 && (
-        <div className="w-full h-full flex gap-5 justify-center md:justify-between items-center px-5 md:px-10 2xl:px-16">
+        <div className="w-full h-full lg:mt-[-2rem] flex gap-5 justify-center md:justify-between items-center px-5 md:px-10 2xl:px-16">
           <div className="lg:w-[60%] h-full">
             <div className="w-full flex  items-center  h-full">
               <div className=" keys flex flex-col  lg:justify-center justify-center lg:items-start items-center space-y-7">
@@ -130,13 +130,13 @@ export default function Page() {
                    Empowering Businesses Through Technology 
                   </p> */}
                   <div className="flex flex-col justify-center  lg:items-start items-center lg:gap-2 gap-5">
-                    <span className="sha2 lg:text-5xl lg:text-left text-center  font-extrabold 2xl:text-6xl md:text-4xl sm:text-5xl lastwidth:text-3xl text-2xl">
+                    <span className=" lg:text-5xl lg:text-left text-center  font-extrabold 2xl:text-6xl md:text-4xl sm:text-5xl lastwidth:text-3xl text-2xl">
                     Empowering Businesses Through Technology 
                     </span>{" "}
-                    <span className="">Your Trusted IT Partner</span>
+                    <span className=" lg:mt-2 font-light text-xl">Your Trusted IT Partner</span>
                   </div>
                 </h1>
-                <p className="bg-primarycolor cursor-pointer  text-white  px-6 py-3 rounded-md w-fit hover:bg-white duration-500 hover:text-black">
+                <p className="bg-primarycolor cursor-pointer  text-white  px-6 py-3 rounded-md w-fit hover:bg-white duration-500 hover:border-2 border-2 border-primarycolor hover:border-primarycolor hover:text-primarycolor">
                   Let’s build your business
                 </p>
               </div>
@@ -162,7 +162,7 @@ export default function Page() {
         </div>
       )}
       {prev == 2 && (
-        <div className="w-full h-full flex gap-5 justify-center lg:justify-between items-center px-5 md:px-10 2xl:px-16">
+        <div className="w-full lg:mt-[-2rem] h-full flex gap-5 justify-center lg:justify-between items-center px-5 md:px-10 2xl:px-16">
           <div className="lg:w-[60%] h-full">
             <div className="w-full flex  items-center  h-full">
               <div className=" keys flex flex-col  lg:justify-center justify-center lg:items-start items-center space-y-7">
@@ -171,13 +171,13 @@ export default function Page() {
                     Transforming Ideas into Visual Masterpieces
                   </p> */}
                   <div className="flex flex-col justify-center  lg:items-start items-center lg:gap-2 gap-5">
-                    <span className="sha2 text-center lg:text-left lg:text-5xl font-extrabold 2xl:text-7xl md:text-4xl sm:text-5xl lastwidth:text-3xl text-2xl">
-                    Scale your business with custom applications
+                    <span className="text-center lg:text-left lg:text-5xl font-extrabold 2xl:text-7xl md:text-4xl sm:text-5xl lastwidth:text-3xl text-2xl">
+                    Scale Your Business With Custom Applications
                     </span>{" "}
-                    <span>Your Vision, Our Mission</span>
+                    <span className="font-light lg:mt-2 text-xl ">Your Vision, Our Mission</span>
                   </div>
                 </h1>
-                <p className="bg-primarycolor cursor-pointer  text-white px-6 py-3 rounded-md w-fit hover:bg-white duration-500 hover:text-black">
+                <p className="bg-primarycolor cursor-pointer  text-white px-6 py-3 rounded-md w-fit hover:bg-white duration-500 hover:border-2 border-2 border-primarycolor hover:border-primarycolor hover:text-primarycolor">
                 Partner with us
                 </p>
               </div>
@@ -237,7 +237,7 @@ export default function Page() {
             <img src="/banner.webp" className="drop-shadow-xl h-[350px]  w-full"></img>
         </div>
     </div>} */}
-    <div className="absolute  md:bottom-8 w-fit lg:w-full md:block hidden px-5 md:px-10 2xl:px-16 md:left-1/2 md:-translate-x-1/2 lg:-translate-x-0   lg:left-0">
+    <div className="absolute  md:bottom-12 w-fit lg:w-full md:block hidden px-5 md:px-10 2xl:px-16 md:left-1/2 md:-translate-x-1/2 lg:-translate-x-0   lg:left-0">
     {data &&
               data.Banner.map((item, index) => (
                 <div

@@ -50,7 +50,6 @@ export default function Home() {
   }, []);
   return (
     <div className="">
- 
       {/* <main className=" relative lg:h-[600px]  md:object-cover md:flex md:flex-col">
         <div className="absolute w-full  top-1/2 left-1/2 -translate-x-1/2 -translate-y-[60%]"><img src="./lines.png" className="w-full h-fit"></img></div>
         {data &&
@@ -86,33 +85,38 @@ export default function Home() {
             </div>
           ))}
       </main> */}
-  <div className="relative lg:block hidden shadow-2xl w-full overflow-hidden">
-    
-    <div className="w-64 absolute -top-28 -left-40 "><img src="/width_200.png" className="w-full rotate-12 " alt="" /></div>
-    <img src="/news.jpg" alt="" className="h-[75vh] lg:block hidden w-full object-cover" /></div>
-  <div className="w-full  bg-primarycolor ">
-    <div className="flex lg:flex-row flex-col justify-center py-16 lg:px-0 px-5 gap-20 w-full h-full items-center">
-<div className=" lg:w-[40%] md:w-[70%] mt-10 z-20 relative h-[250px] md:h-[280px]">
-<div  className="text-justify  border-[3px] lg:text-[26px] sm:text-3xl text-2xl xs:leading-10 font-semibold h-full flex justify-center items-center p-5 md:leading-[45px] border-orange-500 bg-white rounded-3xl">
-  To provide clever and innovative business solutions to fullfill the business needs of the customer all over the world.
-</div>
-<div className="py-5 px-16 text-4xl  text-white font-semibold rounded-t-[40px] -z-10    absolute bg-gradient-to-b from-orange-600 via-orange-500 to-orange-400 -top-16 left-0">
-Mission
-</div>
-</div>
-<div className="mt-10 lg:w-[40%]  md:w-[70%]  z-20 relative h-[250px]  md:h-[280px]">
-<div  className="text-justify flex justify-center items-center  p-5 border-[3px] h-full lg:text-[26px] sm:text-3xl text-2xl xs:leading-10 font-semibold md:leading-[45px] border-orange-500 bg-white rounded-3xl">
-  We aim to be the preferred partner for client seeking innovative solutions to boost sales and  efficiency.
-</div>
-<div className="py-5 px-16 text-4xl  text-white font-semibold rounded-t-[40px] -z-10    absolute bg-gradient-to-b from-orange-600 via-orange-500 to-orange-400 -top-16 left-0">
-Vision
-</div>
-</div>
-    
-    </div>
-    
-
-  </div>
+      {/* <div className="relative  lg:block hidden shadow-2xl w-full overflow-hidden">
+        <div className="w-64 absolute -top-28 -left-40 ">
+          <img src="/width_200.png" className="w-full rotate-12 " alt="" />
+        </div>
+        <img
+          src="/news.jpg"
+          alt=""
+          className="h-[75vh] lg:block hidden w-full object-cover"
+        />
+      </div>
+      <div className="w-full  bg-primarycolor ">
+        <div className="flex lg:flex-row flex-col justify-center py-16 lg:px-0 px-5 gap-20 w-full h-full items-center">
+          <div className=" lg:w-[40%] md:w-[70%] mt-10 z-20 relative h-[250px] md:h-[280px]">
+            <div className="text-justify  border-[3px] lg:text-[26px] sm:text-3xl text-2xl xs:leading-10 font-semibold h-full flex justify-center items-center p-5 md:leading-[45px] border-orange-500 bg-white rounded-3xl">
+              To provide clever and innovative business solutions to fullfill
+              the business needs of the customer all over the world.
+            </div>
+            <div className="py-5 px-16 text-4xl  text-white font-semibold rounded-t-[40px] -z-10    absolute bg-gradient-to-b from-orange-600 via-orange-500 to-orange-400 -top-16 left-0">
+              Mission
+            </div>
+          </div>
+          <div className="mt-10 lg:w-[40%]  md:w-[70%]  z-20 relative h-[250px]  md:h-[280px]">
+            <div className="text-justify flex justify-center items-center  p-5 border-[3px] h-full lg:text-[26px] sm:text-3xl text-2xl xs:leading-10 font-semibold md:leading-[45px] border-orange-500 bg-white rounded-3xl">
+              We aim to be the preferred partner for client seeking innovative
+              solutions to boost sales and efficiency.
+            </div>
+            <div className="py-5 px-16 text-4xl  text-white font-semibold rounded-t-[40px] -z-10    absolute bg-gradient-to-b from-orange-600 via-orange-500 to-orange-400 -top-16 left-0">
+              Vision
+            </div>
+          </div>
+        </div>
+      </div> */}
     </div>
   );
 }
