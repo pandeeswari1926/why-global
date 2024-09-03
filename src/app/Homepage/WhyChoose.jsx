@@ -85,28 +85,28 @@ function WhyChooseUs() {
 
         <div className='flex flex-col items-center text-center '>
           <div className='bg-white shadow-orange-200 rounded-full p-8  shadow-2xl transition-transform transform hover:scale-110 hover:bg-orange-500 '>
-            <img src='/Whychooseusimg4.png' className='w-12 h-12 transition-colors duration-300 hover:filter hover:brightness-0 hover:invert' alt="Cutting-edge Technologies" />
+            <img src='/Whychooseusimg4.png' className='w-12 h-12 transition-colors duration-300 hover:filter hover:brightness-0 hover:invert' alt="Training,Knowledge Transfer" />
           </div>
-          <p className='text-base font-semibold mt-9 text-gray-800'>Cutting-edge Technologies</p>
+          <p className='text-base font-semibold mt-9 text-gray-800'>Training,Knowledge Transfer</p>
         </div>
 
         <div className='flex flex-col items-center text-center md:-mt-12'>
           <div className='bg-white shadow-orange-200 rounded-full p-8  shadow-2xl transition-transform transform hover:scale-110 hover:bg-orange-500 '>
-            <img src='/Whychooseusimg5.png' className='w-12 h-12 transition-colors duration-300 hover:filter hover:brightness-0 hover:invert' alt="Client-Centric Approach" />
+            <img src='/Whychooseusimg5.png' className='w-12 h-12 transition-colors duration-300 hover:filter hover:brightness-0 hover:invert' alt="Security Audit" />
           </div>
-          <p className='text-base font-semibold mt-9 text-gray-800'>Client-Centric Approach</p>
+          <p className='text-base font-semibold mt-9 text-gray-800'>Security Audit</p>
         </div>
         <div className='flex flex-col items-center text-center '>
           <div className='bg-white shadow-orange-200 rounded-full p-8  shadow-2xl transition-transform transform hover:scale-110 hover:bg-orange-500'>
-            <img src='/Whychooseusimg6.png' className='w-12 h-12 transition-colors duration-300 hover:filter hover:brightness-0 hover:invert' alt="On-time Project Delivery" />
+            <img src='/Whychooseusimg6.png' className='w-12 h-12 transition-colors duration-300 hover:filter hover:brightness-0 hover:invert' alt="Remote Support" />
           </div>
-          <p className='text-base font-semibold mt-9 text-gray-800'>On-time Project Delivery</p>
+          <p className='text-base font-semibold mt-9 text-gray-800'>Remote Support</p>
         </div>
         <div className='flex flex-col items-center text-center md:-mt-12'>
           <div className='bg-white shadow-orange-200 rounded-full p-8  shadow-2xl transition-transform transform hover:scale-110 hover:bg-orange-500 '>
-            <img src='/Whychooseusimg7.png' className='w-12 h-12 transition-colors duration-300 hover:filter hover:brightness-0 hover:invert'  alt="Tailor-made Products"  />
+            <img src='/Whychooseusimg7.png' className='w-12 h-12 transition-colors duration-300 hover:filter hover:brightness-0 hover:invert'  alt="Dedication Client Relationship Manager"  />
           </div>
-          <p className='text-base font-semibold mt-9 text-gray-800'>Tailor-made Products</p>
+          <p className='text-base font-semibold mt-9 text-gray-800'>Dedication Client Relationship Manager</p>
         </div>
         </div>
 
