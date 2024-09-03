@@ -184,25 +184,28 @@ const Testimonial = () => {
 
   return (
     <>
-    <h1 className='md:text-5xl text-2xl font-bold text-center '>Testimonial</h1>
-    <div className="flex flex-col lg:flex-row w-full py-8 px-20">
+    <div className="flex flex-col lg:flex-row w-full py-8 md:px-20 px-5">
        
       {/* Left Section */}
       <div className="w-full lg:w-1/2 py flex justify-center items-center">
-      <img src='./image-1.png' className='w-[65%]'/>
+      <img src='./image-1.png' className='w-[80%]'/>
       </div>
 
       {/* Right Section with Slider */}
-      <div className="w-full lg:w-1/2  flex flex-col items-center relative md:py-8 px-20">
+      <div className="w-full lg:w-1/2  flex flex-col items-center relative md:py-8 ">
         <div className="flex flex-col items-center">
+        <h1 className='md:text-lg  text-orange-400 font-semibold text-center '> <span className='text-orange-500  text-[40px]'>.</span> Service Testimonials <span className='text-orange-500 text-[40px]'>.</span> </h1>
+
+        <h1 className='md:text-4xl text-xl font-bold text-center py-3 mb-3 '>What People Say About Us</h1>
+
           <img
             src={testimonials[currentIndex].image}
             alt={testimonials[currentIndex].name}
             className="rounded-full w-24 h-24 mb-4 object-cover"
           />
           <h2 className="text-xl font-semibold md:mt-4">{testimonials[currentIndex].name}</h2>
-          <h3 className="text-md text-gray-600 md:mt-2">{testimonials[currentIndex].role}</h3>
-          <p className="text-justify md:mt-5">
+          <h3 className="text-sm text-gray-800 md:mt-">{testimonials[currentIndex].role}</h3>
+          <p className="text-justify text-base md:mt-5 leading-7 mt-3 md:px-7 ">
             {testimonials[currentIndex].paragraph}
           </p>
         </div>
@@ -210,13 +213,13 @@ const Testimonial = () => {
         {/* Slider Arrows */}
         <button
           onClick={prevSlide}
-          className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-200 p-2 py-2 px-2 rounded-full"
+          className="md:block hidden absolute  left-0 top-1/2 transform -translate-y-1/2 bg-gray-200 p-2 py-2 px-2 rounded-full"
         >
           &#8592; {/* Left arrow */}
         </button>
         <button
           onClick={nextSlide}
-          className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-200 p-2 py-2 px-2 rounded-full"
+          className=" md:block hidden absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-200 p-2 py-2 px-2 rounded-full"
         >
           &#8594; {/* Right arrow */}
         </button>
