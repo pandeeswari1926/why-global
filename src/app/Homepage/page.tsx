@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import CountUp from "react-countup";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComputer } from "@fortawesome/free-solid-svg-icons";
@@ -26,6 +27,8 @@ import Banner from "./Banner";
 import Whychoose from "./WhyChoose";
 import OurPortfolio from "./OurPortfolio";
 import NewServices from "./NewServices";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Page() {
   interface banner {
@@ -116,30 +119,38 @@ function Page() {
     };
     getdata();
   }, []);
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
 
   const Whowearecard = [
     {
-      title: "13+",
+      title: 13,
+      suffix: "+",
       content: "Years of experience",
       image: "/whoicon1.png",
     },
     {
-      title: "15+",
+      title: 15,
+      suffix: "+",
       content: "Countries",
       image: "/whoicon2.png",
     },
     {
-      title: "30+",
+      title: 30,
+      suffix: "+",
       content: "Sectors",
       image: "/whoicon3.png",
     },
     {
-      title: "280+",
+      title: 280,
+      suffix: "+",
       content: "Employees",
       image: "/whoicon4.png",
     },
     {
-      title: "570+",
+      title: 570,
+      suffix: "+",
       content: "Happy Clients",
       image: "/whoicon5.png",
     },
@@ -324,13 +335,19 @@ function Page() {
             />
             <div className="w-[90%] mx-auto">
               <div className="py-6 md:py-9 lg:-ml-5 text-center lg:text-left">
-                <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-bold flex justify-center lg:justify-start">
+                <h2
+                  className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-bold flex justify-center lg:justify-start"
+                  data-aos="fade-up"
+                >
                   Who we are?
                 </h2>
               </div>
 
               <article className="flex flex-col-reverse lg:flex-row">
-                <section className="flex lg:flex-col flex-wrap lg:justify-start justify-center px-5 sm:px-10 gap-5 lg:w-[30%]">
+                <section
+                  className="flex lg:flex-col flex-wrap lg:justify-start justify-center px-5 sm:px-10 gap-5 lg:w-[30%]"
+                  data-aos="fade-right"
+                >
                   {Whowearecard.map((item, ind) => (
                     <div key={ind} className="relative w-[15rem] md:w-[17rem]">
                       <div className="w-16 md:w-20 h-16 md:h-20 rounded-full border-4 border-primarycolor" />
@@ -349,8 +366,14 @@ function Page() {
                           </div>
                           <div className="w-[7.5rem] md:w-[8.7rem] relative">
                             <h2 className="font-semibold text-base md:text-lg relative z-10">
-                              {item.title}
+                              <CountUp
+                                start={0}
+                                end={item.title}
+                                suffix={item.suffix}
+                                duration={6}
+                              />
                             </h2>
+
                             <p className="text-xs relative z-10">
                               {item.content}
                             </p>
@@ -363,7 +386,10 @@ function Page() {
                 </section>
 
                 <section className="lg:w-[70%] flex-col items-center justify-center">
-                  <div className="bg-gray-200 w-[90%] lg:w-[80%] relative left-5 lg:left-24 text-center drop-shadow-lg rounded-t-md p-4">
+                  <div
+                    className="bg-gray-200 w-[90%] lg:w-[80%] relative left-5 lg:left-24 text-center drop-shadow-lg rounded-t-md p-4"
+                    data-aos="fade-down"
+                  >
                     <h2 className="text-base sm:text-lg text-gray-700 sm:text-start text-justify sm:w-[85%] mx-auto">
                       “We are your trusted partner, committed to empowering
                       businesses through cutting-edge technology solutions.”
@@ -389,7 +415,10 @@ function Page() {
                     </div>
                   </div>
 
-                  <div className="flex mt-[-1rem] justify-center">
+                  <div
+                    className="flex mt-[-1rem] justify-center"
+                    data-aos="fade-left"
+                  >
                     <div className="w-full h-[40vh] sm:h-[50vh] lg:h-[60vh]">
                       <img
                         src="/worldwhoweare.png"
