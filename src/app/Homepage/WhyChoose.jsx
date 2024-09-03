@@ -5,7 +5,7 @@ function WhyChooseUs() {
   return (
     <div className='w-full relative overflow-hidden py-5 bg-gray-00'>
       <img src='/ply.png' className='lg:w-44 w-36 -bottom-5 -left-20 absolute md:block hidden' alt="Decoration" />
-      <img src='/poly.png' className='lg:w-52 w-32 -top-20 -right-5 absolute ' alt="Decoration" />
+      <img src='/poly.png' className='lg:w-50 w-32 -top-20 -right-5 absolute ' alt="Decoration" />
 
       <div className='md:py-5 md:pl-10  text-center'>
         <h2 className='text-3xl md:text-5xl font-bold text-primary flex items-center justify-center mt-6 md:mt-0'>
