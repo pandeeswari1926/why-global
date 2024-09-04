@@ -20,7 +20,6 @@ import client_img_7 from "../../../public/client_img_7.png";
 import client_img_8 from "../../../public/client_img_8.png";
 import client_img_9 from "../../../public/client_img_9.png";
 import client_img_10 from "../../../public/client_img_10.png";
-// import bg from "../../../public/eventabsolutepic.png";
 
 function Client() {
   const logos = [
@@ -75,11 +74,10 @@ function Client() {
   }, [logoRows]);
 
   return (
-    <div className="relative flex flex-col  items-center w-full h-full  justify-center gap-2  py-2 md:py-10">
-      <div className="absolute inset-0 z-10"></div>
+    <div className="relative flex flex-col items-center w-full h-full justify-center gap-2 py-2 md:py-10">
       <section className="relative z-20 lg:space-y-5">
-        <div className="md:py-8  mt-[-2rem]">
-          <p className="text-2xl xs:text-4xl sixHundred:text-5xl text-font  md:justify-start text-left font-bold text-black">
+        <div className="md:py-8 mt-[-2rem]">
+          <p className="text-2xl xs:text-4xl sixHundred:text-5xl text-font md:justify-start text-left font-bold text-black">
             Our Clients
           </p>
         </div>
@@ -93,17 +91,16 @@ function Client() {
               {row.map((logo, colIndex) => (
                 <div
                   key={colIndex}
-                  className={`relative flex justify-center items-center bg-gray-200 shadow-xl  shadow-primarycolor overflow-hidden transition-transform duration-500 ${
+                  className={`relative flex justify-center items-center bg-gray-200 transition-transform duration-500 ${
                     zoomedIndex.row === rowIndex && zoomedIndex.col === colIndex
-                      ? "scale-110  "
-                      : ""
-                  } `} // Add orange shadow on xl screens
+                      ? "scale-110 shadow-[0_0_15px_3px_rgba(251,146,60,0.6)]" // Custom orange shadow
+                      : "shadow-md"
+                  }`}
                   style={{
                     width: "150px", // Responsive width for smaller screens
                     height: "135px", // Responsive height for smaller screens
                     clipPath:
                       "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
-                    boxShadow: "0 0 15px rgba(251, 146, 60, 0.6)", 
                   }}
                 >
                   <Image
@@ -117,11 +114,10 @@ function Client() {
               ))}
             </div>
           ))}
-</div>
-
+        </div>
       </section>
     </div>
   );
 }
 
-// export default Client;
+export default Client;
