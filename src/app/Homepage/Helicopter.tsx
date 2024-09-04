@@ -115,7 +115,7 @@ function Helicopter() {
   }
   const [Content, setContent] = useState("Frontend");
   const listItems = ["Frontend", "Backend", "Database", "Mobile", "CMS"];
-  let img = [ img_1 ,img_2, img_3, img_4 , img_5]
+  // let img = [ img_1 ,img_2, img_3, img_4 , img_5]
   return (
     <div className="">
       <link
@@ -130,72 +130,7 @@ function Helicopter() {
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
       ></link>
       <div className="bg-custom w-full h-full bg-no-repeat relative ">
-        {/* {data &&
-          data.review.map((item: any, index: any) => (
-            <div key={index} className="relative w-full h-full z-10 py-5">
-              <div className="flex w-full justify-end items-end">
-                <div */}
-                  {/* // style={{ */}
-                  {/* //   clipPath: "polygon(4% 0, 100% 0, 100% 100%, 0 100%, 0 10%)",
-                  // }}
-                  className="lg:w-[95%] w-full h-full lg:h-full relative  lg:rounded-tl-[3rem] py-5 bg-white shadow-md shadow-gray-400 right-0 "
-                > */}
-                  {/* <div className="pt-6 lg:text-start text-center lg:pl-10">
-                    <h1 className="lg:text-xl text-xl text-primarycolor font-semibold pb-5">
-                      {item.title}
-                    </h1>
-                    <h1 className="lg:text-3xl text-lg text-gray-500 font-semibold ">
-                      {item.subtitle}
-                    </h1>
-                  </div> */}
-                  {/* <div className="flex lg:flex-row flex-col gap-10 p-5">
-                    <Slider {...settings} className="overflow-hidden">
-                      {item.client.map((items: any, indexs: any) => (
-                        <div key={indexs}>
-                          <div className="flex gap-2 justify-center lg:flex-row flex-col w-[90%] relative mx-auto  pt-8">
-                            <div className="lg:w-[80%] w-full relative">
-                              <img
-                                src="./style2.png"
-                                alt="style2"
-                                className="lg:w-[80%] md:w-[85%] w-[50%] mx-auto"
-                              />
-                              <img
-                                src={items?.Photo?.asset?.url}
-                                alt="Profile1"
-                                className="lg:w-[65%] md:w-[80%] w-[45%] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 lg:-translate-x-0 lg:-translate-y-0 lg:left-10 lg:top-5 absolute"
-                              />
-                              <img
-                                src="./style3.png"
-                                alt="style2"
-                                className="absolute md:w-[15%] w-[10%]  top-0 left-1/3 -translate-x-2/4 md:-translate-x-0  md:left-8"
-                              />
-                            </div>
-                            <div className="w-full lg:pt-2">
-                              <p className="lg:text-left lg:text-md font-normal text-[#5D5D5D] text-justify">
-                                {items.Content}
-                              </p>
-                              <hr className=" h-0.5 bg-[#FF8900]  mt-4 " />
-                              <div className="flex md:flex-row flex-col justify-between mt-3 items-center">
-                                <div>
-                                  <p className="text-center">{items.name}</p>
-                                  <p className=" text-center text-[#FF8900]">
-                                    {items.role}
-                                  </p>
-                                </div>
-                                <div className="justify-center items-center  md:pl-0 md:w-[30%] mx-auto">
-                                  <img src="./stars.png" alt="" className=" " />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      ))}
-                    </Slider>
-                  </div> */}
-                {/* </div>
-              </div>
-            </div>
-          ))} */}
+  
         {data &&
           data.technology.map((item, index) => (
             <div
@@ -222,14 +157,7 @@ function Helicopter() {
               </div>
               <div className="w-full h-full relative lg:px-14 px-5">
                 <div className="w-full h-full bg-white  flex lg:mt-28 z-20 lg:flex-row flex-col gap-5 justify-center rounded-md drop-shadow-lg  relative">
-                  <div className="flex flex-col gap-3 justify-center items-center pt-5 lg:hidden">
-                    <p className="text-xl text-primarycolor font-semibold">
-                      TECHNOLOGIES
-                    </p>
-                    <p className="text-3xl  text-grayColor font-semibold">
-                      WE WORK WITH
-                    </p>
-                  </div>
+                  
                   <div className="lg:w-[50%] flex justify-center pt-5 lg:pt-0 items-center">
                     <img
                       src={item?.Photo?.asset?.url}

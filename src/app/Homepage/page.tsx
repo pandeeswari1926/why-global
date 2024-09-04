@@ -14,7 +14,7 @@ import Helicopter from "./Helicopter";
 import Wgs from "./wgs";
 import World from "./World";
 import Home from "./page1";
-// import Client from "./client";
+import Client from "./client";
 import ce from "../../../public/ce.png";
 import SanityClient from "../SanityClient";
 import { FcEngineering } from "react-icons/fc";
@@ -442,7 +442,7 @@ function Page() {
           <Whychoose />
          
           <OurPortfolio />
-          {/* <Client /> */}
+          <Client />
           <Testimonial/>
           <Helicopter />
           <Wgs />
