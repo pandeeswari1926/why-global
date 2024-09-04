@@ -192,23 +192,39 @@ const Testimonial = () => {
       </div>
 
       {/* Right Section with Slider */}
-      <div className="w-full lg:w-1/2  flex flex-col items-center relative md:py-8 ">
-        <div className="flex flex-col items-center">
+      <div className="w-full lg:w-1/2  flex flex-col items-center relative md:py-8  ">
+    <div className='left-6'>
+    <p className='text-orange-400 mr-[800px] bg-orange-400 md:px-4 md:py-2 border-none rounded-full'>p</p>
+
+    </div>
+
+        <div className="flex flex-col items-center ">
+            
         <h1 className='md:text-lg  text-orange-400 font-semibold text-center '> <span className='text-orange-500  text-[40px]'>.</span> Service Testimonials <span className='text-orange-500 text-[40px]'>.</span> </h1>
 
-        <h1 className='md:text-4xl text-xl font-bold text-center py-3 mb-3 '>What People Say About Us</h1>
+        <h1 className='lg:text-4xl md:text-4xl text-xl font-bold text-center py-3 mb-3 '>What People Say About Us</h1>
+        <p className='text-orange-200 ml-[400px] md:-mt-[30px] bg-orange-200 md:px-7 md:py-5 border-none rounded-full'>p</p>
+
 
           <img
             src={testimonials[currentIndex].image}
             alt={testimonials[currentIndex].name}
             className="rounded-full w-24 h-24 mb-4 object-cover"
           />
-          <h2 className="text-xl font-semibold md:mt-4">{testimonials[currentIndex].name}</h2>
-          <h3 className="text-sm text-gray-800 md:mt-">{testimonials[currentIndex].role}</h3>
-          <p className="text-justify text-base md:mt-5 leading-7 mt-3 md:px-7 ">
+          <h2 className="text-xl font-semibold md:mt-">{testimonials[currentIndex].name}</h2>
+          <h3 className="text-base text-gray-800 md:mt-">{testimonials[currentIndex].role}</h3>
+          <p className="text-justify text-base md:mt-5 leading-loose mt-3 md:px-20 ">
             {testimonials[currentIndex].paragraph}
           </p>
+          <div className=''>
+    <p className='text-orange-400 ml-[500px] bg-orange-400 md:px-10 md:py-8 border-none rounded-full '>p</p>
+
+    </div>
+
         </div>
+        <p className='text-orange-200 ml-[350px] -mt-24 bg-orange-200 md:px-7 md:py-5 border-none rounded-full'>p</p>
+        <p className='text-gray-100 md:ml-[380px] -mt- bg-gray-100 md:px-3 md:py-1 border-none rounded-full'>p</p>
+
 
         {/* Slider Arrows */}
         <button

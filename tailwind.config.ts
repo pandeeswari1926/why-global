@@ -53,7 +53,7 @@ const config: Config = {
         kush: "#EECF64",
         primarycolor: '#FF9315',
         grayColor:'#686868'
-      }
+      } 
     },
   },
   plugins: [],
