@@ -36,7 +36,7 @@ const OurPortfolio = () => {
 
   return (
     <article
-      className="relative overflow-hidden bg-cover bg-no-repeat w-full h-screen py-5"
+      className="relative overflow-hidden bg-cover bg-no-repeat w-full  py-5"
       style={{ backgroundImage: "url('/bg_profilo.png')" }}
     >
       <div className="md:py-8 md:pl-10 p-5">
@@ -49,8 +49,8 @@ const OurPortfolio = () => {
         alt=""
         className="w-44 absolute right-0 top-0 -mt-16 -mr-20 sm:block hidden"
       />
-      <section className="pb-5 md:pb-1 relative top-[-5rem] min-h-[90vh] sixHundred:min-h-[100vh] flex items-center justify-center">
-        <div className="w-[90%] mx-auto flex items-center justify-center h-full relative">
+      <section className="pb-5 md:pb-1 relative top-[-1rem] min-h-[60vh] sixHundred:min-h-[60vh] flex items-center justify-center">
+        <div className="w-[90%] mx-auto flex items-center justify-center h-[70vh] relative">
           {/* Previous Button */}
           <button
             onClick={handlePrev}
@@ -95,11 +95,11 @@ const OurPortfolio = () => {
                     // style={{ width: "320px", height: "400px" }}
                     style={{
                       width: '370px',
-                      height: '500px',
+                      height: '400px',
                       objectPosition: 'top', // Aligns the image to the top of its container
                     }} // Adjust width and height as needed
                   />
-                  <div className="p-2 text-center bg-primarycolor text-white">
+                  <div className="p-2 text-center rounded-b-lg bg-primarycolor text-white">
                     <h1>{item.title}</h1>
                   </div>
                 </div>

@@ -2,6 +2,12 @@
 import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import SanityClient from "../SanityClient";
+import img_1 from "../../../public/wgs gifs (12).gif"
+import img_2 from "../../../public/wgs gifs (13).gif"
+import img_3 from "../../../public/wgs gifs (14).gif"
+import img_4 from "../../../public/wgs gifs (15).gif"
+import img_5 from "../../../public/wgs gifs (16).gif"
+
 
 function Helicopter() {
   var settings = {
@@ -109,6 +115,7 @@ function Helicopter() {
   }
   const [Content, setContent] = useState("Frontend");
   const listItems = ["Frontend", "Backend", "Database", "Mobile", "CMS"];
+  let img = [ img_1 ,img_2, img_3, img_4 , img_5]
   return (
     <div className="">
       <link
@@ -128,9 +135,9 @@ function Helicopter() {
             <div key={index} className="relative w-full h-full z-10 py-5">
               <div className="flex w-full justify-end items-end">
                 <div
-                  style={{
-                    clipPath: "polygon(4% 0, 100% 0, 100% 100%, 0 100%, 0 10%)",
-                  }}
+                  // style={{
+                  //   clipPath: "polygon(4% 0, 100% 0, 100% 100%, 0 100%, 0 10%)",
+                  // }}
                   className="lg:w-[95%] w-full h-full lg:h-full relative  lg:rounded-tl-[3rem] py-5 bg-white shadow-md shadow-gray-400 right-0 "
                 >
                   <div className="pt-6 lg:text-start text-center lg:pl-10">
@@ -236,14 +243,14 @@ function Helicopter() {
                         data.technology.map((item, index) => (
                           <div
                             key={index}
-                            className="flex flex-row justify-around items-center relative w-full h-14  px-2 md:px-0 bg-gray-200  md:justify-evenly md:text-lg text-sm"
+                            className="flex flex-row justify-around items-center relative w-full h-14  px-2 md:px-0 md:justify-evenly md:text-lg text-sm"
                           >
-                            <div
+                            {/* <div
                               style={{
                                 clipPath: `polygon(0 63%, 0 100%, 41% 100%)`,
                               }}
                               className="w-20 h-full lg:flex hidden absolute top-0 left-0 bottom-0 bg-white  z-10"
-                            ></div>
+                            ></div> */}
                             {item &&
                               item.programming.map((list, indexes) => (
                                 <li
@@ -251,7 +258,7 @@ function Helicopter() {
                                   className="cursor-pointer text-gray-500 text-xs md:text-lg"
                                   style={
                                     clickindex === indexes
-                                      ? { color: "#FF9315" }
+                                      ? { color: "#FF9315" ,borderBottom: "2px solid  #FF9315" }
                                       : { color: "rgb(107 114 128 /1)" }
                                   }
                                   onClick={(e) => handleclick(indexes, e)}
