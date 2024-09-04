@@ -1,78 +1,105 @@
-import React from 'react';
-import { FaReact, FaCode, FaLaptopCode, FaMobileAlt, FaServer, FaDatabase } from 'react-icons/fa';
+import React from "react";
+import { CiBullhorn } from "react-icons/ci";
+import {
+  FaReact,
+  FaLaptopCode,
+  FaMobileAlt,
+  FaServer,
+  FaDatabase,
+  FaLaptopHouse,
+  FaBullhorn,
+} from "react-icons/fa";
+import { MdCloudSync, MdPhonelinkSetup } from "react-icons/md";
+import { SiTaichigraphics, SiWesterndigital } from "react-icons/si";
 
 const OurServices = () => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 px-16 py-8 ">
-      {/* First Section */}
-      <div className="col-span-2 border p-10">
-        <img 
-          src="https://via.placeholder.com/300" 
-          alt="Placeholder"
-          className="w-full h-[300px] "
-        />
-         <p className="mb-4">
-It Management        </p>
-        <p className="mb-4">
-          This is a 4-line paragraph. It might contain some introductory text about the content, providing useful information to the user.
-        </p>
-        <button className="bg-blue-500 text-white py-2 px-4 rounded">
-          Click Me
-        </button>
-      </div>
+    <>
+      <div className="bg-gray-100 py-10">
+        <h1 className="md:text-5xl text-left px-10 font-bold">Our Services</h1>
 
-      {/* Second Section */}
-      <div className="col-span-3 grid grid-cols-1 md:grid-cols-3 gap-4">
-        {/* First Box */}
-        <div className="border p-4 flex flex-col items-center">
-          <FaReact className="text-4xl text-blue-500 mb-2" />
-          <h3 className="text-xl font-semibold mb-2">React Development</h3>
-          <p className="text-center">
-            Build interactive UIs with React.js and manage component state efficiently.
-          </p>
-        </div>
-        {/* Second Box */}
-        <div className="border p-4 flex flex-col items-center">
-          <FaCode className="text-4xl text-green-500 mb-2" />
-          <h3 className="text-xl font-semibold mb-2">Web Development</h3>
-          <p className="text-center">
-            Create modern, responsive websites using the latest web technologies.
-          </p>
-        </div>
-        {/* Third Box */}
-        <div className="border p-4 flex flex-col items-center">
-          <FaLaptopCode className="text-4xl text-purple-500 mb-2" />
-          <h3 className="text-xl font-semibold mb-2">Frontend Engineering</h3>
-          <p className="text-center">
-            Design and implement engaging user experiences on the frontend.
-          </p>
-        </div>
-        {/* Fourth Box */}
-        <div className="border p-4 flex flex-col items-center">
-          <FaMobileAlt className="text-4xl text-red-500 mb-2" />
-          <h3 className="text-xl font-semibold mb-2">Mobile Development</h3>
-          <p className="text-center">
-            Develop responsive mobile apps with React Native and other frameworks.
-          </p>
-        </div>
-        {/* Fifth Box */}
-        <div className="border p-4 flex flex-col items-center">
-          <FaServer className="text-4xl text-orange-500 mb-2" />
-          <h3 className="text-xl font-semibold mb-2">Backend Development</h3>
-          <p className="text-center">
-            Build scalable backend services with Node.js, Express, and databases.
-          </p>
-        </div>
-        {/* Sixth Box */}
-        <div className="border p-4 flex flex-col items-center">
-          <FaDatabase className="text-4xl text-yellow-500 mb-2" />
-          <h3 className="text-xl font-semibold mb-2">Database Management</h3>
-          <p className="text-center">
-            Manage and optimize database schemas, queries, and performance.
-          </p>
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 px-16 py-8">
+          {/* First Section */}
+          <div className="col-span-2 border-none shadow-lg p-8 bg-white">
+            <img
+              src="./life1.png"
+              alt="Placeholder"
+              className="w-full h-[240px] bg-center"
+            />
+            <p className="text-2xl font-bold md:mt-4">IT Management</p>
+            <p className="md:mt-3 text-gray-800">
+              This is a 4-line paragraph. It might contain some introductory
+              text about the content, providing useful information to the user.
+            </p>
+            <button className="bg-primarycolor text-md md:mt-4 text-white py-2 px-6 rounded-lg">
+              Start A Project
+            </button>
+          </div>
+
+          {/* Second Section */}
+          <div className="col-span-3 grid grid-cols-1 md:grid-cols-3 gap-4">
+            {/* First Box */}
+            <div className="relative group border-none p-4 flex flex-col items-center justify-center bg-white shadow-lg transform transition-transform duration-300 hover:scale-105 cursor-pointer">
+              <FaLaptopCode className="text-primarycolor mb-2 text-6xl" />
+              <h3 className="text-xl font-semibold mb-2">Web Development</h3>
+              <p className="text-center text-gray-800">
+                Building robust, scalable websites with cutting-edge
+                technologies
+              </p>
+            </div>
+
+            {/* Second Box */}
+            <div className="relative group border-none p-4 flex flex-col items-center justify-center bg-white shadow-lg transform transition-transform duration-300 hover:scale-105 cursor-pointer">
+              <FaLaptopHouse className="text-primarycolor mb-2 text-6xl" />
+              <h3 className="text-xl font-semibold mb-2">Web Designing</h3>
+              <p className="text-center text-gray-800">
+                Crafting visually compelling and responsive websites that
+                enhance user experience
+              </p>
+            </div>
+
+            {/* Third Box */}
+            <div className="relative group border-none p-4 flex flex-col items-center justify-center bg-white shadow-lg transform transition-transform duration-300 hover:scale-105 cursor-pointer">
+              <MdPhonelinkSetup className="text-primarycolor mb-2 text-6xl" />
+              <h3 className="text-xl font-semibold mb-2">App Development</h3>
+              <p className="text-center text-gray-800">
+                Developing intuitive and user-friendly mobile apps tailored to
+                meet your business needs
+              </p>
+            </div>
+
+            {/* Fourth Box */}
+            <div className="relative group border-none p-4 flex flex-col items-center justify-center bg-white shadow-lg transform transition-transform duration-300 hover:scale-105 cursor-pointer">
+            <CiBullhorn className="text-primarycolor mb-2 text-6xl" />
+              <h3 className="text-xl font-semibold mb-2">Digital Marketing</h3>
+              <p className="text-center text-gray-800">
+                Boosting your online presence with data-driven strategies, SEO,
+                and social media marketing
+              </p>
+            </div>
+
+            {/* Fifth Box */}
+            <div className="relative group border-none p-4 flex flex-col items-center justify-center bg-white shadow-lg transform transition-transform duration-300 hover:scale-105 cursor-pointer">
+              <MdCloudSync className="text-primarycolor mb-2 text-6xl" />
+              <h3 className="text-xl font-semibold mb-2">Internet of Things</h3>
+              <p className="text-center text-gray-800">
+                Boosting your online presence with data-driven strategies, SEO,
+                and social media
+              </p>
+            </div>
+
+            {/* Sixth Box */}
+            <div className="relative group border-none p-4 flex flex-col items-center justify-center bg-white shadow-lg transform transition-transform duration-300 hover:scale-105 cursor-pointer">
+              <SiTaichigraphics className="text-primarycolor mb-2 text-6xl" />
+              <h3 className="text-xl font-semibold mb-2">Graphic Designing</h3>
+              <p className="text-center text-gray-800">
+                Manage and optimize database schemas, queries, and performance
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
