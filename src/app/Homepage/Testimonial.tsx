@@ -184,7 +184,7 @@ const Testimonial = () => {
 
   return (
     <>
-    <div className="flex flex-col lg:flex-row w-full py-8 md:px-20 px-5">
+    <div className="flex flex-col lg:flex-row w-full py-8 md:px-20 px-5 bg-gray-100">
        
       {/* Left Section */}
       <div className="w-full lg:w-1/2 py flex justify-center items-center">
