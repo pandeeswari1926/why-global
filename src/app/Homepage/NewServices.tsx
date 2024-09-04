@@ -1,6 +1,7 @@
 import React from "react";
 import { PiMedalFill } from "react-icons/pi";
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
+import { FaHandPointRight } from "react-icons/fa";
 
 const TimelineCard = () => {
   const services = [
@@ -355,13 +356,13 @@ const TimelineCard = () => {
                     className="absolute inset-0 opacity-90"
                     style={{ backgroundColor: service.bg_color }}
                   ></div>
-                  <div className="relative flex flex-col gap-2 px-4 items-start bg-transparent justify-center h-full">
+                  <div className="relative flex flex-col gap-4 items-start pl-5 pr-2 bg-transparent justify-center h-full">
                     {service.details.map((detail, i) => (
-                      <div key={i} className="flex gap-2 items-center">
-                        <div className="bg-white text-gray-600 rounded-full">
-                          <BsFillArrowRightCircleFill className="size-6 rounded-full" />
+                      <div key={i} className="flex gap-2 justify-center items-center">
+                        <div className=" text-primarycolor rounded-full">
+                          <FaHandPointRight className="size-6 rounded-full" />
                         </div>
-                        <p className="cursor-pointer text-sm md:text-lg font-semibold text-white transition-transform duration-300 ease-out transform hover:scale-95">
+                        <p className="cursor-pointer text-xs md:text-lg font-semibold text-white transition-transform duration-300 ease-out transform hover:scale-95">
                           {detail}
                         </p>
                       </div>

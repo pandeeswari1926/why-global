@@ -9,5 +9,13 @@ const nextConfig = {
 
 module.exports = nextConfig;
 
+// next.config.js
+module.exports = {
+    images: {
+      unoptimized: true, // Disable the image optimization
+    },
+  };
+  
+
 
 
