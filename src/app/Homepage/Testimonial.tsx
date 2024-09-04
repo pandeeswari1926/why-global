@@ -194,16 +194,16 @@ const Testimonial = () => {
       {/* Right Section with Slider */}
       <div className="w-full lg:w-1/2  flex flex-col items-center relative md:py-8  ">
     <div className='left-6'>
-    <p className='text-orange-400 mr-[800px] bg-orange-400 md:px-4 md:py-2 border-none rounded-full'>p</p>
+    <p className='text-orange-400 jump mr-[800px] bg-orange-400 md:px-4 md:py-2 border-none rounded-full'>p</p>
 
     </div>
 
         <div className="flex flex-col items-center ">
             
-        <h1 className='md:text-lg  text-orange-400 font-semibold text-center '> <span className='text-orange-500  text-[40px]'>.</span> Service Testimonials <span className='text-orange-500 text-[40px]'>.</span> </h1>
+        <h1 className='md:text-xl  text-orange-400 font-semibold text-center '> <span className='text-orange-500  text-[40px]'>.</span> Service Testimonials <span className='text-orange-500 text-[40px]'>.</span> </h1>
 
-        <h1 className='lg:text-4xl md:text-4xl text-xl font-bold text-center py-3 mb-3 '>What People Say About Us</h1>
-        <p className='text-orange-200 ml-[400px] md:-mt-[30px] bg-orange-200 md:px-7 md:py-5 border-none rounded-full'>p</p>
+        <h1 className='lg:text-4xl md:text-4xl text-xl font-bold text-center py-3 mb-3 '><span className=''>What People </span><span>Say About Us</span></h1>
+        <p className='text-orange-200 jump ml-[400px] md:-mt-[30px] bg-orange-200 md:px-7 md:py-5 border-none rounded-full'>p</p>
 
 
           <img
@@ -222,7 +222,7 @@ const Testimonial = () => {
     </div>
 
         </div>
-        <p className='text-orange-200 ml-[350px] -mt-24 bg-orange-200 md:px-7 md:py-5 border-none rounded-full'>p</p>
+        <p className='text-orange-200 ml-[350px] jump -mt-24 bg-orange-200 md:px-7 md:py-5 border-none rounded-full'>p</p>
         <p className='text-gray-100 md:ml-[380px] -mt- bg-gray-100 md:px-3 md:py-1 border-none rounded-full'>p</p>
 
 
