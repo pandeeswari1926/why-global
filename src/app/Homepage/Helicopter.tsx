@@ -130,25 +130,25 @@ function Helicopter() {
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
       ></link>
       <div className="bg-custom w-full h-full bg-no-repeat relative ">
-        {data &&
+        {/* {data &&
           data.review.map((item: any, index: any) => (
             <div key={index} className="relative w-full h-full z-10 py-5">
               <div className="flex w-full justify-end items-end">
-                <div
-                  // style={{
-                  //   clipPath: "polygon(4% 0, 100% 0, 100% 100%, 0 100%, 0 10%)",
+                <div */}
+                  {/* // style={{ */}
+                  {/* //   clipPath: "polygon(4% 0, 100% 0, 100% 100%, 0 100%, 0 10%)",
                   // }}
                   className="lg:w-[95%] w-full h-full lg:h-full relative  lg:rounded-tl-[3rem] py-5 bg-white shadow-md shadow-gray-400 right-0 "
-                >
-                  <div className="pt-6 lg:text-start text-center lg:pl-10">
+                > */}
+                  {/* <div className="pt-6 lg:text-start text-center lg:pl-10">
                     <h1 className="lg:text-xl text-xl text-primarycolor font-semibold pb-5">
                       {item.title}
                     </h1>
                     <h1 className="lg:text-3xl text-lg text-gray-500 font-semibold ">
                       {item.subtitle}
                     </h1>
-                  </div>
-                  <div className="flex lg:flex-row flex-col gap-10 p-5">
+                  </div> */}
+                  {/* <div className="flex lg:flex-row flex-col gap-10 p-5">
                     <Slider {...settings} className="overflow-hidden">
                       {item.client.map((items: any, indexs: any) => (
                         <div key={indexs}>
@@ -191,11 +191,11 @@ function Helicopter() {
                         </div>
                       ))}
                     </Slider>
-                  </div>
-                </div>
+                  </div> */}
+                {/* </div>
               </div>
             </div>
-          ))}
+          ))} */}
         {data &&
           data.technology.map((item, index) => (
             <div

@@ -10,7 +10,7 @@ const TimelineCard = () => {
       description:
         "Crafting visually compelling and responsive websites that enhance user experience and reflect your brand’s identity.",
       iconSrc: "/newService1.png",
-      bgImage: "url('/wgs gifs (10) 1.png')",
+      // bgImage: "url('/wgs gifs (10) 1.png')",
       details: [
         "Responsive Website Design",
         "UI/UX Design",
@@ -23,7 +23,7 @@ const TimelineCard = () => {
       description:
         "Building robust, scalable websites with cutting-edge technologies, ensuring functionality and seamless performance.",
       iconSrc: "/newService4.png",
-      bgImage: "url('/wgs gifs (10) 1.png')",
+      // bgImage: "url('/wgs gifs (10) 1.png')",
       details: [
         "Custom Web App Development",
         "E-commerce Website Development",
@@ -36,7 +36,7 @@ const TimelineCard = () => {
       description:
         "Developing intuitive and user-friendly mobile apps tailored to meet your business needs across all platforms.",
       iconSrc: "/newService2.png",
-      bgImage: "url('/wgs gifs (10) 1.png')",
+      // bgImage: "url('/wgs gifs (10) 1.png')",
       details: [
         "iOS App Development",
         "Android App Development",
@@ -49,7 +49,7 @@ const TimelineCard = () => {
       description:
         "Boosting your online presence with data-driven strategies, SEO, and social media marketing to drive traffic and conversions.",
       iconSrc: "/newService5.png",
-      bgImage: "url('/wgs gifs (10) 1.png')",
+      // bgImage: "url('/wgs gifs (10) 1.png')",
       details: [
         "Search Engine Optimization",
         "Social Media Marketing",
@@ -64,7 +64,7 @@ const TimelineCard = () => {
       description:
         "Boosting your online presence with data-driven strategies, SEO, and social media marketing to drive traffic and conversions.",
       iconSrc: "/newService3.png",
-      bgImage: "url('/wgs gifs (10) 1.png')",
+      // bgImage: "url('/wgs gifs (10) 1.png')",
       details: [
         "IoT Consultation and Strategy",
         "IoT Device Integration",
@@ -349,11 +349,11 @@ const TimelineCard = () => {
               {/* Hover Effect Overlay */}
               <div className="absolute inset-0 overflow-hidden rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 <div
-                  className="w-full h-full bg-center bg-no-repeat"
-                  style={{ backgroundImage: service.bgImage }}
+                  className="w-full h-full bg-center bg-no-repeat bg-white"
+                  // style={{ backgroundImage: service.bgImage }}
                 >
                   <div
-                    className="absolute inset-0 opacity-70 bg-black"
+                    className="absolute inset-0 opacity-60 bg-black"
                   ></div>
                   <div className="relative flex flex-col gap-4 items-start pl-5 pr-2 bg-transparent justify-center h-full">
                     {service.details.map((detail, i) => (
