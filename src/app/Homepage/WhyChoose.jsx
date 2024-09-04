@@ -12,7 +12,7 @@ function WhyChooseUs() {
           Why Choose Us <FaQuestion className='ml-2 md:text-3xl text-xl' />
         </h2>
       </div>
-
+<div className='md:-mt-6'>
       <div className='flex flex-col lg:flex-row md:px-10 md:gap-[2%] justify-center items-center '>
         <div className='flex flex-col items-center md:md:-mt-10 text-center'>
         <div className='bg-white md:shadow-orange-200  rounded-full p-8 md:shadow-2xl shadow-lg   shadow-orange-200 transition-transform transform hover:scale-110 hover:bg-orange-500'>
@@ -109,7 +109,7 @@ function WhyChooseUs() {
           <p className='text-base font-semibold md:mt-9 mt-4 text-gray-800'>Dedication Client <br/> Relationship Manager</p>
         </div>
         </div>
-
+        </div>
 
      
     </div>

@@ -35,11 +35,12 @@ const OurPortfolio = () => {
   };
 
   return (
+    <div className="md:mt-10">
     <article
       className="relative overflow-hidden bg-cover bg-no-repeat w-full  py-5"
       style={{ backgroundImage: "url('/bg_profilo.png')" }}
     >
-      <div className="md:py-8 md:pl-10 p-5">
+      <div className="md:py-8 md:pl-10  p-5">
         <p className="sixHundred:text-5xl xs:text-4xl text-2xl lg:justify-start justify-center flex items-center font-bold">
           Our Portfolio
         </p>
@@ -117,6 +118,7 @@ const OurPortfolio = () => {
         </div>
       </section>
     </article>
+    </div>
   );
 };
 

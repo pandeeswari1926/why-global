@@ -353,8 +353,7 @@ const TimelineCard = () => {
                   style={{ backgroundImage: service.bgImage }}
                 >
                   <div
-                    className="absolute inset-0 opacity-90"
-                    style={{ backgroundColor: service.bg_color }}
+                    className="absolute inset-0 opacity-70 bg-black"
                   ></div>
                   <div className="relative flex flex-col gap-4 items-start pl-5 pr-2 bg-transparent justify-center h-full">
                     {service.details.map((detail, i) => (
