@@ -89,7 +89,7 @@ export default function Page() {
                     Boost your brand with
                   </p> */}
                   <div className="flex flex-col justify-center  md:items-start items-center gap-2">
-                    <span className="text-center lg:text-left lg:text-5xl font-extrabold 2xl:text-7xl md:text-4xl sm:text-5xl lastwidth:text-3xl text-2xl h-fit w-fit relative">
+                    <span className="text-center lg:text-left lg:text-6xl font-extrabold  md:text-4xl sm:text-5xl  text-2xl h-fit w-fit relative">
                       10x Your Business Growth With Our 360° Digital Marketing
                       Strategy
                     </span>
@@ -131,7 +131,7 @@ export default function Page() {
                    Empowering Businesses Through Technology 
                   </p> */}
                   <div className="flex flex-col justify-center  lg:items-start items-center lg:gap-2 gap-5">
-                    <span className=" lg:text-5xl lg:text-left text-center  font-extrabold 2xl:text-6xl md:text-4xl sm:text-5xl lastwidth:text-3xl text-2xl">
+                    <span className=" lg:text-6xl lg:text-left text-center  font-extrabold  md:text-4xl sm:text-5xl  text-2xl">
                       Empowering Businesses Through Technology
                     </span>{" "}
                     <span className=" lg:mt-2 font-light text-xl">
@@ -173,7 +173,7 @@ export default function Page() {
                     Transforming Ideas into Visual Masterpieces
                   </p> */}
                   <div className="flex flex-col justify-center  lg:items-start items-center lg:gap-2 gap-5">
-                    <span className="text-center lg:text-left lg:text-5xl font-extrabold 2xl:text-7xl md:text-4xl sm:text-5xl lastwidth:text-3xl text-2xl">
+                    <span className="text-center lg:text-left lg:text-6xl font-extrabold  md:text-4xl sm:text-5xl  text-2xl">
                       Scale Your Business With Custom Applications
                     </span>{" "}
                     <span className="font-light lg:mt-2 text-xl ">
