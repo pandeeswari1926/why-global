@@ -66,7 +66,7 @@ function WhyChooseUs() {
         </div>
 
 
-        <div className='flex flex-col items-center md:-mt-10 text-center'>
+        <div className='flex flex-col items-center md:-mt-5 text-center'>
           <div className='bg-white md:shadow-orange-200 shadow-orange-200 rounded-full p-8  md:shadow-lg shadow-lg  transition-transform transform hover:scale-110 hover:bg-orange-500 '>
             <img src='/Whychooseusimg5.png' className='w-12 h-12 transition-colors duration-300 hover:filter hover:brightness-0 hover:invert' alt="Security Audit" />
           </div>
@@ -78,7 +78,7 @@ function WhyChooseUs() {
           </div>
           <p className='text-base font-semibold md:mt-9 mt-4 text-gray-800'>Remote Support</p>
         </div>
-        <div className='flex flex-col items-center md:-mt-10 text-center'>
+        <div className='flex flex-col items-center text-center md:-mt-12'>
           <div className='bg-white md:shadow-orange-200 shadow-orange-200 rounded-full p-8  md:shadow-lg shadow-lg  transition-transform transform hover:scale-110 hover:bg-orange-500 '>
             <img src='/Whychooseusimg7.png' className='w-12 h-12 transition-colors duration-300 hover:filter hover:brightness-0 hover:invert'  alt="Dedication Client Relationship Manager"  />
           </div>

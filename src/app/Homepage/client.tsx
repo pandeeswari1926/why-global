@@ -72,7 +72,7 @@ function Client() {
     // Cleanup interval on component unmount
     return () => clearInterval(interval);
   }, [logoRows]);
-
+// kk
   return (
     <div className="relative flex flex-col items-center w-full h-full justify-center gap-2 py-2 md:py-10">
       <section className="relative z-20 lg:space-y-5">
