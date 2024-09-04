@@ -78,7 +78,7 @@ const TimelineCard = () => {
     <>
       <div
         className="bg-gray-50 py-5  w-full h-full bg-cover object-fill bg-no-repeat overflow-hidden"
-        style={{ backgroundImage: "url('/bg_services.png')" }}
+        // style={{ backgroundImage: "url('/bg_services.png')" }}
       >
         <div className="md:py-8 md:pl-10 p-5">
           <p className="sixHundred:text-5xl xs:text-4xl text-2xl lg:justify-start justify-center flex items-center font-bold">

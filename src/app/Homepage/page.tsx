@@ -30,6 +30,7 @@ import NewServices from "./NewServices";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Testimonial from "./Testimonial";
+import OurServices from "./OurSevices"
 
 function Page() {
   interface banner {
@@ -335,7 +336,7 @@ function Page() {
               className="w-32 md:w-44 absolute right-0 top-0 -mt-12 md:-mt-16 -mr-12 md:-mr-20 hidden sm:block"
             />
             <div className="w-[90%] mx-auto">
-              <div className="py-6 md:py-9 lg:-ml-5 text-center lg:text-left">
+              <div className="py-6 md:py-9 lg:-ml-7 text-center lg:text-left">
                 <h2
                   className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-bold flex justify-center lg:justify-start"
                   data-aos="fade-up"
@@ -434,6 +435,7 @@ function Page() {
           </section>
 
           <NewServices />
+          <OurServices/>
           {/* <Home /> */}
           {/* <Globe /> */}
           {/* <World /> */}

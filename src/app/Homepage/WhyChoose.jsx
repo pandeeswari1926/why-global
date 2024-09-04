@@ -16,14 +16,14 @@ function WhyChooseUs() {
       <div className='flex flex-col lg:flex-row md:px-10 md:gap-[2%] justify-center items-center '>
         <div className='flex flex-col items-center md:md:-mt-10 text-center'>
         <div className='bg-white md:shadow-orange-200  rounded-full p-8 md:shadow-2xl shadow-lg   shadow-orange-200 transition-transform transform hover:scale-110 hover:bg-orange-500'>
-        <img src='/Whychooseusimg1.png' className='w-12 h-12 transition-colors duration-300 hover:filter hover:brightness-0 hover:invert' alt="Qualified Professionals" />
+        <img src='/Whychooseusimg7.png' className='w-12 h-12 transition-colors duration-300 hover:filter hover:brightness-0 hover:invert' alt="Qualified Professionals" />
           </div>
           <p className='text-base font-semibold md:mt-9 mt-4  text-gray-800'>13+ Years of Expertise</p>
         </div>
 
         <div className='flex flex-col items-center text-center md:mt-[80px]'>
           <div className='bg-white md:shadow-orange-200 shadow-orange-200 rounded-full p-8  md:shadow-2xl shadow-lg   transition-transform transform hover:scale-110 hover:bg-orange-500 '>
-            <img src='/Whychooseusimg2.png' className='w-12 h-12 transition-colors duration-300 hover:filter hover:brightness-0 hover:invert' alt="Proven Track Record" />
+            <img src='/Whychooseusimg9.png' className='w-12 h-12 transition-colors duration-300 hover:filter hover:brightness-0 hover:invert' alt="Proven Track Record" />
           </div>
           <p className='text-base font-semibold md:mt-9 mt-4 text-gray-800'>Proven Track Record</p>
         </div>
@@ -39,7 +39,7 @@ function WhyChooseUs() {
           <div className='bg-white md:shadow-orange-200 shadow-orange-200 rounded-full p-8  md:shadow-2xl shadow-lg  transition-transform transform hover:scale-110 hover:bg-orange-500 '>
             <img src='/Whychooseusimg4.png' className='w-12 h-12 transition-colors duration-300 hover:filter hover:brightness-0 hover:invert' alt="Cutting-edge Technologies" />
           </div>
-          <p className='text-base font-semibold md:mt-9 mt-4 text-gray-800'>Cutting-edge Technologies</p>
+          <p className='text-base font-semibold md:mt-9 mt-4 text-gray-800'>Cutting- edge Technologies</p>
         </div>
 
         <div className='flex flex-col items-center md:-mt-10 text-center'>
@@ -52,13 +52,13 @@ function WhyChooseUs() {
           <div className='bg-white md:shadow-orange-200 shadow-orange-200 rounded-full p-8  md:shadow-2xl shadow-lg  transition-transform transform hover:scale-110 hover:bg-orange-500 '>
             <img src='/Whychooseusimg6.png' className='w-12 h-12 transition-colors duration-300 hover:filter hover:brightness-0 hover:invert' alt="On-time Project Delivery" />
           </div>
-          <p className='text-base font-semibold mt-9 text-gray-800'>On-time Project Delivery</p>
+          <p className='text-base font-semibold mt-9 text-gray-800'>On- time Project Delivery</p>
         </div>
         <div className='flex flex-col items-center md:-mt-10 text-center'>
           <div className='bg-white md:shadow-orange-200 shadow-orange-200 rounded-full p-8  md:shadow-2xl shadow-lg  transition-transform transform hover:scale-110 hover:bg-orange-500 '>
             <img src='/Whychooseusimg7.png' className='w-12 h-12 transition-colors duration-300 hover:filter hover:brightness-0 hover:invert'  alt="Tailor-made Products"  />
           </div>
-          <p className='text-base font-semibold mt-9 text-gray-800'>Tailor-made Products</p>
+          <p className='text-base font-semibold mt-9 text-gray-800'>Tailor- made Products</p>
         </div>
         </div>
         <div className='flex flex-col md:mt-12 lg:flex-row md:px- md:gap-[4%] justify-center items-center'>
@@ -87,7 +87,7 @@ function WhyChooseUs() {
           <div className='bg-white md:shadow-orange-200 shadow-orange-200 rounded-full p-8  md:shadow-2xl shadow-lg  transition-transform transform hover:scale-110 hover:bg-orange-500 '>
             <img src='/Whychooseusimg4.png' className='w-12 h-12 transition-colors duration-300 hover:filter hover:brightness-0 hover:invert' alt="Training,Knowledge Transfer" />
           </div>
-          <p className='text-base font-semibold md:mt-9 mt-4 text-gray-800'>Training,<br/>Knowledge Transfer</p>
+          <p className='text-base font-semibold md:mt-9 mt-4 text-gray-800'>Training, <br/>Knowledge Transfer</p>
         </div>
 
         <div className='flex flex-col items-center text-center md:-mt-12'>
@@ -106,7 +106,7 @@ function WhyChooseUs() {
           <div className='bg-white md:shadow-orange-200 shadow-orange-200 rounded-full p-8  md:shadow-2xl shadow-lg  transition-transform transform hover:scale-110 hover:bg-orange-500 '>
             <img src='/Whychooseusimg7.png' className='w-12 h-12 transition-colors duration-300 hover:filter hover:brightness-0 hover:invert'  alt="Dedication Client Relationship Manager"  />
           </div>
-          <p className='text-base font-semibold md:mt-9 mt-4 text-gray-800'>Dedication Client <br/> Relationship Manager</p>
+          <p className='text-base font-semibold md:mt-9 mt-4 text-gray-800'>Dedicated Client <br/> Relationship Manager</p>
         </div>
         </div>
         </div>
