@@ -29,6 +29,7 @@ import OurPortfolio from "./OurPortfolio";
 import NewServices from "./NewServices";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Testimonial from "./Testimonial";
 
 function Page() {
   interface banner {
@@ -440,7 +441,8 @@ function Page() {
          
           <OurPortfolio />
           <Client />
-          <Helicopter />
+          <Testimonial/>
+          {/* <Helicopter /> */}
           <Wgs />
         </>
       )}
