@@ -1,40 +1,42 @@
-
 import React, { useEffect, useState } from "react";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
-import Image from 'next/image';
 
-const OurPortfolio = () => {
-  const ourPortfolio = [
-    { images: "/OurPortfolioimg1.png", title: "Project One" },
-    { images: "/OurPortfolioimg2.png", title: "Project Two" },
-    { images: "/OurPortfolioimg3.png", title: "Project Three" },
-    { images: "/OurPortfolioimg4.png", title: "Project Four" },
-    { images: "/OurPortfolioimg5.png", title: "Project Five" },
+interface PortfolioItem {
+  images: string;
+  title: string;
+}
+
+const OurPortfolio: React.FC = () => {
+  const ourPortfolio: PortfolioItem[] = [
+    { images: "OurPortfolioimg1.png", title: "Project One" },
+    { images: "OurPortfolioimg2.png", title: "Project two" },
+    { images: "OurPortfolioimg3.png", title: "Project Three" },
+    { images: "OurPortfolioimg4.png", title: "Project Four" },
+    { images: "OurPortfolioimg5.png", title: "Project Five" },
   ];
 
-  const [activeIndex, setActiveIndex] = useState(2); // Start with the third image as the center focus
+  const [activeIndex, setActiveIndex] = useState<number>(2); // Start with the third image as the center focus
+  const [hover, setHover] = useState<boolean>(true);
 
   const handleNext = () => {
     setActiveIndex((prevIndex) => (prevIndex + 1) % ourPortfolio.length);
   };
-
-  const [hover, setHover] = useState(true);
-
-  useEffect(() => {
-    if (hover) {
-      let interval = setInterval(() => {
-        setActiveIndex((prevIndex) => (prevIndex + 1) % ourPortfolio.length);
-      }, 3000);
-
-      return () => clearInterval(interval);
-    }
-  }, [hover]);
 
   const handlePrev = () => {
     setActiveIndex(
       (prevIndex) => (prevIndex - 1 + ourPortfolio.length) % ourPortfolio.length
     );
   };
+
+  useEffect(() => {
+    if (hover) {
+      const interval = setInterval(() => {
+        setActiveIndex((prevIndex) => (prevIndex + 1) % ourPortfolio.length);
+      }, 3000);
+
+      return () => clearInterval(interval);
+    }
+  }, [hover]);
 
   return (
     <div className="md:mt-10">
@@ -47,11 +49,9 @@ const OurPortfolio = () => {
             Our Portfolio
           </p>
         </div>
-        <Image
+        <img
           src="/width_200.png"
-          alt="Decorative"
-          width={176} // Adjust width as needed
-          height={176} // Adjust height as needed
+          alt=""
           className="w-44 absolute right-0 top-0 -mt-16 -mr-20 sm:block hidden"
         />
         <section className="pb-5 md:pb-1 relative top-[-1rem] min-h-[60vh] sixHundred:min-h-[60vh] flex items-center justify-center">
@@ -74,31 +74,33 @@ const OurPortfolio = () => {
                   position -= ourPortfolio.length;
                 }
 
-                let scale = 1 - Math.abs(position) * 0.2;
-                let zIndex = 5 - Math.abs(position);
+                const scale = 1 - Math.abs(position) * 0.2;
+                const zIndex = 5 - Math.abs(position);
 
                 return (
                   <div
                     key={index}
                     onMouseEnter={() => setHover(false)}
                     onMouseLeave={() => setHover(true)}
-                    className={`absolute transition-transform duration-500 ease-in-out`}
+                    className="absolute transition-transform duration-500 ease-in-out"
                     style={{
-                      transform: `translateX(${
-                        position * 150
-                      }px) scale(${scale})`,
+                      transform: `translateX(${position * 150}px) scale(${scale})`,
                       zIndex,
                       opacity: position === -3 || position === 3 ? 0 : 1,
                       filter: index === activeIndex ? "none" : "blur(4px)",
-                      margin: "0 20px", 
+                      margin: "0 20px",
                     }}
                   >
-                    <Image
-                      className="rounded-t-lg shadow-2xl"
+                    <img
+                      className="rounded-t-lg shadow-2xl w-full h-full object-cover"
                       src={item.images}
                       alt={`Portfolio ${index + 1}`}
-                      width={370} 
-                      height={400}                     />
+                      style={{
+                        width: "370px",
+                        height: "400px",
+                        objectPosition: "top",
+                      }}
+                    />
                     <div className="p-2 text-center rounded-b-lg bg-primarycolor text-white">
                       <h1>{item.title}</h1>
                     </div>
