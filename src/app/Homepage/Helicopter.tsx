@@ -115,7 +115,7 @@ function Helicopter() {
   }
   const [Content, setContent] = useState("Frontend");
   const listItems = ["Frontend", "Backend", "Database", "Mobile", "CMS"];
-  let img = [ img_1 ,img_2, img_3, img_4 , img_5]
+  // let img = [ img_1 ,img_2, img_3, img_4 , img_5]
   return (
     <div className="">
       <link

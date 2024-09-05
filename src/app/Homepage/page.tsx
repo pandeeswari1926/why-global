@@ -240,7 +240,7 @@ function Page() {
                             key={index}
                             className="bg-white border border-primarycolor relative w-full h-full  rounded-3xl drop-shadow-lg flex flex-col justify-center gap-3 items-center"
                           >
-                            <Image
+                            <img
                               src={items?.siteIcon?.asset?.url}
                               alt=""
                               className={`size-16 lg:w-10 w-16 object-contain ${
@@ -330,7 +330,7 @@ function Page() {
           </div> */}
 
           <section className="relative sm:overflow-hidden">
-            <Image
+            <img
               src="/width_200.png"
               alt=""
               className="w-32 md:w-44 absolute right-0 top-0 -mt-12 md:-mt-16 -mr-12 md:-mr-20 hidden sm:block"
@@ -360,7 +360,7 @@ function Page() {
                       >
                         <div className="flex gap-4 items-center -ml-12 md:-ml-14 hover:text-white group">
                           <div className="bg-primarycolor rounded-full w-14 md:w-16 h-14 md:h-16 p-1.5 md:p-2 mt-2 overflow-hidden">
-                            <Image
+                            <img
                               src={item.image}
                               alt=""
                               className="w-full h-full transform transition-transform duration-300 group-hover:scale-75"
@@ -422,7 +422,7 @@ function Page() {
                     data-aos="fade-left"
                   >
                     <div className="w-full h-[40vh] sm:h-[50vh] lg:h-[60vh]">
-                      <Image
+                      <img
                         src="/worldwhoweare.png"
                         alt=""
                         className="w-full h-full object-cover"

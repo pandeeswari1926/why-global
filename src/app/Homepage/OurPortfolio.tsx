@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from "react";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import Image from 'next/image';
