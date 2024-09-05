@@ -1,6 +1,7 @@
 import React from "react";
 import { BsCloudUpload, BsCloudUploadFill } from "react-icons/bs";
 import { CiBullhorn } from "react-icons/ci";
+import Image from 'next/image';
 import {
   FaReact,
   FaLaptopCode,
@@ -24,8 +25,8 @@ const OurServices = () => {
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 px-16 py-8">
           {/* First Section */}
           <div className="col-span-2 border-none shadow-lg p-8 bg-white">
-            <img
-              src="./life1.png"
+            <Image
+              src="/life1.png"
               alt="Placeholder"
               className="w-full h-[240px] bg-center"
             />
