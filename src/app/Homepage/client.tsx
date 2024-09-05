@@ -77,7 +77,7 @@ function Client() {
     <div
       className="relative flex flex-col items-center w-full h-full bg-cover  bg-no-repeat justify-center gap-2 py-2 md:py-10"
       style={{
-        // backgroundImage: url(${bg.src}),
+        // backgroundImage: `url(${bg.src})`,
       }}
     >
       <div className="absolute inset-0 z-10"></div>
@@ -126,4 +126,4 @@ function Client() {
   );
 }
 
-export default Client;
+export default Client;
