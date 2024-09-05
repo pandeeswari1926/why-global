@@ -92,7 +92,7 @@ function Client() {
           {logoRows.map((row, rowIndex) => (
             <div
               key={rowIndex}
-              className="flex flex-wrap justify-center items-center space-x-2 sm:space-x-3 md:space-x-6 lg:space-x-7"
+              className="flex flex-wrap justify-center items-center space-x-2 sm:space-x- md:space-x-6 lg:space-x-7"
             >
               {row.map((logo, colIndex) => (
                 <div
