@@ -31,6 +31,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Testimonial from "./Testimonial";
 import OurServices from "./OurSevices"
+import Technologies from "./Technologies";
 
 function Page() {
   interface banner {
@@ -445,6 +446,7 @@ function Page() {
           <Client />
           <Testimonial/>
           <Helicopter />
+          <Technologies />
           <Wgs />
         </>
       )}
