@@ -25,7 +25,7 @@ const OurServices = () => {
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 px-16 py-8">
           {/* First Section */}
           <div className="col-span-2 border-none shadow-lg p-8 bg-white">
-            <Image
+            <img
               src="/life1.png"
               alt="Placeholder"
               className="w-full h-[240px] bg-center"
