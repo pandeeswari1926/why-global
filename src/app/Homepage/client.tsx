@@ -67,7 +67,7 @@ function Client() {
       const randomRow = Math.floor(Math.random() * totalRows);
       const randomCol = Math.floor(Math.random() * logoRows[randomRow].length);
       setZoomedIndex({ row: randomRow, col: randomCol });
-    }, 500);
+    }, 1000);
 
     // Cleanup interval on component unmount
     return () => clearInterval(interval);
@@ -89,28 +89,29 @@ function Client() {
               className="flex flex-wrap justify-center items-center space-x-2 sm:space-x-4 md:space-x-6 lg:space-x-7"
             >
               {row.map((logo, colIndex) => (
-                <div
-                  key={colIndex}
-                  className={`relative flex justify-center items-center bg-gray-200 transition-transform duration-500 ${
-                    zoomedIndex.row === rowIndex && zoomedIndex.col === colIndex
-                      ? "scale-110 shadow-[0_0_15px_3px_rgba(251,146,60,0.6)]" // Custom orange shadow
-                      : "shadow-md"
-                  }`}
-                  style={{
-                    width: "150px", // Responsive width for smaller screens
-                    height: "135px", // Responsive height for smaller screens
-                    clipPath:
-                      "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
-                  }}
-                >
-                  <Image
-                    src={logo}
-                    alt={`Client Logo ${colIndex + 1}`}
-                    width={100}
-                    height={80}
-                    className="object-contain p-2 transition-transform duration-300 ease-in-out transform hover:scale-105"
-                  />
-                </div>
+               <div
+               key={colIndex}
+               className={`relative flex justify-center  items-center bg-gray-200 transition-transform duration-500 ${
+                 zoomedIndex.row === rowIndex && zoomedIndex.col === colIndex
+                   ? "scale-110 "
+                   : "shadow-md"
+               }`}
+               style={{
+                 width: "150px", 
+                 height: "145px", 
+                 clipPath:
+                   "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
+               }}
+             >
+               <Image
+                 src={logo}
+                 alt={`Client Logo ${colIndex + 1}`}
+                 width={100}
+                 height={80}
+                 className="object-contain p-2 transition-transform duration-300 ease-in-out transform hover:scale-105"
+               />
+             </div>
+             
               ))}
             </div>
           ))}
