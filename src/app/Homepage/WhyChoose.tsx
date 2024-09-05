@@ -1,102 +1,95 @@
-import React, { useState } from 'react';
-import Image from 'next/image';
+import React, { useState, useEffect } from 'react';
+// import Image from 'next/image'; // Import Next.js Image component
+import { FaQuestion } from "react-icons/fa";
 
-const WhyChooseUs: React.FC = () => {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+interface CardData {
+  text: string;
+  imgSrc: string;
+}
 
-  const toggleAccordion = (index: number) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
-
-  return (
-    <section className="flex justify-between items-start p-10 px-16 bg-white">
-      <div className="flex w-full gap-5">
-        {/* Image Section */}
-        <div className="relative w-1/2">
-          <Image
-            src="https://via.placeholder.com/600x400"
-            alt="Global IT Services"
-            className="rounded-lg"
-            layout="responsive"
-            width={500}
-            height={500}
-          />
-          {/* Overlay Image */}
-          <div className="absolute top-2/3 right-[20px] transform -translate-y-1/2 w-[250px] h-[150px]">
-            <Image
-              src="https://via.placeholder.com/250x150"
-              alt="Client Support"
-              className="object-cover rounded-lg shadow-lg"
-              layout="responsive"
-              width={350}
-              height={150}
-            />
-            <div className="absolute inset-0 flex justify-center items-center bg-white bg-opacity-80 rounded-full w-[50px] h-[50px] m-auto">
-              <i className="text-2xl text-gray-800">▶</i>
-            </div>
-          </div>
-        </div>
-
-        {/* Content Section */}
-        <div className="w-1/2">
-          <h2 className="text-xl font-bold mb-3">Why Choose Us?</h2>
-          <p className="text-gray-700 mb-5">
-            We deliver innovative IT solutions with a focus on client satisfaction. Our expert team ensures high-quality services tailored to your business needs.
-          </p>
-
-          <div className="space-y-4">
-            {accordionData.map((item, index) => (
-              <div key={index} className="border border-gray-300 rounded-md">
-                <div
-                  className={`flex justify-between items-center p-4 cursor-pointer ${
-                    activeIndex === index ? 'bg-gray-100' : 'bg-white'
-                  }`}
-                  onClick={() => toggleAccordion(index)}
-                >
-                  <span className="text-lg font-medium">{item.title}</span>
-                  <span className="text-lg">
-                    {activeIndex === index ? '▲' : '▼'}
-                  </span>
-                </div>
-                {activeIndex === index && (
-                  <div className="p-4 bg-gray-50">
-                    <p>{item.content}</p>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
-
-const accordionData = [
-  {
-    title: 'Global Expertise and 24/7 Support',
-    content: 'Our team provides round-the-clock support and services to ensure your business runs smoothly worldwide.',
-  },
-  {
-    title: 'Tailor-made IT Solutions',
-    content: 'We offer customized IT services that align perfectly with your business objectives.',
-  },
-  {
-    title: 'Proven Security Measures',
-    content: 'We prioritize the safety and security of your data, with advanced protection against cyber threats.',
-  },
-  {
-    title: 'Cost-effective and Efficient',
-    content: 'Our solutions are designed to maximize your ROI by streamlining your IT processes at a competitive price.',
-  },
-  {
-    title: 'Dedicated Account Management',
-    content: 'Our team is always available to assist you with a personalized approach for each client.',
-  },
-  {
-    title: 'Scalable Solutions for Growth',
-    content: 'We provide scalable IT infrastructure and software solutions to support your company’s growth.',
-  },
+const cardData: CardData[] = [
+  { text: '13+ Years of Expertise', imgSrc: '/Whychooseusimg7.png' },
+  { text: 'Proven Track Record', imgSrc: '/Whychooseusimg9.png' },
+  { text: 'Client-Centric Approach', imgSrc: '/Whychooseusimg5.png' },
+  { text: 'On-time Project Delivery', imgSrc: '/Whychooseusimg6.png' },
+  { text: 'Tailor-made Products', imgSrc: '/Whychooseusimg7.png' },
+  { text: 'Software Updates', imgSrc: '/Whychooseusimg9.png' },
+  { text: 'Annual Maintenance', imgSrc: '/Whychooseusimg10.png' },
+  { text: 'Security Audit', imgSrc: '/Whychooseusimg5.png' },
+  { text: 'Remote Support', imgSrc: '/Whychooseusimg6.png' },
 ];
 
-export default WhyChooseUs;
+const WhyChooseUs: React.FC = () => {
+  const [activeIndex, setActiveIndex] = useState<number>(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prevIndex) => (prevIndex + 1) % cardData.length);
+    }, 1500); // Change this value to adjust the timing
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="py-10">
+      <div className='text-center'>
+        <h2 className='text-3xl md:text-5xl font-bold text-primary flex items-center justify-center m-6'>
+          Why Choose Us <FaQuestion className='ml-2 md:text-3xl text-xl' />
+        </h2>
+        {/* <p className='text-gray-600 mt-2 text-sm md:text-base'>
+          Anyone would want to know why you are the best option they could opt for. Use this section to mention your strengths and prove that you are the best among others.
+        </p> */}
+      </div>
+
+      {/* First Row: 5 Divs */}
+      <div className='grid grid-cols-2 md:grid-cols-5 gap-4 justify-center mt-10 md:px-10'>
+        {cardData.slice(0, 5).map((card, index) => (
+          <div
+            key={index}
+            style={{
+              transform: activeIndex === index ? 'scale(1.1)' : 'scale(1)',
+              transition: 'transform 0.5s ease-in-out',
+            }}
+            className='flex flex-col items-center text-center'
+          >
+            <div className='flex shadow-primarycolor rounded-full p-6 shadow-lg'>
+              <img
+                src={card.imgSrc}
+                width={80} // Specify width
+                height={80} // Specify height
+                alt={card.text}
+              />
+            </div>
+            <p className='text-base font-semibold mt-4 text-gray-800'>{card.text}</p>
+          </div>
+        ))}
+      </div>
+
+      {/* Second Row: 4 Divs */}
+      <div className='grid grid-cols-2 md:grid-cols-4 gap-4 sm:mx-32 justify-center mt-12 md:px-10'>
+        {cardData.slice(5).map((card, index) => (
+          <div
+            key={index}
+            style={{
+              transform: activeIndex === index + 5 ? 'scale(1.1)' : 'scale(1)',
+              transition: 'transform 0.5s ease-in-out',
+            }}
+            className='flex flex-col items-center text-center'
+          >
+            <div className='flex shadow-primarycolor rounded-full p-6 shadow-lg'>
+              <img
+                src={card.imgSrc}
+                width={80} // Specify width
+                height={80} // Specify height
+                alt={card.text}
+              />
+            </div>
+            <p className='text-base font-semibold mt-4 text-gray-800'>{card.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default WhyChooseUs;

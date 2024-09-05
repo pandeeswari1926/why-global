@@ -84,7 +84,7 @@ const OurPortfolio: React.FC = () => {
                     onMouseLeave={() => setHover(true)}
                     className="absolute transition-transform duration-500 ease-in-out"
                     style={{
-                      transform: `translateX(${position * 150}px) scale(${scale})`,
+                      transform:` translateX(${position * 150}px) scale(${scale})`,
                       zIndex,
                       opacity: position === -3 || position === 3 ? 0 : 1,
                       filter: index === activeIndex ? "none" : "blur(4px)",
@@ -123,4 +123,4 @@ const OurPortfolio: React.FC = () => {
   );
 };
 
-export default OurPortfolio;
+export default OurPortfolio;
