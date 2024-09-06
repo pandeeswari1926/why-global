@@ -1,3 +1,4 @@
+// Client.tsx
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import ehs from "../../../public/ehs.png";
@@ -21,7 +22,7 @@ import client_img_9 from "../../../public/client_img_9.png";
 import client_img_10 from "../../../public/client_img_10.png";
 import bg from "../../../public/getin.png";
 
-function Client() {
+const Client = () => {
   const logos = [
     ehs,
     five,
@@ -75,38 +76,36 @@ function Client() {
 
   return (
     <div
-      className="relative flex flex-col items-center w-full h-full bg-cover  bg-no-repeat justify-center gap-2 py-2 md:py-10"
-      style={{
-        // backgroundImage: `url(${bg.src})`,
+    className="relative overflow-hidden bg-cover bg-no-repeat h-[85vh] w-full py-5"
+    style={{
+        backgroundImage: `url(${bg.src})`, // Uncomment this line to apply background image
       }}
     >
-      <div className="absolute inset-0 z-10"></div>
-      <section className="relative z-20 lg:space-y-5">
-        <div className="md:py-8 md:pl-10 mt-[-2rem]">
-          <p className="text-2xl xs:text-4xl sixHundred:text-5xl text-font flex items-center justify-center md:justify-start font-bold text-black">
-            Our Clients
+      <section className="relative z-20 lg:space-y-2">
+      <div className="md:py-8 pl-10 mt-[-rem]">
+      <p className="sixHundred:text-5xl xs:text-4xl text-2xl lg:justify-start justify-center text-white flex items-center font-bold">
+        Our Clients
           </p>
         </div>
-
-        <div className="flex flex-col items-center justify-center space-y-4">
+        <div className="flex flex-col items-center justify-center space-y-1">
           {logoRows.map((row, rowIndex) => (
             <div
               key={rowIndex}
-              className="flex flex-wrap justify-center items-center space-x-2 sm:space-x- md:space-x-6 lg:space-x-7"
+              className="flex flex-wrap justify-center items-center space-x-0.5 sm:space-x-4 md:space-x-6 lg:space-x-7"
             >
               {row.map((logo, colIndex) => (
                 <div
                   key={colIndex}
                   className={`relative flex justify-center items-center bg-gray-200 overflow-hidden transition-transform duration-500 ${
                     zoomedIndex.row === rowIndex && zoomedIndex.col === colIndex
-                      ? "scale-110 shadow-lg shadow-blue-500"
+                      ? "scale-125 shadow-lg shadow-blue-500"
                       : ""
                   }`}
                   style={{
-                    width: "150px", // Responsive width for smaller screens
-                    height: "135px", // Responsive height for smaller screens
+                    width: "150px",
+                    height: "135px",
                     clipPath:
-                      "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
+                      "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)", // Hexagonal shape
                   }}
                 >
                   <Image
@@ -124,6 +123,6 @@ function Client() {
       </section>
     </div>
   );
-}
+};
 
 export default Client;

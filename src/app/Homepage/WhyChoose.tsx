@@ -20,15 +20,15 @@ const cardData: CardData[] = [
 ];
 
 const WhyChooseUs: React.FC = () => {
-  const [activeIndex, setActiveIndex] = useState<number>(0);
+  // const [activeIndex, setActiveIndex] = useState<number>(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndex((prevIndex) => (prevIndex + 1) % cardData.length);
-    }, 1500); // Change this value to adjust the timing
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setActiveIndex((prevIndex) => (prevIndex + 1) % cardData.length);
+  //   }, 1500); // Change this value to adjust the timing
 
-    return () => clearInterval(interval);
-  }, []);
+  //   return () => clearInterval(interval);
+  // }, []);
 
   return (
     <div className="py-10">
@@ -46,10 +46,10 @@ const WhyChooseUs: React.FC = () => {
         {cardData.slice(0, 5).map((card, index) => (
           <div
             key={index}
-            style={{
-              transform: activeIndex === index ? 'scale(1.1)' : 'scale(1)',
-              transition: 'transform 0.5s ease-in-out',
-            }}
+            // style={{
+            //   transform: activeIndex === index ? 'scale(1.1)' : 'scale(1)',
+            //   transition: 'transform 0.5s ease-in-out',
+            // }}
             className='flex flex-col items-center text-center'
           >
             <div className='flex shadow-primarycolor rounded-full p-6 shadow-lg'>
@@ -70,10 +70,10 @@ const WhyChooseUs: React.FC = () => {
         {cardData.slice(5).map((card, index) => (
           <div
             key={index}
-            style={{
-              transform: activeIndex === index + 5 ? 'scale(1.1)' : 'scale(1)',
-              transition: 'transform 0.5s ease-in-out',
-            }}
+            // style={{
+            //   transform: activeIndex === index + 5 ? 'scale(1.1)' : 'scale(1)',
+            //   transition: 'transform 0.5s ease-in-out',
+            // }}
             className='flex flex-col items-center text-center'
           >
             <div className='flex shadow-primarycolor rounded-full p-6 shadow-lg'>
