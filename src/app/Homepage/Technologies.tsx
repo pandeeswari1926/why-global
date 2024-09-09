@@ -114,12 +114,12 @@ function Technologies() {
 
       {/* Backend Section */}
       <div className="bg-white rounded-lg shadow-xl mt-4 flex lg:gap-16 gap-3 justify-center">
-        <div className="bg-primarycolor rounded-md shadow-lg relative -top-2 -left-2 w-[30%] h-16 text-center text-white clip-bottom-right">
-          <h2 className="font-bold text-2xl py-4">BACKEND</h2>
+        <div className="bg-primarycolor rounded-md shadow-lg relative -top-2 -left-2 lg:w-[30%] w-[40%]  lg:h-16 h-14 text-center text-white clip-bottom-right">
+          <h2 className="font-bold lg:text-2xl md:text-lg sm:text-base py-4">BACKEND</h2>
         </div>
 
        
-         <div className="relative w-[70%] overflow-hidden">
+         <div className="relative lg:w-[65%] w-[60%] overflow-hidden">
           <div className="flex items-center gap-16 py-2 w-max animate-scroll-left">
             {backendTech.map((tech, index) => (
               <Image
@@ -135,9 +135,9 @@ function Technologies() {
 
 
        {/* Database Section */}
-       <div className="bg-white rounded-lg shadow-xl mt-4 flex gap-16 justify-center">
-        <div className="bg-primarycolor rounded-md shadow-lg relative -top-2 -left-2 w-[30%] h-16 text-center text-white clip-bottom-right">
-          <h2 className="font-bold text-2xl py-4">DATABASE</h2>
+       <div className="bg-white rounded-lg shadow-xl mt-4 flex lg:gap-16 gap-3 justify-center">
+        <div className="bg-primarycolor rounded-md shadow-lg relative -top-2 -left-2 lg:w-[30%] w-[40%]  lg:h-16 h-14 text-center text-white clip-bottom-right">
+          <h2 className="font-bold lg:text-2xl md:text-lg sm:text-base py-4">DATABASE</h2>
         </div>
 
         {/* <div className="flex items-center justify-evenly gap-16 py-2 w-[65%]">
@@ -150,7 +150,7 @@ function Technologies() {
             />
           ))}
         </div> */}
-        <div className="relative w-[65%] overflow-hidden">
+        <div className="relative lg:w-[65%] w-[60%] overflow-hidden">
           <div className="flex items-center gap-16 py-2 w-max animate-scroll-left">
             {database.map((tech, index) => (
               <Image
@@ -167,9 +167,9 @@ function Technologies() {
 
 
        {/* MOBILE Section */}
-       <div className="bg-white rounded-lg shadow-xl mt-4 flex gap-16 justify-center">
-        <div className="bg-primarycolor rounded-md shadow-lg relative -top-2 -left-2 w-[30%] h-16 text-center text-white clip-bottom-right">
-          <h2 className="font-bold text-2xl py-4">MOBILE</h2>
+       <div className="bg-white rounded-lg shadow-xl mt-4 flex lg:gap-16 gap-3 justify-center">
+        <div className="bg-primarycolor rounded-md shadow-lg relative -top-2 -left-2 lg:w-[30%] w-[40%]  lg:h-16 h-14 text-center text-white clip-bottom-right">
+          <h2 className="font-bold lg:text-2xl md:text-lg sm:text-base py-4">MOBILE</h2>
         </div>
 
         {/* <div className="flex items-center justify-evenly gap-16 py-2 w-[65%]">
@@ -182,7 +182,7 @@ function Technologies() {
             />
           ))}
         </div> */}
-         <div className="relative w-[65%] overflow-hidden">
+         <div className="relative lg:w-[65%] w-[60%] overflow-hidden">
           <div className="flex items-center gap-16 py-2 w-max animate-scroll-left">
             {mobile.map((tech, index) => (
               <Image
@@ -198,9 +198,9 @@ function Technologies() {
 
 
        {/* CMS Section */}
-       <div className="bg-white rounded-lg shadow-xl mt-4 flex gap-16 justify-center">
-        <div className="bg-primarycolor rounded-md shadow-lg relative -top-2 -left-2 w-[30%] h-16 text-center text-white clip-bottom-right">
-          <h2 className="font-bold text-2xl py-4">CMS</h2>
+       <div className="bg-white rounded-lg shadow-xl mt-4 flex lg:gap-16 gap-3 justify-center">
+        <div className="bg-primarycolor rounded-md shadow-lg relative -top-2 -left-2 lg:w-[30%] w-[40%]  lg:h-16 h-14 text-center text-white clip-bottom-right">
+          <h2 className="font-bold lg:text-2xl md:text-lg sm:text-base py-4">CMS</h2>
         </div>
 
         {/* <div className="flex items-center justify-evenly gap-16 py-2 w-[65%]">
@@ -213,7 +213,7 @@ function Technologies() {
             />
           ))}
         </div> */}
-         <div className="relative w-[65%] overflow-hidden">
+         <div className="relative lg:w-[65%] w-[60%] overflow-hidden">
           <div className="flex items-center gap-16 py-2 w-max animate-scroll-left">
             {cms.map((tech, index) => (
               <Image
