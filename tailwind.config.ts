@@ -9,6 +9,16 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        scroll: {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+      },
+      animation: {
+        'scroll-left': 'scroll 20s linear infinite',
+      },
+    
       backgroundImage: {
         // "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         // "gradient-conic":
@@ -53,7 +63,8 @@ const config: Config = {
         kush: "#EECF64",
         primarycolor: '#FF9315',
         grayColor:'#686868'
-      } 
+      },
+      
     },
   },
   plugins: [],
