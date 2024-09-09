@@ -20,7 +20,6 @@ const OurServices = () => {
   const handleMouseLeave = () => {
     setActiveIndex(null);
   };
-
   const serviceClasses = (index) =>
     `absolute inset-0 bg-orange-400 text-white flex items-center justify-center p-4 transform ${
       activeIndex === index ? "translate-y-0" : "translate-y-full"
