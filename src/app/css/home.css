@@ -18,3 +18,8 @@
    
 
 }
+
+.clip-bottom-right {
+    clip-path: polygon(0 0, 100% 0, 100% 60%, 92% 100%, 0 100%);
+  }
+  

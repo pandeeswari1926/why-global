@@ -445,7 +445,7 @@ function Page() {
           <OurPortfolio />
           <Client />
           <Testimonial/>
-          <Helicopter />
+          {/* <Helicopter /> */}
           <Technologies />
           <Wgs />
         </>
