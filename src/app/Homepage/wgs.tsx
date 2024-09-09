@@ -47,30 +47,30 @@ const Wgs = () => {
   return (
     <div className="overflow-hidden md:mt-8">
       <div className="flex justify-between sm:flex-row flex-col md:px-14 px-5 py-10">
-        <div className="flex flex-col space-y-3 sm:text-start text-center">
-          <h1 className='md:text-xl text-primarycolor font-semibold text-left'>
+        <div className="flex flex-col md:space-y-3 sm:text-start text-center">
+          <h1 className='md:text-xl text-primarycolor font-semibold md:text-left '>
             <span className='text-primarycolor text-[40px]'>.</span> Recent News 
             <span className='text-primarycolor text-[40px]'>.</span>
           </h1>
-          <h2 className="font-semibold md:text-4xl text-2xl text-font text-gray-00">
+          <h2 className="font-bold md:text-4xl   text-2xl text-font text-gray-00">
             Catch Up On The Latest News!
           </h2>
         </div>
-        <div className="flex flex-col justify-center items-center pt-5 sm:pt-0">
-          <Link href="/news" className="bg-primarycolor shadow-md shadow-gray-300 mx-auto w-fit rounded-md lg:flex hidden p-2 text-white">
+        <div className="flex flex-col justify-center items-center md:pt-5 sm:pt-0">
+          <Link href="/news" className="bg-primarycolor shadow-md shadow-gray-300 mx-auto w-fit rounded-md lg:flex hidden px-4 py-2 text-white">
             View all
           </Link>
         </div>
       </div>
 
       {/* Responsive Flex and Grid for News Section */}
-      <section className="flex flex-col md:flex-row md:justify-around md:px-5 md:items-center md:mt-4 space-y-10 md:space-y-0">
+      <section className="flex flex-col md:flex-row md:justify-around md:px-5 md:items-center md:mt-4 space-y-16 md:space-y-0">
         {dataItems &&
           dataItems.slice(0, 3).map((item, index) => (
             <div key={index}>
               <Link href={{ pathname: "/IndiviNews", query: { name: item.slug.current } }}>
                 <div key={index} className="relative md:h-[550px]">
-                  <div className="md:w-[450px] w-full h-80 relative md:px-10">
+                  <div className="md:w-[450px] w-full md:h-80 relative md:px-10">
                     <img
                       src={item?.image?.asset?.url}
                       alt=""
@@ -93,7 +93,7 @@ const Wgs = () => {
       </section>
 
       {/* Mobile "View All" Button */}
-      <Link href="/news" className="bg-white shadow-md shadow-gray-300 mx-auto w-fit lg:hidden flex p-2 text-[#FF8900]">
+      <Link href="/news" className="bg-white shadow-md shadow-gray-300 mx-auto mt-2 w-fit lg:hidden flex px-4 py-2 text-[#FF8900]">
         View all
       </Link>
 

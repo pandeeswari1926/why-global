@@ -87,15 +87,15 @@ function Technologies() {
       style={{ backgroundImage: "url('/tech_bg1.png')" }}
     >
       <div className="py-2 mb-10">
-        <p className="text-left sixHundred:text-5xl xs:text-4xl text-3xl items-center font-bold">
-          Technologies
+        <p className="text-left   md:text-4xl text-2xl items-center font-semibold">
+          Technologies We Work With
         </p>
       </div>
 
       {/* Frontend Section */}
-      <div className="bg-white rounded-lg shadow-xl mt-4 flex lg:gap-16 gap-3 justify-center">
+      <div className="bg-white rounded-lg shadow-xl mt-5 flex lg:gap-16 gap-3 justify-center">
         <div className="bg-primarycolor rounded-md shadow-lg relative -top-2 -left-2 lg:w-[30%] w-[40%]  lg:h-16 h-14 text-center text-white clip-bottom-right">
-          <h2 className="font-bold lg:text-2xl md:text-lg sm:text-base py-4">FRONTEND</h2>
+          <h2 className="font-semibold lg:text-2xl md:text-lg sm:text-base py-4">FRONTEND</h2>
         </div>
 
         <div className="relative lg:w-[65%] w-[60%] overflow-hidden">

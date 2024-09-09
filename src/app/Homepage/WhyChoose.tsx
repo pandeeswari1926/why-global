@@ -42,7 +42,7 @@ const WhyChooseUs: React.FC = () => {
       </div>
 
       {/* First Row: 5 Divs */}
-      <div className='grid grid-cols-2 md:grid-cols-5 gap-4 justify-center mt-10 md:px-10'>
+      <div className='grid grid-cols-1 md:grid-cols-5 gap-4 justify-center mt-10 md:px-10'>
         {cardData.slice(0, 5).map((card, index) => (
           <div
             key={index}
@@ -66,7 +66,7 @@ const WhyChooseUs: React.FC = () => {
       </div>
 
       {/* Second Row: 4 Divs */}
-      <div className='grid grid-cols-2 md:grid-cols-4 gap-4 sm:mx-32 justify-center mt-12 md:px-10'>
+      <div className='grid grid-cols-1 md:grid-cols-4 gap-4 sm:mx-32 justify-center mt-12 md:px-10'>
         {cardData.slice(5).map((card, index) => (
           <div
             key={index}
